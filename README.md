@@ -90,13 +90,16 @@ Loop函数为主循环函数,需要持续调用使其运作
 
 ### 对于libcrypto动态链接库的补充
 
-对于windows 64位环境，可尝试本项目自带的动态链接库
-对于linux环境，可在/usr/lib中查找当前平台使用的libcrypto动态链接库,也可尝试本项目自带的动态链接库
+对于windows x64位环境，可尝试本项目自带的动态链接库
+
+对于linux x64环境，可在/usr/lib中查找当前平台使用的libcrypto动态链接库,也可尝试本项目自带的动态链接库
 其他环境，需要自行下载解决
+
 该项目自带的libcrypto.so.1.0.0为ubuntu20.02 x64 wsl2平台下的libcrypto动态链接库
+
 该项目自带的libcrypto-3-x64.dll为windows x64平台下的libcrypto动态链接库
 
-   若能重写项目中`simpleVpn/simpleVpn/VpnCrypto.py`aes加解密方法，可无需依赖libcrypto动态链接库
+若能重写项目中`simpleVpn/simpleVpn/VpnCrypto.py`aes加解密方法，可无需依赖libcrypto动态链接库
 
 ### 对于occ_string的补充
 
