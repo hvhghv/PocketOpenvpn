@@ -23,4 +23,7 @@ reliableUdpCapacity = 192  # 可缓存的udp包数量
 # 其他参数
 kwargs = {}
 
+# 日志等级
+# 0:logging.DEBUG 打印调试日志
+# 1:logging.INFO  打印一般日志
 logging_level = logging.DEBUG

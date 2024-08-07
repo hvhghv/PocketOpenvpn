@@ -73,6 +73,7 @@
 
 根据上述例子，服务端`10.8.1.1:8768`的tcp流量会转发到客户端`127.0.0.1:8099`上
 
+
 ### UDP通信支持
 
 参考`Test/test2.py`
@@ -86,6 +87,9 @@
 
 Loop函数为主循环函数,需要持续调用使其运作
 
+### 调试日志
+
+若需要调试日志，请修改`client_config.py`与`server_config.py`的`logging_level`为`logging.DEBUG`
 
 
 ### 对于libcrypto动态链接库的补充

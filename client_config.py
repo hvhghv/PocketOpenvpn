@@ -58,7 +58,10 @@ key_direction = 0  # 密钥方向，参考openvpn配置文件。若其配置文�
 
 # ___________________以下配置为非重要参数，按默认参数即可_____________________________
 
-logging_level = logging.DEBUG
+# 日志等级
+# 0:logging.DEBUG 打印调试日志
+# 1:logging.INFO  打印一般日志
+logging_level = logging.INFO
 
 Wait_Init_Time = 3  # 开始进行连接初始化的等待时间，目的是防止在openvpn未完成握手的情况下就启动，若无法初始化连接，可尝试将该值调高
 
