@@ -4,6 +4,9 @@ from .vpnForwardClient import SimpleForwardClient
 from .VpnContextClass import VpnContextClass
 from ..Vpn.VpnCrypto import VpnCrypto
 
+import logging
+log = logging.getLogger()
+
 
 class ProjectContext(Context):
 
@@ -76,6 +79,9 @@ class ProjectContext(Context):
 
         self.event_cur_id += 1
         self.EventBus(Event(self.event_cur_id,CONTEXT_INIT, None))
+
+        
+        log.info("ProjectContext 初始化完成")
 
     def EventBus(self, event: Event):
         self.EventStation0(event)

@@ -15,6 +15,10 @@ from ..include.simpleFunc import *
 from ctypes import *
 from .PRF import *
 
+import logging
+
+log = logging.getLogger()
+
 class VpnCrypto:
 
     Encrypto_Cipher_Key = b""    # 加密用cipher密钥
@@ -87,6 +91,8 @@ class VpnCrypto:
             server_session_id (bytes, optional): 服务端会话id. Defaults to b"".
             key_direction (int, optional): 键方向. Defaults to 0.
         """
+
+        log.debug("Cipher 初始化")
 
         self.cipher = cipher
         self.auth = auth
@@ -294,8 +300,14 @@ class VpnCrypto:
         else:
             raise Exception("auth error")
 
+        log.debug(f"cipher_key_length={self.cipher_key_length}")
+        log.debug(f"iv_length={self.iv_length}")
+        log.debug(f"align_length={self.align_length}")
+        log.debug(f"hmac_key_length={self.hmac_key_length}")
+        log.debug(f"hmac_msg_length={self.hmac_msg_length}")
+
     def _generateKeys(self):
-        
+
         """
         根据当前上下文初始化加解密上下文
         """
@@ -340,6 +352,15 @@ class VpnCrypto:
             self.Encrypto_Hmac_Key = hmac_1
             self.Decrypto_Cipher_Key = cipher_1
             self.Decrypto_Hmac_Key = hmac_1
+
+        log.debug(f"pre_master_secret={self.pre_master_secret.hex()}")
+        log.debug(f"master_secret={master_secret.hex()}")
+        log.debug(f"key={key.hex()}")
+        log.debug(f"Encrypto_Cipher_Key={self.Encrypto_Cipher_Key.hex()}")
+        log.debug(f"Encrypto_Hmac_Key={self.Encrypto_Hmac_Key.hex()}")
+        log.debug(f"Decrypto_Cipher_Key={self.Decrypto_Cipher_Key.hex()}")
+        log.debug(f"Decrypto_Hmac_Key={self.Decrypto_Hmac_Key.hex()}")
+
 
     def _init(self):
         """

@@ -1,3 +1,7 @@
+import logging
+
+
+
 bind_ip = "0.0.0.0"  # 服务端服务地址
 
 bind_port = 6672  # 服务端服务端口
@@ -18,3 +22,5 @@ reliableUdpCapacity = 192  # 可缓存的udp包数量
 
 # 其他参数
 kwargs = {}
+
+logging_level = logging.DEBUG

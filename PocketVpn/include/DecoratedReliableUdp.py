@@ -14,6 +14,10 @@ from .CommunicationPackage import Communicate_Package
 
 from .simpleFunc import *
 
+import logging
+
+log = logging.getLogger()
+
 # ContentType的类型
 
 TYPE_ACK = 0
@@ -1324,6 +1328,8 @@ class ReliableUdpFactory:
 
             socket._resetStatusTime()
 
+            log.debug(f"socket-{socket.session.hex()}:TYPE_START包，新建会话实例")
+
             self.session_table[socket.session] = socket
 
             # 把该会话实例加入待接受会话列表
@@ -1342,6 +1348,7 @@ class ReliableUdpFactory:
 
             # 若为TYPE_START_DONE包，指示对端已建立好会话实例，此时将此会话实例的工作状态由STATUS_INIT转变为STATUS_CONNECT
 
+
             socket: ReliableUdpSocket = self.session_table.get(session, None)
 
             if not socket:
@@ -1355,6 +1362,8 @@ class ReliableUdpFactory:
 
                 socket._resetStatusTime()
 
+            log.debug(f"socket-{socket.session.hex()}: TYPE_START_DONE包")
+
         if reliableUdpPacket.ContentType == ReliableUdpPacket.TYPE_END:
 
             # 若为TYPE_END包，则将该会话实例状态设置为关闭
@@ -1363,6 +1372,8 @@ class ReliableUdpFactory:
 
             if not socket:
                 return
+
+            log.debug(f"socket-{socket.session.hex()}: TYPE_END包")
 
             socket._setStatus(ReliableUdpSocket.STATUS_CLOSE)
 
@@ -1426,6 +1437,10 @@ class ReliableUdpFactory:
 
                 if cur_time - one_accept_socket.last_status_time > self.connectTimeout:
 
+                    log.debug(
+                        f"session-{one_accept_socket.session.hex()}: 待接受会话列表中的会话实例超时，关闭"
+                    )
+
                     one_accept_socket.close()
 
         # 检查会话实例
@@ -1449,10 +1464,12 @@ class ReliableUdpFactory:
 
                 except ConnectClosed:
 
+                    log.debug(f"session-{socket.session.hex()}: 会话实例连接关闭")
                     socket._setStatus(ReliableUdpSocket.STATUS_CLOSE)
 
                 except PacketIDError:
 
+                    log.debug(f"session-{socket.session.hex()}: 包ID错误")
                     socket._setStatus(ReliableUdpSocket.STATUS_CLOSE)
 
             if socket.status == ReliableUdpSocket.STATUS_INIT:
@@ -1460,6 +1477,8 @@ class ReliableUdpFactory:
                 # 对于正在建立连接的会话实例，检查是否超时
 
                 if cur_time - socket.last_status_time > self.connectTimeout:
+
+                    log.debug(f"session-{socket.session.hex()}: 连接超时")
 
                     socket._setStatus(ReliableUdpSocket.STATUS_CLOSE)
 
@@ -1563,8 +1582,11 @@ class ReliableUdpFactory:
                                    session=session,
                                    **self.kwargs)
 
+
         socket._setStatus(ReliableUdpSocket.STATUS_INIT)
 
         self.session_table[socket.session] = socket
+
+        log.debug(f"create socket, session: {socket.session.hex()}")
 
         return socket

@@ -5,7 +5,9 @@ from ..include.ForwardHead import *
 from ..include.simpleFunc import *
 from time import time
 import socket
+import logging
 
+log = logging.getLogger()
 
 class oneConnect:
 
@@ -133,6 +135,10 @@ class SimpleForwardClient(Context_Child):
         self._send(TYPE_CLIENT_OPEN_REMOTE_PORT,
                    remote_port.to_bytes(2, 'big'))
 
+        log.info(
+            f"添加端口转发：{self.forward_server_address}:{remote_port} -> {bind_ip}:{bind_port}"
+        )
+
     def _send(self, type, data=b""):
         """通过可靠udp通信实例发送数据包
 
@@ -175,19 +181,28 @@ class SimpleForwardClient(Context_Child):
 
             # 检查包类型是否合法
             if package.Type >= TYPR_NUM_MAX:
+                log.debug("包错误")
                 self.raiseException(FORWARD_PIPE_BROKED)
                 return
 
             # 服务端打开指定端口时发生错误
             if package.Type == TYPE_SERVER_ERROR_REMOTE_PORT:
                 remotePort = getWord(package.Data, 0, 'big')
+
+                log.debug(f"服务端打开{remotePort}端口时发生错误")
+
                 if self.forward_client_table.get(remotePort, None):
                     del self.forward_client_table[remotePort]
+
                 continue
 
             # 服务端关闭了一个特定端口
             if package.Type == TYPE_SERVER_CLOSE_REMOTE_PORT:
+
                 remotePort = getWord(package.Data, 0, 'big')
+
+                log.debug(f"服务端关闭{remotePort}端口")
+
                 if self.forward_client_table.get(remotePort, None):
                     del self.forward_client_table[remotePort]
                 continue
@@ -197,6 +212,7 @@ class SimpleForwardClient(Context_Child):
                 remotePort = getWord(package.Data, 0, 'big')
                 identification = package.Data[2:6]
 
+                log.debug(f"服务端开启了一个应用会话, remotePort:{remotePort}, identification:{identification.hex()}")
                 if not self.forward_client_table.get(remotePort, None):
                     self._send(TYPE_CLIENT_CREATE_SOCKET_ERROR, identification)
                     continue
@@ -212,7 +228,7 @@ class SimpleForwardClient(Context_Child):
                 except BlockingIOError:
                     pass
                 except IOError as e:
-                    print(f"[Forward Client] connect error {e}")
+                    log.debug(f"[Forward Client] connect error {e}")
                     self._send(TYPE_CLIENT_CREATE_SOCKET_ERROR,
                                package.Data[2:6])
                     continue
@@ -238,6 +254,9 @@ class SimpleForwardClient(Context_Child):
             if package.Type == TYPE_CLOSE_ONE_CONNECT:
                 identification = package.Data[:4]
 
+                log.debug(
+                    f"服务端关闭了一个应用会话, identification:{identification.hex()}"
+                )
                 one_connect: oneConnect = self.socket_table.get(
                     identification, None)
 
@@ -289,7 +308,7 @@ class SimpleForwardClient(Context_Child):
 
                     if one_connect.Status != oneConnect.INIT_STATUS or self.cur_time - one_connect.Init_Start_Time > self.connectTimeout:
                         one_connect.Status = oneConnect.CLOSE_STATUS
-                        print(f"[Forward Client] {i} runtime error {e}")
+                        log.debug(f"[Forward Client] {i.hex()} runtime error {e}")
 
                 if isConnect and one_connect.Status == oneConnect.INIT_STATUS:
                     one_connect.Status = oneConnect.RUNTIME_STATUS
@@ -318,7 +337,7 @@ class SimpleForwardClient(Context_Child):
                         pass
 
                     except Exception as e:
-                        print(f"[Forward Client] {i} close {e}")
+                        log.debug(f"[Forward Client] {i.hex()} close {e}")
                         one_connect.Status = oneConnect.CLOSE_STATUS
 
     def check(self):
@@ -332,9 +351,12 @@ class SimpleForwardClient(Context_Child):
         if self.status == SimpleForwardClient.STATUS_PRE_INIT:
 
             if self.cur_time - self.Last_Status_Time > self.Wait_Init_Time:
+
                 self.communicate_socket = self.reliableUdpFactory.connect(
                     self.forward_server_address, self.forward_server_bind_port,
                     self.forward_client_bind_port)
+
+                log.debug("SimpleForwardClient.STATUS_PRE_INIT")
 
                 self.status = SimpleForwardClient.STATUS_INIT
 

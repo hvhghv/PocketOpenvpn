@@ -1,6 +1,9 @@
 import socket
 from ..include.ContextHead import *
 from ..include.VpnContextContentType import *
+import logging
+
+log = logging.getLogger()
 
 
 class SimpleSocket(socket.socket, Context_Child):
@@ -27,6 +30,8 @@ class SimpleSocket(socket.socket, Context_Child):
         self.dstPort = dstPort
         self.buffer = buffer
 
+        log.debug("SimpleSocket 初始化完成")
+
     def soft_reset(self, event: Event):
         """
         连接重置，重新连接目标地址
@@ -34,11 +39,16 @@ class SimpleSocket(socket.socket, Context_Child):
         异常类型: SOCKET_CONNECT_CLOSE
         """
 
+        log.debug("socket 连接重置")
+
         self.setblocking(True)
         try:
-
             self.connect((self.dstAddress, self.dstPort))
+
         except Exception as e:
+
+            log.error("socket 连接错误")
+
             self.raiseException(SOCKET_CONNECT_CLOSE,e)
             return
 
@@ -59,7 +69,7 @@ class SimpleSocket(socket.socket, Context_Child):
 
         if not event.Payload:
             return
-        
+
         self.cur_send_buffer += event.Payload
 
     def _Send_Msg(self):
@@ -67,7 +77,7 @@ class SimpleSocket(socket.socket, Context_Child):
         
         异常类型: SOCKET_CONNECT_CLOSE
         """
-        
+
         try:
             size = self.send(self.cur_send_buffer)
             self.cur_send_buffer = self.cur_send_buffer[size:]

@@ -2,6 +2,10 @@ import ssl
 from ..include.ContextHead import *
 from ..include.VpnContextContentType import *
 
+import logging
+
+log = logging.getLogger()
+
 
 class SimpleTLS(Context_Child):
     """
@@ -51,6 +55,7 @@ class SimpleTLS(Context_Child):
         '''
         将事件链上的TLS数据流写入MemoryBIO
         '''
+        
         self.BIO_Incoming_Object.write(event.Payload)
 
     def do_handshark(self, event: Event):
@@ -64,13 +69,20 @@ class SimpleTLS(Context_Child):
         事件类型 : TLS_HANDSHARK_ERROR 握手失败
         
         """
+        
         try:
             self.SSL_Object.do_handshake()
             self.handshark_done = True
+            log.info("TLS握手成功")
+            
             self.createEvent(TLS_HANDSHARK_DONE)
+            
         except ssl.SSLWantReadError:
+            log.debug("TLS需要更多的握手包数据")
             self.createEvent(TLS_HANDSHARK_DATA_NEED)
+
         except ssl.SSLError as e:
+            log.error("TLS握手失败")
             self.raiseException(TLS_SSL_ERROR, e)
 
     def write(self, event: Event):

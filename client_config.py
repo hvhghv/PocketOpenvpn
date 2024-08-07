@@ -1,4 +1,5 @@
 from PocketVpn.Vpn.VpnCrypto import VpnCrypto
+import logging
 
 # ___________________以下配置为重要参数，需按实际填写_____________________________
 
@@ -46,16 +47,18 @@ auth = VpnCrypto.HMAC_SHA1  # openvpn信息摘要模式
 # 其他环境，需要自行下载解决
 # 该项目自带的libcrypto.so.1.0.0为ubuntu20.02 x64 wsl2平台下的libcrypto动态链接库
 # 该项目自带的libcrypto-3-x64.dll为windows x64平台下的libcrypto动态链接库
-library_path = 'Lib/libcrypto.so.1.0.0'  
+library_path = 'Lib/libcrypto-3-x64.dll'
 
 # 客户端occ信息，在openvpn客户端加载时，会生成需匹配的occ信息
 # 可先用openvpn程序对接其服务端，查看其所需匹配的occ信息
 # 再填入此配置文件中
-occ_string = b'V4,dev-type tun,link-mtu 1559,tun-mtu 1500,proto TCPv4_CLIENT,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-client'  
+occ_string = b'V4,dev-type tun,link-mtu 1559,tun-mtu 1500,proto TCPv4_CLIENT,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-client'
 
 key_direction = 0  # 密钥方向，参考openvpn配置文件。若其配置文件无此选项，则为0
 
 # ___________________以下配置为非重要参数，按默认参数即可_____________________________
+
+logging_level = logging.DEBUG
 
 Wait_Init_Time = 3  # 开始进行连接初始化的等待时间，目的是防止在openvpn未完成握手的情况下就启动，若无法初始化连接，可尝试将该值调高
 
@@ -81,3 +84,4 @@ socketBuffer = 0xffff  # socket的tcp接收缓冲区大小
 
 # 其他参数
 kwargs = {}
+

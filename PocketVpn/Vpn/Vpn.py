@@ -5,6 +5,10 @@ from .VpnCrypto import *
 from time import time
 from queue import Queue
 
+import logging
+
+log = logging.getLogger()
+
 
 class OPCODE:
     """openvpn packet opcode_
@@ -367,6 +371,9 @@ class Vpn(Context_Child):
         """
         初始化一个新会话
         """
+
+        log.info("vpn 新会话初始化")
+
         self.RemoteOnePacketId = 0
         self.MessagePacketId = 0
 
@@ -500,6 +507,10 @@ class Vpn(Context_Child):
         self.server_random_1 = package.random_1
         self.server_random_2 = package.random_2
 
+        log.debug(f"server_occ={self.server_occ}")
+        log.debug(f"server_random_1={self.server_random_1.hex()}")
+        log.debug(f"server_random_2={self.server_random_2.hex()}")
+
         self._cipher_init()
 
         if self.Status == Vpn.VPN_STATUS_RECV_KEY_EXCHANGE:
@@ -605,6 +616,12 @@ class Vpn(Context_Child):
         """
         发送密钥协商包
         """
+
+        log.debug(f"pre_master_secret={self.pre_master_secret.hex()}")
+        log.debug(f"client_random_1={self.client_random_1.hex()}")
+        log.debug(f"client_random_2={self.client_random_2.hex()}")
+        log.debug(f"client_occ={self.client_occ}")
+
         package = VpnTLSMethod2Packet(master_secret=self.pre_master_secret,
                                       random_1=self.client_random_1,
                                       random_2=self.client_random_2,
@@ -655,17 +672,29 @@ class Vpn(Context_Child):
                 self.createEvent(VPN_RECORD_DATA_RECV_RESTRUCT, b"")
 
         if self.Status == Vpn.VPN_STATUS_INIT:
+
+            log.debug("VPN_STATUS_INIT")
+
             self._send_client_hard_reset()
             self.Status = Vpn.VPN_STATUS_SEND_CLIENT_HARD_RESET
 
         elif self.Status == Vpn.VPN_STATUS_RECV_SERVER_HARD_RESET:
+
+            log.debug("VPN_STATUS_RECV_SERVER_HARD_RESET")
+
             self.createEvent(TLS_DO_HANDSHARK)
             self.Status = Vpn.VPN_STATUS_DO_HANDSHARK
 
         elif self.Status == Vpn.VPN_STATUS_DO_HANDSHARK:
+
+            log.debug("VPN_STATUS_DO_HANDSHARK")
+
             self.createEvent(TLS_DO_HANDSHARK)
 
         elif self.Status == Vpn.VPN_STATUS_FINISH_TLS_HANDSHARK:
+
+            log.debug("VPN_STATUS_FINISH_TLS_HANDSHARK")
+
             self._send_key_exchange()
             self.Status = Vpn.VPN_STATUS_SEND_KEY_EXCHANGE
 
@@ -680,10 +709,12 @@ class Vpn(Context_Child):
 
         elif self.Status == Vpn.VPN_STATUS_CLIENT_PREPARE_HARD_RESET:
 
+
             toContinue = self._prepare_hard_reset_check()
 
             if toContinue:
                 self.Status = Vpn.VPN_STATUS_CLIENT_DONE_PREPARE_HARD_RESET
 
         elif self.Status == Vpn.VPN_STATUS_CLIENT_DONE_PREPARE_HARD_RESET:
+
             self._check_send_application_data()

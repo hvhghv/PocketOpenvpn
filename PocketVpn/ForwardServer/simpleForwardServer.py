@@ -205,6 +205,8 @@ class ForwardServer():
             fragment=fragment,
             capacity=reliableUdpCapacity)
 
+        log.info("服务端初始化成功")
+        
     def _create_bind_port(self, port):
         """根据客户端的请求，绑定指定端口
 
@@ -217,7 +219,7 @@ class ForwardServer():
         try:
             s.bind((self.bind_ip, port))
         except Exception as e:
-            print(f"[forward server] {port} create one port error {e}")
+            log.debug(f"[forward server] {port} create one port error {e}")
             return None
 
         s.listen(self.bind_port_listen)
@@ -282,7 +284,7 @@ class ForwardServer():
             try:
                 bind_socket.close()
             except Exception as e:
-                print(f"[forward server] {port} clean one port error {e}")
+                log.debug(f"[forward server] {port} clean one port error {e}")
 
             del self.Port_Table[port]
 
@@ -306,7 +308,7 @@ class ForwardServer():
             try:
                 oneAppSocket.Socket_Object.close()
             except Exception as e:
-                print(
+                log.debug(
                     f"[forward server] {identification_id} clean one identification_id error {e}"
                 )
 
@@ -348,8 +350,8 @@ class ForwardServer():
             except BlockingIOError:
                 break
             except Exception as e:
-                print(
-                    f"[forward server] check forward server socket error {e}")
+                log.error(
+                    f"check forward server socket error {e}")
                 break
 
             packet = Communicate_Package().pack_addr_str(
@@ -378,6 +380,8 @@ class ForwardServer():
             self.Login_Client_Session_Table[address] = OneClientSession(
                 address, one_socket)
 
+            log.debug(f"新客户端连接: f{address}")
+
     def _check_every_client(self):
         """检查每个客户端会话，从每个客户端会话读取数据包并处理
         
@@ -393,6 +397,9 @@ class ForwardServer():
 
             # 检查连接是否关闭
             if one_client_socket.isClosed():
+
+                log.debug(f"{one_client_socket.Address}客户端会话已关闭")
+
                 to_del_list.append(address)
                 continue
 
@@ -408,7 +415,11 @@ class ForwardServer():
                     # 客户端请求服务端打开指定端口
                     port = getWord(package.Data, 0, 'big')
 
+                    log.debug(f"{one_client_socket.Address}客户端请求服务端打开指定端口,port:{port}")
+
                     if self.Port_Table.get(port, None):
+
+                        log.debug(f"端口已被占用")
 
                         one_client_socket.sendPackage(
                             TYPE_SERVER_ERROR_REMOTE_PORT, package.Data)
@@ -416,6 +427,8 @@ class ForwardServer():
 
                     port_socket = self._create_bind_port(port)
                     if not port_socket:
+
+                        log.debug(f"绑定端口错误")
                         one_client_socket.sendPackage(
                             TYPE_SERVER_ERROR_REMOTE_PORT, package.Data)
                         continue
@@ -427,6 +440,8 @@ class ForwardServer():
                     # 客户端请求服务端关闭指定端口
                     port = getWord(package.Data, 0, 'big')
 
+
+                    log.debug(f"收到客户端{one_client_socket.Address}请求关闭端口{port}")
                     table = self.Port_Table.get(port, None)
                     if not table:
                         continue
@@ -439,7 +454,11 @@ class ForwardServer():
 
                 if package.Type == TYPE_CLIENT_CREATE_SOCKET_ERROR:
                     # 客户端创建应用会话时出错
+
                     identification = package.Data[:4]
+
+                    log.debug(f"{one_client_socket.Address}客户端创建应用会话{identification.hex()}时出错")
+
                     oneAppSocket: OneAppSocket = self.Identification_Socket_Table.get(
                         identification, None)
 
@@ -471,6 +490,9 @@ class ForwardServer():
                     # 客户端关闭了一个应用会话
                     identification = package.Data[:4]
 
+                    log.debug(
+                        f"{one_client_socket.Address}客户端关闭了一个应用会话{identification.hex()}"
+                    )
                     oneAppSocket: OneAppSocket = self.Identification_Socket_Table.get(
                         identification, None)
 
@@ -482,9 +504,12 @@ class ForwardServer():
                     oneAppSocket.setStatus(OneAppSocket.APP_STATUS_CLOSE)
 
                 if package.Type >= TYPR_NUM_MAX:
-                    print(
-                        f"[forward server] package.Type error : {package.Type}"
+
+
+                    log.debug(
+                        f"{one_client_socket.Address} package.Type error : {package.Type}"
                     )
+
                     to_del_list.append(address)
                     continue
 
@@ -514,7 +539,7 @@ class ForwardServer():
                 except BlockingIOError:
                     break
                 except Exception as e:
-                    print(
+                    log.debug(
                         f"[forward server] {i} check bind port error, close {e}"
                     )
                     to_del_list.append(i)
@@ -574,7 +599,7 @@ class ForwardServer():
                 pass
 
             except IOError as e:
-                print(f"[forward server] {i} : send error {e}")
+                log.debug(f"[forward server] {i} : send error {e}")
                 appSocket.setStatus(OneAppSocket.APP_STATUS_CLOSE)
 
             # 读取应用待转发的数据
@@ -589,7 +614,7 @@ class ForwardServer():
                     data = appSocket.Socket_Object.recv(self.tcpRecvBufferSize)
 
                     if not data:
-                        print(f"[forward server] {i} : close")
+                        log.debug(f"[forward server] {i} : close")
                         appSocket.setStatus(OneAppSocket.APP_STATUS_CLOSE)
                         break
 
@@ -600,7 +625,7 @@ class ForwardServer():
                 except BlockingIOError:
                     break
                 except Exception as e:
-                    print(f"[forward server] {i} : recv error {e}")
+                    log.debug(f"[forward server] {i} : recv error {e}")
                     appSocket.setStatus(OneAppSocket.APP_STATUS_CLOSE)
                     break
 
