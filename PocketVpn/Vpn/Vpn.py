@@ -499,13 +499,23 @@ class Vpn(Context_Child):
         接收事件链中，openvpn控制通道数据包，进行openvpn的密钥协商，occ信息交换等
         """
         if self.Status == Vpn.VPN_STATUS_SEND_KEY_EXCHANGE:
-            self.Status = Vpn.VPN_STATUS_RECV_KEY_EXCHANGE
+            self.Status = Vpn.VPN_STATUS_KEY_GENERATED
+
+        # elif self.Status == Vpn.VPN_STATUS_RECV_KEY_EXCHANGE:
+        #     self.Status = Vpn.VPN_STATUS_KEY_GENERATED
+
+        else:
+            log.debug(f"recv_tls_text in error status:{event.Payload}")
+            return
 
         package = VpnTLSMethod2Packet(VpnTLSMethod2Packet.MODE_SERVER,
                                       event.Payload)
+
+
         self.server_occ = package.occ
         self.server_random_1 = package.random_1
         self.server_random_2 = package.random_2
+
 
         log.debug(f"server_occ={self.server_occ}")
         log.debug(f"server_random_1={self.server_random_1.hex()}")
@@ -513,8 +523,7 @@ class Vpn(Context_Child):
 
         self._cipher_init()
 
-        if self.Status == Vpn.VPN_STATUS_RECV_KEY_EXCHANGE:
-            self.Status = Vpn.VPN_STATUS_KEY_GENERATED
+
 
     def vpn_decrypto_application_data(self, event: Event):
         """将事件链中传入的应用数据进行解密
