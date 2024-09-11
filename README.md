@@ -11,10 +11,11 @@
 数据加密通道仅支持AES-128-CBC, AES-256-CBC
 
 编译后，会在build目录下生成静态库
-    * liblwip
-    * port_layer
-    * mbedtls/libmbedcrypto.a
-    * mbedtls/libmbedtls.a
-    * mbedtls/libmbedx509.a
+
+- liblwip
+- port_layer
+- mbedtls/libmbedcrypto.a
+- mbedtls/libmbedtls.a
+- mbedtls/libmbedx509.a
 
 ### 开发中...仍未进行测试
