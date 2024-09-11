@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "*.pyx": "cython",
+    "bit": "c",
+    "compare": "c",
+    "cstddef": "c",
+    "limits": "c",
+    "type_traits": "c",
+    "xutility": "c",
+    "algorithm": "c",
+    "define.h": "c",
+    "entropy.h": "c",
+    "assert.h": "c",
+    "cc.h": "c"
+}
+}
