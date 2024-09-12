@@ -9,6 +9,7 @@
 仅支持subnet选项
 
 数据加密通道仅支持AES-128-CBC, AES-256-CBC
+支持SHA1, SHA256, SHA512
 
 编译后，会在build目录下生成静态库
 
