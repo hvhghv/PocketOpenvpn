@@ -12,6 +12,7 @@
 #define TLS_PACKET_PUSH_IFCONFIG_OPT "ifconfig"
 #define CLIENT_OCC_STRING_1 "V4,dev-type tun,link-mtu 1559,tun-mtu 1500,proto TCPv4_CLIENT,"
 
+
 enum _POCKET_VPN_STATUS {
     VPN_STATUS_INIT,
     VPN_STATUS_SEND_CLIENT_HARD_RESET,
@@ -536,6 +537,14 @@ void pocket_vpn_cipher_init(PocketVpnContext *self) {
 
     }
 
+    else if (self->auth_mode == HMAC_MODE_SHA512){
+
+        self->hmac_key_size   = 64;
+        self->hmac_msg_length = 64;
+        auth_name             = "SHA512";
+
+    }
+
     else {
         pocket_vpn_debug_string("auth_mode error!");
         pocket_vpn_failed();
@@ -1039,6 +1048,9 @@ void pocket_vpn_application_input(PocketVpnContext *self, vBuffer *vbuffer) {
 
     if (pocketvpn_memcmp(en_text_ptr, buffer, self->hmac_msg_length) != 0) {
         pocket_vpn_debug_string("hmac auth error!");
+
+        pocket_vpn_debug_string("hmac_key_size %d", self->hmac_key_size);
+        pocket_vpn_debug_string("hmac_msg_length %d", self->hmac_msg_length);
 
         pocket_vpn_debug_string("packet hmac");
         pocket_vpn_debug_bytes(en_text_ptr, self->hmac_msg_length);

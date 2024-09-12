@@ -11,6 +11,7 @@
     "define.h": "c",
     "entropy.h": "c",
     "assert.h": "c",
-    "cc.h": "c"
+    "cc.h": "c",
+    "vpn.h": "c"
 }
 }

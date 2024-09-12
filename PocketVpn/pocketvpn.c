@@ -154,6 +154,10 @@ uint32_t pocketvpn_hmac_digest(uint8_t *key, uint32_t key_size, uint8_t *msg, ui
         info = (mbedtls_md_info_t *)mbedtls_md_info_from_type(MBEDTLS_MD_SHA256);
         break;
 
+    case HMAC_MODE_SHA512:
+        info = (mbedtls_md_info_t *)mbedtls_md_info_from_type(MBEDTLS_MD_SHA512);
+        break;
+
     default:
         pocket_vpn_debug_string("pocketvpn_hmac_digest error! code: %d", mode);
         pocket_vpn_failed();
@@ -493,8 +497,8 @@ int pocketvpn_new(
     pocketvpn->pocketvpn.tls_obj       = (void *)&pocketvpn->ssl;
     pocketvpn->pocketvpn.tls_bio_obj   = (void *)&pocketvpn->ssl;
     pocketvpn->pocketvpn.driver_obj    = (void *)&pocketvpn->tun;
-    pocketvpn->pocketvpn.cipher_mode   = CIPHER_AES_256_CBC;
-    pocketvpn->pocketvpn.auth_mode     = HMAC_MODE_SHA256;
+    pocketvpn->pocketvpn.cipher_mode   = cipher_mode;
+    pocketvpn->pocketvpn.auth_mode     = auth_mode;
     pocketvpn->pocketvpn.key_direction = key_direction;
     pocketvpn->pocketvpn.mtu           = mtu;
     pocketvpn->pocketvpn.max_run_time  = max_run_time;

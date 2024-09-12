@@ -19,8 +19,6 @@ typedef int32_t s32_t;
 #define X8_F  "02x"
 #define SZT_F "u"
 
-
-
 #define LWIP_CHKSUM_ALGORITHM 2
 #define BYTE_ORDER LITTLE_ENDIAN
 

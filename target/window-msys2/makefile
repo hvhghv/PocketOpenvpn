@@ -29,7 +29,7 @@ else
 CFLAGS += -O3
 endif
 
-CFLAGS +=  -Wall -Wdouble-promotion -Wfloat-conversion -Wdiscarded-qualifiers -std=c99 -DNO_INET_H -DEX_INCLUDE=\<main.h\> 
+CFLAGS +=  -Wall -Wdouble-promotion -Wfloat-conversion -Wdiscarded-qualifiers -std=c99 -DNO_INET_H -DEX_INCLUDE=\<port_layer.h\> 
 
 LDFLAGS = 
 

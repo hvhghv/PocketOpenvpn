@@ -3,25 +3,9 @@
 
 #include "PocketVpn/define.h"
 
-#ifndef NO_STD_LIB
-#include <stdint.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#endif
-
-#ifndef NO_TIME_H
-#include <time.h>
-#endif
-
-#ifndef NO_INET_H
-#include <arpa/inet.h>
-#endif
-
 #ifdef EX_INCLUDE
 #include EX_INCLUDE
 #endif
-
 
 extern void pocketvpn_urandom(void *buffer, uint32_t size);
 
@@ -114,7 +98,8 @@ typedef struct _VBUFFER {
 enum HMAC_MODE {
     HMAC_MODE_MD5,
     HMAC_MODE_SHA1,
-    HMAC_MODE_SHA256
+    HMAC_MODE_SHA256,
+    HMAC_MODE_SHA512,
 };
 
 enum CIPHER_MODE {

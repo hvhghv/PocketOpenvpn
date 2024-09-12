@@ -12,6 +12,18 @@
 #define pocketvpn_ntohll ntohll
 #define pocketvpn_ntohl ntohl
 #define pocketvpn_ntohs ntohs
+#include <arpa/inet.h>
+#endif
+
+#ifndef NO_STD_LIB
+#include <stdint.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#endif
+
+#ifndef NO_TIME_H
+#include <time.h>
 #endif
 
 #ifndef pocketvpn_printf

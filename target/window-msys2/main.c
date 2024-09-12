@@ -244,7 +244,7 @@ int main() {
     pocketvpn_t pocketvpn;
     int res;
 
-    res = pocketvpn_new(&pocketvpn, &s, socket_read, socket_write, cafile, sizeof(cafile), certfile, sizeof(certfile), keyfile, sizeof(keyfile), CIPHER_AES_256_CBC, HMAC_MODE_SHA256, 0, 1300, 3600);
+    res = pocketvpn_new(&pocketvpn, &s, socket_read, socket_write, cafile, sizeof(cafile), certfile, sizeof(certfile), keyfile, sizeof(keyfile), CIPHER_AES_256_CBC, HMAC_MODE_SHA512, 0, 1300, 3600);
 
     if (res != 0){
         printf("pocketvpn_new failed!\n");
