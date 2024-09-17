@@ -1,4 +1,4 @@
-#include "PocketVpn/vpn.h"
+#include "pocketvpn_vpn.h"
 
 #define KEY_PRE_MASTER_SECRET_SIZE 48
 #define KEY_MASTER_SECRET_SIZE 48
@@ -130,6 +130,7 @@ uint16_t pack_vpn_recode_packet(
     uint8_t *buffer,
     uint16_t payload_size) {
     uint8_t *packet_buffer = buffer + 2;
+    uint16_t size;
 
     *packet_buffer = (packet->Opcode << 3) | packet->KeyId;
     packet_buffer++;
@@ -175,7 +176,7 @@ uint16_t pack_vpn_recode_packet(
 
 end:
 
-    uint16_t size         = packet_buffer - buffer;
+    size         = packet_buffer - buffer;
     packet->PacketLength  = size - 2 + payload_size;
     *(uint16_t *)(buffer) = pocketvpn_htons(packet->PacketLength);
 
@@ -1329,6 +1330,8 @@ void pocket_vpn_application_output(PocketVpnContext *self, vBuffer *vbuffer) {
 
 void pocket_vpn_check(PocketVpnContext *self) {
 
+    int toContinue;
+
     if (self->flag & POCKETVPN_FLAG_ERROR) {
         return;
     }
@@ -1370,7 +1373,7 @@ void pocket_vpn_check(PocketVpnContext *self) {
 
     case VPN_STATUS_CLIENT_PREPARE_HARD_RESET:
 
-        int toContinue = pocket_vpn_hard_reset_check(self);
+        toContinue = pocket_vpn_hard_reset_check(self);
 
         if (toContinue) {
             self->status = VPN_STATUS_CLIENT_DONE_PREPARE_HARD_RESET;

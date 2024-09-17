@@ -14,9 +14,23 @@ uint32_t ticks_ms_32() {
     return (uint32_t)clock() * 1000 / CLOCKS_PER_SEC;
 }
 
-void pocketvpn_urandom(void *buffer, uint32_t size){
-    BCryptGenRandom(NULL, buffer, size, BCRYPT_USE_SYSTEM_PREFERRED_RNG);
-}
+int mbedtls_hardware_poll(void *data,
+                          unsigned char *output,
+                          size_t len,
+                          size_t *olen) {
+
+    while (len != 0) {
+        uint32_t size =
+            (len > 0xffffffff) ? 0xffffffff : (uint32_t)len;
+
+        BCryptGenRandom(NULL, output, size, BCRYPT_USE_SYSTEM_PREFERRED_RNG);
+
+        *olen += size;
+        len -= size;
+    }
+
+    return 0;
+};
 
 sys_prot_t
 sys_arch_protect(void) {
@@ -33,12 +47,4 @@ int pocketvpn_arch_init(){
 
     g_Mutex = CreateMutex(NULL, FALSE, NULL);
     return 0;
-}
-
-unsigned __int64 htonll(unsigned __int64 val) {
-    return ((unsigned __int64)(htonl(val)) << 32) + (unsigned __int64)htonl(val >> 32);
-}
-
-unsigned __int64 ntohll(unsigned __int64 val) {
-    return ((unsigned __int64)(ntohl(val)) << 32) + (unsigned __int64)ntohl(val >> 32);
 }

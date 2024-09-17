@@ -45,6 +45,7 @@ INC += -I.
 INC += -I"$(TOP)"
 INC += -I"$(TOP)/lwip/src/include"
 INC += -I"$(TOP)/mbedtls/include"
+INC += -I"$(TOP)/PocketVpn"
 
 PORT_C = port_layer.c
 

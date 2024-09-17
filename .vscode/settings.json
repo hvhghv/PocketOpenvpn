@@ -12,6 +12,11 @@
     "entropy.h": "c",
     "assert.h": "c",
     "cc.h": "c",
-    "vpn.h": "c"
-}
+    "vpn.h": "c",
+    "tcp.h": "c",
+    "netif.h": "c",
+    "pocketvpn_define.h": "c",
+    "pocketvpn_tun.h": "c"
+},
+"C_Cpp.errorSquiggles": "disabled"
 }

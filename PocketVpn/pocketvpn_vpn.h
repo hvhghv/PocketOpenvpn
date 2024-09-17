@@ -1,13 +1,17 @@
 #ifndef _H_POCKETVPN_H
 #define _H_POCKETVPN_H
 
-#include "PocketVpn/define.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "pocketvpn_define.h"
 
 #ifdef EX_INCLUDE
 #include EX_INCLUDE
 #endif
 
-extern void pocketvpn_urandom(void *buffer, uint32_t size);
+void pocketvpn_urandom(void *buffer, uint32_t size);
 
 #define MAX_PACKET(n) (n - PACKET_HEAD_SIZE_RESERVER)
 #define MAX_APPLICATION_PACKET(n) (n - PACKET_HEAD_SIZE_RESERVER - APPLICATION_PACKET_TAIL_SIZE_RESERVER)
@@ -115,4 +119,9 @@ void pocket_vpn_tls_output(PocketVpnContext *self, vBuffer *buffer);
 void pocket_vpn_tls_outcoming(PocketVpnContext *self, uint8_t *buffer, uint32_t size);
 void pocket_vpn_tls_read(PocketVpnContext *self, uint8_t *buffer, uint32_t size);
 void pocket_vpn_debug_bytes(void *buffer, uint32_t size);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif

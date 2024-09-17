@@ -1,18 +1,24 @@
 #ifndef _POCKETVPN_OPT_H_
 #define _POCKETVPN_OPT_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "pocketvpn_opt.h"
+
 #ifndef POCKETVPN_DEBUG
 #define POCKETVPN_DEBUG (0)
 #endif
 
-#ifndef NO_INET_H
-#define pocketvpn_htonll htonll
-#define pocketvpn_htonl htonl
-#define pocketvpn_htons htons
-#define pocketvpn_ntohll ntohll
-#define pocketvpn_ntohl ntohl
-#define pocketvpn_ntohs ntohs
-#include <arpa/inet.h>
+#ifndef NO_LWIP
+#include <lwip/def.h>
+#define pocketvpn_htonl lwip_htonl
+#define pocketvpn_htons lwip_htons
+#define pocketvpn_ntohl lwip_ntohl
+#define pocketvpn_ntohs lwip_ntohs
+#define pocketvpn_htonll(val) ((uint64_t)(pocketvpn_htonl(val)) << 32) + (uint64_t)pocketvpn_htonl(val >> 32)
+#define pocketvpn_ntohll(val) ((uint64_t)(pocketvpn_ntohl(val)) << 32) + (uint64_t)pocketvpn_ntohl(val >> 32)
 #endif
 
 #ifndef NO_STD_LIB
@@ -114,5 +120,9 @@
 #endif
 
 #define pbuf_walk(pbuf, data_ptr, count) for (data_ptr = pbuf, count = 0; data_ptr != NULL; count += data_ptr->len, data_ptr = data_ptr->next)
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

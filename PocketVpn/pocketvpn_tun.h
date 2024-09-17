@@ -1,10 +1,12 @@
 #ifndef _TUN_H
 #define _TUN_H
 
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "lwip/netif.h"
-#include "PocketVpn/define.h"
+#include "pocketvpn_define.h"
 
 typedef struct _Tun_table {
 
@@ -21,4 +23,9 @@ typedef struct _Tun_table {
 
 struct netif *tun_active(Tun_table *tun_table_obj, int num);
 void tun_incoming(Tun_table *tun_table_obj, uint8_t *buffer, uint32_t size);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif

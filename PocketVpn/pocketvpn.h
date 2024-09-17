@@ -1,8 +1,12 @@
 #ifndef _POCKETVPN_PROCESS_H
 #define _POCKETVPN_PROCESS_H
 
-#include "PocketVpn/vpn.h"
-#include "PocketVpn/tun.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "pocketvpn_vpn.h"
+#include "pocketvpn_tun.h"
 
 #include "mbedtls/ssl.h"
 #include "mbedtls/entropy.h"
@@ -14,8 +18,6 @@
 #include "lwip/raw.h"
 
 typedef struct _ssl_context {
-    mbedtls_entropy_context entropy;
-    mbedtls_ctr_drbg_context ctr_drbg;
     mbedtls_ssl_config conf;
     mbedtls_x509_crt cacert;
     mbedtls_x509_crt cert;
@@ -58,5 +60,9 @@ int pocketvpn_new(
     uint32_t max_run_time
 
 );
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

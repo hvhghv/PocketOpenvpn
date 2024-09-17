@@ -1,12 +1,18 @@
-#include "PocketVpn/pocketvpn.h"
+#include "pocketvpn.h"
 #include "lwip/init.h"
 #include "lwip/netif.h"
 #include "lwip/timeouts.h"
 #include "lwip/ip_addr.h"
-
 #include "mbedtls/entropy.h"
+#include "mbedtls/ctr_drbg.h"
+
+#define POCKETVPN_SEED "POCKETVPN"
+
+mbedtls_entropy_context entropy;
+mbedtls_ctr_drbg_context ctr_drbg;
 
 extern int pocketvpn_arch_init();
+uint32_t get_rand32();
 
 #if defined POCKETVPN_DEBUG && POCKETVPN_DEBUG > 0
 void pocketvpn_mbedtls_debug(void *ctx, int level, const char *file, int line, const char *str) {
@@ -364,8 +370,6 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
     ssl_context->bio_incoming_size = 0;
 
     mbedtls_ssl_config_init(&ssl_context->conf);
-    mbedtls_entropy_init(&ssl_context->entropy);
-    mbedtls_ctr_drbg_init(&ssl_context->ctr_drbg);
     mbedtls_x509_crt_init(&ssl_context->cacert);
     mbedtls_x509_crt_init(&ssl_context->cert);
     mbedtls_pk_init(&ssl_context->pkey);
@@ -377,7 +381,7 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
 
     psa_crypto_init();
 
-    ret = mbedtls_ctr_drbg_seed(&ssl_context->ctr_drbg, mbedtls_entropy_func, &ssl_context->entropy, (const unsigned char *)&seed, sizeof(seed));
+    ret = mbedtls_ctr_drbg_seed(&ctr_drbg, mbedtls_entropy_func, &entropy, (const unsigned char *)&seed, sizeof(seed));
     if (ret != 0) {
         pocket_vpn_debug_string("mbedtls_ctr_drbg_seed error!\n");
         return 1;
@@ -390,7 +394,7 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
     }
 
     mbedtls_ssl_conf_authmode(&ssl_context->conf, MBEDTLS_SSL_VERIFY_REQUIRED);
-    mbedtls_ssl_conf_rng(&ssl_context->conf, mbedtls_ctr_drbg_random, &ssl_context->ctr_drbg);
+    mbedtls_ssl_conf_rng(&ssl_context->conf, mbedtls_ctr_drbg_random, &ctr_drbg);
 
 #if defined POCKETVPN_DEBUG && POCKETVPN_DEBUG > 0
     mbedtls_ssl_conf_dbg(&ssl_context->conf, pocketvpn_mbedtls_debug, NULL);
@@ -408,7 +412,12 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
         return 4;
     }
 
-    ret = mbedtls_pk_parse_key(&ssl_context->pkey, (const unsigned char *)key, key_size, NULL, 0, mbedtls_ctr_drbg_random, &ssl_context->ctr_drbg);
+#if defined MBEDTLS_PK_FN_IS_OLD && MBEDTLS_PK_FN_IS_OLD == 1
+    ret = mbedtls_pk_parse_key(&ssl_context->pkey, (const unsigned char *)key, key_size, NULL, 0);
+#else
+    ret = mbedtls_pk_parse_key(&ssl_context->pkey, (const unsigned char *)key, key_size, NULL, 0, mbedtls_ctr_drbg_random, &ctr_drbg);
+#endif
+
     if (ret != 0) {
         pocket_vpn_debug_string("mbedtls_pk_parse_key error!");
         return 5;
@@ -435,9 +444,20 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
 
 int pocketvpn_init(){
 
+    int ret;
+
     if (pocketvpn_arch_init() != 0){
         pocket_vpn_debug_string("pocketvpn_arch_init failed!");
         return 1;
+    }
+
+    mbedtls_entropy_init(&entropy);
+    mbedtls_ctr_drbg_init(&ctr_drbg);
+
+    ret = mbedtls_ctr_drbg_seed(&ctr_drbg, mbedtls_entropy_func, &entropy, (const unsigned char *)POCKETVPN_SEED, sizeof(POCKETVPN_SEED));
+
+    if (ret != 0) {
+        pocket_vpn_failed();
     }
 
     lwip_init();
@@ -522,26 +542,20 @@ void pocketvpn_loop(pocketvpn_t *pocketvpn) {
     sys_check_timeouts();
 }
 
+void pocketvpn_urandom(void *buffer, uint32_t size) {
+
+    int ret;
+
+    ret = mbedtls_ctr_drbg_random(&ctr_drbg, buffer, size);
+
+    if (ret != 0) {
+        pocket_vpn_failed();
+    }
+}
+
 uint32_t get_rand32() {
     uint32_t n;
     pocketvpn_urandom(&n, sizeof(uint32_t));
     return n;
 }
 
-int mbedtls_hardware_poll(void *data,
-                          unsigned char *output,
-                          size_t len,
-                          size_t *olen) {
-
-    while (len != 0) {
-        uint32_t size =
-            (len > 0xffffffff) ? 0xffffffff : (uint32_t)len;
-
-        pocketvpn_urandom(output, size);
-
-        *olen += size;
-        len -= size;
-    }
-
-    return 0;
-};
