@@ -118,7 +118,7 @@ void pocket_vpn_init(PocketVpnContext *self);
 void pocket_vpn_tls_output(PocketVpnContext *self, vBuffer *buffer);
 void pocket_vpn_tls_outcoming(PocketVpnContext *self, uint8_t *buffer, uint32_t size);
 void pocket_vpn_tls_read(PocketVpnContext *self, uint8_t *buffer, uint32_t size);
-void pocket_vpn_debug_bytes(void *buffer, uint32_t size);
+void pocket_vpn_debug_bytes(int level, void *buffer, uint32_t size);
 
 #ifdef __cplusplus
 }

@@ -21,8 +21,11 @@ typedef struct _Tun_table {
 
 } Tun_table;
 
+
 struct netif *tun_active(Tun_table *tun_table_obj, int num);
 void tun_incoming(Tun_table *tun_table_obj, uint8_t *buffer, uint32_t size);
+
+#define pbuf_walk(pbuf, data_ptr, count) for (data_ptr = pbuf, count = 0; data_ptr != NULL; count += data_ptr->len, data_ptr = data_ptr->next)
 
 #ifdef __cplusplus
 }

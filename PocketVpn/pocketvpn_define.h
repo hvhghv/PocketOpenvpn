@@ -32,19 +32,25 @@ extern "C" {
 #include <time.h>
 #endif
 
+#ifndef POCKETVPN_DEBUG_LEVEL
+#define POCKETVPN_DEBUG_LEVEL 10
+#endif
+
 #ifndef pocketvpn_printf
 #define pocketvpn_printf printf
 #endif
 
 #if defined POCKETVPN_DEBUG && POCKETVPN_DEBUG > 0
 
-#define pocket_vpn_debug_string(...)  \
-    pocketvpn_printf("[POCKETVPN] "); \
-    pocketvpn_printf(__VA_ARGS__);    \
-    pocketvpn_printf("\n");
+#define pocket_vpn_debug_string(level, ...)  \
+    if (level <= POCKETVPN_DEBUG_LEVEL) { \
+        pocketvpn_printf("[POCKETVPN] "); \
+        pocketvpn_printf(__VA_ARGS__);    \
+        pocketvpn_printf("\n"); \
+    } \
 
 #else
-#define pocket_vpn_debug_string(...)
+#define pocket_vpn_debug_string(level, ...)
 #endif
 
 #ifndef pocketvpn_memcpy
@@ -57,6 +63,14 @@ extern "C" {
 
 #ifndef pocketvpn_memset
 #define pocketvpn_memset memset
+#endif
+
+#ifndef pocketvpn_malloc
+#define pocketvpn_malloc malloc
+#endif
+
+#ifndef pocketvpn_free
+#define pocketvpn_free free
 #endif
 
 #ifndef pocketvpn_time
@@ -103,6 +117,10 @@ extern "C" {
 #define APPLICATION_RECODE_PACKET_SIZE 64
 #endif
 
+#ifndef VPNSOCK_CHECK_TIME
+#define VPNSOCK_CHECK_TIME 1
+#endif
+
 #define KEY_RANDOM_SIZE 32
 #define PRE_MASTER_SIZE 48
 #define MAX_CIPHER_KEY_LENGTH 64
@@ -118,8 +136,6 @@ extern "C" {
             ;               \
     };
 #endif
-
-#define pbuf_walk(pbuf, data_ptr, count) for (data_ptr = pbuf, count = 0; data_ptr != NULL; count += data_ptr->len, data_ptr = data_ptr->next)
 
 #ifdef __cplusplus
 }

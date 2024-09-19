@@ -38,6 +38,35 @@ typedef struct _pocketvpn_t {
 
 } pocketvpn_t;
 
+
+#define VPNSOCK_FLAG_STOP (1 << 0)
+
+struct _vpnsock_t {
+
+    void *user_mem;
+    struct tcp_pcb *pcb;
+    int (*sock_dispatch)(struct _vpnsock_t *vpnsock_obj, uint8_t event, uint8_t *buffer, void **outBuffer, uint32_t size, uint32_t *outSize);
+    struct pbuf *restore_pbuf;
+    uint8_t needClean;
+    uint8_t flag;
+    struct _vpnsock_t *next;
+    struct _vpnsock_t *prev;
+};
+
+typedef int (*vpnsock_dispatch_fn)(struct _vpnsock_t *vpnsock_obj, uint8_t event, uint8_t *buffer, void **outBuffer, uint32_t size, uint32_t *outSize);
+typedef struct _vpnsock_t vpnsock_t;
+
+enum _SOCKET_EVENT {
+
+    VPNSOCKET_EVENT_ACCESS,
+    VPNSOCKET_EVENT_RECV,
+    VPNSOCKET_EVENT_RECVD,
+    VPNSOCKET_EVENT_SENT,
+    VPNSOCKET_EVENT_CLEAN,
+    VPNSOCKET_EVENT_LOOP
+
+};
+
 int pocketvpn_init();
 
 void pocketvpn_loop(pocketvpn_t *pocketvpn);
@@ -60,6 +89,16 @@ int pocketvpn_new(
     uint32_t max_run_time
 
 );
+
+err_t tcp_bind_service(
+    uint8_t ip1,
+    uint8_t ip2,
+    uint8_t ip3,
+    uint8_t ip4,
+    uint16_t port,
+    vpnsock_dispatch_fn vpnsock_dispatch_func
+    );
+
 
 #ifdef __cplusplus
 }

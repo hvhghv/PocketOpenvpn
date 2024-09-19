@@ -11,7 +11,9 @@
 mbedtls_entropy_context entropy;
 mbedtls_ctr_drbg_context ctr_drbg;
 
-extern int pocketvpn_arch_init();
+extern int pocketvpn_arch_init1();
+extern int pocketvpn_arch_init2();
+
 uint32_t get_rand32();
 
 #if defined POCKETVPN_DEBUG && POCKETVPN_DEBUG > 0
@@ -20,6 +22,10 @@ void pocketvpn_mbedtls_debug(void *ctx, int level, const char *file, int line, c
 };
 
 #endif
+
+static vpnsock_t *vpnsock_working_list = NULL;
+
+err_t tcp_loop_service(void *vpnsock_obj, struct tcp_pcb *pcb);
 
 int pocket_vpn_mbedtls_ssl_send(void *ctx, const unsigned char *buf, size_t len) {
 
@@ -85,7 +91,7 @@ void pocketvpn_tls_write(PocketVpnContext *pocketvpn_context_obj, void *tls_obj,
     int ret = mbedtls_ssl_write(&tls_context->ssl, buffer, size);
 
     if (ret <= 0) {
-        pocket_vpn_debug_string("pocketvpn_tls_write error! code: %d", ret);
+        pocket_vpn_debug_string(10, "pocketvpn_tls_write error! code: %d", ret);
         pocket_vpn_failed();
     }
 }
@@ -100,7 +106,7 @@ uint32_t pocketvpn_tls_do_handshark(void *tls_obj) {
 
         if (ret != 0 && ret != MBEDTLS_ERR_SSL_WANT_READ && ret != MBEDTLS_ERR_SSL_WANT_WRITE && ret != MBEDTLS_ERR_SSL_ASYNC_IN_PROGRESS && ret != MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS) {
 
-            pocket_vpn_debug_string("pocketvpn_tls_do_handshark error! code: %d", ret);
+            pocket_vpn_debug_string(10, "pocketvpn_tls_do_handshark error! code: %d", ret);
             pocket_vpn_failed();
         }
 
@@ -126,7 +132,7 @@ uint32_t pocketvpn_tls_do_handshark(void *tls_obj) {
         return 0;
     }
 
-    pocket_vpn_debug_string("pocketvpn_tls_do_handshark error! code: %d", ret);
+    pocket_vpn_debug_string(10, "pocketvpn_tls_do_handshark error! code: %d", ret);
     pocket_vpn_failed();
     return 0;
 }
@@ -165,13 +171,13 @@ uint32_t pocketvpn_hmac_digest(uint8_t *key, uint32_t key_size, uint8_t *msg, ui
         break;
 
     default:
-        pocket_vpn_debug_string("pocketvpn_hmac_digest error! code: %d", mode);
+        pocket_vpn_debug_string(10, "pocketvpn_hmac_digest error! code: %d", mode);
         pocket_vpn_failed();
     }
 
     uint32_t ret_size = mbedtls_md_get_size(info);
     if (ret_size > buffer_size) {
-        pocket_vpn_debug_string("pocketvpn_hmac_digest failed! code: %d", ret_size);
+        pocket_vpn_debug_string(10, "pocketvpn_hmac_digest failed! code: %d", ret_size);
         pocket_vpn_failed();
     }
 
@@ -179,25 +185,25 @@ uint32_t pocketvpn_hmac_digest(uint8_t *key, uint32_t key_size, uint8_t *msg, ui
 
     ret = mbedtls_md_setup(&ctx, info, 1);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_md_setup failed! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_md_setup failed! code: %d", ret);
         pocket_vpn_failed();
     }
 
     ret = mbedtls_md_hmac_starts(&ctx, key, key_size);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_md_hmac_starts failed! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_md_hmac_starts failed! code: %d", ret);
         pocket_vpn_failed();
     }
 
     ret = mbedtls_md_hmac_update(&ctx, msg, msg_size);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_md_hmac_update failed! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_md_hmac_update failed! code: %d", ret);
         pocket_vpn_failed();
     }
 
     ret = mbedtls_md_hmac_finish(&ctx, buffer);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_md_hmac_finish failed! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_md_hmac_finish failed! code: %d", ret);
         pocket_vpn_failed();
     }
 
@@ -235,7 +241,7 @@ uint32_t pocketvpn_cipher(
         break;
 
     default:
-        pocket_vpn_debug_string("mbedtls_md_info_from_type error! code: %d", mode);
+        pocket_vpn_debug_string(10, "mbedtls_md_info_from_type error! code: %d", mode);
         pocket_vpn_failed();
     }
 
@@ -243,31 +249,31 @@ uint32_t pocketvpn_cipher(
 
     ret = mbedtls_cipher_setup(&ctx, info);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_cipher_setup error! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_cipher_setup error! code: %d", ret);
         pocket_vpn_failed();
     }
 
     ret = mbedtls_cipher_setkey(&ctx, key, key_size * 8, en);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_cipher_setkey error! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_cipher_setkey error! code: %d", ret);
         pocket_vpn_failed();
     }
 
     ret = mbedtls_cipher_set_iv(&ctx, iv, iv_length);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_cipher_set_iv error! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_cipher_set_iv error! code: %d", ret);
         pocket_vpn_failed();
     }
 
     mbedtls_cipher_set_padding_mode(&ctx, MBEDTLS_PADDING_NONE);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_cipher_set_padding_mode! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_cipher_set_padding_mode! code: %d", ret);
         pocket_vpn_failed();
     }
 
     ret = mbedtls_cipher_update(&ctx, text, text_size, buffer, &t_len);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_cipher_update error! code: %d", ret);
+        pocket_vpn_debug_string(10, "mbedtls_cipher_update error! code: %d", ret);
         pocket_vpn_failed();
     }
 
@@ -275,13 +281,13 @@ uint32_t pocketvpn_cipher(
 
     ret = mbedtls_cipher_finish(&ctx, buffer, &t_len);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_cipher_finish error! code: %d, text_size: %d, key_size: %d, iv_size: %d\n", ret, text_size, key_size, iv_length);
+        pocket_vpn_debug_string(10, "mbedtls_cipher_finish error! code: %d, text_size: %d, key_size: %d, iv_size: %d\n", ret, text_size, key_size, iv_length);
         pocket_vpn_failed();
     }
     output_len += t_len;
 
     if (output_len > buffer_size) {
-        pocket_vpn_debug_string("mbedtls_cipher overflow error! code: %d", output_len);
+        pocket_vpn_debug_string(10, "mbedtls_cipher overflow error! code: %d", output_len);
         pocket_vpn_failed();
     }
 
@@ -318,8 +324,8 @@ void lwip_tun_out(void *socket_obj, uint8_t *buffer, uint32_t size) {
     vBuffer vbuffer;
     uint32_t payload_size;
 
-    pocket_vpn_debug_string("lwip_tun_out");
-    pocket_vpn_debug_bytes(buffer, size);
+    pocket_vpn_debug_string(10, "lwip_tun_out");
+    pocket_vpn_debug_bytes(10, buffer, size);
 
     while (size > 0) {
 
@@ -348,7 +354,7 @@ void pocketvpn_driver_init(void *driver_obj, uint8_t *ifconfig) {
 
     if (infer == NULL) {
 
-        pocket_vpn_debug_string("m_lwip_init failed!\n");
+        pocket_vpn_debug_string(10, "m_lwip_init failed!\n");
         pocket_vpn_failed();
     }
 }
@@ -375,7 +381,7 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
     mbedtls_pk_init(&ssl_context->pkey);
     mbedtls_ssl_init(&ssl_context->ssl);
 
-#if defined POCKETVPN_DEBUG && POCKETVPN_DEBUG > 0
+#if defined POCKETVPN_DEBUG && POCKETVPN_DEBUG > 0 && defined MBEDTLS_DEBUG_H
     mbedtls_debug_set_threshold(3);
 #endif
 
@@ -383,13 +389,13 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
 
     ret = mbedtls_ctr_drbg_seed(&ctr_drbg, mbedtls_entropy_func, &entropy, (const unsigned char *)&seed, sizeof(seed));
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_ctr_drbg_seed error!\n");
+        pocket_vpn_debug_string(10, "mbedtls_ctr_drbg_seed error!\n");
         return 1;
     }
 
     ret = mbedtls_ssl_config_defaults(&ssl_context->conf, MBEDTLS_SSL_IS_CLIENT, MBEDTLS_SSL_TRANSPORT_STREAM, MBEDTLS_SSL_PRESET_DEFAULT);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_ssl_config_defaults error!\n");
+        pocket_vpn_debug_string(10, "mbedtls_ssl_config_defaults error!\n");
         return 2;
     }
 
@@ -402,13 +408,13 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
     ret = mbedtls_ssl_setup(&ssl_context->ssl, &ssl_context->conf);
 
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_ssl_setup error!");
+        pocket_vpn_debug_string(10, "mbedtls_ssl_setup error!");
         return 3;
     }
 
     ret = mbedtls_x509_crt_parse(&ssl_context->cert, (const unsigned char *)cert, cert_size);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_x509_crt_parse error!");
+        pocket_vpn_debug_string(10, "mbedtls_x509_crt_parse error!");
         return 4;
     }
 
@@ -419,19 +425,19 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
 #endif
 
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_pk_parse_key error!");
+        pocket_vpn_debug_string(10, "mbedtls_pk_parse_key error!");
         return 5;
     }
 
     ret = mbedtls_ssl_conf_own_cert(&ssl_context->conf, &ssl_context->cert, &ssl_context->pkey);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_ssl_conf_own_cert error!");
+        pocket_vpn_debug_string(10, "mbedtls_ssl_conf_own_cert error!");
         return 6;
     }
 
     ret = mbedtls_x509_crt_parse(&ssl_context->cacert, (const unsigned char *)ca, ca_size);
     if (ret != 0) {
-        pocket_vpn_debug_string("mbedtls_x509_crt_parse error!");
+        pocket_vpn_debug_string(10, "mbedtls_x509_crt_parse error!");
         return 7;
     }
 
@@ -442,12 +448,11 @@ int pocket_vpn_mbedtls_init(SSL_CONTEXT *ssl_context, PocketVpnContext *pocketvp
     return 0;
 }
 
-int pocketvpn_init(){
+int pocketvpn_init() {
 
     int ret;
-
-    if (pocketvpn_arch_init() != 0){
-        pocket_vpn_debug_string("pocketvpn_arch_init failed!");
+    if (pocketvpn_arch_init1() != 0) {
+        pocket_vpn_debug_string(10, "pocketvpn_arch_init1 failed!");
         return 1;
     }
 
@@ -460,7 +465,11 @@ int pocketvpn_init(){
         pocket_vpn_failed();
     }
 
-    lwip_init();
+    if (pocketvpn_arch_init2() != 0) {
+        pocket_vpn_debug_string(10, "pocketvpn_arch_init2 failed!");
+        return 1;
+    }
+
     return 0;
 }
 
@@ -488,7 +497,7 @@ int pocketvpn_new(
     }
 
     if (mtu > MTU_MAX) {
-        pocket_vpn_debug_string("MTU too large, setting to max");
+        pocket_vpn_debug_string(10, "MTU too large, setting to max");
         mtu = MTU_MAX;
     }
 
@@ -496,7 +505,6 @@ int pocketvpn_new(
         pocket_vpn_failed();
     }
 
-    
     pocket_vpn_lwip_init(&pocketvpn->tun, &pocketvpn->pocketvpn);
 
     pocketvpn->pocketvpn.socket_read       = socket_read;
@@ -540,6 +548,263 @@ void pocketvpn_loop(pocketvpn_t *pocketvpn) {
     pocket_vpn_socket_input(&pocketvpn->pocketvpn, &pocketvpn->vbuffer);
     pocket_vpn_check(&pocketvpn->pocketvpn);
     sys_check_timeouts();
+
+    vpnsock_t *vpnsock_work = vpnsock_working_list;
+    
+    if (vpnsock_work == NULL){
+        return;
+    }
+
+    do {
+        tcp_loop_service(vpnsock_work, vpnsock_work->pcb);
+        vpnsock_work = vpnsock_work->next;
+    } while (vpnsock_work != vpnsock_working_list);
+
+}
+
+err_t tcp_dispatch_service(vpnsock_t *vpnsock, struct tcp_pcb *pcb, uint8_t socket_event, struct pbuf *p) {
+
+    struct pbuf *q;
+    uint32_t count;
+    int res;
+    err_t err       = ERR_OK;
+    void *outBuffer = NULL;
+    uint32_t tmp;
+    int tmp2;
+
+    if (socket_event == VPNSOCKET_EVENT_ACCESS) {
+
+        if (vpnsock->sock_dispatch(vpnsock, VPNSOCKET_EVENT_ACCESS, NULL, NULL, 0, NULL) != 0) {
+            res = -2;
+            goto except_exit;
+        }
+
+        vpnsock->restore_pbuf = NULL;
+        vpnsock->pcb          = pcb;
+        vpnsock->flag         = 0;
+        goto end;
+    }
+
+    if (socket_event == VPNSOCKET_EVENT_RECV) {
+
+        if (vpnsock->restore_pbuf == NULL) {
+            vpnsock->restore_pbuf = p;
+        }
+
+        pbuf_walk(vpnsock->restore_pbuf, q, count) {
+
+            tmp  = pcb != NULL ? tcp_sndbuf(pcb) : 0;
+            res  = vpnsock->sock_dispatch(vpnsock, VPNSOCKET_EVENT_RECV, q->payload, &outBuffer, q->len, &tmp);
+            tmp2 = res;
+
+            if (res < 0) {
+                goto recv_except;
+            }
+
+            if (pcb != NULL && outBuffer) {
+                err = tcp_write(pcb, outBuffer, tmp, TCP_WRITE_FLAG_COPY);
+
+                if (err == ERR_MEM) {
+                    pocket_vpn_debug_string(10, "VPNSOCKET_EVENT_RECV tcp_write too larget !");
+                    res = -2;
+                    goto recv_except;
+                }
+
+                res = vpnsock->sock_dispatch(vpnsock, VPNSOCKET_EVENT_SENT, NULL, NULL, 0, NULL);
+
+                if (res < 0) {
+                    goto recv_except;
+                }
+            }
+
+            if (tmp2 != q->len) {
+                count = count - q->len + res;
+                q->payload += res;
+                q->len -= res;
+                err = ERR_WOULDBLOCK;
+                break;
+            }
+        }
+
+        if (err == ERR_OK) {
+            pbuf_free(p);
+            vpnsock->restore_pbuf = NULL;
+        }
+
+        if (pcb) {
+            tcp_recved(pcb, count);
+            vpnsock->sock_dispatch(vpnsock, VPNSOCKET_EVENT_RECVD, NULL, NULL, 0, NULL);
+        }
+
+        else {
+            goto recv_except;
+        }
+    }
+
+    if (socket_event == VPNSOCKET_EVENT_LOOP) {
+
+        tmp = pcb != NULL ? tcp_sndbuf(pcb) : 0;
+
+        res = vpnsock->sock_dispatch(vpnsock, VPNSOCKET_EVENT_LOOP, NULL, &outBuffer, tmp, &tmp);
+        pcb = vpnsock->pcb;
+
+        if (res < 0) {
+            goto except_exit;
+        }
+
+        if (res == 0) {
+            goto end;
+        }
+
+        err = tcp_write(pcb, outBuffer, (uint32_t)res, TCP_WRITE_FLAG_COPY);
+
+        if (err == ERR_OK && tmp == (uint32_t)res) {
+            tcp_output(pcb);
+        }
+
+        if (err == ERR_MEM) {
+            pocket_vpn_debug_string(10, "VPNSOCKET_EVENT_LOOP tcp_write too larget!");
+            res = -2;
+            goto except_exit;
+        }
+
+        res = vpnsock->sock_dispatch(vpnsock, VPNSOCKET_EVENT_SENT, NULL, NULL, 0, NULL);
+
+        if (res < 0) {
+            goto except_exit;
+        }
+    }
+
+    if (socket_event == VPNSOCKET_EVENT_CLEAN) {
+        goto event_clean;
+    }
+
+end:
+    return err;
+
+recv_except:
+
+    pbuf_free(p);
+    if (pcb == NULL) {
+        goto event_clean;
+    }
+
+except_exit:
+    if (res == -1 && tcp_close(vpnsock->pcb) == ERR_OK) {
+        goto event_clean;
+    }
+
+    tcp_abort(vpnsock->pcb);
+    return ERR_ABRT;
+
+event_clean:
+    vpnsock->sock_dispatch(vpnsock, VPNSOCKET_EVENT_CLEAN, NULL, NULL, 0, NULL);
+    vpnsock->flag |= VPNSOCK_FLAG_STOP;
+    return ERR_OK;
+}
+
+err_t tcp_loop_service(void *vpnsock_obj, struct tcp_pcb *pcb) {
+
+    vpnsock_t *vpnsock = (vpnsock_t *)vpnsock_obj;
+
+    if (vpnsock->flag & VPNSOCK_FLAG_STOP) {
+
+        if (vpnsock_working_list->next == vpnsock_working_list) {
+            vpnsock_working_list = NULL;
+        }
+
+        else {
+            vpnsock->prev->next = vpnsock->next;
+            vpnsock->next->prev = vpnsock->prev;
+        }
+
+        pocketvpn_free(vpnsock);
+        return ERR_OK;
+    }
+
+    return tcp_dispatch_service(vpnsock, pcb, VPNSOCKET_EVENT_LOOP, NULL);
+}
+
+err_t tcp_recv_service_fn(void *arg, struct tcp_pcb *pcb, struct pbuf *p, err_t e) {
+    err_t err = tcp_dispatch_service((vpnsock_t *)arg, pcb, VPNSOCKET_EVENT_RECV, p);
+    return err;
+}
+
+void tcp_err_service_fn(void *arg, err_t e) {
+    tcp_dispatch_service((vpnsock_t *)arg, NULL, VPNSOCKET_EVENT_CLEAN, NULL);
+}
+
+err_t tcp_accept_service_fn(void *arg, struct tcp_pcb *newpcb, err_t e) {
+
+    vpnsock_t *vpnsock = (vpnsock_t *)pocketvpn_malloc(sizeof(vpnsock_t));
+    if (vpnsock == NULL) {
+        tcp_abort(newpcb);
+        return ERR_ABRT;
+    }
+
+    vpnsock->sock_dispatch = (vpnsock_dispatch_fn)arg;
+
+    tcp_arg(newpcb, vpnsock);
+    tcp_recv(newpcb, tcp_recv_service_fn);
+    tcp_err(newpcb, tcp_err_service_fn);
+
+    if (vpnsock_working_list == NULL) {
+        vpnsock_working_list = vpnsock;
+        vpnsock->prev        = vpnsock;
+        vpnsock->next        = vpnsock;
+    }
+
+    else {
+        vpnsock_working_list->prev->next = vpnsock;
+        vpnsock->prev                    = vpnsock_working_list;
+        vpnsock->next                    = vpnsock_working_list;
+        vpnsock_working_list->prev       = vpnsock;
+    }
+
+    err_t err = tcp_dispatch_service(vpnsock, newpcb, VPNSOCKET_EVENT_ACCESS, NULL);
+
+    return err;
+}
+
+err_t tcp_bind_service(
+    uint8_t ip1,
+    uint8_t ip2,
+    uint8_t ip3,
+    uint8_t ip4,
+    uint16_t port,
+    vpnsock_dispatch_fn vpnsock_dispatch_func
+
+) {
+
+    struct tcp_pcb *tpcb = tcp_new();
+
+    ip_addr_t addr;
+
+    IP_ADDR4(&addr, ip1, ip2, ip3, ip4);
+
+    if (tpcb == NULL) {
+        pocket_vpn_debug_string(10, "tcp_new failed!");
+        return ERR_MEM;
+    }
+
+    err_t err = tcp_bind(tpcb, &addr, port);
+
+    if (err == ERR_USE) {
+        pocket_vpn_debug_string(10, "port used!");
+        return err;
+    }
+
+    if (err != ERR_OK) {
+        pocket_vpn_debug_string(10, "tcp_bind failed!");
+        return err;
+    }
+
+    tpcb = tcp_listen(tpcb);
+
+    tcp_arg(tpcb, (void *)vpnsock_dispatch_func);
+    tcp_accept(tpcb, tcp_accept_service_fn);
+
+    return ERR_OK;
 }
 
 void pocketvpn_urandom(void *buffer, uint32_t size) {
@@ -558,4 +823,3 @@ uint32_t get_rand32() {
     pocketvpn_urandom(&n, sizeof(uint32_t));
     return n;
 }
-

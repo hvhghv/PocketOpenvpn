@@ -12,7 +12,6 @@
 #define TLS_PACKET_PUSH_IFCONFIG_OPT "ifconfig"
 #define CLIENT_OCC_STRING_1 "V4,dev-type tun,link-mtu 1559,tun-mtu 1500,proto TCPv4_CLIENT,"
 
-
 enum _POCKET_VPN_STATUS {
     VPN_STATUS_INIT,
     VPN_STATUS_SEND_CLIENT_HARD_RESET,
@@ -95,15 +94,16 @@ typedef struct _PFR_CONFIG {
     uint8_t mode;
 } PFR_CONFIG;
 
-void pocket_vpn_debug_bytes(void *buffer, uint32_t size) {
+void pocket_vpn_debug_bytes(int level, void *buffer, uint32_t size) {
 #if defined POCKETVPN_DEBUG && POCKETVPN_DEBUG > 0
-
-    uint8_t *p = buffer;
-    while (size--) {
-        printf("%02x", *p);
-        p++;
+    if (level <= POCKETVPN_DEBUG_LEVEL) {
+        uint8_t *p = buffer;
+        while (size--) {
+            printf("%02x", *p);
+            p++;
+        }
+        printf("\n");
     }
-    printf("\n");
 #endif
 }
 
@@ -176,7 +176,7 @@ uint16_t pack_vpn_recode_packet(
 
 end:
 
-    size         = packet_buffer - buffer;
+    size                  = packet_buffer - buffer;
     packet->PacketLength  = size - 2 + payload_size;
     *(uint16_t *)(buffer) = pocketvpn_htons(packet->PacketLength);
 
@@ -196,7 +196,7 @@ void pack_vpn_recode_packent_with_send(PocketVpnContext *self, uint8_t Opcode, u
     packet.RemoteSessionId     = self->RemoteSessionId;
 
     if (buffer->s - PACK_RECODE_RESERVER < buffer->buf) {
-        pocket_vpn_debug_string("pack recode error!");
+        pocket_vpn_debug_string(10, "pack recode error!");
         pocket_vpn_failed();
     }
 
@@ -356,7 +356,7 @@ uint16_t unpack_vpn_tls_method2_packet(VpnTlsMethod2Packet *packet, uint8_t *buf
     cur_size = buffer_ptr - buffer;
 
     if (cur_size > size) {
-        pocket_vpn_debug_string("unpack_vpn_tls_method2_packet stack error! (1)");
+        pocket_vpn_debug_string(10, "unpack_vpn_tls_method2_packet stack error! (1)");
         pocket_vpn_failed();
     }
 
@@ -384,7 +384,7 @@ uint16_t unpack_vpn_tls_method2_packet(VpnTlsMethod2Packet *packet, uint8_t *buf
     cur_size = buffer_ptr - buffer;
 
     if (cur_size > size) {
-        pocket_vpn_debug_string("unpack_vpn_tls_method2_packet stack error! (2)");
+        pocket_vpn_debug_string(10, "unpack_vpn_tls_method2_packet stack error! (2)");
         while (1)
             ;
     }
@@ -520,7 +520,7 @@ void pocket_vpn_cipher_init(PocketVpnContext *self) {
     }
 
     else {
-        pocket_vpn_debug_string("cipher_mode error!");
+        pocket_vpn_debug_string(10, "cipher_mode error!");
         pocket_vpn_failed();
     }
 
@@ -538,7 +538,7 @@ void pocket_vpn_cipher_init(PocketVpnContext *self) {
 
     }
 
-    else if (self->auth_mode == HMAC_MODE_SHA512){
+    else if (self->auth_mode == HMAC_MODE_SHA512) {
 
         self->hmac_key_size   = 64;
         self->hmac_msg_length = 64;
@@ -547,14 +547,13 @@ void pocket_vpn_cipher_init(PocketVpnContext *self) {
     }
 
     else {
-        pocket_vpn_debug_string("auth_mode error!");
+        pocket_vpn_debug_string(10, "auth_mode error!");
         pocket_vpn_failed();
     }
 
-    uint32_t occ_size = pocketvpn_sprintf((char *)self->client_occ_string, "V4,dev-type tun,link-mtu 1559,tun-mtu 1500,proto TCPv4_CLIENT,cipher %s,auth %s,keysize %d,key-method %d,tls-client", cipher_name, auth_name, self->cipher_key_size * 8, self->key_direction);
+    uint32_t occ_size                   = pocketvpn_sprintf((char *)self->client_occ_string, "V4,dev-type tun,link-mtu 1559,tun-mtu 1500,proto TCPv4_CLIENT,cipher %s,auth %s,keysize %d,key-method %d,tls-client", cipher_name, auth_name, self->cipher_key_size * 8, self->key_direction);
     self->client_occ_string[occ_size++] = 0;
-    self->client_occ_string_length = (uint16_t)occ_size;
-
+    self->client_occ_string_length      = (uint16_t)occ_size;
 }
 
 void pocket_vpn_init(PocketVpnContext *self) {
@@ -564,7 +563,7 @@ void pocket_vpn_init(PocketVpnContext *self) {
     }
 
     if (self->mtu > MTU_MAX) {
-        pocket_vpn_debug_string("MTU too large, setting to max");
+        pocket_vpn_debug_string(10, "MTU too large, setting to max");
         self->mtu = MTU_MAX;
     }
 
@@ -620,14 +619,14 @@ void pocket_vpn_send_key_exchange(PocketVpnContext *self) {
 
     if (KEY_RANDOM_SIZE * 2 + PRE_MASTER_SIZE + self->client_occ_string_length > PACK_RECODE_RESERVER + KEY_EXCHANGE_STACK_SIZE) {
         self->flag |= POCKETVPN_FLAG_ERROR;
-        pocket_vpn_debug_string("Not enough space to send key exchange!");
+        pocket_vpn_debug_string(10, "Not enough space to send key exchange!");
         return;
     }
 
     uint16_t size = pack_vpn_tls_method2_packet(&packet, buffer);
 
-    pocket_vpn_debug_string("send client occ packet");
-    pocket_vpn_debug_bytes(buffer, size);
+    pocket_vpn_debug_string(10, "send client occ packet");
+    pocket_vpn_debug_bytes(10, buffer, size);
 
     self->tls_write(self, self->tls_obj, buffer, size);
 }
@@ -637,7 +636,7 @@ void pocket_vpn_tls_outcoming(PocketVpnContext *self, uint8_t *buffer, uint32_t 
     vBuffer vbuffer;
 
     if (size < PACK_RECODE_RESERVER) {
-        pocket_vpn_debug_string("Not enough space to send tls data!");
+        pocket_vpn_debug_string(10, "Not enough space to send tls data!");
         pocket_vpn_failed();
     }
 
@@ -740,7 +739,7 @@ void pocket_vpn_pre_md5_sha1(
     uint32_t seed_prf_size = label_size + seed_size;
 
     if (buffer_size > PRF_STACK_SIZE || seed_prf_size > PRF_STACK_SIZE) {
-        pocket_vpn_debug_string("error! stack too small");
+        pocket_vpn_debug_string(10, "error! stack too small");
     }
 
     pocketvpn_memcpy(seed_prf, label, label_size);
@@ -798,10 +797,10 @@ void pocket_vpn_tls_occ_read(PocketVpnContext *self, uint8_t *buffer, uint32_t s
 
     unpack_vpn_tls_method2_packet(&packet, buffer, size);
 
-    pocket_vpn_debug_string("server occ :");
-    pocket_vpn_debug_bytes(packet.occ, packet.occ_size);
+    pocket_vpn_debug_string(10, "server occ :");
+    pocket_vpn_debug_bytes(10, packet.occ, packet.occ_size);
 
-    pocket_vpn_debug_string("key generated");
+    pocket_vpn_debug_string(10, "key generated");
 
     uint8_t *client_random1 = self->client_random1;
     uint8_t *client_random2 = self->client_random2;
@@ -814,20 +813,20 @@ void pocket_vpn_tls_occ_read(PocketVpnContext *self, uint8_t *buffer, uint32_t s
     uint8_t master_secret[KEY_MASTER_SECRET_SIZE];
     uint8_t generate_key[KEY_OUT_LENGTH];
 
-    pocket_vpn_debug_string("pre_master_secret");
-    pocket_vpn_debug_bytes(self->pre_master_secret, PRE_MASTER_SIZE);
+    pocket_vpn_debug_string(10, "pre_master_secret");
+    pocket_vpn_debug_bytes(10, self->pre_master_secret, PRE_MASTER_SIZE);
 
-    pocket_vpn_debug_string("client_random1");
-    pocket_vpn_debug_bytes(self->client_random1, KEY_RANDOM_SIZE);
+    pocket_vpn_debug_string(10, "client_random1");
+    pocket_vpn_debug_bytes(10, self->client_random1, KEY_RANDOM_SIZE);
 
-    pocket_vpn_debug_string("client_random2");
-    pocket_vpn_debug_bytes(self->client_random2, KEY_RANDOM_SIZE);
+    pocket_vpn_debug_string(10, "client_random2");
+    pocket_vpn_debug_bytes(10, self->client_random2, KEY_RANDOM_SIZE);
 
-    pocket_vpn_debug_string("server_random1");
-    pocket_vpn_debug_bytes(server_random1, KEY_RANDOM_SIZE);
+    pocket_vpn_debug_string(10, "server_random1");
+    pocket_vpn_debug_bytes(10, server_random1, KEY_RANDOM_SIZE);
 
-    pocket_vpn_debug_string("server_random2");
-    pocket_vpn_debug_bytes(server_random2, KEY_RANDOM_SIZE);
+    pocket_vpn_debug_string(10, "server_random2");
+    pocket_vpn_debug_bytes(10, server_random2, KEY_RANDOM_SIZE);
 
     pocketvpn_memcpy(seed_buffer_ptr, client_random1, KEY_RANDOM_SIZE);
     seed_buffer_ptr += KEY_RANDOM_SIZE;
@@ -863,11 +862,11 @@ void pocket_vpn_tls_occ_read(PocketVpnContext *self, uint8_t *buffer, uint32_t s
     pocketvpn_memcpy(seed_buffer_ptr, &t_remote_seesion, sizeof(t_remote_seesion));
     seed_buffer_ptr += sizeof(t_remote_seesion);
 
-    pocket_vpn_debug_string("LocalSessionId");
-    pocket_vpn_debug_bytes(&t_local_seesion, sizeof(t_local_seesion));
+    pocket_vpn_debug_string(10, "LocalSessionId");
+    pocket_vpn_debug_bytes(10, &t_local_seesion, sizeof(t_local_seesion));
 
-    pocket_vpn_debug_string("RemoteSessionId");
-    pocket_vpn_debug_bytes(&t_remote_seesion, sizeof(t_remote_seesion));
+    pocket_vpn_debug_string(10, "RemoteSessionId");
+    pocket_vpn_debug_bytes(10, &t_remote_seesion, sizeof(t_remote_seesion));
 
     pocket_vpn_pre_md5_sha1(
         self,
@@ -921,26 +920,25 @@ void pocket_vpn_tls_occ_read(PocketVpnContext *self, uint8_t *buffer, uint32_t s
 
     self->status = VPN_STATUS_RECV_KEY_EXCHANGE;
 
-    pocket_vpn_debug_string("master_secret");
-    pocket_vpn_debug_bytes(master_secret, KEY_MASTER_SECRET_SIZE);
+    pocket_vpn_debug_string(10, "master_secret");
+    pocket_vpn_debug_bytes(10, master_secret, KEY_MASTER_SECRET_SIZE);
 
-    pocket_vpn_debug_string("Key Generate");
-    pocket_vpn_debug_bytes(generate_key, KEY_OUT_LENGTH);
+    pocket_vpn_debug_string(10, "Key Generate");
+    pocket_vpn_debug_bytes(10, generate_key, KEY_OUT_LENGTH);
 
-    pocket_vpn_debug_string("Encrypto_Cipher_Key");
-    pocket_vpn_debug_bytes(self->Encrypto_Cipher_Key, MAX_CIPHER_KEY_LENGTH);
+    pocket_vpn_debug_string(10, "Encrypto_Cipher_Key");
+    pocket_vpn_debug_bytes(10, self->Encrypto_Cipher_Key, MAX_CIPHER_KEY_LENGTH);
 
-    pocket_vpn_debug_string("Encrypto_Hmac_Key");
-    pocket_vpn_debug_bytes(self->Encrypto_Hmac_Key, MAX_HMAC_KEY_LENGTH);
+    pocket_vpn_debug_string(10, "Encrypto_Hmac_Key");
+    pocket_vpn_debug_bytes(10, self->Encrypto_Hmac_Key, MAX_HMAC_KEY_LENGTH);
 
-    pocket_vpn_debug_string("Decrypto_Cipher_Key");
-    pocket_vpn_debug_bytes(self->Decrypto_Cipher_Key, MAX_CIPHER_KEY_LENGTH);
+    pocket_vpn_debug_string(10, "Decrypto_Cipher_Key");
+    pocket_vpn_debug_bytes(10, self->Decrypto_Cipher_Key, MAX_CIPHER_KEY_LENGTH);
 
-    pocket_vpn_debug_string("Decrypto_Hmac_Key");
-    pocket_vpn_debug_bytes(self->Decrypto_Hmac_Key, MAX_HMAC_KEY_LENGTH);
+    pocket_vpn_debug_string(10, "Decrypto_Hmac_Key");
+    pocket_vpn_debug_bytes(10, self->Decrypto_Hmac_Key, MAX_HMAC_KEY_LENGTH);
 
-    pocket_vpn_debug_string("Key direction: %d", self->key_direction);
-    
+    pocket_vpn_debug_string(10, "Key direction: %d", self->key_direction);
 
     pocketvpn_memset(self->pre_master_secret, 0, PRE_MASTER_SIZE);
     pocketvpn_memset(master_secret, 0, KEY_MASTER_SECRET_SIZE);
@@ -1000,15 +998,15 @@ void pocket_vpn_tls_push_read(PocketVpnContext *self, uint8_t *buffer, uint32_t 
 
 void pocket_vpn_tls_read(PocketVpnContext *self, uint8_t *buffer, uint32_t size) {
 
-    pocket_vpn_debug_string("start tls read");
+    pocket_vpn_debug_string(10, "start tls read");
     uint32_t tls_read_size = self->tls_read(self->tls_obj, buffer, size);
 
     if (tls_read_size == 0) {
         return;
     }
 
-    pocket_vpn_debug_string("tls packet read");
-    pocket_vpn_debug_bytes(buffer, tls_read_size);
+    pocket_vpn_debug_string(10, "tls packet read");
+    pocket_vpn_debug_bytes(10, buffer, tls_read_size);
 
     if (tls_read_size < TLS_PACKET_MIN_SIZE) {
         return;
@@ -1039,31 +1037,31 @@ void pocket_vpn_application_input(PocketVpnContext *self, vBuffer *vbuffer) {
         return;
     }
 
-    pocket_vpn_debug_string("recv packet");
-    pocket_vpn_debug_string("packet en_text");
+    pocket_vpn_debug_string(10, "recv packet");
+    pocket_vpn_debug_string(10, "packet en_text");
 
-    pocket_vpn_debug_bytes(vbuffer->s, vbuffer->e - vbuffer->s);
+    pocket_vpn_debug_bytes(10, vbuffer->s, vbuffer->e - vbuffer->s);
 
     uint8_t *en_text_ptr = vbuffer->s;
     self->hmac_digest(self->Decrypto_Hmac_Key, self->hmac_key_size, en_text_ptr + self->hmac_msg_length, vbuffer->e - vbuffer->s - self->hmac_msg_length, buffer, sizeof(buffer), self->auth_mode);
 
     if (pocketvpn_memcmp(en_text_ptr, buffer, self->hmac_msg_length) != 0) {
-        pocket_vpn_debug_string("hmac auth error!");
+        pocket_vpn_debug_string(10, "hmac auth error!");
 
-        pocket_vpn_debug_string("hmac_key_size %d", self->hmac_key_size);
-        pocket_vpn_debug_string("hmac_msg_length %d", self->hmac_msg_length);
+        pocket_vpn_debug_string(10, "hmac_key_size %d", self->hmac_key_size);
+        pocket_vpn_debug_string(10, "hmac_msg_length %d", self->hmac_msg_length);
 
-        pocket_vpn_debug_string("packet hmac");
-        pocket_vpn_debug_bytes(en_text_ptr, self->hmac_msg_length);
+        pocket_vpn_debug_string(10, "packet hmac");
+        pocket_vpn_debug_bytes(10, en_text_ptr, self->hmac_msg_length);
 
-        pocket_vpn_debug_string("count hmac");
-        pocket_vpn_debug_bytes(buffer, self->hmac_msg_length);
+        pocket_vpn_debug_string(10, "count hmac");
+        pocket_vpn_debug_bytes(10, buffer, self->hmac_msg_length);
 
-        pocket_vpn_debug_string("decrypto hmac key");
-        pocket_vpn_debug_bytes(self->Decrypto_Hmac_Key, self->hmac_key_size);
+        pocket_vpn_debug_string(10, "decrypto hmac key");
+        pocket_vpn_debug_bytes(10, self->Decrypto_Hmac_Key, self->hmac_key_size);
 
-        pocket_vpn_debug_string("en_text");
-        pocket_vpn_debug_bytes(en_text_ptr + self->hmac_msg_length, vbuffer->e - vbuffer->s - self->hmac_msg_length);
+        pocket_vpn_debug_string(10, "en_text");
+        pocket_vpn_debug_bytes(10, en_text_ptr + self->hmac_msg_length, vbuffer->e - vbuffer->s - self->hmac_msg_length);
 
         return;
     }
@@ -1076,31 +1074,31 @@ void pocket_vpn_application_input(PocketVpnContext *self, vBuffer *vbuffer) {
     uint32_t en_text_size = vbuffer->e - en_text_ptr;
 
     if (en_text_size % self->align_length != 0) {
-        pocket_vpn_debug_string("align error! en_text_size: %d (1)", en_text_size);
+        pocket_vpn_debug_string(10, "align error! en_text_size: %d (1)", en_text_size);
         return;
     }
 
     if (en_text_size > sizeof(buffer)) {
-        pocket_vpn_debug_string("decrypto error! stack overflow! en_text_size: %d", en_text_size);
+        pocket_vpn_debug_string(10, "decrypto error! stack overflow! en_text_size: %d", en_text_size);
         return;
     }
 
     uint32_t text_size = self->decrypto(self->Decrypto_Cipher_Key, self->cipher_key_size, iv, self->iv_length, en_text_ptr, en_text_size, buffer, sizeof(buffer), self->cipher_mode);
 
     if (text_size % self->align_length != 0) {
-        pocket_vpn_debug_string("align error! en_text_size: %d (2)", text_size);
+        pocket_vpn_debug_string(10, "align error! en_text_size: %d (2)", text_size);
         return;
     }
 
     if (text_size > sizeof(buffer)) {
-        pocket_vpn_debug_string("decrypto error! stack overflow! text_size: %d", text_size);
+        pocket_vpn_debug_string(10, "decrypto error! stack overflow! text_size: %d", text_size);
         return;
     }
 
     uint32_t padding_len = buffer[text_size - 1];
 
     if (padding_len > self->align_length || text_size < padding_len) {
-        pocket_vpn_debug_string("padding length error! padding_len: %d, text_size: %d", padding_len, text_size);
+        pocket_vpn_debug_string(10, "padding length error! padding_len: %d, text_size: %d", padding_len, text_size);
         return;
     }
 
@@ -1108,15 +1106,15 @@ void pocket_vpn_application_input(PocketVpnContext *self, vBuffer *vbuffer) {
 
     uint32_t packet_id = pocketvpn_ntohl(*(uint32_t *)buffer);
     if (packet_id != self->decrypto_count) {
-        pocket_vpn_debug_string("packet id error!");
+        pocket_vpn_debug_string(10, "packet id error!");
         return;
     }
 
     self->decrypto_count++;
     text_size -= 4;
 
-    pocket_vpn_debug_string("packet text");
-    pocket_vpn_debug_bytes(buffer + 4, text_size);
+    pocket_vpn_debug_string(10, "packet text");
+    pocket_vpn_debug_bytes(10, buffer + 4, text_size);
     self->driver_incoming(self->driver_obj, buffer + 4, text_size);
 }
 
@@ -1182,8 +1180,8 @@ void pocket_vpn_dispatch_packet(PocketVpnContext *self, vBuffer *vbuffer) {
         uint8_t *tls_incoming_buf  = vbuffer->s + recode_packet_size;
         uint32_t tls_incoming_size = vbuffer->e - vbuffer->s - recode_packet_size;
 
-        pocket_vpn_debug_string("tls incoming pack");
-        pocket_vpn_debug_bytes(tls_incoming_buf, tls_incoming_size);
+        pocket_vpn_debug_string(10, "tls incoming pack");
+        pocket_vpn_debug_bytes(10, tls_incoming_buf, tls_incoming_size);
 
         self->tls_bio_incoming(self, self->tls_bio_obj, tls_incoming_buf, tls_incoming_size);
 
@@ -1210,21 +1208,20 @@ void pocket_vpn_socket_input(PocketVpnContext *self, vBuffer *vbuffer) {
             return;
         }
 
-        vbuffer_t.buf = vbuffer->s;
-        vbuffer_t.s = vbuffer->s;
-        vbuffer_t.c = vbuffer->c;
-        vbuffer_t.e = vbuffer->s + packet_size + 2;
+        vbuffer_t.buf      = vbuffer->s;
+        vbuffer_t.s        = vbuffer->s;
+        vbuffer_t.c        = vbuffer->c;
+        vbuffer_t.e        = vbuffer->s + packet_size + 2;
         vbuffer_t.boundary = vbuffer->s + packet_size + 2;
-        vbuffer_t.flag = 0;
+        vbuffer_t.flag     = 0;
 
         pocket_vpn_dispatch_packet(self, &vbuffer_t);
 
         vbuffer->s += packet_size + 2;
-
     }
 
     pocketvpn_memcpy(src_buffer_s, vbuffer->s, vbuffer->c - vbuffer->s);
-    vbuffer->c  = src_buffer_s + (vbuffer->c - vbuffer->s);
+    vbuffer->c = src_buffer_s + (vbuffer->c - vbuffer->s);
     vbuffer->s = src_buffer_s;
 
     return;
@@ -1249,12 +1246,12 @@ void pocket_vpn_application_output(PocketVpnContext *self, vBuffer *vbuffer) {
     send_buf.flag     = 0;
 
     if (vbuffer->s - PACKET_HEAD_SIZE_RESERVER < vbuffer->buf) {
-        pocket_vpn_debug_string("pocket_vpn_application_output head size too small!");
+        pocket_vpn_debug_string(10, "pocket_vpn_application_output head size too small!");
         pocket_vpn_failed();
     }
 
     if (vbuffer->e + APPLICATION_PACKET_TAIL_SIZE_RESERVER > vbuffer->boundary) {
-        pocket_vpn_debug_string("pocket_vpn_application_output tail size too small!");
+        pocket_vpn_debug_string(10, "pocket_vpn_application_output tail size too small!");
         pocket_vpn_failed();
     }
 
@@ -1269,7 +1266,7 @@ void pocket_vpn_application_output(PocketVpnContext *self, vBuffer *vbuffer) {
     }
 
     if (outcoming_length > MAX_APPLICATION_PACKET(self->mtu)) {
-        pocket_vpn_debug_string("pocket_vpn_application_output outcoming size too big!");
+        pocket_vpn_debug_string(10, "pocket_vpn_application_output outcoming size too big!");
         pocket_vpn_failed();
     }
 
@@ -1302,29 +1299,29 @@ void pocket_vpn_application_output(PocketVpnContext *self, vBuffer *vbuffer) {
     send_buf.e = send_buf.s + outcoming_length;
 
     if (send_buf.s < send_buf.buf) {
-        pocket_vpn_debug_string("send_buf stack overflow!");
+        pocket_vpn_debug_string(10, "send_buf stack overflow!");
         pocket_vpn_failed();
     }
 
-    pocket_vpn_debug_string("encoding appliaction packet");
+    pocket_vpn_debug_string(10, "encoding appliaction packet");
 
-    pocket_vpn_debug_string("hmac");
-    pocket_vpn_debug_bytes(send_buf.s, self->hmac_msg_length);
+    pocket_vpn_debug_string(10, "hmac");
+    pocket_vpn_debug_bytes(10, send_buf.s, self->hmac_msg_length);
 
-    pocket_vpn_debug_string("iv");
-    pocket_vpn_debug_bytes(iv, self->iv_length);
+    pocket_vpn_debug_string(10, "iv");
+    pocket_vpn_debug_bytes(10, iv, self->iv_length);
 
-    pocket_vpn_debug_string("cipher_key");
-    pocket_vpn_debug_bytes(self->Encrypto_Cipher_Key, self->cipher_key_size);
+    pocket_vpn_debug_string(10, "cipher_key");
+    pocket_vpn_debug_bytes(10, self->Encrypto_Cipher_Key, self->cipher_key_size);
 
-    pocket_vpn_debug_string("hmac_key")
-    pocket_vpn_debug_bytes(self->Encrypto_Hmac_Key, self->hmac_key_size);
+    pocket_vpn_debug_string(10, "hmac_key")
+        pocket_vpn_debug_bytes(10, self->Encrypto_Hmac_Key, self->hmac_key_size);
 
-    pocket_vpn_debug_string("text");
-    pocket_vpn_debug_bytes(vbuffer->s, vbuffer->e - vbuffer->s);
+    pocket_vpn_debug_string(10, "text");
+    pocket_vpn_debug_bytes(10, vbuffer->s, vbuffer->e - vbuffer->s);
 
-    pocket_vpn_debug_string("packet-nohmac-noiv");
-    pocket_vpn_debug_bytes(send_buf.s + self->hmac_msg_length + self->iv_length, outcoming_length - self->hmac_msg_length - self->iv_length);
+    pocket_vpn_debug_string(10, "packet-nohmac-noiv");
+    pocket_vpn_debug_bytes(10, send_buf.s + self->hmac_msg_length + self->iv_length, outcoming_length - self->hmac_msg_length - self->iv_length);
     pack_vpn_recode_packent_with_send(self, P_DATA_V1, 0, &send_buf);
 }
 
