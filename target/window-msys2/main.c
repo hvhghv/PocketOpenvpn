@@ -10,6 +10,15 @@ SOCKET s;
 #define SERVER_PORT 1194
 #define BIND_PORT 5678
 
+#define FORWARD_SERVER_ADDR "127.0.0.1"
+#define FORWARD_SERVER_PORT 7890
+#define FORWARD_BIND_PORT 6789
+
+typedef struct {
+    SOCKET* s;
+    struct tcp_pcb *tpcb;
+} forward_t;
+
 const char certfile[] =
     "\
 -----BEGIN CERTIFICATE-----\n\
@@ -161,62 +170,126 @@ void socket_write(void *socket_obj, uint8_t *buffer, uint32_t size) {
     }
 }
 
-err_t m_tcp_recv_fn(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err) {
-
-    if (p == NULL) {
-        tcp_close(tpcb);
-        return ERR_OK;
-    }
-
-    struct pbuf *q;
-    uint16_t count = 0;
-
-    pbuf_walk(p, q, count) {
-
-        tcp_write(tpcb, arg, strlen((const char *)arg), TCP_WRITE_FLAG_COPY);
-        tcp_write(tpcb, q->payload, q->len, TCP_WRITE_FLAG_COPY);
-        tcp_write(tpcb, "\n", 1, TCP_WRITE_FLAG_COPY);
-    }
-
-    tcp_recved(tpcb, count);
-    pbuf_free(p);
-
-    return ERR_OK;
+uint32_t socket_write_ready(void *socket_obj){
+    return 0;
 }
 
-err_t m_tcp_access_fn(void *arg, struct tcp_pcb *newpcb, err_t err) {
-    tcp_arg(newpcb, "[server recv] :");
-    tcp_recv(newpcb, m_tcp_recv_fn);
-    return ERR_OK;
+char vpnsock_send_buf1[200];
+int m_vpnsock_dispatch_fn_1(vpnsock_t *vpnsock_obj, uint8_t event, uint8_t *buffer, void **outBuffer, uint32_t size, uint32_t *outSize){
+    
+    int res;
+
+    if (event == VPNSOCKET_EVENT_RECV){
+        res = sprintf(vpnsock_send_buf1, "[server recv]: ");
+        memcpy(vpnsock_send_buf1 + res, buffer, size);
+        vpnsock_send_buf1[res + size] = '\n';
+        *outBuffer = vpnsock_send_buf1;
+        *outSize = res + size + 1;
+
+
+        if (size >= 5 && memcmp(buffer, "close", 5) == 0){
+            return -1;
+        }
+
+        if (size >= 5 && memcmp(buffer, "abort", 5) == 0) {
+            return -2;
+        }
+
+        return size;
+    }
+
+    return 0;
+
 }
+
+
+char vpnsock_send_buf2[4096];
+int m_vpnsock_dispatch_fn_2(vpnsock_t *vpnsock_obj, uint8_t event, uint8_t *buffer, void **outBuffer, uint32_t size, uint32_t *outSize) {
+
+    int res;
+    SOCKET *forward_sock;
+    uint32_t send_size;
+
+    if (event == VPNSOCKET_EVENT_ACCESS){
+        
+        SOCKADDR_IN addr_dst;
+        unsigned long ul = 1;
+
+        forward_sock  = malloc(sizeof(SOCKET));
+        *forward_sock = socket(AF_INET, SOCK_STREAM, 0);
+
+        if (ioctlsocket(*forward_sock, FIONBIO, &ul) == SOCKET_ERROR) {
+            pocketvpn_printf("set socket nonblocking failed!");
+            return -2;
+        };
+
+        addr_dst.sin_addr.S_un.S_addr = inet_addr(FORWARD_SERVER_ADDR);
+        addr_dst.sin_port             = htons(FORWARD_SERVER_PORT);
+        addr_dst.sin_family           = AF_INET;
+
+        if (connect(*forward_sock, (SOCKADDR *)&addr_dst, sizeof(addr_dst)) == SOCKET_ERROR && WSAGetLastError() != WSAEWOULDBLOCK) {
+            pocketvpn_printf("set forward connect failed!");
+            return -2;
+        }
+
+        vpnsock_obj->user_mem = forward_sock;
+        return 0;
+
+    }
+
+    forward_sock = vpnsock_obj->user_mem;
+
+    if (event == VPNSOCKET_EVENT_CLEAN){
+        closesocket(*forward_sock);
+        free(vpnsock_obj->user_mem);
+    }
+
+    if (event == VPNSOCKET_EVENT_RECV){
+
+
+        res = send(*forward_sock,(const char*)buffer, size, 0);
+
+        if (res == SOCKET_ERROR) {
+
+            if (WSAGetLastError() == WSAEWOULDBLOCK) {
+                return 0;
+            }
+
+        return -2;
+
+        }
+
+        return res;
+
+    }
+
+    if (event == VPNSOCKET_EVENT_LOOP){
+        send_size = size < sizeof(vpnsock_send_buf2) ? size : sizeof(vpnsock_send_buf2);
+        res       = recv(*forward_sock, vpnsock_send_buf2, send_size, 0);
+        *outBuffer = vpnsock_send_buf2;
+
+        if (res == SOCKET_ERROR) {
+
+            if (WSAGetLastError() == WSAEWOULDBLOCK) {
+                return 0;
+            }
+
+            return -2;
+        }
+
+        return res;
+    }
+
+
+    return 0;
+}
+
 
 int server_init() {
 
-    struct tcp_pcb *tpcb = tcp_new();
+    tcp_bind_service(0, 0, 0, 0, BIND_PORT, m_vpnsock_dispatch_fn_1);
+    tcp_bind_service(0, 0, 0, 0, FORWARD_BIND_PORT, m_vpnsock_dispatch_fn_2);
 
-    ip_addr_t addr;
-    IP_ADDR4(&addr, 0, 0, 0, 0);
-
-    if (tpcb == NULL) {
-        pocketvpn_printf("tcp_new failed!\n");
-        return 1;
-    }
-
-    err_t err = tcp_bind(tpcb, &addr, BIND_PORT);
-
-    if (err == ERR_USE) {
-        pocketvpn_printf("port used!\n");
-        return 1;
-    }
-
-    if (err != ERR_OK) {
-        pocketvpn_printf("tcp_bind failed!\n");
-        return 1;
-    }
-
-    tpcb = tcp_listen(tpcb);
-    tcp_arg(tpcb, NULL);
-    tcp_accept(tpcb, m_tcp_access_fn);
     return 0;
 }
 
@@ -244,7 +317,7 @@ int main() {
     pocketvpn_t pocketvpn;
     int res;
 
-    res = pocketvpn_new(&pocketvpn, &s, socket_read, socket_write, cafile, sizeof(cafile), certfile, sizeof(certfile), keyfile, sizeof(keyfile), CIPHER_AES_256_CBC, HMAC_MODE_SHA512, 0, 1300, 3600);
+    res = pocketvpn_new(&pocketvpn, &s, socket_read, socket_write, socket_write_ready, cafile, sizeof(cafile), certfile, sizeof(certfile), keyfile, sizeof(keyfile), CIPHER_AES_256_CBC, HMAC_MODE_SHA512, 0, 1300, 3600);
 
     if (res != 0){
         printf("pocketvpn_new failed!\n");

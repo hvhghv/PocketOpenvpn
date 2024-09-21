@@ -1,0 +1,25 @@
+{
+    "idf.adapterTargetName": "esp32s3",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "files.associations": {
+        "*.pyx": "cython",
+        "nvs_flash.h": "c",
+        "pocketvpn.h": "c",
+        "freertos.h": "c",
+        "sockets.h": "c",
+        "esp_log.h": "c",
+        "bitset": "c",
+        "set": "c",
+        "format": "c",
+        "ratio": "c",
+        "esp_netif.h": "c",
+        "chrono": "cpp",
+        "typeinfo": "cpp",
+        "cmath": "c"
+    },
+    "idf.portWin": "COM4",
+    "idf.flashType": "UART",
+    "C_Cpp.errorSquiggles": "disabled"
+}

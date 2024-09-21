@@ -16,7 +16,12 @@
     "tcp.h": "c",
     "netif.h": "c",
     "pocketvpn_define.h": "c",
-    "pocketvpn_tun.h": "c"
-},
-"C_Cpp.errorSquiggles": "disabled"
+    "pocketvpn_tun.h": "c",
+    "memp_std.h": "c",
+    "opt.h": "c",
+    "memp_priv.h": "c",
+    "system_error": "c",
+    "xlocale": "c"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }

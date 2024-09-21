@@ -11,7 +11,11 @@
 数据加密通道仅支持AES-128-CBC, AES-256-CBC
 支持SHA1, SHA256, SHA512
 
-编译后，会在build目录下生成静态库
+目前实现了`windows msys2`平台与`esp32`平台
+
+目前封装了`tcp`的api，对于`raw`与`udp`，需参考`lwip`的`raw api`进行开发
+
+window平台进行编译后，会在build目录下生成静态库
 
 - liblwip
 - port_layer
@@ -19,4 +23,6 @@
 - mbedtls/libmbedtls.a
 - mbedtls/libmbedx509.a
 
-### 开发中...仍未进行测试
+之后根据需要，链接该静态库，进行开发
+
+### 开发中...不保证稳定性
