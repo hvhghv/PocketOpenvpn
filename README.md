@@ -2,6 +2,8 @@
 
 通过mbedtls库与lwip库实现openvpn协议客户端。
 
+可移植性强
+
 支持RAW,TCP,UDP
 
 仅支持tls-client模式,支持tls1.3
