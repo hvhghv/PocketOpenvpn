@@ -19,8 +19,7 @@
 
 window平台进行编译后，会在build目录下生成静态库
 
-- liblwip
-- port_layer
+- libpocketvpn.a
 - mbedtls/libmbedcrypto.a
 - mbedtls/libmbedtls.a
 - mbedtls/libmbedx509.a

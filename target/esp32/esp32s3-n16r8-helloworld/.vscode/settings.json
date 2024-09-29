@@ -17,7 +17,9 @@
         "esp_netif.h": "c",
         "chrono": "cpp",
         "typeinfo": "cpp",
-        "cmath": "c"
+        "cmath": "c",
+        "ip4.h": "c",
+        "netif.h": "c"
     },
     "idf.portWin": "COM4",
     "idf.flashType": "UART",
