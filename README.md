@@ -1,4 +1,4 @@
-# PocketVPN
+# PocketOpenvpn
 
 通过mbedtls库与lwip库实现openvpn协议客户端。
 
