@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Builtin types &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Core language" href="core_language.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="Modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="core_language.html" title="Core language"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython differences from CPython</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Builtin types</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="builtin-types">
+<h1>Builtin types<a class="headerlink" href="#builtin-types" title="Link to this heading">¶</a></h1>
+<p>Generated Wed 24 Jul 2024 12:46:21 UTC</p>
+<section id="exception">
+<h2>Exception<a class="headerlink" href="#exception" title="Link to this heading">¶</a></h2>
+<section id="all-exceptions-have-readable-value-and-errno-attributes-not-just-stopiteration-and-oserror">
+<span id="cpydiff-types-exception-attrs"></span><h3>All exceptions have readable <code class="docutils literal notranslate"><span class="pre">value</span></code> and <code class="docutils literal notranslate"><span class="pre">errno</span></code> attributes, not just <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> and <code class="docutils literal notranslate"><span class="pre">OSError</span></code>.<a class="headerlink" href="#all-exceptions-have-readable-value-and-errno-attributes-not-just-stopiteration-and-oserror" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> MicroPython is optimised to reduce code size.</p>
+<p><strong>Workaround:</strong> Only use <code class="docutils literal notranslate"><span class="pre">value</span></code> on <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> exceptions, and <code class="docutils literal notranslate"><span class="pre">errno</span></code> on <code class="docutils literal notranslate"><span class="pre">OSError</span></code> exceptions.  Do not use or rely on these attributes on other exceptions.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="ne">Exception</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">errno</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="exception-chaining-not-implemented">
+<span id="cpydiff-types-exception-chaining"></span><h3>Exception chaining not implemented<a class="headerlink" href="#exception-chaining-not-implemented" title="Link to this heading">¶</a></h3>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">TypeError</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span>
+</pre></div>
+</div>
+</section>
+<section id="user-defined-attributes-for-builtin-exceptions-are-not-supported">
+<span id="cpydiff-types-exception-instancevar"></span><h3>User-defined attributes for builtin exceptions are not supported<a class="headerlink" href="#user-defined-attributes-for-builtin-exceptions-are-not-supported" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> MicroPython is highly optimized for memory usage.</p>
+<p><strong>Workaround:</strong> Use user-defined exception subclasses.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="ne">Exception</span><span class="p">()</span>
+<span class="n">e</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="exception-in-while-loop-condition-may-have-unexpected-line-number">
+<span id="cpydiff-types-exception-loops"></span><h3>Exception in while loop condition may have unexpected line number<a class="headerlink" href="#exception-in-while-loop-condition-may-have-unexpected-line-number" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> Condition checks are optimized to happen at the end of loop body, and that line number is reported.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;-foo&quot;</span><span class="p">,</span> <span class="s2">&quot;-bar&quot;</span><span class="p">]</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;-&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;iter&quot;</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="exception-init-method-does-not-exist">
+<span id="cpydiff-types-exception-subclassinit"></span><h3>Exception.__init__ method does not exist.<a class="headerlink" href="#exception-init-method-does-not-exist" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> Subclassing native classes is not fully supported in MicroPython.</p>
+<p><strong>Workaround:</strong> Call using <code class="docutils literal notranslate"><span class="pre">super()</span></code> instead:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="ne">Exception</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="bytearray">
+<h2>bytearray<a class="headerlink" href="#bytearray" title="Link to this heading">¶</a></h2>
+<section id="array-slice-assignment-with-unsupported-rhs">
+<span id="cpydiff-types-bytearray-sliceassign"></span><h3>Array slice assignment with unsupported RHS<a class="headerlink" href="#array-slice-assignment-with-unsupported-rhs" title="Link to this heading">¶</a></h3>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="bytes">
+<h2>bytes<a class="headerlink" href="#bytes" title="Link to this heading">¶</a></h2>
+<section id="bytes-objects-support-format-method">
+<span id="cpydiff-types-bytes-format"></span><h3>bytes objects support .format() method<a class="headerlink" href="#bytes-objects-support-format-method" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> MicroPython strives to be a more regular implementation, so if both <a class="reference internal" href="../library/builtins.html#str" title="str"><code class="xref any py py-class docutils literal notranslate"><span class="pre">str</span></code></a> and <a class="reference internal" href="../library/builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> support <code class="docutils literal notranslate"><span class="pre">__mod__()</span></code> (the % operator), it makes sense to support <code class="docutils literal notranslate"><span class="pre">format()</span></code> for both too. Support for <code class="docutils literal notranslate"><span class="pre">__mod__</span></code> can also be compiled out, which leaves only <code class="docutils literal notranslate"><span class="pre">format()</span></code> for bytes formatting.</p>
+<p><strong>Workaround:</strong> If you are interested in CPython compatibility, don’t use <code class="docutils literal notranslate"><span class="pre">.format()</span></code> on bytes objects.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="bytes-with-keywords-not-implemented">
+<span id="cpydiff-types-bytes-keywords"></span><h3>bytes() with keywords not implemented<a class="headerlink" href="#bytes-with-keywords-not-implemented" title="Link to this heading">¶</a></h3>
+<p><strong>Workaround:</strong> Pass the encoding as a positional parameter, e.g. <code class="docutils literal notranslate"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="bytes-subscription-with-step-1-not-implemented">
+<span id="cpydiff-types-bytes-subscrstep"></span><h3>Bytes subscription with step != 1 not implemented<a class="headerlink" href="#bytes-subscription-with-step-1-not-implemented" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> MicroPython is highly optimized for memory usage.</p>
+<p><strong>Workaround:</strong> Use explicit loop for this very rare operation.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;123&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="dict">
+<h2>dict<a class="headerlink" href="#dict" title="Link to this heading">¶</a></h2>
+<section id="dictionary-keys-view-does-not-behave-as-a-set">
+<span id="cpydiff-types-dict-keys-set"></span><h3>Dictionary keys view does not behave as a set.<a class="headerlink" href="#dictionary-keys-view-does-not-behave-as-a-set" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> Not implemented.</p>
+<p><strong>Workaround:</strong> Explicitly convert keys to a set before using set operations.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">&amp;</span> <span class="p">{</span><span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="float">
+<h2>float<a class="headerlink" href="#float" title="Link to this heading">¶</a></h2>
+<section id="upy-allows-implicit-conversion-of-objects-in-maths-operations-while-cpython-does-not">
+<span id="cpydiff-types-float-implicit-conversion"></span><h3>uPy allows implicit conversion of objects in maths operations while CPython does not.<a class="headerlink" href="#upy-allows-implicit-conversion-of-objects-in-maths-operations-while-cpython-does-not" title="Link to this heading">¶</a></h3>
+<p><strong>Workaround:</strong> Objects should be wrapped in <code class="docutils literal notranslate"><span class="pre">float(obj)</span></code> for compatibility with CPython.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Test</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__float__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">0.5</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">Test</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="upy-and-cpython-outputs-formats-may-differ">
+<span id="cpydiff-types-float-rounding"></span><h3>uPy and CPython outputs formats may differ<a class="headerlink" href="#upy-and-cpython-outputs-formats-may-differ" title="Link to this heading">¶</a></h3>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.1g</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="o">-</span><span class="mf">9.9</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="int">
+<h2>int<a class="headerlink" href="#int" title="Link to this heading">¶</a></h2>
+<section id="bit-length-method-doesn-t-exist">
+<span id="cpydiff-types-int-bit-length"></span><h3><code class="docutils literal notranslate"><span class="pre">bit_length</span></code> method doesn’t exist.<a class="headerlink" href="#bit-length-method-doesn-t-exist" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> bit_length method is not implemented.</p>
+<p><strong>Workaround:</strong> Avoid using this method on MicroPython.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">255</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2"> bits long.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()))</span>
+</pre></div>
+</div>
+</section>
+<section id="no-int-conversion-for-int-derived-types-available">
+<span id="cpydiff-types-int-subclassconv"></span><h3>No int conversion for int-derived types available<a class="headerlink" href="#no-int-conversion-for-int-derived-types-available" title="Link to this heading">¶</a></h3>
+<p><strong>Workaround:</strong> Avoid subclassing builtin types unless really needed. Prefer <a class="reference external" href="https://en.wikipedia.org/wiki/Composition_over_inheritance">https://en.wikipedia.org/wiki/Composition_over_inheritance</a> .</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">int</span><span class="p">):</span>
+    <span class="fm">__add__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">A</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">+</span> <span class="n">other</span><span class="p">)</span>
+
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="list">
+<h2>list<a class="headerlink" href="#list" title="Link to this heading">¶</a></h2>
+<section id="list-delete-with-step-1-not-implemented">
+<span id="cpydiff-types-list-delete-subscrstep"></span><h3>List delete with step != 1 not implemented<a class="headerlink" href="#list-delete-with-step-1-not-implemented" title="Link to this heading">¶</a></h3>
+<p><strong>Workaround:</strong> Use explicit loop for this rare operation.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="list-slice-store-with-non-iterable-on-rhs-is-not-implemented">
+<span id="cpydiff-types-list-store-noniter"></span><h3>List slice-store with non-iterable on RHS is not implemented<a class="headerlink" href="#list-slice-store-with-non-iterable-on-rhs-is-not-implemented" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> RHS is restricted to be a tuple or list</p>
+<p><strong>Workaround:</strong> Use <code class="docutils literal notranslate"><span class="pre">list(&lt;iter&gt;)</span></code> on RHS to convert the iterable to a list</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="list-store-with-step-1-not-implemented">
+<span id="cpydiff-types-list-store-subscrstep"></span><h3>List store with step != 1 not implemented<a class="headerlink" href="#list-store-with-step-1-not-implemented" title="Link to this heading">¶</a></h3>
+<p><strong>Workaround:</strong> Use explicit loop for this rare operation.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="memoryview">
+<h2>memoryview<a class="headerlink" href="#memoryview" title="Link to this heading">¶</a></h2>
+<section id="memoryview-can-become-invalid-if-its-target-is-resized">
+<span id="cpydiff-types-memoryview-invalid"></span><h3>memoryview can become invalid if its target is resized<a class="headerlink" href="#memoryview-can-become-invalid-if-its-target-is-resized" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> CPython prevents a <code class="docutils literal notranslate"><span class="pre">bytearray</span></code> or <code class="docutils literal notranslate"><span class="pre">io.bytesIO</span></code> object from changing size while there is a <code class="docutils literal notranslate"><span class="pre">memoryview</span></code> object that references it. MicroPython requires the programmer to manually ensure that an object is not resized while any <code class="docutils literal notranslate"><span class="pre">memoryview</span></code> references it.</p>
+<p>In the worst case scenario, resizing an object which is the target of a memoryview can cause the memoryview(s) to reference invalid freed memory (a use-after-free bug) and corrupt the MicroPython runtime.</p>
+<p><strong>Workaround:</strong> Do not change the size of any <code class="docutils literal notranslate"><span class="pre">bytearray</span></code> or <code class="docutils literal notranslate"><span class="pre">io.bytesIO</span></code> object that has a <code class="docutils literal notranslate"><span class="pre">memoryview</span></code> assigned to it.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;abcdefg&quot;</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nb">memoryview</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;hijklmnop&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="str">
+<h2>str<a class="headerlink" href="#str" title="Link to this heading">¶</a></h2>
+<section id="start-end-indices-such-as-str-endswith-s-start-not-implemented">
+<span id="cpydiff-types-str-endswith"></span><h3>Start/end indices such as str.endswith(s, start) not implemented<a class="headerlink" href="#start-end-indices-such-as-str-endswith-s-start-not-implemented" title="Link to this heading">¶</a></h3>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="attributes-subscr-not-implemented">
+<span id="cpydiff-types-str-formatsubscr"></span><h3>Attributes/subscr not implemented<a class="headerlink" href="#attributes-subscr-not-implemented" title="Link to this heading">¶</a></h3>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{a[0]}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+</div>
+</section>
+<section id="str-with-keywords-not-implemented">
+<span id="cpydiff-types-str-keywords"></span><h3>str(…) with keywords not implemented<a class="headerlink" href="#str-with-keywords-not-implemented" title="Link to this heading">¶</a></h3>
+<p><strong>Workaround:</strong> Input the encoding format directly. eg <code class="docutils literal notranslate"><span class="pre">print(bytes('abc',</span> <span class="pre">'utf-8'))</span></code></p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="str-ljust-and-str-rjust-not-implemented">
+<span id="cpydiff-types-str-ljust-rjust"></span><h3>str.ljust() and str.rjust() not implemented<a class="headerlink" href="#str-ljust-and-str-rjust-not-implemented" title="Link to this heading">¶</a></h3>
+<p><strong>Cause:</strong> MicroPython is highly optimized for memory usage. Easy workarounds available.</p>
+<p><strong>Workaround:</strong> Instead of <code class="docutils literal notranslate"><span class="pre">s.ljust(10)</span></code> use <code class="docutils literal notranslate"><span class="pre">&quot;%-10s&quot;</span> <span class="pre">%</span> <span class="pre">s</span></code>, instead of <code class="docutils literal notranslate"><span class="pre">s.rjust(10)</span></code> use <code class="docutils literal notranslate"><span class="pre">&quot;%</span> <span class="pre">10s&quot;</span> <span class="pre">%</span> <span class="pre">s</span></code>. Alternatively, <code class="docutils literal notranslate"><span class="pre">&quot;{:&lt;10}&quot;.format(s)</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;{:&gt;10}&quot;.format(s)</span></code>.</p>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented">
+<span id="cpydiff-types-str-rsplitnone"></span><h3>None as first argument for rsplit such as str.rsplit(None, n) not implemented<a class="headerlink" href="#none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented" title="Link to this heading">¶</a></h3>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a a a&quot;</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="subscript-with-step-1-is-not-yet-implemented">
+<span id="cpydiff-types-str-subscrstep"></span><h3>Subscript with step != 1 is not yet implemented<a class="headerlink" href="#subscript-with-step-1-is-not-yet-implemented" title="Link to this heading">¶</a></h3>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;abcdefghi&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tuple">
+<h2>tuple<a class="headerlink" href="#tuple" title="Link to this heading">¶</a></h2>
+<section id="tuple-load-with-step-1-not-implemented">
+<span id="cpydiff-types-tuple-subscrstep"></span><h3>Tuple load with step != 1 not implemented<a class="headerlink" href="#tuple-load-with-step-1-not-implemented" title="Link to this heading">¶</a></h3>
+<p>Sample code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Builtin types</a><ul>
+<li><a class="reference internal" href="#exception">Exception</a><ul>
+<li><a class="reference internal" href="#all-exceptions-have-readable-value-and-errno-attributes-not-just-stopiteration-and-oserror">All exceptions have readable <code class="docutils literal notranslate"><span class="pre">value</span></code> and <code class="docutils literal notranslate"><span class="pre">errno</span></code> attributes, not just <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code> and <code class="docutils literal notranslate"><span class="pre">OSError</span></code>.</a></li>
+<li><a class="reference internal" href="#exception-chaining-not-implemented">Exception chaining not implemented</a></li>
+<li><a class="reference internal" href="#user-defined-attributes-for-builtin-exceptions-are-not-supported">User-defined attributes for builtin exceptions are not supported</a></li>
+<li><a class="reference internal" href="#exception-in-while-loop-condition-may-have-unexpected-line-number">Exception in while loop condition may have unexpected line number</a></li>
+<li><a class="reference internal" href="#exception-init-method-does-not-exist">Exception.__init__ method does not exist.</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bytearray">bytearray</a><ul>
+<li><a class="reference internal" href="#array-slice-assignment-with-unsupported-rhs">Array slice assignment with unsupported RHS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bytes">bytes</a><ul>
+<li><a class="reference internal" href="#bytes-objects-support-format-method">bytes objects support .format() method</a></li>
+<li><a class="reference internal" href="#bytes-with-keywords-not-implemented">bytes() with keywords not implemented</a></li>
+<li><a class="reference internal" href="#bytes-subscription-with-step-1-not-implemented">Bytes subscription with step != 1 not implemented</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dict">dict</a><ul>
+<li><a class="reference internal" href="#dictionary-keys-view-does-not-behave-as-a-set">Dictionary keys view does not behave as a set.</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#float">float</a><ul>
+<li><a class="reference internal" href="#upy-allows-implicit-conversion-of-objects-in-maths-operations-while-cpython-does-not">uPy allows implicit conversion of objects in maths operations while CPython does not.</a></li>
+<li><a class="reference internal" href="#upy-and-cpython-outputs-formats-may-differ">uPy and CPython outputs formats may differ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#int">int</a><ul>
+<li><a class="reference internal" href="#bit-length-method-doesn-t-exist"><code class="docutils literal notranslate"><span class="pre">bit_length</span></code> method doesn’t exist.</a></li>
+<li><a class="reference internal" href="#no-int-conversion-for-int-derived-types-available">No int conversion for int-derived types available</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#list">list</a><ul>
+<li><a class="reference internal" href="#list-delete-with-step-1-not-implemented">List delete with step != 1 not implemented</a></li>
+<li><a class="reference internal" href="#list-slice-store-with-non-iterable-on-rhs-is-not-implemented">List slice-store with non-iterable on RHS is not implemented</a></li>
+<li><a class="reference internal" href="#list-store-with-step-1-not-implemented">List store with step != 1 not implemented</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#memoryview">memoryview</a><ul>
+<li><a class="reference internal" href="#memoryview-can-become-invalid-if-its-target-is-resized">memoryview can become invalid if its target is resized</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#str">str</a><ul>
+<li><a class="reference internal" href="#start-end-indices-such-as-str-endswith-s-start-not-implemented">Start/end indices such as str.endswith(s, start) not implemented</a></li>
+<li><a class="reference internal" href="#attributes-subscr-not-implemented">Attributes/subscr not implemented</a></li>
+<li><a class="reference internal" href="#str-with-keywords-not-implemented">str(…) with keywords not implemented</a></li>
+<li><a class="reference internal" href="#str-ljust-and-str-rjust-not-implemented">str.ljust() and str.rjust() not implemented</a></li>
+<li><a class="reference internal" href="#none-as-first-argument-for-rsplit-such-as-str-rsplit-none-n-not-implemented">None as first argument for rsplit such as str.rsplit(None, n) not implemented</a></li>
+<li><a class="reference internal" href="#subscript-with-step-1-is-not-yet-implemented">Subscript with step != 1 is not yet implemented</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tuple">tuple</a><ul>
+<li><a class="reference internal" href="#tuple-load-with-step-1-not-implemented">Tuple load with step != 1 not implemented</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="core_language.html"
+                          title="previous chapter">Core language</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="modules.html"
+                          title="next chapter">Modules</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/genrst/builtin_types.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="Modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="core_language.html" title="Core language"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython differences from CPython</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Builtin types</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

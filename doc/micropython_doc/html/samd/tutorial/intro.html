@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting started with MicroPython on the SAMD &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Pinout for the SAMD machine modules" href="../pinout.html" />
+    <link rel="prev" title="General information about the SAMD port" href="../general.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pinout.html" title="Pinout for the SAMD machine modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../general.html" title="General information about the SAMD port"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" accesskey="U">Quick reference for the SAMD21/SAMD51 family</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Getting started with MicroPython on the SAMD</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="getting-started-with-micropython-on-the-samd">
+<span id="samd-intro"></span><h1>Getting started with MicroPython on the SAMD<a class="headerlink" href="#getting-started-with-micropython-on-the-samd" title="Link to this heading">¶</a></h1>
+<p>Using MicroPython is a great way to get the most of your SAMD board.  And
+vice versa, the SAMD chip is a great platform for using MicroPython.  This
+tutorial will guide you through setting up MicroPython, getting a prompt, using
+the hardware peripherals, and controlling some external components.</p>
+<p>Let’s get started!</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>The first thing you need is a board with an SAMD chip.  The MicroPython
+software supports the SAMD chip itself and any board should work.  The main
+characteristic of a board is how the GPIO pins are connected to the outside
+world, and whether it includes a built-in USB-serial converter to make the
+UART available to your PC.</p>
+<p>Names of pins will be given in this tutorial using the board names (“D0”)
+and it should be straightforward to find which pin this corresponds to on your
+particular board.</p>
+</section>
+<section id="powering-the-board">
+<h2>Powering the board<a class="headerlink" href="#powering-the-board" title="Link to this heading">¶</a></h2>
+<p>If your board has a USB connector on it then most likely it is powered through
+this when connected to your PC.  Otherwise you will need to power it directly.
+Please refer to the documentation for your board for further details.</p>
+</section>
+<section id="getting-the-firmware">
+<h2>Getting the firmware<a class="headerlink" href="#getting-the-firmware" title="Link to this heading">¶</a></h2>
+<p>Firmware versions are provided at the
+<a class="reference external" href="https://micropython.org/download/?port=samd">MicroPython download page</a>.
+You can download the most recent MicroPython firmware .uf2 file to load
+onto your SAMD device.  From that download page you have two main choices:</p>
+<ul class="simple">
+<li><p>stable firmware builds</p></li>
+<li><p>daily firmware builds</p></li>
+</ul>
+<p>If you are just starting with MicroPython, the best bet is to go for the stable
+firmware builds. If you are an advanced, experienced MicroPython SAMD user
+who would like to follow development closely and help with testing new
+features, there are daily builds. They run through the same rigid internal
+test sequence as the stable builds, but the firmware features may change.</p>
+</section>
+<section id="deploying-the-firmware">
+<h2>Deploying the firmware<a class="headerlink" href="#deploying-the-firmware" title="Link to this heading">¶</a></h2>
+<p>Once you have the MicroPython firmware you need to load it onto your
+SAMD device. Most of the boards support the following easy procedure for
+firmware upload.</p>
+<ul class="simple">
+<li><p>Connect the board by an USB-A/USB-Micro cable to your PC.</p></li>
+<li><p>Push the reset button twice. Then, a drive should pop up at the
+PC’s file manager. Many boards have a on-board RGB LED, which first lights up
+red, and then changes it’s colour to green. The timing of the double push is
+sometimes tricky. So you may have to try to get the proper rhythm.</p></li>
+<li><p>Copy the .uf2 file to that newly opened drive. A LED on the board may
+flash a while. When the copy is finished, the board drive will disappear and the
+RGB led will turn from green to the initial state.</p></li>
+</ul>
+</section>
+<section id="serial-prompt">
+<h2>Serial prompt<a class="headerlink" href="#serial-prompt" title="Link to this heading">¶</a></h2>
+<p>Once you have the firmware on the device you can access the REPL (Python prompt)
+over USB.</p>
+<p>From there you can follow the SAMD tutorial.</p>
+</section>
+<section id="troubleshooting-installation-problems">
+<h2>Troubleshooting installation problems<a class="headerlink" href="#troubleshooting-installation-problems" title="Link to this heading">¶</a></h2>
+<p>If you experience problems during flashing or with running firmware immediately
+after it, here are some troubleshooting recommendations:</p>
+<ul class="simple">
+<li><p>Be aware of and try to exclude hardware problems.  There are two common
+problems: bad power source quality, and worn-out/defective Flash ROM.
+Speaking of power source, not just raw amperage is important, but also low
+ripple and noise/EMI in general.  The most reliable and convenient power
+source is a USB port.</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Getting started with MicroPython on the SAMD</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#powering-the-board">Powering the board</a></li>
+<li><a class="reference internal" href="#getting-the-firmware">Getting the firmware</a></li>
+<li><a class="reference internal" href="#deploying-the-firmware">Deploying the firmware</a></li>
+<li><a class="reference internal" href="#serial-prompt">Serial prompt</a></li>
+<li><a class="reference internal" href="#troubleshooting-installation-problems">Troubleshooting installation problems</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../general.html"
+                          title="previous chapter">General information about the SAMD port</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../pinout.html"
+                          title="next chapter">Pinout for the SAMD machine modules</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/samd/tutorial/intro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../pinout.html" title="Pinout for the SAMD machine modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../general.html" title="General information about the SAMD port"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the SAMD21/SAMD51 family</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Getting started with MicroPython on the SAMD</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

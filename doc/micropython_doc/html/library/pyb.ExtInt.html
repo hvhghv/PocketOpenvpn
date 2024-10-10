@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class ExtInt – configure I/O pins to interrupt on external events &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class Flash – access to built-in flash storage" href="pyb.Flash.html" />
+    <link rel="prev" title="class DAC – digital to analog conversion" href="pyb.DAC.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyb.Flash.html" title="class Flash – access to built-in flash storage"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyb.DAC.html" title="class DAC – digital to analog conversion"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="pyb.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class ExtInt – configure I/O pins to interrupt on external events</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-extint-configure-i-o-pins-to-interrupt-on-external-events">
+<span id="pyb-extint"></span><h1>class ExtInt – configure I/O pins to interrupt on external events<a class="headerlink" href="#class-extint-configure-i-o-pins-to-interrupt-on-external-events" title="Link to this heading">¶</a></h1>
+<p>There are a total of 22 interrupt lines. 16 of these can come from GPIO pins
+and the remaining 6 are from internal sources.</p>
+<p>For lines 0 through 15, a given line can map to the corresponding line from an
+arbitrary port. So line 0 can map to Px0 where x is A, B, C, … and
+line 1 can map to Px1 where x is A, B, C, …</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;line =&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note: ExtInt will automatically configure the gpio line as an input.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extint</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">ExtInt</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="n">pyb</span><span class="o">.</span><span class="n">ExtInt</span><span class="o">.</span><span class="n">IRQ_FALLING</span><span class="p">,</span> <span class="n">pyb</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now every time a falling edge is seen on the X1 pin, the callback will be
+called. Caution: mechanical pushbuttons have “bounce” and pushing or
+releasing a switch will often generate multiple edges.
+See: <a class="reference external" href="http://www.eng.utah.edu/~cs5780/debouncing.pdf">http://www.eng.utah.edu/~cs5780/debouncing.pdf</a> for a detailed
+explanation, along with various techniques for debouncing.</p>
+<p>Trying to register 2 callbacks onto the same pin will throw an exception.</p>
+<p>If pin is passed as an integer, then it is assumed to map to one of the
+internal interrupt sources, and must be in the range 16 through 22.</p>
+<p>All other pin objects go through the pin mapper to come up with one of the
+gpio pins.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extint</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">ExtInt</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">pull</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Valid modes are pyb.ExtInt.IRQ_RISING, pyb.ExtInt.IRQ_FALLING,
+pyb.ExtInt.IRQ_RISING_FALLING, pyb.ExtInt.EVT_RISING,
+pyb.ExtInt.EVT_FALLING, and pyb.ExtInt.EVT_RISING_FALLING.</p>
+<p>Only the IRQ_xxx modes have been tested. The EVT_xxx modes have
+something to do with sleep mode and the WFE instruction.</p>
+<p>Valid pull values are pyb.Pin.PULL_UP, pyb.Pin.PULL_DOWN, pyb.Pin.PULL_NONE.</p>
+<p>There is also a C API, so that drivers which require EXTI interrupt lines
+can also use this code. See extint.h for the available functions and
+usrsw.h for an example of using this.</p>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyb.ExtInt">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyb.</span></span><span class="sig-name descname"><span class="pre">ExtInt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pull</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyb.ExtInt" title="Link to this definition">¶</a></dt>
+<dd><p>Create an ExtInt object:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pin</span></code> is the pin on which to enable the interrupt (can be a pin object or any valid pin name).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> can be one of:
+- <code class="docutils literal notranslate"><span class="pre">ExtInt.IRQ_RISING</span></code> - trigger on a rising edge;
+- <code class="docutils literal notranslate"><span class="pre">ExtInt.IRQ_FALLING</span></code> - trigger on a falling edge;
+- <code class="docutils literal notranslate"><span class="pre">ExtInt.IRQ_RISING_FALLING</span></code> - trigger on a rising or falling edge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pull</span></code> can be one of:
+- <code class="docutils literal notranslate"><span class="pre">pyb.Pin.PULL_NONE</span></code> - no pull up or down resistors;
+- <code class="docutils literal notranslate"><span class="pre">pyb.Pin.PULL_UP</span></code> - enable the pull-up resistor;
+- <code class="docutils literal notranslate"><span class="pre">pyb.Pin.PULL_DOWN</span></code> - enable the pull-down resistor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code> is the function to call when the interrupt triggers.  The
+callback function must accept exactly 1 argument, which is the line that
+triggered the interrupt.</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="class-methods">
+<h2>Class methods<a class="headerlink" href="#class-methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.ExtInt.regs">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ExtInt.</span></span><span class="sig-name descname"><span class="pre">regs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.ExtInt.regs" title="Link to this definition">¶</a></dt>
+<dd><p>Dump the values of the EXTI registers.</p>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.ExtInt.disable">
+<span class="sig-prename descclassname"><span class="pre">ExtInt.</span></span><span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.ExtInt.disable" title="Link to this definition">¶</a></dt>
+<dd><p>Disable the interrupt associated with the ExtInt object.
+This could be useful for debouncing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.ExtInt.enable">
+<span class="sig-prename descclassname"><span class="pre">ExtInt.</span></span><span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.ExtInt.enable" title="Link to this definition">¶</a></dt>
+<dd><p>Enable a disabled interrupt.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.ExtInt.line">
+<span class="sig-prename descclassname"><span class="pre">ExtInt.</span></span><span class="sig-name descname"><span class="pre">line</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.ExtInt.line" title="Link to this definition">¶</a></dt>
+<dd><p>Return the line number that the pin is mapped to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.ExtInt.swint">
+<span class="sig-prename descclassname"><span class="pre">ExtInt.</span></span><span class="sig-name descname"><span class="pre">swint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.ExtInt.swint" title="Link to this definition">¶</a></dt>
+<dd><p>Trigger the callback from software.</p>
+</dd></dl>
+
+</section>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="pyb.ExtInt.IRQ_FALLING">
+<span class="sig-prename descclassname"><span class="pre">ExtInt.</span></span><span class="sig-name descname"><span class="pre">IRQ_FALLING</span></span><a class="headerlink" href="#pyb.ExtInt.IRQ_FALLING" title="Link to this definition">¶</a></dt>
+<dd><p>interrupt on a falling edge</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="pyb.ExtInt.IRQ_RISING">
+<span class="sig-prename descclassname"><span class="pre">ExtInt.</span></span><span class="sig-name descname"><span class="pre">IRQ_RISING</span></span><a class="headerlink" href="#pyb.ExtInt.IRQ_RISING" title="Link to this definition">¶</a></dt>
+<dd><p>interrupt on a rising edge</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="pyb.ExtInt.IRQ_RISING_FALLING">
+<span class="sig-prename descclassname"><span class="pre">ExtInt.</span></span><span class="sig-name descname"><span class="pre">IRQ_RISING_FALLING</span></span><a class="headerlink" href="#pyb.ExtInt.IRQ_RISING_FALLING" title="Link to this definition">¶</a></dt>
+<dd><p>interrupt on a rising or falling edge</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class ExtInt – configure I/O pins to interrupt on external events</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#pyb.ExtInt"><code class="docutils literal notranslate"><span class="pre">ExtInt</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-methods">Class methods</a><ul>
+<li><a class="reference internal" href="#pyb.ExtInt.regs"><code class="docutils literal notranslate"><span class="pre">ExtInt.regs()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#pyb.ExtInt.disable"><code class="docutils literal notranslate"><span class="pre">ExtInt.disable()</span></code></a></li>
+<li><a class="reference internal" href="#pyb.ExtInt.enable"><code class="docutils literal notranslate"><span class="pre">ExtInt.enable()</span></code></a></li>
+<li><a class="reference internal" href="#pyb.ExtInt.line"><code class="docutils literal notranslate"><span class="pre">ExtInt.line()</span></code></a></li>
+<li><a class="reference internal" href="#pyb.ExtInt.swint"><code class="docutils literal notranslate"><span class="pre">ExtInt.swint()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#constants">Constants</a><ul>
+<li><a class="reference internal" href="#pyb.ExtInt.IRQ_FALLING"><code class="docutils literal notranslate"><span class="pre">ExtInt.IRQ_FALLING</span></code></a></li>
+<li><a class="reference internal" href="#pyb.ExtInt.IRQ_RISING"><code class="docutils literal notranslate"><span class="pre">ExtInt.IRQ_RISING</span></code></a></li>
+<li><a class="reference internal" href="#pyb.ExtInt.IRQ_RISING_FALLING"><code class="docutils literal notranslate"><span class="pre">ExtInt.IRQ_RISING_FALLING</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="pyb.DAC.html"
+                          title="previous chapter">class DAC – digital to analog conversion</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pyb.Flash.html"
+                          title="next chapter">class Flash – access to built-in flash storage</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/pyb.ExtInt.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyb.Flash.html" title="class Flash – access to built-in flash storage"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyb.DAC.html" title="class DAC – digital to analog conversion"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="pyb.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class ExtInt – configure I/O pins to interrupt on external events</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>deflate – deflate compression &amp; decompression &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="framebuf — frame buffer manipulation" href="framebuf.html" />
+    <link rel="prev" title="cryptolib – cryptographic ciphers" href="cryptolib.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="framebuf.html" title="framebuf — frame buffer manipulation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cryptolib.html" title="cryptolib – cryptographic ciphers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code> – deflate compression &amp; decompression</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-deflate">
+<span id="deflate-deflate-compression-decompression"></span><h1><a class="reference internal" href="#module-deflate" title="deflate: deflate compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code></a> – deflate compression &amp; decompression<a class="headerlink" href="#module-deflate" title="Link to this heading">¶</a></h1>
+<p>This module allows compression and decompression of binary data with the
+<a class="reference external" href="https://en.wikipedia.org/wiki/DEFLATE">DEFLATE algorithm</a>
+(commonly used in the zlib library and gzip archiver).</p>
+<p><strong>Availability:</strong></p>
+<ul class="simple">
+<li><p>Added in MicroPython v1.21.</p></li>
+<li><p>Decompression: Enabled via the <code class="docutils literal notranslate"><span class="pre">MICROPY_PY_DEFLATE</span></code> build option, on by default
+on ports with the “extra features” level or higher (which is most boards).</p></li>
+<li><p>Compression: Enabled via the <code class="docutils literal notranslate"><span class="pre">MICROPY_PY_DEFLATE_COMPRESS</span></code> build option, on
+by default on ports with the “full features” level or higher (generally this means
+you need to build your own firmware to enable this).</p></li>
+</ul>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="deflate.DeflateIO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deflate.</span></span><span class="sig-name descname"><span class="pre">DeflateIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">AUTO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wbits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">close</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deflate.DeflateIO" title="Link to this definition">¶</a></dt>
+<dd><p>This class can be used to wrap a <em>stream</em> which is any
+<a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream-like</span></a> object such as a file, socket, or stream
+(including <a class="reference internal" href="io.html#io.BytesIO" title="io.BytesIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code></a>). It is itself a stream and implements the
+standard read/readinto/write/close methods.</p>
+<p>The <em>stream</em> must be a blocking stream. Non-blocking streams are currently
+not supported.</p>
+<p>The <em>format</em> can be set to any of the constants defined below, and defaults
+to <code class="docutils literal notranslate"><span class="pre">AUTO</span></code> which for decompressing will auto-detect gzip or zlib streams,
+and for compressing it will generate a raw stream.</p>
+<p>The <em>wbits</em> parameter sets the base-2 logarithm of the DEFLATE dictionary
+window size. So for example, setting <em>wbits</em> to <code class="docutils literal notranslate"><span class="pre">10</span></code> sets the window size
+to 1024 bytes. Valid values are <code class="docutils literal notranslate"><span class="pre">5</span></code> to <code class="docutils literal notranslate"><span class="pre">15</span></code> inclusive (corresponding to
+window sizes of 32 to 32k bytes).</p>
+<p>If <em>wbits</em> is set to <code class="docutils literal notranslate"><span class="pre">0</span></code> (the default), then for compression a window size
+of 256 bytes will be used (as if <em>wbits</em> was set to 8). For decompression, it
+depends on the format:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RAW</span></code> will use 256 bytes (corresponding to <em>wbits</em> set to 8).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZLIB</span></code> (or <code class="docutils literal notranslate"><span class="pre">AUTO</span></code> with zlib detected) will use the value from the zlib
+header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GZIP</span></code> (or <code class="docutils literal notranslate"><span class="pre">AUTO</span></code> with gzip detected) will use 32 kilobytes
+(corresponding to <em>wbits</em> set to 15).</p></li>
+</ul>
+<p>See the <a class="reference internal" href="#deflate-wbits"><span class="std std-ref">window size</span></a> notes below for more information
+about the window size, zlib, and gzip streams.</p>
+<p>If <em>close</em> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> then the underlying stream will be closed
+automatically when the <a class="reference internal" href="#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">deflate.DeflateIO</span></code></a> stream is closed. This is
+useful if you want to return a <a class="reference internal" href="#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">deflate.DeflateIO</span></code></a> stream that wraps
+another stream and not have the caller need to know about managing the
+underlying stream.</p>
+<p>If compression is enabled, a given <a class="reference internal" href="#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">deflate.DeflateIO</span></code></a> instance
+supports both reading and writing. For example, a bidirectional stream like
+a socket can be wrapped, which allows for compression/decompression in both
+directions.</p>
+</dd></dl>
+
+</section>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="deflate.deflate.AUTO">
+<span class="sig-prename descclassname"><span class="pre">deflate.</span></span><span class="sig-name descname"><span class="pre">AUTO</span></span><a class="headerlink" href="#deflate.deflate.AUTO" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deflate.deflate.RAW">
+<span class="sig-prename descclassname"><span class="pre">deflate.</span></span><span class="sig-name descname"><span class="pre">RAW</span></span><a class="headerlink" href="#deflate.deflate.RAW" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deflate.deflate.ZLIB">
+<span class="sig-prename descclassname"><span class="pre">deflate.</span></span><span class="sig-name descname"><span class="pre">ZLIB</span></span><a class="headerlink" href="#deflate.deflate.ZLIB" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="deflate.deflate.GZIP">
+<span class="sig-prename descclassname"><span class="pre">deflate.</span></span><span class="sig-name descname"><span class="pre">GZIP</span></span><a class="headerlink" href="#deflate.deflate.GZIP" title="Link to this definition">¶</a></dt>
+<dd><p>Supported values for the <em>format</em> parameter.</p>
+</dd></dl>
+
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<p>A typical use case for <a class="reference internal" href="#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">deflate.DeflateIO</span></code></a> is to read or write a compressed
+file from storage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">deflate</span>
+
+<span class="c1"># Writing a zlib-compressed stream (uses the default window size of 256 bytes).</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">deflate</span><span class="o">.</span><span class="n">DeflateIO</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">deflate</span><span class="o">.</span><span class="n">ZLIB</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+        <span class="c1"># Use d.write(...) etc</span>
+
+<span class="c1"># Reading a zlib-compressed stream (auto-detect window size).</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.z&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">deflate</span><span class="o">.</span><span class="n">DeflateIO</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">deflate</span><span class="o">.</span><span class="n">ZLIB</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+        <span class="c1"># Use d.read(), d.readinto(), etc.</span>
+</pre></div>
+</div>
+<p>Because <a class="reference internal" href="#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">deflate.DeflateIO</span></code></a> is a stream, it can be used for example
+with <a class="reference internal" href="json.html#json.dump" title="json.dump"><code class="xref py py-meth docutils literal notranslate"><span class="pre">json.dump()</span></code></a> and <a class="reference internal" href="json.html#json.load" title="json.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">json.load()</span></code></a> (and any other places streams can
+be used):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">deflate</span><span class="o">,</span> <span class="nn">json</span>
+
+<span class="c1"># Write a dictionary as JSON in gzip format, with a</span>
+<span class="c1"># small (64 byte) window size.</span>
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">deflate</span><span class="o">.</span><span class="n">DeflateIO</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">deflate</span><span class="o">.</span><span class="n">GZIP</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="c1"># Read back that dictionary.</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">deflate</span><span class="o">.</span><span class="n">DeflateIO</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">deflate</span><span class="o">.</span><span class="n">GZIP</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If your source data is not in a stream format, you can use <a class="reference internal" href="io.html#io.BytesIO" title="io.BytesIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code></a>
+to turn it into a stream suitable for use with <a class="reference internal" href="#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">deflate.DeflateIO</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">deflate</span><span class="o">,</span> <span class="nn">io</span>
+
+<span class="c1"># Decompress a bytes/bytearray value.</span>
+<span class="n">compressed_data</span> <span class="o">=</span> <span class="n">get_data_z</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">deflate</span><span class="o">.</span><span class="n">DeflateIO</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">),</span> <span class="n">deflate</span><span class="o">.</span><span class="n">ZLIB</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">decompressed_data</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Compress a bytes/bytearray value.</span>
+<span class="n">uncompressed_data</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">()</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">deflate</span><span class="o">.</span><span class="n">DeflateIO</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">deflate</span><span class="o">.</span><span class="n">ZLIB</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">uncompressed_data</span><span class="p">)</span>
+<span class="n">compressed_data</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="deflate-window-size">
+<span id="deflate-wbits"></span><h2>Deflate window size<a class="headerlink" href="#deflate-window-size" title="Link to this heading">¶</a></h2>
+<p>The window size limits how far back in the stream the (de)compressor can
+reference. Increasing the window size will improve compression, but will require
+more memory and make the compressor slower.</p>
+<p>If an input stream was compressed a given window size, then <a class="reference internal" href="#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref any py py-class docutils literal notranslate"><span class="pre">DeflateIO</span></code></a>
+using a smaller window size will fail mid-way during decompression with
+<a class="reference internal" href="builtins.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a>, but only if a back-reference actually refers back further
+than the decompressor’s window size. This means it may be possible to decompress
+with a smaller window size. For example, this would trivially be the case if the
+original uncompressed data is shorter than the window size.</p>
+<section id="decompression">
+<h3>Decompression<a class="headerlink" href="#decompression" title="Link to this heading">¶</a></h3>
+<p>The zlib format includes a header which specifies the window size that was used
+to compress the data. This indicates the maximum window size required to
+decompress this stream. If this header value is less than the specified <em>wbits</em>
+value (or if <em>wbits</em> is unset), then the header value will be used.</p>
+<p>The gzip format does not include the window size in the header, and assumes that
+all gzip compressors (e.g. the <code class="docutils literal notranslate"><span class="pre">gzip</span></code> utility, or CPython’s implementation of
+<a class="reference internal" href="gzip.html#gzip.GzipFile" title="gzip.GzipFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">gzip.GzipFile</span></code></a>) use the maximum window size of 32kiB. For this reason,
+if the <em>wbits</em> parameter is not set, the decompressor will use a 32 kiB window
+size (corresponding to <em>wbits</em> set to 15). This means that to be able to
+decompress an arbitrary gzip stream, you must have at least this much RAM
+available. If you control the source data, consider instead using the zlib
+format with a smaller window size.</p>
+<p>The raw format has no header and therefore does not include any information
+about the window size. If <em>wbits</em> is not set, then it will default to a window
+size of 256 bytes, which may not be large enough for a given stream. Therefore
+it is recommended that you should always explicitly set <em>wbits</em> if using the raw
+format.</p>
+</section>
+<section id="compression">
+<h3>Compression<a class="headerlink" href="#compression" title="Link to this heading">¶</a></h3>
+<p>For compression, MicroPython will default to a window size of 256 bytes for all
+formats. This provides a reasonable amount of compression with minimal memory
+usage and fast compression time, and will generate output that will work with
+any decompressor.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code> – deflate compression &amp; decompression</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a><ul>
+<li><a class="reference internal" href="#deflate.DeflateIO"><code class="docutils literal notranslate"><span class="pre">DeflateIO</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#constants">Constants</a><ul>
+<li><a class="reference internal" href="#deflate.deflate.AUTO"><code class="docutils literal notranslate"><span class="pre">deflate.AUTO</span></code></a></li>
+<li><a class="reference internal" href="#deflate.deflate.RAW"><code class="docutils literal notranslate"><span class="pre">deflate.RAW</span></code></a></li>
+<li><a class="reference internal" href="#deflate.deflate.ZLIB"><code class="docutils literal notranslate"><span class="pre">deflate.ZLIB</span></code></a></li>
+<li><a class="reference internal" href="#deflate.deflate.GZIP"><code class="docutils literal notranslate"><span class="pre">deflate.GZIP</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#deflate-window-size">Deflate window size</a><ul>
+<li><a class="reference internal" href="#decompression">Decompression</a></li>
+<li><a class="reference internal" href="#compression">Compression</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cryptolib.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cryptolib</span></code> – cryptographic ciphers</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="framebuf.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">framebuf</span></code> — frame buffer manipulation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/deflate.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="framebuf.html" title="framebuf — frame buffer manipulation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cryptolib.html" title="cryptolib – cryptographic ciphers"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code> – deflate compression &amp; decompression</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

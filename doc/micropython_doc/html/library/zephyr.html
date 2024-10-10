@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>zephyr — functionality specific to the Zephyr port &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class DiskAccess – access to disk storage" href="zephyr.DiskAccess.html" />
+    <link rel="prev" title="class StateMachine – access to the RP2040’s programmable I/O interface" href="rp2.StateMachine.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="zephyr.DiskAccess.html" title="class DiskAccess – access to disk storage"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="rp2.StateMachine.html" title="class StateMachine – access to the RP2040’s programmable I/O interface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">zephyr</span></code> — functionality specific to the Zephyr port</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-zephyr">
+<span id="zephyr-functionality-specific-to-the-zephyr-port"></span><h1><a class="reference internal" href="#module-zephyr" title="zephyr: functionality specific to Zephyr"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zephyr</span></code></a> — functionality specific to the Zephyr port<a class="headerlink" href="#module-zephyr" title="Link to this heading">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">zephyr</span></code> module contains functions and classes specific to the Zephyr port.</p>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="zephyr.is_preempt_thread">
+<span class="sig-prename descclassname"><span class="pre">zephyr.</span></span><span class="sig-name descname"><span class="pre">is_preempt_thread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zephyr.is_preempt_thread" title="Link to this definition">¶</a></dt>
+<dd><p>Returns true if the current thread is a preemptible thread.</p>
+<p>Zephyr preemptible threads are those with non-negative priority values (low priority levels), which therefore,
+can be supplanted as soon as a higher or equal priority thread becomes ready.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="zephyr.current_tid">
+<span class="sig-prename descclassname"><span class="pre">zephyr.</span></span><span class="sig-name descname"><span class="pre">current_tid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zephyr.current_tid" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the thread id of the current thread, which is used to reference the thread.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="zephyr.thread_analyze">
+<span class="sig-prename descclassname"><span class="pre">zephyr.</span></span><span class="sig-name descname"><span class="pre">thread_analyze</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zephyr.thread_analyze" title="Link to this definition">¶</a></dt>
+<dd><p>Runs the Zephyr debug thread analyzer on the current thread and prints stack size statistics in the format:</p>
+<blockquote>
+<div><p>“<code class="docutils literal notranslate"><span class="pre">thread_name</span></code>-20s: STACK: unused <code class="docutils literal notranslate"><span class="pre">available_stack_space</span></code> usage <code class="docutils literal notranslate"><span class="pre">stack_space_used</span></code>
+/ <code class="docutils literal notranslate"><span class="pre">stack_size</span></code> (<code class="docutils literal notranslate"><span class="pre">percent_stack_space_used</span></code> %); CPU: <code class="docutils literal notranslate"><span class="pre">cpu_utilization</span></code> %”</p>
+<ul class="simple">
+<li><p><em>CPU utilization is only printed if runtime statistics are configured via the ``CONFIG_THREAD_RUNTIME_STATS`` kconfig</em></p></li>
+</ul>
+</div></blockquote>
+<p>This function can only be accessed if <code class="docutils literal notranslate"><span class="pre">CONFIG_THREAD_ANALYZER</span></code> is configured for the port in <code class="docutils literal notranslate"><span class="pre">zephyr/prj.conf</span></code>.
+For more information, see documentation for Zephyr <a class="reference external" href="https://docs.zephyrproject.org/latest/guides/debug_tools/thread-analyzer.html#thread-analyzer">thread analyzer</a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="zephyr.shell_exec">
+<span class="sig-prename descclassname"><span class="pre">zephyr.</span></span><span class="sig-name descname"><span class="pre">shell_exec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd_in</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#zephyr.shell_exec" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the given command on an UART backend. This function can only be accessed if <code class="docutils literal notranslate"><span class="pre">CONFIG_SHELL_BACKEND_SERIAL</span></code>
+is configured for the port in <code class="docutils literal notranslate"><span class="pre">zephyr/prj.conf</span></code>.</p>
+<p>A list of possible commands can be found in the documentation for Zephyr <a class="reference external" href="https://docs.zephyrproject.org/latest/reference/shell/index.html?highlight=shell_execute_cmd#commands">shell commands</a>.</p>
+</dd></dl>
+
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zephyr.DiskAccess.html">class DiskAccess – access to disk storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zephyr.FlashArea.html">class FlashArea – access to built-in flash storage</a></li>
+</ul>
+</div>
+</section>
+<section id="additional-modules">
+<h2>Additional Modules<a class="headerlink" href="#additional-modules" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="zephyr.zsensor.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zsensor</span></code> — Zephyr sensor bindings</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zephyr</span></code> — functionality specific to the Zephyr port</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#zephyr.is_preempt_thread"><code class="docutils literal notranslate"><span class="pre">is_preempt_thread()</span></code></a></li>
+<li><a class="reference internal" href="#zephyr.current_tid"><code class="docutils literal notranslate"><span class="pre">current_tid()</span></code></a></li>
+<li><a class="reference internal" href="#zephyr.thread_analyze"><code class="docutils literal notranslate"><span class="pre">thread_analyze()</span></code></a></li>
+<li><a class="reference internal" href="#zephyr.shell_exec"><code class="docutils literal notranslate"><span class="pre">shell_exec()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#additional-modules">Additional Modules</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="rp2.StateMachine.html"
+                          title="previous chapter">class StateMachine – access to the RP2040’s programmable I/O interface</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="zephyr.DiskAccess.html"
+                          title="next chapter">class DiskAccess – access to disk storage</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/zephyr.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="zephyr.DiskAccess.html" title="class DiskAccess – access to disk storage"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="rp2.StateMachine.html" title="class StateMachine – access to the RP2040’s programmable I/O interface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">zephyr</span></code> — functionality specific to the Zephyr port</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

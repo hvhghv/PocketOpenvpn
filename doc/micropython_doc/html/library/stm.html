@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>stm — functionality specific to STM32 MCUs &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="lcd160cr — control of LCD160CR display" href="lcd160cr.html" />
+    <link rel="prev" title="class USB_VCP – USB virtual comm port" href="pyb.USB_VCP.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lcd160cr.html" title="lcd160cr — control of LCD160CR display"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyb.USB_VCP.html" title="class USB_VCP – USB virtual comm port"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">stm</span></code> — functionality specific to STM32 MCUs</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-stm">
+<span id="stm-functionality-specific-to-stm32-mcus"></span><h1><a class="reference internal" href="#module-stm" title="stm: functionality specific to STM32 MCUs"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stm</span></code></a> — functionality specific to STM32 MCUs<a class="headerlink" href="#module-stm" title="Link to this heading">¶</a></h1>
+<p>This module provides functionality specific to STM32 microcontrollers, including
+direct access to peripheral registers.</p>
+<section id="memory-access">
+<h2>Memory access<a class="headerlink" href="#memory-access" title="Link to this heading">¶</a></h2>
+<p>The module exposes three objects used for raw memory access.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="stm.mem8">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">mem8</span></span><a class="headerlink" href="#stm.mem8" title="Link to this definition">¶</a></dt>
+<dd><p>Read/write 8 bits of memory.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="stm.mem16">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">mem16</span></span><a class="headerlink" href="#stm.mem16" title="Link to this definition">¶</a></dt>
+<dd><p>Read/write 16 bits of memory.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="stm.mem32">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">mem32</span></span><a class="headerlink" href="#stm.mem32" title="Link to this definition">¶</a></dt>
+<dd><p>Read/write 32 bits of memory.</p>
+</dd></dl>
+
+<p>Use subscript notation <code class="docutils literal notranslate"><span class="pre">[...]</span></code> to index these objects with the address of
+interest.</p>
+<p>These memory objects can be used in combination with the peripheral register
+constants to read and write registers of the MCU hardware peripherals, as well
+as all other areas of address space.</p>
+</section>
+<section id="peripheral-register-constants">
+<h2>Peripheral register constants<a class="headerlink" href="#peripheral-register-constants" title="Link to this heading">¶</a></h2>
+<p>The module defines constants for registers which are generated from CMSIS header
+files, and the constants available depend on the microcontroller series that is
+being compiled for.  Examples of some constants include:</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="stm.GPIOA">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">GPIOA</span></span><a class="headerlink" href="#stm.GPIOA" title="Link to this definition">¶</a></dt>
+<dd><p>Base address of the GPIOA peripheral.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="stm.GPIOB">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">GPIOB</span></span><a class="headerlink" href="#stm.GPIOB" title="Link to this definition">¶</a></dt>
+<dd><p>Base address of the GPIOB peripheral.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="stm.GPIO_BSRR">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">GPIO_BSRR</span></span><a class="headerlink" href="#stm.GPIO_BSRR" title="Link to this definition">¶</a></dt>
+<dd><p>Offset of the GPIO bit set/reset register.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="stm.GPIO_IDR">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">GPIO_IDR</span></span><a class="headerlink" href="#stm.GPIO_IDR" title="Link to this definition">¶</a></dt>
+<dd><p>Offset of the GPIO input data register.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="stm.GPIO_ODR">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">GPIO_ODR</span></span><a class="headerlink" href="#stm.GPIO_ODR" title="Link to this definition">¶</a></dt>
+<dd><p>Offset of the GPIO output data register.</p>
+</dd></dl>
+
+<p>Constants that are named after a peripheral, like <code class="docutils literal notranslate"><span class="pre">GPIOA</span></code>, are the absolute
+address of that peripheral.  Constants that have a prefix which is the name of a
+peripheral, like <code class="docutils literal notranslate"><span class="pre">GPIO_BSRR</span></code>, are relative offsets of the register.  Accessing
+peripheral registers requires adding the absolute base address of the peripheral
+and the relative register offset.  For example <code class="docutils literal notranslate"><span class="pre">GPIOA</span> <span class="pre">+</span> <span class="pre">GPIO_BSRR</span></code> is the
+full, absolute address of the <code class="docutils literal notranslate"><span class="pre">GPIOA-&gt;BSRR</span></code> register.</p>
+<p>Example use:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set PA2 high</span>
+<span class="n">stm</span><span class="o">.</span><span class="n">mem32</span><span class="p">[</span><span class="n">stm</span><span class="o">.</span><span class="n">GPIOA</span> <span class="o">+</span> <span class="n">stm</span><span class="o">.</span><span class="n">GPIO_BSRR</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>
+
+<span class="c1"># read PA3</span>
+<span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="n">stm</span><span class="o">.</span><span class="n">mem32</span><span class="p">[</span><span class="n">stm</span><span class="o">.</span><span class="n">GPIOA</span> <span class="o">+</span> <span class="n">stm</span><span class="o">.</span><span class="n">GPIO_IDR</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="functions-specific-to-stm32wbxx-mcus">
+<h2>Functions specific to STM32WBxx MCUs<a class="headerlink" href="#functions-specific-to-stm32wbxx-mcus" title="Link to this heading">¶</a></h2>
+<p>These functions are available on STM32WBxx microcontrollers, and interact with
+the second CPU, the RF core.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="stm.rfcore_status">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">rfcore_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stm.rfcore_status" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the status of the second CPU as an integer (the first word of device
+info table).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="stm.rfcore_fw_version">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">rfcore_fw_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stm.rfcore_fw_version" title="Link to this definition">¶</a></dt>
+<dd><p>Get the version of the firmware running on the second CPU.  Pass in 0 for
+<em>id</em> to get the FUS version, and 1 to get the WS version.</p>
+<p>Returns a 5-tuple with the full version number.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="stm.rfcore_sys_hci">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">rfcore_sys_hci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ogf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stm.rfcore_sys_hci" title="Link to this definition">¶</a></dt>
+<dd><p>Execute a HCI command on the SYS channel.  The execution is synchronous.</p>
+<p>Returns a bytes object with the result of the SYS command.</p>
+</dd></dl>
+
+</section>
+<section id="functions-specific-to-stm32wlxx-mcus">
+<h2>Functions specific to STM32WLxx MCUs<a class="headerlink" href="#functions-specific-to-stm32wlxx-mcus" title="Link to this heading">¶</a></h2>
+<p>These functions are available on STM32WLxx microcontrollers, and interact with
+the integrated “SUBGHZ” radio modem peripheral.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="stm.subghz_cs">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">subghz_cs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stm.subghz_cs" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the internal SPI CS pin attached to the radio peripheral. The <code class="docutils literal notranslate"><span class="pre">level</span></code>
+argument is active-low: a truthy value means “CS pin high” and de-asserts the
+signal, a falsey value means “CS pin low” and asserts the signal.</p>
+<p>The internal-only SPI bus corresponding to this CS signal can be instantiated
+using <a class="reference internal" href="machine.SPI.html#machine-spi"><span class="std std-ref">machine.SPI()</span></a> <code class="docutils literal notranslate"><span class="pre">id</span></code> value <code class="docutils literal notranslate"><span class="pre">&quot;SUBGHZ&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="stm.subghz_irq">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">subghz_irq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handler</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stm.subghz_irq" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the internal SUBGHZ radio interrupt handler to the provided
+function. The handler function is called as a “hard” interrupt in response to
+radio peripheral interrupts. See <a class="reference internal" href="../reference/isr_rules.html#isr-rules"><span class="std std-ref">Writing interrupt handlers</span></a> for more information about
+interrupt handlers in MicroPython.</p>
+<p>Calling this function with the handler argument set to None disables the IRQ.</p>
+<p>Due to a hardware limitation, each time this IRQ fires MicroPython disables
+it before calling the handler. In order to receive another interrupt, Python
+code should call <code class="docutils literal notranslate"><span class="pre">subghz_irq()</span></code> to set the handler again. This has the side
+effect of re-enabling the IRQ.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="stm.subghz_is_busy">
+<span class="sig-prename descclassname"><span class="pre">stm.</span></span><span class="sig-name descname"><span class="pre">subghz_is_busy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stm.subghz_is_busy" title="Link to this definition">¶</a></dt>
+<dd><p>Return a <code class="docutils literal notranslate"><span class="pre">bool</span></code> corresponding to the internal “RFBUSYS” signal from the
+radio peripheral. Before sending a new command to the radio over SPI then
+this function should be polled until it returns <code class="docutils literal notranslate"><span class="pre">False</span></code>, to confirm the
+busy signal is de-asserted.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">stm</span></code> — functionality specific to STM32 MCUs</a><ul>
+<li><a class="reference internal" href="#memory-access">Memory access</a><ul>
+<li><a class="reference internal" href="#stm.mem8"><code class="docutils literal notranslate"><span class="pre">mem8</span></code></a></li>
+<li><a class="reference internal" href="#stm.mem16"><code class="docutils literal notranslate"><span class="pre">mem16</span></code></a></li>
+<li><a class="reference internal" href="#stm.mem32"><code class="docutils literal notranslate"><span class="pre">mem32</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#peripheral-register-constants">Peripheral register constants</a><ul>
+<li><a class="reference internal" href="#stm.GPIOA"><code class="docutils literal notranslate"><span class="pre">GPIOA</span></code></a></li>
+<li><a class="reference internal" href="#stm.GPIOB"><code class="docutils literal notranslate"><span class="pre">GPIOB</span></code></a></li>
+<li><a class="reference internal" href="#stm.GPIO_BSRR"><code class="docutils literal notranslate"><span class="pre">GPIO_BSRR</span></code></a></li>
+<li><a class="reference internal" href="#stm.GPIO_IDR"><code class="docutils literal notranslate"><span class="pre">GPIO_IDR</span></code></a></li>
+<li><a class="reference internal" href="#stm.GPIO_ODR"><code class="docutils literal notranslate"><span class="pre">GPIO_ODR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions-specific-to-stm32wbxx-mcus">Functions specific to STM32WBxx MCUs</a><ul>
+<li><a class="reference internal" href="#stm.rfcore_status"><code class="docutils literal notranslate"><span class="pre">rfcore_status()</span></code></a></li>
+<li><a class="reference internal" href="#stm.rfcore_fw_version"><code class="docutils literal notranslate"><span class="pre">rfcore_fw_version()</span></code></a></li>
+<li><a class="reference internal" href="#stm.rfcore_sys_hci"><code class="docutils literal notranslate"><span class="pre">rfcore_sys_hci()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions-specific-to-stm32wlxx-mcus">Functions specific to STM32WLxx MCUs</a><ul>
+<li><a class="reference internal" href="#stm.subghz_cs"><code class="docutils literal notranslate"><span class="pre">subghz_cs()</span></code></a></li>
+<li><a class="reference internal" href="#stm.subghz_irq"><code class="docutils literal notranslate"><span class="pre">subghz_irq()</span></code></a></li>
+<li><a class="reference internal" href="#stm.subghz_is_busy"><code class="docutils literal notranslate"><span class="pre">subghz_is_busy()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="pyb.USB_VCP.html"
+                          title="previous chapter">class USB_VCP – USB virtual comm port</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="lcd160cr.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lcd160cr</span></code> — control of LCD160CR display</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/stm.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lcd160cr.html" title="lcd160cr — control of LCD160CR display"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyb.USB_VCP.html" title="class USB_VCP – USB virtual comm port"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">stm</span></code> — functionality specific to STM32 MCUs</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

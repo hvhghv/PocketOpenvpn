@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7. Safe mode and factory reset &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="8. Making the pyboard act as a USB mouse" href="usb_mouse.html" />
+    <link rel="prev" title="6. The accelerometer" href="accel.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="usb_mouse.html" title="8. Making the pyboard act as a USB mouse"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="accel.html" title="6. The accelerometer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the pyboard</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">MicroPython tutorial for the pyboard</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">7. </span>Safe mode and factory reset</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="safe-mode-and-factory-reset">
+<h1><span class="section-number">7. </span>Safe mode and factory reset<a class="headerlink" href="#safe-mode-and-factory-reset" title="Link to this heading">¶</a></h1>
+<p>If something goes wrong with your pyboard, don’t panic!  It is almost
+impossible for you to break the pyboard by programming the wrong thing.</p>
+<p>The first thing to try is to enter safe mode: this temporarily skips
+execution of <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> and <code class="docutils literal notranslate"><span class="pre">main.py</span></code> and gives default USB settings.</p>
+<p>If you have problems with the filesystem you can do a factory reset,
+which restores the filesystem to its original state.</p>
+<section id="safe-mode">
+<h2><span class="section-number">7.1. </span>Safe mode<a class="headerlink" href="#safe-mode" title="Link to this heading">¶</a></h2>
+<p>To enter safe mode, do the following steps:</p>
+<ol class="arabic simple">
+<li><p>Connect the pyboard to USB so it powers up.</p></li>
+<li><p>Hold down the USR switch.</p></li>
+<li><p>While still holding down USR, press and release the RST switch.</p></li>
+<li><p>The LEDs will then cycle green to orange to green+orange and back again.</p></li>
+<li><p>Keep holding down USR until <em>only the orange LED is lit</em>, and then let
+go of the USR switch.</p></li>
+<li><p>The orange LED should flash quickly 4 times, and then turn off.</p></li>
+<li><p>You are now in safe mode.</p></li>
+</ol>
+<p>In safe mode, the <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> and <code class="docutils literal notranslate"><span class="pre">main.py</span></code> files are not executed, and so
+the pyboard boots up with default settings.  This means you now have access
+to the filesystem (the USB drive should appear), and you can edit <code class="docutils literal notranslate"><span class="pre">boot.py</span></code>
+and <code class="docutils literal notranslate"><span class="pre">main.py</span></code> to fix any problems.</p>
+<p>Entering safe mode is temporary, and does not make any changes to the
+files on the pyboard.</p>
+</section>
+<section id="factory-reset-the-filesystem">
+<h2><span class="section-number">7.2. </span>Factory reset the filesystem<a class="headerlink" href="#factory-reset-the-filesystem" title="Link to this heading">¶</a></h2>
+<p>If you pyboard’s filesystem gets corrupted (for example, you forgot to
+eject/unmount it), or you have some code in <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> or <code class="docutils literal notranslate"><span class="pre">main.py</span></code> which
+you can’t escape from, then you can reset the filesystem.</p>
+<p>Resetting the filesystem deletes all files on the internal pyboard storage
+(not the SD card), and restores the files <code class="docutils literal notranslate"><span class="pre">boot.py</span></code>, <code class="docutils literal notranslate"><span class="pre">main.py</span></code>, <code class="docutils literal notranslate"><span class="pre">README.txt</span></code>
+and <code class="docutils literal notranslate"><span class="pre">pybcdc.inf</span></code> back to their original state.</p>
+<p>To do a factory reset of the filesystem you follow a similar procedure as
+you did to enter safe mode, but release USR on green+orange:</p>
+<ol class="arabic simple">
+<li><p>Connect the pyboard to USB so it powers up.</p></li>
+<li><p>Hold down the USR switch.</p></li>
+<li><p>While still holding down USR, press and release the RST switch.</p></li>
+<li><p>The LEDs will then cycle green to orange to green+orange and back again.</p></li>
+<li><p>Keep holding down USR until <em>both the green and orange LEDs are lit</em>, and
+then let go of the USR switch.</p></li>
+<li><p>The green and orange LEDs should flash quickly 4 times.</p></li>
+<li><p>The red LED will turn on (so red, green and orange are now on).</p></li>
+<li><p>The pyboard is now resetting the filesystem (this takes a few seconds).</p></li>
+<li><p>The LEDs all turn off.</p></li>
+<li><p>You now have a reset filesystem, and are in safe mode.</p></li>
+<li><p>Press and release the RST switch to boot normally.</p></li>
+</ol>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">7. Safe mode and factory reset</a><ul>
+<li><a class="reference internal" href="#safe-mode">7.1. Safe mode</a></li>
+<li><a class="reference internal" href="#factory-reset-the-filesystem">7.2. Factory reset the filesystem</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="accel.html"
+                          title="previous chapter"><span class="section-number">6. </span>The accelerometer</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="usb_mouse.html"
+                          title="next chapter"><span class="section-number">8. </span>Making the pyboard act as a USB mouse</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pyboard/tutorial/reset.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="usb_mouse.html" title="8. Making the pyboard act as a USB mouse"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="accel.html" title="6. The accelerometer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the pyboard</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >MicroPython tutorial for the pyboard</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">7. </span>Safe mode and factory reset</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

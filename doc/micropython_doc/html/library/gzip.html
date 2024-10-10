@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>gzip – gzip compression &amp; decompression &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="hashlib – hashing algorithms" href="hashlib.html" />
+    <link rel="prev" title="gc – control the garbage collector" href="gc.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="hashlib.html" title="hashlib – hashing algorithms"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gc.html" title="gc – control the garbage collector"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code> – gzip compression &amp; decompression</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-gzip">
+<span id="gzip-gzip-compression-decompression"></span><h1><a class="reference internal" href="#module-gzip" title="gzip: gzip compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code></a> – gzip compression &amp; decompression<a class="headerlink" href="#module-gzip" title="Link to this heading">¶</a></h1>
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-CPython"><span class="xref std std-term">CPython</span></a> <em>module,
+as described below. For more information, refer to the original
+CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/gzip.html#module-gzip" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">gzip</span></code></a>.</p>
+<p>This module allows compression and decompression of binary data with the
+<a class="reference external" href="https://en.wikipedia.org/wiki/DEFLATE">DEFLATE algorithm</a> used by the gzip
+file format.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prefer to use <a class="reference internal" href="deflate.html#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">deflate.DeflateIO</span></code></a> instead of the functions in this
+module as it provides a streaming interface to compression and decompression
+which is convenient and more memory efficient when working with reading or
+writing compressed data to a file, socket, or stream.</p>
+</div>
+<p><strong>Availability:</strong></p>
+<ul class="simple">
+<li><p>This module is <strong>not present by default</strong> in official MicroPython firmware
+releases as it duplicates functionality available in the <a class="reference internal" href="deflate.html#module-deflate" title="deflate: deflate compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code></a> module.</p></li>
+<li><p>A copy of this module can be installed (or frozen)
+from <a class="reference internal" href="../reference/glossary.html#term-micropython-lib"><span class="xref std std-term">micropython-lib</span></a> (<a class="reference external" href="https://github.com/micropython/micropython-lib/blob/master/python-stdlib/gzip/gzip.py">source</a>).
+See <a class="reference internal" href="../reference/packages.html#packages"><span class="std std-ref">Package management</span></a> for more information. This documentation describes that module.</p></li>
+<li><p>Compression support will only be available if compression support is enabled
+in the built-in <a class="reference internal" href="deflate.html#module-deflate" title="deflate: deflate compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code></a> module.</p></li>
+</ul>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gzip.open">
+<span class="sig-prename descclassname"><span class="pre">gzip.</span></span><span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gzip.open" title="Link to this definition">¶</a></dt>
+<dd><p>Wrapper around built-in <a class="reference internal" href="builtins.html#open" title="open"><code class="xref py py-func docutils literal notranslate"><span class="pre">open()</span></code></a> returning a GzipFile instance.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gzip.decompress">
+<span class="sig-prename descclassname"><span class="pre">gzip.</span></span><span class="sig-name descname"><span class="pre">decompress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gzip.decompress" title="Link to this definition">¶</a></dt>
+<dd><p>Decompresses <em>data</em> into a bytes object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gzip.compress">
+<span class="sig-prename descclassname"><span class="pre">gzip.</span></span><span class="sig-name descname"><span class="pre">compress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gzip.compress" title="Link to this definition">¶</a></dt>
+<dd><p>Compresses <em>data</em> into a bytes object.</p>
+</dd></dl>
+
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="gzip.GzipFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gzip.</span></span><span class="sig-name descname"><span class="pre">GzipFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileobj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gzip.GzipFile" title="Link to this definition">¶</a></dt>
+<dd><p>This class can be used to wrap a <em>fileobj</em> which is any
+<a class="reference internal" href="../reference/glossary.html#term-stream"><span class="xref std std-term">stream-like</span></a> object such as a file, socket, or stream
+(including <a class="reference internal" href="io.html#io.BytesIO" title="io.BytesIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code></a>). It is itself a stream and implements the
+standard read/readinto/write/close methods.</p>
+<p>When the <em>mode</em> argument is <code class="docutils literal notranslate"><span class="pre">&quot;rb&quot;</span></code>, reads from the GzipFile instance will
+decompress the data in the underlying stream and return decompressed data.</p>
+<p>If compression support is enabled then the <em>mode</em> argument can be set to
+<code class="docutils literal notranslate"><span class="pre">&quot;wb&quot;</span></code>, and writes to the GzipFile instance will be compressed and written
+to the underlying stream.</p>
+<p>By default the GzipFile class will read and write data using the gzip file
+format, including a header and footer with checksum and a window size of 512
+bytes.</p>
+<p>The <strong>file</strong>, <strong>compresslevel</strong>, and <strong>mtime</strong> arguments are not
+supported. <strong>fileobj</strong> and <strong>mode</strong> must always be specified as keyword
+arguments.</p>
+</dd></dl>
+
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<p>A typical use case for <a class="reference internal" href="#gzip.GzipFile" title="gzip.GzipFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">gzip.GzipFile</span></code></a> is to read or write a compressed
+file from storage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gzip</span>
+
+<span class="c1"># Reading:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">GzipFile</span><span class="p">(</span><span class="n">fileobj</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">g</span><span class="p">:</span>
+        <span class="c1"># Use g.read(), g.readinto(), etc.</span>
+
+ <span class="c1"># Same, but using gzip.open:</span>
+<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;data.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+     <span class="c1"># Use f.read(), f.readinto(), etc.</span>
+
+<span class="c1"># Writing:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">GzipFile</span><span class="p">(</span><span class="n">fileobj</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">g</span><span class="p">:</span>
+        <span class="c1"># Use g.write(...) etc</span>
+
+<span class="c1"># Same, but using gzip.open:</span>
+<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;data.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="c1"># Use f.write(...) etc</span>
+
+<span class="c1"># Write a dictionary as JSON in gzip format, with a</span>
+<span class="c1"># small (64 byte) window size.</span>
+<span class="n">config</span> <span class="o">=</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;config.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For guidance on working with gzip sources and choosing the window size see the
+note at the <a class="reference internal" href="deflate.html#deflate-wbits"><span class="std std-ref">end of the deflate documentation</span></a>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code> – gzip compression &amp; decompression</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#gzip.open"><code class="docutils literal notranslate"><span class="pre">open()</span></code></a></li>
+<li><a class="reference internal" href="#gzip.decompress"><code class="docutils literal notranslate"><span class="pre">decompress()</span></code></a></li>
+<li><a class="reference internal" href="#gzip.compress"><code class="docutils literal notranslate"><span class="pre">compress()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#classes">Classes</a><ul>
+<li><a class="reference internal" href="#gzip.GzipFile"><code class="docutils literal notranslate"><span class="pre">GzipFile</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="gc.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gc</span></code> – control the garbage collector</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="hashlib.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code> – hashing algorithms</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/gzip.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="hashlib.html" title="hashlib – hashing algorithms"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gc.html" title="gc – control the garbage collector"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code> – gzip compression &amp; decompression</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

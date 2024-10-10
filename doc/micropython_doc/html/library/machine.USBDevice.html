@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class USBDevice – USB Device driver &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="micropython – access and control MicroPython internals" href="micropython.html" />
+    <link rel="prev" title="class SDCard – secure digital memory card" href="machine.SDCard.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="micropython.html" title="micropython – access and control MicroPython internals"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="machine.SDCard.html" title="class SDCard – secure digital memory card"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="machine.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class USBDevice – USB Device driver</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-usbdevice-usb-device-driver">
+<span id="machine-usbdevice"></span><h1>class USBDevice – USB Device driver<a class="headerlink" href="#class-usbdevice-usb-device-driver" title="Link to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">machine.USBDevice</span></code> is currently only supported on the rp2 and samd
+ports.</p>
+</div>
+<p>USBDevice provides a low-level Python API for implementing USB device functions using
+Python code.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This low-level API assumes familiarity with the USB standard. There
+are high-level <a class="reference external" href="https://github.com/micropython/micropython-lib/tree/master/micropython/usb#readme">usb driver modules in micropython-lib</a> which provide a
+simpler interface and more built-in functionality.</p>
+</div>
+<section id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>A “Runtime” USB device interface or driver is one which is defined using this
+Python API after MicroPython initially starts up.</p></li>
+<li><p>A “Built-in” USB device interface or driver is one that is compiled into the
+MicroPython firmware, and is always available. Examples are USB-CDC (serial
+port) which is usually enabled by default. Built-in USB-MSC (Mass Storage) is an
+option on some ports.</p></li>
+</ul>
+</section>
+<section id="lifecycle">
+<h2>Lifecycle<a class="headerlink" href="#lifecycle" title="Link to this heading">¶</a></h2>
+<p>Managing a runtime USB interface can be tricky, especially if you are communicating
+with MicroPython over a built-in USB-CDC serial port that’s part of the same USB
+device.</p>
+<ul>
+<li><p>A MicroPython soft reset will always clear all runtime USB interfaces, which
+results in the entire USB device disconnecting from the host. If MicroPython
+is also providing a built-in USB-CDC serial port then this will re-appear
+after the soft reset.</p>
+<p>This means some functions (like <code class="docutils literal notranslate"><span class="pre">mpremote</span> <span class="pre">run</span></code>) that target the USB-CDC
+serial port will immediately fail if a runtime USB interface is active,
+because the port goes away when <code class="docutils literal notranslate"><span class="pre">mpremote</span></code> triggers a soft reset. The
+operation should succeed on the second try, as after the soft reset there is
+no more runtime USB interface.</p>
+</li>
+<li><p>To configure a runtime USB device on every boot, it’s recommended to place the
+configuration code in the <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> file on the <a class="reference internal" href="../reference/filesystem.html#filesystem"><span class="std std-ref">device VFS</span></a>. On each reset this file is executed before the USB subsystem is
+initialised (and before <code class="docutils literal notranslate"><span class="pre">main.py</span></code>), so it allows the board to come up with the runtime
+USB device immediately.</p></li>
+<li><p>For development or debugging, it may be convenient to connect a hardware
+serial REPL and disable the built-in USB-CDC serial port entirely. Not all ports
+support this (currently only <code class="docutils literal notranslate"><span class="pre">rp2</span></code>). The custom build should be configured
+with <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MICROPY_HW_USB_CDC</span> <span class="pre">(0)</span></code> and <code class="docutils literal notranslate"><span class="pre">#define</span>
+<span class="pre">MICROPY_HW_ENABLE_UART_REPL</span> <span class="pre">(1)</span></code>.</p></li>
+</ul>
+</section>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="machine.USBDevice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">machine.</span></span><span class="sig-name descname"><span class="pre">USBDevice</span></span><a class="headerlink" href="#machine.USBDevice" title="Link to this definition">¶</a></dt>
+<dd><p>Construct a USBDevice object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This object is a singleton, each call to this constructor
+returns the same object reference.</p>
+</div>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.USBDevice.config">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">desc_dev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc_cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc_strs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">open_itf_cb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_cb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_xfer_cb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xfer_cb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.USBDevice.config" title="Link to this definition">¶</a></dt>
+<dd><p>Configures the <code class="docutils literal notranslate"><span class="pre">USBDevice</span></code> singleton object with the USB runtime device
+state and callback functions:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_dev</span></code> - A bytes-like object containing
+the new USB device descriptor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_cfg</span></code> - A bytes-like object containing the
+new USB configuration descriptor.</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">desc_strs</span></code> - Optional object holding strings or bytes objects</dt><dd><p>containing USB string descriptor values. Can be a list, a dict, or any
+object which supports subscript indexing with integer keys (USB string
+descriptor index).</p>
+<p>Strings are an optional USB feature, and this parameter can be unset
+(default) if no strings are referenced in the device and configuration
+descriptors, or if only built-in strings should be used.</p>
+<p>Apart from index 0, all the string values should be plain ASCII. Index 0
+is the special “languages” USB descriptor, represented as a bytes object
+with a custom format defined in the USB standard. <code class="docutils literal notranslate"><span class="pre">None</span></code> can be
+returned at index 0 in order to use a default “English” language
+descriptor.</p>
+<p>To fall back to providing a built-in string value for a given index, a
+subscript lookup can return <code class="docutils literal notranslate"><span class="pre">None</span></code>, raise <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>, or raise
+<code class="docutils literal notranslate"><span class="pre">IndexError</span></code>.</p>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">open_itf_cb</span></code> - This callback is called once for each interface
+or Interface Association Descriptor in response to a Set
+Configuration request from the USB Host (the final stage before
+the USB device is available to the host).</p>
+<p>The callback takes a single argument, which is a memoryview of the
+interface or IAD descriptor that the host is accepting (including
+all associated descriptors). It is a view into the same
+<code class="docutils literal notranslate"><span class="pre">desc_cfg</span></code> object that was provided as a separate
+argument to this function. The memoryview is only valid until the
+callback function returns.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reset_cb</span></code> - This callback is called when the USB host performs
+a bus reset. The callback takes no arguments. Any in-progress
+transfers will never complete. The USB host will most likely
+proceed to re-enumerate the USB device by calling the descriptor
+callbacks and then <code class="docutils literal notranslate"><span class="pre">open_itf_cb()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">control_xfer_cb</span></code> - This callback is called one or more times
+for each USB control transfer (device Endpoint 0). It takes two
+arguments.</p>
+<p>The first argument is the control transfer stage. It is one of:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> for SETUP stage.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> for DATA stage.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> for ACK stage.</p></li>
+</ul>
+<p>Second argument is a memoryview to read the USB control request
+data for this stage. The memoryview is only valid until the
+callback function returns. Data in this memoryview will be the same
+across each of the three stages of a single transfer.</p>
+<p>A successful transfer consists of this callback being called in sequence
+for the three stages. Generally speaking, if a device wants to do
+something in response to a control request then it’s best to wait until
+the ACK stage to confirm the host controller completed the transfer as
+expected.</p>
+<p>The callback should return one of the following values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code> to stall the endpoint and reject the transfer. It won’t
+proceed to any remaining stages.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code> to continue the transfer to the next stage.</p></li>
+<li><p>A buffer object can be returned at the SETUP stage when the transfer
+will send or receive additional data. Typically this is the case when
+the <code class="docutils literal notranslate"><span class="pre">wLength</span></code> field in the request has a non-zero value. This should
+be a writable buffer for an <code class="docutils literal notranslate"><span class="pre">OUT</span></code> direction transfer, or a readable
+buffer with data for an <code class="docutils literal notranslate"><span class="pre">IN</span></code> direction transfer.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xfer_cb</span></code> - This callback is called whenever a non-control
+transfer submitted by calling <a class="reference internal" href="#machine.USBDevice.submit_xfer" title="machine.USBDevice.submit_xfer"><code class="xref py py-func docutils literal notranslate"><span class="pre">USBDevice.submit_xfer()</span></code></a> completes.</p>
+<p>The callback has three arguments:</p>
+<ol class="arabic simple">
+<li><p>The Endpoint number for the completed transfer.</p></li>
+<li><p>Result value: <code class="docutils literal notranslate"><span class="pre">True</span></code> if the transfer succeeded, <code class="docutils literal notranslate"><span class="pre">False</span></code>
+otherwise.</p></li>
+<li><p>Number of bytes successfully transferred. In the case of a
+“short” transfer, The result is <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">xferred_bytes</span></code>
+will be smaller than the length of the buffer submitted for the
+transfer.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a bus reset occurs (see <code class="xref py py-func docutils literal notranslate"><span class="pre">USBDevice.reset()</span></code>),
+<code class="docutils literal notranslate"><span class="pre">xfer_cb</span></code> is not called for any transfers that have not
+already completed.</p>
+</div>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.USBDevice.active">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">[value]</span> <span class="pre">/</span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.USBDevice.active" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the current active state of this runtime USB device as a
+boolean. The runtime USB device is “active” when it is available to
+interact with the host, it doesn’t mean that a USB Host is actually
+present.</p>
+<p>If the optional <code class="docutils literal notranslate"><span class="pre">value</span></code> argument is set to a truthy value, then
+the USB device will be activated.</p>
+<p>If the optional <code class="docutils literal notranslate"><span class="pre">value</span></code> argument is set to a falsey value, then
+the USB device is deactivated. While the USB device is deactivated,
+it will not be detected by the USB Host.</p>
+<p>To simulate a disconnect and a reconnect of the USB device, call
+<code class="docutils literal notranslate"><span class="pre">active(False)</span></code> followed by <code class="docutils literal notranslate"><span class="pre">active(True)</span></code>. This may be
+necessary if the runtime device configuration has changed, so that
+the host sees the new device.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="machine.USBDevice.builtin_driver">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">builtin_driver</span></span><a class="headerlink" href="#machine.USBDevice.builtin_driver" title="Link to this definition">¶</a></dt>
+<dd><p>This attribute holds the current built-in driver configuration, and must be
+set to one of the <code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_</span></code> named constants defined on this object.</p>
+<p>By default it holds the value <a class="reference internal" href="#machine.USBDevice.BUILTIN_NONE" title="machine.USBDevice.BUILTIN_NONE"><code class="xref py py-data docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_NONE</span></code></a>.</p>
+<p>Runtime USB device must be inactive when setting this field. Call the
+<a class="reference internal" href="#machine.USBDevice.active" title="machine.USBDevice.active"><code class="xref py py-func docutils literal notranslate"><span class="pre">USBDevice.active()</span></code></a> function to deactivate before setting if necessary
+(and again to activate after setting).</p>
+<p>If this value is set to any value other than <a class="reference internal" href="#machine.USBDevice.BUILTIN_NONE" title="machine.USBDevice.BUILTIN_NONE"><code class="xref py py-data docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_NONE</span></code></a> then
+the following restrictions apply to the <a class="reference internal" href="#machine.USBDevice.config" title="machine.USBDevice.config"><code class="xref py py-func docutils literal notranslate"><span class="pre">USBDevice.config()</span></code></a> arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_cfg</span></code> should begin with the built-in USB interface descriptor data
+accessible via <a class="reference internal" href="#machine.USBDevice.builtin_driver" title="machine.USBDevice.builtin_driver"><code class="xref py py-data docutils literal notranslate"><span class="pre">USBDevice.builtin_driver</span></code></a> attribute <code class="docutils literal notranslate"><span class="pre">desc_cfg</span></code>.
+Descriptors appended after the built-in configuration descriptors should use
+interface, string and endpoint numbers starting from the max built-in values
+defined in <a class="reference internal" href="#machine.USBDevice.builtin_driver" title="machine.USBDevice.builtin_driver"><code class="xref py py-data docutils literal notranslate"><span class="pre">USBDevice.builtin_driver</span></code></a> attributes <code class="docutils literal notranslate"><span class="pre">itf_max</span></code>, <code class="docutils literal notranslate"><span class="pre">str_max</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ep_max</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">bNumInterfaces</span></code> field in the built-in configuration
+descriptor will also need to be updated if any new interfaces
+are appended to the end of <code class="docutils literal notranslate"><span class="pre">desc_cfg</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_strs</span></code> should either be <code class="docutils literal notranslate"><span class="pre">None</span></code> or a list/dictionary where index
+values less than <code class="docutils literal notranslate"><span class="pre">USBDevice.builtin_driver.str_max</span></code> are missing or have
+value <code class="docutils literal notranslate"><span class="pre">None</span></code>. This reserves those string indexes for the built-in
+drivers. Placing a different string at any of these indexes overrides that
+string in the built-in driver.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.USBDevice.submit_xfer">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">submit_xfer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span> <span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.USBDevice.submit_xfer" title="Link to this definition">¶</a></dt>
+<dd><p>Submit a USB transfer on endpoint number <code class="docutils literal notranslate"><span class="pre">ep</span></code>. <code class="docutils literal notranslate"><span class="pre">buffer</span></code> must be
+an object implementing the buffer interface, with read access for
+<code class="docutils literal notranslate"><span class="pre">IN</span></code> endpoints and write access for <code class="docutils literal notranslate"><span class="pre">OUT</span></code> endpoints.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">ep</span></code> cannot be the control Endpoint number 0. Control
+transfers are built up through successive executions of
+<code class="docutils literal notranslate"><span class="pre">control_xfer_cb</span></code>, see above.</p>
+</div>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if successful, <code class="docutils literal notranslate"><span class="pre">False</span></code> if the transfer could not
+be queued (as USB device is not configured by host, or because
+another transfer is queued on this endpoint.)</p>
+<p>When the USB host completes the transfer, the <code class="docutils literal notranslate"><span class="pre">xfer_cb</span></code> callback
+is called (see above).</p>
+<p>Raises <code class="docutils literal notranslate"><span class="pre">OSError</span></code> with reason <code class="docutils literal notranslate"><span class="pre">MP_EINVAL</span></code> If the USB device is not
+active.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.USBDevice.stall">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">stall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">ep,</span> <span class="pre">[stall]</span> <span class="pre">/</span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.USBDevice.stall" title="Link to this definition">¶</a></dt>
+<dd><p>Calling this function gets or sets the STALL state of a device endpoint.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ep</span></code> is the number of the endpoint.</p>
+<p>If the optional <code class="docutils literal notranslate"><span class="pre">stall</span></code> parameter is set, this is a boolean flag
+for the STALL state.</p>
+<p>The return value is the current stall state of the endpoint (before
+any change made by this function).</p>
+<p>An endpoint that is set to STALL may remain stalled until this
+function is called again, or STALL may be cleared automatically by
+the USB host.</p>
+<p>Raises <code class="docutils literal notranslate"><span class="pre">OSError</span></code> with reason <code class="docutils literal notranslate"><span class="pre">MP_EINVAL</span></code> If the USB device is not
+active.</p>
+</dd></dl>
+
+</section>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="machine.USBDevice.BUILTIN_NONE">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">BUILTIN_NONE</span></span><a class="headerlink" href="#machine.USBDevice.BUILTIN_NONE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="machine.USBDevice.BUILTIN_DEFAULT">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">BUILTIN_DEFAULT</span></span><a class="headerlink" href="#machine.USBDevice.BUILTIN_DEFAULT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="machine.USBDevice.BUILTIN_CDC">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">BUILTIN_CDC</span></span><a class="headerlink" href="#machine.USBDevice.BUILTIN_CDC" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="machine.USBDevice.BUILTIN_MSC">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">BUILTIN_MSC</span></span><a class="headerlink" href="#machine.USBDevice.BUILTIN_MSC" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="machine.USBDevice.BUILTIN_CDC_MSC">
+<span class="sig-prename descclassname"><span class="pre">USBDevice.</span></span><span class="sig-name descname"><span class="pre">BUILTIN_CDC_MSC</span></span><a class="headerlink" href="#machine.USBDevice.BUILTIN_CDC_MSC" title="Link to this definition">¶</a></dt>
+<dd><p>These constant objects hold the built-in descriptor data which is
+compiled into the MicroPython firmware. <code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_NONE</span></code> and
+<code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_DEFAULT</span></code> are always present. Additional objects may be present
+depending on the firmware build configuration and the actual built-in drivers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently at most one of <code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_CDC</span></code>,
+<code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_MSC</span></code> and <code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_CDC_MSC</span></code> is defined
+and will be the same object as <code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_DEFAULT</span></code>.
+These constants are defined to allow run-time detection of
+the built-in driver (if any). Support for selecting one of
+multiple built-in driver configurations may be added in the
+future.</p>
+</div>
+<p>These values are assigned to <a class="reference internal" href="#machine.USBDevice.builtin_driver" title="machine.USBDevice.builtin_driver"><code class="xref py py-data docutils literal notranslate"><span class="pre">USBDevice.builtin_driver</span></code></a> to get/set the
+built-in configuration.</p>
+<p>Each object contains the following read-only fields:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">itf_max</span></code> - One more than the highest bInterfaceNumber value used
+in the built-in configuration descriptor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ep_max</span></code> - One more than the highest bEndpointAddress value used
+in the built-in configuration descriptor. Does not include any
+<code class="docutils literal notranslate"><span class="pre">IN</span></code> flag bit (0x80).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str_max</span></code> - One more than the highest string descriptor index
+value used by any built-in descriptor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_dev</span></code> - <code class="docutils literal notranslate"><span class="pre">bytes</span></code> object containing the built-in USB device
+descriptor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_cfg</span></code> - <code class="docutils literal notranslate"><span class="pre">bytes</span></code> object containing the complete built-in USB
+configuration descriptor.</p></li>
+</ul>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class USBDevice – USB Device driver</a><ul>
+<li><a class="reference internal" href="#terminology">Terminology</a></li>
+<li><a class="reference internal" href="#lifecycle">Lifecycle</a></li>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#machine.USBDevice"><code class="docutils literal notranslate"><span class="pre">USBDevice</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#machine.USBDevice.config"><code class="docutils literal notranslate"><span class="pre">USBDevice.config()</span></code></a></li>
+<li><a class="reference internal" href="#machine.USBDevice.active"><code class="docutils literal notranslate"><span class="pre">USBDevice.active()</span></code></a></li>
+<li><a class="reference internal" href="#machine.USBDevice.builtin_driver"><code class="docutils literal notranslate"><span class="pre">USBDevice.builtin_driver</span></code></a></li>
+<li><a class="reference internal" href="#machine.USBDevice.submit_xfer"><code class="docutils literal notranslate"><span class="pre">USBDevice.submit_xfer()</span></code></a></li>
+<li><a class="reference internal" href="#machine.USBDevice.stall"><code class="docutils literal notranslate"><span class="pre">USBDevice.stall()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#constants">Constants</a><ul>
+<li><a class="reference internal" href="#machine.USBDevice.BUILTIN_NONE"><code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_NONE</span></code></a></li>
+<li><a class="reference internal" href="#machine.USBDevice.BUILTIN_DEFAULT"><code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_DEFAULT</span></code></a></li>
+<li><a class="reference internal" href="#machine.USBDevice.BUILTIN_CDC"><code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_CDC</span></code></a></li>
+<li><a class="reference internal" href="#machine.USBDevice.BUILTIN_MSC"><code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_MSC</span></code></a></li>
+<li><a class="reference internal" href="#machine.USBDevice.BUILTIN_CDC_MSC"><code class="docutils literal notranslate"><span class="pre">USBDevice.BUILTIN_CDC_MSC</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="machine.SDCard.html"
+                          title="previous chapter">class SDCard – secure digital memory card</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="micropython.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/machine.USBDevice.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="micropython.html" title="micropython – access and control MicroPython internals"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="machine.SDCard.html" title="class SDCard – secure digital memory card"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="machine.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class USBDevice – USB Device driver</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

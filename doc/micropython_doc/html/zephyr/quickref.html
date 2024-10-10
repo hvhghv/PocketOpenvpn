@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quick reference for the Zephyr port &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="General information about the Zephyr port" href="general.html" />
+    <link rel="prev" title="Quick reference for the UNIX and Windows ports" href="../unix/quickref.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="general.html" title="General information about the Zephyr port"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../unix/quickref.html" title="Quick reference for the UNIX and Windows ports"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Quick reference for the Zephyr port</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="quick-reference-for-the-zephyr-port">
+<span id="zephyr-quickref"></span><h1>Quick reference for the Zephyr port<a class="headerlink" href="#quick-reference-for-the-zephyr-port" title="Link to this heading">¶</a></h1>
+<p>Below is a quick reference for the Zephyr port. If it is your first time working with this port please consider reading the following sections first:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General information about the Zephyr port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">MicroPython tutorial for the Zephyr port</a></li>
+</ul>
+</div>
+<section id="running-micropython">
+<h2>Running MicroPython<a class="headerlink" href="#running-micropython" title="Link to this heading">¶</a></h2>
+<p>See the corresponding section of the tutorial: <a class="reference internal" href="../esp8266/tutorial/intro.html#intro"><span class="std std-ref">Getting started with MicroPython on the ESP8266</span></a>.</p>
+</section>
+<section id="delay-and-timing">
+<h2>Delay and timing<a class="headerlink" href="#delay-and-timing" title="Link to this heading">¶</a></h2>
+<p>Use the <a class="reference internal" href="../library/time.html#module-time" title="time: time related functions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>               <span class="c1"># sleep for 1 second</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>          <span class="c1"># sleep for 500 milliseconds</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep_us</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>           <span class="c1"># sleep for 10 microseconds</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">()</span>     <span class="c1"># get millisecond counter</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">(),</span> <span class="n">start</span><span class="p">)</span> <span class="c1"># compute time difference</span>
+</pre></div>
+</div>
+</section>
+<section id="pins-and-gpio">
+<h2>Pins and GPIO<a class="headerlink" href="#pins-and-gpio" title="Link to this heading">¶</a></h2>
+<p>Use the <a class="reference internal" href="../library/machine.Pin.html#machine-pin"><span class="std std-ref">machine.Pin</span></a> class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+
+<span class="n">pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">((</span><span class="s2">&quot;GPIO_1&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">),</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>   <span class="c1"># create input pin on GPIO1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pin</span><span class="p">)</span>                          <span class="c1"># print pin port and number</span>
+
+<span class="n">pin</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>     <span class="c1"># reinitialize pin</span>
+
+<span class="n">pin</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>                        <span class="c1"># set pin to high</span>
+<span class="n">pin</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>                        <span class="c1"># set pin to low</span>
+
+<span class="n">pin</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>                            <span class="c1"># set pin to high</span>
+<span class="n">pin</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>                           <span class="c1"># set pin to low</span>
+
+<span class="n">pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">((</span><span class="s2">&quot;GPIO_1&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">),</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>   <span class="c1"># create input pin on GPIO1</span>
+
+<span class="n">pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">((</span><span class="s2">&quot;GPIO_1&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">),</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>         <span class="c1"># set pin high on creation</span>
+
+<span class="n">pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">((</span><span class="s2">&quot;GPIO_1&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">),</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>      <span class="c1"># enable internal pull-up resistor</span>
+
+<span class="n">switch</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">((</span><span class="s2">&quot;GPIO_2&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>                 <span class="c1"># create input pin for a switch</span>
+<span class="n">switch</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SW2 changed&quot;</span><span class="p">))</span>          <span class="c1"># enable an interrupt when switch state is changed</span>
+</pre></div>
+</div>
+</section>
+<section id="hardware-i2c-bus">
+<h2>Hardware I2C bus<a class="headerlink" href="#hardware-i2c-bus" title="Link to this heading">¶</a></h2>
+<p>Hardware I2C is accessed via the <a class="reference internal" href="../library/machine.I2C.html#machine-i2c"><span class="std std-ref">machine.I2C</span></a> class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">I2C</span>
+
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">I2C</span><span class="p">(</span><span class="s2">&quot;I2C_0&quot;</span><span class="p">)</span>          <span class="c1"># construct an i2c bus</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i2c</span><span class="p">)</span>                  <span class="c1"># print device name</span>
+
+<span class="n">i2c</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span>                  <span class="c1"># scan the device for available I2C slaves</span>
+
+<span class="n">i2c</span><span class="o">.</span><span class="n">readfrom</span><span class="p">(</span><span class="mh">0x1D</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>                <span class="c1"># read 4 bytes from slave 0x1D</span>
+<span class="n">i2c</span><span class="o">.</span><span class="n">readfrom_mem</span><span class="p">(</span><span class="mh">0x1D</span><span class="p">,</span> <span class="mh">0x0D</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>      <span class="c1"># read 1 byte from slave 0x1D at slave memory 0x0D</span>
+
+<span class="n">i2c</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="mh">0x1D</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;abcd&#39;</span><span class="p">)</span>           <span class="c1"># write to slave with address 0x1D</span>
+<span class="n">i2c</span><span class="o">.</span><span class="n">writeto_mem</span><span class="p">(</span><span class="mh">0x1D</span><span class="p">,</span> <span class="mh">0x0D</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;ab&#39;</span><span class="p">)</span>   <span class="c1"># write to slave 0x1D at slave memory 0x0D</span>
+
+<span class="n">buf</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>                  <span class="c1"># create buffer of size 8</span>
+<span class="n">i2c</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="mh">0x1D</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;abcd&#39;</span><span class="p">)</span>          <span class="c1"># write buf to slave 0x1D</span>
+</pre></div>
+</div>
+</section>
+<section id="hardware-spi-bus">
+<h2>Hardware SPI bus<a class="headerlink" href="#hardware-spi-bus" title="Link to this heading">¶</a></h2>
+<p>Hardware SPI is accessed via the <a class="reference internal" href="../library/machine.SPI.html#machine-spi"><span class="std std-ref">machine.SPI</span></a> class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">SPI</span>
+
+<span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="s2">&quot;SPI_0&quot;</span><span class="p">)</span>          <span class="c1"># construct a spi bus with default configuration</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">baudrate</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">bits</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">firstbit</span><span class="o">=</span><span class="n">SPI</span><span class="o">.</span><span class="n">MSB</span><span class="p">)</span> <span class="c1"># set configuration</span>
+
+<span class="c1"># equivalently, construct spi bus and set configuration at the same time</span>
+<span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="s2">&quot;SPI_0&quot;</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">polarity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">bits</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">firstbit</span><span class="o">=</span><span class="n">SPI</span><span class="o">.</span><span class="n">MSB</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">spi</span><span class="p">)</span>                  <span class="c1"># print device name and bus configuration</span>
+
+<span class="n">spi</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>                 <span class="c1"># read 4 bytes on MISO</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="mh">0xF</span><span class="p">)</span>      <span class="c1"># read 4 bytes while writing 0xF on MOSI</span>
+
+<span class="n">buf</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>          <span class="c1"># create a buffer of size 8</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>           <span class="c1"># read into the buffer (reads number of bytes equal to the buffer size)</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="mh">0xF</span><span class="p">)</span>      <span class="c1"># read into the buffer while writing 0xF on MOSI</span>
+
+<span class="n">spi</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;abcd&#39;</span><span class="p">)</span>          <span class="c1"># write 4 bytes on MOSI</span>
+
+<span class="n">buf</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>                  <span class="c1"># create buffer of size 8</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">write_readinto</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span> <span class="n">buf</span><span class="p">)</span>    <span class="c1"># write to MOSI and read from MISO into the buffer</span>
+<span class="n">spi</span><span class="o">.</span><span class="n">write_readinto</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">buf</span><span class="p">)</span>        <span class="c1"># write buf to MOSI and read back into the buf</span>
+</pre></div>
+</div>
+</section>
+<section id="disk-access">
+<h2>Disk Access<a class="headerlink" href="#disk-access" title="Link to this heading">¶</a></h2>
+<p>Use the <a class="reference internal" href="../library/zephyr.DiskAccess.html#zephyr-diskaccess"><span class="std std-ref">zephyr.DiskAccess</span></a> class to support filesystem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vfs</span>
+<span class="kn">from</span> <span class="nn">zephyr</span> <span class="kn">import</span> <span class="n">DiskAccess</span>
+
+<span class="n">block_dev</span> <span class="o">=</span> <span class="n">DiskAccess</span><span class="p">(</span><span class="s1">&#39;SDHC&#39;</span><span class="p">)</span>      <span class="c1"># create a block device object for an SD card</span>
+<span class="n">vfs</span><span class="o">.</span><span class="n">VfsFat</span><span class="o">.</span><span class="n">mkfs</span><span class="p">(</span><span class="n">block_dev</span><span class="p">)</span>          <span class="c1"># create FAT filesystem object using the disk storage block</span>
+<span class="n">vfs</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">block_dev</span><span class="p">,</span> <span class="s1">&#39;/sd&#39;</span><span class="p">)</span>         <span class="c1"># mount the filesystem at the SD card subdirectory</span>
+
+<span class="c1"># with the filesystem mounted, files can be manipulated as normal</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/sd/hello.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>     <span class="c1"># open a new file in the directory</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>                  <span class="c1"># write to the file</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/sd/hello.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>      <span class="c1"># print contents of the file</span>
+</pre></div>
+</div>
+</section>
+<section id="flash-area">
+<h2>Flash Area<a class="headerlink" href="#flash-area" title="Link to this heading">¶</a></h2>
+<p>Use the <a class="reference internal" href="../library/zephyr.FlashArea.html#zephyr-flasharea"><span class="std std-ref">zephyr.FlashArea</span></a> class to support filesystem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vfs</span>
+<span class="kn">from</span> <span class="nn">zephyr</span> <span class="kn">import</span> <span class="n">FlashArea</span>
+
+<span class="n">block_dev</span> <span class="o">=</span> <span class="n">FlashArea</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4096</span><span class="p">)</span>      <span class="c1"># creates a block device object in the frdm-k64f flash scratch partition</span>
+<span class="n">vfs</span><span class="o">.</span><span class="n">VfsLfs2</span><span class="o">.</span><span class="n">mkfs</span><span class="p">(</span><span class="n">block_dev</span><span class="p">)</span>         <span class="c1"># create filesystem in lfs2 format using the flash block device</span>
+<span class="n">vfs</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">block_dev</span><span class="p">,</span> <span class="s1">&#39;/flash&#39;</span><span class="p">)</span>      <span class="c1"># mount the filesystem at the flash subdirectory</span>
+
+<span class="c1"># with the filesystem mounted, files can be manipulated as normal</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/flash/hello.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>     <span class="c1"># open a new file in the directory</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>                  <span class="c1"># write to the file</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/flash/hello.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>      <span class="c1"># print contents of the file</span>
+</pre></div>
+</div>
+</section>
+<section id="sensor">
+<h2>Sensor<a class="headerlink" href="#sensor" title="Link to this heading">¶</a></h2>
+<p>Use the <a class="reference internal" href="../library/zephyr.zsensor.html#zsensor-sensor"><span class="std std-ref">zsensor.Sensor</span></a> class to access sensor data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zsensor</span>
+<span class="kn">from</span> <span class="nn">zsensor</span> <span class="kn">import</span> <span class="n">Sensor</span>
+
+<span class="n">accel</span> <span class="o">=</span> <span class="n">Sensor</span><span class="p">(</span><span class="s2">&quot;FXOX8700&quot;</span><span class="p">)</span>    <span class="c1"># create sensor object for the accelerometer</span>
+
+<span class="n">accel</span><span class="o">.</span><span class="n">measure</span><span class="p">()</span>               <span class="c1"># obtain a measurement reading from the accelerometer</span>
+
+<span class="c1"># each of these prints the value taken by measure()</span>
+<span class="n">accel</span><span class="o">.</span><span class="n">get_float</span><span class="p">(</span><span class="n">zsensor</span><span class="o">.</span><span class="n">ACCEL_X</span><span class="p">)</span>  <span class="c1"># print measurement value for accelerometer X-axis sensor channel as float</span>
+<span class="n">accel</span><span class="o">.</span><span class="n">get_millis</span><span class="p">(</span><span class="n">zsensor</span><span class="o">.</span><span class="n">ACCEL_Y</span><span class="p">)</span> <span class="c1"># print measurement value for accelerometer Y-axis sensor channel in millionths</span>
+<span class="n">accel</span><span class="o">.</span><span class="n">get_micro</span><span class="p">(</span><span class="n">zsensor</span><span class="o">.</span><span class="n">ACCEL_Z</span><span class="p">)</span>  <span class="c1"># print measurement value for accelerometer Z-axis sensor channel in thousandths</span>
+<span class="n">accel</span><span class="o">.</span><span class="n">get_int</span><span class="p">(</span><span class="n">zsensor</span><span class="o">.</span><span class="n">ACCEL_X</span><span class="p">)</span>    <span class="c1"># print measurement integer value only for accelerometer X-axis sensor channel</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Quick reference for the Zephyr port</a><ul>
+<li><a class="reference internal" href="#running-micropython">Running MicroPython</a></li>
+<li><a class="reference internal" href="#delay-and-timing">Delay and timing</a></li>
+<li><a class="reference internal" href="#pins-and-gpio">Pins and GPIO</a></li>
+<li><a class="reference internal" href="#hardware-i2c-bus">Hardware I2C bus</a></li>
+<li><a class="reference internal" href="#hardware-spi-bus">Hardware SPI bus</a></li>
+<li><a class="reference internal" href="#disk-access">Disk Access</a></li>
+<li><a class="reference internal" href="#flash-area">Flash Area</a></li>
+<li><a class="reference internal" href="#sensor">Sensor</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../unix/quickref.html"
+                          title="previous chapter">Quick reference for the UNIX and Windows ports</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="general.html"
+                          title="next chapter">General information about the Zephyr port</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/zephyr/quickref.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="general.html" title="General information about the Zephyr port"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../unix/quickref.html" title="Quick reference for the UNIX and Windows ports"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Quick reference for the Zephyr port</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

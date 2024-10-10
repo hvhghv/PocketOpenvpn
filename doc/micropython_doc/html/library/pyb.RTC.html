@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class RTC – real time clock &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class Servo – 3-wire hobby servo driver" href="pyb.Servo.html" />
+    <link rel="prev" title="class Pin – control I/O pins" href="pyb.Pin.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyb.Servo.html" title="class Servo – 3-wire hobby servo driver"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pyb.Pin.html" title="class Pin – control I/O pins"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="pyb.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class RTC – real time clock</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-rtc-real-time-clock">
+<span id="pyb-rtc"></span><h1>class RTC – real time clock<a class="headerlink" href="#class-rtc-real-time-clock" title="Link to this heading">¶</a></h1>
+<p>The RTC is an independent clock that keeps track of the date
+and time.</p>
+<p>Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rtc</span> <span class="o">=</span> <span class="n">pyb</span><span class="o">.</span><span class="n">RTC</span><span class="p">()</span>
+<span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">((</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">())</span>
+</pre></div>
+</div>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyb.RTC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyb.</span></span><span class="sig-name descname"><span class="pre">RTC</span></span><a class="headerlink" href="#pyb.RTC" title="Link to this definition">¶</a></dt>
+<dd><p>Create an RTC object.</p>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.RTC.datetime">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">datetime</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">datetimetuple</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.RTC.datetime" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set the date and time of the RTC.</p>
+<p>With no arguments, this method returns an 8-tuple with the current
+date and time.  With 1 argument (being an 8-tuple) it sets the date
+and time (and <code class="docutils literal notranslate"><span class="pre">subseconds</span></code> is reset to 255).</p>
+<p>The 8-tuple has the following format:</p>
+<blockquote>
+<div><p>(year, month, day, weekday, hours, minutes, seconds, subseconds)</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">weekday</span></code> is 1-7 for Monday through Sunday.</p>
+<p><code class="docutils literal notranslate"><span class="pre">subseconds</span></code> counts down from 255 to 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.RTC.wakeup">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">wakeup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyb.RTC.wakeup" title="Link to this definition">¶</a></dt>
+<dd><p>Set the RTC wakeup timer to trigger repeatedly at every <code class="docutils literal notranslate"><span class="pre">timeout</span></code>
+milliseconds.  This trigger can wake the pyboard from both the sleep
+states: <a class="reference internal" href="pyb.html#pyb.stop" title="pyb.stop"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pyb.stop()</span></code></a> and <a class="reference internal" href="pyb.html#pyb.standby" title="pyb.standby"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pyb.standby()</span></code></a>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code> then the wakeup timer is disabled.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">callback</span></code> is given then it is executed at every trigger of the
+wakeup timer.  <code class="docutils literal notranslate"><span class="pre">callback</span></code> must take exactly one argument.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.RTC.info">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyb.RTC.info" title="Link to this definition">¶</a></dt>
+<dd><p>Get information about the startup time and reset source.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The lower 0xffff are the number of milliseconds the RTC took to
+start up.</p></li>
+<li><p>Bit 0x10000 is set if a power-on reset occurred.</p></li>
+<li><p>Bit 0x20000 is set if an external reset occurred</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyb.RTC.calibration">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyb.RTC.calibration" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set RTC calibration.</p>
+<p>With no arguments, <code class="docutils literal notranslate"><span class="pre">calibration()</span></code> returns the current calibration
+value, which is an integer in the range [-511 : 512].  With one
+argument it sets the RTC calibration.</p>
+<p>The RTC Smooth Calibration mechanism adjusts the RTC clock rate by
+adding or subtracting the given number of ticks from the 32768 Hz
+clock over a 32 second period (corresponding to 2^20 clock ticks.)
+Each tick added will speed up the clock by 1 part in 2^20, or 0.954
+ppm; likewise the RTC clock it slowed by negative values. The
+usable calibration range is:
+(-511 * 0.954) ~= -487.5 ppm up to (512 * 0.954) ~= 488.5 ppm</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class RTC – real time clock</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#pyb.RTC"><code class="docutils literal notranslate"><span class="pre">RTC</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#pyb.RTC.datetime"><code class="docutils literal notranslate"><span class="pre">RTC.datetime()</span></code></a></li>
+<li><a class="reference internal" href="#pyb.RTC.wakeup"><code class="docutils literal notranslate"><span class="pre">RTC.wakeup()</span></code></a></li>
+<li><a class="reference internal" href="#pyb.RTC.info"><code class="docutils literal notranslate"><span class="pre">RTC.info()</span></code></a></li>
+<li><a class="reference internal" href="#pyb.RTC.calibration"><code class="docutils literal notranslate"><span class="pre">RTC.calibration()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="pyb.Pin.html"
+                          title="previous chapter">class Pin – control I/O pins</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pyb.Servo.html"
+                          title="next chapter">class Servo – 3-wire hobby servo driver</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/pyb.RTC.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pyb.Servo.html" title="class Servo – 3-wire hobby servo driver"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pyb.Pin.html" title="class Pin – control I/O pins"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="pyb.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyb</span></code> — functions related to the board</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class RTC – real time clock</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

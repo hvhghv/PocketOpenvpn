@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. Register move instructions &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Load register from memory" href="asm_thumb2_ldr.html" />
+    <link rel="prev" title="Inline assembler for Thumb2 architectures" href="asm_thumb2_index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="asm_thumb2_ldr.html" title="2. Load register from memory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="asm_thumb2_index.html" title="Inline assembler for Thumb2 architectures"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython language and implementation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="asm_thumb2_index.html" accesskey="U">Inline assembler for Thumb2 architectures</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Register move instructions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="register-move-instructions">
+<h1><span class="section-number">1. </span>Register move instructions<a class="headerlink" href="#register-move-instructions" title="Link to this heading">¶</a></h1>
+<section id="document-conventions">
+<h2><span class="section-number">1.1. </span>Document conventions<a class="headerlink" href="#document-conventions" title="Link to this heading">¶</a></h2>
+<p>Notation: <code class="docutils literal notranslate"><span class="pre">Rd,</span> <span class="pre">Rn</span></code> denote ARM registers R0-R15. <code class="docutils literal notranslate"><span class="pre">immN</span></code> denotes an immediate
+value having a width of N bits. These instructions affect the condition flags.</p>
+</section>
+<section id="register-moves">
+<h2><span class="section-number">1.2. </span>Register moves<a class="headerlink" href="#register-moves" title="Link to this heading">¶</a></h2>
+<p>Where immediate values are used, these are zero-extended to 32 bits. Thus
+<code class="docutils literal notranslate"><span class="pre">mov(R0,</span> <span class="pre">0xff)</span></code> will set R0 to 255.</p>
+<ul class="simple">
+<li><p>mov(Rd, imm8) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">imm8</span></code></p></li>
+<li><p>mov(Rd, Rn) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">Rn</span></code></p></li>
+<li><p>movw(Rd, imm16) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">imm16</span></code></p></li>
+<li><p>movt(Rd, imm16) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">(Rd</span> <span class="pre">&amp;</span> <span class="pre">0xffff)</span> <span class="pre">|</span> <span class="pre">(imm16</span> <span class="pre">&lt;&lt;</span> <span class="pre">16)</span></code></p></li>
+</ul>
+<p>movt writes an immediate value to the top halfword of the destination register.
+It does not affect the contents of the bottom halfword.</p>
+<ul class="simple">
+<li><p>movwt(Rd, imm32) <code class="docutils literal notranslate"><span class="pre">Rd</span> <span class="pre">=</span> <span class="pre">imm32</span></code></p></li>
+</ul>
+<p>movwt is a pseudo-instruction: the MicroPython assembler emits a <code class="docutils literal notranslate"><span class="pre">movw</span></code> followed
+by a <code class="docutils literal notranslate"><span class="pre">movt</span></code> to move a 32-bit value into Rd.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">1. Register move instructions</a><ul>
+<li><a class="reference internal" href="#document-conventions">1.1. Document conventions</a></li>
+<li><a class="reference internal" href="#register-moves">1.2. Register moves</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="asm_thumb2_index.html"
+                          title="previous chapter">Inline assembler for Thumb2 architectures</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="asm_thumb2_ldr.html"
+                          title="next chapter"><span class="section-number">2. </span>Load register from memory</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/asm_thumb2_mov.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="asm_thumb2_ldr.html" title="2. Load register from memory"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="asm_thumb2_index.html" title="Inline assembler for Thumb2 architectures"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython language and implementation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="asm_thumb2_index.html" >Inline assembler for Thumb2 architectures</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Register move instructions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

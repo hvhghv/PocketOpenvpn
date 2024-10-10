@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class DMA – access to the RP2040’s DMA controller &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class Flash – access to built-in flash storage" href="rp2.Flash.html" />
+    <link rel="prev" title="rp2 — functionality specific to the RP2040" href="rp2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="rp2.Flash.html" title="class Flash – access to built-in flash storage"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="rp2.html" title="rp2 — functionality specific to the RP2040"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="rp2.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rp2</span></code> — functionality specific to the RP2040</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class DMA – access to the RP2040’s DMA controller</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-dma-access-to-the-rp2040-s-dma-controller">
+<span id="rp2-dma"></span><h1>class DMA – access to the RP2040’s DMA controller<a class="headerlink" href="#class-dma-access-to-the-rp2040-s-dma-controller" title="Link to this heading">¶</a></h1>
+<p>The <a class="reference internal" href="#rp2.DMA" title="rp2.DMA"><code class="xref py py-class docutils literal notranslate"><span class="pre">DMA</span></code></a> class offers access to the RP2040’s Direct Memory Access (DMA)
+controller, providing the ability move data between memory blocks and/or IO registers. The DMA
+controller has its own, separate read and write bus master connections onto the bus fabric and
+each DMA channel can independently read data from one address and write it back to another
+address, optionally incrementing one or both pointers, allowing it to perform transfers on behalf
+of the processor while the processor carries out other tasks or enters a low power state. The
+RP2040’s DMA controller has 12 independent DMA channels that can run concurrently. For full
+details of the RP2040’s DMA system see section 2.5 of the <a class="reference external" href="https://datasheets.raspberrypi.org/rp2040/rp2040-datasheet.pdf">RP2040 Datasheet</a>.</p>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<p>The simplest use of the DMA controller is to move data from one block of memory to another.
+This can be accomplished with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">32</span><span class="o">*</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">32</span><span class="o">*</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">rp2</span><span class="o">.</span><span class="n">DMA</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">pack_ctrl</span><span class="p">()</span>  <span class="c1"># Just use the default control value.</span>
+<span class="c1"># The count is in &#39;transfers&#39;, which defaults to four-byte words, so divide length by 4</span>
+<span class="n">d</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">read</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">//</span><span class="mi">4</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">trigger</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Wait for completion</span>
+<span class="k">while</span> <span class="n">d</span><span class="o">.</span><span class="n">active</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Note that while this example sits in an idle loop while it waits for the transfer to complete,
+the program could just as well do some useful work in this time instead.</p>
+<p>Another, perhaps more common use of the DMA controller is to transfer between memory and an IO
+peripheral. In this situation the address of the IO register does not change for each transfer but
+the memory address needs to be incremented. It is also necessary to control the pace of the
+transfer so as to not write data before it can be accepted by a peripheral or read it before the
+data is ready, and this can be controlled with the <code class="docutils literal notranslate"><span class="pre">treq_sel</span></code> field of the DMA channel’s control
+register. The various fields of the control register for each DMA channel can be packed
+using the <a class="reference internal" href="#rp2.DMA.pack_ctrl" title="rp2.DMA.pack_ctrl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DMA.pack_ctrl()</span></code></a> method and unpacked using the <a class="reference internal" href="#rp2.DMA.unpack_ctrl" title="rp2.DMA.unpack_ctrl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DMA.unpack_ctrl()</span></code></a>
+static method. Code to transfer data from a byte array to the TX FIFO of a PIO state machine,
+one byte at a time, looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># pio_num is index of the PIO block being used, sm_num is the state machine in that block.</span>
+<span class="c1"># my_state_machine is an rp2.PIO() instance.</span>
+<span class="n">DATA_REQUEST_INDEX</span> <span class="o">=</span> <span class="p">(</span><span class="n">pio_num</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">sm_num</span>
+
+<span class="n">src_data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">rp2</span><span class="o">.</span><span class="n">DMA</span><span class="p">()</span>
+
+<span class="c1"># Transfer bytes, rather than words, don&#39;t increment the write address and pace the transfer.</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">pack_ctrl</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inc_write</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">treq_sel</span><span class="o">=</span><span class="n">DATA_REQUEST_INDEX</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+    <span class="n">read</span><span class="o">=</span><span class="n">src_data</span><span class="p">,</span>
+    <span class="n">write</span><span class="o">=</span><span class="n">my_state_machine</span><span class="p">,</span>
+    <span class="n">count</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">src_data</span><span class="p">),</span>
+    <span class="n">ctrl</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+    <span class="n">trigger</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that in this example the value given for the write address is just the PIO state machine to
+which we are sending the data. This works because PIO state machines present the buffer protocol,
+allowing direct access to their data FIFO registers.</p>
+</section>
+<section id="constructor">
+<h2>Constructor<a class="headerlink" href="#constructor" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="rp2.DMA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rp2.</span></span><span class="sig-name descname"><span class="pre">DMA</span></span><a class="headerlink" href="#rp2.DMA" title="Link to this definition">¶</a></dt>
+<dd><p>Claim one of the DMA controller channels for exclusive use.</p>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="rp2.DMA.config">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">read</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctrl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rp2.DMA.config" title="Link to this definition">¶</a></dt>
+<dd><p>Configure the DMA registers for the channel and optionally start the transfer.
+Parameters are:</p>
+<ul class="simple">
+<li><p><em>read</em>: The address from which the DMA controller will start reading data or
+an object that will provide data to be read. It can be an integer or any
+object that supports the buffer protocol.</p></li>
+<li><p><em>write</em>: The address to which the DMA controller will start writing or an
+object into which data will be written. It can be an integer or any object
+that supports the buffer protocol.</p></li>
+<li><p><em>count</em>: The number of bus transfers that will execute before this channel
+stops. Note that this is the number of transfers, not the number of bytes.
+If the transfers are 2 or 4 bytes wide then the total amount of data moved
+(and thus the size of required buffer) needs to be multiplied accordingly.</p></li>
+<li><p><em>ctrl</em>: The value for the DMA control register. This is an integer value
+that is typically packed using the <a class="reference internal" href="#rp2.DMA.pack_ctrl" title="rp2.DMA.pack_ctrl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DMA.pack_ctrl()</span></code></a>.</p></li>
+<li><p><em>trigger</em>: Optionally commence the transfer immediately.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rp2.DMA.irq">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">irq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hard</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rp2.DMA.irq" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the IRQ object for this DMA channel and optionally configures it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rp2.DMA.close">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rp2.DMA.close" title="Link to this definition">¶</a></dt>
+<dd><p>Release the claim on the underlying DMA channel and free the interrupt
+handler. The <a class="reference internal" href="#rp2.DMA" title="rp2.DMA"><code class="xref py py-class docutils literal notranslate"><span class="pre">DMA</span></code></a> object can not be used after this operation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rp2.DMA.pack_ctrl">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">pack_ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rp2.DMA.pack_ctrl" title="Link to this definition">¶</a></dt>
+<dd><p>Pack the values provided in the keyword arguments into the named fields of a new control
+register value. Any field that is not provided will be set to a default value. The
+default will either be taken from the provided <code class="docutils literal notranslate"><span class="pre">default</span></code> value, or if that is not
+given, a default suitable for the current channel; setting this to the current value
+of the <a class="reference internal" href="#rp2.DMA.ctrl" title="rp2.DMA.ctrl"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">DMA.ctrl</span></code></a> attribute provides an easy way to override a subset of the fields.</p>
+<p>The keys for the keyword arguments can be any key returned by the <a class="reference internal" href="#rp2.DMA.unpack_ctrl" title="rp2.DMA.unpack_ctrl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DMA.unpack_ctrl()</span></code></a>
+method. The writable values are:</p>
+<ul class="simple">
+<li><p><em>enable</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Set to enable the channel (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
+<li><p><em>high_pri</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Make this channel’s bus traffic high priority (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p></li>
+<li><p><em>size</em>: <code class="docutils literal notranslate"><span class="pre">int</span></code> Transfer size: 0=byte, 1=half word, 2=word (default: 2).</p></li>
+<li><p><em>inc_read</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Increment the read address after each transfer (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
+<li><p><em>inc_write</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Increment the write address after each transfer (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
+<li><p><em>ring_size</em>: <code class="docutils literal notranslate"><span class="pre">int</span></code> If non-zero, only the bottom <code class="docutils literal notranslate"><span class="pre">ring_size</span></code> bits of one
+address register will change when an address is incremented, causing the
+address to wrap at the next <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">&lt;&lt;</span> <span class="pre">ring_size</span></code> byte boundary. Which
+address is wrapped is controlled by the <code class="docutils literal notranslate"><span class="pre">ring_sel</span></code> flag. A zero value
+disables address wrapping.</p></li>
+<li><p><em>ring_sel</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Set to <code class="docutils literal notranslate"><span class="pre">False</span></code> to have the <code class="docutils literal notranslate"><span class="pre">ring_size</span></code> apply to the read address
+or <code class="docutils literal notranslate"><span class="pre">True</span></code> to apply to the write address.</p></li>
+<li><p><em>chain_to</em>: <code class="docutils literal notranslate"><span class="pre">int</span></code> The channel number for a channel to trigger after this transfer
+completes. Setting this value to this DMA object’s own channel number
+disables chaining (this is the default).</p></li>
+<li><p><em>treq_sel</em>: <code class="docutils literal notranslate"><span class="pre">int</span></code> Select a Transfer Request signal. See section 2.5.3 in the RP2040
+datasheet for details.</p></li>
+<li><p><em>irq_quiet</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Do not generate interrupt at the end of each transfer. Interrupts
+will instead be generated when a zero value is written to the trigger
+register, which will halt a sequence of chained transfers (default:
+<code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
+<li><p><em>bswap</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> If set to true, bytes in words or half-words will be reversed before
+writing (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
+<li><p><em>sniff_en</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to allow data to be accessed by the chips sniff
+hardware (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p></li>
+<li><p><em>write_err</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Setting this to <code class="docutils literal notranslate"><span class="pre">True</span></code> will clear a previously reported write
+error.</p></li>
+<li><p><em>read_err</em>: <code class="docutils literal notranslate"><span class="pre">bool</span></code> Setting this to <code class="docutils literal notranslate"><span class="pre">True</span></code> will clear a previously reported read
+error.</p></li>
+</ul>
+<p>See the description of the <code class="docutils literal notranslate"><span class="pre">CH0_CTRL_TRIG</span></code> register in section 2.5.7 of the RP2040
+datasheet for details of all of these fields.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rp2.DMA.unpack_ctrl">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">unpack_ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rp2.DMA.unpack_ctrl" title="Link to this definition">¶</a></dt>
+<dd><p>Unpack a value for a DMA channel control register into a dictionary with key/value pairs
+for each of the fields in the control register.  <em>value</em> is the <code class="docutils literal notranslate"><span class="pre">ctrl</span></code> register value
+to unpack.</p>
+<p>This method will return values for all the keys that can be passed to <code class="docutils literal notranslate"><span class="pre">DMA.pack_ctrl</span></code>.
+In addition, it will also return the read-only flags in the control register: <code class="docutils literal notranslate"><span class="pre">busy</span></code>,
+which goes high when a transfer starts and low when it ends, and <code class="docutils literal notranslate"><span class="pre">ahb_err</span></code>, which is
+the logical OR of the <code class="docutils literal notranslate"><span class="pre">read_err</span></code> and <code class="docutils literal notranslate"><span class="pre">write_err</span></code> flags. These values will be ignored
+when packing, so that the dictionary created by unpacking a control register can be used
+directly as the keyword arguments for packing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rp2.DMA.active">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">active</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#rp2.DMA.active" title="Link to this definition">¶</a></dt>
+<dd><p>Gets or sets whether the DMA channel is currently running.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sm</span><span class="o">.</span><span class="n">active</span><span class="p">()</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sm</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="n">sm</span><span class="o">.</span><span class="n">active</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">pass</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h2>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rp2.DMA.read">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">read</span></span><a class="headerlink" href="#rp2.DMA.read" title="Link to this definition">¶</a></dt>
+<dd><p>This attribute reflects the address from which the next bus transfer
+will read. It may be written with either an integer or an object
+that supports the buffer protocol and doing so has immediate effect.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rp2.DMA.write">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">write</span></span><a class="headerlink" href="#rp2.DMA.write" title="Link to this definition">¶</a></dt>
+<dd><p>This attribute reflects the address to which the next bus transfer
+will write.  It may be written with either an integer or an object
+that supports the buffer protocol and doing so has immediate effect.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rp2.DMA.count">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">count</span></span><a class="headerlink" href="#rp2.DMA.count" title="Link to this definition">¶</a></dt>
+<dd><p>Reading this attribute will return the number of remaining bus
+transfers in the <em>current</em> transfer sequence. Writing this attribute
+sets the total number of transfers to be the <em>next</em> transfer sequence.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rp2.DMA.ctrl">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">ctrl</span></span><a class="headerlink" href="#rp2.DMA.ctrl" title="Link to this definition">¶</a></dt>
+<dd><p>This attribute reflects DMA channel control register. It is typically written
+with an integer packed using the <a class="reference internal" href="#rp2.DMA.pack_ctrl" title="rp2.DMA.pack_ctrl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DMA.pack_ctrl()</span></code></a> method. The returned
+register value can be unpacked using the <a class="reference internal" href="#rp2.DMA.unpack_ctrl" title="rp2.DMA.unpack_ctrl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">DMA.unpack_ctrl()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rp2.DMA.channel">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#rp2.DMA.channel" title="Link to this definition">¶</a></dt>
+<dd><p>The channel number of the DMA channel. This can be passed in the <code class="docutils literal notranslate"><span class="pre">chain_to</span></code>
+argument of <a class="reference internal" href="#rp2.DMA.pack_ctrl" title="rp2.DMA.pack_ctrl"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">DMA.pack_ctrl()</span></code></a> on another channel to allow DMA chaining.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rp2.DMA.registers">
+<span class="sig-prename descclassname"><span class="pre">DMA.</span></span><span class="sig-name descname"><span class="pre">registers</span></span><a class="headerlink" href="#rp2.DMA.registers" title="Link to this definition">¶</a></dt>
+<dd><p>This attribute is an array-like object that allows direct access to
+the DMA channel’s registers. The index is by word, rather than by byte,
+so the register indices are the register address offsets divided by 4.
+See the RP2040 data sheet for register details.</p>
+</dd></dl>
+
+</section>
+<section id="chaining-and-trigger-register-access">
+<h2>Chaining and trigger register access<a class="headerlink" href="#chaining-and-trigger-register-access" title="Link to this heading">¶</a></h2>
+<p>The DMA controller in the RP2040 offers a couple advanced features to allow one DMA channel
+to initiate a transfer on another channel. One is the use of the <code class="docutils literal notranslate"><span class="pre">chain_to</span></code> value in the
+control register and the other is writing to one of the DMA channel’s registers that has a
+trigger effect. When coupled with the ability to have one DMA channel write directly to the
+<a class="reference internal" href="#rp2.DMA.registers" title="rp2.DMA.registers"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">DMA.registers</span></code></a> of another channel, this allows for complex transactions to be performed
+without any CPU intervention.</p>
+<p>Below is an example of using both chaining and register
+triggering to implement gathering of multiple blocks of data into a single destination. Full
+details of these features can be found in section 2.5 of the RP2040 data sheet and the code
+below is a Pythonic version of the example in sub-section 2.5.6.2.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rp2</span> <span class="kn">import</span> <span class="n">DMA</span>
+<span class="kn">from</span> <span class="nn">uctypes</span> <span class="kn">import</span> <span class="n">addressof</span>
+<span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
+
+<span class="k">def</span> <span class="nf">gather_strings</span><span class="p">(</span><span class="n">string_list</span><span class="p">,</span> <span class="n">buf</span><span class="p">):</span>
+    <span class="c1"># We use two DMA channels. The first sends lengths and source addresses from the gather</span>
+    <span class="c1"># list to the registers of the second. The second copies the data itself.</span>
+    <span class="n">gather_dma</span> <span class="o">=</span> <span class="n">DMA</span><span class="p">()</span>
+    <span class="n">buffer_dma</span> <span class="o">=</span> <span class="n">DMA</span><span class="p">()</span>
+
+    <span class="c1"># Pack up length/address pairs to be sent to the registers.</span>
+    <span class="n">gather_list</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s2">&quot;I&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">string_list</span><span class="p">:</span>
+        <span class="n">gather_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+        <span class="n">gather_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">addressof</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+
+    <span class="n">gather_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">gather_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># When writing to the registers of the second DMA channel, we need to wrap the</span>
+    <span class="c1"># write address on an 8-byte (1&lt;&lt;3 bytes) boundary. We write to the ``TRANS_COUNT``</span>
+    <span class="c1"># and ``READ_ADD_TRIG`` registers in the last register alias (registers 14 and 15).</span>
+    <span class="n">gather_ctrl</span> <span class="o">=</span> <span class="n">gather_dma</span><span class="o">.</span><span class="n">pack_ctrl</span><span class="p">(</span><span class="n">ring_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ring_sel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">gather_dma</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+        <span class="n">read</span><span class="o">=</span><span class="n">gather_list</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="n">buffer_dma</span><span class="o">.</span><span class="n">registers</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span>
+        <span class="n">count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="n">gather_ctrl</span>
+    <span class="p">)</span>
+
+    <span class="c1"># When copying the data, the transfer size is single bytes, and when completed we need</span>
+    <span class="c1"># to chain back to the start another gather DMA transaction.</span>
+    <span class="n">buffer_ctrl</span> <span class="o">=</span> <span class="n">buffer_dma</span><span class="o">.</span><span class="n">pack_ctrl</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">chain_to</span><span class="o">=</span><span class="n">gather_dma</span><span class="o">.</span><span class="n">channel</span><span class="p">)</span>
+    <span class="c1"># The read and count values will be set by the other DMA channel.</span>
+    <span class="n">buffer_dma</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">write</span><span class="o">=</span><span class="n">buf</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="n">buffer_ctrl</span><span class="p">)</span>
+
+    <span class="c1"># Set the transfer in motion.</span>
+    <span class="n">gather_dma</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Wait until all the register values have been sent</span>
+    <span class="n">end_address</span> <span class="o">=</span> <span class="n">addressof</span><span class="p">(</span><span class="n">gather_list</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">gather_list</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">gather_dma</span><span class="o">.</span><span class="n">read</span> <span class="o">!=</span> <span class="n">end_address</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+<span class="nb">input</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;This is &quot;</span><span class="p">,</span> <span class="s2">&quot;a &quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot; of the scatter&quot;</span><span class="p">,</span> <span class="s2">&quot; gather&quot;</span><span class="p">,</span> <span class="s2">&quot; process&quot;</span><span class="p">]</span>
+<span class="n">output</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="n">gather_strings</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This example idles while waiting for the transfer to complete; alternatively it could
+set an interrupt handler and return immediately.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class DMA – access to the RP2040’s DMA controller</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#constructor">Constructor</a><ul>
+<li><a class="reference internal" href="#rp2.DMA"><code class="docutils literal notranslate"><span class="pre">DMA</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#rp2.DMA.config"><code class="docutils literal notranslate"><span class="pre">DMA.config()</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.irq"><code class="docutils literal notranslate"><span class="pre">DMA.irq()</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.close"><code class="docutils literal notranslate"><span class="pre">DMA.close()</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.pack_ctrl"><code class="docutils literal notranslate"><span class="pre">DMA.pack_ctrl()</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.unpack_ctrl"><code class="docutils literal notranslate"><span class="pre">DMA.unpack_ctrl()</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.active"><code class="docutils literal notranslate"><span class="pre">DMA.active()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li><a class="reference internal" href="#rp2.DMA.read"><code class="docutils literal notranslate"><span class="pre">DMA.read</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.write"><code class="docutils literal notranslate"><span class="pre">DMA.write</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.count"><code class="docutils literal notranslate"><span class="pre">DMA.count</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.ctrl"><code class="docutils literal notranslate"><span class="pre">DMA.ctrl</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.channel"><code class="docutils literal notranslate"><span class="pre">DMA.channel</span></code></a></li>
+<li><a class="reference internal" href="#rp2.DMA.registers"><code class="docutils literal notranslate"><span class="pre">DMA.registers</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#chaining-and-trigger-register-access">Chaining and trigger register access</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="rp2.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rp2</span></code> — functionality specific to the RP2040</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="rp2.Flash.html"
+                          title="next chapter">class Flash – access to built-in flash storage</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/rp2.DMA.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="rp2.Flash.html" title="class Flash – access to built-in flash storage"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="rp2.html" title="rp2 — functionality specific to the RP2040"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="rp2.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">rp2</span></code> — functionality specific to the RP2040</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class DMA – access to the RP2040’s DMA controller</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

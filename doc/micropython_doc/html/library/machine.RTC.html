@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class RTC – real time clock &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class Timer – control hardware timers" href="machine.Timer.html" />
+    <link rel="prev" title="class I2S – Inter-IC Sound bus protocol" href="machine.I2S.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="machine.Timer.html" title="class Timer – control hardware timers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="machine.I2S.html" title="class I2S – Inter-IC Sound bus protocol"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="machine.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class RTC – real time clock</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-rtc-real-time-clock">
+<span id="machine-rtc"></span><h1>class RTC – real time clock<a class="headerlink" href="#class-rtc-real-time-clock" title="Link to this heading">¶</a></h1>
+<p>The RTC is an independent clock that keeps track of the date
+and time.</p>
+<p>Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rtc</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">RTC</span><span class="p">()</span>
+<span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">((</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rtc</span><span class="o">.</span><span class="n">datetime</span><span class="p">())</span>
+</pre></div>
+</div>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="machine.RTC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">machine.</span></span><span class="sig-name descname"><span class="pre">RTC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC" title="Link to this definition">¶</a></dt>
+<dd><p>Create an RTC object. See init for parameters of initialization.</p>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.datetime">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">datetime</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">datetimetuple</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.datetime" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set the date and time of the RTC.</p>
+<p>With no arguments, this method returns an 8-tuple with the current
+date and time.  With 1 argument (being an 8-tuple) it sets the date
+and time.</p>
+<p>The 8-tuple has the following format:</p>
+<blockquote>
+<div><p>(year, month, day, weekday, hours, minutes, seconds, subseconds)</p>
+</div></blockquote>
+<p>The meaning of the <code class="docutils literal notranslate"><span class="pre">subseconds</span></code> field is hardware dependent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.init">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.init" title="Link to this definition">¶</a></dt>
+<dd><p>Initialise the RTC. Datetime is a tuple of the form:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(year,</span> <span class="pre">month,</span> <span class="pre">day[,</span> <span class="pre">hour[,</span> <span class="pre">minute[,</span> <span class="pre">second[,</span> <span class="pre">microsecond[,</span> <span class="pre">tzinfo]]]]])</span></code></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.now">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">now</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.now" title="Link to this definition">¶</a></dt>
+<dd><p>Get get the current datetime tuple.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.deinit">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">deinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.deinit" title="Link to this definition">¶</a></dt>
+<dd><p>Resets the RTC to the time of January 1, 2015 and starts running it again.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.alarm">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">alarm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.alarm" title="Link to this definition">¶</a></dt>
+<dd><p>Set the RTC alarm. Time might be either a millisecond value to program the alarm to
+current time + time_in_ms in the future, or a datetimetuple. If the time passed is in
+milliseconds, repeat can be set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to make the alarm periodic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.alarm_left">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">alarm_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alarm_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.alarm_left" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of milliseconds left before the alarm expires.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.cancel">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alarm_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.cancel" title="Link to this definition">¶</a></dt>
+<dd><p>Cancel a running alarm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.irq">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">irq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wake</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">machine.IDLE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.irq" title="Link to this definition">¶</a></dt>
+<dd><p>Create an irq object triggered by a real time clock alarm.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">trigger</span></code> must be <code class="docutils literal notranslate"><span class="pre">RTC.ALARM0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">handler</span></code> is the function to be called when the callback is triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wake</span></code> specifies the sleep mode from where this interrupt can wake
+up the system.</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.RTC.memory">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">memory</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.RTC.memory" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">RTC.memory(data)</span></code> will write <em>data</em> to the RTC memory, where <em>data</em> is any
+object which supports the buffer protocol (including <a class="reference internal" href="builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>, <a class="reference internal" href="builtins.html#bytearray" title="bytearray"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a>,
+<a class="reference internal" href="builtins.html#memoryview" title="memoryview"><code class="xref any py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a> and <a class="reference internal" href="array.html#array.array" title="array.array"><code class="xref any py py-class docutils literal notranslate"><span class="pre">array.array</span></code></a>). <code class="docutils literal notranslate"><span class="pre">RTC.memory()</span></code> reads RTC memory and returns
+a <a class="reference internal" href="builtins.html#bytes" title="bytes"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> object.</p>
+<p>Data written to RTC user memory is persistent across restarts, including
+<a class="reference internal" href="machine.html#machine.soft_reset" title="machine.soft_reset"><code class="xref any py py-func docutils literal notranslate"><span class="pre">machine.soft_reset()</span></code></a> and <a class="reference internal" href="machine.html#machine.deepsleep" title="machine.deepsleep"><code class="xref any py py-func docutils literal notranslate"><span class="pre">machine.deepsleep()</span></code></a>.</p>
+<p>The maximum length of RTC user memory is 2048 bytes by default on esp32,
+and 492 bytes on esp8266.</p>
+<p>Availability: esp32, esp8266 ports.</p>
+</dd></dl>
+
+</section>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="machine.RTC.ALARM0">
+<span class="sig-prename descclassname"><span class="pre">RTC.</span></span><span class="sig-name descname"><span class="pre">ALARM0</span></span><a class="headerlink" href="#machine.RTC.ALARM0" title="Link to this definition">¶</a></dt>
+<dd><p>irq trigger source</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class RTC – real time clock</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#machine.RTC"><code class="docutils literal notranslate"><span class="pre">RTC</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#machine.RTC.datetime"><code class="docutils literal notranslate"><span class="pre">RTC.datetime()</span></code></a></li>
+<li><a class="reference internal" href="#machine.RTC.init"><code class="docutils literal notranslate"><span class="pre">RTC.init()</span></code></a></li>
+<li><a class="reference internal" href="#machine.RTC.now"><code class="docutils literal notranslate"><span class="pre">RTC.now()</span></code></a></li>
+<li><a class="reference internal" href="#machine.RTC.deinit"><code class="docutils literal notranslate"><span class="pre">RTC.deinit()</span></code></a></li>
+<li><a class="reference internal" href="#machine.RTC.alarm"><code class="docutils literal notranslate"><span class="pre">RTC.alarm()</span></code></a></li>
+<li><a class="reference internal" href="#machine.RTC.alarm_left"><code class="docutils literal notranslate"><span class="pre">RTC.alarm_left()</span></code></a></li>
+<li><a class="reference internal" href="#machine.RTC.cancel"><code class="docutils literal notranslate"><span class="pre">RTC.cancel()</span></code></a></li>
+<li><a class="reference internal" href="#machine.RTC.irq"><code class="docutils literal notranslate"><span class="pre">RTC.irq()</span></code></a></li>
+<li><a class="reference internal" href="#machine.RTC.memory"><code class="docutils literal notranslate"><span class="pre">RTC.memory()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#constants">Constants</a><ul>
+<li><a class="reference internal" href="#machine.RTC.ALARM0"><code class="docutils literal notranslate"><span class="pre">RTC.ALARM0</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="machine.I2S.html"
+                          title="previous chapter">class I2S – Inter-IC Sound bus protocol</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="machine.Timer.html"
+                          title="next chapter">class Timer – control hardware timers</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/machine.RTC.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="machine.Timer.html" title="class Timer – control hardware timers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="machine.I2S.html" title="class I2S – Inter-IC Sound bus protocol"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="machine.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class RTC – real time clock</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

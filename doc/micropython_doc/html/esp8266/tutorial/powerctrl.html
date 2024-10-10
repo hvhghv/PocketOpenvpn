@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9. Power control &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10. Controlling 1-wire devices" href="onewire.html" />
+    <link rel="prev" title="8. Analog to Digital Conversion" href="adc.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="onewire.html" title="10. Controlling 1-wire devices"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="adc.html" title="8. Analog to Digital Conversion"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the ESP8266</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">MicroPython tutorial for ESP8266</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">9. </span>Power control</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="power-control">
+<h1><span class="section-number">9. </span>Power control<a class="headerlink" href="#power-control" title="Link to this heading">¶</a></h1>
+<p>The ESP8266 provides the ability to change the CPU frequency on the fly, and
+enter a deep-sleep state.  Both can be used to manage power consumption.</p>
+<section id="changing-the-cpu-frequency">
+<h2><span class="section-number">9.1. </span>Changing the CPU frequency<a class="headerlink" href="#changing-the-cpu-frequency" title="Link to this heading">¶</a></h2>
+<p>The machine module has a function to get and set the CPU frequency.  To get the
+current frequency use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">machine</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">machine</span><span class="o">.</span><span class="n">freq</span><span class="p">()</span>
+<span class="go">80000000</span>
+</pre></div>
+</div>
+<p>By default the CPU runs at 80MHz.  It can be changed to 160MHz if you need more
+processing power, at the expense of current consumption:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">machine</span><span class="o">.</span><span class="n">freq</span><span class="p">(</span><span class="mi">160000000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">machine</span><span class="o">.</span><span class="n">freq</span><span class="p">()</span>
+<span class="go">160000000</span>
+</pre></div>
+</div>
+<p>You can change to the higher frequency just while your code does the heavy
+processing and then change back when it’s finished.</p>
+</section>
+<section id="deep-sleep-mode">
+<h2><span class="section-number">9.2. </span>Deep-sleep mode<a class="headerlink" href="#deep-sleep-mode" title="Link to this heading">¶</a></h2>
+<p>The deep-sleep mode will shut down the ESP8266 and all its peripherals,
+including the WiFi (but not including the real-time-clock, which is used to wake
+the chip).  This drastically reduces current consumption and is a good way to
+make devices that can run for a while on a battery.</p>
+<p>To be able to use the deep-sleep feature you must connect GPIO16 to the reset
+pin (RST on the Adafruit Feather HUZZAH board).  Then the following code can be
+used to sleep and wake the device:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
+
+<span class="c1"># configure RTC.ALARM0 to be able to wake the device</span>
+<span class="n">rtc</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">RTC</span><span class="p">()</span>
+<span class="n">rtc</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="n">rtc</span><span class="o">.</span><span class="n">ALARM0</span><span class="p">,</span> <span class="n">wake</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">DEEPSLEEP</span><span class="p">)</span>
+
+<span class="c1"># set RTC.ALARM0 to fire after 10 seconds (waking the device)</span>
+<span class="n">rtc</span><span class="o">.</span><span class="n">alarm</span><span class="p">(</span><span class="n">rtc</span><span class="o">.</span><span class="n">ALARM0</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+
+<span class="c1"># put the device to sleep</span>
+<span class="n">machine</span><span class="o">.</span><span class="n">deepsleep</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note that when the chip wakes from a deep-sleep it is completely reset,
+including all of the memory.  The boot scripts will run as usual and you can
+put code in them to check the reset cause to perhaps do something different if
+the device just woke from a deep-sleep.  For example, to print the reset cause
+you can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">machine</span><span class="o">.</span><span class="n">reset_cause</span><span class="p">()</span> <span class="o">==</span> <span class="n">machine</span><span class="o">.</span><span class="n">DEEPSLEEP_RESET</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;woke from a deep sleep&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;power on or hard reset&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">9. Power control</a><ul>
+<li><a class="reference internal" href="#changing-the-cpu-frequency">9.1. Changing the CPU frequency</a></li>
+<li><a class="reference internal" href="#deep-sleep-mode">9.2. Deep-sleep mode</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="adc.html"
+                          title="previous chapter"><span class="section-number">8. </span>Analog to Digital Conversion</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="onewire.html"
+                          title="next chapter"><span class="section-number">10. </span>Controlling 1-wire devices</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/esp8266/tutorial/powerctrl.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="onewire.html" title="10. Controlling 1-wire devices"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="adc.html" title="8. Analog to Digital Conversion"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the ESP8266</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >MicroPython tutorial for ESP8266</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">9. </span>Power control</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Optimizations &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MicroPython string interning" href="qstr.html" />
+    <link rel="prev" title="Implementing a Module" href="library.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qstr.html" title="MicroPython string interning"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="library.html" title="Implementing a Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython Internals</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Optimizations</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="optimizations">
+<span id="id1"></span><h1>Optimizations<a class="headerlink" href="#optimizations" title="Link to this heading">¶</a></h1>
+<p>MicroPython uses several optimizations to save RAM but also ensure the efficient
+execution of programs. This chapter discusses some of these optimizations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="qstr.html#qstr"><span class="std std-ref">MicroPython string interning</span></a> and <a class="reference internal" href="maps.html#maps"><span class="std std-ref">Maps and Dictionaries</span></a> details other optimizations on strings and
+dictionaries.</p>
+</div>
+<section id="frozen-bytecode">
+<h2>Frozen bytecode<a class="headerlink" href="#frozen-bytecode" title="Link to this heading">¶</a></h2>
+<p>When MicroPython loads Python code from the filesystem, it first has to parse the file into
+a temporary in-memory representation, and then generate bytecode for execution, both of which
+are stored in the heap (in RAM). This can lead to significant amounts of memory being used.
+The MicroPython cross compiler can be used to generate
+a <code class="docutils literal notranslate"><span class="pre">.mpy</span></code> file, containing the pre-compiled bytecode for a Python module. This will still
+be loaded into RAM, but it avoids the additional overhead of the parsing stage.</p>
+<p>As a further optimisation, the pre-compiled bytecode from a <code class="docutils literal notranslate"><span class="pre">.mpy</span></code> file can be “frozen”
+into the firmware image as part of the main firmware compilation process, which means that
+the bytecode will be executed from ROM. This can lead to a significant memory saving, and
+reduce heap fragmentation.</p>
+<p>See <a class="reference internal" href="../reference/manifest.html#manifest"><span class="std std-ref">MicroPython manifest files</span></a> for more information.</p>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
+<p>MicroPython processes local and global variables differently. Global variables
+are stored and looked up from a global dictionary that is allocated on the heap
+(note that each module has its own separate dict, so separate namespace).
+Local variables on the other hand are stored on the Python value stack, which may
+live on the C stack or on the heap.  They are accessed directly by their offset
+within the Python stack, which is more efficient than a global lookup in a dict.</p>
+<p>The length of global variable names also affects how much RAM is used as identifiers
+are stored in RAM. The shorter the identifier, the less memory is used.</p>
+<p>The other aspect is that <code class="docutils literal notranslate"><span class="pre">const</span></code> variables that start with an underscore are treated as
+proper constants and are not allocated or added in a dictionary, hence saving some memory.
+These variables use <code class="docutils literal notranslate"><span class="pre">const()</span></code> from the MicroPython library. Therefore:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">micropython</span> <span class="kn">import</span> <span class="n">const</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">_Y</span> <span class="o">=</span> <span class="n">const</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">foo</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">_Y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Compiles to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="allocation-of-memory">
+<h2>Allocation of memory<a class="headerlink" href="#allocation-of-memory" title="Link to this heading">¶</a></h2>
+<p>Most of the common MicroPython constructs are not allocated on the heap.
+However the following are:</p>
+<ul class="simple">
+<li><p>Dynamic data structures like lists, mappings, etc;</p></li>
+<li><p>Functions, classes and object instances;</p></li>
+<li><p>imports; and</p></li>
+<li><p>First-time assignment of global variables (to create the slot in the global dict).</p></li>
+</ul>
+<p>For a detailed discussion on a more user-centric perspective on optimization,
+see <a class="reference external" href="https://docs.micropython.org/en/latest/reference/speed_python.html">Maximising MicroPython speed</a></p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Optimizations</a><ul>
+<li><a class="reference internal" href="#frozen-bytecode">Frozen bytecode</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#allocation-of-memory">Allocation of memory</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="library.html"
+                          title="previous chapter">Implementing a Module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="qstr.html"
+                          title="next chapter">MicroPython string interning</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/develop/optimizations.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="qstr.html" title="MicroPython string interning"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="library.html" title="Implementing a Module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython Internals</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Optimizations</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

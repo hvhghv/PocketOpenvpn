@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>neopixel — control of WS2812 / NeoPixel LEDs &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="network — network configuration" href="network.html" />
+    <link rel="prev" title="micropython – access and control MicroPython internals" href="micropython.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="network.html" title="network — network configuration"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="micropython.html" title="micropython – access and control MicroPython internals"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">neopixel</span></code> — control of WS2812 / NeoPixel LEDs</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-neopixel">
+<span id="neopixel-control-of-ws2812-neopixel-leds"></span><h1><a class="reference internal" href="#module-neopixel" title="neopixel: control of WS2812 / NeoPixel LEDs"><code class="xref py py-mod docutils literal notranslate"><span class="pre">neopixel</span></code></a> — control of WS2812 / NeoPixel LEDs<a class="headerlink" href="#module-neopixel" title="Link to this heading">¶</a></h1>
+<p>This module provides a driver for WS2818 / NeoPixel LEDs.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This module is only included by default on the ESP8266, ESP32 and RP2
+ports. On STM32 / Pyboard and others, you can either install the
+<code class="docutils literal notranslate"><span class="pre">neopixel</span></code> package using <a class="reference internal" href="../reference/glossary.html#term-mip"><span class="xref std std-term">mip</span></a>, or you can download the module
+directly from <a class="reference internal" href="../reference/glossary.html#term-micropython-lib"><span class="xref std std-term">micropython-lib</span></a> and copy it to the filesystem.</p>
+</div>
+<section id="class-neopixel">
+<h2>class NeoPixel<a class="headerlink" href="#class-neopixel" title="Link to this heading">¶</a></h2>
+<p>This class stores pixel data for a WS2812 LED strip connected to a pin. The
+application should set pixel data and then call <a class="reference internal" href="#neopixel.NeoPixel.write" title="neopixel.NeoPixel.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">NeoPixel.write()</span></code></a>
+when it is ready to update the strip.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">neopixel</span>
+
+<span class="c1"># 32 LED strip connected to X8.</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">X8</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">neopixel</span><span class="o">.</span><span class="n">NeoPixel</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+
+<span class="c1"># Draw a red gradient.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+    <span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Update the strip.</span>
+<span class="n">n</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="neopixel.NeoPixel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neopixel.</span></span><span class="sig-name descname"><span class="pre">NeoPixel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neopixel.NeoPixel" title="Link to this definition">¶</a></dt>
+<dd><p>Construct an NeoPixel object.  The parameters are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>pin</em> is a machine.Pin instance.</p></li>
+<li><p><em>n</em> is the number of LEDs in the strip.</p></li>
+<li><p><em>bpp</em> is 3 for RGB LEDs, and 4 for RGBW LEDs.</p></li>
+<li><p><em>timing</em> is 0 for 400KHz, and 1 for 800kHz LEDs (most are 800kHz).</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="pixel-access-methods">
+<h2>Pixel access methods<a class="headerlink" href="#pixel-access-methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="neopixel.NeoPixel.fill">
+<span class="sig-prename descclassname"><span class="pre">NeoPixel.</span></span><span class="sig-name descname"><span class="pre">fill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neopixel.NeoPixel.fill" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the value of all pixels to the specified <em>pixel</em> value (i.e. an
+RGB/RGBW tuple).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neopixel.NeoPixel.__len__">
+<span class="sig-prename descclassname"><span class="pre">NeoPixel.</span></span><span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neopixel.NeoPixel.__len__" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the number of LEDs in the strip.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neopixel.NeoPixel.__setitem__">
+<span class="sig-prename descclassname"><span class="pre">NeoPixel.</span></span><span class="sig-name descname"><span class="pre">__setitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neopixel.NeoPixel.__setitem__" title="Link to this definition">¶</a></dt>
+<dd><p>Set the pixel at <em>index</em> to the value, which is an RGB/RGBW tuple.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neopixel.NeoPixel.__getitem__">
+<span class="sig-prename descclassname"><span class="pre">NeoPixel.</span></span><span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neopixel.NeoPixel.__getitem__" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the pixel at <em>index</em> as an RGB/RGBW tuple.</p>
+</dd></dl>
+
+</section>
+<section id="output-methods">
+<h2>Output methods<a class="headerlink" href="#output-methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="neopixel.NeoPixel.write">
+<span class="sig-prename descclassname"><span class="pre">NeoPixel.</span></span><span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neopixel.NeoPixel.write" title="Link to this definition">¶</a></dt>
+<dd><p>Writes the current pixel data to the strip.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">neopixel</span></code> — control of WS2812 / NeoPixel LEDs</a><ul>
+<li><a class="reference internal" href="#class-neopixel">class NeoPixel</a></li>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#neopixel.NeoPixel"><code class="docutils literal notranslate"><span class="pre">NeoPixel</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pixel-access-methods">Pixel access methods</a><ul>
+<li><a class="reference internal" href="#neopixel.NeoPixel.fill"><code class="docutils literal notranslate"><span class="pre">NeoPixel.fill()</span></code></a></li>
+<li><a class="reference internal" href="#neopixel.NeoPixel.__len__"><code class="docutils literal notranslate"><span class="pre">NeoPixel.__len__()</span></code></a></li>
+<li><a class="reference internal" href="#neopixel.NeoPixel.__setitem__"><code class="docutils literal notranslate"><span class="pre">NeoPixel.__setitem__()</span></code></a></li>
+<li><a class="reference internal" href="#neopixel.NeoPixel.__getitem__"><code class="docutils literal notranslate"><span class="pre">NeoPixel.__getitem__()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#output-methods">Output methods</a><ul>
+<li><a class="reference internal" href="#neopixel.NeoPixel.write"><code class="docutils literal notranslate"><span class="pre">NeoPixel.write()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="micropython.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">micropython</span></code> – access and control MicroPython internals</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="network.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/neopixel.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="network.html" title="network — network configuration"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="micropython.html" title="micropython – access and control MicroPython internals"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">neopixel</span></code> — control of WS2812 / NeoPixel LEDs</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

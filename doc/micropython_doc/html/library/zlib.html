@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>zlib – zlib compression &amp; decompression &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="_thread – multithreading support" href="_thread.html" />
+    <link rel="prev" title="time – time related functions" href="time.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="_thread.html" title="_thread – multithreading support"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="time.html" title="time – time related functions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code> – zlib compression &amp; decompression</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-zlib">
+<span id="zlib-zlib-compression-decompression"></span><h1><a class="reference internal" href="#module-zlib" title="zlib: zlib compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code></a> – zlib compression &amp; decompression<a class="headerlink" href="#module-zlib" title="Link to this heading">¶</a></h1>
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-CPython"><span class="xref std std-term">CPython</span></a> <em>module,
+as described below. For more information, refer to the original
+CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/zlib.html#module-zlib" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">zlib</span></code></a>.</p>
+<p>This module allows compression and decompression of binary data with the
+<a class="reference external" href="https://en.wikipedia.org/wiki/DEFLATE">DEFLATE algorithm</a>
+(commonly used in the zlib library and gzip archiver).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prefer to use <a class="reference internal" href="deflate.html#deflate.DeflateIO" title="deflate.DeflateIO"><code class="xref py py-class docutils literal notranslate"><span class="pre">deflate.DeflateIO</span></code></a> instead of the functions in this
+module as it provides a streaming interface to compression and decompression
+which is convenient and more memory efficient when working with reading or
+writing compressed data to a file, socket, or stream.</p>
+</div>
+<p><strong>Availability:</strong></p>
+<ul class="simple">
+<li><p>From MicroPython v1.21 onwards, this module may not be present by default on
+all MicroPython firmware as it duplicates functionality available in
+the <a class="reference internal" href="deflate.html#module-deflate" title="deflate: deflate compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code></a> module.</p></li>
+<li><p>A copy of this module can be installed (or frozen)
+from <a class="reference internal" href="../reference/glossary.html#term-micropython-lib"><span class="xref std std-term">micropython-lib</span></a> (<a class="reference external" href="https://github.com/micropython/micropython-lib/blob/master/python-stdlib/zlib/zlib.py">source</a>).
+See <a class="reference internal" href="../reference/packages.html#packages"><span class="std std-ref">Package management</span></a> for more information. This documentation describes that module.</p></li>
+<li><p>Requires the built-in <a class="reference internal" href="deflate.html#module-deflate" title="deflate: deflate compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code></a> module (available since MicroPython v1.21)</p></li>
+<li><p>Compression support will only be available if compression support is enabled
+in the built-in <a class="reference internal" href="deflate.html#module-deflate" title="deflate: deflate compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code></a> module.</p></li>
+</ul>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="zlib.decompress">
+<span class="sig-prename descclassname"><span class="pre">zlib.</span></span><span class="sig-name descname"><span class="pre">decompress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wbits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#zlib.decompress" title="Link to this definition">¶</a></dt>
+<dd><p>Decompresses <em>data</em> into a bytes object.</p>
+<p>The <em>wbits</em> parameter works the same way as for <a class="reference internal" href="#zlib.compress" title="zlib.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zlib.compress()</span></code></a>
+with the following additional valid values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: Automatically determine the window size from the zlib header
+(<em>data</em> must be in zlib format).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">35</span></code> to <code class="docutils literal notranslate"><span class="pre">47</span></code>: Auto-detect either the zlib or gzip format.</p></li>
+</ul>
+<p>As for <a class="reference internal" href="#zlib.compress" title="zlib.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zlib.compress()</span></code></a>, see the <a class="reference external" href="https://docs.python.org/3.5/library/zlib.html#module-zlib" title="(in Python v3.5)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CPython</span> <span class="pre">documentation</span> <span class="pre">for</span> <span class="pre">zlib</span></code></a>
+for more information about the <em>wbits</em> parameter. As for <a class="reference internal" href="#zlib.compress" title="zlib.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zlib.compress()</span></code></a>,
+MicroPython also supports smaller window sizes than CPython. See more
+<a class="reference internal" href="deflate.html#deflate-wbits"><span class="std std-ref">MicroPython-specific details</span></a> in the
+<a class="reference internal" href="deflate.html#module-deflate" title="deflate: deflate compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code></a> module documentation.</p>
+<p>If the data to be decompressed requires a larger window size, it will
+fail during decompression.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="zlib.compress">
+<span class="sig-prename descclassname"><span class="pre">zlib.</span></span><span class="sig-name descname"><span class="pre">compress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wbits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#zlib.compress" title="Link to this definition">¶</a></dt>
+<dd><p>Compresses <em>data</em> into a bytes object.</p>
+<p><em>wbits</em> allows you to configure the DEFLATE dictionary window size and the
+output format. The window size allows you to trade-off memory usage for
+compression level. A larger window size will allow the compressor to
+reference fragments further back in the input. The output formats are “raw”
+DEFLATE (no header/footer), zlib, and gzip, where the latter two
+include a header and checksum.</p>
+<p>The low four bits of the absolute value of <em>wbits</em> set the base-2 logarithm of
+the DEFLATE dictionary window size. So for example, <code class="docutils literal notranslate"><span class="pre">wbits=10</span></code>,
+<code class="docutils literal notranslate"><span class="pre">wbits=-10</span></code>, and <code class="docutils literal notranslate"><span class="pre">wbits=26</span></code> all set the window size to 1024 bytes. Valid
+window sizes are <code class="docutils literal notranslate"><span class="pre">5</span></code> to <code class="docutils literal notranslate"><span class="pre">15</span></code> inclusive (corresponding to 32 to 32k bytes).</p>
+<p>Negative values of <em>wbits</em> between <code class="docutils literal notranslate"><span class="pre">-5</span></code> and <code class="docutils literal notranslate"><span class="pre">-15</span></code> correspond to “raw”
+output mode, positive values between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">15</span></code> correspond to zlib
+output mode, and positive values between <code class="docutils literal notranslate"><span class="pre">21</span></code> and <code class="docutils literal notranslate"><span class="pre">31</span></code> correspond to
+gzip output mode.</p>
+<p>See the <a class="reference external" href="https://docs.python.org/3.5/library/zlib.html#module-zlib" title="(in Python v3.5)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CPython</span> <span class="pre">documentation</span> <span class="pre">for</span> <span class="pre">zlib</span></code></a> for more
+information about the <em>wbits</em> parameter. Note that MicroPython allows
+for smaller window sizes, which is useful when memory is constrained while
+still achieving a reasonable level of compression. It also speeds up
+the compressor. See more <a class="reference internal" href="deflate.html#deflate-wbits"><span class="std std-ref">MicroPython-specific details</span></a>
+in the <a class="reference internal" href="deflate.html#module-deflate" title="deflate: deflate compression &amp; decompression"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deflate</span></code></a> module documentation.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code> – zlib compression &amp; decompression</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#zlib.decompress"><code class="docutils literal notranslate"><span class="pre">decompress()</span></code></a></li>
+<li><a class="reference internal" href="#zlib.compress"><code class="docutils literal notranslate"><span class="pre">compress()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="time.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code> – time related functions</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="_thread.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">_thread</span></code> – multithreading support</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/zlib.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="_thread.html" title="_thread – multithreading support"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="time.html" title="time – time related functions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">zlib</span></code> – zlib compression &amp; decompression</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

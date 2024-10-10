@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>openamp – provides standard Asymmetric Multiprocessing (AMP) support &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="uctypes – access binary data in a structured way" href="uctypes.html" />
+    <link rel="prev" title="class LAN – control an Ethernet module" href="network.LAN.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="uctypes.html" title="uctypes – access binary data in a structured way"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="network.LAN.html" title="class LAN – control an Ethernet module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">openamp</span></code> – provides standard Asymmetric Multiprocessing (AMP) support</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-openamp">
+<span id="openamp-provides-standard-asymmetric-multiprocessing-amp-support"></span><h1><a class="reference internal" href="#module-openamp" title="openamp: provides standard Asymmetric Multiprocessing (AMP) support"><code class="xref py py-mod docutils literal notranslate"><span class="pre">openamp</span></code></a> – provides standard Asymmetric Multiprocessing (AMP) support<a class="headerlink" href="#module-openamp" title="Link to this heading">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">openamp</span></code> module provides a standard inter-processor communications infrastructure
+for MicroPython. The module handles all of the details of OpenAMP, such as setting up
+the shared resource table, initializing vrings, etc. It provides an API for using the
+RPMsg bus infrastructure with the <a class="reference internal" href="#openamp.Endpoint" title="openamp.Endpoint"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Endpoint</span></code></a> class, and provides processor Life Cycle
+Management (LCM) support, such as loading firmware and starting and stopping a remote
+core, via the <a class="reference internal" href="#openamp.RemoteProc" title="openamp.RemoteProc"><code class="xref any py py-class docutils literal notranslate"><span class="pre">RemoteProc</span></code></a> class.</p>
+<p>Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openamp</span>
+
+<span class="k">def</span> <span class="nf">ept_recv_callback</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Received message on endpoint&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Create a new RPMsg endpoint to communicate with the remote core.</span>
+<span class="n">ept</span> <span class="o">=</span> <span class="n">openamp</span><span class="o">.</span><span class="n">Endpoint</span><span class="p">(</span><span class="s2">&quot;vuart-channel&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">ept_recv_callback</span><span class="p">)</span>
+
+<span class="c1"># Create a RemoteProc object, load its firmware and start it.</span>
+<span class="n">rproc</span> <span class="o">=</span> <span class="n">openamp</span><span class="o">.</span><span class="n">RemoteProc</span><span class="p">(</span><span class="s2">&quot;virtual_uart.elf&quot;</span><span class="p">)</span> <span class="c1"># Or entry point address (ex 0x081E0000)</span>
+<span class="n">rproc</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ept</span><span class="o">.</span><span class="n">is_ready</span><span class="p">():</span>
+        <span class="n">ept</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="openamp.new_service_callback">
+<span class="sig-prename descclassname"><span class="pre">openamp.</span></span><span class="sig-name descname"><span class="pre">new_service_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ns_callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openamp.new_service_callback" title="Link to this definition">¶</a></dt>
+<dd><p>Set the new service callback.</p>
+<p>The <em>ns_callback</em> argument is a function that will be called when the remote processor
+announces new services. At that point the host processor can choose to create the
+announced endpoint, if this particular service is supported, or ignore it if it’s
+not. If this function is not set, the host processor should first register the
+endpoint locally, and it will be automatically bound when the remote announces
+the service.</p>
+</dd></dl>
+
+</section>
+<section id="endpoint-class">
+<h2>Endpoint class<a class="headerlink" href="#endpoint-class" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="openamp.Endpoint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openamp.</span></span><span class="sig-name descname"><span class="pre">Endpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ENDPOINT_ADDR_ANY</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ENDPOINT_ADDR_ANY</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openamp.Endpoint" title="Link to this definition">¶</a></dt>
+<dd><p>Construct a new RPMsg Endpoint. An endpoint is a bidirectional communication
+channel between two cores.</p>
+<p>Arguments are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>name</em> is the name of the endpoint.</p></li>
+<li><p><em>callback</em> is a function that is called when the endpoint receives data with the
+source address of the remote point, and the data as bytes passed by reference.</p></li>
+<li><p><em>src</em> is the endpoint source address. If none is provided one will be assigned
+to the endpoint by the library.</p></li>
+<li><p><em>dest</em> is the endpoint destination address. If the endpoint is created from the
+new_service_callback, this must be provided and it must match the remote endpoint’s
+source address. If the endpoint is registered locally, before the announcement, the
+destination address will be assigned by the library when the endpoint is bound.</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="openamp.Endpoint.deinit">
+<span class="sig-prename descclassname"><span class="pre">Endpoint.</span></span><span class="sig-name descname"><span class="pre">deinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openamp.Endpoint.deinit" title="Link to this definition">¶</a></dt>
+<dd><p>Destroy the endpoint and release all of its resources.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="openamp.Endpoint.is_ready">
+<span class="sig-prename descclassname"><span class="pre">Endpoint.</span></span><span class="sig-name descname"><span class="pre">is_ready</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openamp.Endpoint.is_ready" title="Link to this definition">¶</a></dt>
+<dd><p>Returns True if the endpoint is ready to send (i.e., has both a source and destination addresses)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="openamp.Endpoint.send">
+<span class="sig-prename descclassname"><span class="pre">Endpoint.</span></span><span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openamp.Endpoint.send" title="Link to this definition">¶</a></dt>
+<dd><p>Send a message to the remote processor over this endpoint.</p>
+<p>Arguments are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>src</em> is the source endpoint address of the message. If none is provided, the
+source address the endpoint is bound to is used.</p></li>
+<li><p><em>dest</em> is the destination endpoint address of the message. If none is provided,
+the destination address the endpoint is bound to is used.</p></li>
+<li><p><em>timeout</em> specifies the time in milliseconds to wait for a free buffer. By default
+the function is blocking.</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="remoteproc-class">
+<h2>RemoteProc class<a class="headerlink" href="#remoteproc-class" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="openamp.RemoteProc">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openamp.</span></span><span class="sig-name descname"><span class="pre">RemoteProc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openamp.RemoteProc" title="Link to this definition">¶</a></dt>
+<dd><p>The RemoteProc object provides processor Life Cycle Management (LCM) support, such as
+loading firmware, starting and stopping a remote core.</p>
+<p>The <em>entry</em> argument can be a path to firmware image, in which case the firmware is
+loaded from file to its target memory, or an entry point address, in which case the
+firmware must be loaded already at the given address.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="openamp.RemoteProc.start">
+<span class="sig-prename descclassname"><span class="pre">RemoteProc.</span></span><span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openamp.RemoteProc.start" title="Link to this definition">¶</a></dt>
+<dd><p>Starts the remote processor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="openamp.RemoteProc.stop">
+<span class="sig-prename descclassname"><span class="pre">RemoteProc.</span></span><span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openamp.RemoteProc.stop" title="Link to this definition">¶</a></dt>
+<dd><p>Stops the remote processor. The exact behavior is platform-dependent. On the STM32H7 for
+example it’s not possible to stop and then restart the Cortex-M4 core, so a complete
+system reset is performed on a call to this function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="openamp.RemoteProc.shutdown">
+<span class="sig-prename descclassname"><span class="pre">RemoteProc.</span></span><span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openamp.RemoteProc.shutdown" title="Link to this definition">¶</a></dt>
+<dd><p>Shutdown stops the remote processor and releases all of its resources. The exact behavior
+is platform-dependent, however typically it disables power and clocks to the remote core.
+This function is also used as the finaliser (i.e., called when <code class="docutils literal notranslate"><span class="pre">RemoteProc</span></code> object is
+collected). Note that on the STM32H7, it’s not possible to stop and then restart the
+Cortex-M4 core, so a complete system reset is performed on a call to this function.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">openamp</span></code> – provides standard Asymmetric Multiprocessing (AMP) support</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#openamp.new_service_callback"><code class="docutils literal notranslate"><span class="pre">new_service_callback()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#endpoint-class">Endpoint class</a><ul>
+<li><a class="reference internal" href="#openamp.Endpoint"><code class="docutils literal notranslate"><span class="pre">Endpoint</span></code></a></li>
+<li><a class="reference internal" href="#openamp.Endpoint.deinit"><code class="docutils literal notranslate"><span class="pre">Endpoint.deinit()</span></code></a></li>
+<li><a class="reference internal" href="#openamp.Endpoint.is_ready"><code class="docutils literal notranslate"><span class="pre">Endpoint.is_ready()</span></code></a></li>
+<li><a class="reference internal" href="#openamp.Endpoint.send"><code class="docutils literal notranslate"><span class="pre">Endpoint.send()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#remoteproc-class">RemoteProc class</a><ul>
+<li><a class="reference internal" href="#openamp.RemoteProc"><code class="docutils literal notranslate"><span class="pre">RemoteProc</span></code></a></li>
+<li><a class="reference internal" href="#openamp.RemoteProc.start"><code class="docutils literal notranslate"><span class="pre">RemoteProc.start()</span></code></a></li>
+<li><a class="reference internal" href="#openamp.RemoteProc.stop"><code class="docutils literal notranslate"><span class="pre">RemoteProc.stop()</span></code></a></li>
+<li><a class="reference internal" href="#openamp.RemoteProc.shutdown"><code class="docutils literal notranslate"><span class="pre">RemoteProc.shutdown()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="network.LAN.html"
+                          title="previous chapter">class LAN – control an Ethernet module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="uctypes.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">uctypes</span></code> – access binary data in a structured way</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/openamp.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="uctypes.html" title="uctypes – access binary data in a structured way"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="network.LAN.html" title="class LAN – control an Ethernet module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">openamp</span></code> – provides standard Asymmetric Multiprocessing (AMP) support</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Network basics &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5. Network - TCP sockets" href="network_tcp.html" />
+    <link rel="prev" title="3. The internal filesystem" href="filesystem.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="network_tcp.html" title="5. Network - TCP sockets"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="filesystem.html" title="3. The internal filesystem"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the ESP8266</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">MicroPython tutorial for ESP8266</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4. </span>Network basics</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="network-basics">
+<h1><span class="section-number">4. </span>Network basics<a class="headerlink" href="#network-basics" title="Link to this heading">¶</a></h1>
+<p>The network module is used to configure the WiFi connection.  There are two WiFi
+interfaces, one for the station (when the ESP8266 connects to a router) and one
+for the access point (for other devices to connect to the ESP8266).  Create
+instances of these objects using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">network</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sta_if</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ap_if</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">AP_IF</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can check if the interfaces are active by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sta_if</span><span class="o">.</span><span class="n">active</span><span class="p">()</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ap_if</span><span class="o">.</span><span class="n">active</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>You can also check the network settings of the interface by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ap_if</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">()</span>
+<span class="go">(&#39;192.168.4.1&#39;, &#39;255.255.255.0&#39;, &#39;192.168.4.1&#39;, &#39;8.8.8.8&#39;)</span>
+</pre></div>
+</div>
+<p>The returned values are: IP address, netmask, gateway, DNS.</p>
+<section id="configuration-of-the-wifi">
+<h2><span class="section-number">4.1. </span>Configuration of the WiFi<a class="headerlink" href="#configuration-of-the-wifi" title="Link to this heading">¶</a></h2>
+<p>Upon a fresh install the ESP8266 is configured in access point mode, so the
+AP_IF interface is active and the STA_IF interface is inactive.  You can
+configure the module to connect to your own network using the STA_IF interface.</p>
+<p>First activate the station interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sta_if</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then connect to your WiFi network:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sta_if</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;&lt;your SSID&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;your key&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To check if the connection is established use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sta_if</span><span class="o">.</span><span class="n">isconnected</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Once established you can check the IP address:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sta_if</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">()</span>
+<span class="go">(&#39;192.168.0.2&#39;, &#39;255.255.255.0&#39;, &#39;192.168.0.1&#39;, &#39;8.8.8.8&#39;)</span>
+</pre></div>
+</div>
+<p>You can then disable the access-point interface if you no longer need it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ap_if</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here is a function you can run (or put in your boot.py file) to automatically
+connect to your WiFi network:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_connect</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">network</span>
+    <span class="n">sta_if</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;connecting to network...&#39;</span><span class="p">)</span>
+        <span class="n">sta_if</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">sta_if</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;&lt;ssid&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;key&gt;&#39;</span><span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+            <span class="k">pass</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;network config:&#39;</span><span class="p">,</span> <span class="n">sta_if</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="sockets">
+<h2><span class="section-number">4.2. </span>Sockets<a class="headerlink" href="#sockets" title="Link to this heading">¶</a></h2>
+<p>Once the WiFi is set up the way to access the network is by using sockets.
+A socket represents an endpoint on a network device, and when two sockets are
+connected together communication can proceed.
+Internet protocols are built on top of sockets, such as email (SMTP), the web
+(HTTP), telnet, ssh, among many others.  Each of these protocols is assigned
+a specific port, which is just an integer.  Given an IP address and a port
+number you can connect to a remote device and start talking with it.</p>
+<p>The next part of the tutorial discusses how to use sockets to do some common
+and useful network tasks.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">4. Network basics</a><ul>
+<li><a class="reference internal" href="#configuration-of-the-wifi">4.1. Configuration of the WiFi</a></li>
+<li><a class="reference internal" href="#sockets">4.2. Sockets</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="filesystem.html"
+                          title="previous chapter"><span class="section-number">3. </span>The internal filesystem</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="network_tcp.html"
+                          title="next chapter"><span class="section-number">5. </span>Network - TCP sockets</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/esp8266/tutorial/network_basics.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="network_tcp.html" title="5. Network - TCP sockets"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="filesystem.html" title="3. The internal filesystem"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the ESP8266</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >MicroPython tutorial for ESP8266</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4. </span>Network basics</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

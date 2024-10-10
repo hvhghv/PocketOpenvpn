@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>builtins – builtin functions and exceptions &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cmath – mathematical functions for complex numbers" href="cmath.html" />
+    <link rel="prev" title="binascii – binary/ASCII conversions" href="binascii.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cmath.html" title="cmath – mathematical functions for complex numbers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="binascii.html" title="binascii – binary/ASCII conversions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code> – builtin functions and exceptions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="builtins-builtin-functions-and-exceptions">
+<h1><a class="reference external" href="https://docs.python.org/3.5/library/builtins.html#module-builtins" title="(in Python v3.5)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code></a> – builtin functions and exceptions<a class="headerlink" href="#builtins-builtin-functions-and-exceptions" title="Link to this heading">¶</a></h1>
+<p>All builtin functions and exceptions are described here. They are also
+available via <code class="docutils literal notranslate"><span class="pre">builtins</span></code> module.</p>
+<section id="functions-and-types">
+<h2>Functions and types<a class="headerlink" href="#functions-and-types" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="abs">
+<span class="sig-name descname"><span class="pre">abs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#abs" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="all">
+<span class="sig-name descname"><span class="pre">all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#all" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="any">
+<span class="sig-name descname"><span class="pre">any</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#any" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bin">
+<span class="sig-name descname"><span class="pre">bin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bin" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bool</span></span><a class="headerlink" href="#bool" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bytearray">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bytearray</span></span><a class="headerlink" href="#bytearray" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bytes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bytes</span></span><a class="headerlink" href="#bytes" title="Link to this definition">¶</a></dt>
+<dd><p>See CPython documentation: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">bytes</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="callable">
+<span class="sig-name descname"><span class="pre">callable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#callable" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chr">
+<span class="sig-name descname"><span class="pre">chr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="classmethod">
+<span class="sig-name descname"><span class="pre">classmethod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#classmethod" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#compile" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="complex">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">complex</span></span><a class="headerlink" href="#complex" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="delattr">
+<span class="sig-name descname"><span class="pre">delattr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#delattr" title="Link to this definition">¶</a></dt>
+<dd><p>The argument <em>name</em> should be a string, and this function deletes the named
+attribute from the object given by <em>obj</em>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dict">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dict</span></span><a class="headerlink" href="#dict" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dir">
+<span class="sig-name descname"><span class="pre">dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dir" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="divmod">
+<span class="sig-name descname"><span class="pre">divmod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#divmod" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="enumerate">
+<span class="sig-name descname"><span class="pre">enumerate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#enumerate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eval">
+<span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#eval" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="exec">
+<span class="sig-name descname"><span class="pre">exec</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#exec" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#filter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="float">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">float</span></span><a class="headerlink" href="#float" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="frozenset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frozenset</span></span><a class="headerlink" href="#frozenset" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getattr">
+<span class="sig-name descname"><span class="pre">getattr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getattr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="globals">
+<span class="sig-name descname"><span class="pre">globals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#globals" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hasattr">
+<span class="sig-name descname"><span class="pre">hasattr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hasattr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hash">
+<span class="sig-name descname"><span class="pre">hash</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hash" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hex">
+<span class="sig-name descname"><span class="pre">hex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hex" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="id">
+<span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="input">
+<span class="sig-name descname"><span class="pre">input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#input" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="int">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">int</span></span><a class="headerlink" href="#int" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="int.from_bytes">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">byteorder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#int.from_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>In MicroPython, <a class="reference internal" href="sys.html#sys.byteorder" title="sys.byteorder"><code class="xref any py py-data docutils literal notranslate"><span class="pre">byteorder</span></code></a> parameter must be positional (this is
+compatible with CPython).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="int.to_bytes">
+<span class="sig-name descname"><span class="pre">to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">byteorder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#int.to_bytes" title="Link to this definition">¶</a></dt>
+<dd><p>In MicroPython, <a class="reference internal" href="sys.html#sys.byteorder" title="sys.byteorder"><code class="xref any py py-data docutils literal notranslate"><span class="pre">byteorder</span></code></a> parameter must be positional (this is
+compatible with CPython).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="isinstance">
+<span class="sig-name descname"><span class="pre">isinstance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#isinstance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="issubclass">
+<span class="sig-name descname"><span class="pre">issubclass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#issubclass" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="iter">
+<span class="sig-name descname"><span class="pre">iter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="len">
+<span class="sig-name descname"><span class="pre">len</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#len" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="list">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list</span></span><a class="headerlink" href="#list" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="locals">
+<span class="sig-name descname"><span class="pre">locals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#locals" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="map">
+<span class="sig-name descname"><span class="pre">map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#map" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="max">
+<span class="sig-name descname"><span class="pre">max</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#max" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="memoryview">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">memoryview</span></span><a class="headerlink" href="#memoryview" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="min">
+<span class="sig-name descname"><span class="pre">min</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#min" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="next">
+<span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#next" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="object">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">object</span></span><a class="headerlink" href="#object" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oct">
+<span class="sig-name descname"><span class="pre">oct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oct" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#open" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ord">
+<span class="sig-name descname"><span class="pre">ord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ord" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pow">
+<span class="sig-name descname"><span class="pre">pow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pow" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#print" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="property">
+<span class="sig-name descname"><span class="pre">property</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#property" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="range">
+<span class="sig-name descname"><span class="pre">range</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#range" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="repr">
+<span class="sig-name descname"><span class="pre">repr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#repr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="reversed">
+<span class="sig-name descname"><span class="pre">reversed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#reversed" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="round">
+<span class="sig-name descname"><span class="pre">round</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#round" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="set">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set</span></span><a class="headerlink" href="#set" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="setattr">
+<span class="sig-name descname"><span class="pre">setattr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#setattr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="slice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">slice</span></span><a class="headerlink" href="#slice" title="Link to this definition">¶</a></dt>
+<dd><p>The <em>slice</em> builtin is the type that slice objects have.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sorted">
+<span class="sig-name descname"><span class="pre">sorted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sorted" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="staticmethod">
+<span class="sig-name descname"><span class="pre">staticmethod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#staticmethod" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="str">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">str</span></span><a class="headerlink" href="#str" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sum">
+<span class="sig-name descname"><span class="pre">sum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sum" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="super">
+<span class="sig-name descname"><span class="pre">super</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#super" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tuple">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tuple</span></span><a class="headerlink" href="#tuple" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="zip">
+<span class="sig-name descname"><span class="pre">zip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#zip" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Link to this heading">¶</a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="AssertionError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AssertionError</span></span><a class="headerlink" href="#AssertionError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="AttributeError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttributeError</span></span><a class="headerlink" href="#AttributeError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="Exception">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Exception</span></span><a class="headerlink" href="#Exception" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ImportError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ImportError</span></span><a class="headerlink" href="#ImportError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="IndexError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IndexError</span></span><a class="headerlink" href="#IndexError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="KeyboardInterrupt">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KeyboardInterrupt</span></span><a class="headerlink" href="#KeyboardInterrupt" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="KeyError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KeyError</span></span><a class="headerlink" href="#KeyError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="MemoryError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MemoryError</span></span><a class="headerlink" href="#MemoryError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="NameError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NameError</span></span><a class="headerlink" href="#NameError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="NotImplementedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotImplementedError</span></span><a class="headerlink" href="#NotImplementedError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="OSError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OSError</span></span><a class="headerlink" href="#OSError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="RuntimeError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RuntimeError</span></span><a class="headerlink" href="#RuntimeError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="StopIteration">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StopIteration</span></span><a class="headerlink" href="#StopIteration" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="SyntaxError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntaxError</span></span><a class="headerlink" href="#SyntaxError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="SystemExit">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SystemExit</span></span><a class="headerlink" href="#SystemExit" title="Link to this definition">¶</a></dt>
+<dd><p>See CPython documentation: <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#SystemExit" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">SystemExit</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="TypeError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TypeError</span></span><a class="headerlink" href="#TypeError" title="Link to this definition">¶</a></dt>
+<dd><p>See CPython documentation: <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#TypeError" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">TypeError</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ValueError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ValueError</span></span><a class="headerlink" href="#ValueError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ZeroDivisionError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ZeroDivisionError</span></span><a class="headerlink" href="#ZeroDivisionError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code> – builtin functions and exceptions</a><ul>
+<li><a class="reference internal" href="#functions-and-types">Functions and types</a><ul>
+<li><a class="reference internal" href="#abs"><code class="docutils literal notranslate"><span class="pre">abs()</span></code></a></li>
+<li><a class="reference internal" href="#all"><code class="docutils literal notranslate"><span class="pre">all()</span></code></a></li>
+<li><a class="reference internal" href="#any"><code class="docutils literal notranslate"><span class="pre">any()</span></code></a></li>
+<li><a class="reference internal" href="#bin"><code class="docutils literal notranslate"><span class="pre">bin()</span></code></a></li>
+<li><a class="reference internal" href="#bool"><code class="docutils literal notranslate"><span class="pre">bool</span></code></a></li>
+<li><a class="reference internal" href="#bytearray"><code class="docutils literal notranslate"><span class="pre">bytearray</span></code></a></li>
+<li><a class="reference internal" href="#bytes"><code class="docutils literal notranslate"><span class="pre">bytes</span></code></a></li>
+<li><a class="reference internal" href="#callable"><code class="docutils literal notranslate"><span class="pre">callable()</span></code></a></li>
+<li><a class="reference internal" href="#chr"><code class="docutils literal notranslate"><span class="pre">chr()</span></code></a></li>
+<li><a class="reference internal" href="#classmethod"><code class="docutils literal notranslate"><span class="pre">classmethod()</span></code></a></li>
+<li><a class="reference internal" href="#compile"><code class="docutils literal notranslate"><span class="pre">compile()</span></code></a></li>
+<li><a class="reference internal" href="#complex"><code class="docutils literal notranslate"><span class="pre">complex</span></code></a></li>
+<li><a class="reference internal" href="#delattr"><code class="docutils literal notranslate"><span class="pre">delattr()</span></code></a></li>
+<li><a class="reference internal" href="#dict"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></li>
+<li><a class="reference internal" href="#dir"><code class="docutils literal notranslate"><span class="pre">dir()</span></code></a></li>
+<li><a class="reference internal" href="#divmod"><code class="docutils literal notranslate"><span class="pre">divmod()</span></code></a></li>
+<li><a class="reference internal" href="#enumerate"><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code></a></li>
+<li><a class="reference internal" href="#eval"><code class="docutils literal notranslate"><span class="pre">eval()</span></code></a></li>
+<li><a class="reference internal" href="#exec"><code class="docutils literal notranslate"><span class="pre">exec()</span></code></a></li>
+<li><a class="reference internal" href="#filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a></li>
+<li><a class="reference internal" href="#float"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></li>
+<li><a class="reference internal" href="#frozenset"><code class="docutils literal notranslate"><span class="pre">frozenset</span></code></a></li>
+<li><a class="reference internal" href="#getattr"><code class="docutils literal notranslate"><span class="pre">getattr()</span></code></a></li>
+<li><a class="reference internal" href="#globals"><code class="docutils literal notranslate"><span class="pre">globals()</span></code></a></li>
+<li><a class="reference internal" href="#hasattr"><code class="docutils literal notranslate"><span class="pre">hasattr()</span></code></a></li>
+<li><a class="reference internal" href="#hash"><code class="docutils literal notranslate"><span class="pre">hash()</span></code></a></li>
+<li><a class="reference internal" href="#hex"><code class="docutils literal notranslate"><span class="pre">hex()</span></code></a></li>
+<li><a class="reference internal" href="#id"><code class="docutils literal notranslate"><span class="pre">id()</span></code></a></li>
+<li><a class="reference internal" href="#input"><code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li><a class="reference internal" href="#int"><code class="docutils literal notranslate"><span class="pre">int</span></code></a><ul>
+<li><a class="reference internal" href="#int.from_bytes"><code class="docutils literal notranslate"><span class="pre">int.from_bytes()</span></code></a></li>
+<li><a class="reference internal" href="#int.to_bytes"><code class="docutils literal notranslate"><span class="pre">int.to_bytes()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#isinstance"><code class="docutils literal notranslate"><span class="pre">isinstance()</span></code></a></li>
+<li><a class="reference internal" href="#issubclass"><code class="docutils literal notranslate"><span class="pre">issubclass()</span></code></a></li>
+<li><a class="reference internal" href="#iter"><code class="docutils literal notranslate"><span class="pre">iter()</span></code></a></li>
+<li><a class="reference internal" href="#len"><code class="docutils literal notranslate"><span class="pre">len()</span></code></a></li>
+<li><a class="reference internal" href="#list"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></li>
+<li><a class="reference internal" href="#locals"><code class="docutils literal notranslate"><span class="pre">locals()</span></code></a></li>
+<li><a class="reference internal" href="#map"><code class="docutils literal notranslate"><span class="pre">map()</span></code></a></li>
+<li><a class="reference internal" href="#max"><code class="docutils literal notranslate"><span class="pre">max()</span></code></a></li>
+<li><a class="reference internal" href="#memoryview"><code class="docutils literal notranslate"><span class="pre">memoryview</span></code></a></li>
+<li><a class="reference internal" href="#min"><code class="docutils literal notranslate"><span class="pre">min()</span></code></a></li>
+<li><a class="reference internal" href="#next"><code class="docutils literal notranslate"><span class="pre">next()</span></code></a></li>
+<li><a class="reference internal" href="#object"><code class="docutils literal notranslate"><span class="pre">object</span></code></a></li>
+<li><a class="reference internal" href="#oct"><code class="docutils literal notranslate"><span class="pre">oct()</span></code></a></li>
+<li><a class="reference internal" href="#open"><code class="docutils literal notranslate"><span class="pre">open()</span></code></a></li>
+<li><a class="reference internal" href="#ord"><code class="docutils literal notranslate"><span class="pre">ord()</span></code></a></li>
+<li><a class="reference internal" href="#pow"><code class="docutils literal notranslate"><span class="pre">pow()</span></code></a></li>
+<li><a class="reference internal" href="#print"><code class="docutils literal notranslate"><span class="pre">print()</span></code></a></li>
+<li><a class="reference internal" href="#property"><code class="docutils literal notranslate"><span class="pre">property()</span></code></a></li>
+<li><a class="reference internal" href="#range"><code class="docutils literal notranslate"><span class="pre">range()</span></code></a></li>
+<li><a class="reference internal" href="#repr"><code class="docutils literal notranslate"><span class="pre">repr()</span></code></a></li>
+<li><a class="reference internal" href="#reversed"><code class="docutils literal notranslate"><span class="pre">reversed()</span></code></a></li>
+<li><a class="reference internal" href="#round"><code class="docutils literal notranslate"><span class="pre">round()</span></code></a></li>
+<li><a class="reference internal" href="#set"><code class="docutils literal notranslate"><span class="pre">set</span></code></a></li>
+<li><a class="reference internal" href="#setattr"><code class="docutils literal notranslate"><span class="pre">setattr()</span></code></a></li>
+<li><a class="reference internal" href="#slice"><code class="docutils literal notranslate"><span class="pre">slice</span></code></a></li>
+<li><a class="reference internal" href="#sorted"><code class="docutils literal notranslate"><span class="pre">sorted()</span></code></a></li>
+<li><a class="reference internal" href="#staticmethod"><code class="docutils literal notranslate"><span class="pre">staticmethod()</span></code></a></li>
+<li><a class="reference internal" href="#str"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></li>
+<li><a class="reference internal" href="#sum"><code class="docutils literal notranslate"><span class="pre">sum()</span></code></a></li>
+<li><a class="reference internal" href="#super"><code class="docutils literal notranslate"><span class="pre">super()</span></code></a></li>
+<li><a class="reference internal" href="#tuple"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li><a class="reference internal" href="#type"><code class="docutils literal notranslate"><span class="pre">type()</span></code></a></li>
+<li><a class="reference internal" href="#zip"><code class="docutils literal notranslate"><span class="pre">zip()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a><ul>
+<li><a class="reference internal" href="#AssertionError"><code class="docutils literal notranslate"><span class="pre">AssertionError</span></code></a></li>
+<li><a class="reference internal" href="#AttributeError"><code class="docutils literal notranslate"><span class="pre">AttributeError</span></code></a></li>
+<li><a class="reference internal" href="#Exception"><code class="docutils literal notranslate"><span class="pre">Exception</span></code></a></li>
+<li><a class="reference internal" href="#ImportError"><code class="docutils literal notranslate"><span class="pre">ImportError</span></code></a></li>
+<li><a class="reference internal" href="#IndexError"><code class="docutils literal notranslate"><span class="pre">IndexError</span></code></a></li>
+<li><a class="reference internal" href="#KeyboardInterrupt"><code class="docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code></a></li>
+<li><a class="reference internal" href="#KeyError"><code class="docutils literal notranslate"><span class="pre">KeyError</span></code></a></li>
+<li><a class="reference internal" href="#MemoryError"><code class="docutils literal notranslate"><span class="pre">MemoryError</span></code></a></li>
+<li><a class="reference internal" href="#NameError"><code class="docutils literal notranslate"><span class="pre">NameError</span></code></a></li>
+<li><a class="reference internal" href="#NotImplementedError"><code class="docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a></li>
+<li><a class="reference internal" href="#OSError"><code class="docutils literal notranslate"><span class="pre">OSError</span></code></a></li>
+<li><a class="reference internal" href="#RuntimeError"><code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code></a></li>
+<li><a class="reference internal" href="#StopIteration"><code class="docutils literal notranslate"><span class="pre">StopIteration</span></code></a></li>
+<li><a class="reference internal" href="#SyntaxError"><code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code></a></li>
+<li><a class="reference internal" href="#SystemExit"><code class="docutils literal notranslate"><span class="pre">SystemExit</span></code></a></li>
+<li><a class="reference internal" href="#TypeError"><code class="docutils literal notranslate"><span class="pre">TypeError</span></code></a></li>
+<li><a class="reference internal" href="#ValueError"><code class="docutils literal notranslate"><span class="pre">ValueError</span></code></a></li>
+<li><a class="reference internal" href="#ZeroDivisionError"><code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="binascii.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">binascii</span></code> – binary/ASCII conversions</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cmath.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/builtins.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cmath.html" title="cmath – mathematical functions for complex numbers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="binascii.html" title="binascii – binary/ASCII conversions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">builtins</span></code> – builtin functions and exceptions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MicroPython tutorial for the pyboard &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1. Introduction to the pyboard" href="intro.html" />
+    <link rel="prev" title="General information about the pyboard" href="../general.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="1. Introduction to the pyboard"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../general.html" title="General information about the pyboard"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" accesskey="U">Quick reference for the pyboard</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MicroPython tutorial for the pyboard</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="micropython-tutorial-for-the-pyboard">
+<span id="pyboard-tutorial"></span><h1>MicroPython tutorial for the pyboard<a class="headerlink" href="#micropython-tutorial-for-the-pyboard" title="Link to this heading">¶</a></h1>
+<p>This tutorial is intended to get you started with your pyboard.
+All you need is a pyboard and a micro-USB cable to connect it to
+your PC.  If it is your first time, it is recommended to follow
+the tutorial through in the order below.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction to the pyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="script.html">2. Running your first script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repl.html">3. Getting a MicroPython REPL prompt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leds.html">4. Turning on LEDs and basic Python concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="switch.html">5. Switches, callbacks and interrupts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accel.html">6. The accelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reset.html">7. Safe mode and factory reset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usb_mouse.html">8. Making the pyboard act as a USB mouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timer.html">9. The Timers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assembler.html">10. Inline assembler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power_ctrl.html">11. Power control</a></li>
+</ul>
+</div>
+<section id="tutorials-requiring-extra-components">
+<h2>Tutorials requiring extra components<a class="headerlink" href="#tutorials-requiring-extra-components" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="servo.html">1. Controlling hobby servo motors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fading_led.html">2. Fading LEDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcd_skin.html">3. The LCD and touch-sensor skin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amp_skin.html">4. The AMP audio skin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcd160cr_skin.html">5. The LCD160CR skin</a></li>
+</ul>
+</div>
+</section>
+<section id="tips-tricks-and-useful-things-to-know">
+<h2>Tips, tricks and useful things to know<a class="headerlink" href="#tips-tricks-and-useful-things-to-know" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="debounce.html">1. Debouncing a pin input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pass_through.html">2. Making a UART - USB pass through</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">MicroPython tutorial for the pyboard</a><ul>
+<li><a class="reference internal" href="#tutorials-requiring-extra-components">Tutorials requiring extra components</a></li>
+<li><a class="reference internal" href="#tips-tricks-and-useful-things-to-know">Tips, tricks and useful things to know</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../general.html"
+                          title="previous chapter">General information about the pyboard</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="intro.html"
+                          title="next chapter"><span class="section-number">1. </span>Introduction to the pyboard</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pyboard/tutorial/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="1. Introduction to the pyboard"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../general.html" title="General information about the pyboard"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the pyboard</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MicroPython tutorial for the pyboard</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

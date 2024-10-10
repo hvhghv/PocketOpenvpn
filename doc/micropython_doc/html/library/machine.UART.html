@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class UART – duplex serial communication bus &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class SPI – a Serial Peripheral Interface bus protocol (controller side)" href="machine.SPI.html" />
+    <link rel="prev" title="class PWM – pulse width modulation" href="machine.PWM.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="machine.SPI.html" title="class SPI – a Serial Peripheral Interface bus protocol (controller side)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="machine.PWM.html" title="class PWM – pulse width modulation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="machine.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class UART – duplex serial communication bus</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-uart-duplex-serial-communication-bus">
+<span id="machine-uart"></span><h1>class UART – duplex serial communication bus<a class="headerlink" href="#class-uart-duplex-serial-communication-bus" title="Link to this heading">¶</a></h1>
+<p>UART implements the standard UART/USART duplex serial communications protocol.  At
+the physical level it consists of 2 lines: RX and TX.  The unit of communication
+is a character (not to be confused with a string character) which can be 8 or 9
+bits wide.</p>
+<p>UART objects can be created and initialised using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">UART</span>
+
+<span class="n">uart</span> <span class="o">=</span> <span class="n">UART</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9600</span><span class="p">)</span>                         <span class="c1"># init with given baudrate</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">9600</span><span class="p">,</span> <span class="n">bits</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">parity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># init with given parameters</span>
+</pre></div>
+</div>
+<p>Supported parameters differ on a board:</p>
+<p>Pyboard: Bits can be 7, 8 or 9. Stop can be 1 or 2. With <em>parity=None</em>,
+only 8 and 9 bits are supported.  With parity enabled, only 7 and 8 bits
+are supported.</p>
+<p>WiPy/CC3200: Bits can be 5, 6, 7, 8. Stop can be 1 or 2.</p>
+<p>A UART object acts like a <a class="reference internal" href="../reference/glossary.html#term-stream"><code class="xref any std std-term docutils literal notranslate"><span class="pre">stream</span></code></a> object and reading and writing is done
+using the standard stream methods:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c1"># read 10 characters, returns a bytes object</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>         <span class="c1"># read all available characters</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>     <span class="c1"># read a line</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">readinto</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>  <span class="c1"># read and store into the given buffer</span>
+<span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>   <span class="c1"># write the 3 characters</span>
+</pre></div>
+</div>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="machine.UART">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">machine.</span></span><span class="sig-name descname"><span class="pre">UART</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART" title="Link to this definition">¶</a></dt>
+<dd><p>Construct a UART object of the given id.</p>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.init">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baudrate=9600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bits=8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parity=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.init" title="Link to this definition">¶</a></dt>
+<dd><p>Initialise the UART bus with the given parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>baudrate</em> is the clock rate.</p></li>
+<li><p><em>bits</em> is the number of bits per character, 7, 8 or 9.</p></li>
+<li><p><em>parity</em> is the parity, <code class="docutils literal notranslate"><span class="pre">None</span></code>, 0 (even) or 1 (odd).</p></li>
+<li><p><em>stop</em> is the number of stop bits, 1 or 2.</p></li>
+</ul>
+</div></blockquote>
+<p>Additional keyword-only parameters that may be supported by a port are:</p>
+<blockquote>
+<div><ul>
+<li><p><em>tx</em> specifies the TX pin to use.</p></li>
+<li><p><em>rx</em> specifies the RX pin to use.</p></li>
+<li><p><em>rts</em> specifies the RTS (output) pin to use for hardware receive flow control.</p></li>
+<li><p><em>cts</em> specifies the CTS (input) pin to use for hardware transmit flow control.</p></li>
+<li><p><em>txbuf</em> specifies the length in characters of the TX buffer.</p></li>
+<li><p><em>rxbuf</em> specifies the length in characters of the RX buffer.</p></li>
+<li><p><em>timeout</em> specifies the time to wait for the first character (in ms).</p></li>
+<li><p><em>timeout_char</em> specifies the time to wait between characters (in ms).</p></li>
+<li><p><em>invert</em> specifies which lines to invert.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> will not invert lines (idle state of both lines is logic high).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UART.INV_TX</span></code> will invert TX line (idle state of TX line now logic low).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UART.INV_RX</span></code> will invert RX line (idle state of RX line now logic low).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UART.INV_TX</span> <span class="pre">|</span> <span class="pre">UART.INV_RX</span></code> will invert both lines (idle state at logic low).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><em>flow</em> specifies which hardware flow control signals to use. The value
+is a bitmask.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> will ignore hardware flow control signals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UART.RTS</span></code> will enable receive flow control by using the RTS output pin to
+signal if the receive FIFO has sufficient space to accept more data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UART.CTS</span></code> will enable transmit flow control by pausing transmission when the
+CTS input pin signals that the receiver is running low on buffer space.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UART.RTS</span> <span class="pre">|</span> <span class="pre">UART.CTS</span></code> will enable both, for full hardware flow control.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>On the WiPy only the following keyword-only parameter is supported:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>pins</em> is a 4 or 2 item list indicating the TX, RX, RTS and CTS pins (in that order).
+Any of the pins can be None if one wants the UART to operate with limited functionality.
+If the RTS pin is given the the RX pin must be given as well. The same applies to CTS.
+When no pins are given, then the default set of TX and RX pins is taken, and hardware
+flow control will be disabled. If <em>pins</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, no pin assignment will be made.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is possible to call <code class="docutils literal notranslate"><span class="pre">init()</span></code> multiple times on the same object in
+order to reconfigure  UART on the fly. That allows using single UART
+peripheral to serve different devices attached to different GPIO pins.
+Only one device can be served at a time in that case.
+Also do not call <code class="docutils literal notranslate"><span class="pre">deinit()</span></code> as it will prevent calling <code class="docutils literal notranslate"><span class="pre">init()</span></code>
+again.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.deinit">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">deinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.deinit" title="Link to this definition">¶</a></dt>
+<dd><p>Turn off the UART bus.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will not be able to call <code class="docutils literal notranslate"><span class="pre">init()</span></code> on the object after <code class="docutils literal notranslate"><span class="pre">deinit()</span></code>.
+A new instance needs to be created in that case.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.any">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">any</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.any" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an integer counting the number of characters that can be read without
+blocking.  It will return 0 if there are no characters available and a positive
+number if there are characters.  The method may return 1 even if there is more
+than one character available for reading.</p>
+<p>For more sophisticated querying of available characters use select.poll:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poll</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
+<span class="n">poll</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">uart</span><span class="p">,</span> <span class="n">select</span><span class="o">.</span><span class="n">POLLIN</span><span class="p">)</span>
+<span class="n">poll</span><span class="o">.</span><span class="n">poll</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.read">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">nbytes</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.read" title="Link to this definition">¶</a></dt>
+<dd><p>Read characters.  If <code class="docutils literal notranslate"><span class="pre">nbytes</span></code> is specified then read at most that many bytes,
+otherwise read as much data as possible. It may return sooner if a timeout
+is reached. The timeout is configurable in the constructor.</p>
+<p>Return value: a bytes object containing the bytes read in.  Returns <code class="docutils literal notranslate"><span class="pre">None</span></code>
+on timeout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.readinto">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">readinto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buf</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">nbytes</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.readinto" title="Link to this definition">¶</a></dt>
+<dd><p>Read bytes into the <code class="docutils literal notranslate"><span class="pre">buf</span></code>.  If <code class="docutils literal notranslate"><span class="pre">nbytes</span></code> is specified then read at most
+that many bytes.  Otherwise, read at most <code class="docutils literal notranslate"><span class="pre">len(buf)</span></code> bytes. It may return sooner if a timeout
+is reached. The timeout is configurable in the constructor.</p>
+<p>Return value: number of bytes read and stored into <code class="docutils literal notranslate"><span class="pre">buf</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code> on
+timeout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.readline">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">readline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.readline" title="Link to this definition">¶</a></dt>
+<dd><p>Read a line, ending in a newline character. It may return sooner if a timeout
+is reached. The timeout is configurable in the constructor.</p>
+<p>Return value: the line read or <code class="docutils literal notranslate"><span class="pre">None</span></code> on timeout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.write">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.write" title="Link to this definition">¶</a></dt>
+<dd><p>Write the buffer of bytes to the bus.</p>
+<p>Return value: number of bytes written or <code class="docutils literal notranslate"><span class="pre">None</span></code> on timeout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.sendbreak">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">sendbreak</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.sendbreak" title="Link to this definition">¶</a></dt>
+<dd><p>Send a break condition on the bus. This drives the bus low for a duration
+longer than required for a normal transmission of a character.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.irq">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">irq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trigger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wake</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">machine.IDLE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.irq" title="Link to this definition">¶</a></dt>
+<dd><p>Create a callback to be triggered when data is received on the UART.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>trigger</em> can only be <code class="docutils literal notranslate"><span class="pre">UART.RX_ANY</span></code></p></li>
+<li><p><em>priority</em> level of the interrupt. Can take values in the range 1-7.
+Higher values represent higher priorities.</p></li>
+<li><p><em>handler</em> an optional function to be called when new characters arrive.</p></li>
+<li><p><em>wake</em> can only be <code class="docutils literal notranslate"><span class="pre">machine.IDLE</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The handler will be called whenever any of the following two conditions are met:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>8 new characters have been received.</p></li>
+<li><p>At least 1 new character is waiting in the Rx buffer and the Rx line has been
+silent for the duration of 1 complete frame.</p></li>
+</ul>
+</div></blockquote>
+<p>This means that when the handler function is called there will be between 1 to 8
+characters waiting.</p>
+</div>
+<p>Returns an irq object.</p>
+<p>Availability: WiPy.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.flush">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.flush" title="Link to this definition">¶</a></dt>
+<dd><p>Waits until all data has been sent. In case of a timeout, an exception is raised. The timeout
+duration depends on the tx buffer size and the baud rate. Unless flow control is enabled, a timeout
+should not occur.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the rp2, esp8266 and nrf ports the call returns while the last byte is sent.
+If required, a one character wait time has to be added in the calling script.</p>
+</div>
+<p>Availability: rp2, esp32, esp8266, mimxrt, cc3200, stm32, nrf ports, renesas-ra</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.UART.txdone">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">txdone</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.UART.txdone" title="Link to this definition">¶</a></dt>
+<dd><p>Tells whether all data has been sent or no data transfer is happening. In this case,
+it returns <code class="docutils literal notranslate"><span class="pre">True</span></code>. If a data transmission is ongoing it returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the rp2, esp8266 and nrf ports the call may return <code class="docutils literal notranslate"><span class="pre">True</span></code> even if the last byte
+of a transfer is still being sent. If required, a one character wait time has to be
+added in the calling script.</p>
+</div>
+<p>Availability: rp2, esp32, esp8266, mimxrt, cc3200, stm32, nrf ports, renesas-ra</p>
+</dd></dl>
+
+</section>
+<section id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="machine.UART.RX_ANY">
+<span class="sig-prename descclassname"><span class="pre">UART.</span></span><span class="sig-name descname"><span class="pre">RX_ANY</span></span><a class="headerlink" href="#machine.UART.RX_ANY" title="Link to this definition">¶</a></dt>
+<dd><p>IRQ trigger sources</p>
+<p>Availability: WiPy.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class UART – duplex serial communication bus</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#machine.UART"><code class="docutils literal notranslate"><span class="pre">UART</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#machine.UART.init"><code class="docutils literal notranslate"><span class="pre">UART.init()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.deinit"><code class="docutils literal notranslate"><span class="pre">UART.deinit()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.any"><code class="docutils literal notranslate"><span class="pre">UART.any()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.read"><code class="docutils literal notranslate"><span class="pre">UART.read()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.readinto"><code class="docutils literal notranslate"><span class="pre">UART.readinto()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.readline"><code class="docutils literal notranslate"><span class="pre">UART.readline()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.write"><code class="docutils literal notranslate"><span class="pre">UART.write()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.sendbreak"><code class="docutils literal notranslate"><span class="pre">UART.sendbreak()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.irq"><code class="docutils literal notranslate"><span class="pre">UART.irq()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.flush"><code class="docutils literal notranslate"><span class="pre">UART.flush()</span></code></a></li>
+<li><a class="reference internal" href="#machine.UART.txdone"><code class="docutils literal notranslate"><span class="pre">UART.txdone()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#constants">Constants</a><ul>
+<li><a class="reference internal" href="#machine.UART.RX_ANY"><code class="docutils literal notranslate"><span class="pre">UART.RX_ANY</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="machine.PWM.html"
+                          title="previous chapter">class PWM – pulse width modulation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="machine.SPI.html"
+                          title="next chapter">class SPI – a Serial Peripheral Interface bus protocol (controller side)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/machine.UART.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="machine.SPI.html" title="class SPI – a Serial Peripheral Interface bus protocol (controller side)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="machine.PWM.html" title="class PWM – pulse width modulation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="machine.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class UART – duplex serial communication bus</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>General information about the MIMXRT port &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting started with MicroPython on the i.MXRT" href="tutorial/intro.html" />
+    <link rel="prev" title="Quick reference for the i.MXRT family" href="quickref.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial/intro.html" title="Getting started with MicroPython on the i.MXRT"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="quickref.html" title="Quick reference for the i.MXRT family"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="quickref.html" accesskey="U">Quick reference for the i.MXRT family</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">General information about the MIMXRT port</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="general-information-about-the-mimxrt-port">
+<span id="mimxrt-general"></span><h1>General information about the MIMXRT port<a class="headerlink" href="#general-information-about-the-mimxrt-port" title="Link to this heading">¶</a></h1>
+<p>The i.MXRT MCU family is a high performance family of devices made by NXP.
+Based on an ARM7 core, they provide many on-chip I/O units for building
+small to medium sized devices.</p>
+<section id="multitude-of-boards">
+<h2>Multitude of boards<a class="headerlink" href="#multitude-of-boards" title="Link to this heading">¶</a></h2>
+<p>There is a multitude of modules and boards from different sources which carry
+an i.MXRT chip.  MicroPython aims to provide a generic port which runs on
+as many boards/modules as possible, but there may be limitations.  The
+NXP IMXRT1020-EVK and the Teensy 4.0 and Teensy 4.1 development boards are taken
+as reference for the port (for example, testing is performed on them).
+For any board you are using please make sure you have a data sheet, schematics
+and other reference materials so you can look up any board-specific functions.</p>
+<p>The following boards are supported by the port:</p>
+<ul class="simple">
+<li><p>MIMXRT1010-EVK</p></li>
+<li><p>MIMXRT1020-EVK</p></li>
+<li><p>MIMXRT1050-EVK</p></li>
+<li><p>MIMXRT1060-EVK</p></li>
+<li><p>MIMXRT1064-EVK</p></li>
+<li><p>Teensy 4.0</p></li>
+<li><p>Teensy 4.1</p></li>
+</ul>
+</section>
+<section id="supported-mcus">
+<h2>Supported MCUs<a class="headerlink" href="#supported-mcus" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Product</p></th>
+<th class="head"><p>CPU</p></th>
+<th class="head"><p>Memory</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>i.MX RT1064</p></td>
+<td><p>Cortex-M7 &#64;600 MHz</p></td>
+<td><p>1 MB SRAM, 4 MB Flash</p></td>
+</tr>
+<tr class="row-odd"><td><p>i.MX RT1061</p></td>
+<td><p>Cortex-M7 &#64;600 MHz</p></td>
+<td><p>1 MB SRAM</p></td>
+</tr>
+<tr class="row-even"><td><p>i.MX RT1062</p></td>
+<td><p>Cortex-M7 &#64;600 MHz</p></td>
+<td><p>1 MB SRAM</p></td>
+</tr>
+<tr class="row-odd"><td><p>i.MX RT1050</p></td>
+<td><p>Cortex-M7 &#64;600 MHz</p></td>
+<td><p>512 kB SRAM</p></td>
+</tr>
+<tr class="row-even"><td><p>i.MX RT1020</p></td>
+<td><p>Cortex-M7 &#64;500 MHz</p></td>
+<td><p>256 kB SRAM</p></td>
+</tr>
+<tr class="row-odd"><td><p>i.MX RT1015</p></td>
+<td><p>Cortex-M7 &#64;500 MHz</p></td>
+<td><p>128 kB SRAM</p></td>
+</tr>
+<tr class="row-even"><td><p>i.MX RT1010</p></td>
+<td><p>Cortex-M7 &#64;500 MHz</p></td>
+<td><p>128 kB SRAM</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note: Most of the controllers do not have internal flash memory. Therefore
+their flash capacity is dependent on an external flash chip.</p>
+<p>To make a generic MIMXRT port and support as many boards as possible the
+following design and implementation decision were made:</p>
+<ul class="simple">
+<li><p>GPIO pin numbering is based on the board numbering as well as on the
+MCU numbering.  Please have the manual/pin diagram of your board at hand
+to find correspondence between your board pins and actual i.MXRT pins.</p></li>
+<li><p>All MCU pins are supported by MicroPython but not all are usable on any given board.</p></li>
+</ul>
+</section>
+<section id="technical-specifications-and-soc-datasheets">
+<h2>Technical specifications and SoC datasheets<a class="headerlink" href="#technical-specifications-and-soc-datasheets" title="Link to this heading">¶</a></h2>
+<p>The data sheets and other reference material for i.MXRT chip are available
+from the vendor site: <a class="reference external" href="https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/i-mx-rt-crossover-mcus:IMX-RT-SERIES">https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/i-mx-rt-crossover-mcus:IMX-RT-SERIES</a> .
+They are the primary reference for the chip technical specifications, capabilities,
+operating modes, internal functioning, etc.</p>
+<p>For your convenience, a few technical specifications are provided below:</p>
+<ul class="simple">
+<li><p>Architecture: ARM Cortex M7</p></li>
+<li><p>CPU frequency: up to 600MHz</p></li>
+<li><p>Total RAM available: up to 1 MByte (see table)</p></li>
+<li><p>BootROM: 96KB</p></li>
+<li><p>External FlashROM: code and data, via SPI Flash; usual size 2 - 16 MB
+Some boards provide additional external RAM and SPI flash.</p></li>
+<li><p>GPIO: up to 124 (GPIOs are multiplexed with other functions, including
+external FlashROM, UART, etc.)</p></li>
+<li><p>UART: 4 or 8 RX/TX UART. Hardware handshaking is supported by the MCU,
+but the boards used for testing do not expose the signals.</p></li>
+<li><p>SPI: 2 or 4 low power SPI interfaces (software implementation available on every pin)</p></li>
+<li><p>I2C: 2 or 4 low power I2C interfaces (software implementation available on every pin)</p></li>
+<li><p>I2S: 1 to 3 I2S interfaces</p></li>
+<li><p>ADC: one or two 12-bit SAR ADC converters</p></li>
+<li><p>Ethernet controller (except i.MX RT1010/-1015)</p></li>
+<li><p>Programming: using BootROM bootloader from USB - due to external FlashROM
+and always-available BootROM bootloader, the MIMXRT is not brickable</p></li>
+</ul>
+<p>The lower numbers for UART, SPI and I2C apply to the i.MXRT 101x MCU.</p>
+<p>For more information see the i.MXRT data sheets or reference manuals.
+NXP provides software support through it’s SDK packages.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">General information about the MIMXRT port</a><ul>
+<li><a class="reference internal" href="#multitude-of-boards">Multitude of boards</a></li>
+<li><a class="reference internal" href="#supported-mcus">Supported MCUs</a></li>
+<li><a class="reference internal" href="#technical-specifications-and-soc-datasheets">Technical specifications and SoC datasheets</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="quickref.html"
+                          title="previous chapter">Quick reference for the i.MXRT family</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tutorial/intro.html"
+                          title="next chapter">Getting started with MicroPython on the i.MXRT</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/mimxrt/general.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial/intro.html" title="Getting started with MicroPython on the i.MXRT"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="quickref.html" title="Quick reference for the i.MXRT family"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="quickref.html" >Quick reference for the i.MXRT family</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">General information about the MIMXRT port</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

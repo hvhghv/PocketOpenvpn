@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hashlib – hashing algorithms &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="heapq – heap queue algorithm" href="heapq.html" />
+    <link rel="prev" title="gzip – gzip compression &amp; decompression" href="gzip.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="heapq.html" title="heapq – heap queue algorithm"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gzip.html" title="gzip – gzip compression &amp; decompression"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code> – hashing algorithms</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-hashlib">
+<span id="hashlib-hashing-algorithms"></span><h1><a class="reference internal" href="#module-hashlib" title="hashlib: hashing algorithms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code></a> – hashing algorithms<a class="headerlink" href="#module-hashlib" title="Link to this heading">¶</a></h1>
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-CPython"><span class="xref std std-term">CPython</span></a> <em>module,
+as described below. For more information, refer to the original
+CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/hashlib.html#module-hashlib" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">hashlib</span></code></a>.</p>
+<p>This module implements binary data hashing algorithms. The exact inventory
+of available algorithms depends on a board. Among the algorithms which may
+be implemented:</p>
+<ul class="simple">
+<li><p>SHA256 - The current generation, modern hashing algorithm (of SHA2 series).
+It is suitable for cryptographically-secure purposes. Included in the
+MicroPython core and any board is recommended to provide this, unless
+it has particular code size constraints.</p></li>
+<li><p>SHA1 - A previous generation algorithm. Not recommended for new usages,
+but SHA1 is a part of number of Internet standards and existing
+applications, so boards targeting network connectivity and
+interoperability will try to provide this.</p></li>
+<li><p>MD5 - A legacy algorithm, not considered cryptographically secure. Only
+selected boards, targeting interoperability with legacy applications,
+will offer this.</p></li>
+</ul>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="hashlib.hashlib.sha256">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hashlib.</span></span><span class="sig-name descname"><span class="pre">sha256</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#hashlib.hashlib.sha256" title="Link to this definition">¶</a></dt>
+<dd><p>Create an SHA256 hasher object and optionally feed <code class="docutils literal notranslate"><span class="pre">data</span></code> into it.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hashlib.hashlib.sha1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hashlib.</span></span><span class="sig-name descname"><span class="pre">sha1</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#hashlib.hashlib.sha1" title="Link to this definition">¶</a></dt>
+<dd><p>Create an SHA1 hasher object and optionally feed <code class="docutils literal notranslate"><span class="pre">data</span></code> into it.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hashlib.hashlib.md5">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hashlib.</span></span><span class="sig-name descname"><span class="pre">md5</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#hashlib.hashlib.md5" title="Link to this definition">¶</a></dt>
+<dd><p>Create an MD5 hasher object and optionally feed <code class="docutils literal notranslate"><span class="pre">data</span></code> into it.</p>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="hashlib.hash.update">
+<span class="sig-prename descclassname"><span class="pre">hash.</span></span><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hashlib.hash.update" title="Link to this definition">¶</a></dt>
+<dd><p>Feed more binary data into hash.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hashlib.hash.digest">
+<span class="sig-prename descclassname"><span class="pre">hash.</span></span><span class="sig-name descname"><span class="pre">digest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashlib.hash.digest" title="Link to this definition">¶</a></dt>
+<dd><p>Return hash for all data passed through hash, as a bytes object. After this
+method is called, more data cannot be fed into the hash any longer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hashlib.hash.hexdigest">
+<span class="sig-prename descclassname"><span class="pre">hash.</span></span><span class="sig-name descname"><span class="pre">hexdigest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashlib.hash.hexdigest" title="Link to this definition">¶</a></dt>
+<dd><p>This method is NOT implemented. Use <code class="docutils literal notranslate"><span class="pre">binascii.hexlify(hash.digest())</span></code>
+to achieve a similar effect.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code> – hashing algorithms</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#hashlib.hashlib.sha256"><code class="docutils literal notranslate"><span class="pre">hashlib.sha256</span></code></a></li>
+<li><a class="reference internal" href="#hashlib.hashlib.sha1"><code class="docutils literal notranslate"><span class="pre">hashlib.sha1</span></code></a></li>
+<li><a class="reference internal" href="#hashlib.hashlib.md5"><code class="docutils literal notranslate"><span class="pre">hashlib.md5</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#hashlib.hash.update"><code class="docutils literal notranslate"><span class="pre">hash.update()</span></code></a></li>
+<li><a class="reference internal" href="#hashlib.hash.digest"><code class="docutils literal notranslate"><span class="pre">hash.digest()</span></code></a></li>
+<li><a class="reference internal" href="#hashlib.hash.hexdigest"><code class="docutils literal notranslate"><span class="pre">hash.hexdigest()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="gzip.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">gzip</span></code> – gzip compression &amp; decompression</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="heapq.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code> – heap queue algorithm</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/hashlib.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="heapq.html" title="heapq – heap queue algorithm"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gzip.html" title="gzip – gzip compression &amp; decompression"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">hashlib</span></code> – hashing algorithms</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

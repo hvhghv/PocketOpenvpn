@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>network — network configuration &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class WLAN – control built-in WiFi interfaces" href="network.WLAN.html" />
+    <link rel="prev" title="neopixel — control of WS2812 / NeoPixel LEDs" href="neopixel.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="network.WLAN.html" title="class WLAN – control built-in WiFi interfaces"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="neopixel.html" title="neopixel — control of WS2812 / NeoPixel LEDs"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-network">
+<span id="network-network-configuration"></span><h1><a class="reference internal" href="#module-network" title="network: network configuration"><code class="xref py py-mod docutils literal notranslate"><span class="pre">network</span></code></a> — network configuration<a class="headerlink" href="#module-network" title="Link to this heading">¶</a></h1>
+<p>This module provides network drivers and routing configuration. To use this
+module, a MicroPython variant/build with network capabilities must be installed.
+Network drivers for specific hardware are available within this module and are
+used to configure hardware network interface(s). Network services provided
+by configured interfaces are then available for use via the <a class="reference internal" href="socket.html#module-socket" title="socket: socket module"><code class="xref py py-mod docutils literal notranslate"><span class="pre">socket</span></code></a>
+module.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># connect/ show IP config a specific network interface</span>
+<span class="c1"># see below for examples of specific drivers</span>
+<span class="kn">import</span> <span class="nn">network</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">nic</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">Driver</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">nic</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+    <span class="n">nic</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Waiting for connection...&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">nic</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nic</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
+
+<span class="c1"># now use socket as usual</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="n">addr</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="s1">&#39;micropython.org&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
+<span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;GET / HTTP/1.1</span><span class="se">\r\n</span><span class="s1">Host: micropython.org</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="common-network-adapter-interface">
+<h2>Common network adapter interface<a class="headerlink" href="#common-network-adapter-interface" title="Link to this heading">¶</a></h2>
+<p>This section describes an (implied) abstract base class for all network
+interface classes implemented by <a class="reference internal" href="../reference/glossary.html#term-MicroPython-port"><span class="xref std std-term">MicroPython ports</span></a>
+for different hardware. This means that MicroPython does not actually
+provide <code class="docutils literal notranslate"><span class="pre">AbstractNIC</span></code> class, but any actual NIC class, as described
+in the following sections, implements methods as described here.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="network.AbstractNIC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">network.</span></span><span class="sig-name descname"><span class="pre">AbstractNIC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Instantiate a network interface object. Parameters are network interface
+dependent. If there are more than one interface of the same type, the first
+parameter should be <a class="reference internal" href="builtins.html#id" title="id"><code class="xref any py py-func docutils literal notranslate"><span class="pre">id</span></code></a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="network.AbstractNIC.active">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">active</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">is_active</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC.active" title="Link to this definition">¶</a></dt>
+<dd><p>Activate (“up”) or deactivate (“down”) the network interface, if
+a boolean argument is passed. Otherwise, query current state if
+no argument is provided. Most other methods require an active
+interface (behaviour of calling them on inactive interface is
+undefined).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.AbstractNIC.connect">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">service_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC.connect" title="Link to this definition">¶</a></dt>
+<dd><p>Connect the interface to a network. This method is optional, and
+available only for interfaces which are not “always connected”.
+If no parameters are given, connect to the default (or the only)
+service. If a single parameter is given, it is the primary identifier
+of a service to connect to. It may be accompanied by a key
+(password) required to access said service. There can be further
+arbitrary keyword-only parameters, depending on the networking medium
+type and/or particular device. Parameters can be used to: a)
+specify alternative service identifier types; b) provide additional
+connection parameters. For various medium types, there are different
+sets of predefined/recommended parameters, among them:</p>
+<ul class="simple">
+<li><p>WiFi: <em>bssid</em> keyword to connect to a specific BSSID (MAC address)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.AbstractNIC.disconnect">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC.disconnect" title="Link to this definition">¶</a></dt>
+<dd><p>Disconnect from network.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.AbstractNIC.isconnected">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">isconnected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC.isconnected" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if connected to network, otherwise returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.AbstractNIC.scan">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">scan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC.scan" title="Link to this definition">¶</a></dt>
+<dd><p>Scan for the available network services/connections. Returns a
+list of tuples with discovered service parameters. For various
+network media, there are different variants of predefined/
+recommended tuple formats, among them:</p>
+<ul class="simple">
+<li><p>WiFi: (ssid, bssid, channel, RSSI, security, hidden). There
+may be further fields, specific to a particular device.</p></li>
+</ul>
+<p>The function may accept additional keyword arguments to filter scan
+results (e.g. scan for a particular service, on a particular channel,
+for services of a particular set, etc.), and to affect scan
+duration and other parameters. Where possible, parameter names
+should match those in connect().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.AbstractNIC.status">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC.status" title="Link to this definition">¶</a></dt>
+<dd><p>Query dynamic status information of the interface.  When called with no
+argument the return value describes the network link status.  Otherwise
+<em>param</em> should be a string naming the particular status parameter to
+retrieve.</p>
+<p>The return types and values are dependent on the network
+medium/technology.  Some of the parameters that may be supported are:</p>
+<ul class="simple">
+<li><p>WiFi STA: use <code class="docutils literal notranslate"><span class="pre">'rssi'</span></code> to retrieve the RSSI of the AP signal</p></li>
+<li><p>WiFi AP: use <code class="docutils literal notranslate"><span class="pre">'stations'</span></code> to retrieve a list of all the STAs
+connected to the AP.  The list contains tuples of the form
+(MAC, RSSI).</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.AbstractNIC.ifconfig">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">ifconfig</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">(ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subnet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gateway</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dns)</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC.ifconfig" title="Link to this definition">¶</a></dt>
+<dd><p>Get/set IP-level network interface parameters: IP address, subnet mask,
+gateway and DNS server. When called with no arguments, this method returns
+a 4-tuple with the above information. To set the above values, pass a
+4-tuple with the required information.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nic</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">((</span><span class="s1">&#39;192.168.0.4&#39;</span><span class="p">,</span> <span class="s1">&#39;255.255.255.0&#39;</span><span class="p">,</span> <span class="s1">&#39;192.168.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;8.8.8.8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="network.AbstractNIC.config">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">'param'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network.AbstractNIC.config" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">AbstractNIC.</span></span><span class="sig-name descname"><span class="pre">config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param=value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get or set general network interface parameters. These methods allow to work
+with additional parameters beyond standard IP configuration (as dealt with by
+<a class="reference internal" href="#network.AbstractNIC.ifconfig" title="network.AbstractNIC.ifconfig"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">ifconfig()</span></code></a>). These include network-specific and hardware-specific
+parameters. For setting parameters, the keyword argument
+syntax should be used, and multiple parameters can be set at once. For
+querying, a parameter name should be quoted as a string, and only one
+parameter can be queried at a time:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set WiFi access point name (formally known as SSID) and WiFi channel</span>
+<span class="n">ap</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">ssid</span><span class="o">=</span><span class="s1">&#39;My AP&#39;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="c1"># Query params one by one</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ap</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s1">&#39;ssid&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ap</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s1">&#39;channel&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="specific-network-class-implementations">
+<h2>Specific network class implementations<a class="headerlink" href="#specific-network-class-implementations" title="Link to this heading">¶</a></h2>
+<p>The following concrete classes implement the AbstractNIC interface and
+provide a way to control networking interfaces of various kinds.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="network.WLAN.html">class WLAN – control built-in WiFi interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.WLANWiPy.html">class WLANWiPy – WiPy specific WiFi control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.WIZNET5K.html">class WIZNET5K – control WIZnet5x00 Ethernet modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.LAN.html">class LAN – control an Ethernet module</a></li>
+</ul>
+</div>
+</section>
+<section id="network-functions">
+<h2>Network functions<a class="headerlink" href="#network-functions" title="Link to this heading">¶</a></h2>
+<p>The following are functions available in the network module.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="network.country">
+<span class="sig-prename descclassname"><span class="pre">network.</span></span><span class="sig-name descname"><span class="pre">country</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.country" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set the two-letter ISO 3166-1 Alpha-2 country code to be used for
+radio compliance.</p>
+<p>If the <em>code</em> parameter is provided, the country will be set to this value.
+If the function is called without parameters, it returns the current
+country.</p>
+<p>The default code <code class="docutils literal notranslate"><span class="pre">&quot;XX&quot;</span></code> represents the “worldwide” region.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="network.hostname">
+<span class="sig-prename descclassname"><span class="pre">network.</span></span><span class="sig-name descname"><span class="pre">hostname</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.hostname" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set the hostname that will identify this device on the network. It will
+be used by all interfaces.</p>
+<dl class="simple">
+<dt>This hostname is used for:</dt><dd><ul class="simple">
+<li><p>Sending to the DHCP server in the client request. (If using DHCP)</p></li>
+<li><p>Broadcasting via mDNS. (If enabled)</p></li>
+</ul>
+</dd>
+</dl>
+<p>If the <em>name</em> parameter is provided, the hostname will be set to this value.
+If the function is called without parameters, it returns the current
+hostname.</p>
+<p>A change in hostname is typically only applied during connection. For DHCP
+this is because the hostname is part of the DHCP client request, and the
+implementation of mDNS in most ports only initialises the hostname once
+during connection. For this reason, you must set the hostname before
+activating/connecting your network interfaces.</p>
+<p>The length of the hostname is limited to 32 characters.
+<a class="reference internal" href="../reference/glossary.html#term-MicroPython-port"><span class="xref std std-term">MicroPython ports</span></a> may choose to set a lower
+limit for memory reasons. If the given name does not fit, a <a class="reference internal" href="builtins.html#ValueError" title="ValueError"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>
+is raised.</p>
+<p>The default hostname is typically the name of the board.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="network.phy_mode">
+<span class="sig-prename descclassname"><span class="pre">network.</span></span><span class="sig-name descname"><span class="pre">phy_mode</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#network.phy_mode" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set the PHY mode.</p>
+<p>If the <em>mode</em> parameter is provided, the PHY mode will be set to this value.
+If the function is called without parameters, it returns the current PHY
+mode.</p>
+<dl class="simple">
+<dt>The possible modes are defined as constants:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MODE_11B</span></code> – IEEE 802.11b,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MODE_11G</span></code> – IEEE 802.11g,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MODE_11N</span></code> – IEEE 802.11n.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Availability: ESP8266.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a><ul>
+<li><a class="reference internal" href="#common-network-adapter-interface">Common network adapter interface</a><ul>
+<li><a class="reference internal" href="#network.AbstractNIC"><code class="docutils literal notranslate"><span class="pre">AbstractNIC</span></code></a></li>
+<li><a class="reference internal" href="#network.AbstractNIC.active"><code class="docutils literal notranslate"><span class="pre">AbstractNIC.active()</span></code></a></li>
+<li><a class="reference internal" href="#network.AbstractNIC.connect"><code class="docutils literal notranslate"><span class="pre">AbstractNIC.connect()</span></code></a></li>
+<li><a class="reference internal" href="#network.AbstractNIC.disconnect"><code class="docutils literal notranslate"><span class="pre">AbstractNIC.disconnect()</span></code></a></li>
+<li><a class="reference internal" href="#network.AbstractNIC.isconnected"><code class="docutils literal notranslate"><span class="pre">AbstractNIC.isconnected()</span></code></a></li>
+<li><a class="reference internal" href="#network.AbstractNIC.scan"><code class="docutils literal notranslate"><span class="pre">AbstractNIC.scan()</span></code></a></li>
+<li><a class="reference internal" href="#network.AbstractNIC.status"><code class="docutils literal notranslate"><span class="pre">AbstractNIC.status()</span></code></a></li>
+<li><a class="reference internal" href="#network.AbstractNIC.ifconfig"><code class="docutils literal notranslate"><span class="pre">AbstractNIC.ifconfig()</span></code></a></li>
+<li><a class="reference internal" href="#network.AbstractNIC.config"><code class="docutils literal notranslate"><span class="pre">AbstractNIC.config()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#specific-network-class-implementations">Specific network class implementations</a></li>
+<li><a class="reference internal" href="#network-functions">Network functions</a><ul>
+<li><a class="reference internal" href="#network.country"><code class="docutils literal notranslate"><span class="pre">country()</span></code></a></li>
+<li><a class="reference internal" href="#network.hostname"><code class="docutils literal notranslate"><span class="pre">hostname()</span></code></a></li>
+<li><a class="reference internal" href="#network.phy_mode"><code class="docutils literal notranslate"><span class="pre">phy_mode()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="neopixel.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">neopixel</span></code> — control of WS2812 / NeoPixel LEDs</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="network.WLAN.html"
+                          title="next chapter">class WLAN – control built-in WiFi interfaces</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/network.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="network.WLAN.html" title="class WLAN – control built-in WiFi interfaces"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="neopixel.html" title="neopixel — control of WS2812 / NeoPixel LEDs"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">network</span></code> — network configuration</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>collections – collection and container types &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="errno – system error codes" href="errno.html" />
+    <link rel="prev" title="cmath – mathematical functions for complex numbers" href="cmath.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="errno.html" title="errno – system error codes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cmath.html" title="cmath – mathematical functions for complex numbers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code> – collection and container types</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-collections">
+<span id="collections-collection-and-container-types"></span><h1><a class="reference internal" href="#module-collections" title="collections: collection and container types"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> – collection and container types<a class="headerlink" href="#module-collections" title="Link to this heading">¶</a></h1>
+<p><em>This module implements a subset of the corresponding</em> <a class="reference internal" href="../reference/glossary.html#term-CPython"><span class="xref std std-term">CPython</span></a> <em>module,
+as described below. For more information, refer to the original
+CPython documentation:</em> <a class="reference external" href="https://docs.python.org/3.5/library/collections.html#module-collections" title="(in Python v3.5)"><code class="docutils literal notranslate"><span class="pre">collections</span></code></a>.</p>
+<p>This module implements advanced collection and container types to
+hold/accumulate various objects.</p>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="collections.deque">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">collections.</span></span><span class="sig-name descname"><span class="pre">deque</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxlen</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque" title="Link to this definition">¶</a></dt>
+<dd><p>Deques (double-ended queues) are a list-like container that support O(1)
+appends and pops from either side of the deque.  New deques are created
+using the following arguments:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>iterable</em> is an iterable used to populate the deque when it is
+created.  It can be an empty tuple or list to create a deque that
+is initially empty.</p></li>
+<li><p><em>maxlen</em> must be specified and the deque will be bounded to this
+maximum length.  Once the deque is full, any new items added will
+discard items from the opposite end.</p></li>
+<li><p>The optional <em>flags</em> can be 1 to check for overflow when adding items.</p></li>
+</ul>
+</div></blockquote>
+<p>Deque objects support <a class="reference internal" href="builtins.html#bool" title="bool"><code class="xref any py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, <a class="reference internal" href="builtins.html#len" title="len"><code class="xref any py py-func docutils literal notranslate"><span class="pre">len</span></code></a>, iteration and subscript load and store.
+They also have the following methods:</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="collections.deque.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.append" title="Link to this definition">¶</a></dt>
+<dd><p>Add <em>x</em> to the right side of the deque.
+Raises <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> if overflow checking is enabled and there is
+no more room in the queue.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="collections.deque.appendleft">
+<span class="sig-name descname"><span class="pre">appendleft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.appendleft" title="Link to this definition">¶</a></dt>
+<dd><p>Add <em>x</em> to the left side of the deque.
+Raises <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> if overflow checking is enabled and there is
+no more room in the queue.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="collections.deque.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.pop" title="Link to this definition">¶</a></dt>
+<dd><p>Remove and return an item from the right side of the deque.
+Raises <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> if no items are present.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="collections.deque.popleft">
+<span class="sig-name descname"><span class="pre">popleft</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.popleft" title="Link to this definition">¶</a></dt>
+<dd><p>Remove and return an item from the left side of the deque.
+Raises <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> if no items are present.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="collections.deque.extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#collections.deque.extend" title="Link to this definition">¶</a></dt>
+<dd><p>Extend the deque by appending all the items from <em>iterable</em> to
+the right of the deque.
+Raises <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> if overflow checking is enabled and there is
+no more room in the deque.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="collections.namedtuple">
+<span class="sig-prename descclassname"><span class="pre">collections.</span></span><span class="sig-name descname"><span class="pre">namedtuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#collections.namedtuple" title="Link to this definition">¶</a></dt>
+<dd><p>This is factory function to create a new namedtuple type with a specific
+name and set of fields. A namedtuple is a subclass of tuple which allows
+to access its fields not just by numeric index, but also with an attribute
+access syntax using symbolic field names. Fields is a sequence of strings
+specifying field names. For compatibility with CPython it can also be a
+a string with space-separated field named (but this is less efficient).
+Example of use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+
+<span class="n">MyTuple</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;MyTuple&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">))</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">MyTuple</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">MyTuple</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">t2</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">t2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="collections.OrderedDict">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">collections.</span></span><span class="sig-name descname"><span class="pre">OrderedDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#collections.OrderedDict" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">dict</span></code> type subclass which remembers and preserves the order of keys
+added. When ordered dict is iterated over, keys/items are returned in
+the order they were added:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+
+<span class="c1"># To make benefit of ordered keys, OrderedDict should be initialized</span>
+<span class="c1"># from sequence of (key, value) pairs.</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">([(</span><span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+<span class="c1"># More items can be added as usual</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;w&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="mi">1</span>
+<span class="n">a</span> <span class="mi">2</span>
+<span class="n">w</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code> – collection and container types</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a><ul>
+<li><a class="reference internal" href="#collections.deque"><code class="docutils literal notranslate"><span class="pre">deque</span></code></a><ul>
+<li><a class="reference internal" href="#collections.deque.append"><code class="docutils literal notranslate"><span class="pre">deque.append()</span></code></a></li>
+<li><a class="reference internal" href="#collections.deque.appendleft"><code class="docutils literal notranslate"><span class="pre">deque.appendleft()</span></code></a></li>
+<li><a class="reference internal" href="#collections.deque.pop"><code class="docutils literal notranslate"><span class="pre">deque.pop()</span></code></a></li>
+<li><a class="reference internal" href="#collections.deque.popleft"><code class="docutils literal notranslate"><span class="pre">deque.popleft()</span></code></a></li>
+<li><a class="reference internal" href="#collections.deque.extend"><code class="docutils literal notranslate"><span class="pre">deque.extend()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#collections.namedtuple"><code class="docutils literal notranslate"><span class="pre">namedtuple()</span></code></a></li>
+<li><a class="reference internal" href="#collections.OrderedDict"><code class="docutils literal notranslate"><span class="pre">OrderedDict</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cmath.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code> – mathematical functions for complex numbers</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="errno.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">errno</span></code> – system error codes</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/collections.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="errno.html" title="errno – system error codes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cmath.html" title="cmath – mathematical functions for complex numbers"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code> – collection and container types</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

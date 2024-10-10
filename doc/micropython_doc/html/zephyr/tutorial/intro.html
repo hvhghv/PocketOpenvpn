@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. Getting started with MicroPython on the Zephyr port &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. Getting a MicroPython REPL prompt" href="repl.html" />
+    <link rel="prev" title="MicroPython tutorial for the Zephyr port" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="repl.html" title="2. Getting a MicroPython REPL prompt"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="MicroPython tutorial for the Zephyr port"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the Zephyr port</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">MicroPython tutorial for the Zephyr port</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Getting started with MicroPython on the Zephyr port</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="getting-started-with-micropython-on-the-zephyr-port">
+<span id="intro-zephyr"></span><h1><span class="section-number">1. </span>Getting started with MicroPython on the Zephyr port<a class="headerlink" href="#getting-started-with-micropython-on-the-zephyr-port" title="Link to this heading">¶</a></h1>
+<p>Let’s get started!</p>
+<section id="requirements">
+<h2><span class="section-number">1.1. </span>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>To use the MicroPython Zephyr port, you will need a Zephyr supported board (for a list of acceptable
+boards see <a class="reference internal" href="../general.html#zephyr-general"><span class="std std-ref">General information about the Zephyr port</span></a>).</p>
+</section>
+<section id="powering-up">
+<h2><span class="section-number">1.2. </span>Powering up<a class="headerlink" href="#powering-up" title="Link to this heading">¶</a></h2>
+<p>If your board has a USB connector on it then most likely it is powered
+through this when connected to your PC. Otherwise you will need to power
+it directly. Please refer to the documentation for your board for
+further details.</p>
+</section>
+<section id="getting-and-deploying-the-firmware">
+<h2><span class="section-number">1.3. </span>Getting and deploying the firmware<a class="headerlink" href="#getting-and-deploying-the-firmware" title="Link to this heading">¶</a></h2>
+<p>The first step you will need to do is either clone the <a class="reference external" href="https://github.com/micropython/micropython.git">MicroPython repository</a>
+or download it from the <a class="reference external" href="http://micropython.org/download">MicroPython downloads page</a>. If you are an end user of MicroPython,
+it is recommended to start with the stable firmware builds. If you would like to work on development, you may follow the daily
+builds on git.</p>
+<p>Next, follow the Zephyr port readme document (<code class="docutils literal notranslate"><span class="pre">ports/zephyr/README.md</span></code>) to build and run the application on your board.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">1. Getting started with MicroPython on the Zephyr port</a><ul>
+<li><a class="reference internal" href="#requirements">1.1. Requirements</a></li>
+<li><a class="reference internal" href="#powering-up">1.2. Powering up</a></li>
+<li><a class="reference internal" href="#getting-and-deploying-the-firmware">1.3. Getting and deploying the firmware</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">MicroPython tutorial for the Zephyr port</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="repl.html"
+                          title="next chapter"><span class="section-number">2. </span>Getting a MicroPython REPL prompt</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/zephyr/tutorial/intro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="repl.html" title="2. Getting a MicroPython REPL prompt"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="MicroPython tutorial for the Zephyr port"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the Zephyr port</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >MicroPython tutorial for the Zephyr port</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Getting started with MicroPython on the Zephyr port</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

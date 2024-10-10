@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class PWM – pulse width modulation &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="class UART – duplex serial communication bus" href="machine.UART.html" />
+    <link rel="prev" title="class ADCBlock – control ADC peripherals" href="machine.ADCBlock.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="machine.UART.html" title="class UART – duplex serial communication bus"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="machine.ADCBlock.html" title="class ADCBlock – control ADC peripherals"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="machine.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class PWM – pulse width modulation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="class-pwm-pulse-width-modulation">
+<span id="machine-pwm"></span><h1>class PWM – pulse width modulation<a class="headerlink" href="#class-pwm-pulse-width-modulation" title="Link to this heading">¶</a></h1>
+<p>This class provides pulse width modulation output.</p>
+<p>Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">PWM</span>
+
+<span class="n">pwm</span> <span class="o">=</span> <span class="n">PWM</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">duty_u16</span><span class="o">=</span><span class="mi">8192</span><span class="p">)</span>  <span class="c1"># create a PWM object on a pin</span>
+                                        <span class="c1"># and set freq and duty</span>
+<span class="n">pwm</span><span class="o">.</span><span class="n">duty_u16</span><span class="p">(</span><span class="mi">32768</span><span class="p">)</span>     <span class="c1"># set duty to 50%</span>
+
+<span class="c1"># reinitialise with a period of 200us, duty of 5us</span>
+<span class="n">pwm</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">duty_ns</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+
+<span class="n">pwm</span><span class="o">.</span><span class="n">duty_ns</span><span class="p">(</span><span class="mi">3000</span><span class="p">)</span>       <span class="c1"># set pulse width to 3us</span>
+
+<span class="n">pwm</span><span class="o">.</span><span class="n">deinit</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="machine.PWM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">machine.</span></span><span class="sig-name descname"><span class="pre">PWM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duty_u16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duty_ns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.PWM" title="Link to this definition">¶</a></dt>
+<dd><p>Construct and return a new PWM object using the following parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>dest</em> is the entity on which the PWM is output, which is usually a
+<a class="reference internal" href="machine.Pin.html#machine-pin"><span class="std std-ref">machine.Pin</span></a> object, but a port may allow other values,
+like integers.</p></li>
+<li><p><em>freq</em> should be an integer which sets the frequency in Hz for the
+PWM cycle.</p></li>
+<li><p><em>duty_u16</em> sets the duty cycle as a ratio <code class="docutils literal notranslate"><span class="pre">duty_u16</span> <span class="pre">/</span> <span class="pre">65535</span></code>.</p></li>
+<li><p><em>duty_ns</em> sets the pulse width in nanoseconds.</p></li>
+<li><p><em>invert</em>  inverts the respective output if the value is True</p></li>
+</ul>
+</div></blockquote>
+<p>Setting <em>freq</em> may affect other PWM objects if the objects share the same
+underlying PWM generator (this is hardware specific).
+Only one of <em>duty_u16</em> and <em>duty_ns</em> should be specified at a time.
+<em>invert</em> is not available at all ports.</p>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.PWM.init">
+<span class="sig-prename descclassname"><span class="pre">PWM.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duty_u16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duty_ns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#machine.PWM.init" title="Link to this definition">¶</a></dt>
+<dd><p>Modify settings for the PWM object.  See the above constructor for details
+about the parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.PWM.deinit">
+<span class="sig-prename descclassname"><span class="pre">PWM.</span></span><span class="sig-name descname"><span class="pre">deinit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.PWM.deinit" title="Link to this definition">¶</a></dt>
+<dd><p>Disable the PWM output.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.PWM.freq">
+<span class="sig-prename descclassname"><span class="pre">PWM.</span></span><span class="sig-name descname"><span class="pre">freq</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.PWM.freq" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set the current frequency of the PWM output.</p>
+<p>With no arguments the frequency in Hz is returned.</p>
+<p>With a single <em>value</em> argument the frequency is set to that value in Hz.  The
+method may raise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> if the frequency is outside the valid range.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.PWM.duty_u16">
+<span class="sig-prename descclassname"><span class="pre">PWM.</span></span><span class="sig-name descname"><span class="pre">duty_u16</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.PWM.duty_u16" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set the current duty cycle of the PWM output, as an unsigned 16-bit
+value in the range 0 to 65535 inclusive.</p>
+<p>With no arguments the duty cycle is returned.</p>
+<p>With a single <em>value</em> argument the duty cycle is set to that value, measured
+as the ratio <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">/</span> <span class="pre">65535</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="machine.PWM.duty_ns">
+<span class="sig-prename descclassname"><span class="pre">PWM.</span></span><span class="sig-name descname"><span class="pre">duty_ns</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#machine.PWM.duty_ns" title="Link to this definition">¶</a></dt>
+<dd><p>Get or set the current pulse width of the PWM output, as a value in nanoseconds.</p>
+<p>With no arguments the pulse width in nanoseconds is returned.</p>
+<p>With a single <em>value</em> argument the pulse width is set to that value.</p>
+</dd></dl>
+
+</section>
+<section id="specific-pwm-class-implementations">
+<h2>Specific PWM class implementations<a class="headerlink" href="#specific-pwm-class-implementations" title="Link to this heading">¶</a></h2>
+<p>The following concrete class(es) implement enhancements to the PWM class.</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference internal" href="pyb.Timer.html#pyb-timer"><span class="std std-ref">pyb.Timer for PyBoard</span></a></div>
+</div>
+</div></blockquote>
+</section>
+<section id="limitations-of-pwm">
+<h2>Limitations of PWM<a class="headerlink" href="#limitations-of-pwm" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p>Not all frequencies can be generated with absolute accuracy due to
+the discrete nature of the computing hardware.  Typically the PWM frequency
+is obtained by dividing some integer base frequency by an integer divider.
+For example, if the base frequency is 80MHz and the required PWM frequency is
+300kHz the divider must be a non-integer number 80000000 / 300000 = 266.67.
+After rounding the divider is set to 267 and the PWM frequency will be
+80000000 / 267 = 299625.5 Hz, not 300kHz.  If the divider is set to 266 then
+the PWM frequency will be 80000000 / 266 = 300751.9 Hz, but again not 300kHz.</p>
+<p>Some ports like the RP2040 one use a fractional divider, which allow a finer
+granularity of the frequency at higher frequencies by switching the PWM
+pulse duration between two adjacent values, such that the resulting average
+frequency is more close to the intended one, at the cost of spectral purity.</p>
+</li>
+<li><p>The duty cycle has the same discrete nature and its absolute accuracy is not
+achievable.  On most hardware platforms the duty will be applied at the next
+frequency period.  Therefore, you should wait more than “1/frequency” before
+measuring the duty.</p></li>
+<li><p>The frequency and the duty cycle resolution are usually interdependent.
+The higher the PWM frequency the lower the duty resolution which is available,
+and vice versa. For example, a 300kHz PWM frequency can have a duty cycle
+resolution of 8 bit, not 16-bit as may be expected.  In this case, the lowest
+8 bits of <em>duty_u16</em> are insignificant. So:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pwm</span><span class="o">=</span><span class="n">PWM</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="mi">13</span><span class="p">),</span> <span class="n">freq</span><span class="o">=</span><span class="mi">300_000</span><span class="p">,</span> <span class="n">duty_u16</span><span class="o">=</span><span class="mi">2</span><span class="o">**</span><span class="mi">16</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pwm</span><span class="o">=</span><span class="n">PWM</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="mi">13</span><span class="p">),</span> <span class="n">freq</span><span class="o">=</span><span class="mi">300_000</span><span class="p">,</span> <span class="n">duty_u16</span><span class="o">=</span><span class="mi">2</span><span class="o">**</span><span class="mi">16</span><span class="o">//</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">255</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>will generate PWM with the same 50% duty cycle.</p>
+</li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">class PWM – pulse width modulation</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#machine.PWM"><code class="docutils literal notranslate"><span class="pre">PWM</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#machine.PWM.init"><code class="docutils literal notranslate"><span class="pre">PWM.init()</span></code></a></li>
+<li><a class="reference internal" href="#machine.PWM.deinit"><code class="docutils literal notranslate"><span class="pre">PWM.deinit()</span></code></a></li>
+<li><a class="reference internal" href="#machine.PWM.freq"><code class="docutils literal notranslate"><span class="pre">PWM.freq()</span></code></a></li>
+<li><a class="reference internal" href="#machine.PWM.duty_u16"><code class="docutils literal notranslate"><span class="pre">PWM.duty_u16()</span></code></a></li>
+<li><a class="reference internal" href="#machine.PWM.duty_ns"><code class="docutils literal notranslate"><span class="pre">PWM.duty_ns()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#specific-pwm-class-implementations">Specific PWM class implementations</a></li>
+<li><a class="reference internal" href="#limitations-of-pwm">Limitations of PWM</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="machine.ADCBlock.html"
+                          title="previous chapter">class ADCBlock – control ADC peripherals</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="machine.UART.html"
+                          title="next chapter">class UART – duplex serial communication bus</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/library/machine.PWM.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="machine.UART.html" title="class UART – duplex serial communication bus"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="machine.ADCBlock.html" title="class ADCBlock – control ADC peripherals"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >MicroPython libraries</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="machine.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">machine</span></code> — functions related to the hardware</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">class PWM – pulse width modulation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

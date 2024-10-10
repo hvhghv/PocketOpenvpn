@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. Getting started with MicroPython on the ESP32 &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. Pulse Width Modulation" href="pwm.html" />
+    <link rel="prev" title="MicroPython tutorial for ESP32" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pwm.html" title="2. Pulse Width Modulation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="MicroPython tutorial for ESP32"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the ESP32</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">MicroPython tutorial for ESP32</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Getting started with MicroPython on the ESP32</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="getting-started-with-micropython-on-the-esp32">
+<span id="esp32-intro"></span><h1><span class="section-number">1. </span>Getting started with MicroPython on the ESP32<a class="headerlink" href="#getting-started-with-micropython-on-the-esp32" title="Link to this heading">¶</a></h1>
+<p>Using MicroPython is a great way to get the most of your ESP32 board.  And
+vice versa, the ESP32 chip is a great platform for using MicroPython.  This
+tutorial will guide you through setting up MicroPython, getting a prompt, using
+WebREPL, connecting to the network and communicating with the Internet, using
+the hardware peripherals, and controlling some external components.</p>
+<p>Let’s get started!</p>
+<section id="requirements">
+<h2><span class="section-number">1.1. </span>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>The first thing you need is a board with an ESP32 chip.  The MicroPython
+software supports the ESP32 chip itself and any board should work.  The main
+characteristic of a board is how the GPIO pins are connected to the outside
+world, and whether it includes a built-in USB-serial converter to make the
+UART available to your PC.</p>
+<p>Names of pins will be given in this tutorial using the chip names (eg GPIO2)
+and it should be straightforward to find which pin this corresponds to on your
+particular board.</p>
+</section>
+<section id="powering-the-board">
+<h2><span class="section-number">1.2. </span>Powering the board<a class="headerlink" href="#powering-the-board" title="Link to this heading">¶</a></h2>
+<p>If your board has a USB connector on it then most likely it is powered through
+this when connected to your PC.  Otherwise you will need to power it directly.
+Please refer to the documentation for your board for further details.</p>
+</section>
+<section id="getting-the-firmware">
+<h2><span class="section-number">1.3. </span>Getting the firmware<a class="headerlink" href="#getting-the-firmware" title="Link to this heading">¶</a></h2>
+<p>The first thing you need to do is download the most recent MicroPython firmware
+.bin file to load onto your ESP32 device. You can download it from the
+<a class="reference external" href="https://micropython.org/download#esp32">MicroPython downloads page</a>.
+From here, you have 3 main choices:</p>
+<ul class="simple">
+<li><p>Stable firmware builds</p></li>
+<li><p>Daily firmware builds</p></li>
+<li><p>Daily firmware builds with SPIRAM support</p></li>
+</ul>
+<p>If you are just starting with MicroPython, the best bet is to go for the Stable
+firmware builds. If you are an advanced, experienced MicroPython ESP32 user
+who would like to follow development closely and help with testing new
+features, there are daily builds.  If your board has SPIRAM support you can
+use either the standard firmware or the firmware with SPIRAM support, and in
+the latter case you will have access to more RAM for Python objects.</p>
+</section>
+<section id="deploying-the-firmware">
+<h2><span class="section-number">1.4. </span>Deploying the firmware<a class="headerlink" href="#deploying-the-firmware" title="Link to this heading">¶</a></h2>
+<p>Once you have the MicroPython firmware you need to load it onto your ESP32 device.
+There are two main steps to do this: first you need to put your device in
+bootloader mode, and second you need to copy across the firmware.  The exact
+procedure for these steps is highly dependent on the particular board and you will
+need to refer to its documentation for details.</p>
+<p>Fortunately, most boards have a USB connector, a USB-serial converter, and the DTR
+and RTS pins wired in a special way then deploying the firmware should be easy as
+all steps can be done automatically.  Boards that have such features
+include the Adafruit Feather HUZZAH32, M5Stack, Wemos LOLIN32, and TinyPICO
+boards, along with the Espressif DevKitC, PICO-KIT, WROVER-KIT dev-kits.</p>
+<p>For best results it is recommended to first erase the entire flash of your
+device before putting on new MicroPython firmware.</p>
+<p>Currently we only support esptool.py to copy across the firmware.  You can find
+this tool here: <a class="reference external" href="https://github.com/espressif/esptool/">https://github.com/espressif/esptool/</a>, or install it
+using pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">esptool</span>
+</pre></div>
+</div>
+<p>Versions starting with 1.3 support both Python 2.7 and Python 3.4 (or newer).
+An older version (at least 1.2.1 is needed) works fine but will require Python
+2.7.</p>
+<p>Using esptool.py you can erase the flash with the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span> <span class="n">erase_flash</span>
+</pre></div>
+</div>
+<p>And then deploy the new firmware using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">chip</span> <span class="n">esp32</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyUSB0</span> <span class="n">write_flash</span> <span class="o">-</span><span class="n">z</span> <span class="mh">0x1000</span> <span class="n">esp32</span><span class="o">-</span><span class="mi">20180511</span><span class="o">-</span><span class="n">v1</span><span class="mf">.9.4</span><span class="o">.</span><span class="n">bin</span>
+</pre></div>
+</div>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>You might need to change the “port” setting to something else relevant for your
+PC</p></li>
+<li><p>You may need to reduce the baudrate if you get errors when flashing
+(eg down to 115200 by adding <code class="docutils literal notranslate"><span class="pre">--baud</span> <span class="pre">115200</span></code> into the command)</p></li>
+<li><p>For some boards with a particular FlashROM configuration you may need to
+change the flash mode (eg by adding <code class="docutils literal notranslate"><span class="pre">-fm</span> <span class="pre">dio</span></code> into the command)</p></li>
+<li><p>The filename of the firmware should match the file that you have</p></li>
+</ul>
+<p>If the above commands run without error then MicroPython should be installed on
+your board!</p>
+</section>
+<section id="serial-prompt">
+<h2><span class="section-number">1.5. </span>Serial prompt<a class="headerlink" href="#serial-prompt" title="Link to this heading">¶</a></h2>
+<p>Once you have the firmware on the device you can access the REPL (Python prompt)
+over UART0 (GPIO1=TX, GPIO3=RX), which might be connected to a USB-serial
+converter, depending on your board.  The baudrate is 115200.</p>
+<p>From here you can now follow the ESP8266 tutorial, because these two Espressif chips
+are very similar when it comes to using MicroPython on them.  The ESP8266 tutorial
+is found at <a class="reference internal" href="../../esp8266/tutorial/index.html#esp8266-tutorial"><span class="std std-ref">MicroPython tutorial for ESP8266</span></a> (but skip the Introduction section).</p>
+</section>
+<section id="troubleshooting-installation-problems">
+<h2><span class="section-number">1.6. </span>Troubleshooting installation problems<a class="headerlink" href="#troubleshooting-installation-problems" title="Link to this heading">¶</a></h2>
+<p>If you experience problems during flashing or with running firmware immediately
+after it, here are troubleshooting recommendations:</p>
+<ul class="simple">
+<li><p>Be aware of and try to exclude hardware problems.  There are 2 common
+problems: bad power source quality, and worn-out/defective FlashROM.
+Speaking of power source, not just raw amperage is important, but also low
+ripple and noise/EMI in general.  The most reliable and convenient power
+source is a USB port.</p></li>
+<li><p>The flashing instructions above use flashing speed of 460800 baud, which is
+good compromise between speed and stability. However, depending on your
+module/board, USB-UART converter, cables, host OS, etc., the above baud
+rate may be too high and lead to errors. Try a more common 115200 baud
+rate instead in such cases.</p></li>
+<li><p>To catch incorrect flash content (e.g. from a defective sector on a chip),
+add <code class="docutils literal notranslate"><span class="pre">--verify</span></code> switch to the commands above.</p></li>
+<li><p>If you still experience problems with flashing the firmware please
+refer to esptool.py project page, <a class="reference external" href="https://github.com/espressif/esptool">https://github.com/espressif/esptool</a>
+for additional documentation and a bug tracker where you can report problems.</p></li>
+<li><p>If you are able to flash the firmware but the <code class="docutils literal notranslate"><span class="pre">--verify</span></code> option returns
+errors even after multiple retries the you may have a defective FlashROM chip.</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">1. Getting started with MicroPython on the ESP32</a><ul>
+<li><a class="reference internal" href="#requirements">1.1. Requirements</a></li>
+<li><a class="reference internal" href="#powering-the-board">1.2. Powering the board</a></li>
+<li><a class="reference internal" href="#getting-the-firmware">1.3. Getting the firmware</a></li>
+<li><a class="reference internal" href="#deploying-the-firmware">1.4. Deploying the firmware</a></li>
+<li><a class="reference internal" href="#serial-prompt">1.5. Serial prompt</a></li>
+<li><a class="reference internal" href="#troubleshooting-installation-problems">1.6. Troubleshooting installation problems</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">MicroPython tutorial for ESP32</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pwm.html"
+                          title="next chapter"><span class="section-number">2. </span>Pulse Width Modulation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/esp32/tutorial/intro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pwm.html" title="2. Pulse Width Modulation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="MicroPython tutorial for ESP32"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../quickref.html" >Quick reference for the ESP32</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >MicroPython tutorial for ESP32</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1. </span>Getting started with MicroPython on the ESP32</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

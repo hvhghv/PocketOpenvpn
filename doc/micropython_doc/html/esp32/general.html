@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>General information about the ESP32 port &#8212; MicroPython latest documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d5a28fe3" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=c6e86fd7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MicroPython tutorial for ESP32" href="tutorial/index.html" />
+    <link rel="prev" title="Quick reference for the ESP32" href="quickref.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial/index.html" title="MicroPython tutorial for ESP32"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="quickref.html" title="Quick reference for the ESP32"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="quickref.html" accesskey="U">Quick reference for the ESP32</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">General information about the ESP32 port</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+  
+    <div class="wy-alert wy-alert-danger">
+      <p>
+        This is the documentation for the latest development branch of
+        MicroPython and may refer to features that are not available in released
+        versions.
+      </p>
+      <p>
+        If you are looking for the documentation for a specific release, use
+        the drop-down menu on the left and select the desired version.
+      </p>
+    </div>
+  
+  
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="general-information-about-the-esp32-port">
+<span id="esp32-general"></span><h1>General information about the ESP32 port<a class="headerlink" href="#general-information-about-the-esp32-port" title="Link to this heading">¶</a></h1>
+<p>The ESP32 is a popular WiFi and Bluetooth enabled System-on-Chip (SoC) by
+Espressif Systems.</p>
+<section id="multitude-of-boards">
+<h2>Multitude of boards<a class="headerlink" href="#multitude-of-boards" title="Link to this heading">¶</a></h2>
+<p>There is a multitude of modules and boards from different sources which carry
+the ESP32 chip. MicroPython tries to provide a generic port which would run on
+as many boards/modules as possible, but there may be limitations. Espressif
+development boards are taken as reference for the port (for example, testing is
+performed on them).  For any board you are using please make sure you have a
+datasheet, schematics and other reference materials so you can look up any
+board-specific functions.</p>
+<p>To make a generic ESP32 port and support as many boards as possible the
+following design and implementation decision were made:</p>
+<ul class="simple">
+<li><p>GPIO pin numbering is based on ESP32 chip numbering.  Please have the manual/pin
+diagram of your board at hand to find correspondence between your board pins and
+actual ESP32 pins.</p></li>
+<li><p>All pins are supported by MicroPython but not all are usable on any given board.
+For example pins that are connected to external SPI flash should not be used,
+and a board may only expose a certain selection of pins.</p></li>
+</ul>
+</section>
+<section id="technical-specifications-and-soc-datasheets">
+<h2>Technical specifications and SoC datasheets<a class="headerlink" href="#technical-specifications-and-soc-datasheets" title="Link to this heading">¶</a></h2>
+<p>The datasheets and other reference material for ESP32 chip are available
+from the vendor site: <a class="reference external" href="https://www.espressif.com/en/support/download/documents?keys=esp32">https://www.espressif.com/en/support/download/documents?keys=esp32</a> .
+They are the primary reference for the chip technical specifications, capabilities,
+operating modes, internal functioning, etc.</p>
+<p>For your convenience, some of technical specifications are provided below:</p>
+<ul class="simple">
+<li><p>Architecture: Xtensa Dual-Core 32-bit LX6</p></li>
+<li><p>CPU frequency: up to 240MHz</p></li>
+<li><p>Total RAM available: 528KB (part of it reserved for system)</p></li>
+<li><p>BootROM: 448KB</p></li>
+<li><p>Internal FlashROM: none</p></li>
+<li><p>External FlashROM: code and data, via SPI Flash; usual size 4MB</p></li>
+<li><p>GPIO: 34 (GPIOs are multiplexed with other functions, including
+external FlashROM, UART, etc.)</p></li>
+<li><p>UART: 3 RX/TX UART (no hardware handshaking), one TX-only UART</p></li>
+<li><p>SPI: 4 SPI interfaces (one used for FlashROM)</p></li>
+<li><p>I2C: 2 I2C (bitbang implementation available on any pins)</p></li>
+<li><p>I2S: 2</p></li>
+<li><p>ADC: 12-bit SAR ADC up to 18 channels</p></li>
+<li><p>DAC: 2 8-bit DACs</p></li>
+<li><p>RMT: 8 channels allowing accurate pulse transmit/receive</p></li>
+<li><p>Programming: using BootROM bootloader from UART - due to external FlashROM
+and always-available BootROM bootloader, the ESP32 is not brickable</p></li>
+</ul>
+<p>For more information see the ESP32 datasheet: <a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf">https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf</a></p>
+<p>MicroPython is implemented on top of the ESP-IDF, Espressif’s development
+framework for the ESP32.  This is a FreeRTOS based system.  See the
+<a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/index.html">ESP-IDF Programming Guide</a>
+for details.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">General information about the ESP32 port</a><ul>
+<li><a class="reference internal" href="#multitude-of-boards">Multitude of boards</a></li>
+<li><a class="reference internal" href="#technical-specifications-and-soc-datasheets">Technical specifications and SoC datasheets</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="quickref.html"
+                          title="previous chapter">Quick reference for the ESP32</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tutorial/index.html"
+                          title="next chapter">MicroPython tutorial for ESP32</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/esp32/general.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial/index.html" title="MicroPython tutorial for ESP32"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="quickref.html" title="Quick reference for the ESP32"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">MicroPython latest documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="quickref.html" >Quick reference for the ESP32</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">General information about the ESP32 port</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright - The MicroPython Documentation is Copyright © 2014-2024, Damien P. George, Paul Sokolovsky, and contributors.
+      Last updated on 24 Jul 2024.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>
