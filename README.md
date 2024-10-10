@@ -1,6 +1,8 @@
-# PocketVPN
+# PocketOpenvpn
 
 通过mbedtls库与lwip库实现openvpn协议客户端。
+
+可移植性强
 
 支持RAW,TCP,UDP
 
@@ -17,8 +19,7 @@
 
 window平台进行编译后，会在build目录下生成静态库
 
-- liblwip
-- port_layer
+- libpocketvpn.a
 - mbedtls/libmbedcrypto.a
 - mbedtls/libmbedtls.a
 - mbedtls/libmbedx509.a

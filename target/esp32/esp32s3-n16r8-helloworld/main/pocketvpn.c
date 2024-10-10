@@ -25,7 +25,7 @@ void pocketvpn_mbedtls_debug(void *ctx, int level, const char *file, int line, c
 
 static vpnsock_t *vpnsock_working_list = NULL;
 
-err_t tcp_loop_service(void *vpnsock_obj, struct tcp_pcb *pcb);
+err_t net_loop_service(void *vpnsock_obj, struct tcp_pcb *pcb);
 
 int pocket_vpn_mbedtls_ssl_send(void *ctx, const unsigned char *buf, size_t len) {
 
@@ -508,20 +508,20 @@ int pocketvpn_new(
 
     pocket_vpn_lwip_init(&pocketvpn->tun, &pocketvpn->pocketvpn);
 
-    pocketvpn->pocketvpn.socket_read       = socket_read;
-    pocketvpn->pocketvpn.socket_write      = socket_write;
+    pocketvpn->pocketvpn.socket_read        = socket_read;
+    pocketvpn->pocketvpn.socket_write       = socket_write;
     pocketvpn->pocketvpn.socket_write_ready = socket_write_ready;
-    pocketvpn->pocketvpn.tls_read          = pocketvpn_tls_read;
-    pocketvpn->pocketvpn.tls_write         = pocketvpn_tls_write;
-    pocketvpn->pocketvpn.tls_do_handshark  = pocketvpn_tls_do_handshark;
-    pocketvpn->pocketvpn.tls_bio_incoming  = pocketvpn_tls_incoming;
-    pocketvpn->pocketvpn.tls_bio_outcoming = pocketvpn_tls_outcoming;
-    pocketvpn->pocketvpn.hmac_digest       = pocketvpn_hmac_digest;
-    pocketvpn->pocketvpn.encrypto          = pocketvpn_encrypto;
-    pocketvpn->pocketvpn.decrypto          = pocketvpn_decrypto;
-    pocketvpn->pocketvpn.driver_init       = pocketvpn_driver_init;
-    pocketvpn->pocketvpn.driver_incoming   = pocketvpn_driver_incoming;
-    pocketvpn->pocketvpn.driver_outcoming  = pocketvpn_driver_outcoming;
+    pocketvpn->pocketvpn.tls_read           = pocketvpn_tls_read;
+    pocketvpn->pocketvpn.tls_write          = pocketvpn_tls_write;
+    pocketvpn->pocketvpn.tls_do_handshark   = pocketvpn_tls_do_handshark;
+    pocketvpn->pocketvpn.tls_bio_incoming   = pocketvpn_tls_incoming;
+    pocketvpn->pocketvpn.tls_bio_outcoming  = pocketvpn_tls_outcoming;
+    pocketvpn->pocketvpn.hmac_digest        = pocketvpn_hmac_digest;
+    pocketvpn->pocketvpn.encrypto           = pocketvpn_encrypto;
+    pocketvpn->pocketvpn.decrypto           = pocketvpn_decrypto;
+    pocketvpn->pocketvpn.driver_init        = pocketvpn_driver_init;
+    pocketvpn->pocketvpn.driver_incoming    = pocketvpn_driver_incoming;
+    pocketvpn->pocketvpn.driver_outcoming   = pocketvpn_driver_outcoming;
 
     pocketvpn->pocketvpn.socket_obj    = (void *)socket_obj;
     pocketvpn->pocketvpn.tls_obj       = (void *)&pocketvpn->ssl;
@@ -552,29 +552,26 @@ void pocketvpn_loop(pocketvpn_t *pocketvpn) {
     sys_check_timeouts();
 
     vpnsock_t *vpnsock_work = vpnsock_working_list;
-    
-    if (vpnsock_work == NULL){
+
+    if (vpnsock_work == NULL) {
         return;
     }
 
     do {
-        tcp_loop_service(vpnsock_work, vpnsock_work->pcb);
+        net_loop_service(vpnsock_work, vpnsock_work->pcb);
         vpnsock_work = vpnsock_work->next;
     } while (vpnsock_work != vpnsock_working_list);
-
 }
 
-err_t tcp_dispatch_service(vpnsock_t *vpnsock, struct tcp_pcb *pcb, uint8_t socket_event, struct pbuf *p) {
+err_t net_dispatch_service(vpnsock_t *vpnsock, struct tcp_pcb *pcb, uint8_t socket_event, struct pbuf *p) {
 
     struct pbuf *q;
     uint32_t count;
-    int res = 0;
+    int res         = 0;
     err_t err       = ERR_OK;
     void *outBuffer = NULL;
     uint32_t tmp;
     int tmp2;
-
-
 
     if (socket_event == VPNSOCKET_EVENT_ACCESS || socket_event == VPNSOCKET_EVENT_CONNECT) {
 
@@ -707,7 +704,7 @@ event_clean:
     return ERR_OK;
 }
 
-err_t tcp_loop_service(void *vpnsock_obj, struct tcp_pcb *pcb) {
+err_t net_loop_service(void *vpnsock_obj, struct tcp_pcb *pcb) {
 
     vpnsock_t *vpnsock = (vpnsock_t *)vpnsock_obj;
 
@@ -726,16 +723,16 @@ err_t tcp_loop_service(void *vpnsock_obj, struct tcp_pcb *pcb) {
         return ERR_OK;
     }
 
-    return tcp_dispatch_service(vpnsock, pcb, VPNSOCKET_EVENT_LOOP, NULL);
+    return net_dispatch_service(vpnsock, pcb, VPNSOCKET_EVENT_LOOP, NULL);
 }
 
 err_t tcp_recv_service_fn(void *arg, struct tcp_pcb *pcb, struct pbuf *p, err_t e) {
-    err_t err = tcp_dispatch_service((vpnsock_t *)arg, pcb, VPNSOCKET_EVENT_RECV, p);
+    err_t err = net_dispatch_service((vpnsock_t *)arg, pcb, VPNSOCKET_EVENT_RECV, p);
     return err;
 }
 
 void tcp_err_service_fn(void *arg, err_t e) {
-    tcp_dispatch_service((vpnsock_t *)arg, NULL, VPNSOCKET_EVENT_CLEAN, NULL);
+    net_dispatch_service((vpnsock_t *)arg, NULL, VPNSOCKET_EVENT_CLEAN, NULL);
 }
 
 err_t tcp_accept_service_fn(void *arg, struct tcp_pcb *newpcb, err_t e) {
@@ -746,7 +743,7 @@ err_t tcp_accept_service_fn(void *arg, struct tcp_pcb *newpcb, err_t e) {
         return ERR_ABRT;
     }
 
-    vpnsock->sock_dispatch = (vpnsock_dispatch_fn)arg;
+    vpnsock->sock_dispatch = (vpnsock_tcp_fn)arg;
 
     tcp_arg(newpcb, vpnsock);
     tcp_recv(newpcb, tcp_recv_service_fn);
@@ -765,12 +762,12 @@ err_t tcp_accept_service_fn(void *arg, struct tcp_pcb *newpcb, err_t e) {
         vpnsock_working_list->prev       = vpnsock;
     }
 
-    err_t err = tcp_dispatch_service(vpnsock, newpcb, VPNSOCKET_EVENT_ACCESS, NULL);
+    err_t err = net_dispatch_service(vpnsock, newpcb, VPNSOCKET_EVENT_ACCESS, NULL);
 
     return err;
 }
 
-err_t tcp_connected_service_fn(void *arg, struct tcp_pcb *tpcb, err_t err){
+err_t tcp_connected_service_fn(void *arg, struct tcp_pcb *tpcb, err_t err) {
 
     vpnsock_t *vpnsock = (vpnsock_t *)pocketvpn_malloc(sizeof(vpnsock_t));
     if (vpnsock == NULL) {
@@ -778,7 +775,7 @@ err_t tcp_connected_service_fn(void *arg, struct tcp_pcb *tpcb, err_t err){
         return ERR_ABRT;
     }
 
-    vpnsock->sock_dispatch = (vpnsock_dispatch_fn)arg;
+    vpnsock->sock_dispatch = (vpnsock_tcp_fn)arg;
 
     tcp_arg(tpcb, vpnsock);
     tcp_recv(tpcb, tcp_recv_service_fn);
@@ -797,19 +794,18 @@ err_t tcp_connected_service_fn(void *arg, struct tcp_pcb *tpcb, err_t err){
         vpnsock_working_list->prev       = vpnsock;
     }
 
-    err = tcp_dispatch_service(vpnsock, tpcb, VPNSOCKET_EVENT_CONNECT, NULL);
+    err = net_dispatch_service(vpnsock, tpcb, VPNSOCKET_EVENT_CONNECT, NULL);
 
     return err;
 }
 
-struct tcp_pcb* tcp_connect_service(
+struct tcp_pcb *tcp_connect_service(
     uint8_t ip1,
     uint8_t ip2,
     uint8_t ip3,
     uint8_t ip4,
     uint16_t port,
-    vpnsock_dispatch_fn vpnsock_dispatch_func) 
-{
+    vpnsock_tcp_fn vpnsock_dispatch_func) {
     struct tcp_pcb *tpcb = tcp_new();
 
     ip_addr_t addr;
@@ -839,7 +835,7 @@ err_t tcp_bind_service(
     uint8_t ip3,
     uint8_t ip4,
     uint16_t port,
-    vpnsock_dispatch_fn vpnsock_dispatch_func
+    vpnsock_tcp_fn vpnsock_dispatch_func
 
 ) {
 

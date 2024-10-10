@@ -7,15 +7,12 @@ extern "C" {
 
 #include "pocketvpn_vpn.h"
 #include "pocketvpn_tun.h"
+#include "pocketvpn_net.h"
 
 #include "mbedtls/ssl.h"
 #include "mbedtls/entropy.h"
 #include "mbedtls/ctr_drbg.h"
 #include "mbedtls/debug.h"
-
-#include "lwip/tcp.h"
-#include "lwip/udp.h"
-#include "lwip/raw.h"
 
 typedef struct _ssl_context {
     mbedtls_ssl_config conf;
@@ -39,44 +36,20 @@ typedef struct _pocketvpn_t {
 } pocketvpn_t;
 
 
-#define VPNSOCK_FLAG_STOP (1 << 0)
-
-struct _vpnsock_t {
-
-    void *user_mem;
-    struct tcp_pcb *pcb;
-    int (*sock_dispatch)(struct _vpnsock_t *vpnsock_obj, uint8_t event, uint8_t *buffer, void **outBuffer, uint32_t size, uint32_t *outSize);
-    struct pbuf *restore_pbuf;
-    uint8_t needClean;
-    uint8_t flag;
-    struct _vpnsock_t *next;
-    struct _vpnsock_t *prev;
-};
-
-typedef int (*vpnsock_dispatch_fn)(struct _vpnsock_t *vpnsock_obj, uint8_t event, uint8_t *buffer, void **outBuffer, uint32_t size, uint32_t *outSize);
-typedef struct _vpnsock_t vpnsock_t;
-
-enum _SOCKET_EVENT {
-    VPNSOCKET_EVENT_CONNECT,
-    VPNSOCKET_EVENT_ACCESS,
-    VPNSOCKET_EVENT_RECV,
-    VPNSOCKET_EVENT_RECVD,
-    VPNSOCKET_EVENT_SENT,
-    VPNSOCKET_EVENT_CLEAN,
-    VPNSOCKET_EVENT_LOOP
-
-};
-
 int pocketvpn_init();
 
 void pocketvpn_loop(pocketvpn_t *pocketvpn);
 
+typedef uint32_t (*socket_read_fn)(void *socket_obj, uint8_t *buffer, uint32_t size);
+typedef void (*socket_write_fn)(void *socket_obj, uint8_t *buffer, uint32_t size);
+typedef uint32_t (*socket_write_ready_fn)(void *socket_obj);
+
 int pocketvpn_new(
     pocketvpn_t *pocketvpn,
     void *socket_obj,
-    uint32_t (*socket_read)(void *socket_obj, uint8_t *buffer, uint32_t size),
-    void (*socket_write)(void *socket_obj, uint8_t *buffer, uint32_t size),
-    uint32_t (*socket_write_ready)(void *socket_obj),
+    socket_read_fn socket_read,
+    socket_write_fn socket_write,
+    socket_write_ready_fn socket_write_ready,
     const void *ca,
     uint32_t ca_size,
     const void *cert,
@@ -90,23 +63,6 @@ int pocketvpn_new(
     uint32_t max_run_time
 
 );
-
-err_t tcp_bind_service(
-    uint8_t ip1,
-    uint8_t ip2,
-    uint8_t ip3,
-    uint8_t ip4,
-    uint16_t port,
-    vpnsock_dispatch_fn vpnsock_dispatch_func
-    );
-
-struct tcp_pcb *tcp_connect_service(
-    uint8_t ip1,
-    uint8_t ip2,
-    uint8_t ip3,
-    uint8_t ip4,
-    uint16_t port,
-    vpnsock_dispatch_fn vpnsock_dispatch_func);
 
 #ifdef __cplusplus
 }

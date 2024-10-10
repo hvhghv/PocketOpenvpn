@@ -38,7 +38,6 @@ typedef struct _pocketvpn_t {
 
 } pocketvpn_t;
 
-
 #define VPNSOCK_FLAG_STOP (1 << 0)
 
 struct _vpnsock_t {
@@ -53,7 +52,7 @@ struct _vpnsock_t {
     struct _vpnsock_t *prev;
 };
 
-typedef int (*vpnsock_dispatch_fn)(struct _vpnsock_t *vpnsock_obj, uint8_t event, uint8_t *buffer, void **outBuffer, uint32_t size, uint32_t *outSize);
+typedef int (*vpnsock_tcp_fn)(struct _vpnsock_t *vpnsock_obj, uint8_t event, uint8_t *buffer, void **outBuffer, uint32_t size, uint32_t *outSize);
 typedef struct _vpnsock_t vpnsock_t;
 
 enum _SOCKET_EVENT {
@@ -97,8 +96,7 @@ err_t tcp_bind_service(
     uint8_t ip3,
     uint8_t ip4,
     uint16_t port,
-    vpnsock_dispatch_fn vpnsock_dispatch_func
-    );
+    vpnsock_tcp_fn vpnsock_dispatch_func);
 
 struct tcp_pcb *tcp_connect_service(
     uint8_t ip1,
@@ -106,7 +104,7 @@ struct tcp_pcb *tcp_connect_service(
     uint8_t ip3,
     uint8_t ip4,
     uint16_t port,
-    vpnsock_dispatch_fn vpnsock_dispatch_func);
+    vpnsock_tcp_fn vpnsock_dispatch_func);
 
 #ifdef __cplusplus
 }
