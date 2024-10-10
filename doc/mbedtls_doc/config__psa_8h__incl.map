@@ -1,0 +1,10 @@
+<map id="config_psa.h" name="config_psa.h">
+<area shape="rect" id="node1" title="PSA crypto configuration options (set of defines)" alt="" coords="583,5,679,32"/>
+<area shape="rect" id="node2" href="$crypto__legacy_8h.html" title="Add temporary suppport for deprecated symbols before they are removed from the library." alt="" coords="5,87,144,114"/>
+<area shape="rect" id="node3" href="$crypto__adjust__config__synonyms_8h.html" title="Adjust PSA configuration: enable quasi&#45;synonyms." alt="" coords="169,80,335,121"/>
+<area shape="rect" id="node4" href="$config__adjust__psa__superset__legacy_8h.html" title="Adjust PSA configuration: automatic enablement from legacy." alt="" coords="360,80,523,121"/>
+<area shape="rect" id="node5" href="$crypto__adjust__config__key__pair__types_8h.html" title="Adjust PSA configuration for key pair types." alt="" coords="547,80,714,121"/>
+<area shape="rect" id="node6" href="$config__adjust__legacy__from__psa_8h.html" title="Adjust PSA configuration: activate legacy implementations." alt="" coords="739,80,888,121"/>
+<area shape="rect" id="node7" href="$crypto__adjust__auto__enabled_8h.html" title="Adjust PSA configuration: enable always&#45;on features." alt="" coords="912,80,1069,121"/>
+<area shape="rect" id="node8" href="$config__adjust__psa__from__legacy_8h.html" title="Adjust PSA configuration: construct PSA configuration from legacy." alt="" coords="1093,80,1243,121"/>
+</map>

@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="unionpsa__driver__key__derivation__context__t" kind="union" language="C++" prot="public">
+    <compoundname>psa_driver_key_derivation_context_t</compoundname>
+    <includes refid="crypto__driver__contexts__key__derivation_8h" local="no">crypto_driver_contexts_key_derivation.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionpsa__driver__key__derivation__context__t_1ab76eb334611a7cce9c66477a99a67428" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned psa_driver_key_derivation_context_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" line="33" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__key__derivation__context__t_1af1b7013a3c089880ab81a29902b9f525" prot="public" static="no" mutable="no">
+        <type><ref refid="structpsa__hkdf__key__derivation__t" kindref="compound">psa_hkdf_key_derivation_t</ref></type>
+        <definition>psa_hkdf_key_derivation_t psa_driver_key_derivation_context_t::private_hkdf</definition>
+        <argsstring></argsstring>
+        <name>private_hkdf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" line="37" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__key__derivation__context__t_1a2c0c2e0fbd4f62851e01e198f3a42c7c" prot="public" static="no" mutable="no">
+        <type><ref refid="crypto__builtin__key__derivation_8h_1a91754318451ebc87ce4196c92c11873b" kindref="member">psa_tls12_prf_key_derivation_t</ref></type>
+        <definition>psa_tls12_prf_key_derivation_t psa_driver_key_derivation_context_t::private_tls12_prf</definition>
+        <argsstring></argsstring>
+        <name>private_tls12_prf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" line="41" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__key__derivation__context__t_1ac4190026ffbfe6df215903dbf0870765" prot="public" static="no" mutable="no">
+        <type><ref refid="structpsa__tls12__ecjpake__to__pms__t" kindref="compound">psa_tls12_ecjpake_to_pms_t</ref></type>
+        <definition>psa_tls12_ecjpake_to_pms_t psa_driver_key_derivation_context_t::private_tls12_ecjpake_to_pms</definition>
+        <argsstring></argsstring>
+        <name>private_tls12_ecjpake_to_pms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" line="44" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__key__derivation__context__t_1ab6ea8426a58c76909e7513a7728bf529" prot="public" static="no" mutable="no">
+        <type><ref refid="structpsa__pbkdf2__key__derivation__t" kindref="compound">psa_pbkdf2_key_derivation_t</ref></type>
+        <definition>psa_pbkdf2_key_derivation_t psa_driver_key_derivation_context_t::private_pbkdf2</definition>
+        <argsstring></argsstring>
+        <name>private_pbkdf2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" line="47" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>psa_driver_key_derivation_context_t</label>
+        <link refid="unionpsa__driver__key__derivation__context__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_tls12_ecjpake_to_pms</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_hkdf</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>private_pbkdf2</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>private_tls12_prf</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>mbedtls_sha256_context</label>
+        <link refid="structmbedtls__sha256__context"/>
+      </node>
+      <node id="18">
+        <label>mbedtls_sha512_context</label>
+        <link refid="structmbedtls__sha512__context"/>
+      </node>
+      <node id="5">
+        <label>psa_driver_mac_context_t</label>
+        <link refid="unionpsa__driver__mac__context__t"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls_psa_hash_operation_t</label>
+        <link refid="structmbedtls__psa__hash__operation__t"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>ripemd160</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>md5</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>sha1</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>sha3</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>sha512</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>sha256</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>mbedtls_ripemd160_context</label>
+        <link refid="structmbedtls__ripemd160__context"/>
+      </node>
+      <node id="4">
+        <label>psa_mac_operation_s</label>
+        <link refid="structpsa__mac__operation__s"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>psa_tls12_ecjpake_to_pms_t</label>
+        <link refid="structpsa__tls12__ecjpake__to__pms__t"/>
+      </node>
+      <node id="8">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="3">
+        <label>psa_hkdf_key_derivation_t</label>
+        <link refid="structpsa__hkdf__key__derivation__t"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_hmac</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>psa_driver_hash_context_t</label>
+        <link refid="unionpsa__driver__hash__context__t"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>psa_tls12_prf_key_derivation_s</label>
+        <link refid="structpsa__tls12__prf__key__derivation__s"/>
+      </node>
+      <node id="10">
+        <label>mbedtls_psa_hmac_operation_t</label>
+        <link refid="structmbedtls__psa__hmac__operation__t"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>hash_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>mbedtls_sha1_context</label>
+        <link refid="structmbedtls__sha1__context"/>
+      </node>
+      <node id="15">
+        <label>mbedtls_md5_context</label>
+        <link refid="structmbedtls__md5__context"/>
+      </node>
+      <node id="20">
+        <label>psa_pbkdf2_key_derivation_t</label>
+        <link refid="structpsa__pbkdf2__key__derivation__t"/>
+      </node>
+      <node id="11">
+        <label>psa_hash_operation_s</label>
+        <link refid="structpsa__hash__operation__s"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mbedtls_psa_mac_operation_t</label>
+        <link refid="structmbedtls__psa__mac__operation__t"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_cmac</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>private_hmac</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>mbedtls_sha3_context</label>
+        <link refid="structmbedtls__sha3__context"/>
+      </node>
+      <node id="9">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" line="32" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_key_derivation.h" bodystart="32" bodyend="49"/>
+    <listofallmembers>
+      <member refid="unionpsa__driver__key__derivation__context__t_1ab76eb334611a7cce9c66477a99a67428" prot="public" virt="non-virtual"><scope>psa_driver_key_derivation_context_t</scope><name>dummy</name></member>
+      <member refid="unionpsa__driver__key__derivation__context__t_1af1b7013a3c089880ab81a29902b9f525" prot="public" virt="non-virtual"><scope>psa_driver_key_derivation_context_t</scope><name>private_hkdf</name></member>
+      <member refid="unionpsa__driver__key__derivation__context__t_1ab6ea8426a58c76909e7513a7728bf529" prot="public" virt="non-virtual"><scope>psa_driver_key_derivation_context_t</scope><name>private_pbkdf2</name></member>
+      <member refid="unionpsa__driver__key__derivation__context__t_1ac4190026ffbfe6df215903dbf0870765" prot="public" virt="non-virtual"><scope>psa_driver_key_derivation_context_t</scope><name>private_tls12_ecjpake_to_pms</name></member>
+      <member refid="unionpsa__driver__key__derivation__context__t_1a2c0c2e0fbd4f62851e01e198f3a42c7c" prot="public" virt="non-virtual"><scope>psa_driver_key_derivation_context_t</scope><name>private_tls12_prf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

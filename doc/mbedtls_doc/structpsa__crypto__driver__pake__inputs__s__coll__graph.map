@@ -1,0 +1,7 @@
+<map id="psa_crypto_driver_pake_inputs_s" name="psa_crypto_driver_pake_inputs_s">
+<area shape="rect" id="node1" title=" " alt="" coords="86,273,246,315"/>
+<area shape="rect" id="node2" href="$structpsa__pake__cipher__suite__s.html" title=" " alt="" coords="5,184,175,211"/>
+<area shape="rect" id="node3" href="$structpsa__key__attributes__s.html" title=" " alt="" coords="199,184,346,211"/>
+<area shape="rect" id="node4" href="$structpsa__core__key__attributes__t.html" title=" " alt="" coords="185,95,360,121"/>
+<area shape="rect" id="node5" href="$structpsa__key__policy__s.html" title=" " alt="" coords="209,5,336,32"/>
+</map>

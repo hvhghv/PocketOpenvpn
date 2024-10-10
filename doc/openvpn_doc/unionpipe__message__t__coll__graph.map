@@ -1,0 +1,14 @@
+<map id="pipe_message_t" name="pipe_message_t">
+<area shape="rect" id="node1" title=" " alt="" coords="564,424,681,451"/>
+<area shape="rect" id="node2" href="$structflush__neighbors__message__t.html" title=" " alt="" coords="236,333,420,360"/>
+<area shape="rect" id="node3" href="$structinterface__t.html" title=" " alt="" coords="30,197,113,224"/>
+<area shape="rect" id="node5" href="$structaddress__message__t.html" title=" " alt="" coords="259,548,397,575"/>
+<area shape="rect" id="node7" href="$structset__mtu__message__t.html" title=" " alt="" coords="258,61,398,88"/>
+<area shape="rect" id="node9" href="$structenable__dhcp__message__t.html" title=" " alt="" coords="245,152,411,179"/>
+<area shape="rect" id="node10" href="$structdns__cfg__message__t.html" title=" " alt="" coords="259,612,397,639"/>
+<area shape="rect" id="node11" href="$structroute__message__t.html" title=" " alt="" coords="267,424,389,451"/>
+<area shape="rect" id="node12" href="$structblock__dns__message__t.html" title=" " alt="" coords="252,243,404,269"/>
+<area shape="rect" id="node4" href="$structmessage__header__t.html" title=" " alt="" coords="5,424,137,451"/>
+<area shape="rect" id="node8" href="$structregister__ring__buffers__message__t.html" title=" " alt="" coords="259,683,397,725"/>
+<area shape="rect" id="node6" href="$unioninet__address__t.html" title=" " alt="" coords="18,620,125,647"/>
+</map>

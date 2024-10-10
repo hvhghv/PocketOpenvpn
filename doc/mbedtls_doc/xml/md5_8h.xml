@@ -1,0 +1,716 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md5_8h" kind="file" language="C++">
+    <compoundname>md5.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="crypto__builtin__primitives_8h" local="yes">crypto_builtin_primitives.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="20">
+        <label>stddef.h</label>
+      </node>
+      <node id="1">
+        <label>md5.h</label>
+        <link refid="md5_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="18">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="12">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="5">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>md5.h</label>
+        <link refid="md5_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="4">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2">
+        <label>crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="19">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="10">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="3">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__md5__context" prot="public">mbedtls_md5_context</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="md5_8h_1a1535436e1230ba17e6df2c0d2af8d6d2" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref></type>
+        <definition>typedef struct mbedtls_md5_context mbedtls_md5_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_md5_context</name>
+        <briefdescription>
+<para>MD5 context structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="44" column="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="md5_8h_1ad8147bb77981950e6965914d837d9b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_md5_init</definition>
+        <argsstring>(mbedtls_md5_context *ctx)</argsstring>
+        <name>mbedtls_md5_init</name>
+        <param>
+          <type><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize MD5 context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD5 context to be initialized</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="60" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="60" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="md5_8h_1a6cb8881e3dc6179228b69437ccd00451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_md5_free</definition>
+        <argsstring>(mbedtls_md5_context *ctx)</argsstring>
+        <name>mbedtls_md5_free</name>
+        <param>
+          <type><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Clear MD5 context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD5 context to be cleared</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="72" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="md5_8h_1a229002f45a151fdd8683390bd271f55e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_md5_clone</definition>
+        <argsstring>(mbedtls_md5_context *dst, const mbedtls_md5_context *src)</argsstring>
+        <name>mbedtls_md5_clone</name>
+        <param>
+          <type><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref> *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Clone (the state of) an MD5 context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to be cloned</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="85" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="85" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="md5_8h_1a509d041c758e0277ff4e00a87736eeb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md5_starts</definition>
+        <argsstring>(mbedtls_md5_context *ctx)</argsstring>
+        <name>mbedtls_md5_starts</name>
+        <param>
+          <type><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>MD5 context setup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>context to be initialized</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful</para>
+</simplesect>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="100" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="100" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md5_8h_1ad3f28d21e767e97b8009fa6bd3308073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md5_update</definition>
+        <argsstring>(mbedtls_md5_context *ctx, const unsigned char *input, size_t ilen)</argsstring>
+        <name>mbedtls_md5_update</name>
+        <param>
+          <type><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <briefdescription>
+<para>MD5 process buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD5 context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the input data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful</para>
+</simplesect>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="116" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="116" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md5_8h_1ae118551fdd72568632f4109f4a39dc32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md5_finish</definition>
+        <argsstring>(mbedtls_md5_context *ctx, unsigned char output[16])</argsstring>
+        <name>mbedtls_md5_finish</name>
+        <param>
+          <type><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>output</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>MD5 final digest. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD5 context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD5 checksum result</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful</para>
+</simplesect>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="133" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="133" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md5_8h_1a2fc86ce6eea887e6c6b3cd619da02b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_internal_md5_process</definition>
+        <argsstring>(mbedtls_md5_context *ctx, const unsigned char data[64])</argsstring>
+        <name>mbedtls_internal_md5_process</name>
+        <param>
+          <type><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>data</declname>
+          <array>[64]</array>
+        </param>
+        <briefdescription>
+<para>MD5 process data block (internal use only) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD5 context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding one block of data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful</para>
+</simplesect>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="149" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="149" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md5_8h_1a01315bf1d862dee293282fa833d0e90f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md5</definition>
+        <argsstring>(const unsigned char *input, size_t ilen, unsigned char output[16])</argsstring>
+        <name>mbedtls_md5</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>output</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>Output = MD5( input buffer ) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the input data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD5 checksum result</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful</para>
+</simplesect>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="166" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="166" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md5_8h_1a36ffb6bbe889f38d2aef12aa4493ebdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md5_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_md5_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if successful, or 1 if the test failed</para>
+</simplesect>
+<simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="182" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" declline="182" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MD5 message digest algorithm (hash function) </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_MD5_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD5_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_MD5_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Regular<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structmbedtls__md5__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="40" refid="structmbedtls__md5__context_1a0eaefed14e94c736d1db416ca3b6299f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(total)[2];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structmbedtls__md5__context_1a4311a8e58e6990de7db3345c4e796fee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(state)[4];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structmbedtls__md5__context_1ab318c7b41572b6af4b6e1f30294a374e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(buffer)[64];<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="md5_8h_1a1535436e1230ba17e6df2c0d2af8d6d2" kindref="member">mbedtls_md5_context</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_MD5_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;md5_alt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_MD5_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1ad8147bb77981950e6965914d837d9b3e" kindref="member">mbedtls_md5_init</ref>(<ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1a6cb8881e3dc6179228b69437ccd00451" kindref="member">mbedtls_md5_free</ref>(<ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1a229002f45a151fdd8683390bd271f55e" kindref="member">mbedtls_md5_clone</ref>(<ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>*dst,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>*src);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1a509d041c758e0277ff4e00a87736eeb5" kindref="member">mbedtls_md5_starts</ref>(<ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1ad3f28d21e767e97b8009fa6bd3308073" kindref="member">mbedtls_md5_update</ref>(<ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1ae118551fdd72568632f4109f4a39dc32" kindref="member">mbedtls_md5_finish</ref>(<ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>output[16]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1a2fc86ce6eea887e6c6b3cd619da02b21" kindref="member">mbedtls_internal_md5_process</ref>(<ref refid="structmbedtls__md5__context" kindref="compound">mbedtls_md5_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data[64]);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1a01315bf1d862dee293282fa833d0e90f" kindref="member">mbedtls_md5</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>output[16]);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md5_8h_1a36ffb6bbe889f38d2aef12aa4493ebdd" kindref="member">mbedtls_md5_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>mbedtls_md5.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h"/>
+  </compounddef>
+</doxygen>

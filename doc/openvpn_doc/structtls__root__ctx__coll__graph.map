@@ -1,0 +1,4 @@
+<map id="tls_root_ctx" name="tls_root_ctx">
+<area shape="rect" id="node1" title="Structure that wraps the TLS context." alt="" coords="19,95,110,121"/>
+<area shape="rect" id="node2" href="$structexternal__context.html" title="Context used by external_pkcs1_sign()" alt="" coords="5,5,124,32"/>
+</map>

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__x509__san__list" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_x509_san_list</compoundname>
+    <includes refid="x509_8h" local="no">x509.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__san__list_1adc0ee4ab1256402a33b44be7e598e5ca" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__subject__alternative__name" kindref="compound">mbedtls_x509_subject_alternative_name</ref></type>
+        <definition>mbedtls_x509_subject_alternative_name mbedtls_x509_san_list::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509.h" line="304" column="43" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__san__list_1ade280db82d423e794d3c1e23ba889211" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmbedtls__x509__san__list" kindref="compound">mbedtls_x509_san_list</ref> *</type>
+        <definition>struct mbedtls_x509_san_list* mbedtls_x509_san_list::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509.h" line="305" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>mbedtls_x509_subject_alternative_name</label>
+        <link refid="structmbedtls__x509__subject__alternative__name"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>other_name</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>unstructured_name</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>directory_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mbedtls_x509_san_list</label>
+        <link refid="structmbedtls__x509__san__list"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="5">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_x509_san_other_name</label>
+        <link refid="structmbedtls__x509__san__other__name"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>type_id</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509.h" line="303" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509.h" bodystart="303" bodyend="306"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__san__list_1ade280db82d423e794d3c1e23ba889211" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_list</scope><name>next</name></member>
+      <member refid="structmbedtls__x509__san__list_1adc0ee4ab1256402a33b44be7e598e5ca" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_list</scope><name>node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

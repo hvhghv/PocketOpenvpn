@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__x509__crt__verify__chain" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_x509_crt_verify_chain</compoundname>
+    <includes refid="x509__crt_8h" local="no">x509_crt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__crt__verify__chain_1ad4ae233f9240261b12f0237a0f4bddcb" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__crt__verify__chain__item" kindref="compound">mbedtls_x509_crt_verify_chain_item</ref></type>
+        <definition>mbedtls_x509_crt_verify_chain_item mbedtls_x509_crt_verify_chain::private_items[MBEDTLS_X509_MAX_VERIFY_CHAIN_SIZE]</definition>
+        <argsstring>[MBEDTLS_X509_MAX_VERIFY_CHAIN_SIZE]</argsstring>
+        <name>private_items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509_crt.h" line="264" column="40" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509_crt.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__verify__chain_1a6b32dd08188341391047dafab5e811af" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned mbedtls_x509_crt_verify_chain::private_len</definition>
+        <argsstring></argsstring>
+        <name>private_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509_crt.h" line="265" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509_crt.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__verify__chain_1a4c5cda1cc0ba9600422c7ad292604f4f" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref> *</type>
+        <definition>mbedtls_x509_crt* mbedtls_x509_crt_verify_chain::private_trust_ca_cb_result</definition>
+        <argsstring></argsstring>
+        <name>private_trust_ca_cb_result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509_crt.h" line="272" column="22" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509_crt.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Verification chain as built by <computeroutput>mbedtls_crt_verify_chain()</computeroutput> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_asn1_sequence</label>
+        <link refid="structmbedtls__asn1__sequence"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>buf</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="2">
+        <label>mbedtls_x509_crt</label>
+        <link refid="structmbedtls__x509__crt"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>subject_alt_names</edgelabel>
+          <edgelabel>ext_key_usage</edgelabel>
+          <edgelabel>certificate_policies</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>authority_key_id</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>issuer</edgelabel>
+          <edgelabel>subject</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>issuer_raw</edgelabel>
+          <edgelabel>pk_raw</edgelabel>
+          <edgelabel>sig_oid</edgelabel>
+          <edgelabel>v3_ext</edgelabel>
+          <edgelabel>serial</edgelabel>
+          <edgelabel>subject_raw</edgelabel>
+          <edgelabel>private_sig</edgelabel>
+          <edgelabel>subject_id</edgelabel>
+          <edgelabel>subject_key_id</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>valid_to</edgelabel>
+          <edgelabel>valid_from</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>pk</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mbedtls_x509_authority</label>
+        <link refid="structmbedtls__x509__authority"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>authorityCertIssuer</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>keyIdentifier</edgelabel>
+          <edgelabel>authorityCertSerialNumber</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mbedtls_x509_time</label>
+        <link refid="structmbedtls__x509__time"/>
+      </node>
+      <node id="9">
+        <label>mbedtls_x509_crt_verify_chain_item</label>
+        <link refid="structmbedtls__x509__crt__verify__chain__item"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_crt</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>mbedtls_pk_context</label>
+        <link refid="structmbedtls__pk__context"/>
+      </node>
+      <node id="6">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mbedtls_x509_crt_verify_chain</label>
+        <link refid="structmbedtls__x509__crt__verify__chain"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_trust_ca_cb_result</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>private_items</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509_crt.h" line="263" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/x509_crt.h" bodystart="263" bodyend="274"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__crt__verify__chain_1ad4ae233f9240261b12f0237a0f4bddcb" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_verify_chain</scope><name>private_items</name></member>
+      <member refid="structmbedtls__x509__crt__verify__chain_1a6b32dd08188341391047dafab5e811af" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_verify_chain</scope><name>private_len</name></member>
+      <member refid="structmbedtls__x509__crt__verify__chain_1a4c5cda1cc0ba9600422c7ad292604f4f" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_verify_chain</scope><name>private_trust_ca_cb_result</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerdir refid="dir_b4d146e9a6d8dd56ed4afb2480a97fd3">mbedtls</innerdir>
+    <innerdir refid="dir_be3ff7a0a83819f73f68284f14b48769">psa</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/"/>
+  </compounddef>
+</doxygen>

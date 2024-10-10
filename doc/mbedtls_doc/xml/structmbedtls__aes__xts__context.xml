@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__aes__xts__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_aes_xts_context</compoundname>
+    <includes refid="aes_8h" local="no">aes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__aes__xts__context_1a5a1dbd8fbcd87f1a8f6d7d97131a4f69" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__aes__context" kindref="compound">mbedtls_aes_context</ref></type>
+        <definition>mbedtls_aes_context mbedtls_aes_xts_context::private_crypt</definition>
+        <argsstring></argsstring>
+        <name>private_crypt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The AES context to use for AES block encryption or decryption. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" line="88" column="25" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__aes__xts__context_1ae832780a5c623be614af941408d400c6" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__aes__context" kindref="compound">mbedtls_aes_context</ref></type>
+        <definition>mbedtls_aes_context mbedtls_aes_xts_context::private_tweak</definition>
+        <argsstring></argsstring>
+        <name>private_tweak</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The AES context used for tweak computation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" line="90" column="25" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The AES XTS context-type definition. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>mbedtls_aes_context</label>
+        <link refid="structmbedtls__aes__context"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_aes_xts_context</label>
+        <link refid="structmbedtls__aes__xts__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_crypt</edgelabel>
+          <edgelabel>private_tweak</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" line="87" column="38" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" bodystart="87" bodyend="92"/>
+    <listofallmembers>
+      <member refid="structmbedtls__aes__xts__context_1a5a1dbd8fbcd87f1a8f6d7d97131a4f69" prot="public" virt="non-virtual"><scope>mbedtls_aes_xts_context</scope><name>private_crypt</name></member>
+      <member refid="structmbedtls__aes__xts__context_1ae832780a5c623be614af941408d400c6" prot="public" virt="non-virtual"><scope>mbedtls_aes_xts_context</scope><name>private_tweak</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

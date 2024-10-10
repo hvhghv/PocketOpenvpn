@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ccm__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ccm_context</compoundname>
+    <includes refid="ccm_8h" local="no">ccm.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1a97da95e3662269fd4315abe85cb7998c" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ccm_context::private_y[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Y working buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="66" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1a49d818d236d5131edd5954bb30ac4d1f" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ccm_context::private_ctr[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_ctr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The counter buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="67" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1adbb9ebfcd48aafffddc082c7038f1207" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ccm_context::private_plaintext_len</definition>
+        <argsstring></argsstring>
+        <name>private_plaintext_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total plaintext length </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="68" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1af542652eaa159344e0a1c805835fff7e" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ccm_context::private_add_len</definition>
+        <argsstring></argsstring>
+        <name>private_add_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total authentication data length </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="69" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1ac83e905fe40a11b1dc7dabd6b644fddc" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ccm_context::private_tag_len</definition>
+        <argsstring></argsstring>
+        <name>private_tag_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total tag length </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="70" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1ad46e264cfffec402cc6cfee1dbe0fee3" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ccm_context::private_processed</definition>
+        <argsstring></argsstring>
+        <name>private_processed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Track how many bytes of input data were processed (chunked input). Used independently for both auth data and plaintext/ciphertext. This variable is set to zero after auth data input is finished. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="71" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1a3337d3f6f49978b0ece69127977a2d31" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_ccm_context::private_q</definition>
+        <argsstring></argsstring>
+        <name>private_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Q working value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="77" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1a94136aa4919b7071a9d3922af15a2000" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_ccm_context::private_mode</definition>
+        <argsstring></argsstring>
+        <name>private_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The operation to perform: <ref refid="ccm_8h_1ab1e91a3e69f8edb1a5b4391f0326bd5a" kindref="member">MBEDTLS_CCM_ENCRYPT</ref> or <ref refid="ccm_8h_1af12c33defd89f603953cbc9d7392d496" kindref="member">MBEDTLS_CCM_DECRYPT</ref> or <ref refid="ccm_8h_1a37ae523793fa41562b2e4d742d8c802b" kindref="member">MBEDTLS_CCM_STAR_ENCRYPT</ref> or <ref refid="ccm_8h_1a2c3a27cec755df392281189e8cf81315" kindref="member">MBEDTLS_CCM_STAR_DECRYPT</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="78" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1ad317bd25be8c87a626a07f82abd2fdd4" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref></type>
+        <definition>mbedtls_cipher_context_t mbedtls_ccm_context::private_cipher_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_cipher_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cipher context used. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="83" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ccm__context_1acc618c8a3809cb2f3a00d768bd597357" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ccm_context::private_state</definition>
+        <argsstring></argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Working value holding context&apos;s state. Used for chunked data input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="84" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The CCM context-type definition. The CCM context is passed to the APIs called. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_ccm_context</label>
+        <link refid="structmbedtls__ccm__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_cipher_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="65" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="65" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ccm__context_1af542652eaa159344e0a1c805835fff7e" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_add_len</name></member>
+      <member refid="structmbedtls__ccm__context_1ad317bd25be8c87a626a07f82abd2fdd4" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_cipher_ctx</name></member>
+      <member refid="structmbedtls__ccm__context_1a49d818d236d5131edd5954bb30ac4d1f" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_ctr</name></member>
+      <member refid="structmbedtls__ccm__context_1a94136aa4919b7071a9d3922af15a2000" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_mode</name></member>
+      <member refid="structmbedtls__ccm__context_1adbb9ebfcd48aafffddc082c7038f1207" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_plaintext_len</name></member>
+      <member refid="structmbedtls__ccm__context_1ad46e264cfffec402cc6cfee1dbe0fee3" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_processed</name></member>
+      <member refid="structmbedtls__ccm__context_1a3337d3f6f49978b0ece69127977a2d31" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_q</name></member>
+      <member refid="structmbedtls__ccm__context_1acc618c8a3809cb2f3a00d768bd597357" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_state</name></member>
+      <member refid="structmbedtls__ccm__context_1ac83e905fe40a11b1dc7dabd6b644fddc" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_tag_len</name></member>
+      <member refid="structmbedtls__ccm__context_1a97da95e3662269fd4315abe85cb7998c" prot="public" virt="non-virtual"><scope>mbedtls_ccm_context</scope><name>private_y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

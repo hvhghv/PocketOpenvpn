@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__dhm__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_dhm_context</compoundname>
+    <includes refid="dhm_8h" local="no">dhm.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1af19cc44025d4c2e386761087a6cf54a7" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_P</definition>
+        <argsstring></argsstring>
+        <name>private_P</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The prime modulus. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="102" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1af26b98e87b228912dd682b4fe08739a4" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_G</definition>
+        <argsstring></argsstring>
+        <name>private_G</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The generator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="103" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1a85df8a42df2ee3d0de43418aaa96188b" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_X</definition>
+        <argsstring></argsstring>
+        <name>private_X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Our secret value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="104" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1a6351e670afb392e76ff4add32f38447c" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_GX</definition>
+        <argsstring></argsstring>
+        <name>private_GX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Our public key = <computeroutput>G^X</computeroutput> mod <computeroutput>P</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="105" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1a035a5fc1d149456b766489dda0e5a204" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_GY</definition>
+        <argsstring></argsstring>
+        <name>private_GY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The public key of the peer = <computeroutput>G^Y</computeroutput> mod <computeroutput>P</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="106" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1a2b7f2364fa7ac521ece577fb925a86a3" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_K</definition>
+        <argsstring></argsstring>
+        <name>private_K</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The shared secret = <computeroutput>G^</computeroutput>(XY) mod <computeroutput>P</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="107" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1a88cf207a1b99a1414f3f2cc9fef40789" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_RP</definition>
+        <argsstring></argsstring>
+        <name>private_RP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cached value = <computeroutput>R^2</computeroutput> mod <computeroutput>P</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="108" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1a5762df81cc06a0cf543078e0a790fd0f" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_Vi</definition>
+        <argsstring></argsstring>
+        <name>private_Vi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The blinding value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="109" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1a8619bd9659ca76ff2a729c9775ea1412" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_Vf</definition>
+        <argsstring></argsstring>
+        <name>private_Vf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The unblinding value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="110" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dhm__context_1a7b2fdacda857b5dcc33fcc335d97fe68" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_dhm_context::private_pX</definition>
+        <argsstring></argsstring>
+        <name>private_pX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The previous <computeroutput>X</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="111" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The DHM context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_dhm_context</label>
+        <link refid="structmbedtls__dhm__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_P</edgelabel>
+          <edgelabel>private_pX</edgelabel>
+          <edgelabel>private_RP</edgelabel>
+          <edgelabel>private_GX</edgelabel>
+          <edgelabel>private_X</edgelabel>
+          <edgelabel>private_Vf</edgelabel>
+          <edgelabel>private_GY</edgelabel>
+          <edgelabel>private_G</edgelabel>
+          <edgelabel>private_Vi</edgelabel>
+          <edgelabel>private_K</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" line="101" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/dhm.h" bodystart="101" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structmbedtls__dhm__context_1af26b98e87b228912dd682b4fe08739a4" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_G</name></member>
+      <member refid="structmbedtls__dhm__context_1a6351e670afb392e76ff4add32f38447c" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_GX</name></member>
+      <member refid="structmbedtls__dhm__context_1a035a5fc1d149456b766489dda0e5a204" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_GY</name></member>
+      <member refid="structmbedtls__dhm__context_1a2b7f2364fa7ac521ece577fb925a86a3" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_K</name></member>
+      <member refid="structmbedtls__dhm__context_1af19cc44025d4c2e386761087a6cf54a7" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_P</name></member>
+      <member refid="structmbedtls__dhm__context_1a7b2fdacda857b5dcc33fcc335d97fe68" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_pX</name></member>
+      <member refid="structmbedtls__dhm__context_1a88cf207a1b99a1414f3f2cc9fef40789" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_RP</name></member>
+      <member refid="structmbedtls__dhm__context_1a8619bd9659ca76ff2a729c9775ea1412" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_Vf</name></member>
+      <member refid="structmbedtls__dhm__context_1a5762df81cc06a0cf543078e0a790fd0f" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_Vi</name></member>
+      <member refid="structmbedtls__dhm__context_1a85df8a42df2ee3d0de43418aaa96188b" prot="public" virt="non-virtual"><scope>mbedtls_dhm_context</scope><name>private_X</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

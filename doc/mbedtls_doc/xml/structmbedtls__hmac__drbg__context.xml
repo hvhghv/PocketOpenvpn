@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__hmac__drbg__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_hmac_drbg_context</compoundname>
+    <includes refid="hmac__drbg_8h" local="no">hmac_drbg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1a4717b77caccc9b532e14b32840650d1a" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref></type>
+        <definition>mbedtls_md_context_t mbedtls_hmac_drbg_context::private_md_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_md_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HMAC context (inc. K) <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="77" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1abeaae05499d1849ffa2c5e521f7dde54" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_hmac_drbg_context::private_V[MBEDTLS_MD_MAX_SIZE]</definition>
+        <argsstring>[MBEDTLS_MD_MAX_SIZE]</argsstring>
+        <name>private_V</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>V in the spec <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="78" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1a6694b6425028b8348d3b15cca93483c5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_context::private_reseed_counter</definition>
+        <argsstring></argsstring>
+        <name>private_reseed_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reseed counter <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="79" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1ab6bb7dab4b46e84acaf2b8970110af99" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_hmac_drbg_context::private_entropy_len</definition>
+        <argsstring></argsstring>
+        <name>private_entropy_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>entropy bytes grabbed on each (re)seed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="82" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1a2a653d27bb7b6626491670ccd6b8c710" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_context::private_prediction_resistance</definition>
+        <argsstring></argsstring>
+        <name>private_prediction_resistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>enable prediction resistance (Automatic reseed before every random generation) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="83" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1a97a7a4b79803e75ac9cae81a2271e1f7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_context::private_reseed_interval</definition>
+        <argsstring></argsstring>
+        <name>private_reseed_interval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reseed interval <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="85" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1a17e99ed1585d0707899aac3a4585c8fb" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_hmac_drbg_context::private_f_entropy) (void *, unsigned char *, size_t)</definition>
+        <argsstring>)(void *, unsigned char *, size_t)</argsstring>
+        <name>private_f_entropy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>entropy function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="88" column="5" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1abd329432891b97ebe9653d4467d272aa" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_hmac_drbg_context::private_p_entropy</definition>
+        <argsstring></argsstring>
+        <name>private_p_entropy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>context for the entropy function <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="89" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__hmac__drbg__context_1aaaa1445869e3870fd2a431b6b8c6a678" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>mbedtls_threading_mutex_t mbedtls_hmac_drbg_context::private_mutex</definition>
+        <argsstring></argsstring>
+        <name>private_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="100" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>HMAC_DRBG context. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_md_context_t</label>
+        <link refid="structmbedtls__md__context__t"/>
+      </node>
+      <node id="2">
+        <label>mbedtls_threading_mutex_t</label>
+        <link refid="structmbedtls__threading__mutex__t"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_hmac_drbg_context</label>
+        <link refid="structmbedtls__hmac__drbg__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_mutex</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_md_ctx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="74" column="40" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="74" bodyend="102"/>
+    <listofallmembers>
+      <member refid="structmbedtls__hmac__drbg__context_1ab6bb7dab4b46e84acaf2b8970110af99" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_entropy_len</name></member>
+      <member refid="structmbedtls__hmac__drbg__context_1a17e99ed1585d0707899aac3a4585c8fb" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_f_entropy</name></member>
+      <member refid="structmbedtls__hmac__drbg__context_1a4717b77caccc9b532e14b32840650d1a" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_md_ctx</name></member>
+      <member refid="structmbedtls__hmac__drbg__context_1aaaa1445869e3870fd2a431b6b8c6a678" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_mutex</name></member>
+      <member refid="structmbedtls__hmac__drbg__context_1abd329432891b97ebe9653d4467d272aa" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_p_entropy</name></member>
+      <member refid="structmbedtls__hmac__drbg__context_1a2a653d27bb7b6626491670ccd6b8c710" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_prediction_resistance</name></member>
+      <member refid="structmbedtls__hmac__drbg__context_1a6694b6425028b8348d3b15cca93483c5" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_reseed_counter</name></member>
+      <member refid="structmbedtls__hmac__drbg__context_1a97a7a4b79803e75ac9cae81a2271e1f7" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_reseed_interval</name></member>
+      <member refid="structmbedtls__hmac__drbg__context_1abeaae05499d1849ffa2c5e521f7dde54" prot="public" virt="non-virtual"><scope>mbedtls_hmac_drbg_context</scope><name>private_V</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

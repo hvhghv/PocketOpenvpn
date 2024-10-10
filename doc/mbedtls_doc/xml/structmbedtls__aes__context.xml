@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__aes__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_aes_context</compoundname>
+    <includes refid="aes_8h" local="no">aes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__aes__context_1addb441a9a912804eb1b341fb52f4e6be" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_aes_context::private_nr</definition>
+        <argsstring></argsstring>
+        <name>private_nr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of rounds. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" line="64" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__aes__context_1a25a996cc971d7ce9c49f013c43f0dcd9" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_aes_context::private_rk_offset</definition>
+        <argsstring></argsstring>
+        <name>private_rk_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The offset in array elements to AES round keys in the buffer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" line="65" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__aes__context_1a56118326bc1f8e8c9e095e777707cac7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_aes_context::private_buf[68]</definition>
+        <argsstring>[68]</argsstring>
+        <name>private_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unaligned data buffer. This buffer can hold 32 extra Bytes, which can be used for one of the following purposes: <itemizedlist>
+<listitem>
+<para>Alignment if VIA padlock is used. </para>
+</listitem>
+<listitem>
+<para>Simplifying key expansion in the 256-bit case by generating an extra round key. </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" line="71" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The AES context-type definition. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" line="63" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aes.h" bodystart="63" bodyend="80"/>
+    <listofallmembers>
+      <member refid="structmbedtls__aes__context_1a56118326bc1f8e8c9e095e777707cac7" prot="public" virt="non-virtual"><scope>mbedtls_aes_context</scope><name>private_buf</name></member>
+      <member refid="structmbedtls__aes__context_1addb441a9a912804eb1b341fb52f4e6be" prot="public" virt="non-virtual"><scope>mbedtls_aes_context</scope><name>private_nr</name></member>
+      <member refid="structmbedtls__aes__context_1a25a996cc971d7ce9c49f013c43f0dcd9" prot="public" virt="non-virtual"><scope>mbedtls_aes_context</scope><name>private_rk_offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

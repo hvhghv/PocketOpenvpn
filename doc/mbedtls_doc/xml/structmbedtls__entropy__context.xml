@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__entropy__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_entropy_context</compoundname>
+    <includes refid="entropy_8h" local="no">entropy.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__entropy__context_1a4d0058fff80c017527f986d4cdf500fb" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref></type>
+        <definition>mbedtls_md_context_t mbedtls_entropy_context::private_accumulator</definition>
+        <argsstring></argsstring>
+        <name>private_accumulator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="106" column="27" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__context_1a521eec5f5f2f4d62f8c8c15925ed5edc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_entropy_context::private_accumulator_started</definition>
+        <argsstring></argsstring>
+        <name>private_accumulator_started</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="107" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__context_1ad21e27a0108e526fed9ff4bb9eaadc33" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_entropy_context::private_source_count</definition>
+        <argsstring></argsstring>
+        <name>private_source_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="110" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__context_1ab040224242a2c57d07435c6fc1a09171" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__entropy__source__state" kindref="compound">mbedtls_entropy_source_state</ref></type>
+        <definition>mbedtls_entropy_source_state mbedtls_entropy_context::private_source[MBEDTLS_ENTROPY_MAX_SOURCES]</definition>
+        <argsstring>[MBEDTLS_ENTROPY_MAX_SOURCES]</argsstring>
+        <name>private_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="111" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__context_1a38b2569c4f45471029e3e26600457fd4" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>mbedtls_threading_mutex_t mbedtls_entropy_context::private_mutex</definition>
+        <argsstring></argsstring>
+        <name>private_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mutex <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="113" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__context_1a82b6e92d1f4da943b414c88f2e553e78" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_entropy_context::private_initial_entropy_run</definition>
+        <argsstring></argsstring>
+        <name>private_initial_entropy_run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="116" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Entropy context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>mbedtls_entropy_context</label>
+        <link refid="structmbedtls__entropy__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_mutex</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_accumulator</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_source</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_md_context_t</label>
+        <link refid="structmbedtls__md__context__t"/>
+      </node>
+      <node id="2">
+        <label>mbedtls_threading_mutex_t</label>
+        <link refid="structmbedtls__threading__mutex__t"/>
+      </node>
+      <node id="4">
+        <label>mbedtls_entropy_source_state</label>
+        <link refid="structmbedtls__entropy__source__state"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="105" column="38" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="105" bodyend="118"/>
+    <listofallmembers>
+      <member refid="structmbedtls__entropy__context_1a4d0058fff80c017527f986d4cdf500fb" prot="public" virt="non-virtual"><scope>mbedtls_entropy_context</scope><name>private_accumulator</name></member>
+      <member refid="structmbedtls__entropy__context_1a521eec5f5f2f4d62f8c8c15925ed5edc" prot="public" virt="non-virtual"><scope>mbedtls_entropy_context</scope><name>private_accumulator_started</name></member>
+      <member refid="structmbedtls__entropy__context_1a82b6e92d1f4da943b414c88f2e553e78" prot="public" virt="non-virtual"><scope>mbedtls_entropy_context</scope><name>private_initial_entropy_run</name></member>
+      <member refid="structmbedtls__entropy__context_1a38b2569c4f45471029e3e26600457fd4" prot="public" virt="non-virtual"><scope>mbedtls_entropy_context</scope><name>private_mutex</name></member>
+      <member refid="structmbedtls__entropy__context_1ab040224242a2c57d07435c6fc1a09171" prot="public" virt="non-virtual"><scope>mbedtls_entropy_context</scope><name>private_source</name></member>
+      <member refid="structmbedtls__entropy__context_1ad21e27a0108e526fed9ff4bb9eaadc33" prot="public" virt="non-virtual"><scope>mbedtls_entropy_context</scope><name>private_source_count</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

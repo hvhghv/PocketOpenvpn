@@ -1,0 +1,1239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="hmac__drbg_8h" kind="file" language="C++">
+    <compoundname>hmac_drbg.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="md_8h" local="yes">mbedtls/md.h</includes>
+    <includes refid="threading_8h" local="yes">mbedtls/threading.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="27">
+        <label>stdlib.h</label>
+      </node>
+      <node id="26">
+        <label>mbedtls/threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="23">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hmac_drbg.h</label>
+        <link refid="hmac__drbg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="28">
+        <label>pthread.h</label>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="25">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__hmac__drbg__context" prot="public">mbedtls_hmac_drbg_context</innerclass>
+      <sectiondef kind="user-defined">
+      <header>SECTION: Module settings</header>
+      <description><para>The configuration options you can set for this module are in this section. Either change them in <ref refid="mbedtls__config_8h" kindref="compound">mbedtls_config.h</ref> or define them on the compiler command line. </para>
+</description>
+      <memberdef kind="define" id="hmac__drbg_8h_1aa7b7ad2ef442817cc4d48909c39a97e0" prot="public" static="no">
+        <name>MBEDTLS_HMAC_DRBG_RESEED_INTERVAL</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Interval before reseed is performed by default </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="47" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmac__drbg_8h_1a10b5abc1576c6a9fa766ce1e01d6e54f" prot="public" static="no">
+        <name>MBEDTLS_HMAC_DRBG_MAX_INPUT</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum number of additional input bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="51" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmac__drbg_8h_1a3d3785a3eef7b56ca25df77a3912fbb4" prot="public" static="no">
+        <name>MBEDTLS_HMAC_DRBG_MAX_REQUEST</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum number of requested bytes per call </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="55" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmac__drbg_8h_1a8d52d7d5113feb2f54eda19dfd97a942" prot="public" static="no">
+        <name>MBEDTLS_HMAC_DRBG_MAX_SEED_INPUT</name>
+        <initializer>384</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum size of (re)seed buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="59" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hmac__drbg_8h_1a9b2cc8521b7ac670ecf41c3788b0d847" prot="public" static="no">
+        <name>MBEDTLS_ERR_HMAC_DRBG_REQUEST_TOO_BIG</name>
+        <initializer>-0x0003</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Too many random requested in single call. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="30" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmac__drbg_8h_1a0afd76b63cb8715577ba44de755af1fe" prot="public" static="no">
+        <name>MBEDTLS_ERR_HMAC_DRBG_INPUT_TOO_BIG</name>
+        <initializer>-0x0005</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Input too large (Entropy + additional). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="32" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmac__drbg_8h_1ae5ccb23af2f8faf60deb292208af66f7" prot="public" static="no">
+        <name>MBEDTLS_ERR_HMAC_DRBG_FILE_IO_ERROR</name>
+        <initializer>-0x0007</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read/write error in file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="34" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmac__drbg_8h_1ac384cdd999b9733a5e4a8112c4f14291" prot="public" static="no">
+        <name>MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED</name>
+        <initializer>-0x0009</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The entropy source failed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="36" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmac__drbg_8h_1acbb59dffae4915b9a17142aaed752c57" prot="public" static="no">
+        <name>MBEDTLS_HMAC_DRBG_PR_OFF</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No prediction resistance <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="64" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmac__drbg_8h_1ac8c4bb0b84fb1c848cdb5fa240ef5e22" prot="public" static="no">
+        <name>MBEDTLS_HMAC_DRBG_PR_ON</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prediction resistance enabled <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="65" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hmac__drbg_8h_1af94b7f774b9729f37bc93bd4b370230e" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref></type>
+        <definition>typedef struct mbedtls_hmac_drbg_context mbedtls_hmac_drbg_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_hmac_drbg_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HMAC_DRBG context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="102" column="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hmac__drbg_8h_1a10881c328300a9ddb7cd5fe359c18acd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_hmac_drbg_init</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx)</argsstring>
+        <name>mbedtls_hmac_drbg_init</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>HMAC_DRBG context initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function makes the context ready for <ref refid="hmac__drbg_8h_1a0af34e5c68f15dfe714b5da94bce8f74" kindref="member">mbedtls_hmac_drbg_seed()</ref>, <ref refid="hmac__drbg_8h_1a45cb3ab23ff6058a4e14f4140ca9f0f4" kindref="member">mbedtls_hmac_drbg_seed_buf()</ref> or <ref refid="hmac__drbg_8h_1a41e1f127304b1228d9f134d38e200e8a" kindref="member">mbedtls_hmac_drbg_free()</ref>.</para>
+<para><simplesect kind="note"><para>The reseed interval is <ref refid="hmac__drbg_8h_1aa7b7ad2ef442817cc4d48909c39a97e0" kindref="member">MBEDTLS_HMAC_DRBG_RESEED_INTERVAL</ref> by default. Override this value by calling <ref refid="hmac__drbg_8h_1a17f9f894c4765e75d66b5b2fc8404fb2" kindref="member">mbedtls_hmac_drbg_set_reseed_interval()</ref>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC_DRBG context to be initialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="116" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="116" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a0af34e5c68f15dfe714b5da94bce8f74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_seed</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, const mbedtls_md_info_t *md_info, int(*f_entropy)(void *, unsigned char *, size_t), void *p_entropy, const unsigned char *custom, size_t len)</argsstring>
+        <name>mbedtls_hmac_drbg_seed</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_entropy</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_entropy</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>custom</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>HMAC_DRBG initial seeding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the initial seed and set up the entropy source for future reseeds.</para>
+<para>A typical choice for the <computeroutput>f_entropy</computeroutput> and <computeroutput>p_entropy</computeroutput> parameters is to use the entropy module:<itemizedlist>
+<listitem><para><computeroutput>f_entropy</computeroutput> is <ref refid="entropy_8h_1a81765f6cdf4e5111bcb9f4324f3234cb" kindref="member">mbedtls_entropy_func()</ref>;</para>
+</listitem><listitem><para><computeroutput>p_entropy</computeroutput> is an instance of <ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> initialized with <ref refid="entropy_8h_1aa901e027093c6fe65dee5760db78aced" kindref="member">mbedtls_entropy_init()</ref> (which registers the platform&apos;s default entropy sources).</para>
+</listitem></itemizedlist>
+</para>
+<para>You can provide a personalization string in addition to the entropy source, to make this instantiation as unique as possible.</para>
+<para><simplesect kind="note"><para>By default, the security strength as defined by NIST is:<itemizedlist>
+<listitem><para>128 bits if <computeroutput>md_info</computeroutput> is SHA-1;</para>
+</listitem><listitem><para>192 bits if <computeroutput>md_info</computeroutput> is SHA-224;</para>
+</listitem><listitem><para>256 bits if <computeroutput>md_info</computeroutput> is SHA-256, SHA-384 or SHA-512. Note that SHA-256 is just as efficient as SHA-224. The security strength can be reduced if a smaller entropy length is set with <ref refid="hmac__drbg_8h_1a6a396cfe0ab81e07dd676ff75163b474" kindref="member">mbedtls_hmac_drbg_set_entropy_len()</ref>.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="note"><para>The default entropy length is the security strength (converted from bits to bytes). You can override it by calling <ref refid="hmac__drbg_8h_1a6a396cfe0ab81e07dd676ff75163b474" kindref="member">mbedtls_hmac_drbg_set_entropy_len()</ref>.</para>
+</simplesect>
+<simplesect kind="note"><para>During the initial seeding, this function calls the entropy source to obtain a nonce whose length is half the entropy length. </para>
+</simplesect>
+<simplesect kind="note"><para>When Mbed TLS is built with threading support, after this function returns successfully, it is safe to call <ref refid="hmac__drbg_8h_1aa66cb34019161010448c7e915a972ee6" kindref="member">mbedtls_hmac_drbg_random()</ref> from multiple threads. Other operations, including reseeding, are not thread-safe. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC_DRBG context to be seeded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD algorithm to use for HMAC_DRBG. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_entropy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entropy callback, taking as arguments the <computeroutput>p_entropy</computeroutput> context, the buffer to fill, and the length of the buffer. <computeroutput>f_entropy</computeroutput> is always called with a length that is less than or equal to the entropy length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_entropy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entropy context to pass to <computeroutput>f_entropy</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>custom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The personalization string. This can be <computeroutput>NULL</computeroutput>, in which case the personalization string is empty regardless of the value of <computeroutput>len</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the personalization string. This must be at most <ref refid="hmac__drbg_8h_1a10b5abc1576c6a9fa766ce1e01d6e54f" kindref="member">MBEDTLS_HMAC_DRBG_MAX_INPUT</ref> and also at most <ref refid="hmac__drbg_8h_1a8d52d7d5113feb2f54eda19dfd97a942" kindref="member">MBEDTLS_HMAC_DRBG_MAX_SEED_INPUT</ref> - <computeroutput>entropy_len</computeroutput> * 3 / 2 where <computeroutput>entropy_len</computeroutput> is the entropy length described above.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> if <computeroutput>md_info</computeroutput> is invalid. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1a7e7a4f1a618afbb412ef82ca2e572140" kindref="member">MBEDTLS_ERR_MD_ALLOC_FAILED</ref> if there was not enough memory to allocate context data. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1ac384cdd999b9733a5e4a8112c4f14291" kindref="member">MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED</ref> if the call to <computeroutput>f_entropy</computeroutput> failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="186" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="186" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a45cb3ab23ff6058a4e14f4140ca9f0f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_seed_buf</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, const mbedtls_md_info_t *md_info, const unsigned char *data, size_t data_len)</argsstring>
+        <name>mbedtls_hmac_drbg_seed_buf</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>data_len</declname>
+        </param>
+        <briefdescription>
+<para>Initialisation of simplified HMAC_DRBG (never reseeds). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is meant for use in algorithms that need a pseudorandom input such as deterministic ECDSA. <simplesect kind="note"><para>When Mbed TLS is built with threading support, after this function returns successfully, it is safe to call <ref refid="hmac__drbg_8h_1aa66cb34019161010448c7e915a972ee6" kindref="member">mbedtls_hmac_drbg_random()</ref> from multiple threads. Other operations, including reseeding, are not thread-safe. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC_DRBG context to be initialised. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD algorithm to use for HMAC_DRBG. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Concatenation of the initial entropy string and the additional data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>data</computeroutput> in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. or </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> if <computeroutput>md_info</computeroutput> is invalid. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1a7e7a4f1a618afbb412ef82ca2e572140" kindref="member">MBEDTLS_ERR_MD_ALLOC_FAILED</ref> if there was not enough memory to allocate context data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="221" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="221" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a0a874c42e24bd02c9805be58b3f04083" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_hmac_drbg_set_prediction_resistance</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, int resistance)</argsstring>
+        <name>mbedtls_hmac_drbg_set_prediction_resistance</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resistance</declname>
+        </param>
+        <briefdescription>
+<para>This function turns prediction resistance on or off. The default value is off. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If enabled, entropy is gathered at the beginning of every call to <ref refid="hmac__drbg_8h_1a8829c0b3f094edf8cc144c7185536cd8" kindref="member">mbedtls_hmac_drbg_random_with_add()</ref> or <ref refid="hmac__drbg_8h_1aa66cb34019161010448c7e915a972ee6" kindref="member">mbedtls_hmac_drbg_random()</ref>. Only use this if your entropy source has sufficient throughput.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="hmac__drbg_8h_1ac8c4bb0b84fb1c848cdb5fa240ef5e22" kindref="member">MBEDTLS_HMAC_DRBG_PR_ON</ref> or <ref refid="hmac__drbg_8h_1acbb59dffae4915b9a17142aaed752c57" kindref="member">MBEDTLS_HMAC_DRBG_PR_OFF</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="238" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="238" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a6a396cfe0ab81e07dd676ff75163b474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_hmac_drbg_set_entropy_len</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, size_t len)</argsstring>
+        <name>mbedtls_hmac_drbg_set_entropy_len</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the amount of entropy grabbed on each seed or reseed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See the documentation of <ref refid="hmac__drbg_8h_1a0af34e5c68f15dfe714b5da94bce8f74" kindref="member">mbedtls_hmac_drbg_seed()</ref> for the default value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of entropy to grab, in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="250" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="250" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a17f9f894c4765e75d66b5b2fc8404fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_hmac_drbg_set_reseed_interval</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, int interval)</argsstring>
+        <name>mbedtls_hmac_drbg_set_reseed_interval</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+<para>Set the reseed interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The reseed interval is the number of calls to <ref refid="hmac__drbg_8h_1aa66cb34019161010448c7e915a972ee6" kindref="member">mbedtls_hmac_drbg_random()</ref> or <ref refid="hmac__drbg_8h_1a8829c0b3f094edf8cc144c7185536cd8" kindref="member">mbedtls_hmac_drbg_random_with_add()</ref> after which the entropy function is called again.</para>
+<para>The default value is <ref refid="hmac__drbg_8h_1aa7b7ad2ef442817cc4d48909c39a97e0" kindref="member">MBEDTLS_HMAC_DRBG_RESEED_INTERVAL</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reseed interval. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="265" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="265" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1abfbf6fb6d738195b32b3274d669667bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_update</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, const unsigned char *additional, size_t add_len)</argsstring>
+        <name>mbedtls_hmac_drbg_update</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>additional</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>add_len</declname>
+        </param>
+        <briefdescription>
+<para>This function updates the state of the HMAC_DRBG context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is not thread-safe. It is not safe to call this function if another thread might be concurrently obtaining random numbers from the same context or updating or reseeding the same context.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to update the state with. If this is <computeroutput>NULL</computeroutput>, there is no additional data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>additional</computeroutput> in bytes. Unused if <computeroutput>additional</computeroutput> is <computeroutput>NULL</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success, or an error from the underlying hash calculation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="285" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="285" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a0bc680c3d03de1a82170a3831617b8cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_reseed</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, const unsigned char *additional, size_t len)</argsstring>
+        <name>mbedtls_hmac_drbg_reseed</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>additional</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>This function reseeds the HMAC_DRBG context, that is extracts data from the entropy source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is not thread-safe. It is not safe to call this function if another thread might be concurrently obtaining random numbers from the same context or updating or reseeding the same context.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional data to add to the state. If this is <computeroutput>NULL</computeroutput>, there is no additional data and <computeroutput>len</computeroutput> should be <computeroutput>0</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the additional data. This must be at most <ref refid="hmac__drbg_8h_1a10b5abc1576c6a9fa766ce1e01d6e54f" kindref="member">MBEDTLS_HMAC_DRBG_MAX_INPUT</ref> and also at most <ref refid="hmac__drbg_8h_1a8d52d7d5113feb2f54eda19dfd97a942" kindref="member">MBEDTLS_HMAC_DRBG_MAX_SEED_INPUT</ref> - <computeroutput>entropy_len</computeroutput> where <computeroutput>entropy_len</computeroutput> is the entropy length (see <ref refid="hmac__drbg_8h_1a6a396cfe0ab81e07dd676ff75163b474" kindref="member">mbedtls_hmac_drbg_set_entropy_len()</ref>).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1ac384cdd999b9733a5e4a8112c4f14291" kindref="member">MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED</ref> if a call to the entropy function failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="312" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="312" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a8829c0b3f094edf8cc144c7185536cd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_random_with_add</definition>
+        <argsstring>(void *p_rng, unsigned char *output, size_t output_len, const unsigned char *additional, size_t add_len)</argsstring>
+        <name>mbedtls_hmac_drbg_random_with_add</name>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>additional</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>add_len</declname>
+        </param>
+        <briefdescription>
+<para>This function updates an HMAC_DRBG instance with additional data and uses it to generate random data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function automatically reseeds if the reseed counter is exceeded or prediction resistance is enabled.</para>
+<para><simplesect kind="note"><para>This function is not thread-safe. It is not safe to call this function if another thread might be concurrently obtaining random numbers from the same context or updating or reseeding the same context.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. This must be a pointer to a <ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to fill. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer in bytes. This must be at most <ref refid="hmac__drbg_8h_1a3d3785a3eef7b56ca25df77a3912fbb4" kindref="member">MBEDTLS_HMAC_DRBG_MAX_REQUEST</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional data to update with. If this is <computeroutput>NULL</computeroutput>, there is no additional data and <computeroutput>add_len</computeroutput> should be <computeroutput>0</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the additional data. This must be at most <ref refid="hmac__drbg_8h_1a10b5abc1576c6a9fa766ce1e01d6e54f" kindref="member">MBEDTLS_HMAC_DRBG_MAX_INPUT</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1ac384cdd999b9733a5e4a8112c4f14291" kindref="member">MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED</ref> if a call to the entropy source failed. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1a9b2cc8521b7ac670ecf41c3788b0d847" kindref="member">MBEDTLS_ERR_HMAC_DRBG_REQUEST_TOO_BIG</ref> if <computeroutput>output_len</computeroutput> &gt; <ref refid="hmac__drbg_8h_1a3d3785a3eef7b56ca25df77a3912fbb4" kindref="member">MBEDTLS_HMAC_DRBG_MAX_REQUEST</ref>. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1a0afd76b63cb8715577ba44de755af1fe" kindref="member">MBEDTLS_ERR_HMAC_DRBG_INPUT_TOO_BIG</ref> if <computeroutput>add_len</computeroutput> &gt; <ref refid="hmac__drbg_8h_1a10b5abc1576c6a9fa766ce1e01d6e54f" kindref="member">MBEDTLS_HMAC_DRBG_MAX_INPUT</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="346" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="346" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1aa66cb34019161010448c7e915a972ee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_random</definition>
+        <argsstring>(void *p_rng, unsigned char *output, size_t out_len)</argsstring>
+        <name>mbedtls_hmac_drbg_random</name>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>out_len</declname>
+        </param>
+        <briefdescription>
+<para>This function uses HMAC_DRBG to generate random data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function automatically reseeds if the reseed counter is exceeded or prediction resistance is enabled. <simplesect kind="note"><para>When Mbed TLS is built with threading support, it is safe to call <ref refid="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" kindref="member">mbedtls_ctr_drbg_random()</ref> from multiple threads. Other operations, including reseeding, are not thread-safe. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. This must be a pointer to a <ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to fill. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer in bytes. This must be at most <ref refid="hmac__drbg_8h_1a3d3785a3eef7b56ca25df77a3912fbb4" kindref="member">MBEDTLS_HMAC_DRBG_MAX_REQUEST</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1ac384cdd999b9733a5e4a8112c4f14291" kindref="member">MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED</ref> if a call to the entropy source failed. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1a9b2cc8521b7ac670ecf41c3788b0d847" kindref="member">MBEDTLS_ERR_HMAC_DRBG_REQUEST_TOO_BIG</ref> if <computeroutput>out_len</computeroutput> &gt; <ref refid="hmac__drbg_8h_1a3d3785a3eef7b56ca25df77a3912fbb4" kindref="member">MBEDTLS_HMAC_DRBG_MAX_REQUEST</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="378" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="378" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a41e1f127304b1228d9f134d38e200e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_hmac_drbg_free</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx)</argsstring>
+        <name>mbedtls_hmac_drbg_free</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function resets HMAC_DRBG context to the state immediately after initial call of <ref refid="hmac__drbg_8h_1a10881c328300a9ddb7cd5fe359c18acd" kindref="member">mbedtls_hmac_drbg_init()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context to free. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="386" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="386" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a731a0a6e28f0a8021c7e5e2dc6d515f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_write_seed_file</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, const char *path)</argsstring>
+        <name>mbedtls_hmac_drbg_write_seed_file</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>This function writes a seed file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1ae5ccb23af2f8faf60deb292208af66f7" kindref="member">MBEDTLS_ERR_HMAC_DRBG_FILE_IO_ERROR</ref> on file error. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1ac384cdd999b9733a5e4a8112c4f14291" kindref="member">MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED</ref> on reseed failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="400" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="400" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a07a6569e88af60efb3b567482020d9da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_update_seed_file</definition>
+        <argsstring>(mbedtls_hmac_drbg_context *ctx, const char *path)</argsstring>
+        <name>mbedtls_hmac_drbg_update_seed_file</name>
+        <param>
+          <type><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>This function reads and updates a seed file. The seed is added to this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1ae5ccb23af2f8faf60deb292208af66f7" kindref="member">MBEDTLS_ERR_HMAC_DRBG_FILE_IO_ERROR</ref> on file error. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1ac384cdd999b9733a5e4a8112c4f14291" kindref="member">MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED</ref> on reseed failure. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="hmac__drbg_8h_1a0afd76b63cb8715577ba44de755af1fe" kindref="member">MBEDTLS_ERR_HMAC_DRBG_INPUT_TOO_BIG</ref> if the existing seed file is too large. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="416" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="416" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hmac__drbg_8h_1a40765425ba6741ed603707fa582ab3b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_hmac_drbg_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_hmac_drbg_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>The HMAC_DRBG Checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> if the test failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" line="427" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h" declline="427" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The HMAC_DRBG pseudorandom generator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This module implements the HMAC_DRBG pseudorandom generator described in <emphasis>NIST SP 800-90A: Recommendation for Random Number Generation Using Deterministic Random Bit Generators</emphasis>. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_HMAC_DRBG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_HMAC_DRBG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="md_8h" kindref="compound">mbedtls/md.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threading_8h" kindref="compound">mbedtls/threading.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Error<sp/>codes</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight></codeline>
+<codeline lineno="30" refid="hmac__drbg_8h_1a9b2cc8521b7ac670ecf41c3788b0d847" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_HMAC_DRBG_REQUEST_TOO_BIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0003</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="hmac__drbg_8h_1a0afd76b63cb8715577ba44de755af1fe" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_HMAC_DRBG_INPUT_TOO_BIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0005</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="hmac__drbg_8h_1ae5ccb23af2f8faf60deb292208af66f7" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_HMAC_DRBG_FILE_IO_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0007</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="hmac__drbg_8h_1ac384cdd999b9733a5e4a8112c4f14291" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_HMAC_DRBG_ENTROPY_SOURCE_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0009</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_HMAC_DRBG_RESEED_INTERVAL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="hmac__drbg_8h_1aa7b7ad2ef442817cc4d48909c39a97e0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_HMAC_DRBG_RESEED_INTERVAL<sp/><sp/><sp/>10000<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_HMAC_DRBG_MAX_INPUT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="hmac__drbg_8h_1a10b5abc1576c6a9fa766ce1e01d6e54f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_HMAC_DRBG_MAX_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>256<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_HMAC_DRBG_MAX_REQUEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="hmac__drbg_8h_1a3d3785a3eef7b56ca25df77a3912fbb4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_HMAC_DRBG_MAX_REQUEST<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_HMAC_DRBG_MAX_SEED_INPUT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="hmac__drbg_8h_1a8d52d7d5113feb2f54eda19dfd97a942" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_HMAC_DRBG_MAX_SEED_INPUT<sp/><sp/><sp/><sp/>384<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="hmac__drbg_8h_1acbb59dffae4915b9a17142aaed752c57" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_HMAC_DRBG_PR_OFF<sp/><sp/><sp/>0<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="hmac__drbg_8h_1ac8c4bb0b84fb1c848cdb5fa240ef5e22" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_HMAC_DRBG_PR_ON<sp/><sp/><sp/><sp/>1<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="structmbedtls__hmac__drbg__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Working<sp/>state:<sp/>the<sp/>key<sp/>K<sp/>is<sp/>not<sp/>stored<sp/>explicitly,</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>but<sp/>is<sp/>implied<sp/>by<sp/>the<sp/>HMAC<sp/>context<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="structmbedtls__hmac__drbg__context_1a4717b77caccc9b532e14b32840650d1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(md_ctx);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="structmbedtls__hmac__drbg__context_1abeaae05499d1849ffa2c5e521f7dde54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(V)[<ref refid="md_8h_1ad3e0e65cb5b289a358b83b5af1fdd41b" kindref="member">MBEDTLS_MD_MAX_SIZE</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="structmbedtls__hmac__drbg__context_1a6694b6425028b8348d3b15cca93483c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(reseed_counter);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Administrative<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="structmbedtls__hmac__drbg__context_1ab6bb7dab4b46e84acaf2b8970110af99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(entropy_len);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="structmbedtls__hmac__drbg__context_1a2a653d27bb7b6626491670ccd6b8c710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(prediction_resistance);<sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="structmbedtls__hmac__drbg__context_1a97a7a4b79803e75ac9cae81a2271e1f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(reseed_interval);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Callbacks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structmbedtls__hmac__drbg__context_1a17e99ed1585d0707899aac3a4585c8fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int(*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(f_entropy))(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t);<sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="structmbedtls__hmac__drbg__context_1abd329432891b97ebe9653d4467d272aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(p_entropy);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Invariant:<sp/>the<sp/>mutex<sp/>is<sp/>initialized<sp/>if<sp/>and<sp/>only<sp/>if</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>md_ctx-&gt;md_info<sp/>!=<sp/>NULL.<sp/>This<sp/>means<sp/>that<sp/>the<sp/>mutex<sp/>is<sp/>initialized</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>during<sp/>the<sp/>initial<sp/>seeding<sp/>in<sp/>mbedtls_hmac_drbg_seed()<sp/>or</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>mbedtls_hmac_drbg_seed_buf()<sp/>and<sp/>freed<sp/>in<sp/>mbedtls_ctr_drbg_free().</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Note<sp/>that<sp/>this<sp/>invariant<sp/>may<sp/>change<sp/>without<sp/>notice.<sp/>Do<sp/>not<sp/>rely<sp/>on<sp/>it</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>do<sp/>not<sp/>access<sp/>the<sp/>mutex<sp/>directly<sp/>in<sp/>application<sp/>code.</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="structmbedtls__hmac__drbg__context_1aaaa1445869e3870fd2a431b6b8c6a678" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(mutex);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<sp/><ref refid="hmac__drbg_8h_1af94b7f774b9729f37bc93bd4b370230e" kindref="member">mbedtls_hmac_drbg_context</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a10881c328300a9ddb7cd5fe359c18acd" kindref="member">mbedtls_hmac_drbg_init</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_THREADING_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a0af34e5c68f15dfe714b5da94bce8f74" kindref="member">mbedtls_hmac_drbg_seed</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_entropy)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_entropy,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*custom,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_THREADING_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a45cb3ab23ff6058a4e14f4140ca9f0f4" kindref="member">mbedtls_hmac_drbg_seed_buf</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>data_len);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a0a874c42e24bd02c9805be58b3f04083" kindref="member">mbedtls_hmac_drbg_set_prediction_resistance</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>resistance);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a6a396cfe0ab81e07dd676ff75163b474" kindref="member">mbedtls_hmac_drbg_set_entropy_len</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a17f9f894c4765e75d66b5b2fc8404fb2" kindref="member">mbedtls_hmac_drbg_set_reseed_interval</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interval);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1abfbf6fb6d738195b32b3274d669667bf" kindref="member">mbedtls_hmac_drbg_update</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*additional,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>add_len);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a0bc680c3d03de1a82170a3831617b8cf" kindref="member">mbedtls_hmac_drbg_reseed</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*additional,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a8829c0b3f094edf8cc144c7185536cd8" kindref="member">mbedtls_hmac_drbg_random_with_add</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_len,</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*additional,</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>add_len);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_THREADING_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1aa66cb34019161010448c7e915a972ee6" kindref="member">mbedtls_hmac_drbg_random</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>out_len);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a41e1f127304b1228d9f134d38e200e8a" kindref="member">mbedtls_hmac_drbg_free</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a731a0a6e28f0a8021c7e5e2dc6d515f8" kindref="member">mbedtls_hmac_drbg_write_seed_file</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a07a6569e88af60efb3b567482020d9da" kindref="member">mbedtls_hmac_drbg_update_seed_file</ref>(<ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_FS_IO<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hmac__drbg_8h_1a40765425ba6741ed603707fa582ab3b2" kindref="member">mbedtls_hmac_drbg_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>hmac_drbg.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/hmac_drbg.h"/>
+  </compounddef>
+</doxygen>

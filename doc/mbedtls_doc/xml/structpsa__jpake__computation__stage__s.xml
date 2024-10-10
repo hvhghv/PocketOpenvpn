@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__jpake__computation__stage__s" kind="struct" language="C++" prot="public">
+    <compoundname>psa_jpake_computation_stage_s</compoundname>
+    <includes refid="crypto__extra_8h" local="no">crypto_extra.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__jpake__computation__stage__s_1aee24258dd469bc85fc8d99bdb3150784" prot="public" static="no" mutable="no">
+        <type><ref refid="crypto__extra_8h_1a8c7c3d5bafd1cb25f5cd8d866e3bda0b" kindref="member">psa_jpake_round_t</ref></type>
+        <definition>psa_jpake_round_t psa_jpake_computation_stage_s::private_round</definition>
+        <argsstring></argsstring>
+        <name>private_round</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="2004" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="2004" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__jpake__computation__stage__s_1ac69abb423a6f5185e6c1c92032bb2422" prot="public" static="no" mutable="no">
+        <type><ref refid="crypto__extra_8h_1a8bb19be9f990532703b47582cafc7d0c" kindref="member">psa_jpake_io_mode_t</ref></type>
+        <definition>psa_jpake_io_mode_t psa_jpake_computation_stage_s::private_io_mode</definition>
+        <argsstring></argsstring>
+        <name>private_io_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="2006" column="25" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="2006" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__jpake__computation__stage__s_1af3237cdd802fad32d06fb06f57f90182" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_jpake_computation_stage_s::private_inputs</definition>
+        <argsstring></argsstring>
+        <name>private_inputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="2008" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="2008" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__jpake__computation__stage__s_1ad29459217d86cf45e10afe5382d3e07e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_jpake_computation_stage_s::private_outputs</definition>
+        <argsstring></argsstring>
+        <name>private_outputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="2010" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="2010" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__jpake__computation__stage__s_1a00a32d4dacc6817ed61c2180bdf88854" prot="public" static="no" mutable="no">
+        <type><ref refid="group__pake_1gac16be59e5b1acb89c26709eed001ef35" kindref="member">psa_pake_step_t</ref></type>
+        <definition>psa_pake_step_t psa_jpake_computation_stage_s::private_step</definition>
+        <argsstring></argsstring>
+        <name>private_step</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="2012" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="2012" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="2002" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="2002" bodyend="2013"/>
+    <listofallmembers>
+      <member refid="structpsa__jpake__computation__stage__s_1af3237cdd802fad32d06fb06f57f90182" prot="public" virt="non-virtual"><scope>psa_jpake_computation_stage_s</scope><name>private_inputs</name></member>
+      <member refid="structpsa__jpake__computation__stage__s_1ac69abb423a6f5185e6c1c92032bb2422" prot="public" virt="non-virtual"><scope>psa_jpake_computation_stage_s</scope><name>private_io_mode</name></member>
+      <member refid="structpsa__jpake__computation__stage__s_1ad29459217d86cf45e10afe5382d3e07e" prot="public" virt="non-virtual"><scope>psa_jpake_computation_stage_s</scope><name>private_outputs</name></member>
+      <member refid="structpsa__jpake__computation__stage__s_1aee24258dd469bc85fc8d99bdb3150784" prot="public" virt="non-virtual"><scope>psa_jpake_computation_stage_s</scope><name>private_round</name></member>
+      <member refid="structpsa__jpake__computation__stage__s_1a00a32d4dacc6817ed61c2180bdf88854" prot="public" virt="non-virtual"><scope>psa_jpake_computation_stage_s</scope><name>private_step</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

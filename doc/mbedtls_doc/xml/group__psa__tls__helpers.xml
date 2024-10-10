@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__psa__tls__helpers" kind="group">
+    <compoundname>psa_tls_helpers</compoundname>
+    <title>TLS helper functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__psa__tls__helpers_1ga9c83c095adfec7da99401cf81e164f99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1gae7ad3569cb9c91b1ebe59a056edb2fc6" kindref="member">psa_ecc_family_t</ref></type>
+        <definition>psa_ecc_family_t mbedtls_ecc_group_to_psa</definition>
+        <argsstring>(mbedtls_ecp_group_id grpid, size_t *bits)</argsstring>
+        <name>mbedtls_ecc_group_to_psa</name>
+        <param>
+          <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+          <declname>grpid</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert an ECC curve identifier from the Mbed TLS encoding to PSA.</para>
+<para><simplesect kind="note"><para>This function is provided solely for the convenience of Mbed TLS and may be removed at any time without notice.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grpid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An Mbed TLS elliptic curve identifier (<computeroutput>MBEDTLS_ECP_DP_xxx</computeroutput>). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the bit size of the curve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The corresponding PSA elliptic curve identifier (<computeroutput>PSA_ECC_FAMILY_xxx</computeroutput>). </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on failure (<computeroutput>grpid</computeroutput> is not recognized). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="579" column="18" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="579" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__tls__helpers_1gaca24f78298db9f7d1096e10fe6ee7130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+        <definition>mbedtls_ecp_group_id mbedtls_ecc_group_of_psa</definition>
+        <argsstring>(psa_ecc_family_t curve, size_t bits, int bits_is_sloppy)</argsstring>
+        <name>mbedtls_ecc_group_of_psa</name>
+        <param>
+          <type><ref refid="group__crypto__types_1gae7ad3569cb9c91b1ebe59a056edb2fc6" kindref="member">psa_ecc_family_t</ref></type>
+          <declname>curve</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits_is_sloppy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert an ECC curve identifier from the PSA encoding to Mbed TLS.</para>
+<para><simplesect kind="note"><para>This function is provided solely for the convenience of Mbed TLS and may be removed at any time without notice.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>curve</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A PSA elliptic curve identifier (<computeroutput>PSA_ECC_FAMILY_xxx</computeroutput>). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bit-length of a private key on <computeroutput>curve</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bits_is_sloppy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, <computeroutput>bits</computeroutput> may be the bit-length rounded up to the nearest multiple of 8. This allows the caller to infer the exact curve from the length of a key which is supplied as a byte string.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The corresponding Mbed TLS elliptic curve identifier (<computeroutput>MBEDTLS_ECP_DP_xxx</computeroutput>). </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2da677d15aba64be1606e0f63ebff096840" kindref="member">MBEDTLS_ECP_DP_NONE</ref> if <computeroutput>curve</computeroutput> is not recognized. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2da677d15aba64be1606e0f63ebff096840" kindref="member">MBEDTLS_ECP_DP_NONE</ref> if <computeroutput>bits</computeroutput> is not correct for <computeroutput>curve</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="601" column="22" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="601" declcolumn="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

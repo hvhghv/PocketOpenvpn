@@ -1,0 +1,4 @@
+<map id="key_ctx_bi" name="key_ctx_bi">
+<area shape="rect" id="node1" title="Container for two sets of OpenSSL cipher and/or HMAC contexts for both sending and receiving directio..." alt="" coords="5,109,91,136"/>
+<area shape="rect" id="node2" href="$structkey__ctx.html" title="Container for one set of cipher and/or HMAC contexts." alt="" coords="14,5,82,32"/>
+</map>

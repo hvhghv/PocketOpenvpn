@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_b4d146e9a6d8dd56ed4afb2480a97fd3" kind="dir">
+    <compoundname>mbedtls</compoundname>
+    <innerfile refid="aes_8h">aes.h</innerfile>
+    <innerfile refid="aria_8h">aria.h</innerfile>
+    <innerfile refid="asn1_8h">asn1.h</innerfile>
+    <innerfile refid="asn1write_8h">asn1write.h</innerfile>
+    <innerfile refid="base64_8h">base64.h</innerfile>
+    <innerfile refid="bignum_8h">bignum.h</innerfile>
+    <innerfile refid="mbedtls_2build__info_8h">mbedtls/build_info.h</innerfile>
+    <innerfile refid="camellia_8h">camellia.h</innerfile>
+    <innerfile refid="ccm_8h">ccm.h</innerfile>
+    <innerfile refid="chacha20_8h">chacha20.h</innerfile>
+    <innerfile refid="chachapoly_8h">chachapoly.h</innerfile>
+    <innerfile refid="check__config_8h">check_config.h</innerfile>
+    <innerfile refid="cipher_8h">cipher.h</innerfile>
+    <innerfile refid="cmac_8h">cmac.h</innerfile>
+    <innerfile refid="compat-2_8x_8h">compat-2.x.h</innerfile>
+    <innerfile refid="config__adjust__legacy__crypto_8h">config_adjust_legacy_crypto.h</innerfile>
+    <innerfile refid="config__adjust__legacy__from__psa_8h">config_adjust_legacy_from_psa.h</innerfile>
+    <innerfile refid="config__adjust__psa__from__legacy_8h">config_adjust_psa_from_legacy.h</innerfile>
+    <innerfile refid="config__adjust__psa__superset__legacy_8h">config_adjust_psa_superset_legacy.h</innerfile>
+    <innerfile refid="config__adjust__ssl_8h">config_adjust_ssl.h</innerfile>
+    <innerfile refid="config__adjust__x509_8h">config_adjust_x509.h</innerfile>
+    <innerfile refid="config__psa_8h">config_psa.h</innerfile>
+    <innerfile refid="constant__time_8h">constant_time.h</innerfile>
+    <innerfile refid="ctr__drbg_8h">ctr_drbg.h</innerfile>
+    <innerfile refid="debug_8h">debug.h</innerfile>
+    <innerfile refid="des_8h">des.h</innerfile>
+    <innerfile refid="dhm_8h">dhm.h</innerfile>
+    <innerfile refid="ecdh_8h">ecdh.h</innerfile>
+    <innerfile refid="ecdsa_8h">ecdsa.h</innerfile>
+    <innerfile refid="ecjpake_8h">ecjpake.h</innerfile>
+    <innerfile refid="ecp_8h">ecp.h</innerfile>
+    <innerfile refid="entropy_8h">entropy.h</innerfile>
+    <innerfile refid="error_8h">error.h</innerfile>
+    <innerfile refid="gcm_8h">gcm.h</innerfile>
+    <innerfile refid="hkdf_8h">hkdf.h</innerfile>
+    <innerfile refid="hmac__drbg_8h">hmac_drbg.h</innerfile>
+    <innerfile refid="lms_8h">lms.h</innerfile>
+    <innerfile refid="mbedtls__config_8h">mbedtls_config.h</innerfile>
+    <innerfile refid="md_8h">md.h</innerfile>
+    <innerfile refid="md5_8h">md5.h</innerfile>
+    <innerfile refid="memory__buffer__alloc_8h">memory_buffer_alloc.h</innerfile>
+    <innerfile refid="net__sockets_8h">net_sockets.h</innerfile>
+    <innerfile refid="nist__kw_8h">nist_kw.h</innerfile>
+    <innerfile refid="oid_8h">oid.h</innerfile>
+    <innerfile refid="pem_8h">pem.h</innerfile>
+    <innerfile refid="pk_8h">pk.h</innerfile>
+    <innerfile refid="pkcs12_8h">pkcs12.h</innerfile>
+    <innerfile refid="pkcs5_8h">pkcs5.h</innerfile>
+    <innerfile refid="pkcs7_8h">pkcs7.h</innerfile>
+    <innerfile refid="platform_8h">platform.h</innerfile>
+    <innerfile refid="platform__time_8h">platform_time.h</innerfile>
+    <innerfile refid="platform__util_8h">platform_util.h</innerfile>
+    <innerfile refid="poly1305_8h">poly1305.h</innerfile>
+    <innerfile refid="private__access_8h">private_access.h</innerfile>
+    <innerfile refid="psa__util_8h">psa_util.h</innerfile>
+    <innerfile refid="ripemd160_8h">ripemd160.h</innerfile>
+    <innerfile refid="rsa_8h">rsa.h</innerfile>
+    <innerfile refid="sha1_8h">sha1.h</innerfile>
+    <innerfile refid="sha256_8h">sha256.h</innerfile>
+    <innerfile refid="sha3_8h">sha3.h</innerfile>
+    <innerfile refid="sha512_8h">sha512.h</innerfile>
+    <innerfile refid="ssl_8h">ssl.h</innerfile>
+    <innerfile refid="ssl__cache_8h">ssl_cache.h</innerfile>
+    <innerfile refid="ssl__ciphersuites_8h">ssl_ciphersuites.h</innerfile>
+    <innerfile refid="ssl__cookie_8h">ssl_cookie.h</innerfile>
+    <innerfile refid="ssl__ticket_8h">ssl_ticket.h</innerfile>
+    <innerfile refid="threading_8h">threading.h</innerfile>
+    <innerfile refid="timing_8h">timing.h</innerfile>
+    <innerfile refid="version_8h">version.h</innerfile>
+    <innerfile refid="x509_8h">x509.h</innerfile>
+    <innerfile refid="x509__crl_8h">x509_crl.h</innerfile>
+    <innerfile refid="x509__crt_8h">x509_crt.h</innerfile>
+    <innerfile refid="x509__csr_8h">x509_csr.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/"/>
+  </compounddef>
+</doxygen>

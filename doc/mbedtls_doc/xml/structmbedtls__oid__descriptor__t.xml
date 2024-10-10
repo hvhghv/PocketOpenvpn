@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__oid__descriptor__t" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_oid_descriptor_t</compoundname>
+    <includes refid="oid_8h" local="no">oid.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__oid__descriptor__t_1ac2dfdcb1a225a5c577a17be5a5a36905" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* mbedtls_oid_descriptor_t::private_asn1</definition>
+        <argsstring></argsstring>
+        <name>private_asn1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OID ASN.1 representation <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" line="472" column="16" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" bodystart="472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__oid__descriptor__t_1afa659ef8cda1ff1d6d352879e8fd5d15" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_oid_descriptor_t::private_asn1_len</definition>
+        <argsstring></argsstring>
+        <name>private_asn1_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>length of asn1 <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" line="473" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__oid__descriptor__t_1aa385b84dccd0e4e173a9d527119a01b3" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* mbedtls_oid_descriptor_t::private_name</definition>
+        <argsstring></argsstring>
+        <name>private_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>official name (e.g. from RFC) <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" line="475" column="16" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__oid__descriptor__t_1a600b3d135591987d50076c2892fe0cc3" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* mbedtls_oid_descriptor_t::private_description</definition>
+        <argsstring></argsstring>
+        <name>private_description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>human friendly description <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" line="476" column="16" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" bodystart="476" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base OID descriptor structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" line="471" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/oid.h" bodystart="471" bodyend="478"/>
+    <listofallmembers>
+      <member refid="structmbedtls__oid__descriptor__t_1ac2dfdcb1a225a5c577a17be5a5a36905" prot="public" virt="non-virtual"><scope>mbedtls_oid_descriptor_t</scope><name>private_asn1</name></member>
+      <member refid="structmbedtls__oid__descriptor__t_1afa659ef8cda1ff1d6d352879e8fd5d15" prot="public" virt="non-virtual"><scope>mbedtls_oid_descriptor_t</scope><name>private_asn1_len</name></member>
+      <member refid="structmbedtls__oid__descriptor__t_1a600b3d135591987d50076c2892fe0cc3" prot="public" virt="non-virtual"><scope>mbedtls_oid_descriptor_t</scope><name>private_description</name></member>
+      <member refid="structmbedtls__oid__descriptor__t_1aa385b84dccd0e4e173a9d527119a01b3" prot="public" virt="non-virtual"><scope>mbedtls_oid_descriptor_t</scope><name>private_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

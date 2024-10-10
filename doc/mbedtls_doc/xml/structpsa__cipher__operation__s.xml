@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__cipher__operation__s" kind="struct" language="C++" prot="public">
+    <compoundname>psa_cipher_operation_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1a69a2c8025c424664c2988ab686eadf4b" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_cipher_operation_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_crypto_driver_wrappers.h ID value zero means the context is not valid or not assigned to any driver (i.e. none of the driver contexts are active). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="90" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1a21e32b597833afd9641b30dbc7f82f28" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_cipher_operation_s::private_iv_required</definition>
+        <argsstring></argsstring>
+        <name>private_iv_required</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="92" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1a0a52aa75b5416279f75dad35d8e375ec" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_cipher_operation_s::private_iv_set</definition>
+        <argsstring></argsstring>
+        <name>private_iv_set</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="93" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1aa266f52944cec0feba2131507e6fae9f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_cipher_operation_s::private_default_iv_length</definition>
+        <argsstring></argsstring>
+        <name>private_default_iv_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="95" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1a8f2ab066db9cc77a0a607e7507ee1f11" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__cipher__context__t" kindref="compound">psa_driver_cipher_context_t</ref></type>
+        <definition>psa_driver_cipher_context_t psa_cipher_operation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="97" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_psa_cipher_operation_t</label>
+        <link refid="structmbedtls__psa__cipher__operation__t"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_cipher</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="2">
+        <label>psa_driver_cipher_context_t</label>
+        <link refid="unionpsa__driver__cipher__context__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>psa_cipher_operation_s</label>
+        <link refid="structpsa__cipher__operation__s"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="83" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="83" bodyend="98"/>
+    <listofallmembers>
+      <member refid="structpsa__cipher__operation__s_1a8f2ab066db9cc77a0a607e7507ee1f11" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__cipher__operation__s_1aa266f52944cec0feba2131507e6fae9f" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_default_iv_length</name></member>
+      <member refid="structpsa__cipher__operation__s_1a69a2c8025c424664c2988ab686eadf4b" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_id</name></member>
+      <member refid="structpsa__cipher__operation__s_1a21e32b597833afd9641b30dbc7f82f28" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_iv_required</name></member>
+      <member refid="structpsa__cipher__operation__s_1a0a52aa75b5416279f75dad35d8e375ec" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_iv_set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

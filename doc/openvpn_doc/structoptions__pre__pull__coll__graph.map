@@ -1,0 +1,13 @@
+<map id="options_pre_pull" name="options_pre_pull">
+<area shape="rect" id="node1" title=" " alt="" coords="214,273,330,300"/>
+<area shape="rect" id="node2" href="$structtuntap__options.html" title=" " alt="" coords="5,184,112,211"/>
+<area shape="rect" id="node3" href="$structroute__option__list.html" title=" " alt="" coords="136,184,253,211"/>
+<area shape="rect" id="node4" href="$structroute__option.html" title=" " alt="" coords="19,95,112,121"/>
+<area shape="rect" id="node5" href="$structgc__arena.html" title="Garbage collection arena used to keep track of dynamically allocated memory." alt="" coords="189,95,264,121"/>
+<area shape="rect" id="node10" href="$structroute__ipv6__option__list.html" title=" " alt="" coords="277,184,425,211"/>
+<area shape="rect" id="node6" href="$structgc__entry__special.html" title="Garbage collection entry for a specially allocated structure that needs a custom free function to be ..." alt="" coords="72,5,192,32"/>
+<area shape="rect" id="node7" href="$structgc__entry.html" title="Garbage collection entry for one dynamically allocated block of memory." alt="" coords="269,5,341,32"/>
+<area shape="rect" id="node8" href="$structclient__nat__option__list.html" title=" " alt="" coords="463,184,607,211"/>
+<area shape="rect" id="node9" href="$structclient__nat__entry.html" title=" " alt="" coords="491,95,605,121"/>
+<area shape="rect" id="node11" href="$structroute__ipv6__option.html" title=" " alt="" coords="289,95,413,121"/>
+</map>

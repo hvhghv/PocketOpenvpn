@@ -1,0 +1,3 @@
+<map id="gc_entry_special" name="gc_entry_special">
+<area shape="rect" id="node1" title="Garbage collection entry for a specially allocated structure that needs a custom free function to be ..." alt="" coords="5,5,125,32"/>
+</map>

@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ecjpake__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ecjpake_context</compoundname>
+    <includes refid="ecjpake_8h" local="no">ecjpake.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1a22de126d3f89c1e6abf707ec5abf6951" prot="public" static="no" mutable="no">
+        <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+        <definition>mbedtls_md_type_t mbedtls_ecjpake_context::private_md_type</definition>
+        <argsstring></argsstring>
+        <name>private_md_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hash to use <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="61" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1aa0752ec0beb84456e54b9a4ef329cfe1" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref></type>
+        <definition>mbedtls_ecp_group mbedtls_ecjpake_context::private_grp</definition>
+        <argsstring></argsstring>
+        <name>private_grp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Elliptic curve <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="62" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1a43d8af130fcf9e08a97bef80fbaf34a5" prot="public" static="no" mutable="no">
+        <type><ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3f" kindref="member">mbedtls_ecjpake_role</ref></type>
+        <definition>mbedtls_ecjpake_role mbedtls_ecjpake_context::private_role</definition>
+        <argsstring></argsstring>
+        <name>private_role</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Are we client or server? <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="63" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1a80d119c51424d364732367e60f131780" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_context::private_point_format</definition>
+        <argsstring></argsstring>
+        <name>private_point_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Format for point export <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="64" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1ab35414702bdd462d10884886a77eb6f9" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecjpake_context::private_Xm1</definition>
+        <argsstring></argsstring>
+        <name>private_Xm1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>My public key 1 C: X1, S: X3 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="66" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1a013ae9173578120e00f65356befcfbf5" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecjpake_context::private_Xm2</definition>
+        <argsstring></argsstring>
+        <name>private_Xm2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>My public key 2 C: X2, S: X4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="67" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1af352468fc6ca0bbd5bfb91b9eefbf92d" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecjpake_context::private_Xp1</definition>
+        <argsstring></argsstring>
+        <name>private_Xp1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peer public key 1 C: X3, S: X1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="68" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1ac40b3e5d86585f5fffb155e521ddfeac" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecjpake_context::private_Xp2</definition>
+        <argsstring></argsstring>
+        <name>private_Xp2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peer public key 2 C: X4, S: X2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="69" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1a961c3477fcbe4c427847a9cd6f4d20f4" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecjpake_context::private_Xp</definition>
+        <argsstring></argsstring>
+        <name>private_Xp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peer public key C: Xs, S: Xc </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="70" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1aecf210457d5049b10fbe7988babb5c48" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecjpake_context::private_xm1</definition>
+        <argsstring></argsstring>
+        <name>private_xm1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>My private key 1 C: x1, S: x3 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="72" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1aedd190abc8a88d6061baee5d035a9a3a" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecjpake_context::private_xm2</definition>
+        <argsstring></argsstring>
+        <name>private_xm2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>My private key 2 C: x2, S: x4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="73" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecjpake__context_1a2ed880a2ade7c8d2f72a8497129af12b" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecjpake_context::private_s</definition>
+        <argsstring></argsstring>
+        <name>private_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pre-shared secret (passphrase) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="75" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>EC J-PAKE context structure.</para>
+<para>J-PAKE is a symmetric protocol, except for the identifiers used in Zero-Knowledge Proofs, and the serialization of the second message (KeyExchange) as defined by the Thread spec.</para>
+<para>In order to benefit from this symmetry, we choose a different naming convention from the Thread v1.0 spec. Correspondence is indicated in the description as a pair C: client name, S: server name </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_ecp_point</label>
+        <link refid="structmbedtls__ecp__point"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_X</edgelabel>
+          <edgelabel>private_Y</edgelabel>
+          <edgelabel>private_Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="2">
+        <label>mbedtls_ecp_group</label>
+        <link refid="structmbedtls__ecp__group"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>G</edgelabel>
+          <edgelabel>private_T</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>N</edgelabel>
+          <edgelabel>P</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mbedtls_ecjpake_context</label>
+        <link refid="structmbedtls__ecjpake__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_grp</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_Xm1</edgelabel>
+          <edgelabel>private_Xp</edgelabel>
+          <edgelabel>private_Xm2</edgelabel>
+          <edgelabel>private_Xp1</edgelabel>
+          <edgelabel>private_Xp2</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_s</edgelabel>
+          <edgelabel>private_xm1</edgelabel>
+          <edgelabel>private_xm2</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="60" column="38" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="60" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ecjpake__context_1aa0752ec0beb84456e54b9a4ef329cfe1" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_grp</name></member>
+      <member refid="structmbedtls__ecjpake__context_1a22de126d3f89c1e6abf707ec5abf6951" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_md_type</name></member>
+      <member refid="structmbedtls__ecjpake__context_1a80d119c51424d364732367e60f131780" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_point_format</name></member>
+      <member refid="structmbedtls__ecjpake__context_1a43d8af130fcf9e08a97bef80fbaf34a5" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_role</name></member>
+      <member refid="structmbedtls__ecjpake__context_1a2ed880a2ade7c8d2f72a8497129af12b" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_s</name></member>
+      <member refid="structmbedtls__ecjpake__context_1ab35414702bdd462d10884886a77eb6f9" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_Xm1</name></member>
+      <member refid="structmbedtls__ecjpake__context_1aecf210457d5049b10fbe7988babb5c48" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_xm1</name></member>
+      <member refid="structmbedtls__ecjpake__context_1a013ae9173578120e00f65356befcfbf5" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_Xm2</name></member>
+      <member refid="structmbedtls__ecjpake__context_1aedd190abc8a88d6061baee5d035a9a3a" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_xm2</name></member>
+      <member refid="structmbedtls__ecjpake__context_1a961c3477fcbe4c427847a9cd6f4d20f4" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_Xp</name></member>
+      <member refid="structmbedtls__ecjpake__context_1af352468fc6ca0bbd5bfb91b9eefbf92d" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_Xp1</name></member>
+      <member refid="structmbedtls__ecjpake__context_1ac40b3e5d86585f5fffb155e521ddfeac" prot="public" virt="non-virtual"><scope>mbedtls_ecjpake_context</scope><name>private_Xp2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

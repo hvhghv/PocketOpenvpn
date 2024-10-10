@@ -1,0 +1,7 @@
+<map id="ifconfig_pool_persist" name="ifconfig_pool_persist">
+<area shape="rect" id="node1" title=" " alt="" coords="113,184,255,211"/>
+<area shape="rect" id="node2" href="$structstatus__output.html" title=" " alt="" coords="133,95,235,121"/>
+<area shape="rect" id="node3" href="$structevent__timeout.html" title=" " alt="" coords="5,5,109,32"/>
+<area shape="rect" id="node4" href="$structvirtual__output.html" title=" " alt="" coords="134,5,234,32"/>
+<area shape="rect" id="node5" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="258,5,313,32"/>
+</map>

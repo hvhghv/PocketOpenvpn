@@ -1,0 +1,6 @@
+<map id="mbedtls_ecjpake_context" name="mbedtls_ecjpake_context">
+<area shape="rect" id="node1" title=" " alt="" coords="16,411,187,437"/>
+<area shape="rect" id="node2" href="$structmbedtls__ecp__group.html" title="The ECP group structure." alt="" coords="34,298,169,325"/>
+<area shape="rect" id="node3" href="$structmbedtls__ecp__point.html" title="The ECP point structure, in Jacobian coordinates." alt="" coords="132,140,263,167"/>
+<area shape="rect" id="node4" href="$structmbedtls__mpi.html" title="MPI structure." alt="" coords="45,5,141,32"/>
+</map>

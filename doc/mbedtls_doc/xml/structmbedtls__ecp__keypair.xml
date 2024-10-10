@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ecp__keypair" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ecp_keypair</compoundname>
+    <includes refid="ecp_8h" local="no">ecp.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ecp__keypair_1a9049ce7c5d31e4b1712d95d67adaedc9" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref></type>
+        <definition>mbedtls_ecp_group mbedtls_ecp_keypair::private_grp</definition>
+        <argsstring></argsstring>
+        <name>private_grp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Elliptic curve and base point <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="428" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__keypair_1aed3bf98355908ceb3e67b8636bb6bd8f" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecp_keypair::private_d</definition>
+        <argsstring></argsstring>
+        <name>private_d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>our secret value <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="429" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__keypair_1a1a8d6c22ea5e8d177bd328d6c84b898c" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecp_keypair::private_Q</definition>
+        <argsstring></argsstring>
+        <name>private_Q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>our public value <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="430" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The ECP key-pair structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A generic key-pair that may be used for ECDSA and fixed ECDH, for example.</para>
+<para><simplesect kind="note"><para>Members are deliberately in the same order as in the <ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> structure. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_ecp_point</label>
+        <link refid="structmbedtls__ecp__point"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_X</edgelabel>
+          <edgelabel>private_Y</edgelabel>
+          <edgelabel>private_Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_ecp_keypair</label>
+        <link refid="structmbedtls__ecp__keypair"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_grp</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_Q</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_d</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_ecp_group</label>
+        <link refid="structmbedtls__ecp__group"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>G</edgelabel>
+          <edgelabel>private_T</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>N</edgelabel>
+          <edgelabel>P</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="427" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="427" bodyend="431"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ecp__keypair_1aed3bf98355908ceb3e67b8636bb6bd8f" prot="public" virt="non-virtual"><scope>mbedtls_ecp_keypair</scope><name>private_d</name></member>
+      <member refid="structmbedtls__ecp__keypair_1a9049ce7c5d31e4b1712d95d67adaedc9" prot="public" virt="non-virtual"><scope>mbedtls_ecp_keypair</scope><name>private_grp</name></member>
+      <member refid="structmbedtls__ecp__keypair_1a1a8d6c22ea5e8d177bd328d6c84b898c" prot="public" virt="non-virtual"><scope>mbedtls_ecp_keypair</scope><name>private_Q</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

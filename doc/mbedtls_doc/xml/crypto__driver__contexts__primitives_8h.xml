@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="crypto__driver__contexts__primitives_8h" kind="file" language="C++">
+    <compoundname>crypto_driver_contexts_primitives.h</compoundname>
+    <includes refid="crypto__driver__common_8h" local="yes">psa/crypto_driver_common.h</includes>
+    <includes refid="crypto__builtin__primitives_8h" local="yes">psa/crypto_builtin_primitives.h</includes>
+    <includedby refid="crypto__struct_8h" local="yes">crypto_struct.h</includedby>
+    <incdepgraph>
+      <node id="31">
+        <label>mbedtls/sha256.h</label>
+        <link refid="sha256_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>mbedtls/ripemd160.h</label>
+        <link refid="ripemd160_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="18">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="19">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="13">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="36">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="5">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>mbedtls/sha512.h</label>
+        <link refid="sha512_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="28">
+        <label>mbedtls/md5.h</label>
+        <link refid="md5_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>limits.h</label>
+      </node>
+      <node id="6">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>mbedtls/sha3.h</label>
+        <link refid="sha3_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>psa/crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="23">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>psa/crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>psa/crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="37">
+        <label>time.h</label>
+      </node>
+      <node id="22">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="24">
+        <label>psa/build_info.h</label>
+        <link refid="psa_2build__info_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>mbedtls/cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="10">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="30">
+        <label>mbedtls/sha1.h</label>
+        <link refid="sha1_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="16">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="10">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="3">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="2">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="4">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="17">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="8">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="1">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="unionpsa__driver__hash__context__t" prot="public">psa_driver_hash_context_t</innerclass>
+    <innerclass refid="unionpsa__driver__cipher__context__t" prot="public">psa_driver_cipher_context_t</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Declaration<sp/>of<sp/>context<sp/>structures<sp/>for<sp/>use<sp/>with<sp/>the<sp/>PSA<sp/>driver<sp/>wrapper</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>interface.<sp/>This<sp/>file<sp/>contains<sp/>the<sp/>context<sp/>structures<sp/>for<sp/>&apos;primitive&apos;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>operations,<sp/>i.e.<sp/>those<sp/>operations<sp/>which<sp/>do<sp/>not<sp/>rely<sp/>on<sp/>other<sp/>contexts.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Warning:<sp/>This<sp/>file<sp/>will<sp/>be<sp/>auto-generated<sp/>in<sp/>the<sp/>future.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>\note<sp/>This<sp/>file<sp/>may<sp/>not<sp/>be<sp/>included<sp/>directly.<sp/>Applications<sp/>must</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>include<sp/>psa/crypto.h.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>\note<sp/>This<sp/>header<sp/>and<sp/>its<sp/>content<sp/>are<sp/>not<sp/>part<sp/>of<sp/>the<sp/>Mbed<sp/>TLS<sp/>API<sp/>and</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>applications<sp/>must<sp/>not<sp/>depend<sp/>on<sp/>it.<sp/>Its<sp/>main<sp/>purpose<sp/>is<sp/>to<sp/>define<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>multi-part<sp/>state<sp/>objects<sp/>of<sp/>the<sp/>PSA<sp/>drivers<sp/>included<sp/>in<sp/>the<sp/>cryptographic</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>library.<sp/>The<sp/>definitions<sp/>of<sp/>these<sp/>objects<sp/>are<sp/>then<sp/>used<sp/>by<sp/>crypto_struct.h</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>to<sp/>define<sp/>the<sp/>implementation-defined<sp/>types<sp/>of<sp/>PSA<sp/>multi-part<sp/>state<sp/>objects.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_DRIVER_CONTEXTS_PRIMITIVES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_DRIVER_CONTEXTS_PRIMITIVES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__driver__common_8h" kindref="compound">psa/crypto_driver_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>the<sp/>context<sp/>structure<sp/>definitions<sp/>for<sp/>the<sp/>Mbed<sp/>TLS<sp/>software<sp/>drivers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__builtin__primitives_8h" kindref="compound">psa/crypto_builtin_primitives.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>the<sp/>context<sp/>structure<sp/>definitions<sp/>for<sp/>those<sp/>drivers<sp/>that<sp/>were</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>declared<sp/>during<sp/>the<sp/>autogeneration<sp/>process.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_TEST_LIBTESTDRIVER1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libtestdriver1/include/psa/crypto.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_CRYPTO_DRIVER_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_TEST_LIBTESTDRIVER1)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(LIBTESTDRIVER1_MBEDTLS_PSA_BUILTIN_CIPHER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>libtestdriver1_mbedtls_psa_cipher_operation_t</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_transparent_test_driver_cipher_operation_t;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TRANSPARENT_TEST_DRIVER_CIPHER_OPERATION_INIT<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>LIBTESTDRIVER1_MBEDTLS_PSA_CIPHER_OPERATION_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__psa__cipher__operation__t" kindref="compound">mbedtls_psa_cipher_operation_t</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_transparent_test_driver_cipher_operation_t;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TRANSPARENT_TEST_DRIVER_CIPHER_OPERATION_INIT<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>MBEDTLS_PSA_CIPHER_OPERATION_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_TEST_LIBTESTDRIVER1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LIBTESTDRIVER1_MBEDTLS_PSA_BUILTIN_CIPHER<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_TEST_LIBTESTDRIVER1)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(LIBTESTDRIVER1_MBEDTLS_PSA_BUILTIN_HASH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>libtestdriver1_mbedtls_psa_hash_operation_t</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_transparent_test_driver_hash_operation_t;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TRANSPARENT_TEST_DRIVER_HASH_OPERATION_INIT<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>LIBTESTDRIVER1_MBEDTLS_PSA_HASH_OPERATION_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__psa__hash__operation__t" kindref="compound">mbedtls_psa_hash_operation_t</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_transparent_test_driver_hash_operation_t;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TRANSPARENT_TEST_DRIVER_HASH_OPERATION_INIT<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>MBEDTLS_PSA_HASH_OPERATION_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_TEST_LIBTESTDRIVER1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LIBTESTDRIVER1_MBEDTLS_PSA_BUILTIN_HASH<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>initialised<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_transparent_test_driver_cipher_operation_t<sp/>ctx;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/>mbedtls_opaque_test_driver_cipher_operation_t;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OPAQUE_TEST_DRIVER_CIPHER_OPERATION_INIT<sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>0,<sp/>MBEDTLS_TRANSPARENT_TEST_DRIVER_CIPHER_OPERATION_INIT<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_DRIVER_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>the<sp/>context<sp/>to<sp/>be<sp/>used<sp/>for<sp/>an<sp/>operation<sp/>that<sp/>is<sp/>executed<sp/>through<sp/>the</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*<sp/>PSA<sp/>Driver<sp/>wrapper<sp/>layer<sp/>as<sp/>the<sp/>union<sp/>of<sp/>all<sp/>possible<sp/>driver&apos;s<sp/>contexts.</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/>*<sp/>The<sp/>union<sp/>members<sp/>are<sp/>the<sp/>driver&apos;s<sp/>context<sp/>structures,<sp/>and<sp/>the<sp/>member<sp/>names</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/>*<sp/>are<sp/>formatted<sp/>as<sp/>`&apos;drivername&apos;_ctx`.<sp/>This<sp/>allows<sp/>for<sp/>procedural<sp/>generation</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/>*<sp/>of<sp/>both<sp/>this<sp/>file<sp/>and<sp/>the<sp/>content<sp/>of<sp/>psa_crypto_driver_wrappers.h<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="unionpsa__driver__hash__context__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88" refid="unionpsa__driver__hash__context__t_1add667a09d544febaf668dd99fb5a570f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="unionpsa__driver__hash__context__t_1add667a09d544febaf668dd99fb5a570f" kindref="member">dummy</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>this<sp/>union<sp/>is<sp/>always<sp/>non-empty<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="unionpsa__driver__hash__context__t_1a69b520cab91e7021120c9126293be1f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__psa__hash__operation__t" kindref="compound">mbedtls_psa_hash_operation_t</ref><sp/><ref refid="unionpsa__driver__hash__context__t_1a69b520cab91e7021120c9126293be1f2" kindref="member">mbedtls_ctx</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_CRYPTO_DRIVER_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_transparent_test_driver_hash_operation_t<sp/>test_driver_ctx;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}<sp/><ref refid="unionpsa__driver__hash__context__t" kindref="compound">psa_driver_hash_context_t</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="unionpsa__driver__cipher__context__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96" refid="unionpsa__driver__cipher__context__t_1a61a42357fca930790b86369844ad833c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="unionpsa__driver__cipher__context__t_1a61a42357fca930790b86369844ad833c" kindref="member">dummy</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>this<sp/>union<sp/>is<sp/>always<sp/>non-empty<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="unionpsa__driver__cipher__context__t_1aef9de0085e0a72914a4e542d66fce5d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__psa__cipher__operation__t" kindref="compound">mbedtls_psa_cipher_operation_t</ref><sp/><ref refid="unionpsa__driver__cipher__context__t_1aef9de0085e0a72914a4e542d66fce5d2" kindref="member">mbedtls_ctx</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_CRYPTO_DRIVER_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_transparent_test_driver_cipher_operation_t<sp/>transparent_test_driver_ctx;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_opaque_test_driver_cipher_operation_t<sp/>opaque_test_driver_ctx;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<sp/><ref refid="unionpsa__driver__cipher__context__t" kindref="compound">psa_driver_cipher_context_t</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_DRIVER_CONTEXTS_PRIMITIVES_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>automatically<sp/>generated<sp/>file.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_primitives.h"/>
+  </compounddef>
+</doxygen>

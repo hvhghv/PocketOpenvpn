@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__policy" kind="group">
+    <compoundname>policy</compoundname>
+    <title>Key policies</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_usage_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_usage_t</name>
+        <briefdescription>
+<para>Encoding of permitted usage on a key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Values of this type are generally constructed as bitwise-ors of macros called <computeroutput>PSA_KEY_USAGE_xxx</computeroutput>.</para>
+<para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_types.h" line="316" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_types.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__policy_1ga7dddccdd1303176e87a4d20c87b589ed" prot="public" static="no">
+        <name>PSA_KEY_USAGE_EXPORT</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000001)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be exported.</para>
+<para>A public key or the public part of a key pair may always be exported regardless of the value of this permission flag.</para>
+<para>If a key does not have export permission, implementations shall not allow the key to be exported in plain form from the cryptoprocessor, whether through <ref refid="group__import__export_1ga668e35be8d2852ad3feeef74ac6f75bf" kindref="member">psa_export_key()</ref> or through a proprietary interface. The key may however be exportable in a wrapped form, i.e. in a form where it is encrypted by another key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2519" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2519" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga4605d686020a6cb433c5d78bf7e91689" prot="public" static="no">
+        <name>PSA_KEY_USAGE_COPY</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000002)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be copied.</para>
+<para>This flag allows the use of <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref> to make a copy of the key with the same policy or a more restrictive policy.</para>
+<para>For lifetimes for which the key is located in a secure element which enforce the non-exportability of keys, copying a key outside the secure element also requires the usage flag <ref refid="group__policy_1ga7dddccdd1303176e87a4d20c87b589ed" kindref="member">PSA_KEY_USAGE_EXPORT</ref>. Copying the key inside the secure element is permitted with just <ref refid="group__policy_1ga4605d686020a6cb433c5d78bf7e91689" kindref="member">PSA_KEY_USAGE_COPY</ref> if the secure element supports it. For keys with the lifetime <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref> or <ref refid="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" kindref="member">PSA_KEY_LIFETIME_PERSISTENT</ref>, the usage flag <ref refid="group__policy_1ga4605d686020a6cb433c5d78bf7e91689" kindref="member">PSA_KEY_USAGE_COPY</ref> is sufficient to permit the copy. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2535" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga75153b296d045d529d97203a6a995dad" prot="public" static="no">
+        <name>PSA_KEY_USAGE_ENCRYPT</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to encrypt a message.</para>
+<para>This flag allows the key to be used for a symmetric encryption operation, for an AEAD encryption-and-authentication operation, or for an asymmetric encryption operation, if otherwise permitted by the key&apos;s type and policy.</para>
+<para>For a key pair, this concerns the public key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2546" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1gac3f2d2e5983db1edde9f142ca9bf8e6a" prot="public" static="no">
+        <name>PSA_KEY_USAGE_DECRYPT</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000200)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to decrypt a message.</para>
+<para>This flag allows the key to be used for a symmetric decryption operation, for an AEAD decryption-and-verification operation, or for an asymmetric decryption operation, if otherwise permitted by the key&apos;s type and policy.</para>
+<para>For a key pair, this concerns the private key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2557" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2557" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga552117ac92b79500cae87d4e65a85c54" prot="public" static="no">
+        <name>PSA_KEY_USAGE_SIGN_MESSAGE</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000400)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to sign a message.</para>
+<para>This flag allows the key to be used for a MAC calculation operation or for an asymmetric message signature operation, if otherwise permitted by the key’s type and policy.</para>
+<para>For a key pair, this concerns the private key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2567" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2567" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1gabea7ec4173f4f943110329ac2953b2b1" prot="public" static="no">
+        <name>PSA_KEY_USAGE_VERIFY_MESSAGE</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000800)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to verify a message.</para>
+<para>This flag allows the key to be used for a MAC verification operation or for an asymmetric message signature verification operation, if otherwise permitted by the key’s type and policy.</para>
+<para>For a key pair, this concerns the public key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2577" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" prot="public" static="no">
+        <name>PSA_KEY_USAGE_SIGN_HASH</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00001000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to sign a message.</para>
+<para>This flag allows the key to be used for a MAC calculation operation or for an asymmetric signature operation, if otherwise permitted by the key&apos;s type and policy.</para>
+<para>For a key pair, this concerns the private key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2587" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" prot="public" static="no">
+        <name>PSA_KEY_USAGE_VERIFY_HASH</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00002000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to verify a message signature.</para>
+<para>This flag allows the key to be used for a MAC verification operation or for an asymmetric signature verification operation, if otherwise permitted by the key&apos;s type and policy.</para>
+<para>For a key pair, this concerns the public key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2597" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2597" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1gaf19022acc5ef23cf12477f632b48a0b2" prot="public" static="no">
+        <name>PSA_KEY_USAGE_DERIVE</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00004000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to derive other keys or produce a password hash.</para>
+<para>This flag allows the key to be used for a key derivation operation or for a key agreement operation, if otherwise permitted by the key&apos;s type and policy.</para>
+<para>If this flag is present on all keys used in calls to <ref refid="group__key__derivation_1gab2d7ce8705dd8e4a093f4b8a21a0c15a" kindref="member">psa_key_derivation_input_key()</ref> for a key derivation operation, then it permits calling <ref refid="group__key__derivation_1ga06b7eb34a2fa88965f68e3d023fa12b9" kindref="member">psa_key_derivation_output_bytes()</ref> or <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref> at the end of the operation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2611" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2611" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga25aece70be2b79afbdb4180f7c4e68ed" prot="public" static="no">
+        <name>PSA_KEY_USAGE_VERIFY_DERIVATION</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00008000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to verify the result of a key derivation, including password hashing.</para>
+<para>This flag allows the key to be used:</para>
+<para>This flag allows the key to be used in a key derivation operation, if otherwise permitted by the key&apos;s type and policy.</para>
+<para>If this flag is present on all keys used in calls to <ref refid="group__key__derivation_1gab2d7ce8705dd8e4a093f4b8a21a0c15a" kindref="member">psa_key_derivation_input_key()</ref> for a key derivation operation, then it permits calling <ref refid="group__key__derivation_1gaf01520beb7ba932143ffe733b0795b08" kindref="member">psa_key_derivation_verify_bytes()</ref> or <ref refid="group__key__derivation_1gac041714e34a94742e8ee006ac7dfea5a" kindref="member">psa_key_derivation_verify_key()</ref> at the end of the operation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" line="2626" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_values.h" bodystart="2626" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

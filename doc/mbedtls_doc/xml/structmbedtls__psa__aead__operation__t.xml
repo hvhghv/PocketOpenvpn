@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__psa__aead__operation__t" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_psa_aead_operation_t</compoundname>
+    <includes refid="crypto__builtin__composites_8h" local="no">crypto_builtin_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1ae2770d4fb59a47e3eedc4c7460ef231a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t mbedtls_psa_aead_operation_t::private_alg</definition>
+        <argsstring></argsstring>
+        <name>private_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="76" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1a9090ef23e99ef311f75a05242ee526b0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref></type>
+        <definition>psa_key_type_t mbedtls_psa_aead_operation_t::private_key_type</definition>
+        <argsstring></argsstring>
+        <name>private_key_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="77" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1a68cbd1eac184f42f9c4bf6e6ccb0820d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_psa_aead_operation_t::private_is_encrypt</definition>
+        <argsstring></argsstring>
+        <name>private_is_encrypt</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="79" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1aebeaa6aea4dfce299dcc074e4a173ca9" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_psa_aead_operation_t::private_tag_length</definition>
+        <argsstring></argsstring>
+        <name>private_tag_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="81" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1ae8f69c67f90ec645631d08f04dd733d3" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned mbedtls_psa_aead_operation_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="84" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1aebf086b48e48b78e61d755fb092dd57a" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref></type>
+        <definition>mbedtls_ccm_context mbedtls_psa_aead_operation_t::private_ccm</definition>
+        <argsstring></argsstring>
+        <name>private_ccm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="86" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1a2d7935a1e2cc77f8475b2c79291ffada" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__gcm__context" kindref="compound">mbedtls_gcm_context</ref></type>
+        <definition>mbedtls_gcm_context mbedtls_psa_aead_operation_t::private_gcm</definition>
+        <argsstring></argsstring>
+        <name>private_gcm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="89" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1a8d4ef7cc535172ba9058ec20d58e78f1" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__chachapoly__context" kindref="compound">mbedtls_chachapoly_context</ref></type>
+        <definition>mbedtls_chachapoly_context mbedtls_psa_aead_operation_t::private_chachapoly</definition>
+        <argsstring></argsstring>
+        <name>private_chachapoly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="92" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__aead__operation__t_1aef7b105fa0fdced3e78249ab93dc11c8" prot="public" static="no" mutable="no">
+        <type>union mbedtls_psa_aead_operation_t::@6</type>
+        <definition>union mbedtls_psa_aead_operation_t::@6 mbedtls_psa_aead_operation_t::ctx</definition>
+        <argsstring></argsstring>
+        <name>ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="95" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="9">
+        <label>mbedtls_chacha20_context</label>
+        <link refid="structmbedtls__chacha20__context"/>
+      </node>
+      <node id="4">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="6">
+        <label>mbedtls_ccm_context</label>
+        <link refid="structmbedtls__ccm__context"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_cipher_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_gcm_context</label>
+        <link refid="structmbedtls__gcm__context"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_cipher_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mbedtls_psa_aead_operation_t</label>
+        <link refid="structmbedtls__psa__aead__operation__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_gcm</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>private_ccm</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_chachapoly</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>mbedtls_poly1305_context</label>
+        <link refid="structmbedtls__poly1305__context"/>
+      </node>
+      <node id="7">
+        <label>mbedtls_chachapoly_context</label>
+        <link refid="structmbedtls__chachapoly__context"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>private_poly1305_ctx</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>private_chacha20_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="75" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="75" bodyend="97"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__aead__operation__t_1aef7b105fa0fdced3e78249ab93dc11c8" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>ctx</name></member>
+      <member refid="structmbedtls__psa__aead__operation__t_1ae8f69c67f90ec645631d08f04dd733d3" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>dummy</name></member>
+      <member refid="structmbedtls__psa__aead__operation__t_1ae2770d4fb59a47e3eedc4c7460ef231a" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>private_alg</name></member>
+      <member refid="structmbedtls__psa__aead__operation__t_1aebf086b48e48b78e61d755fb092dd57a" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>private_ccm</name></member>
+      <member refid="structmbedtls__psa__aead__operation__t_1a8d4ef7cc535172ba9058ec20d58e78f1" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>private_chachapoly</name></member>
+      <member refid="structmbedtls__psa__aead__operation__t_1a2d7935a1e2cc77f8475b2c79291ffada" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>private_gcm</name></member>
+      <member refid="structmbedtls__psa__aead__operation__t_1a68cbd1eac184f42f9c4bf6e6ccb0820d" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>private_is_encrypt</name></member>
+      <member refid="structmbedtls__psa__aead__operation__t_1a9090ef23e99ef311f75a05242ee526b0" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>private_key_type</name></member>
+      <member refid="structmbedtls__psa__aead__operation__t_1aebeaa6aea4dfce299dcc074e4a173ca9" prot="public" virt="non-virtual"><scope>mbedtls_psa_aead_operation_t</scope><name>private_tag_length</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

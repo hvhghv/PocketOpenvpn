@@ -1,0 +1,7 @@
+<map id="fragment_master" name="fragment_master">
+<area shape="rect" id="node1" title="Fragmentation and reassembly state for one VPN tunnel instance." alt="" coords="87,288,207,315"/>
+<area shape="rect" id="node2" href="$structevent__timeout.html" title=" " alt="" coords="5,199,109,225"/>
+<area shape="rect" id="node3" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="141,5,195,32"/>
+<area shape="rect" id="node5" href="$structfragment.html" title="Structure for reassembling one incoming fragmented packet." alt="" coords="207,95,281,121"/>
+<area shape="rect" id="node4" href="$structfragment__list.html" title="List of fragment structures for reassembling multiple incoming packets concurrently." alt="" coords="201,199,298,225"/>
+</map>

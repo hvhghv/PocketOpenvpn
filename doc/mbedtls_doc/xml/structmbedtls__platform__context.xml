@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__platform__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_platform_context</compoundname>
+    <includes refid="platform_8h" local="no">platform.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__platform__context_1a08f8fba33e27a5c6edbbc872970fadc6" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char mbedtls_platform_context::private_dummy</definition>
+        <argsstring></argsstring>
+        <name>private_dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A placeholder member, as empty structs are not portable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform.h" line="441" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform.h" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The platform context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This structure may be used to assist platform-specific setup or teardown operations. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform.h" line="440" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform.h" bodystart="440" bodyend="442"/>
+    <listofallmembers>
+      <member refid="structmbedtls__platform__context_1a08f8fba33e27a5c6edbbc872970fadc6" prot="public" virt="non-virtual"><scope>mbedtls_platform_context</scope><name>private_dummy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

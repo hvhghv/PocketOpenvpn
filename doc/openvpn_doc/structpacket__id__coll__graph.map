@@ -1,0 +1,5 @@
+<map id="packet_id" name="packet_id">
+<area shape="rect" id="node1" title=" " alt="" coords="88,95,167,121"/>
+<area shape="rect" id="node2" href="$structpacket__id__send.html" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node3" href="$structpacket__id__rec.html" title=" " alt="" coords="143,5,245,32"/>
+</map>

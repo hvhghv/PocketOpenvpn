@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__sha3__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_sha3_context</compoundname>
+    <includes refid="sha3_8h" local="no">sha3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__sha3__context_1ab2703d7cdff91aba07173e47ac496725" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_sha3_context::private_state[25]</definition>
+        <argsstring>[25]</argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="51" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__sha3__context_1a0eda65014c86b4396cde5d118c896f8b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_sha3_context::private_index</definition>
+        <argsstring></argsstring>
+        <name>private_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="52" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__sha3__context_1a250ab9c401c9d203a61cc4c865490121" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_sha3_context::private_olen</definition>
+        <argsstring></argsstring>
+        <name>private_olen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="53" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__sha3__context_1aa8b1d1c578a6f4cd3b844d53a7ce9061" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_sha3_context::private_max_block_size</definition>
+        <argsstring></argsstring>
+        <name>private_max_block_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="54" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The SHA-3 context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>            The structure is used SHA-3 checksum calculations.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="50" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" bodystart="50" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structmbedtls__sha3__context_1a0eda65014c86b4396cde5d118c896f8b" prot="public" virt="non-virtual"><scope>mbedtls_sha3_context</scope><name>private_index</name></member>
+      <member refid="structmbedtls__sha3__context_1aa8b1d1c578a6f4cd3b844d53a7ce9061" prot="public" virt="non-virtual"><scope>mbedtls_sha3_context</scope><name>private_max_block_size</name></member>
+      <member refid="structmbedtls__sha3__context_1a250ab9c401c9d203a61cc4c865490121" prot="public" virt="non-virtual"><scope>mbedtls_sha3_context</scope><name>private_olen</name></member>
+      <member refid="structmbedtls__sha3__context_1ab2703d7cdff91aba07173e47ac496725" prot="public" virt="non-virtual"><scope>mbedtls_sha3_context</scope><name>private_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

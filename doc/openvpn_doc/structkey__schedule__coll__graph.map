@@ -1,0 +1,9 @@
+<map id="key_schedule" name="key_schedule">
+<area shape="rect" id="node1" title=" " alt="" coords="271,216,374,243"/>
+<area shape="rect" id="node2" href="$structkey__ctx.html" title="Container for one set of cipher and/or HMAC contexts." alt="" coords="70,5,138,32"/>
+<area shape="rect" id="node3" href="$structkey__ctx__bi.html" title="Container for two sets of OpenSSL cipher and/or HMAC contexts for both sending and receiving directio..." alt="" coords="168,111,253,137"/>
+<area shape="rect" id="node4" href="$structtls__root__ctx.html" title="Structure that wraps the TLS context." alt="" coords="277,111,368,137"/>
+<area shape="rect" id="node5" href="$structexternal__context.html" title="Context used by external_pkcs1_sign()" alt="" coords="263,5,382,32"/>
+<area shape="rect" id="node6" href="$structkey__type.html" title=" " alt="" coords="392,111,467,137"/>
+<area shape="rect" id="node7" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="525,111,579,137"/>
+</map>

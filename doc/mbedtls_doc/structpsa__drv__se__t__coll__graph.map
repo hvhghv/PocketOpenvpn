@@ -1,0 +1,10 @@
+<map id="psa_drv_se_t" name="psa_drv_se_t">
+<area shape="rect" id="node1" title=" " alt="" coords="753,291,853,317"/>
+<area shape="rect" id="node2" href="$structpsa__drv__se__key__derivation__t.html" title="A struct containing all of the function pointers needed to for secure element key derivation and agre..." alt="" coords="351,147,542,173"/>
+<area shape="rect" id="node3" href="$structpsa__drv__se__context__t.html" title="Driver context structure." alt="" coords="5,291,156,317"/>
+<area shape="rect" id="node4" href="$structpsa__drv__se__key__management__t.html" title="A struct containing all of the function pointers needed to for secure element key management." alt="" coords="341,235,552,261"/>
+<area shape="rect" id="node5" href="$structpsa__drv__se__aead__t.html" title="A struct containing all of the function pointers needed to implement secure element Authenticated Enc..." alt="" coords="379,291,514,317"/>
+<area shape="rect" id="node6" href="$structpsa__drv__se__mac__t.html" title="A struct containing all of the function pointers needed to perform secure element MAC operations." alt="" coords="381,349,513,376"/>
+<area shape="rect" id="node7" href="$structpsa__drv__se__cipher__t.html" title="A struct containing all of the function pointers needed to implement cipher operations using secure e..." alt="" coords="375,416,518,443"/>
+<area shape="rect" id="node8" href="$structpsa__drv__se__asymmetric__t.html" title="A struct containing all of the function pointers needed to implement asymmetric cryptographic operati..." alt="" coords="359,503,534,529"/>
+</map>

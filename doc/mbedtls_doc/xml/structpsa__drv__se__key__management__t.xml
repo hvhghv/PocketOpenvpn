@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__drv__se__key__management__t" kind="struct" language="C++" prot="public">
+    <compoundname>psa_drv_se_key_management_t</compoundname>
+    <includes refid="crypto__se__driver_8h" local="no">crypto_se_driver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__drv__se__key__management__t_1abb4d6fb90105c1034df79fdceb62d725" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__key__management_1gaab9a5d39285c68ac29264017e0119d98" kindref="member">psa_drv_se_allocate_key_t</ref></type>
+        <definition>psa_drv_se_allocate_key_t psa_drv_se_key_management_t::private_p_allocate</definition>
+        <argsstring></argsstring>
+        <name>private_p_allocate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that allocates a slot for a key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1111" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__management__t_1a4437d405382ec5972e1ce5b895d8d4c2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__key__management_1ga26c4b96c6d68dbd74b0512475d29f934" kindref="member">psa_drv_se_validate_slot_number_t</ref></type>
+        <definition>psa_drv_se_validate_slot_number_t psa_drv_se_key_management_t::private_p_validate_slot_number</definition>
+        <argsstring></argsstring>
+        <name>private_p_validate_slot_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that checks the validity of a slot for a key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1113" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__management__t_1a1074b67bfde26d777adbb1eae1fb6380" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__key__management_1ga9e04e71aff4837259e54598708edcf7d" kindref="member">psa_drv_se_import_key_t</ref></type>
+        <definition>psa_drv_se_import_key_t psa_drv_se_key_management_t::private_p_import</definition>
+        <argsstring></argsstring>
+        <name>private_p_import</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a key import operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1115" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__management__t_1a0d4041e85a75422f4390855314d83a65" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__key__management_1ga62df4bbc6b63ab5ef8183012b12a6cf8" kindref="member">psa_drv_se_generate_key_t</ref></type>
+        <definition>psa_drv_se_generate_key_t psa_drv_se_key_management_t::private_p_generate</definition>
+        <argsstring></argsstring>
+        <name>private_p_generate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a generation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1117" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__management__t_1a5cc7a7031dbea124f613ab27c12385a0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__key__management_1gaaf8c22c4a5b87035fcb594858d68e1ba" kindref="member">psa_drv_se_destroy_key_t</ref></type>
+        <definition>psa_drv_se_destroy_key_t psa_drv_se_key_management_t::private_p_destroy</definition>
+        <argsstring></argsstring>
+        <name>private_p_destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a key destroy operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1119" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__management__t_1ac16153ff52656c19d83c896c73ecfe62" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__key__management_1ga6c51abdf1eb2165b800f1de017ed42fb" kindref="member">psa_drv_se_export_key_t</ref></type>
+        <definition>psa_drv_se_export_key_t psa_drv_se_key_management_t::private_p_export</definition>
+        <argsstring></argsstring>
+        <name>private_p_export</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a key export operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1121" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__management__t_1ad2f2df9ed1d03357a43513f074e27662" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__key__management_1ga6c51abdf1eb2165b800f1de017ed42fb" kindref="member">psa_drv_se_export_key_t</ref></type>
+        <definition>psa_drv_se_export_key_t psa_drv_se_key_management_t::private_p_export_public</definition>
+        <argsstring></argsstring>
+        <name>private_p_export_public</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a public key export operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1123" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A struct containing all of the function pointers needed to for secure element key management. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>PSA Crypto API implementations should populate instances of the table as appropriate upon startup or at build time.</para>
+<para>If one of the functions is not implemented, it should be set to NULL. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>psa_drv_se_context_t</label>
+        <link refid="structpsa__drv__se__context__t"/>
+      </node>
+      <node id="1">
+        <label>psa_drv_se_key_management_t</label>
+        <link refid="structpsa__drv__se__key__management__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_p_destroy</edgelabel>
+          <edgelabel>private_p_validate_slot_number</edgelabel>
+          <edgelabel>private_p_generate</edgelabel>
+          <edgelabel>private_p_allocate</edgelabel>
+          <edgelabel>private_p_export</edgelabel>
+          <edgelabel>private_p_export_public</edgelabel>
+          <edgelabel>private_p_import</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1109" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1109" bodyend="1124"/>
+    <listofallmembers>
+      <member refid="structpsa__drv__se__key__management__t_1abb4d6fb90105c1034df79fdceb62d725" prot="public" virt="non-virtual"><scope>psa_drv_se_key_management_t</scope><name>private_p_allocate</name></member>
+      <member refid="structpsa__drv__se__key__management__t_1a5cc7a7031dbea124f613ab27c12385a0" prot="public" virt="non-virtual"><scope>psa_drv_se_key_management_t</scope><name>private_p_destroy</name></member>
+      <member refid="structpsa__drv__se__key__management__t_1ac16153ff52656c19d83c896c73ecfe62" prot="public" virt="non-virtual"><scope>psa_drv_se_key_management_t</scope><name>private_p_export</name></member>
+      <member refid="structpsa__drv__se__key__management__t_1ad2f2df9ed1d03357a43513f074e27662" prot="public" virt="non-virtual"><scope>psa_drv_se_key_management_t</scope><name>private_p_export_public</name></member>
+      <member refid="structpsa__drv__se__key__management__t_1a0d4041e85a75422f4390855314d83a65" prot="public" virt="non-virtual"><scope>psa_drv_se_key_management_t</scope><name>private_p_generate</name></member>
+      <member refid="structpsa__drv__se__key__management__t_1a1074b67bfde26d777adbb1eae1fb6380" prot="public" virt="non-virtual"><scope>psa_drv_se_key_management_t</scope><name>private_p_import</name></member>
+      <member refid="structpsa__drv__se__key__management__t_1a4437d405382ec5972e1ce5b895d8d4c2" prot="public" virt="non-virtual"><scope>psa_drv_se_key_management_t</scope><name>private_p_validate_slot_number</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

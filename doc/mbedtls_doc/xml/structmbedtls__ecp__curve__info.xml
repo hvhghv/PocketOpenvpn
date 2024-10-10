@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ecp__curve__info" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ecp_curve_info</compoundname>
+    <includes refid="ecp_8h" local="no">ecp.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ecp__curve__info_1a1fdb81fb58ed6039b5c9fe1a3c82852b" prot="public" static="no" mutable="no">
+        <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+        <definition>mbedtls_ecp_group_id mbedtls_ecp_curve_info::grp_id</definition>
+        <argsstring></argsstring>
+        <name>grp_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An internal identifier. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="140" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__curve__info_1ac2754d3ed70b7cc54ba3567372763551" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_ecp_curve_info::tls_id</definition>
+        <argsstring></argsstring>
+        <name>tls_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The TLS NamedCurve identifier. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="141" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__curve__info_1a893162d86716513661ccb05b4a450af1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_ecp_curve_info::bit_size</definition>
+        <argsstring></argsstring>
+        <name>bit_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The curve size in bits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="142" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__curve__info_1a123ba197ecf3a5573e28030393f7b1dd" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* mbedtls_ecp_curve_info::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A human-friendly name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="143" column="16" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Curve information, for use by other modules.</para>
+<para>The fields of this structure are part of the public API and can be accessed directly by applications. Future versions of the library may add extra fields or reorder existing fields. </para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="139" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="139" bodyend="144"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ecp__curve__info_1a893162d86716513661ccb05b4a450af1" prot="public" virt="non-virtual"><scope>mbedtls_ecp_curve_info</scope><name>bit_size</name></member>
+      <member refid="structmbedtls__ecp__curve__info_1a1fdb81fb58ed6039b5c9fe1a3c82852b" prot="public" virt="non-virtual"><scope>mbedtls_ecp_curve_info</scope><name>grp_id</name></member>
+      <member refid="structmbedtls__ecp__curve__info_1a123ba197ecf3a5573e28030393f7b1dd" prot="public" virt="non-virtual"><scope>mbedtls_ecp_curve_info</scope><name>name</name></member>
+      <member refid="structmbedtls__ecp__curve__info_1ac2754d3ed70b7cc54ba3567372763551" prot="public" virt="non-virtual"><scope>mbedtls_ecp_curve_info</scope><name>tls_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

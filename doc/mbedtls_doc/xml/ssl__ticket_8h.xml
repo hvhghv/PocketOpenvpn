@@ -1,0 +1,1154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ssl__ticket_8h" kind="file" language="C++">
+    <compoundname>ssl_ticket.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="ssl_8h" local="yes">mbedtls/ssl.h</includes>
+    <includes refid="cipher_8h" local="yes">mbedtls/cipher.h</includes>
+    <includes refid="platform__time_8h" local="yes">mbedtls/platform_time.h</includes>
+    <includes refid="crypto_8h" local="yes">psa/crypto.h</includes>
+    <includes refid="threading_8h" local="yes">mbedtls/threading.h</includes>
+    <incdepgraph>
+      <node id="50">
+        <label>mbedtls/sha256.h</label>
+        <link refid="sha256_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>mbedtls/ripemd160.h</label>
+        <link refid="ripemd160_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="71">
+        <label>mbedtls/dhm.h</label>
+        <link refid="dhm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>psa/crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>mbedtls/ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>mbedtls/ecp.h</label>
+        <link refid="ecp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="34">
+        <label>stdlib.h</label>
+      </node>
+      <node id="33">
+        <label>mbedtls/threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="23">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="40">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>mbedtls/x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>mbedtls/bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>mbedtls/gcm.h</label>
+        <link refid="gcm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>mbedtls/sha512.h</label>
+        <link refid="sha512_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stddef.h</label>
+      </node>
+      <node id="47">
+        <label>mbedtls/md5.h</label>
+        <link refid="md5_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>mbedtls/sha3.h</label>
+        <link refid="sha3_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>mbedtls/ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>psa/crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>mbedtls/ecdsa.h</label>
+        <link refid="ecdsa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="35">
+        <label>pthread.h</label>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>psa/crypto_driver_contexts_key_derivation.h</label>
+        <link refid="crypto__driver__contexts__key__derivation_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>mbedtls/ccm.h</label>
+        <link refid="ccm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>mbedtls/pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>psa/crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="38">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="42">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>mbedtls/poly1305.h</label>
+        <link refid="poly1305_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>mbedtls/ecjpake.h</label>
+        <link refid="ecjpake_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>psa/crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="72">
+        <label>mbedtls/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>psa/crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="39">
+        <label>psa/build_info.h</label>
+        <link refid="psa_2build__info_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>mbedtls/cmac.h</label>
+        <link refid="cmac_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>psa/crypto_builtin_key_derivation.h</label>
+        <link refid="crypto__builtin__key__derivation_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>mbedtls/cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>mbedtls/chachapoly.h</label>
+        <link refid="chachapoly_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>mbedtls/x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="67">
+        <label>mbedtls/x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>mbedtls/rsa.h</label>
+        <link refid="rsa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>mbedtls/chacha20.h</label>
+        <link refid="chacha20_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>stdio.h</label>
+      </node>
+      <node id="49">
+        <label>mbedtls/sha1.h</label>
+        <link refid="sha1_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__ssl__ticket__key" prot="public">mbedtls_ssl_ticket_key</innerclass>
+    <innerclass refid="structmbedtls__ssl__ticket__context" prot="public">mbedtls_ssl_ticket_context</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ssl__ticket_8h_1a4c694c4d9331dfa6b0920aab9a35b5bb" prot="public" static="no">
+        <name>MBEDTLS_SSL_TICKET_MAX_KEY_BYTES</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Max supported key length in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="41" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ticket_8h_1a32fb0da67bc965b36d8b27ad3cecf188" prot="public" static="no">
+        <name>MBEDTLS_SSL_TICKET_KEY_NAME_BYTES</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>key name length in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="42" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ssl__ticket_8h_1a3637ba6a363c4121b95302e530392d81" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ssl__ticket__key" kindref="compound">mbedtls_ssl_ticket_key</ref></type>
+        <definition>typedef struct mbedtls_ssl_ticket_key mbedtls_ssl_ticket_key</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_ticket_key</name>
+        <briefdescription>
+<para>Information for session ticket protection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="62" column="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ssl__ticket_8h_1a765ff40e6c0587349aa59ec98b4bf797" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref></type>
+        <definition>typedef struct mbedtls_ssl_ticket_context mbedtls_ssl_ticket_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_ticket_context</name>
+        <briefdescription>
+<para>Context for session ticket handling functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="81" column="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ssl__ticket_8h_1a888e1b0900b517559ba5e89fb0843e0e" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a112d1fc2dd4db788592457d14c0c2899" kindref="member">mbedtls_ssl_ticket_write_t</ref></type>
+        <definition>mbedtls_ssl_ticket_write_t mbedtls_ssl_ticket_write</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_ticket_write</name>
+        <briefdescription>
+<para>Implementation of the ticket write callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>See <computeroutput>mbedtls_ssl_ticket_write_t</computeroutput> for description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="161" column="28" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ssl__ticket_8h_1ab8231bccc4f614d1995abd5984ffcdd8" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a48aea353b22e86deece00933ef941536" kindref="member">mbedtls_ssl_ticket_parse_t</ref></type>
+        <definition>mbedtls_ssl_ticket_parse_t mbedtls_ssl_ticket_parse</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_ticket_parse</name>
+        <briefdescription>
+<para>Implementation of the ticket parse callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>See <computeroutput>mbedtls_ssl_ticket_parse_t</computeroutput> for description </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="168" column="28" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ssl__ticket_8h_1a07765b563037998d820dc8a1272e1ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_ticket_init</definition>
+        <argsstring>(mbedtls_ssl_ticket_context *ctx)</argsstring>
+        <name>mbedtls_ssl_ticket_init</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a ticket context. (Just make it ready for <ref refid="ssl__ticket_8h_1a334f40042825a33295d0843374e1785a" kindref="member">mbedtls_ssl_ticket_setup()</ref> or <ref refid="ssl__ticket_8h_1a254bccc118c66a617ba6020a2d8cc69c" kindref="member">mbedtls_ssl_ticket_free()</ref>.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context to be initialized </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="90" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" declline="90" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__ticket_8h_1a334f40042825a33295d0843374e1785a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ssl_ticket_setup</definition>
+        <argsstring>(mbedtls_ssl_ticket_context *ctx, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng, mbedtls_cipher_type_t cipher, uint32_t lifetime)</argsstring>
+        <name>mbedtls_ssl_ticket_setup</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <param>
+          <type><ref refid="cipher_8h_1a00c5885f1ea7279c5a7d8e12e596569d" kindref="member">mbedtls_cipher_type_t</ref></type>
+          <declname>cipher</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>lifetime</declname>
+        </param>
+        <briefdescription>
+<para>Prepare context to be actually used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context to be set up </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RNG callback function (mandatory) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RNG callback context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cipher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>AEAD cipher to use for ticket protection. Recommended value: MBEDTLS_CIPHER_AES_256_GCM. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lifetime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tickets lifetime in seconds Recommended value: 86400 (one day).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>It is highly recommended to select a cipher that is at least as strong as the strongest ciphersuite supported. Usually that means a 256-bit key.</para>
+</simplesect>
+<simplesect kind="note"><para>The lifetime of the keys is twice the lifetime of tickets. It is recommended to pick a reasonable lifetime so as not to negate the benefits of forward secrecy.</para>
+</simplesect>
+<simplesect kind="return"><para>0 if successful, or a specific MBEDTLS_ERR_XXX error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="114" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" declline="114" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__ticket_8h_1a4e199161f2a9625d21a62766e7c4b84a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ssl_ticket_rotate</definition>
+        <argsstring>(mbedtls_ssl_ticket_context *ctx, const unsigned char *name, size_t nlength, const unsigned char *k, size_t klength, uint32_t lifetime)</argsstring>
+        <name>mbedtls_ssl_ticket_rotate</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nlength</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>klength</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>lifetime</declname>
+        </param>
+        <briefdescription>
+<para>Rotate session ticket encryption key to new specified key. Provides for external control of session ticket encryption key rotation, e.g. for synchronization between different machines. If this function is not used, or if not called before ticket lifetime expires, then a new session ticket encryption key is generated internally in order to avoid unbounded session ticket encryption key lifetimes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context to be set up </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Session ticket encryption key name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nlength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Session ticket encryption key name length in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Session ticket encryption key </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>klength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Session ticket encryption key length in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lifetime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tickets lifetime in seconds Recommended value: 86400 (one day).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para><computeroutput>name</computeroutput> and <computeroutput>k</computeroutput> are recommended to be cryptographically random data.</para>
+</simplesect>
+<simplesect kind="note"><para><computeroutput>nlength</computeroutput> must match sizeof( ctx-&gt;name )</para>
+</simplesect>
+<simplesect kind="note"><para><computeroutput>klength</computeroutput> must be sufficient for use by cipher specified to <computeroutput>mbedtls_ssl_ticket_setup</computeroutput> </para>
+</simplesect>
+<simplesect kind="note"><para>The lifetime of the keys is twice the lifetime of tickets. It is recommended to pick a reasonable lifetime so as not to negate the benefits of forward secrecy.</para>
+</simplesect>
+<simplesect kind="return"><para>0 if successful, or a specific MBEDTLS_ERR_XXX error code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="151" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" declline="151" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__ticket_8h_1a254bccc118c66a617ba6020a2d8cc69c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_ticket_free</definition>
+        <argsstring>(mbedtls_ssl_ticket_context *ctx)</argsstring>
+        <name>mbedtls_ssl_ticket_free</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Free a context&apos;s content and zeroize it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context to be cleaned up </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" line="175" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h" declline="175" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TLS server ticket callbacks implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_SSL_TICKET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TICKET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>This<sp/>implementation<sp/>of<sp/>the<sp/>session<sp/>ticket<sp/>callbacks<sp/>includes<sp/>key</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>management,<sp/>rotating<sp/>the<sp/>keys<sp/>periodically<sp/>in<sp/>order<sp/>to<sp/>preserve<sp/>forward</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>secrecy,<sp/>when<sp/>MBEDTLS_HAVE_TIME<sp/>is<sp/>defined.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ssl_8h" kindref="compound">mbedtls/ssl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cipher_8h" kindref="compound">mbedtls/cipher.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__time_8h" kindref="compound">mbedtls/platform_time.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_USE_PSA_CRYPTO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threading_8h" kindref="compound">mbedtls/threading.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="ssl__ticket_8h_1a4c694c4d9331dfa6b0920aab9a35b5bb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TICKET_MAX_KEY_BYTES<sp/>32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="ssl__ticket_8h_1a32fb0da67bc965b36d8b27ad3cecf188" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TICKET_KEY_NAME_BYTES<sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="structmbedtls__ssl__ticket__key" refkind="compound"><highlight class="preprocessor">typedef<sp/>struct<sp/>mbedtls_ssl_ticket_key<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structmbedtls__ssl__ticket__key_1a662c211916e822dee3f69aad495c2e7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(name)[<ref refid="ssl__ticket_8h_1a32fb0da67bc965b36d8b27ad3cecf188" kindref="member">MBEDTLS_SSL_TICKET_KEY_NAME_BYTES</ref>];</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structmbedtls__ssl__ticket__key_1a28ee3c17b8bfd5ab50edbf0ee0fbb6fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="platform__time_8h_1a867121bdcdb8233c28c1cca32cf0839f" kindref="member">mbedtls_time_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(generation_time);<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_USE_PSA_CRYPTO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(ctx);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structmbedtls__ssl__ticket__key_1a26b5a00cf4561bcadcfbdb3eaa0a22c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__key__lifetimes_1ga9a5375bd0cb9694f3a2694adc0a6ae13" kindref="member">mbedtls_svc_key_id_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(key);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="structmbedtls__ssl__ticket__key_1a764b92e9a3147c4b1c92d0fdbd849288" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(alg);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="structmbedtls__ssl__ticket__key_1a041e5e5239c40deafbd012e78ce58076" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(key_type);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="structmbedtls__ssl__ticket__key_1a8f61d06a6fb178878a8f2aeac3caebb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(key_bits);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="ssl__ticket_8h_1a3637ba6a363c4121b95302e530392d81" kindref="member">mbedtls_ssl_ticket_key</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="structmbedtls__ssl__ticket__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="68" refid="structmbedtls__ssl__ticket__context_1a9d733956afa6c8e5d1068f473bee621a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ssl__ticket__key" kindref="compound">mbedtls_ssl_ticket_key</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(keys)[2];<sp/></highlight></codeline>
+<codeline lineno="69" refid="structmbedtls__ssl__ticket__context_1a668ff4c442928912987b263249b77151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(active);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="structmbedtls__ssl__ticket__context_1a361acadc43473495769aaa837c6f93ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(ticket_lifetime);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="structmbedtls__ssl__ticket__context_1ad12abb76dddefc5cb4c2f766ded8beac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int(*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(f_rng))(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t);</highlight></codeline>
+<codeline lineno="75" refid="structmbedtls__ssl__ticket__context_1a50d0cf2670c667dd8e8f9bd8250db962" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(p_rng);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structmbedtls__ssl__ticket__context_1afaade46e444460f3efde7bb79d6e945e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(mutex);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="ssl__ticket_8h_1a765ff40e6c0587349aa59ec98b4bf797" kindref="member">mbedtls_ssl_ticket_context</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__ticket_8h_1a07765b563037998d820dc8a1272e1ee0" kindref="member">mbedtls_ssl_ticket_init</ref>(<ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssl__ticket_8h_1a334f40042825a33295d0843374e1785a" kindref="member">mbedtls_ssl_ticket_setup</ref>(<ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cipher_8h_1a00c5885f1ea7279c5a7d8e12e596569d" kindref="member">mbedtls_cipher_type_t</ref><sp/>cipher,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>lifetime);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssl__ticket_8h_1a4e199161f2a9625d21a62766e7c4b84a" kindref="member">mbedtls_ssl_ticket_rotate</ref>(<ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nlength,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*k,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>klength,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>lifetime);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="ssl__ticket_8h_1a888e1b0900b517559ba5e89fb0843e0e" refkind="member"><highlight class="normal"><ref refid="ssl_8h_1a112d1fc2dd4db788592457d14c0c2899" kindref="member">mbedtls_ssl_ticket_write_t</ref><sp/><ref refid="ssl__ticket_8h_1a888e1b0900b517559ba5e89fb0843e0e" kindref="member">mbedtls_ssl_ticket_write</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="ssl__ticket_8h_1ab8231bccc4f614d1995abd5984ffcdd8" refkind="member"><highlight class="normal"><ref refid="ssl_8h_1a48aea353b22e86deece00933ef941536" kindref="member">mbedtls_ssl_ticket_parse_t</ref><sp/><ref refid="ssl__ticket_8h_1ab8231bccc4f614d1995abd5984ffcdd8" kindref="member">mbedtls_ssl_ticket_parse</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__ticket_8h_1a254bccc118c66a617ba6020a2d8cc69c" kindref="member">mbedtls_ssl_ticket_free</ref>(<ref refid="structmbedtls__ssl__ticket__context" kindref="compound">mbedtls_ssl_ticket_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ssl_ticket.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ssl_ticket.h"/>
+  </compounddef>
+</doxygen>

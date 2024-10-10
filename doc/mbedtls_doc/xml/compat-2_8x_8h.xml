@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="compat-2_8x_8h" kind="file" language="C++">
+    <compoundname>compat-2.x.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="compat-2_8x_8h_1a7428f9c465ec7352cee762d69cae91a5" prot="public" static="no">
+        <name>MBEDTLS_COMPAT2X_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="18" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a510965bfd2464fe33dae846c19529244" prot="public" static="no">
+        <name>mbedtls_ctr_drbg_update_ret</name>
+        <initializer><ref refid="ctr__drbg_8h_1a9c356646a4a6833d31ae21440c6441da" kindref="member">mbedtls_ctr_drbg_update</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="23" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1ad0cf8992c0a42f31e622f157f541a585" prot="public" static="no">
+        <name>mbedtls_hmac_drbg_update_ret</name>
+        <initializer><ref refid="hmac__drbg_8h_1abfbf6fb6d738195b32b3274d669667bf" kindref="member">mbedtls_hmac_drbg_update</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="24" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a9de6e899443a6bf22b58e92aaacfe692" prot="public" static="no">
+        <name>mbedtls_md5_starts_ret</name>
+        <initializer><ref refid="md5_8h_1a509d041c758e0277ff4e00a87736eeb5" kindref="member">mbedtls_md5_starts</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="25" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a6e5b8b2143a30f25a58c9f42185c10af" prot="public" static="no">
+        <name>mbedtls_md5_update_ret</name>
+        <initializer><ref refid="md5_8h_1ad3f28d21e767e97b8009fa6bd3308073" kindref="member">mbedtls_md5_update</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="26" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1aa32b301b8043ff48ceb70b8362938409" prot="public" static="no">
+        <name>mbedtls_md5_finish_ret</name>
+        <initializer><ref refid="md5_8h_1ae118551fdd72568632f4109f4a39dc32" kindref="member">mbedtls_md5_finish</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="27" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1ab072741cacb0e4c08ae16b1a2281002d" prot="public" static="no">
+        <name>mbedtls_md5_ret</name>
+        <initializer><ref refid="md5_8h_1a01315bf1d862dee293282fa833d0e90f" kindref="member">mbedtls_md5</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="28" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a28c06c49cb14e1c28a4aba31c40f7d75" prot="public" static="no">
+        <name>mbedtls_ripemd160_starts_ret</name>
+        <initializer><ref refid="ripemd160_8h_1a14dcc5fa01f6c99e91bfa1f6f7f6732f" kindref="member">mbedtls_ripemd160_starts</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="29" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1ac4a73ad2837470b81c7452d5590802d3" prot="public" static="no">
+        <name>mbedtls_ripemd160_update_ret</name>
+        <initializer><ref refid="ripemd160_8h_1a1a6718a3d351acc9ed9ee41c70323eee" kindref="member">mbedtls_ripemd160_update</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="30" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a94b8e7e5c9e8bbd9ac8e3c46c8ae93c1" prot="public" static="no">
+        <name>mbedtls_ripemd160_finish_ret</name>
+        <initializer><ref refid="ripemd160_8h_1ae96664c617af9200efd43e3dad4fb79c" kindref="member">mbedtls_ripemd160_finish</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="31" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a60b2491627ce1bd626db7b6a9dc42457" prot="public" static="no">
+        <name>mbedtls_ripemd160_ret</name>
+        <initializer><ref refid="ripemd160_8h_1ae58e31f65f4a64ba0dad7be450fbf5ab" kindref="member">mbedtls_ripemd160</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="32" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a886da2e7926340fcf01ea3c3320a2289" prot="public" static="no">
+        <name>mbedtls_sha1_starts_ret</name>
+        <initializer><ref refid="sha1_8h_1ac514b3f4625a18e51de6247b685bacff" kindref="member">mbedtls_sha1_starts</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="33" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1aff9d949f1245d190f230f43448a76768" prot="public" static="no">
+        <name>mbedtls_sha1_update_ret</name>
+        <initializer><ref refid="sha1_8h_1a758d6771c5eb5b06ecc9ff303f4a2ef4" kindref="member">mbedtls_sha1_update</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="34" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1ae72f904ab8ac5cdae68a19a9ac45468b" prot="public" static="no">
+        <name>mbedtls_sha1_finish_ret</name>
+        <initializer><ref refid="sha1_8h_1abe51d24037e77d104abb28ee09052357" kindref="member">mbedtls_sha1_finish</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="35" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a34a85c751ac0f1a8456cb54a1440b984" prot="public" static="no">
+        <name>mbedtls_sha1_ret</name>
+        <initializer><ref refid="sha1_8h_1aa70ce41a571d2a6e4aef6a755fcc7f4a" kindref="member">mbedtls_sha1</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="36" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1ac39b459102e54cccf1c2fb2e40ece596" prot="public" static="no">
+        <name>mbedtls_sha256_starts_ret</name>
+        <initializer><ref refid="sha256_8h_1a2678f92d712139f588120de452faff62" kindref="member">mbedtls_sha256_starts</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="37" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a024485c51d763c6f444040768ff6c66b" prot="public" static="no">
+        <name>mbedtls_sha256_update_ret</name>
+        <initializer><ref refid="sha256_8h_1ad9d1d9abcd8dc24d9ef323e308478071" kindref="member">mbedtls_sha256_update</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="38" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a6e77b8a23f4f3329dddac2f6480eff08" prot="public" static="no">
+        <name>mbedtls_sha256_finish_ret</name>
+        <initializer><ref refid="sha256_8h_1ab4c12857769d94183af05f739c40c44f" kindref="member">mbedtls_sha256_finish</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="39" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a21af245737dbf490b34fe6f5882bdfd8" prot="public" static="no">
+        <name>mbedtls_sha256_ret</name>
+        <initializer><ref refid="sha256_8h_1affffb44ea2676291c7215090bbd3d40c" kindref="member">mbedtls_sha256</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="40" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a8f9880a0bae3ca284e69fc4aacc8b5d3" prot="public" static="no">
+        <name>mbedtls_sha512_starts_ret</name>
+        <initializer><ref refid="sha512_8h_1a2267a32f3725558b27e054ca13d7433d" kindref="member">mbedtls_sha512_starts</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="41" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a5ccf2fd672d03f1a32b94619b284b662" prot="public" static="no">
+        <name>mbedtls_sha512_update_ret</name>
+        <initializer><ref refid="sha512_8h_1a91b9329d9e8e0166187d120d50d560e6" kindref="member">mbedtls_sha512_update</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="42" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a9733df2bded86f3f8e1f1391ba2018da" prot="public" static="no">
+        <name>mbedtls_sha512_finish_ret</name>
+        <initializer><ref refid="sha512_8h_1aceefec6ae97343b58126876e0eab0fe9" kindref="member">mbedtls_sha512_finish</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="43" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compat-2_8x_8h_1a2d7789af52aad0a8702400225c2a9fbb" prot="public" static="no">
+        <name>mbedtls_sha512_ret</name>
+        <initializer><ref refid="sha512_8h_1afe7193c2825a9e755889e139cd5e5e67" kindref="member">mbedtls_sha512</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" line="44" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Compatibility definitions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000004"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use the new names directly instead </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_DEPRECATED_WARNING)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#warning<sp/>&quot;Including<sp/>compat-2.x.h<sp/>is<sp/>deprecated&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_COMPAT2X_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="compat-2_8x_8h_1a7428f9c465ec7352cee762d69cae91a5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_COMPAT2X_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>Macros<sp/>for<sp/>renamed<sp/>functions</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="compat-2_8x_8h_1a510965bfd2464fe33dae846c19529244" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_ctr_drbg_update_ret<sp/><sp/><sp/>mbedtls_ctr_drbg_update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="compat-2_8x_8h_1ad0cf8992c0a42f31e622f157f541a585" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_hmac_drbg_update_ret<sp/><sp/>mbedtls_hmac_drbg_update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="compat-2_8x_8h_1a9de6e899443a6bf22b58e92aaacfe692" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_md5_starts_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_md5_starts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="compat-2_8x_8h_1a6e5b8b2143a30f25a58c9f42185c10af" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_md5_update_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_md5_update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="compat-2_8x_8h_1aa32b301b8043ff48ceb70b8362938409" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_md5_finish_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_md5_finish</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="compat-2_8x_8h_1ab072741cacb0e4c08ae16b1a2281002d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_md5_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_md5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="compat-2_8x_8h_1a28c06c49cb14e1c28a4aba31c40f7d75" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_ripemd160_starts_ret<sp/><sp/>mbedtls_ripemd160_starts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="compat-2_8x_8h_1ac4a73ad2837470b81c7452d5590802d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_ripemd160_update_ret<sp/><sp/>mbedtls_ripemd160_update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="compat-2_8x_8h_1a94b8e7e5c9e8bbd9ac8e3c46c8ae93c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_ripemd160_finish_ret<sp/><sp/>mbedtls_ripemd160_finish</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="compat-2_8x_8h_1a60b2491627ce1bd626db7b6a9dc42457" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_ripemd160_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_ripemd160</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="compat-2_8x_8h_1a886da2e7926340fcf01ea3c3320a2289" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha1_starts_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_sha1_starts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="compat-2_8x_8h_1aff9d949f1245d190f230f43448a76768" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha1_update_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_sha1_update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="compat-2_8x_8h_1ae72f904ab8ac5cdae68a19a9ac45468b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha1_finish_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_sha1_finish</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="compat-2_8x_8h_1a34a85c751ac0f1a8456cb54a1440b984" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha1_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_sha1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="compat-2_8x_8h_1ac39b459102e54cccf1c2fb2e40ece596" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha256_starts_ret<sp/><sp/><sp/><sp/><sp/>mbedtls_sha256_starts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="compat-2_8x_8h_1a024485c51d763c6f444040768ff6c66b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha256_update_ret<sp/><sp/><sp/><sp/><sp/>mbedtls_sha256_update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="compat-2_8x_8h_1a6e77b8a23f4f3329dddac2f6480eff08" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha256_finish_ret<sp/><sp/><sp/><sp/><sp/>mbedtls_sha256_finish</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="compat-2_8x_8h_1a21af245737dbf490b34fe6f5882bdfd8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha256_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_sha256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="compat-2_8x_8h_1a8f9880a0bae3ca284e69fc4aacc8b5d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha512_starts_ret<sp/><sp/><sp/><sp/><sp/>mbedtls_sha512_starts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="compat-2_8x_8h_1a5ccf2fd672d03f1a32b94619b284b662" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha512_update_ret<sp/><sp/><sp/><sp/><sp/>mbedtls_sha512_update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="compat-2_8x_8h_1a9733df2bded86f3f8e1f1391ba2018da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha512_finish_ret<sp/><sp/><sp/><sp/><sp/>mbedtls_sha512_finish</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="compat-2_8x_8h_1a2d7789af52aad0a8702400225c2a9fbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_sha512_ret<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_sha512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_COMPAT2X_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/compat-2.x.h"/>
+  </compounddef>
+</doxygen>

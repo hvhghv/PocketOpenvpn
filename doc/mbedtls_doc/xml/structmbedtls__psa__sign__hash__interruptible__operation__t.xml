@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__psa__sign__hash__interruptible__operation__t" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_psa_sign_hash_interruptible_operation_t</compoundname>
+    <includes refid="crypto__builtin__composites_8h" local="no">crypto_builtin_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__sign__hash__interruptible__operation__t_1ab69e6776de232174ba17d9ec811ecde6" prot="public" static="no" mutable="no">
+        <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+        <definition>mbedtls_ecdsa_context* mbedtls_psa_sign_hash_interruptible_operation_t::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="108" column="27" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__sign__hash__interruptible__operation__t_1a07811c5f603026609b8e8ec010a93439" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref></type>
+        <definition>mbedtls_ecdsa_restart_ctx mbedtls_psa_sign_hash_interruptible_operation_t::private_restart_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_restart_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="109" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__sign__hash__interruptible__operation__t_1a51c2387aeff7e6b08b96483bd8ec3ea1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_psa_sign_hash_interruptible_operation_t::private_num_ops</definition>
+        <argsstring></argsstring>
+        <name>private_num_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="111" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__sign__hash__interruptible__operation__t_1ac7514233651729f5ca53daf957a78116" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_sign_hash_interruptible_operation_t::private_coordinate_bytes</definition>
+        <argsstring></argsstring>
+        <name>private_coordinate_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="113" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__sign__hash__interruptible__operation__t_1a07eb9415e5cea22d8ca9718aebabdbaa" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t mbedtls_psa_sign_hash_interruptible_operation_t::private_alg</definition>
+        <argsstring></argsstring>
+        <name>private_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="114" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__sign__hash__interruptible__operation__t_1ac5110680fa71b9ef26d0d92916886259" prot="public" static="no" mutable="no">
+        <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+        <definition>mbedtls_md_type_t mbedtls_psa_sign_hash_interruptible_operation_t::private_md_alg</definition>
+        <argsstring></argsstring>
+        <name>private_md_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="115" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__sign__hash__interruptible__operation__t_1ab5dac585e9c167ce932fddffbde2107b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_psa_sign_hash_interruptible_operation_t::private_hash[PSA_BITS_TO_BYTES(PSA_VENDOR_ECC_MAX_CURVE_BITS)]</definition>
+        <argsstring>[PSA_BITS_TO_BYTES(PSA_VENDOR_ECC_MAX_CURVE_BITS)]</argsstring>
+        <name>private_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="116" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__sign__hash__interruptible__operation__t_1a75f16aacaa0d22bf1d89afb047aaf71d" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_sign_hash_interruptible_operation_t::private_hash_length</definition>
+        <argsstring></argsstring>
+        <name>private_hash_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="117" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>mbedtls_ecp_point</label>
+        <link refid="structmbedtls__ecp__point"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_X</edgelabel>
+          <edgelabel>private_Y</edgelabel>
+          <edgelabel>private_Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mbedtls_psa_sign_hash_interruptible_operation_t</label>
+        <link refid="structmbedtls__psa__sign__hash__interruptible__operation__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_restart_ctx</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="4">
+        <label>mbedtls_ecp_keypair</label>
+        <link refid="structmbedtls__ecp__keypair"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_grp</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>private_Q</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_d</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mbedtls_ecp_group</label>
+        <link refid="structmbedtls__ecp__group"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>G</edgelabel>
+          <edgelabel>private_T</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>N</edgelabel>
+          <edgelabel>P</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_ecdsa_restart_ctx</label>
+        <link refid="structmbedtls__ecdsa__restart__ctx"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_ecp</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_ecp_restart_ctx</label>
+        <link refid="structmbedtls__ecp__restart__ctx"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" line="104" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_builtin_composites.h" bodystart="104" bodyend="126"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__sign__hash__interruptible__operation__t_1a07eb9415e5cea22d8ca9718aebabdbaa" prot="public" virt="non-virtual"><scope>mbedtls_psa_sign_hash_interruptible_operation_t</scope><name>private_alg</name></member>
+      <member refid="structmbedtls__psa__sign__hash__interruptible__operation__t_1ac7514233651729f5ca53daf957a78116" prot="public" virt="non-virtual"><scope>mbedtls_psa_sign_hash_interruptible_operation_t</scope><name>private_coordinate_bytes</name></member>
+      <member refid="structmbedtls__psa__sign__hash__interruptible__operation__t_1ab69e6776de232174ba17d9ec811ecde6" prot="public" virt="non-virtual"><scope>mbedtls_psa_sign_hash_interruptible_operation_t</scope><name>private_ctx</name></member>
+      <member refid="structmbedtls__psa__sign__hash__interruptible__operation__t_1ab5dac585e9c167ce932fddffbde2107b" prot="public" virt="non-virtual"><scope>mbedtls_psa_sign_hash_interruptible_operation_t</scope><name>private_hash</name></member>
+      <member refid="structmbedtls__psa__sign__hash__interruptible__operation__t_1a75f16aacaa0d22bf1d89afb047aaf71d" prot="public" virt="non-virtual"><scope>mbedtls_psa_sign_hash_interruptible_operation_t</scope><name>private_hash_length</name></member>
+      <member refid="structmbedtls__psa__sign__hash__interruptible__operation__t_1ac5110680fa71b9ef26d0d92916886259" prot="public" virt="non-virtual"><scope>mbedtls_psa_sign_hash_interruptible_operation_t</scope><name>private_md_alg</name></member>
+      <member refid="structmbedtls__psa__sign__hash__interruptible__operation__t_1a51c2387aeff7e6b08b96483bd8ec3ea1" prot="public" virt="non-virtual"><scope>mbedtls_psa_sign_hash_interruptible_operation_t</scope><name>private_num_ops</name></member>
+      <member refid="structmbedtls__psa__sign__hash__interruptible__operation__t_1a07811c5f603026609b8e8ec010a93439" prot="public" virt="non-virtual"><scope>mbedtls_psa_sign_hash_interruptible_operation_t</scope><name>private_restart_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

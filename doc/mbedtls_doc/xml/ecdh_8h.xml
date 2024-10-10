@@ -1,0 +1,1250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ecdh_8h" kind="file" language="C++">
+    <compoundname>ecdh.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="ecp_8h" local="yes">mbedtls/ecp.h</includes>
+    <includedby refid="ssl_8h" local="yes">ssl.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/ecp.h</label>
+        <link refid="ecp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="21">
+        <label>mbedtls/bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="1">
+        <label>ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="23">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="6">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="2">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="5">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="4">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="1">
+        <label>ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__ecdh__context" prot="public">mbedtls_ecdh_context</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ecdh_8h_1a34142af6045ce51995f621c5f7648f31" prot="public" static="no">
+        <name>MBEDTLS_ECDH_LEGACY_CONTEXT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="42" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mbedtls_ecdh_side</name>
+        <enumvalue id="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39ca28e1b43484f53d02de24809228780703" prot="public">
+          <name>MBEDTLS_ECDH_OURS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Our key. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39caee83a43a270657fc7dc2f26c91d2addb" prot="public">
+          <name>MBEDTLS_ECDH_THEIRS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The key of the peer. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines the source of the imported EC key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="59" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="59" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ecdh_8h_1abbeab18d635fc3d2ae9afb941d41f4da" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref></type>
+        <definition>typedef struct mbedtls_ecdh_context mbedtls_ecdh_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ecdh_context</name>
+        <briefdescription>
+<para>The ECDH context structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Performing multiple operations concurrently on the same ECDSA context is not supported; objects of this type should not be shared between multiple threads. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="142" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ecdh_8h_1a7601b043149f7171a47248b7244a4857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_can_do</definition>
+        <argsstring>(mbedtls_ecp_group_id gid)</argsstring>
+        <name>mbedtls_ecdh_can_do</name>
+        <param>
+          <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+          <declname>gid</declname>
+        </param>
+        <briefdescription>
+<para>Check whether a given group can be used for ECDH. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECP group ID to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> if the group can be used, <computeroutput>0</computeroutput> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="151" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="151" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a403a5d7363b6219a2017b837b665c354" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_gen_public</definition>
+        <argsstring>(mbedtls_ecp_group *grp, mbedtls_mpi *d, mbedtls_ecp_point *Q, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecdh_gen_public</name>
+        <param>
+          <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> *</type>
+          <declname>grp</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref> *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>This function generates an ECDH keypair on an elliptic curve. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function performs the first of two core computations implemented during the ECDH key exchange. The second core computation is performed by <ref refid="ecdh_8h_1aca0670e79f3002a218d6da8c8dee61e1" kindref="member">mbedtls_ecdh_compute_shared()</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECP group to use. This must be initialized and have domain parameters loaded, for example through mbedtls_ecp_load() or <ref refid="ecp_8h_1acfd0cdb926358713b31c48b2e4dd9e58" kindref="member">mbedtls_ecp_tls_read_group()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination MPI (private key). This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination point (public key). This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> in case <computeroutput>f_rng</computeroutput> doesn&apos;t need a context argument.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> or <computeroutput>MBEDTLS_MPI_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="178" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="178" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1aca0670e79f3002a218d6da8c8dee61e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_compute_shared</definition>
+        <argsstring>(mbedtls_ecp_group *grp, mbedtls_mpi *z, const mbedtls_ecp_point *Q, const mbedtls_mpi *d, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecdh_compute_shared</name>
+        <param>
+          <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> *</type>
+          <declname>grp</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref> *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>This function computes the shared secret. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>             This function performs the second of two core computations
+             implemented during the ECDH key exchange. The first core
+             computation is performed by mbedtls_ecdh_gen_public().
+</verbatim></para>
+<para><simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<simplesect kind="note"><para>If <computeroutput>f_rng</computeroutput> is not NULL, it is used to implement countermeasures against side-channel attacks. For more information, see <ref refid="ecp_8h_1a4d005045c302e100c78bdc587e8f0e6a" kindref="member">mbedtls_ecp_mul()</ref>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECP group to use. This must be initialized and have domain parameters loaded, for example through mbedtls_ecp_load() or <ref refid="ecp_8h_1acfd0cdb926358713b31c48b2e4dd9e58" kindref="member">mbedtls_ecp_tls_read_group()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination MPI (shared secret). This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The public key from another party. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Our secret exponent (private key). This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> is <computeroutput>NULL</computeroutput> or doesn&apos;t need a context argument.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> or <computeroutput>MBEDTLS_MPI_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="213" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="213" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a97e787a12f7aae180ab9828303199dca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecdh_init</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx)</argsstring>
+        <name>mbedtls_ecdh_init</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes an ECDH context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDH context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="223" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="223" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a296f6ce7b1b8b53d048a6c28ff3420cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_setup</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx, mbedtls_ecp_group_id grp_id)</argsstring>
+        <name>mbedtls_ecdh_setup</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+          <declname>grp_id</declname>
+        </param>
+        <briefdescription>
+<para>This function sets up the ECDH context with the information given. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function should be called after <ref refid="ecdh_8h_1a97e787a12f7aae180ab9828303199dca" kindref="member">mbedtls_ecdh_init()</ref> but before <ref refid="ecdh_8h_1a784e56d5eea12e38374e9ce028692940" kindref="member">mbedtls_ecdh_make_params()</ref>. There is no need to call this function before <ref refid="ecdh_8h_1af07326ad0017bf6fcfb9f93e43641254" kindref="member">mbedtls_ecdh_read_params()</ref>.</para>
+<para>This is the first function used by a TLS server for ECDHE ciphersuites.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDH context to set up. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>grp_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The group id of the group to set up the context for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="241" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="241" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a89cc40dc92fbbaf0275ea9a6184a5e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecdh_free</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx)</argsstring>
+        <name>mbedtls_ecdh_free</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function frees a context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to free. This may be <computeroutput>NULL</computeroutput>, in which case this function does nothing. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized ECDH context. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="251" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="251" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a784e56d5eea12e38374e9ce028692940" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_make_params</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx, size_t *olen, unsigned char *buf, size_t blen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecdh_make_params</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>This function generates an EC key pair and exports its in the format used in a TLS ServerKeyExchange handshake message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the second function used by a TLS server for ECDHE ciphersuites. (It is called after <ref refid="ecdh_8h_1a296f6ce7b1b8b53d048a6c28ff3420cc" kindref="member">mbedtls_ecdh_setup()</ref>.)</para>
+<para><simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDH context to use. This must be initialized and bound to a group, for example via <ref refid="ecdh_8h_1a296f6ce7b1b8b53d048a6c28ff3420cc" kindref="member">mbedtls_ecdh_setup()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the number of Bytes written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination buffer. This must be a writable buffer of length <computeroutput>blen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the destination buffer <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> in case <computeroutput>f_rng</computeroutput> doesn&apos;t need a context argument.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a6d549348fe93c843c19bfcd102b6e94f" kindref="member">MBEDTLS_ERR_ECP_IN_PROGRESS</ref> if maximum number of operations was reached: see <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="278" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="278" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1af07326ad0017bf6fcfb9f93e43641254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_read_params</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx, const unsigned char **buf, const unsigned char *end)</argsstring>
+        <name>mbedtls_ecdh_read_params</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char **</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>This function parses the ECDHE parameters in a TLS ServerKeyExchange handshake message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>In a TLS handshake, this is the how the client sets up its ECDHE context from the server&apos;s public ECDHE key material.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDHE context to use. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On input, <computeroutput>*buf</computeroutput> must be the start of the input buffer. On output, <computeroutput>*buf</computeroutput> is updated to point to the end of the data that has been read. On success, this is the first byte past the end of the ServerKeyExchange parameters. On error, this is the point at which an error has been detected, which is usually not useful except to debug failures. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the input buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="307" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="307" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a3c03b82213c39abd90a5bd4b1646441d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_get_params</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx, const mbedtls_ecp_keypair *key, mbedtls_ecdh_side side)</argsstring>
+        <name>mbedtls_ecdh_get_params</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecp_keypair</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39c" kindref="member">mbedtls_ecdh_side</ref></type>
+          <declname>side</declname>
+        </param>
+        <briefdescription>
+<para>This function sets up an ECDH context from an EC key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>             It is used by clients and servers in place of the
+             ServerKeyEchange for static ECDH, and imports ECDH
+             parameters from the EC key information of a certificate.
+</verbatim></para>
+<para><simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDH context to set up. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The EC key to use. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>side</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines the source of the key. Possible values are:<itemizedlist>
+<listitem><para><ref refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39ca28e1b43484f53d02de24809228780703" kindref="member">MBEDTLS_ECDH_OURS</ref>: The key is ours.</para>
+</listitem><listitem><para><ref refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39caee83a43a270657fc7dc2f26c91d2addb" kindref="member">MBEDTLS_ECDH_THEIRS</ref>: The key is that of the peer.</para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="330" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="330" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a417fd45ce78adb1b52027f995fa5ee57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_make_public</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx, size_t *olen, unsigned char *buf, size_t blen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecdh_make_public</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>This function generates a public key and exports it as a TLS ClientKeyExchange payload. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the second function used by a TLS client for ECDH(E) ciphersuites.</para>
+<para><simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDH context to use. This must be initialized and bound to a group, the latter usually by <ref refid="ecdh_8h_1af07326ad0017bf6fcfb9f93e43641254" kindref="member">mbedtls_ecdh_read_params()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the number of Bytes written. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination buffer. This must be a writable buffer of length <computeroutput>blen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the destination buffer <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> in case <computeroutput>f_rng</computeroutput> doesn&apos;t need a context argument.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a6d549348fe93c843c19bfcd102b6e94f" kindref="member">MBEDTLS_ERR_ECP_IN_PROGRESS</ref> if maximum number of operations was reached: see <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="360" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="360" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a9f417d90797b109d3036feb288e33207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_read_public</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx, const unsigned char *buf, size_t blen)</argsstring>
+        <name>mbedtls_ecdh_read_public</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <briefdescription>
+<para>This function parses and processes the ECDHE payload of a TLS ClientKeyExchange message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the third function used by a TLS server for ECDH(E) ciphersuites. (It is called after <ref refid="ecdh_8h_1a296f6ce7b1b8b53d048a6c28ff3420cc" kindref="member">mbedtls_ecdh_setup()</ref> and <ref refid="ecdh_8h_1a784e56d5eea12e38374e9ce028692940" kindref="member">mbedtls_ecdh_make_params()</ref>.)</para>
+<para><simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDH context to use. This must be initialized and bound to a group, for example via <ref refid="ecdh_8h_1a296f6ce7b1b8b53d048a6c28ff3420cc" kindref="member">mbedtls_ecdh_setup()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the ClientKeyExchange payload. This must be a readable buffer of length <computeroutput>blen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input buffer <computeroutput>buf</computeroutput> in Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="384" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="384" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a423fee27a0c8603bba336cbfe6dadcaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_calc_secret</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx, size_t *olen, unsigned char *buf, size_t blen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecdh_calc_secret</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>This function derives and exports the shared secret. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>             This is the last function used by both TLS client
+             and servers.
+</verbatim></para>
+<para><simplesect kind="note"><para>If <computeroutput>f_rng</computeroutput> is not NULL, it is used to implement countermeasures against side-channel attacks. For more information, see <ref refid="ecp_8h_1a4d005045c302e100c78bdc587e8f0e6a" kindref="member">mbedtls_ecp_mul()</ref>.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDH context to use. This must be initialized and have its own private key generated and the peer&apos;s public key imported. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the total number of Bytes written on success. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write the generated shared key to. This must be a writable buffer of size <computeroutput>blen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the destination buffer <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t need a context argument.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a6d549348fe93c843c19bfcd102b6e94f" kindref="member">MBEDTLS_ERR_ECP_IN_PROGRESS</ref> if maximum number of operations was reached: see <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="416" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="416" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdh_8h_1a7acea404701bec3bbbf95c256df9a19f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecdh_enable_restart</definition>
+        <argsstring>(mbedtls_ecdh_context *ctx)</argsstring>
+        <name>mbedtls_ecdh_enable_restart</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function enables restartable EC computations for this context. (Default: disabled.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput> </para>
+</simplesect>
+<simplesect kind="note"><para>It is not possible to safely disable restartable computations once enabled, except by free-ing the context, which cancels possible in-progress operations.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDH context to use. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="434" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" declline="434" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains ECDH definitions and functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The Elliptic Curve Diffie-Hellman (ECDH) protocol is an anonymous key agreement protocol allowing two parties to establish a shared secret over an insecure channel. Each party must have an elliptic-curve public–private key pair.</para>
+<para>For more information, see <emphasis>NIST SP 800-56A Rev. 2: Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography</emphasis>. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="15"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ECDH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ECDH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ecp_8h" kindref="compound">mbedtls/ecp.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>Mbed<sp/>TLS<sp/>supports<sp/>two<sp/>formats<sp/>for<sp/>ECDH<sp/>contexts<sp/>(#mbedtls_ecdh_context</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>defined<sp/>in<sp/>`ecdh.h`).<sp/>For<sp/>most<sp/>applications,<sp/>the<sp/>choice<sp/>of<sp/>format<sp/>makes</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>no<sp/>difference,<sp/>since<sp/>all<sp/>library<sp/>functions<sp/>can<sp/>work<sp/>with<sp/>either<sp/>format,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>except<sp/>that<sp/>the<sp/>new<sp/>format<sp/>is<sp/>incompatible<sp/>with<sp/>MBEDTLS_ECP_RESTARTABLE.</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"></highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>The<sp/>new<sp/>format<sp/>used<sp/>when<sp/>this<sp/>option<sp/>is<sp/>disabled<sp/>is<sp/>smaller</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>(56<sp/>bytes<sp/>on<sp/>a<sp/>32-bit<sp/>platform).<sp/>In<sp/>future<sp/>versions<sp/>of<sp/>the<sp/>library,<sp/>it</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>will<sp/>support<sp/>alternative<sp/>implementations<sp/>of<sp/>ECDH<sp/>operations.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>The<sp/>new<sp/>format<sp/>is<sp/>incompatible<sp/>with<sp/>applications<sp/>that<sp/>access</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>context<sp/>fields<sp/>directly<sp/>and<sp/>with<sp/>restartable<sp/>ECP<sp/>operations.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="ecdh_8h_1a34142af6045ce51995f621c5f7648f31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ECDH_LEGACY_CONTEXT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_ECDH_LEGACY_CONTEXT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDH_VARIANT_EVEREST_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_ECDH_LEGACY_CONTEXT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;everest/everest.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39ca28e1b43484f53d02de24809228780703" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39ca28e1b43484f53d02de24809228780703" kindref="member">MBEDTLS_ECDH_OURS</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39caee83a43a270657fc7dc2f26c91d2addb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39caee83a43a270657fc7dc2f26c91d2addb" kindref="member">MBEDTLS_ECDH_THEIRS</ref>,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}<sp/><ref refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39c" kindref="member">mbedtls_ecdh_side</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_ECDH_LEGACY_CONTEXT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>MBEDTLS_ECDH_VARIANT_NONE<sp/>=<sp/>0,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>MBEDTLS_ECDH_VARIANT_MBEDTLS_2_0,</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDH_VARIANT_EVEREST_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>MBEDTLS_ECDH_VARIANT_EVEREST<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/>mbedtls_ecdh_variant;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">mbedtls_ecdh_context_mbed<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(grp);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(d);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Q);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Qp);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(z);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__restart__ctx" kindref="compound">mbedtls_ecp_restart_ctx</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(rs);<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}<sp/>mbedtls_ecdh_context_mbed;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="structmbedtls__ecdh__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDH_LEGACY_CONTEXT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="structmbedtls__ecdh__context_1a06a89429aa175a935dd92b8257d4ff06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(grp);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108" refid="structmbedtls__ecdh__context_1a07a2edc0fd37752b363b6623c924562f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(d);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109" refid="structmbedtls__ecdh__context_1a06cc8b8857a86aef15df00e6ab2e2538" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Q);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="structmbedtls__ecdh__context_1a9733f6fc1d2837f20b5081282ee6f3cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Qp);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="structmbedtls__ecdh__context_1a881d5a7b117efc7e3de5adec879e91f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(z);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="structmbedtls__ecdh__context_1a09eafed19df4ef95523e5c1affddcbf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(point_format);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="structmbedtls__ecdh__context_1a1890108936aaac68cc77d47fc033ea83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Vi);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="structmbedtls__ecdh__context_1aa23a9727d6d41f861665f63a5ac0c2d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Vf);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="structmbedtls__ecdh__context_1a59e0ef206b749563a1c9aa32371a6dff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(_d);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="structmbedtls__ecdh__context_1a3c4a311ea4da90dd2b92feb996fa43d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(restart_enabled);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118" refid="structmbedtls__ecdh__context_1a363421c65830fc8155b02962db91624d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__restart__ctx" kindref="compound">mbedtls_ecp_restart_ctx</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(rs);<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(point_format);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(grp_id);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_ecdh_variant<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(var);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_ecdh_context_mbed<sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(mbed_ecdh);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDH_VARIANT_EVEREST_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_ecdh_context_everest<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(everest_ecdh);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(ctx);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(restart_enabled);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECDH_LEGACY_CONTEXT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><ref refid="ecdh_8h_1abbeab18d635fc3d2ae9afb941d41f4da" kindref="member">mbedtls_ecdh_context</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a7601b043149f7171a47248b7244a4857" kindref="member">mbedtls_ecdh_can_do</ref>(<ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref><sp/>gid);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a403a5d7363b6219a2017b837b665c354" kindref="member">mbedtls_ecdh_gen_public</ref>(<ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/>*grp,<sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*d,<sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/>*Q,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1aca0670e79f3002a218d6da8c8dee61e1" kindref="member">mbedtls_ecdh_compute_shared</ref>(<ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/>*grp,<sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*z,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/>*Q,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*d,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a97e787a12f7aae180ab9828303199dca" kindref="member">mbedtls_ecdh_init</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a296f6ce7b1b8b53d048a6c28ff3420cc" kindref="member">mbedtls_ecdh_setup</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref><sp/>grp_id);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a89cc40dc92fbbaf0275ea9a6184a5e71" kindref="member">mbedtls_ecdh_free</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a784e56d5eea12e38374e9ce028692940" kindref="member">mbedtls_ecdh_make_params</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1af07326ad0017bf6fcfb9f93e43641254" kindref="member">mbedtls_ecdh_read_params</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**buf,</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a3c03b82213c39abd90a5bd4b1646441d" kindref="member">mbedtls_ecdh_get_params</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecp_keypair</ref><sp/>*key,</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ecdh_8h_1ae5df12f2068df09a102e05e02fb1e39c" kindref="member">mbedtls_ecdh_side</ref><sp/>side);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a417fd45ce78adb1b52027f995fa5ee57" kindref="member">mbedtls_ecdh_make_public</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a9f417d90797b109d3036feb288e33207" kindref="member">mbedtls_ecdh_read_public</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a423fee27a0c8603bba336cbfe6dadcaa" kindref="member">mbedtls_ecdh_calc_secret</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecdh_8h_1a7acea404701bec3bbbf95c256df9a19f" kindref="member">mbedtls_ecdh_enable_restart</ref>(<ref refid="structmbedtls__ecdh__context" kindref="compound">mbedtls_ecdh_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ecdh.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h"/>
+  </compounddef>
+</doxygen>

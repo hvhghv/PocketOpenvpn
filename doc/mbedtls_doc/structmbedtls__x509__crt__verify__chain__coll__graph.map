@@ -1,0 +1,11 @@
+<map id="mbedtls_x509_crt_verify_chain" name="mbedtls_x509_crt_verify_chain">
+<area shape="rect" id="node1" title=" " alt="" coords="1441,335,1605,377"/>
+<area shape="rect" id="node2" href="$structmbedtls__x509__crt.html" title=" " alt="" coords="908,343,1033,369"/>
+<area shape="rect" id="node9" href="$structmbedtls__x509__crt__verify__chain__item.html" title=" " alt="" coords="1147,370,1311,411"/>
+<area shape="rect" id="node3" href="$structmbedtls__asn1__sequence.html" title=" " alt="" coords="204,248,371,275"/>
+<area shape="rect" id="node5" href="$structmbedtls__x509__authority.html" title=" " alt="" coords="600,309,760,336"/>
+<area shape="rect" id="node4" href="$structmbedtls__asn1__buf.html" title=" " alt="" coords="5,296,133,323"/>
+<area shape="rect" id="node6" href="$structmbedtls__asn1__named__data.html" title=" " alt="" coords="395,416,576,443"/>
+<area shape="rect" id="node7" href="$structmbedtls__x509__time.html" title=" " alt="" coords="613,437,747,464"/>
+<area shape="rect" id="node8" href="$structmbedtls__pk__context.html" title="Public key container." alt="" coords="611,488,749,515"/>
+</map>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__pk__rsassa__pss__options" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_pk_rsassa_pss_options</compoundname>
+    <includes refid="pk_8h" local="no">pk.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__pk__rsassa__pss__options_1ab5ca5b88636ad6db1af4a67ddf748606" prot="public" static="no" mutable="no">
+        <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+        <definition>mbedtls_md_type_t mbedtls_pk_rsassa_pss_options::mgf1_hash_id</definition>
+        <argsstring></argsstring>
+        <name>mgf1_hash_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The digest to use for MGF1 in PSS.</para>
+<para><simplesect kind="note"><para>When <ref refid="mbedtls__config_8h_1a70fd7b97d5f11170546583f2095942a6" kindref="member">MBEDTLS_USE_PSA_CRYPTO</ref> is enabled and <ref refid="mbedtls__config_8h_1a035227f1c3c88103fdb13621e9a5df51" kindref="member">MBEDTLS_RSA_C</ref> is disabled, this must be equal to the <computeroutput>md_alg</computeroutput> argument passed to <ref refid="pk_8h_1a81f0c5e40b839f5eca676c2c2752036f" kindref="member">mbedtls_pk_verify_ext()</ref>. In a future version of the library, this constraint may apply whenever <ref refid="mbedtls__config_8h_1a70fd7b97d5f11170546583f2095942a6" kindref="member">MBEDTLS_USE_PSA_CRYPTO</ref> is enabled regardless of the status of <ref refid="mbedtls__config_8h_1a035227f1c3c88103fdb13621e9a5df51" kindref="member">MBEDTLS_RSA_C</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" line="97" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pk__rsassa__pss__options_1a7d820886502754155458ba3d846f577d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_pk_rsassa_pss_options::expected_salt_len</definition>
+        <argsstring></argsstring>
+        <name>expected_salt_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The expected length of the salt, in bytes. This may be <ref refid="rsa_8h_1ab7aa2f548235465c0f384a13617f184f" kindref="member">MBEDTLS_RSA_SALT_LEN_ANY</ref> to accept any salt length.</para>
+<para><simplesect kind="note"><para>When <ref refid="mbedtls__config_8h_1a70fd7b97d5f11170546583f2095942a6" kindref="member">MBEDTLS_USE_PSA_CRYPTO</ref> is enabled, only <ref refid="rsa_8h_1ab7aa2f548235465c0f384a13617f184f" kindref="member">MBEDTLS_RSA_SALT_LEN_ANY</ref> is valid. Any other value may be ignored (allowing any salt length). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" line="106" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Options for RSASSA-PSS signature verification. See <computeroutput><ref refid="rsa_8h_1a17fd9fadff17a5a69c6f2469e3ecda92" kindref="member">mbedtls_rsa_rsassa_pss_verify_ext()</ref></computeroutput> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" line="88" column="44" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" bodystart="88" bodyend="108"/>
+    <listofallmembers>
+      <member refid="structmbedtls__pk__rsassa__pss__options_1a7d820886502754155458ba3d846f577d" prot="public" virt="non-virtual"><scope>mbedtls_pk_rsassa_pss_options</scope><name>expected_salt_len</name></member>
+      <member refid="structmbedtls__pk__rsassa__pss__options_1ab5ca5b88636ad6db1af4a67ddf748606" prot="public" virt="non-virtual"><scope>mbedtls_pk_rsassa_pss_options</scope><name>mgf1_hash_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

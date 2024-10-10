@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__drv__se__aead__t" kind="struct" language="C++" prot="public">
+    <compoundname>psa_drv_se_aead_t</compoundname>
+    <includes refid="crypto__se__driver_8h" local="no">crypto_se_driver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__drv__se__aead__t_1a2992811373ce8cf1b83612737d14d943" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__aead_1ga0acef6488a7dddbc707467907dec1842" kindref="member">psa_drv_se_aead_encrypt_t</ref></type>
+        <definition>psa_drv_se_aead_encrypt_t psa_drv_se_aead_t::private_p_encrypt</definition>
+        <argsstring></argsstring>
+        <name>private_p_encrypt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs the AEAD encrypt operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="790" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="790" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__aead__t_1ad4b2c76a5a954d35f7ba8b435056bbeb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__aead_1gab517338cb0541c9e36fbcea713622104" kindref="member">psa_drv_se_aead_decrypt_t</ref></type>
+        <definition>psa_drv_se_aead_decrypt_t psa_drv_se_aead_t::private_p_decrypt</definition>
+        <argsstring></argsstring>
+        <name>private_p_decrypt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs the AEAD decrypt operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="792" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="792" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A struct containing all of the function pointers needed to implement secure element Authenticated Encryption with Additional Data operations. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>PSA Crypto API implementations should populate instances of the table as appropriate upon startup.</para>
+<para>If one of the functions is not implemented, it should be set to NULL. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>psa_drv_se_aead_t</label>
+        <link refid="structpsa__drv__se__aead__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_p_encrypt</edgelabel>
+          <edgelabel>private_p_decrypt</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>psa_drv_se_context_t</label>
+        <link refid="structpsa__drv__se__context__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="788" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="788" bodyend="793"/>
+    <listofallmembers>
+      <member refid="structpsa__drv__se__aead__t_1ad4b2c76a5a954d35f7ba8b435056bbeb" prot="public" virt="non-virtual"><scope>psa_drv_se_aead_t</scope><name>private_p_decrypt</name></member>
+      <member refid="structpsa__drv__se__aead__t_1a2992811373ce8cf1b83612737d14d943" prot="public" virt="non-virtual"><scope>psa_drv_se_aead_t</scope><name>private_p_encrypt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

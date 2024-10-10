@@ -1,0 +1,11 @@
+<map id="test_tls_crypt_v2_context" name="test_tls_crypt_v2_context">
+<area shape="rect" id="node1" title=" " alt="" coords="122,228,294,255"/>
+<area shape="rect" id="node2" href="$structkey__ctx__bi.html" title="Container for two sets of OpenSSL cipher and/or HMAC contexts for both sending and receiving directio..." alt="" coords="5,109,91,136"/>
+<area shape="rect" id="node3" href="$structkey__ctx.html" title="Container for one set of cipher and/or HMAC contexts." alt="" coords="14,5,82,32"/>
+<area shape="rect" id="node4" href="$structkey2.html" title="Container for bidirectional cipher and HMAC key material." alt="" coords="129,109,180,136"/>
+<area shape="rect" id="node5" href="$structkey.html" title="Container for unidirectional cipher and HMAC key material." alt="" coords="133,5,176,32"/>
+<area shape="rect" id="node6" href="$structgc__arena.html" title="Garbage collection arena used to keep track of dynamically allocated memory." alt="" coords="223,109,297,136"/>
+<area shape="rect" id="node7" href="$structgc__entry__special.html" title="Garbage collection entry for a specially allocated structure that needs a custom free function to be ..." alt="" coords="200,5,320,32"/>
+<area shape="rect" id="node8" href="$structgc__entry.html" title="Garbage collection entry for one dynamically allocated block of memory." alt="" coords="397,5,469,32"/>
+<area shape="rect" id="node9" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="322,109,377,136"/>
+</map>

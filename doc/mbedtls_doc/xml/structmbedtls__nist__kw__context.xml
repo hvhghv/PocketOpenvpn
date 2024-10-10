@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__nist__kw__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_nist_kw_context</compoundname>
+    <includes refid="nist__kw_8h" local="no">nist_kw.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__nist__kw__context_1aa020016d3d65014ab6baa0d8c8e9c1f3" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref></type>
+        <definition>mbedtls_cipher_context_t mbedtls_nist_kw_context::private_cipher_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_cipher_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cipher context used. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="52" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The key wrapping context-type definition. The key wrapping context is passed to the APIs called. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>The definition of this type may change in future library versions. Don&apos;t make any assumptions on this context! </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_nist_kw_context</label>
+        <link refid="structmbedtls__nist__kw__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_cipher_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="51" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" bodystart="51" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structmbedtls__nist__kw__context_1aa020016d3d65014ab6baa0d8c8e9c1f3" prot="public" virt="non-virtual"><scope>mbedtls_nist_kw_context</scope><name>private_cipher_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__rsa__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_rsa_context</compoundname>
+    <includes refid="rsa_8h" local="no">rsa.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a70e2407beb0909aa80f48c3baa136805" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_rsa_context::private_ver</definition>
+        <argsstring></argsstring>
+        <name>private_ver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved for internal purposes. Do not set this field in application code. Its meaning might change without notice. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="86" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a53fb5d508cfcf15118f2e81cd6a62813" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_rsa_context::private_len</definition>
+        <argsstring></argsstring>
+        <name>private_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The size of <computeroutput>N</computeroutput> in Bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="90" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1afffbd9d680ca49a5ad69f61a8bbb0a44" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_N</definition>
+        <argsstring></argsstring>
+        <name>private_N</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The public modulus. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="92" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1ac3560b76aa9fda7164850c5e0bf8ddb2" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_E</definition>
+        <argsstring></argsstring>
+        <name>private_E</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The public exponent. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="93" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1aeecb6175bc85db0ef7b7c5c01958caad" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_D</definition>
+        <argsstring></argsstring>
+        <name>private_D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The private exponent. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="95" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a40d6857fed7e974189dc87bb435b12ac" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_P</definition>
+        <argsstring></argsstring>
+        <name>private_P</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The first prime factor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="96" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1abd11befa755eea49ead6f17c4daa4829" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_Q</definition>
+        <argsstring></argsstring>
+        <name>private_Q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The second prime factor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="97" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1ab9c941420782904d355f5a9621da8d79" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_DP</definition>
+        <argsstring></argsstring>
+        <name>private_DP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>D % (P - 1)</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="99" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a29809490ed6bf0058dd16f6e3031b196" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_DQ</definition>
+        <argsstring></argsstring>
+        <name>private_DQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>D % (Q - 1)</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="100" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a1c9c96f32efd84fd635a63532c235603" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_QP</definition>
+        <argsstring></argsstring>
+        <name>private_QP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>1 / (Q % P)</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="101" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a5cf94d11521c5e3df9ddd0a2ffd3388d" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_RN</definition>
+        <argsstring></argsstring>
+        <name>private_RN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>cached <computeroutput>R^2 mod N</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="103" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a9db558d70d04128fbeb7406ce115f741" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_RP</definition>
+        <argsstring></argsstring>
+        <name>private_RP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>cached <computeroutput>R^2 mod P</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="105" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1adbf2218c648ced9076bee59a5bd66611" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_RQ</definition>
+        <argsstring></argsstring>
+        <name>private_RQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>cached <computeroutput>R^2 mod Q</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="106" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1aa0ac9e059cfaf1966c04196d3c2ba710" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_Vi</definition>
+        <argsstring></argsstring>
+        <name>private_Vi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cached blinding value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="108" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a77445485729e94c6467c449eb2faac1a" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_rsa_context::private_Vf</definition>
+        <argsstring></argsstring>
+        <name>private_Vf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cached un-blinding value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="109" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a95482981a8945a1036e82e59d29016bc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_rsa_context::private_padding</definition>
+        <argsstring></argsstring>
+        <name>private_padding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects padding mode: <ref refid="rsa_8h_1a426a0d77233000f50dcce6f27d5ddd05" kindref="member">MBEDTLS_RSA_PKCS_V15</ref> for 1.5 padding and <ref refid="rsa_8h_1a903f0c378a6303efdbc1f53b18603bb1" kindref="member">MBEDTLS_RSA_PKCS_V21</ref> for OAEP or PSS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="111" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a0e921c39133ce8e2263600be285773b1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_rsa_context::private_hash_id</definition>
+        <argsstring></argsstring>
+        <name>private_hash_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hash identifier of mbedtls_md_type_t type, as specified in <ref refid="md_8h" kindref="compound">md.h</ref> for use in the MGF mask generating function used in the EME-OAEP and EMSA-PSS encodings. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="114" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__rsa__context_1a2a3656ee95ef11bffc81ce32cab72276" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>mbedtls_threading_mutex_t mbedtls_rsa_context::private_mutex</definition>
+        <argsstring></argsstring>
+        <name>private_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thread-safety mutex. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="120" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The RSA context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="2">
+        <label>mbedtls_threading_mutex_t</label>
+        <link refid="structmbedtls__threading__mutex__t"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_rsa_context</label>
+        <link refid="structmbedtls__rsa__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_mutex</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_P</edgelabel>
+          <edgelabel>private_N</edgelabel>
+          <edgelabel>private_Q</edgelabel>
+          <edgelabel>private_DP</edgelabel>
+          <edgelabel>private_DQ</edgelabel>
+          <edgelabel>private_RN</edgelabel>
+          <edgelabel>private_D</edgelabel>
+          <edgelabel>private_RP</edgelabel>
+          <edgelabel>private_E</edgelabel>
+          <edgelabel>private_Vf</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" line="85" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/rsa.h" bodystart="85" bodyend="122"/>
+    <listofallmembers>
+      <member refid="structmbedtls__rsa__context_1aeecb6175bc85db0ef7b7c5c01958caad" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_D</name></member>
+      <member refid="structmbedtls__rsa__context_1ab9c941420782904d355f5a9621da8d79" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_DP</name></member>
+      <member refid="structmbedtls__rsa__context_1a29809490ed6bf0058dd16f6e3031b196" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_DQ</name></member>
+      <member refid="structmbedtls__rsa__context_1ac3560b76aa9fda7164850c5e0bf8ddb2" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_E</name></member>
+      <member refid="structmbedtls__rsa__context_1a0e921c39133ce8e2263600be285773b1" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_hash_id</name></member>
+      <member refid="structmbedtls__rsa__context_1a53fb5d508cfcf15118f2e81cd6a62813" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_len</name></member>
+      <member refid="structmbedtls__rsa__context_1a2a3656ee95ef11bffc81ce32cab72276" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_mutex</name></member>
+      <member refid="structmbedtls__rsa__context_1afffbd9d680ca49a5ad69f61a8bbb0a44" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_N</name></member>
+      <member refid="structmbedtls__rsa__context_1a40d6857fed7e974189dc87bb435b12ac" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_P</name></member>
+      <member refid="structmbedtls__rsa__context_1a95482981a8945a1036e82e59d29016bc" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_padding</name></member>
+      <member refid="structmbedtls__rsa__context_1abd11befa755eea49ead6f17c4daa4829" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_Q</name></member>
+      <member refid="structmbedtls__rsa__context_1a1c9c96f32efd84fd635a63532c235603" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_QP</name></member>
+      <member refid="structmbedtls__rsa__context_1a5cf94d11521c5e3df9ddd0a2ffd3388d" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_RN</name></member>
+      <member refid="structmbedtls__rsa__context_1a9db558d70d04128fbeb7406ce115f741" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_RP</name></member>
+      <member refid="structmbedtls__rsa__context_1adbf2218c648ced9076bee59a5bd66611" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_RQ</name></member>
+      <member refid="structmbedtls__rsa__context_1a70e2407beb0909aa80f48c3baa136805" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_ver</name></member>
+      <member refid="structmbedtls__rsa__context_1a77445485729e94c6467c449eb2faac1a" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_Vf</name></member>
+      <member refid="structmbedtls__rsa__context_1aa0ac9e059cfaf1966c04196d3c2ba710" prot="public" virt="non-virtual"><scope>mbedtls_rsa_context</scope><name>private_Vi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

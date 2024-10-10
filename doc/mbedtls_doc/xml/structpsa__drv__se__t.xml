@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__drv__se__t" kind="struct" language="C++" prot="public">
+    <compoundname>psa_drv_se_t</compoundname>
+    <includes refid="crypto__se__driver_8h" local="no">crypto_se_driver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__drv__se__t_1a0b7dcdeaa115d6198f633af77c81a623" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_drv_se_t::private_hal_version</definition>
+        <argsstring></argsstring>
+        <name>private_hal_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The version of the driver HAL that this driver implements. This is a protection against loading driver binaries built against a different version of this specification. Use <ref refid="group__se__registration_1ga65e25a718c3e95893522ae882d4ea826" kindref="member">PSA_DRV_SE_HAL_VERSION</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1284" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__t_1a8105019970db18ca40c76808f64b2d2c" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_drv_se_t::private_persistent_data_size</definition>
+        <argsstring></argsstring>
+        <name>private_persistent_data_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The size of the driver&apos;s persistent data in bytes.</para>
+<para>This can be 0 if the driver does not need persistent data.</para>
+<para>See the documentation of psa_drv_se_context_t::persistent_data for more information about why and how a driver can use persistent data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1294" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__t_1a6f8ed8576d52acee34c58b36583cc501" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__init_1ga61d926bb163ea2aae3c6e27c19ebe58c" kindref="member">psa_drv_se_init_t</ref></type>
+        <definition>psa_drv_se_init_t psa_drv_se_t::private_p_init</definition>
+        <argsstring></argsstring>
+        <name>private_p_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The driver initialization function.</para>
+<para>This function is called once during the initialization of the PSA Cryptography subsystem, before any other function of the driver is called. If this function returns a failure status, the driver will be unusable, at least until the next system reset.</para>
+<para>If this field is <computeroutput>NULL</computeroutput>, it is equivalent to a function that does nothing and returns <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1306" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__t_1a7cefb1bff884aa46d19c1901248ae76c" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structpsa__drv__se__key__management__t" kindref="compound">psa_drv_se_key_management_t</ref> *</type>
+        <definition>const psa_drv_se_key_management_t* psa_drv_se_t::private_key_management</definition>
+        <argsstring></argsstring>
+        <name>private_key_management</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1308" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__t_1aede4884f72e812920cb910cca78776e2" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structpsa__drv__se__mac__t" kindref="compound">psa_drv_se_mac_t</ref> *</type>
+        <definition>const psa_drv_se_mac_t* psa_drv_se_t::private_mac</definition>
+        <argsstring></argsstring>
+        <name>private_mac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1309" column="28" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__t_1a072fa1ee230dff89868754d0d9d0349d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structpsa__drv__se__cipher__t" kindref="compound">psa_drv_se_cipher_t</ref> *</type>
+        <definition>const psa_drv_se_cipher_t* psa_drv_se_t::private_cipher</definition>
+        <argsstring></argsstring>
+        <name>private_cipher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1310" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__t_1a61f4e232db4f185c40c1a9c013a048d2" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structpsa__drv__se__aead__t" kindref="compound">psa_drv_se_aead_t</ref> *</type>
+        <definition>const psa_drv_se_aead_t* psa_drv_se_t::private_aead</definition>
+        <argsstring></argsstring>
+        <name>private_aead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1311" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__t_1afbd4d3e7762d7e24fe475f9a8c4f6298" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structpsa__drv__se__asymmetric__t" kindref="compound">psa_drv_se_asymmetric_t</ref> *</type>
+        <definition>const psa_drv_se_asymmetric_t* psa_drv_se_t::private_asymmetric</definition>
+        <argsstring></argsstring>
+        <name>private_asymmetric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1312" column="35" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__t_1a2cd1ece81a7ec7f991aa78f0baf987a2" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structpsa__drv__se__key__derivation__t" kindref="compound">psa_drv_se_key_derivation_t</ref> *</type>
+        <definition>const psa_drv_se_key_derivation_t* psa_drv_se_t::private_derivation</definition>
+        <argsstring></argsstring>
+        <name>private_derivation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1313" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1313" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A structure containing pointers to all the entry points of a secure element driver.</para>
+<para>Future versions of this specification may add extra substructures at the end of this structure. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>psa_drv_se_aead_t</label>
+        <link refid="structpsa__drv__se__aead__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_p_encrypt</edgelabel>
+          <edgelabel>private_p_decrypt</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>psa_drv_se_context_t</label>
+        <link refid="structpsa__drv__se__context__t"/>
+      </node>
+      <node id="1">
+        <label>psa_drv_se_t</label>
+        <link refid="structpsa__drv__se__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_derivation</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_key_management</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_p_init</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_aead</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>private_mac</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_cipher</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>private_asymmetric</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>psa_drv_se_key_derivation_t</label>
+        <link refid="structpsa__drv__se__key__derivation__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_p_setup</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>psa_drv_se_key_management_t</label>
+        <link refid="structpsa__drv__se__key__management__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_p_destroy</edgelabel>
+          <edgelabel>private_p_validate_slot_number</edgelabel>
+          <edgelabel>private_p_generate</edgelabel>
+          <edgelabel>private_p_allocate</edgelabel>
+          <edgelabel>private_p_export</edgelabel>
+          <edgelabel>private_p_export_public</edgelabel>
+          <edgelabel>private_p_import</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>psa_drv_se_mac_t</label>
+        <link refid="structpsa__drv__se__mac__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_p_mac_verify</edgelabel>
+          <edgelabel>private_p_setup</edgelabel>
+          <edgelabel>private_p_mac</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa_drv_se_asymmetric_t</label>
+        <link refid="structpsa__drv__se__asymmetric__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_p_encrypt</edgelabel>
+          <edgelabel>private_p_decrypt</edgelabel>
+          <edgelabel>private_p_sign</edgelabel>
+          <edgelabel>private_p_verify</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>psa_drv_se_cipher_t</label>
+        <link refid="structpsa__drv__se__cipher__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_p_ecb</edgelabel>
+          <edgelabel>private_p_setup</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1278" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1278" bodyend="1314"/>
+    <listofallmembers>
+      <member refid="structpsa__drv__se__t_1a61f4e232db4f185c40c1a9c013a048d2" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_aead</name></member>
+      <member refid="structpsa__drv__se__t_1afbd4d3e7762d7e24fe475f9a8c4f6298" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_asymmetric</name></member>
+      <member refid="structpsa__drv__se__t_1a072fa1ee230dff89868754d0d9d0349d" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_cipher</name></member>
+      <member refid="structpsa__drv__se__t_1a2cd1ece81a7ec7f991aa78f0baf987a2" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_derivation</name></member>
+      <member refid="structpsa__drv__se__t_1a0b7dcdeaa115d6198f633af77c81a623" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_hal_version</name></member>
+      <member refid="structpsa__drv__se__t_1a7cefb1bff884aa46d19c1901248ae76c" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_key_management</name></member>
+      <member refid="structpsa__drv__se__t_1aede4884f72e812920cb910cca78776e2" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_mac</name></member>
+      <member refid="structpsa__drv__se__t_1a6f8ed8576d52acee34c58b36583cc501" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_p_init</name></member>
+      <member refid="structpsa__drv__se__t_1a8105019970db18ca40c76808f64b2d2c" prot="public" virt="non-virtual"><scope>psa_drv_se_t</scope><name>private_persistent_data_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

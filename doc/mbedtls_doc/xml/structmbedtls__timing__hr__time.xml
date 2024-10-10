@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__timing__hr__time" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_timing_hr_time</compoundname>
+    <includes refid="timing_8h" local="no">timing.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__timing__hr__time_1a168333fb51f13cfc27fdda56c01a3688" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_timing_hr_time::private_opaque[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>private_opaque</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" line="30" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>timer structure </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" line="29" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" bodystart="29" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structmbedtls__timing__hr__time_1a168333fb51f13cfc27fdda56c01a3688" prot="public" virt="non-virtual"><scope>mbedtls_timing_hr_time</scope><name>private_opaque</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

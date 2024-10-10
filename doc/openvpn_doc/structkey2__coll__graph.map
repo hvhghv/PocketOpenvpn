@@ -1,0 +1,4 @@
+<map id="key2" name="key2">
+<area shape="rect" id="node1" title="Container for bidirectional cipher and HMAC key material." alt="" coords="5,95,56,121"/>
+<area shape="rect" id="node2" href="$structkey.html" title="Container for unidirectional cipher and HMAC key material." alt="" coords="9,5,52,32"/>
+</map>

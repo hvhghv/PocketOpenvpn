@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__poly1305__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_poly1305_context</compoundname>
+    <includes refid="poly1305_8h" local="no">poly1305.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__poly1305__context_1a6e9d3b21b1da17e5824f34de5f7cc56b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_poly1305_context::private_r[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>private_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" line="39" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__poly1305__context_1ad66cbbb30893fcd675462c33cef3faaf" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_poly1305_context::private_s[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>private_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value for &apos;r&apos; (low 128 bits of the key). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" line="40" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__poly1305__context_1a513f0dd401192d8406f27b4cdd2c2e44" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_poly1305_context::private_acc[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>private_acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value for &apos;s&apos; (high 128 bits of the key). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" line="41" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__poly1305__context_1abfd4a348e920ae7f2f4f314a7bb759ec" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_poly1305_context::private_queue[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The accumulator number. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" line="42" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__poly1305__context_1a0e5d274155bc63a9646b7364e67717c9" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_poly1305_context::private_queue_len</definition>
+        <argsstring></argsstring>
+        <name>private_queue_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current partial block of data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" line="43" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" line="38" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/poly1305.h" bodystart="38" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structmbedtls__poly1305__context_1a513f0dd401192d8406f27b4cdd2c2e44" prot="public" virt="non-virtual"><scope>mbedtls_poly1305_context</scope><name>private_acc</name></member>
+      <member refid="structmbedtls__poly1305__context_1abfd4a348e920ae7f2f4f314a7bb759ec" prot="public" virt="non-virtual"><scope>mbedtls_poly1305_context</scope><name>private_queue</name></member>
+      <member refid="structmbedtls__poly1305__context_1a0e5d274155bc63a9646b7364e67717c9" prot="public" virt="non-virtual"><scope>mbedtls_poly1305_context</scope><name>private_queue_len</name></member>
+      <member refid="structmbedtls__poly1305__context_1a6e9d3b21b1da17e5824f34de5f7cc56b" prot="public" virt="non-virtual"><scope>mbedtls_poly1305_context</scope><name>private_r</name></member>
+      <member refid="structmbedtls__poly1305__context_1ad66cbbb30893fcd675462c33cef3faaf" prot="public" virt="non-virtual"><scope>mbedtls_poly1305_context</scope><name>private_s</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

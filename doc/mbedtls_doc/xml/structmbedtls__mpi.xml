@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__mpi" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_mpi</compoundname>
+    <includes refid="bignum_8h" local="no">bignum.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__mpi_1a7597ed1635cebc8fad34443cdef163bc" prot="public" static="no" mutable="no">
+        <type><ref refid="bignum_8h_1ab008e969fa0e7656b594735c37f2eaf4" kindref="member">mbedtls_mpi_uint</ref> *</type>
+        <definition>mbedtls_mpi_uint* mbedtls_mpi::private_p</definition>
+        <argsstring></argsstring>
+        <name>private_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to limbs.</para>
+<para>This may be <computeroutput>NULL</computeroutput> if <computeroutput>n</computeroutput> is 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/bignum.h" line="212" column="22" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/bignum.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__mpi_1a9dd5aa4e2912cd31a4e329b7fe910c93" prot="public" static="no" mutable="no">
+        <type>signed short</type>
+        <definition>signed short mbedtls_mpi::private_s</definition>
+        <argsstring></argsstring>
+        <name>private_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sign: -1 if the mpi is negative, 1 otherwise.</para>
+<para>The number 0 must be represented with <computeroutput>s = +1</computeroutput>. Although many library functions treat all-limbs-zero as equivalent to a valid representation of 0 regardless of the sign bit, there are exceptions, so bignum functions and external callers must always set <computeroutput>s</computeroutput> to +1 for the number zero.</para>
+<para>Note that this implies that calloc() or <computeroutput>... = {0}</computeroutput> does not create a valid MPI representation. You must call <ref refid="bignum_8h_1a99c7cca612b47dc4f3b96905c4f9d69e" kindref="member">mbedtls_mpi_init()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/bignum.h" line="225" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/bignum.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__mpi_1ac90efc6ffef8518d8da977a74ea72a4c" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short mbedtls_mpi::private_n</definition>
+        <argsstring></argsstring>
+        <name>private_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total number of limbs in <computeroutput>p</computeroutput>. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/bignum.h" line="228" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/bignum.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MPI structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/bignum.h" line="207" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/bignum.h" bodystart="207" bodyend="238"/>
+    <listofallmembers>
+      <member refid="structmbedtls__mpi_1ac90efc6ffef8518d8da977a74ea72a4c" prot="public" virt="non-virtual"><scope>mbedtls_mpi</scope><name>private_n</name></member>
+      <member refid="structmbedtls__mpi_1a7597ed1635cebc8fad34443cdef163bc" prot="public" virt="non-virtual"><scope>mbedtls_mpi</scope><name>private_p</name></member>
+      <member refid="structmbedtls__mpi_1a9dd5aa4e2912cd31a4e329b7fe910c93" prot="public" virt="non-virtual"><scope>mbedtls_mpi</scope><name>private_s</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

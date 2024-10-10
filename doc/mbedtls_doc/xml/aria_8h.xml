@@ -1,0 +1,989 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="aria_8h" kind="file" language="C++">
+    <compoundname>aria.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes refid="platform__util_8h" local="yes">mbedtls/platform_util.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="1">
+        <label>aria.h</label>
+        <link refid="aria_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="21">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="23">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="24">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__aria__context" prot="public">mbedtls_aria_context</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="aria_8h_1aeb7b90c15d09660198bd05c633782bc4" prot="public" static="no">
+        <name>MBEDTLS_ARIA_ENCRYPT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ARIA encryption. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="28" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="aria_8h_1a495b14a870b87e92e226a0928faf2949" prot="public" static="no">
+        <name>MBEDTLS_ARIA_DECRYPT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ARIA decryption. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="29" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="aria_8h_1abb3592068f066858cd2c800af09e7135" prot="public" static="no">
+        <name>MBEDTLS_ARIA_BLOCKSIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ARIA block size in bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="31" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="aria_8h_1af8466fbce92ce569b19c9179714047fd" prot="public" static="no">
+        <name>MBEDTLS_ARIA_MAX_ROUNDS</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum number of rounds in ARIA. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="32" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="aria_8h_1a99df895b334e2b642c3bf6398925f7ba" prot="public" static="no">
+        <name>MBEDTLS_ARIA_MAX_KEYSIZE</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum size of an ARIA key in bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="33" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="aria_8h_1afdd3c6edaf390aeb9c9e02418bae7cae" prot="public" static="no">
+        <name>MBEDTLS_ERR_ARIA_BAD_INPUT_DATA</name>
+        <initializer>-0x005C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bad input data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="36" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="aria_8h_1a67c96115557e9e678ae5d5d9a49cdc0d" prot="public" static="no">
+        <name>MBEDTLS_ERR_ARIA_INVALID_INPUT_LENGTH</name>
+        <initializer>-0x005E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invalid data input length. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="39" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="aria_8h_1a0cd1b80113e32fbc5f821d582f4231bc" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref></type>
+        <definition>typedef struct mbedtls_aria_context mbedtls_aria_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_aria_context</name>
+        <briefdescription>
+<para>The ARIA context-type definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="57" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="aria_8h_1a5a9b1de8210aee25e3620826cf0f5ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_aria_init</definition>
+        <argsstring>(mbedtls_aria_context *ctx)</argsstring>
+        <name>mbedtls_aria_init</name>
+        <param>
+          <type><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the specified ARIA context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>            It must be the first API called before using
+            the context.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ARIA context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="71" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="71" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="aria_8h_1ae7a728eeb2a8f9fa3140b12591b9c18f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_aria_free</definition>
+        <argsstring>(mbedtls_aria_context *ctx)</argsstring>
+        <name>mbedtls_aria_free</name>
+        <param>
+          <type><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function releases and clears the specified ARIA context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ARIA context to clear. This may be <computeroutput>NULL</computeroutput>, in which case this function returns immediately. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized ARIA context. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="80" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="80" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="aria_8h_1af71f675f037c982596ab6fa35acc9f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_aria_setkey_enc</definition>
+        <argsstring>(mbedtls_aria_context *ctx, const unsigned char *key, unsigned int keybits)</argsstring>
+        <name>mbedtls_aria_setkey_enc</name>
+        <param>
+          <type><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>keybits</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the encryption key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ARIA context to which the key should be bound. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encryption key. This must be a readable buffer of size <computeroutput>keybits</computeroutput> Bits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keybits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of <computeroutput>key</computeroutput> in Bits. Valid options are: <itemizedlist>
+<listitem>
+<para>128 bits </para>
+</listitem>
+<listitem>
+<para>192 bits </para>
+</listitem>
+<listitem>
+<para>256 bits</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="97" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="97" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="aria_8h_1a9f3a3afb42432832a6becdaba6b9c38e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_aria_setkey_dec</definition>
+        <argsstring>(mbedtls_aria_context *ctx, const unsigned char *key, unsigned int keybits)</argsstring>
+        <name>mbedtls_aria_setkey_dec</name>
+        <param>
+          <type><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>keybits</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the decryption key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ARIA context to which the key should be bound. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decryption key. This must be a readable buffer of size <computeroutput>keybits</computeroutput> Bits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keybits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of data passed. Valid options are: <itemizedlist>
+<listitem>
+<para>128 bits </para>
+</listitem>
+<listitem>
+<para>192 bits </para>
+</listitem>
+<listitem>
+<para>256 bits</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="116" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="116" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="aria_8h_1acbb80a47a128405cabf6ec0e8b4f408e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_aria_crypt_ecb</definition>
+        <argsstring>(mbedtls_aria_context *ctx, const unsigned char input[MBEDTLS_ARIA_BLOCKSIZE], unsigned char output[MBEDTLS_ARIA_BLOCKSIZE])</argsstring>
+        <name>mbedtls_aria_crypt_ecb</name>
+        <param>
+          <type><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>input</declname>
+          <array>[MBEDTLS_ARIA_BLOCKSIZE]</array>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>output</declname>
+          <array>[MBEDTLS_ARIA_BLOCKSIZE]</array>
+        </param>
+        <briefdescription>
+<para>This function performs an ARIA single-block encryption or decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It performs encryption or decryption (depending on whether the key was set for encryption on decryption) on the input data buffer defined in the <computeroutput>input</computeroutput> parameter.</para>
+<para><ref refid="aria_8h_1a5a9b1de8210aee25e3620826cf0f5ed9" kindref="member">mbedtls_aria_init()</ref>, and either <ref refid="aria_8h_1af71f675f037c982596ab6fa35acc9f6f" kindref="member">mbedtls_aria_setkey_enc()</ref> or <ref refid="aria_8h_1a9f3a3afb42432832a6becdaba6b9c38e" kindref="member">mbedtls_aria_setkey_dec()</ref> must be called before the first call to this API with the same context.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ARIA context to use for encryption or decryption. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 16-Byte buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 16-Byte buffer holding the output data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="140" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="140" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="aria_8h_1a230d033d5d7c35a36b44e98fde00d003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_aria_crypt_cbc</definition>
+        <argsstring>(mbedtls_aria_context *ctx, int mode, size_t length, unsigned char iv[MBEDTLS_ARIA_BLOCKSIZE], const unsigned char *input, unsigned char *output)</argsstring>
+        <name>mbedtls_aria_crypt_cbc</name>
+        <param>
+          <type><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>iv</declname>
+          <array>[MBEDTLS_ARIA_BLOCKSIZE]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function performs an ARIA-CBC encryption or decryption operation on full blocks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It performs the operation defined in the <computeroutput>mode</computeroutput> parameter (encrypt/decrypt), on the input data buffer defined in the <computeroutput>input</computeroutput> parameter.</para>
+<para>It can be called as many times as needed, until all the input data is processed. <ref refid="aria_8h_1a5a9b1de8210aee25e3620826cf0f5ed9" kindref="member">mbedtls_aria_init()</ref>, and either <ref refid="aria_8h_1af71f675f037c982596ab6fa35acc9f6f" kindref="member">mbedtls_aria_setkey_enc()</ref> or <ref refid="aria_8h_1a9f3a3afb42432832a6becdaba6b9c38e" kindref="member">mbedtls_aria_setkey_dec()</ref> must be called before the first call to this API with the same context.</para>
+<para><simplesect kind="note"><para>This function operates on aligned blocks, that is, the input size must be a multiple of the ARIA block size of 16 Bytes.</para>
+</simplesect>
+<simplesect kind="note"><para>Upon exit, the content of the IV is updated so that you can call the same function again on the next block(s) of data and get the same result as if it was encrypted in one call. This allows a &quot;streaming&quot; usage. If you need to retain the contents of the IV, you should either save it manually or use the cipher module instead.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ARIA context to use for encryption or decryption. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode of operation. This must be either <ref refid="aria_8h_1aeb7b90c15d09660198bd05c633782bc4" kindref="member">MBEDTLS_ARIA_ENCRYPT</ref> for encryption, or <ref refid="aria_8h_1a495b14a870b87e92e226a0928faf2949" kindref="member">MBEDTLS_ARIA_DECRYPT</ref> for decryption. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. This must be a multiple of the block size (16 Bytes). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialization vector (updated after use). This must be a readable buffer of size 16 Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. This must be a readable buffer of length <computeroutput>length</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. This must be a writable buffer of length <computeroutput>length</computeroutput> Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="186" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="186" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="aria_8h_1a33e06eced63b5093a4b6a8e7d9f3b7f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_aria_crypt_cfb128</definition>
+        <argsstring>(mbedtls_aria_context *ctx, int mode, size_t length, size_t *iv_off, unsigned char iv[MBEDTLS_ARIA_BLOCKSIZE], const unsigned char *input, unsigned char *output)</argsstring>
+        <name>mbedtls_aria_crypt_cfb128</name>
+        <param>
+          <type><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>iv_off</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>iv</declname>
+          <array>[MBEDTLS_ARIA_BLOCKSIZE]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function performs an ARIA-CFB128 encryption or decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It performs the operation defined in the <computeroutput>mode</computeroutput> parameter (encrypt or decrypt), on the input data buffer defined in the <computeroutput>input</computeroutput> parameter.</para>
+<para>For CFB, you must set up the context with <ref refid="aria_8h_1af71f675f037c982596ab6fa35acc9f6f" kindref="member">mbedtls_aria_setkey_enc()</ref>, regardless of whether you are performing an encryption or decryption operation, that is, regardless of the <computeroutput>mode</computeroutput> parameter. This is because CFB mode uses the same key schedule for encryption and decryption.</para>
+<para><simplesect kind="note"><para>Upon exit, the content of the IV is updated so that you can call the same function again on the next block(s) of data and get the same result as if it was encrypted in one call. This allows a &quot;streaming&quot; usage. If you need to retain the contents of the IV, you must either save it manually or use the cipher module instead.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ARIA context to use for encryption or decryption. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode of operation. This must be either <ref refid="aria_8h_1aeb7b90c15d09660198bd05c633782bc4" kindref="member">MBEDTLS_ARIA_ENCRYPT</ref> for encryption, or <ref refid="aria_8h_1a495b14a870b87e92e226a0928faf2949" kindref="member">MBEDTLS_ARIA_DECRYPT</ref> for decryption. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data <computeroutput>input</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_off</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset in IV (updated after use). This must not be larger than 15. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization vector (updated after use). This must be a readable buffer of size 16 Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. This must be a readable buffer of length <computeroutput>length</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. This must be a writable buffer of length <computeroutput>length</computeroutput> Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="236" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="236" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="aria_8h_1affb39f79972b1bc9839d3ec0f1a6c1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_aria_crypt_ctr</definition>
+        <argsstring>(mbedtls_aria_context *ctx, size_t length, size_t *nc_off, unsigned char nonce_counter[MBEDTLS_ARIA_BLOCKSIZE], unsigned char stream_block[MBEDTLS_ARIA_BLOCKSIZE], const unsigned char *input, unsigned char *output)</argsstring>
+        <name>mbedtls_aria_crypt_ctr</name>
+        <param>
+          <type><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>nc_off</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>nonce_counter</declname>
+          <array>[MBEDTLS_ARIA_BLOCKSIZE]</array>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>stream_block</declname>
+          <array>[MBEDTLS_ARIA_BLOCKSIZE]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function performs an ARIA-CTR encryption or decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Due to the nature of CTR, you must use the same key schedule for both encryption and decryption operations. Therefore, you must use the context initialized with <ref refid="aria_8h_1af71f675f037c982596ab6fa35acc9f6f" kindref="member">mbedtls_aria_setkey_enc()</ref> for both <ref refid="aria_8h_1aeb7b90c15d09660198bd05c633782bc4" kindref="member">MBEDTLS_ARIA_ENCRYPT</ref> and <ref refid="aria_8h_1a495b14a870b87e92e226a0928faf2949" kindref="member">MBEDTLS_ARIA_DECRYPT</ref>.</para>
+<para><simplesect kind="warning"><para>You must never reuse a nonce value with the same key. Doing so would void the encryption for the two messages encrypted with the same nonce and key.</para>
+</simplesect>
+There are two common strategies for managing nonces with CTR:</para>
+<para><orderedlist>
+<listitem><para>You can handle everything as a single message processed over successive calls to this function. In that case, you want to set <computeroutput>nonce_counter</computeroutput> and <computeroutput>nc_off</computeroutput> to 0 for the first call, and then preserve the values of <computeroutput>nonce_counter</computeroutput>, <computeroutput>nc_off</computeroutput> and <computeroutput>stream_block</computeroutput> across calls to this function as they will be updated by this function.</para>
+</listitem></orderedlist>
+</para>
+<para>With this strategy, you must not encrypt more than 2**128 blocks of data with the same key.</para>
+<para><orderedlist>
+<listitem><para>You can encrypt separate messages by dividing the <computeroutput>nonce_counter</computeroutput> buffer in two areas: the first one used for a per-message nonce, handled by yourself, and the second one updated by this function internally.</para>
+</listitem></orderedlist>
+</para>
+<para>For example, you might reserve the first 12 bytes for the per-message nonce, and the last 4 bytes for internal use. In that case, before calling this function on a new message you need to set the first 12 bytes of <computeroutput>nonce_counter</computeroutput> to your chosen nonce value, the last 4 to 0, and <computeroutput>nc_off</computeroutput> to 0 (which will cause <computeroutput>stream_block</computeroutput> to be ignored). That way, you can encrypt at most 2**96 messages of up to 2**32 blocks each with the same key.</para>
+<para>The per-message nonce (or information sufficient to reconstruct it) needs to be communicated with the ciphertext and must be unique. The recommended way to ensure uniqueness is to use a message counter. An alternative is to generate random nonces, but this limits the number of messages that can be securely encrypted: for example, with 96-bit random nonces, you should not encrypt more than 2**32 messages with the same key.</para>
+<para>Note that for both strategies, sizes are measured in blocks and that an ARIA block is 16 bytes.</para>
+<para><simplesect kind="warning"><para>Upon return, <computeroutput>stream_block</computeroutput> contains sensitive data. Its content must not be written to insecure storage and should be securely discarded as soon as it&apos;s no longer needed.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ARIA context to use for encryption or decryption. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data <computeroutput>input</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nc_off</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset in Bytes in the current <computeroutput>stream_block</computeroutput>, for resuming within the current cipher stream. The offset pointer should be <computeroutput>0</computeroutput> at the start of a stream. This must not be larger than <computeroutput>15</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nonce_counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 128-bit nonce and counter. This must point to a read/write buffer of length <computeroutput>16</computeroutput> bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream_block</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The saved stream block for resuming. This must point to a read/write buffer of length <computeroutput>16</computeroutput> bytes. This is overwritten by the function. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. This must be a readable buffer of length <computeroutput>length</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. This must be a writable buffer of length <computeroutput>length</computeroutput> Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="319" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="319" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="aria_8h_1a04527bc1768952d802211df38153b7a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_aria_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_aria_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> on success, or <computeroutput>1</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" line="334" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h" declline="334" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ARIA block cipher. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>   The ARIA algorithm is a symmetric block cipher that can encrypt and
+   decrypt information. It is defined by the Korean Agency for
+   Technology and Standards (KATS) in &lt;em&gt;KS X 1213:2004&lt;/em&gt; (in
+   Korean, but see http://210.104.33.10/ARIA/index-e.html in English)
+   and also described by the IETF in &lt;em&gt;RFC 5794&lt;/em&gt;.
+</verbatim> </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ARIA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ARIA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__util_8h" kindref="compound">mbedtls/platform_util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="aria_8h_1aeb7b90c15d09660198bd05c633782bc4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ARIA_ENCRYPT<sp/><sp/><sp/><sp/><sp/>1<sp/></highlight></codeline>
+<codeline lineno="29" refid="aria_8h_1a495b14a870b87e92e226a0928faf2949" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ARIA_DECRYPT<sp/><sp/><sp/><sp/><sp/>0<sp/></highlight></codeline>
+<codeline lineno="31" refid="aria_8h_1abb3592068f066858cd2c800af09e7135" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ARIA_BLOCKSIZE<sp/><sp/><sp/>16<sp/></highlight></codeline>
+<codeline lineno="32" refid="aria_8h_1af8466fbce92ce569b19c9179714047fd" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ARIA_MAX_ROUNDS<sp/><sp/>16<sp/></highlight></codeline>
+<codeline lineno="33" refid="aria_8h_1a99df895b334e2b642c3bf6398925f7ba" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ARIA_MAX_KEYSIZE<sp/>32<sp/></highlight></codeline>
+<codeline lineno="36" refid="aria_8h_1afdd3c6edaf390aeb9c9e02418bae7cae" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ARIA_BAD_INPUT_DATA<sp/>-0x005C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="aria_8h_1a67c96115557e9e678ae5d5d9a49cdc0d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ARIA_INVALID_INPUT_LENGTH<sp/>-0x005E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_ARIA_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Regular<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structmbedtls__aria__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="53" refid="structmbedtls__aria__context_1ad830a6063f290fd0ac3551a0d4aa478f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(nr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="structmbedtls__aria__context_1a43daf7aade926d4560273661011aeddc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(rk)[<ref refid="aria_8h_1af8466fbce92ce569b19c9179714047fd" kindref="member">MBEDTLS_ARIA_MAX_ROUNDS</ref><sp/>+<sp/>1][<ref refid="aria_8h_1abb3592068f066858cd2c800af09e7135" kindref="member">MBEDTLS_ARIA_BLOCKSIZE</ref><sp/>/<sp/>4];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="aria_8h_1a0cd1b80113e32fbc5f821d582f4231bc" kindref="member">mbedtls_aria_context</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ARIA_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;aria_alt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ARIA_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1a5a9b1de8210aee25e3620826cf0f5ed9" kindref="member">mbedtls_aria_init</ref>(<ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1ae7a728eeb2a8f9fa3140b12591b9c18f" kindref="member">mbedtls_aria_free</ref>(<ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1af71f675f037c982596ab6fa35acc9f6f" kindref="member">mbedtls_aria_setkey_enc</ref>(<ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keybits);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1a9f3a3afb42432832a6becdaba6b9c38e" kindref="member">mbedtls_aria_setkey_dec</ref>(<ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keybits);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1acbb80a47a128405cabf6ec0e8b4f408e" kindref="member">mbedtls_aria_crypt_ecb</ref>(<ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>input[<ref refid="aria_8h_1abb3592068f066858cd2c800af09e7135" kindref="member">MBEDTLS_ARIA_BLOCKSIZE</ref>],</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>output[<ref refid="aria_8h_1abb3592068f066858cd2c800af09e7135" kindref="member">MBEDTLS_ARIA_BLOCKSIZE</ref>]);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_MODE_CBC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1a230d033d5d7c35a36b44e98fde00d003" kindref="member">mbedtls_aria_crypt_cbc</ref>(<ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>iv[<ref refid="aria_8h_1abb3592068f066858cd2c800af09e7135" kindref="member">MBEDTLS_ARIA_BLOCKSIZE</ref>],</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_MODE_CBC<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_MODE_CFB)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1a33e06eced63b5093a4b6a8e7d9f3b7f7" kindref="member">mbedtls_aria_crypt_cfb128</ref>(<ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*iv_off,</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>iv[<ref refid="aria_8h_1abb3592068f066858cd2c800af09e7135" kindref="member">MBEDTLS_ARIA_BLOCKSIZE</ref>],</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_MODE_CFB<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_MODE_CTR)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1affb39f79972b1bc9839d3ec0f1a6c1e7" kindref="member">mbedtls_aria_crypt_ctr</ref>(<ref refid="structmbedtls__aria__context" kindref="compound">mbedtls_aria_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*nc_off,</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>nonce_counter[<ref refid="aria_8h_1abb3592068f066858cd2c800af09e7135" kindref="member">MBEDTLS_ARIA_BLOCKSIZE</ref>],</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>stream_block[<ref refid="aria_8h_1abb3592068f066858cd2c800af09e7135" kindref="member">MBEDTLS_ARIA_BLOCKSIZE</ref>],</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_MODE_CTR<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="aria_8h_1a04527bc1768952d802211df38153b7a6" kindref="member">mbedtls_aria_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>aria.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/aria.h"/>
+  </compounddef>
+</doxygen>

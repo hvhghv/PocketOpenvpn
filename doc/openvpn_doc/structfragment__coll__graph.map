@@ -1,0 +1,4 @@
+<map id="fragment" name="fragment">
+<area shape="rect" id="node1" title="Structure for reassembling one incoming fragmented packet." alt="" coords="5,95,79,121"/>
+<area shape="rect" id="node2" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="15,5,69,32"/>
+</map>

@@ -1,0 +1,838 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="cmac_8h" kind="file" language="C++">
+    <compoundname>cmac.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="cipher_8h" local="yes">mbedtls/cipher.h</includes>
+    <includedby refid="crypto__builtin__composites_8h" local="yes">crypto_builtin_composites.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="23">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="1">
+        <label>cmac.h</label>
+        <link refid="cmac_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>mbedtls/cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="25">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="18">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="12">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="5">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="4">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="6">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="19">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="10">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="3">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>cmac.h</label>
+        <link refid="cmac_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__cmac__context__t" prot="public">mbedtls_cmac_context_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cmac_8h_1a5c776e34150416e27f28a6a03da68f0e" prot="public" static="no">
+        <name>MBEDTLS_AES_BLOCK_SIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="27" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cmac_8h_1aa884d76e1c27c156a788a4763f571c67" prot="public" static="no">
+        <name>MBEDTLS_DES3_BLOCK_SIZE</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="28" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cmac_8h_1ab6328898ae160ace67b3a2444856485e" prot="public" static="no">
+        <name>MBEDTLS_CMAC_MAX_BLOCK_SIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The longest block used by CMAC is that of AES. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="32" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cmac_8h_1accb84fb7db8f619f0fdf8ef1ee7552af" prot="public" static="no">
+        <name>MBEDTLS_CIPHER_BLKSIZE_MAX</name>
+        <initializer><ref refid="cipher_8h_1ab8f30dc90403204515f868c3b6196ffd" kindref="member">MBEDTLS_MAX_BLOCK_LENGTH</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The longest block supported by the cipher module.</para>
+<para><xrefsect id="deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>For the maximum block size of a cipher supported by the CMAC module, use <ref refid="cmac_8h_1ab6328898ae160ace67b3a2444856485e" kindref="member">MBEDTLS_CMAC_MAX_BLOCK_SIZE</ref>. For the maximum block size of a cipher supported by the cipher module, use <ref refid="cipher_8h_1ab8f30dc90403204515f868c3b6196ffd" kindref="member">MBEDTLS_MAX_BLOCK_LENGTH</ref>. </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="51" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cmac_8h_1ae5835d528bbfec2ae2452ba4617469b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_cipher_cmac_starts</definition>
+        <argsstring>(mbedtls_cipher_context_t *ctx, const unsigned char *key, size_t keybits)</argsstring>
+        <name>mbedtls_cipher_cmac_starts</name>
+        <param>
+          <type><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keybits</declname>
+        </param>
+        <briefdescription>
+<para>This function starts a new CMAC computation by setting the CMAC key, and preparing to authenticate the input data. It must be called with an initialized cipher context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Once this function has completed, data can be supplied to the CMAC computation by calling <ref refid="cmac_8h_1a14441964606982e0a664a8bb48bddad6" kindref="member">mbedtls_cipher_cmac_update()</ref>.</para>
+<para>To start a CMAC computation using the same key as a previous CMAC computation, use <ref refid="cmac_8h_1a9adc5b4b09b40d41bb6554c8ecfa755d" kindref="member">mbedtls_cipher_cmac_finish()</ref>.</para>
+<para><simplesect kind="note"><para>When the CMAC implementation is supplied by an alternate implementation (through #MBEDTLS_CMAC_ALT), some ciphers may not be supported by that implementation, and thus return an error. Alternate implementations must support AES-128 and AES-256, and may support AES-192 and 3DES.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher context used for the CMAC operation, initialized as one of the following types: MBEDTLS_CIPHER_AES_128_ECB, MBEDTLS_CIPHER_AES_192_ECB, MBEDTLS_CIPHER_AES_256_ECB, or MBEDTLS_CIPHER_DES_EDE3_ECB. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CMAC key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keybits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the CMAC key in bits. Must be supported by the cipher.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A cipher-specific error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="105" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" declline="105" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="cmac_8h_1a14441964606982e0a664a8bb48bddad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_cipher_cmac_update</definition>
+        <argsstring>(mbedtls_cipher_context_t *ctx, const unsigned char *input, size_t ilen)</argsstring>
+        <name>mbedtls_cipher_cmac_update</name>
+        <param>
+          <type><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <briefdescription>
+<para>This function feeds an input buffer into an ongoing CMAC computation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The CMAC computation must have previously been started by calling <ref refid="cmac_8h_1ae5835d528bbfec2ae2452ba4617469b8" kindref="member">mbedtls_cipher_cmac_starts()</ref> or <ref refid="cmac_8h_1a364af1a9ac845cbf21d7a64f1f43c71a" kindref="member">mbedtls_cipher_cmac_reset()</ref>.</para>
+<para>Call this function as many times as needed to input the data to be authenticated. Once all of the required data has been input, call <ref refid="cmac_8h_1a9adc5b4b09b40d41bb6554c8ecfa755d" kindref="member">mbedtls_cipher_cmac_finish()</ref> to obtain the result of the CMAC operation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher context used for the CMAC operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> if parameter verification fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="130" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" declline="130" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="cmac_8h_1a9adc5b4b09b40d41bb6554c8ecfa755d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_cipher_cmac_finish</definition>
+        <argsstring>(mbedtls_cipher_context_t *ctx, unsigned char *output)</argsstring>
+        <name>mbedtls_cipher_cmac_finish</name>
+        <param>
+          <type><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function finishes an ongoing CMAC operation, and writes the result to the output buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It should be followed either by <ref refid="cmac_8h_1a364af1a9ac845cbf21d7a64f1f43c71a" kindref="member">mbedtls_cipher_cmac_reset()</ref>, which starts another CMAC operation with the same key, or <ref refid="cipher_8h_1a903c4146b471207690988584b83854a9" kindref="member">mbedtls_cipher_free()</ref>, which clears the cipher context.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher context used for the CMAC operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output buffer for the CMAC checksum result.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> if parameter verification fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="149" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" declline="149" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="cmac_8h_1a364af1a9ac845cbf21d7a64f1f43c71a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_cipher_cmac_reset</definition>
+        <argsstring>(mbedtls_cipher_context_t *ctx)</argsstring>
+        <name>mbedtls_cipher_cmac_reset</name>
+        <param>
+          <type><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function starts a new CMAC operation with the same key as the previous one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It should be called after finishing the previous CMAC operation with <ref refid="cmac_8h_1a9adc5b4b09b40d41bb6554c8ecfa755d" kindref="member">mbedtls_cipher_cmac_finish()</ref>. After calling this function, call <ref refid="cmac_8h_1a14441964606982e0a664a8bb48bddad6" kindref="member">mbedtls_cipher_cmac_update()</ref> to supply the new CMAC operation with data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher context used for the CMAC operation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> if parameter verification fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="168" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" declline="168" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="cmac_8h_1af44bc935db9b27fbfe485936b5ad99ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_cipher_cmac</definition>
+        <argsstring>(const mbedtls_cipher_info_t *cipher_info, const unsigned char *key, size_t keylen, const unsigned char *input, size_t ilen, unsigned char *output)</argsstring>
+        <name>mbedtls_cipher_cmac</name>
+        <param>
+          <type>const <ref refid="structmbedtls__cipher__info__t" kindref="compound">mbedtls_cipher_info_t</ref> *</type>
+          <declname>cipher_info</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keylen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function calculates the full generic CMAC on the input buffer with the provided key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function allocates the context, performs the calculation, and frees the context.</para>
+<para>The CMAC result is calculated as output = generic CMAC(cmac key, input buffer).</para>
+<para><simplesect kind="note"><para>When the CMAC implementation is supplied by an alternate implementation (through #MBEDTLS_CMAC_ALT), some ciphers may not be supported by that implementation, and thus return an error. Alternate implementations must support AES-128 and AES-256, and may support AES-192 and 3DES.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cipher_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CMAC key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keylen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the CMAC key in bits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer for the generic CMAC result.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> if parameter verification fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="197" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" declline="197" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="cmac_8h_1ad9ef677703a2837a50382dcbcc544cc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_aes_cmac_prf_128</definition>
+        <argsstring>(const unsigned char *key, size_t key_len, const unsigned char *input, size_t in_len, unsigned char output[16])</argsstring>
+        <name>mbedtls_aes_cmac_prf_128</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>key_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>in_len</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>output</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>This function implements the AES-CMAC-PRF-128 pseudorandom function, as defined in <emphasis>RFC-4615: The Advanced Encryption Standard-Cipher-based Message Authentication Code-Pseudo-Random Function-128 (AES-CMAC-PRF-128) Algorithm for the Internet Key Exchange Protocol (IKE).</emphasis> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key length in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the generated 16 Bytes of pseudorandom output.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="220" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" declline="220" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="cmac_8h_1a615cf527d17950ce8bfc9207010aee19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_cmac_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_cmac_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>The CMAC checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>In case the CMAC routines are provided by an alternative implementation (i.e. #MBEDTLS_CMAC_ALT is defined), the checkup routine will succeed even if the implementation does not support the less widely used AES-192 or 3DES primitives. The self-test requires at least AES-128 and AES-256 to be supported by the underlying implementation.</para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="239" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" declline="239" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains CMAC definitions and functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The Cipher-based Message Authentication Code (CMAC) Mode for Authentication is defined in <emphasis>RFC-4493: The AES-CMAC Algorithm</emphasis>. It is supported with AES and DES. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_CMAC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CMAC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cipher_8h" kindref="compound">mbedtls/cipher.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="cmac_8h_1a5c776e34150416e27f28a6a03da68f0e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_AES_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="cmac_8h_1aa884d76e1c27c156a788a4763f571c67" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DES3_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>We<sp/>don&apos;t<sp/>support<sp/>Camellia<sp/>or<sp/>ARIA<sp/>in<sp/>this<sp/>module<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_AES_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="cmac_8h_1ab6328898ae160ace67b3a2444856485e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CMAC_MAX_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/>16<sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CMAC_MAX_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/>8<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_DEPRECATED_REMOVED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">/*<sp/>Before<sp/>Mbed<sp/>TLS<sp/>3.5,<sp/>this<sp/>was<sp/>the<sp/>maximum<sp/>block<sp/>size<sp/>supported<sp/>by<sp/>the<sp/>CMAC</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>module,<sp/>so<sp/>it<sp/>didn&apos;t<sp/>take<sp/>Camellia<sp/>or<sp/>ARIA<sp/>into<sp/>account.<sp/>Since<sp/>the<sp/>name</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>of<sp/>the<sp/>macro<sp/>doesn&apos;t<sp/>even<sp/>convey<sp/>&quot;CMAC&quot;,<sp/>this<sp/>was<sp/>misleading.<sp/>Now<sp/>the<sp/>size</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>is<sp/>sufficient<sp/>for<sp/>any<sp/>cipher,<sp/>but<sp/>the<sp/>name<sp/>is<sp/>defined<sp/>in<sp/>cmac.h<sp/>for</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>backward<sp/>compatibility.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="cmac_8h_1accb84fb7db8f619f0fdf8ef1ee7552af" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CIPHER_BLKSIZE_MAX<sp/>MBEDTLS_MAX_BLOCK_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_DEPRECATED_REMOVED<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CMAC_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="structmbedtls__cmac__context__t" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__cmac__context__t" kindref="compound">mbedtls_cmac_context_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="structmbedtls__cmac__context__t_1ac5f0d21bab6e64bef34f628604ec46b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(state)[<ref refid="cmac_8h_1ab6328898ae160ace67b3a2444856485e" kindref="member">MBEDTLS_CMAC_MAX_BLOCK_SIZE</ref>];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structmbedtls__cmac__context__t_1a5150dc7bcaf93719a110b8257e6243de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(unprocessed_block)[<ref refid="cmac_8h_1ab6328898ae160ace67b3a2444856485e" kindref="member">MBEDTLS_CMAC_MAX_BLOCK_SIZE</ref>];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structmbedtls__cmac__context__t_1af1dd5cff9ce92a313dfd3fb5bd85411c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(unprocessed_len);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_CMAC_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cmac_alt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_CMAC_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="cmac_8h_1ae5835d528bbfec2ae2452ba4617469b8" kindref="member">mbedtls_cipher_cmac_starts</ref>(<ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keybits);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="cmac_8h_1a14441964606982e0a664a8bb48bddad6" kindref="member">mbedtls_cipher_cmac_update</ref>(<ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="cmac_8h_1a9adc5b4b09b40d41bb6554c8ecfa755d" kindref="member">mbedtls_cipher_cmac_finish</ref>(<ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="cmac_8h_1a364af1a9ac845cbf21d7a64f1f43c71a" kindref="member">mbedtls_cipher_cmac_reset</ref>(<ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="cmac_8h_1af44bc935db9b27fbfe485936b5ad99ed" kindref="member">mbedtls_cipher_cmac</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__cipher__info__t" kindref="compound">mbedtls_cipher_info_t</ref><sp/>*cipher_info,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keylen,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_AES_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="cmac_8h_1ad9ef677703a2837a50382dcbcc544cc6" kindref="member">mbedtls_aes_cmac_prf_128</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>key_len,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>in_len,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>output[16]);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_AES_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)<sp/>&amp;&amp;<sp/>(defined(MBEDTLS_AES_C)<sp/>||<sp/>defined(MBEDTLS_DES_C))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="cmac_8h_1a615cf527d17950ce8bfc9207010aee19" kindref="member">mbedtls_cmac_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>&amp;&amp;<sp/>(<sp/>MBEDTLS_AES_C<sp/>||<sp/>MBEDTLS_DES_C<sp/>)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CMAC_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h"/>
+  </compounddef>
+</doxygen>

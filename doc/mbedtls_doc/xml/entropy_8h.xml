@@ -1,0 +1,1051 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="entropy_8h" kind="file" language="C++">
+    <compoundname>entropy.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes refid="md_8h" local="yes">md.h</includes>
+    <includes refid="threading_8h" local="yes">mbedtls/threading.h</includes>
+    <includedby refid="ctr__drbg_8h" local="yes">ctr_drbg.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="27">
+        <label>stdlib.h</label>
+      </node>
+      <node id="26">
+        <label>mbedtls/threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="23">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>entropy.h</label>
+        <link refid="entropy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="28">
+        <label>pthread.h</label>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="21">
+        <label>md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="25">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>entropy.h</label>
+        <link refid="entropy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ctr_drbg.h</label>
+        <link refid="ctr__drbg_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__entropy__source__state" prot="public">mbedtls_entropy_source_state</innerclass>
+    <innerclass refid="structmbedtls__entropy__context" prot="public">mbedtls_entropy_context</innerclass>
+      <sectiondef kind="user-defined">
+      <header>SECTION: Module settings</header>
+      <description><para>The configuration options you can set for this module are in this section. Either change them in <ref refid="mbedtls__config_8h" kindref="compound">mbedtls_config.h</ref> or define them on the compiler command line. </para>
+</description>
+      <memberdef kind="define" id="entropy_8h_1a819aa4f3046aa257738f0dafe481ca1f" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_MAX_SOURCES</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum number of sources supported </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="57" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1a21637aa9a738da4fce13931a8442dc28" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_MAX_GATHER</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum amount requested from entropy sources </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="61" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="entropy_8h_1a77e56d52d29721c24f22a9ec01391ecb" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_SHA512_ACCUMULATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="21" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1af132d6aecca6be57c7e9f4cddaf4bdd0" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_MD</name>
+        <initializer><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a0cdbe8272ceee7d63b2bfadd5ed05c26" kindref="member">MBEDTLS_MD_SHA512</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="22" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1acc0fdb8c34a1ae04a81b4b21cb383941" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_BLOCK_SIZE</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Block size of entropy accumulator (SHA-512) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="23" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1af4cd68e9098b27fed32e7d4a48a4048b" prot="public" static="no">
+        <name>MBEDTLS_ERR_ENTROPY_SOURCE_FAILED</name>
+        <initializer>-0x003C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Critical entropy source failure. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="38" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1a12a0600bd163efc21469e406a4e194ce" prot="public" static="no">
+        <name>MBEDTLS_ERR_ENTROPY_MAX_SOURCES</name>
+        <initializer>-0x003E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No more sources can be added. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="40" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1ab9f0a333fbef6d5ebe4fda846249f5c6" prot="public" static="no">
+        <name>MBEDTLS_ERR_ENTROPY_NO_SOURCES_DEFINED</name>
+        <initializer>-0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No sources have been added to poll. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="42" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1a8116299707c4a7fbf19cac3f30ce1e7a" prot="public" static="no">
+        <name>MBEDTLS_ERR_ENTROPY_NO_STRONG_SOURCE</name>
+        <initializer>-0x003D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No strong sources have been added to poll. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="44" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1a356b20cef049a2de3e99909321894463" prot="public" static="no">
+        <name>MBEDTLS_ERR_ENTROPY_FILE_IO_ERROR</name>
+        <initializer>-0x003F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read/write error in file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="46" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1afff6ba3d7fc6df1fedd007d3a9a4136b" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_MAX_SEED_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum size of seed we read from seed file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="66" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1a841232804d6de404b072c57a374502c8" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_SOURCE_MANUAL</name>
+        <initializer><ref refid="entropy_8h_1a819aa4f3046aa257738f0dafe481ca1f" kindref="member">MBEDTLS_ENTROPY_MAX_SOURCES</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="67" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1acf3946666d3aa196a7a4ba7705740580" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_SOURCE_STRONG</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Entropy source is strong <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="69" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="entropy_8h_1a3aaeef22d87036afb296bfdb4d7d4c4c" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_SOURCE_WEAK</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Entropy source is weak <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="70" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="entropy_8h_1a2168f0720e2e869e440fd7fa35c941bd" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* mbedtls_entropy_f_source_ptr) (void *data, unsigned char *output, size_t len, size_t *olen)</definition>
+        <argsstring>)(void *data, unsigned char *output, size_t len, size_t *olen)</argsstring>
+        <name>mbedtls_entropy_f_source_ptr</name>
+        <briefdescription>
+<para>Entropy poll callback pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback-specific data pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to fill </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum size to provide </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual amount of bytes put into the buffer (Can be 0)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if no critical failures occurred, MBEDTLS_ERR_ENTROPY_SOURCE_FAILED otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="87" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="entropy_8h_1a9161360d383d5df8025420c710ac3950" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__entropy__source__state" kindref="compound">mbedtls_entropy_source_state</ref></type>
+        <definition>typedef struct mbedtls_entropy_source_state mbedtls_entropy_source_state</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_entropy_source_state</name>
+        <briefdescription>
+<para>Entropy source state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="100" column="29"/>
+      </memberdef>
+      <memberdef kind="typedef" id="entropy_8h_1a9a5c6e0f223fc8174c3dd5de720c3322" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref></type>
+        <definition>typedef struct mbedtls_entropy_context mbedtls_entropy_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_entropy_context</name>
+        <briefdescription>
+<para>Entropy context structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="119" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="entropy_8h_1add93967cb361ce9758800ba5a2017528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_entropy_poll</definition>
+        <argsstring>(void *data, unsigned char *output, size_t len, size_t *olen)</argsstring>
+        <name>mbedtls_platform_entropy_poll</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+<para>Platform-specific entropy poll callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="125" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="125" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1aa901e027093c6fe65dee5760db78aced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_entropy_init</definition>
+        <argsstring>(mbedtls_entropy_context *ctx)</argsstring>
+        <name>mbedtls_entropy_init</name>
+        <param>
+          <type><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context to initialize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="134" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="134" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1a06778439f8a0e2daa2d3b444e06ad8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_entropy_free</definition>
+        <argsstring>(mbedtls_entropy_context *ctx)</argsstring>
+        <name>mbedtls_entropy_free</name>
+        <param>
+          <type><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Free the data in the context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context to free </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="141" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="141" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1ad1bf424d076142e9aeec9e68207f5aaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_entropy_add_source</definition>
+        <argsstring>(mbedtls_entropy_context *ctx, mbedtls_entropy_f_source_ptr f_source, void *p_source, size_t threshold, int strong)</argsstring>
+        <name>mbedtls_entropy_add_source</name>
+        <param>
+          <type><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="entropy_8h_1a2168f0720e2e869e440fd7fa35c941bd" kindref="member">mbedtls_entropy_f_source_ptr</ref></type>
+          <declname>f_source</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>threshold</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>strong</declname>
+        </param>
+        <briefdescription>
+<para>Adds an entropy source to poll (Thread-safe if MBEDTLS_THREADING_C is enabled) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum required from source before entropy is released ( with <ref refid="entropy_8h_1a81765f6cdf4e5111bcb9f4324f3234cb" kindref="member">mbedtls_entropy_func()</ref> ) (in bytes) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strong</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBEDTLS_ENTROPY_SOURCE_STRONG or MBEDTLS_ENTROPY_SOURCE_WEAK. At least one strong source needs to be added. Weaker sources (such as the cycle counter) can be used as a complement.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful or MBEDTLS_ERR_ENTROPY_MAX_SOURCES </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="160" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="160" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1ac49de4b842e7d56cfcd1088286a09b7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_entropy_gather</definition>
+        <argsstring>(mbedtls_entropy_context *ctx)</argsstring>
+        <name>mbedtls_entropy_gather</name>
+        <param>
+          <type><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Trigger an extra gather poll for the accumulator (Thread-safe if MBEDTLS_THREADING_C is enabled) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or MBEDTLS_ERR_ENTROPY_SOURCE_FAILED </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="172" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="172" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1a81765f6cdf4e5111bcb9f4324f3234cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_entropy_func</definition>
+        <argsstring>(void *data, unsigned char *output, size_t len)</argsstring>
+        <name>mbedtls_entropy_func</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve entropy from the accumulator (Maximum length: MBEDTLS_ENTROPY_BLOCK_SIZE) (Thread-safe if MBEDTLS_THREADING_C is enabled) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to fill </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes desired, must be at most MBEDTLS_ENTROPY_BLOCK_SIZE</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or MBEDTLS_ERR_ENTROPY_SOURCE_FAILED </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="185" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="185" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1aa79492f288cc3202ea455564be855d64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_entropy_update_manual</definition>
+        <argsstring>(mbedtls_entropy_context *ctx, const unsigned char *data, size_t len)</argsstring>
+        <name>mbedtls_entropy_update_manual</name>
+        <param>
+          <type><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Add data to the accumulator manually (Thread-safe if MBEDTLS_THREADING_C is enabled) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to add </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="197" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="197" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1a418287fc0785cb14c32d63e1ce95c823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_entropy_update_nv_seed</definition>
+        <argsstring>(mbedtls_entropy_context *ctx)</argsstring>
+        <name>mbedtls_entropy_update_nv_seed</name>
+        <param>
+          <type><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Trigger an update of the seed file in NV by using the current entropy pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="209" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="209" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1abffb5c2d08b9cc94788910d463ce3181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_entropy_write_seed_file</definition>
+        <argsstring>(mbedtls_entropy_context *ctx, const char *path)</argsstring>
+        <name>mbedtls_entropy_write_seed_file</name>
+        <param>
+          <type><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Write a seed file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the file</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, MBEDTLS_ERR_ENTROPY_FILE_IO_ERROR on file error, or MBEDTLS_ERR_ENTROPY_SOURCE_FAILED </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="223" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="223" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1a3d72b19c00eb0cabb319d3d81599a57a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_entropy_update_seed_file</definition>
+        <argsstring>(mbedtls_entropy_context *ctx, const char *path)</argsstring>
+        <name>mbedtls_entropy_update_seed_file</name>
+        <param>
+          <type><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Read and update a seed file. Seed is added to this instance. No more than MBEDTLS_ENTROPY_MAX_SEED_SIZE bytes are read from the seed file. The rest is ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entropy context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the file</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, MBEDTLS_ERR_ENTROPY_FILE_IO_ERROR on file error, MBEDTLS_ERR_ENTROPY_SOURCE_FAILED </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="237" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="237" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="entropy_8h_1ad31b29e855ba719ba5282e2da4f5c338" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_entropy_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_entropy_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>            This module self-test also calls the entropy self-test,
+            mbedtls_entropy_source_self_test();
+</verbatim></para>
+<para><simplesect kind="return"><para>0 if successful, or 1 if a test failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="249" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" declline="249" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Entropy accumulator implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ENTROPY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="md_8h" kindref="compound">md.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MD_CAN_SHA512)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_ENTROPY_FORCE_SHA256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="entropy_8h_1a77e56d52d29721c24f22a9ec01391ecb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_SHA512_ACCUMULATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="entropy_8h_1af132d6aecca6be57c7e9f4cddaf4bdd0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_MD<sp/><sp/>MBEDTLS_MD_SHA512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="entropy_8h_1acc0fdb8c34a1ae04a81b4b21cb383941" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/>64<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MD_CAN_SHA256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_SHA256_ACCUMULATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_MD<sp/><sp/>MBEDTLS_MD_SHA256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/>32<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threading_8h" kindref="compound">mbedtls/threading.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="entropy_8h_1af4cd68e9098b27fed32e7d4a48a4048b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ENTROPY_SOURCE_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x003C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="entropy_8h_1a12a0600bd163efc21469e406a4e194ce" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ENTROPY_MAX_SOURCES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x003E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="entropy_8h_1ab9f0a333fbef6d5ebe4fda846249f5c6" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ENTROPY_NO_SOURCES_DEFINED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0040</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="entropy_8h_1a8116299707c4a7fbf19cac3f30ce1e7a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ENTROPY_NO_STRONG_SOURCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x003D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="entropy_8h_1a356b20cef049a2de3e99909321894463" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ENTROPY_FILE_IO_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x003F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_ENTROPY_MAX_SOURCES)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="entropy_8h_1a819aa4f3046aa257738f0dafe481ca1f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_MAX_SOURCES<sp/><sp/><sp/><sp/><sp/>20<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_ENTROPY_MAX_GATHER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="entropy_8h_1a21637aa9a738da4fce13931a8442dc28" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_MAX_GATHER<sp/><sp/><sp/><sp/><sp/><sp/>128<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="entropy_8h_1afff6ba3d7fc6df1fedd007d3a9a4136b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_MAX_SEED_SIZE<sp/><sp/><sp/>1024<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="entropy_8h_1a841232804d6de404b072c57a374502c8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_SOURCE_MANUAL<sp/><sp/><sp/>MBEDTLS_ENTROPY_MAX_SOURCES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="entropy_8h_1acf3946666d3aa196a7a4ba7705740580" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_SOURCE_STRONG<sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="entropy_8h_1a3aaeef22d87036afb296bfdb4d7d4c4c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_SOURCE_WEAK<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="entropy_8h_1a2168f0720e2e869e440fd7fa35c941bd" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="entropy_8h_1a2168f0720e2e869e440fd7fa35c941bd" kindref="member">mbedtls_entropy_f_source_ptr</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="structmbedtls__entropy__source__state" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__entropy__source__state" kindref="compound">mbedtls_entropy_source_state</ref><sp/>{</highlight></codeline>
+<codeline lineno="94" refid="structmbedtls__entropy__source__state_1a95556035881e3594ef4947ecc998cc55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="entropy_8h_1a2168f0720e2e869e440fd7fa35c941bd" kindref="member">mbedtls_entropy_f_source_ptr</ref><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(f_source);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="structmbedtls__entropy__source__state_1ac34a996c317720838992b80402845ea2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(p_source);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="structmbedtls__entropy__source__state_1a6b2e300542523ab7a9176f2be615be67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(size);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="structmbedtls__entropy__source__state_1a00f26579c77b462147b6b9e6fb83e5d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(threshold);<sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="structmbedtls__entropy__source__state_1a4efcdffb7224e8e17df6dfa264f020dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(strong);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><ref refid="entropy_8h_1a9161360d383d5df8025420c710ac3950" kindref="member">mbedtls_entropy_source_state</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="structmbedtls__entropy__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="106" refid="structmbedtls__entropy__context_1a4d0058fff80c017527f986d4cdf500fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(accumulator);</highlight></codeline>
+<codeline lineno="107" refid="structmbedtls__entropy__context_1a521eec5f5f2f4d62f8c8c15925ed5edc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(accumulator_started);<sp/></highlight><highlight class="comment">/*<sp/>0<sp/>after<sp/>init.</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>1<sp/>after<sp/>the<sp/>first<sp/>update.</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-1<sp/>after<sp/>free.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="structmbedtls__entropy__context_1ad21e27a0108e526fed9ff4bb9eaadc33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(source_count);<sp/></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>entries<sp/>used<sp/>in<sp/>source.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="structmbedtls__entropy__context_1ab040224242a2c57d07435c6fc1a09171" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__entropy__source__state" kindref="compound">mbedtls_entropy_source_state</ref><sp/><sp/><sp/><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(source)[<ref refid="entropy_8h_1a819aa4f3046aa257738f0dafe481ca1f" kindref="member">MBEDTLS_ENTROPY_MAX_SOURCES</ref>];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="structmbedtls__entropy__context_1a38b2569c4f45471029e3e26600457fd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(mutex);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ENTROPY_NV_SEED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="structmbedtls__entropy__context_1a82b6e92d1f4da943b414c88f2e553e78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(initial_entropy_run);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="entropy_8h_1a9a5c6e0f223fc8174c3dd5de720c3322" kindref="member">mbedtls_entropy_context</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_NO_PLATFORM_ENTROPY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1add93967cb361ce9758800ba5a2017528" kindref="member">mbedtls_platform_entropy_poll</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1aa901e027093c6fe65dee5760db78aced" kindref="member">mbedtls_entropy_init</ref>(<ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1a06778439f8a0e2daa2d3b444e06ad8dd" kindref="member">mbedtls_entropy_free</ref>(<ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1ad1bf424d076142e9aeec9e68207f5aaa" kindref="member">mbedtls_entropy_add_source</ref>(<ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="entropy_8h_1a2168f0720e2e869e440fd7fa35c941bd" kindref="member">mbedtls_entropy_f_source_ptr</ref><sp/>f_source,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_source,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>threshold,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strong);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1ac49de4b842e7d56cfcd1088286a09b7d" kindref="member">mbedtls_entropy_gather</ref>(<ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1a81765f6cdf4e5111bcb9f4324f3234cb" kindref="member">mbedtls_entropy_func</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1aa79492f288cc3202ea455564be855d64" kindref="member">mbedtls_entropy_update_manual</ref>(<ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ENTROPY_NV_SEED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1a418287fc0785cb14c32d63e1ce95c823" kindref="member">mbedtls_entropy_update_nv_seed</ref>(<ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ENTROPY_NV_SEED<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1abffb5c2d08b9cc94788910d463ce3181" kindref="member">mbedtls_entropy_write_seed_file</ref>(<ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1a3d72b19c00eb0cabb319d3d81599a57a" kindref="member">mbedtls_entropy_update_seed_file</ref>(<ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_FS_IO<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="entropy_8h_1ad31b29e855ba719ba5282e2da4f5c338" kindref="member">mbedtls_entropy_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ENTROPY_HARDWARE_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_entropy_source_self_test(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ENTROPY_HARDWARE_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>entropy.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h"/>
+  </compounddef>
+</doxygen>

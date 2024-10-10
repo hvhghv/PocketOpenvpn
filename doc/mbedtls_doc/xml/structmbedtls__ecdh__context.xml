@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ecdh__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ecdh_context</compoundname>
+    <includes refid="ecdh_8h" local="no">ecdh.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a06a89429aa175a935dd92b8257d4ff06" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref></type>
+        <definition>mbedtls_ecp_group mbedtls_ecdh_context::private_grp</definition>
+        <argsstring></argsstring>
+        <name>private_grp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The elliptic curve used. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="107" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a07a2edc0fd37752b363b6623c924562f" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecdh_context::private_d</definition>
+        <argsstring></argsstring>
+        <name>private_d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The private key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="108" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a06cc8b8857a86aef15df00e6ab2e2538" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecdh_context::private_Q</definition>
+        <argsstring></argsstring>
+        <name>private_Q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The public key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="109" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a9733f6fc1d2837f20b5081282ee6f3cd" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecdh_context::private_Qp</definition>
+        <argsstring></argsstring>
+        <name>private_Qp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value of the public key of the peer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="110" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a881d5a7b117efc7e3de5adec879e91f3" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecdh_context::private_z</definition>
+        <argsstring></argsstring>
+        <name>private_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The shared secret. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="111" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a09eafed19df4ef95523e5c1affddcbf4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_context::private_point_format</definition>
+        <argsstring></argsstring>
+        <name>private_point_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The format of point export in TLS messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="112" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a1890108936aaac68cc77d47fc033ea83" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecdh_context::private_Vi</definition>
+        <argsstring></argsstring>
+        <name>private_Vi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The blinding value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="113" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1aa23a9727d6d41f861665f63a5ac0c2d0" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecdh_context::private_Vf</definition>
+        <argsstring></argsstring>
+        <name>private_Vf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The unblinding value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="114" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a59e0ef206b749563a1c9aa32371a6dff" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecdh_context::private__d</definition>
+        <argsstring></argsstring>
+        <name>private__d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The previous <computeroutput>d</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="115" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a3c4a311ea4da90dd2b92feb996fa43d4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ecdh_context::private_restart_enabled</definition>
+        <argsstring></argsstring>
+        <name>private_restart_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The flag for restartable mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="117" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdh__context_1a363421c65830fc8155b02962db91624d" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__restart__ctx" kindref="compound">mbedtls_ecp_restart_ctx</ref></type>
+        <definition>mbedtls_ecp_restart_ctx mbedtls_ecdh_context::private_rs</definition>
+        <argsstring></argsstring>
+        <name>private_rs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The restart context for EC computations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="118" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The ECDH context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>Performing multiple operations concurrently on the same ECDSA context is not supported; objects of this type should not be shared between multiple threads. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_ecp_point</label>
+        <link refid="structmbedtls__ecp__point"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_X</edgelabel>
+          <edgelabel>private_Y</edgelabel>
+          <edgelabel>private_Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mbedtls_ecdh_context</label>
+        <link refid="structmbedtls__ecdh__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_grp</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_rs</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_Q</edgelabel>
+          <edgelabel>private_Qp</edgelabel>
+          <edgelabel>private_Vf</edgelabel>
+          <edgelabel>private_Vi</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_d</edgelabel>
+          <edgelabel>private_z</edgelabel>
+          <edgelabel>private__d</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="2">
+        <label>mbedtls_ecp_group</label>
+        <link refid="structmbedtls__ecp__group"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>G</edgelabel>
+          <edgelabel>private_T</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>N</edgelabel>
+          <edgelabel>P</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mbedtls_ecp_restart_ctx</label>
+        <link refid="structmbedtls__ecp__restart__ctx"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" line="105" column="35" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdh.h" bodystart="105" bodyend="141"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ecdh__context_1a59e0ef206b749563a1c9aa32371a6dff" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private__d</name></member>
+      <member refid="structmbedtls__ecdh__context_1a07a2edc0fd37752b363b6623c924562f" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_d</name></member>
+      <member refid="structmbedtls__ecdh__context_1a06a89429aa175a935dd92b8257d4ff06" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_grp</name></member>
+      <member refid="structmbedtls__ecdh__context_1a09eafed19df4ef95523e5c1affddcbf4" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_point_format</name></member>
+      <member refid="structmbedtls__ecdh__context_1a06cc8b8857a86aef15df00e6ab2e2538" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_Q</name></member>
+      <member refid="structmbedtls__ecdh__context_1a9733f6fc1d2837f20b5081282ee6f3cd" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_Qp</name></member>
+      <member refid="structmbedtls__ecdh__context_1a3c4a311ea4da90dd2b92feb996fa43d4" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_restart_enabled</name></member>
+      <member refid="structmbedtls__ecdh__context_1a363421c65830fc8155b02962db91624d" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_rs</name></member>
+      <member refid="structmbedtls__ecdh__context_1aa23a9727d6d41f861665f63a5ac0c2d0" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_Vf</name></member>
+      <member refid="structmbedtls__ecdh__context_1a1890108936aaac68cc77d47fc033ea83" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_Vi</name></member>
+      <member refid="structmbedtls__ecdh__context_1a881d5a7b117efc7e3de5adec879e91f3" prot="public" virt="non-virtual"><scope>mbedtls_ecdh_context</scope><name>private_z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

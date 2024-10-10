@@ -1,0 +1,32 @@
+<map id="bignum.h" name="bignum.h">
+<area shape="rect" id="node1" title="Multi&#45;precision integer library." alt="" coords="558,5,633,32"/>
+<area shape="rect" id="node2" href="$asn1_8h.html" title="Generic ASN.1 parsing." alt="" coords="273,543,334,569"/>
+<area shape="rect" id="node5" href="$x509__crt_8h.html" title="X.509 certificate parsing and writing." alt="" coords="470,767,553,793"/>
+<area shape="rect" id="node6" href="$ssl_8h.html" title="SSL/TLS functions." alt="" coords="850,841,901,868"/>
+<area shape="rect" id="node18" href="$ecp_8h.html" title="This file provides an API for Elliptic Curves over GF(P) (ECP)." alt="" coords="755,80,809,107"/>
+<area shape="rect" id="node29" href="$rsa_8h.html" title="This file provides an API for the RSA public&#45;key cryptosystem." alt="" coords="413,468,463,495"/>
+<area shape="rect" id="node30" href="$dhm_8h.html" title="This file contains Diffie&#45;Hellman&#45;Merkle (DHM) key exchange definitions and functions." alt="" coords="1118,229,1177,256"/>
+<area shape="rect" id="node3" href="$asn1write_8h.html" title="ASN.1 buffer writing functionality." alt="" coords="5,617,95,644"/>
+<area shape="rect" id="node4" href="$x509_8h.html" title="X.509 generic defines and structures." alt="" coords="414,617,475,644"/>
+<area shape="rect" id="node12" href="$pkcs7_8h.html" title="PKCS #7 generic defines and structures https://tools.ietf.org/html/rfc2315." alt="" coords="331,841,399,868"/>
+<area shape="rect" id="node15" href="$oid_8h.html" title="Object Identifier (OID) database." alt="" coords="499,617,550,644"/>
+<area shape="rect" id="node16" href="$pkcs12_8h.html" title="PKCS#12 Personal Information Exchange Syntax." alt="" coords="119,617,194,644"/>
+<area shape="rect" id="node17" href="$pkcs5_8h.html" title="PKCS#5 functions." alt="" coords="269,617,337,644"/>
+<area shape="rect" id="node13" href="$x509__crl_8h.html" title="X.509 certificate revocation list parsing." alt="" coords="565,692,647,719"/>
+<area shape="rect" id="node14" href="$x509__csr_8h.html" title="X.509 certificate signing request parsing and writing." alt="" coords="403,692,489,719"/>
+<area shape="rect" id="node7" href="$debug_8h.html" title="Functions for controlling and providing debug output from the library." alt="" coords="1068,916,1136,943"/>
+<area shape="rect" id="node8" href="$net__sockets_8h.html" title="Network sockets abstraction layer to integrate Mbed TLS into a BSD&#45;style sockets API." alt="" coords="823,916,927,943"/>
+<area shape="rect" id="node9" href="$ssl__cache_8h.html" title="SSL session cache implementation." alt="" coords="952,916,1044,943"/>
+<area shape="rect" id="node10" href="$ssl__cookie_8h.html" title="DTLS cookie callbacks implementation." alt="" coords="704,916,799,943"/>
+<area shape="rect" id="node11" href="$ssl__ticket_8h.html" title="TLS server ticket callbacks implementation." alt="" coords="591,916,680,943"/>
+<area shape="rect" id="node19" href="$pk_8h.html" title="Public Key abstraction layer." alt="" coords="501,543,548,569"/>
+<area shape="rect" id="node21" href="$ecdsa_8h.html" title="This file contains ECDSA definitions and functions." alt="" coords="612,155,680,181"/>
+<area shape="rect" id="node26" href="$ecjpake_8h.html" title="Elliptic curve J&#45;PAKE." alt="" coords="704,155,783,181"/>
+<area shape="rect" id="node27" href="$crypto__extra_8h.html" title="PSA cryptography module: Mbed TLS vendor extensions." alt="" coords="768,311,873,338"/>
+<area shape="rect" id="node28" href="$ecdh_8h.html" title="This file contains ECDH definitions and functions." alt="" coords="931,393,993,420"/>
+<area shape="rect" id="node20" href="$ssl__ciphersuites_8h.html" title="SSL Ciphersuites for Mbed TLS." alt="" coords="628,767,755,793"/>
+<area shape="rect" id="node22" href="$crypto__builtin__composites_8h.html" title=" " alt="" coords="589,229,773,256"/>
+<area shape="rect" id="node23" href="$crypto__driver__contexts__composites_8h.html" title=" " alt="" coords="589,304,743,345"/>
+<area shape="rect" id="node24" href="$crypto__struct_8h.html" title="PSA cryptography module: Mbed TLS structured type implementations." alt="" coords="642,393,751,420"/>
+<area shape="rect" id="node25" href="$crypto_8h.html" title="Platform Security Architecture cryptography module." alt="" coords="758,468,827,495"/>
+</map>

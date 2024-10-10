@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="unionpsa__driver__verify__hash__interruptible__context__t" kind="union" language="C++" prot="public">
+    <compoundname>psa_driver_verify_hash_interruptible_context_t</compoundname>
+    <includes refid="crypto__driver__contexts__composites_8h" local="no">crypto_driver_contexts_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionpsa__driver__verify__hash__interruptible__context__t_1afefd949efb1209f0ad190d845cff2a29" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned psa_driver_verify_hash_interruptible_context_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" line="137" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__verify__hash__interruptible__context__t_1a4e09ce02b6fad597420caad773ebfa3c" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__psa__verify__hash__interruptible__operation__t" kindref="compound">mbedtls_psa_verify_hash_interruptible_operation_t</ref></type>
+        <definition>mbedtls_psa_verify_hash_interruptible_operation_t psa_driver_verify_hash_interruptible_context_t::mbedtls_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" line="138" column="55" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>mbedtls_ecp_point</label>
+        <link refid="structmbedtls__ecp__point"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>private_X</edgelabel>
+          <edgelabel>private_Y</edgelabel>
+          <edgelabel>private_Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_psa_verify_hash_interruptible_operation_t</label>
+        <link refid="structmbedtls__psa__verify__hash__interruptible__operation__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_restart_ctx</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>private_r</edgelabel>
+          <edgelabel>private_s</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="1">
+        <label>psa_driver_verify_hash_interruptible_context_t</label>
+        <link refid="unionpsa__driver__verify__hash__interruptible__context__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mbedtls_ecp_keypair</label>
+        <link refid="structmbedtls__ecp__keypair"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>private_grp</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_Q</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>private_d</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mbedtls_ecp_group</label>
+        <link refid="structmbedtls__ecp__group"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>G</edgelabel>
+          <edgelabel>private_T</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>N</edgelabel>
+          <edgelabel>P</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_ecdsa_restart_ctx</label>
+        <link refid="structmbedtls__ecdsa__restart__ctx"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_ecp</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_ecp_restart_ctx</label>
+        <link refid="structmbedtls__ecp__restart__ctx"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" line="136" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" bodystart="136" bodyend="139"/>
+    <listofallmembers>
+      <member refid="unionpsa__driver__verify__hash__interruptible__context__t_1afefd949efb1209f0ad190d845cff2a29" prot="public" virt="non-virtual"><scope>psa_driver_verify_hash_interruptible_context_t</scope><name>dummy</name></member>
+      <member refid="unionpsa__driver__verify__hash__interruptible__context__t_1a4e09ce02b6fad597420caad773ebfa3c" prot="public" virt="non-virtual"><scope>psa_driver_verify_hash_interruptible_context_t</scope><name>mbedtls_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

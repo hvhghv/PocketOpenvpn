@@ -1,0 +1,9 @@
+<map id="route_ipv6_list" name="route_ipv6_list">
+<area shape="rect" id="node1" title=" " alt="" coords="227,213,333,240"/>
+<area shape="rect" id="node2" href="$structgc__arena.html" title="Garbage collection arena used to keep track of dynamically allocated memory." alt="" coords="140,124,215,151"/>
+<area shape="rect" id="node3" href="$structgc__entry__special.html" title="Garbage collection entry for a specially allocated structure that needs a custom free function to be ..." alt="" coords="5,13,125,39"/>
+<area shape="rect" id="node4" href="$structgc__entry.html" title="Garbage collection entry for one dynamically allocated block of memory." alt="" coords="203,13,275,39"/>
+<area shape="rect" id="node5" href="$structroute__ipv6.html" title=" " alt="" coords="239,124,321,151"/>
+<area shape="rect" id="node6" href="$structroute__ipv6__gateway__info.html" title=" " alt="" coords="399,124,566,151"/>
+<area shape="rect" id="node7" href="$structroute__ipv6__gateway__address.html" title=" " alt="" coords="413,5,552,47"/>
+</map>

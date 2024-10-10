@@ -1,0 +1,4 @@
+<map id="cert_hash_set" name="cert_hash_set">
+<area shape="rect" id="node1" title="Structure containing the hashes for a full certificate chain." alt="" coords="5,95,109,121"/>
+<area shape="rect" id="node2" href="$structcert__hash.html" title="Structure containing the hash for a single certificate." alt="" coords="18,5,97,32"/>
+</map>

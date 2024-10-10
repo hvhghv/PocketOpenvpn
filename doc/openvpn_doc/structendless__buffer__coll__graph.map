@@ -1,0 +1,5 @@
+<map id="endless_buffer" name="endless_buffer">
+<area shape="rect" id="node1" title=" " alt="" coords="5,199,112,225"/>
+<area shape="rect" id="node2" href="$structbuffer__entry.html" title=" " alt="" coords="13,95,104,121"/>
+<area shape="rect" id="node3" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="31,5,86,32"/>
+</map>

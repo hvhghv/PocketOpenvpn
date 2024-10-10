@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__drv__se__key__derivation__t" kind="struct" language="C++" prot="public">
+    <compoundname>psa_drv_se_key_derivation_t</compoundname>
+    <includes refid="crypto__se__driver_8h" local="no">crypto_se_driver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__drv__se__key__derivation__t_1ade32bef1eea2bfdc57239b0442ee47fe" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_drv_se_key_derivation_t::private_context_size</definition>
+        <argsstring></argsstring>
+        <name>private_context_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The driver-specific size of the key derivation context </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1254" column="38" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__derivation__t_1adc6f5235812811da6de152a3b5e0734f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__driver__derivation_1ga517b85e6c8f12f986de375a7e70028fe" kindref="member">psa_drv_se_key_derivation_setup_t</ref></type>
+        <definition>psa_drv_se_key_derivation_setup_t psa_drv_se_key_derivation_t::private_p_setup</definition>
+        <argsstring></argsstring>
+        <name>private_p_setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a key derivation setup </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1256" column="44" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__derivation__t_1a65ad88d01a7ea1523cb62e52770cd685" prot="public" static="no" mutable="no">
+        <type><ref refid="group__driver__derivation_1ga3d730798a122772534887ea87e2f9c4e" kindref="member">psa_drv_se_key_derivation_collateral_t</ref></type>
+        <definition>psa_drv_se_key_derivation_collateral_t psa_drv_se_key_derivation_t::private_p_collateral</definition>
+        <argsstring></argsstring>
+        <name>private_p_collateral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that sets key derivation collateral </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1258" column="44" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__derivation__t_1afab5a37e8a4f6a7d9da10d021a4155d8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__driver__derivation_1ga27684e05d9af85548b26849302f4db8a" kindref="member">psa_drv_se_key_derivation_derive_t</ref></type>
+        <definition>psa_drv_se_key_derivation_derive_t psa_drv_se_key_derivation_t::private_p_derive</definition>
+        <argsstring></argsstring>
+        <name>private_p_derive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a final key derivation step </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1260" column="44" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__key__derivation__t_1a7d514e4e01dea00404d597299d16fbda" prot="public" static="no" mutable="no">
+        <type><ref refid="group__driver__derivation_1ga25d0d785a7acd6957891f3c1022f91b4" kindref="member">psa_drv_se_key_derivation_export_t</ref></type>
+        <definition>psa_drv_se_key_derivation_export_t psa_drv_se_key_derivation_t::private_p_export</definition>
+        <argsstring></argsstring>
+        <name>private_p_export</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a final key derivation or agreement and exports the key </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1263" column="44" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1263" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A struct containing all of the function pointers needed to for secure element key derivation and agreement. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>PSA Crypto API implementations should populate instances of the table as appropriate upon startup.</para>
+<para>If one of the functions is not implemented, it should be set to NULL. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>psa_drv_se_context_t</label>
+        <link refid="structpsa__drv__se__context__t"/>
+      </node>
+      <node id="1">
+        <label>psa_drv_se_key_derivation_t</label>
+        <link refid="structpsa__drv__se__key__derivation__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_p_setup</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1252" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1252" bodyend="1264"/>
+    <listofallmembers>
+      <member refid="structpsa__drv__se__key__derivation__t_1ade32bef1eea2bfdc57239b0442ee47fe" prot="public" virt="non-virtual"><scope>psa_drv_se_key_derivation_t</scope><name>private_context_size</name></member>
+      <member refid="structpsa__drv__se__key__derivation__t_1a65ad88d01a7ea1523cb62e52770cd685" prot="public" virt="non-virtual"><scope>psa_drv_se_key_derivation_t</scope><name>private_p_collateral</name></member>
+      <member refid="structpsa__drv__se__key__derivation__t_1afab5a37e8a4f6a7d9da10d021a4155d8" prot="public" virt="non-virtual"><scope>psa_drv_se_key_derivation_t</scope><name>private_p_derive</name></member>
+      <member refid="structpsa__drv__se__key__derivation__t_1a7d514e4e01dea00404d597299d16fbda" prot="public" virt="non-virtual"><scope>psa_drv_se_key_derivation_t</scope><name>private_p_export</name></member>
+      <member refid="structpsa__drv__se__key__derivation__t_1adc6f5235812811da6de152a3b5e0734f" prot="public" virt="non-virtual"><scope>psa_drv_se_key_derivation_t</scope><name>private_p_setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="unionpsa__driver__aead__context__t" kind="union" language="C++" prot="public">
+    <compoundname>psa_driver_aead_context_t</compoundname>
+    <includes refid="crypto__driver__contexts__composites_8h" local="no">crypto_driver_contexts_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionpsa__driver__aead__context__t_1a3936b821c5632ad1dc249881a4e12b23" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned psa_driver_aead_context_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" line="124" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__aead__context__t_1ae22b1d9e5b14ef372d65fb79faed5e04" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__psa__aead__operation__t" kindref="compound">mbedtls_psa_aead_operation_t</ref></type>
+        <definition>mbedtls_psa_aead_operation_t psa_driver_aead_context_t::mbedtls_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" line="125" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>psa_driver_aead_context_t</label>
+        <link refid="unionpsa__driver__aead__context__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>mbedtls_chacha20_context</label>
+        <link refid="structmbedtls__chacha20__context"/>
+      </node>
+      <node id="5">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="7">
+        <label>mbedtls_ccm_context</label>
+        <link refid="structmbedtls__ccm__context"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_cipher_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_gcm_context</label>
+        <link refid="structmbedtls__gcm__context"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_cipher_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_psa_aead_operation_t</label>
+        <link refid="structmbedtls__psa__aead__operation__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_gcm</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_ccm</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>private_chachapoly</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls_poly1305_context</label>
+        <link refid="structmbedtls__poly1305__context"/>
+      </node>
+      <node id="8">
+        <label>mbedtls_chachapoly_context</label>
+        <link refid="structmbedtls__chachapoly__context"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>private_poly1305_ctx</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>private_chacha20_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" line="123" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_driver_contexts_composites.h" bodystart="123" bodyend="129"/>
+    <listofallmembers>
+      <member refid="unionpsa__driver__aead__context__t_1a3936b821c5632ad1dc249881a4e12b23" prot="public" virt="non-virtual"><scope>psa_driver_aead_context_t</scope><name>dummy</name></member>
+      <member refid="unionpsa__driver__aead__context__t_1ae22b1d9e5b14ef372d65fb79faed5e04" prot="public" virt="non-virtual"><scope>psa_driver_aead_context_t</scope><name>mbedtls_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

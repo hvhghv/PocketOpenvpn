@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__cipher__info__t" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_cipher_info_t</compoundname>
+    <includes refid="cipher_8h" local="no">cipher.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__cipher__info__t_1a0700c51941badfb12ccccd6d9c80b7d0" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* mbedtls_cipher_info_t::private_name</definition>
+        <argsstring></argsstring>
+        <name>private_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of the cipher. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="268" column="16" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__info__t_1a9ad09e46f3b39db33f7ce7be13fabb4f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_cipher_info_t::private_block_size</definition>
+        <argsstring></argsstring>
+        <name>private_block_size</name>
+        <bitfield> 5</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The block size, in bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="271" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__info__t_1a6ae104267001b35a8eb164934b422287" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_cipher_info_t::private_iv_size</definition>
+        <argsstring></argsstring>
+        <name>private_iv_size</name>
+        <bitfield> 3</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IV or nonce size, in bytes (right shifted by <ref refid="cipher_8h_1a068a06a17500ba4e632ff2062d397c89" kindref="member">MBEDTLS_IV_SIZE_SHIFT</ref>). For ciphers that accept variable IV sizes, this is the recommended size. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="277" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__info__t_1ae29148f3ae2a3abc83c03371852d2766" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_cipher_info_t::private_key_bitlen</definition>
+        <argsstring></argsstring>
+        <name>private_key_bitlen</name>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cipher key length, in bits (right shifted by <ref refid="cipher_8h_1a0eb50dbc1df3105a1e4e9dcba9586fc5" kindref="member">MBEDTLS_KEY_BITLEN_SHIFT</ref>). This is the default length for variable sized ciphers. Includes parity bits for ciphers like DES. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="283" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__info__t_1ad674859010eacd0f7cd54f447cf59c85" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_cipher_info_t::private_mode</definition>
+        <argsstring></argsstring>
+        <name>private_mode</name>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cipher mode (as per mbedtls_cipher_mode_t). For example, MBEDTLS_MODE_CBC. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="288" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__info__t_1af69e3590a3e533bf203c459ace063cc6" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_cipher_info_t::private_type</definition>
+        <argsstring></argsstring>
+        <name>private_type</name>
+        <bitfield> 8</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Full cipher identifier (as per mbedtls_cipher_type_t). For example, MBEDTLS_CIPHER_AES_256_CBC.</para>
+<para>This could be 7 bits, but 8 bits retains byte alignment for the next field, which reduces code size to access that field. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="296" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__info__t_1aab43790142dea30ef7a9a7c9a5d86a15" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_cipher_info_t::private_flags</definition>
+        <argsstring></argsstring>
+        <name>private_flags</name>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bitflag comprised of MBEDTLS_CIPHER_VARIABLE_IV_LEN and MBEDTLS_CIPHER_VARIABLE_KEY_LEN indicating whether the cipher supports variable IV or variable key sizes, respectively. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="302" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__info__t_1abf0cce842b7931d6cbc389239701d956" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_cipher_info_t::private_base_idx</definition>
+        <argsstring></argsstring>
+        <name>private_base_idx</name>
+        <bitfield> 5</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Index to LUT for base cipher information and functions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="305" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Cipher information. Allows calling cipher functions in a generic way.</para>
+<para><simplesect kind="note"><para>The library does not support custom cipher info structures, only built-in structures returned by the functions <ref refid="cipher_8h_1a9b2e7d49ca82abe8c96b65645364e24b" kindref="member">mbedtls_cipher_info_from_string()</ref>, <ref refid="cipher_8h_1a8bc2809cbd7c2357f41be8cf76eeed92" kindref="member">mbedtls_cipher_info_from_type()</ref>, <ref refid="cipher_8h_1a9752d8056c43948c08d2e1f2009a53aa" kindref="member">mbedtls_cipher_info_from_values()</ref>, mbedtls_cipher_info_from_psa().</para>
+</simplesect>
+<simplesect kind="note"><para>Some fields store a value that has been right-shifted to save code-size, so should not be used directly. The accessor functions adjust for this and return the &quot;natural&quot; value. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="266" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="266" bodyend="307"/>
+    <listofallmembers>
+      <member refid="structmbedtls__cipher__info__t_1abf0cce842b7931d6cbc389239701d956" prot="public" virt="non-virtual"><scope>mbedtls_cipher_info_t</scope><name>private_base_idx</name></member>
+      <member refid="structmbedtls__cipher__info__t_1a9ad09e46f3b39db33f7ce7be13fabb4f" prot="public" virt="non-virtual"><scope>mbedtls_cipher_info_t</scope><name>private_block_size</name></member>
+      <member refid="structmbedtls__cipher__info__t_1aab43790142dea30ef7a9a7c9a5d86a15" prot="public" virt="non-virtual"><scope>mbedtls_cipher_info_t</scope><name>private_flags</name></member>
+      <member refid="structmbedtls__cipher__info__t_1a6ae104267001b35a8eb164934b422287" prot="public" virt="non-virtual"><scope>mbedtls_cipher_info_t</scope><name>private_iv_size</name></member>
+      <member refid="structmbedtls__cipher__info__t_1ae29148f3ae2a3abc83c03371852d2766" prot="public" virt="non-virtual"><scope>mbedtls_cipher_info_t</scope><name>private_key_bitlen</name></member>
+      <member refid="structmbedtls__cipher__info__t_1ad674859010eacd0f7cd54f447cf59c85" prot="public" virt="non-virtual"><scope>mbedtls_cipher_info_t</scope><name>private_mode</name></member>
+      <member refid="structmbedtls__cipher__info__t_1a0700c51941badfb12ccccd6d9c80b7d0" prot="public" virt="non-virtual"><scope>mbedtls_cipher_info_t</scope><name>private_name</name></member>
+      <member refid="structmbedtls__cipher__info__t_1af69e3590a3e533bf203c459ace063cc6" prot="public" virt="non-virtual"><scope>mbedtls_cipher_info_t</scope><name>private_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__core__key__attributes__t" kind="struct" language="C++" prot="public">
+    <compoundname>psa_core_key_attributes_t</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__core__key__attributes__t_1ad9ac3e09844077c5401de5478ef5ba4d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref></type>
+        <definition>psa_key_type_t psa_core_key_attributes_t::private_type</definition>
+        <argsstring></argsstring>
+        <name>private_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="234" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__core__key__attributes__t_1afac21d42b8a763781a9320f03ecdcd57" prot="public" static="no" mutable="no">
+        <type><ref refid="crypto__struct_8h_1a57270c808928ab5d7c9cfc7cb1e5735d" kindref="member">psa_key_bits_t</ref></type>
+        <definition>psa_key_bits_t psa_core_key_attributes_t::private_bits</definition>
+        <argsstring></argsstring>
+        <name>private_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="235" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__core__key__attributes__t_1ad394ed58ed34c0a020b48dc510a85341" prot="public" static="no" mutable="no">
+        <type><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref></type>
+        <definition>psa_key_lifetime_t psa_core_key_attributes_t::private_lifetime</definition>
+        <argsstring></argsstring>
+        <name>private_lifetime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="236" column="24" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__core__key__attributes__t_1a6d1f1bb1c10cdc3d10a944028774bd7e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__key__lifetimes_1ga9a5375bd0cb9694f3a2694adc0a6ae13" kindref="member">mbedtls_svc_key_id_t</ref></type>
+        <definition>mbedtls_svc_key_id_t psa_core_key_attributes_t::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="237" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__core__key__attributes__t_1a91fe1dee16d7120a67110c57cdb3415b" prot="public" static="no" mutable="no">
+        <type><ref refid="crypto__struct_8h_1af553efd409845b6d09ff25ce2ba36607" kindref="member">psa_key_policy_t</ref></type>
+        <definition>psa_key_policy_t psa_core_key_attributes_t::private_policy</definition>
+        <argsstring></argsstring>
+        <name>private_policy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="238" column="22" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__core__key__attributes__t_1af34a22a7efc954f0c6fe5d9795e2906b" prot="public" static="no" mutable="no">
+        <type><ref refid="crypto__struct_8h_1a71ff48e6c5d3dd77cc1e4c89d105106b" kindref="member">psa_key_attributes_flag_t</ref></type>
+        <definition>psa_key_attributes_flag_t psa_core_key_attributes_t::private_flags</definition>
+        <argsstring></argsstring>
+        <name>private_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="239" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>psa_key_policy_s</label>
+        <link refid="structpsa__key__policy__s"/>
+      </node>
+      <node id="1">
+        <label>psa_core_key_attributes_t</label>
+        <link refid="structpsa__core__key__attributes__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_policy</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="233" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="233" bodyend="240"/>
+    <listofallmembers>
+      <member refid="structpsa__core__key__attributes__t_1afac21d42b8a763781a9320f03ecdcd57" prot="public" virt="non-virtual"><scope>psa_core_key_attributes_t</scope><name>private_bits</name></member>
+      <member refid="structpsa__core__key__attributes__t_1af34a22a7efc954f0c6fe5d9795e2906b" prot="public" virt="non-virtual"><scope>psa_core_key_attributes_t</scope><name>private_flags</name></member>
+      <member refid="structpsa__core__key__attributes__t_1a6d1f1bb1c10cdc3d10a944028774bd7e" prot="public" virt="non-virtual"><scope>psa_core_key_attributes_t</scope><name>private_id</name></member>
+      <member refid="structpsa__core__key__attributes__t_1ad394ed58ed34c0a020b48dc510a85341" prot="public" virt="non-virtual"><scope>psa_core_key_attributes_t</scope><name>private_lifetime</name></member>
+      <member refid="structpsa__core__key__attributes__t_1a91fe1dee16d7120a67110c57cdb3415b" prot="public" virt="non-virtual"><scope>psa_core_key_attributes_t</scope><name>private_policy</name></member>
+      <member refid="structpsa__core__key__attributes__t_1ad9ac3e09844077c5401de5478ef5ba4d" prot="public" virt="non-virtual"><scope>psa_core_key_attributes_t</scope><name>private_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

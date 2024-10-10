@@ -1,0 +1,10 @@
+<map id="src/openvpn/schedule.h" name="src/openvpn/schedule.h">
+<area shape="rect" id="node1" title=" " alt="" coords="405,5,565,32"/>
+<area shape="rect" id="node2" href="$multi_8h.html" title=" " alt="" coords="331,80,467,107"/>
+<area shape="rect" id="node8" href="$schedule_8c.html" title=" " alt="" coords="491,80,651,107"/>
+<area shape="rect" id="node3" href="$mtcp_8c.html" title=" " alt="" coords="5,155,143,181"/>
+<area shape="rect" id="node4" href="$mudp_8c.html" title=" " alt="" coords="167,155,307,181"/>
+<area shape="rect" id="node5" href="$multi_8c.html" title=" " alt="" coords="331,155,467,181"/>
+<area shape="rect" id="node6" href="$openvpn_8c.html" title=" " alt="" coords="491,155,649,181"/>
+<area shape="rect" id="node7" href="$vlan_8c.html" title=" " alt="" coords="673,155,805,181"/>
+</map>

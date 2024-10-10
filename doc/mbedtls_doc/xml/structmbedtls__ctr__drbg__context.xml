@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ctr__drbg__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ctr_drbg_context</compoundname>
+    <includes refid="ctr__drbg_8h" local="no">ctr_drbg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1a91d1a66cb945f02a0954f2dabc6ff70d" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ctr_drbg_context::private_counter[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The counter (V). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="157" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1ad56c948cea65fda4ae58a92ed7a57f9e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_context::private_reseed_counter</definition>
+        <argsstring></argsstring>
+        <name>private_reseed_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The reseed counter. This is the number of requests that have been made since the last (re)seeding, minus one. Before the initial seeding, this field contains the amount of entropy in bytes to use as a nonce for the initial seeding, or -1 if no nonce length has been explicitly set (see <ref refid="ctr__drbg_8h_1a132667adb6ff7e8044e731283d67d1c0" kindref="member">mbedtls_ctr_drbg_set_nonce_len()</ref>). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="158" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1ace77964358c9106606ab6e3fba12a430" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_context::private_prediction_resistance</definition>
+        <argsstring></argsstring>
+        <name>private_prediction_resistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This determines whether prediction resistance is enabled, that is whether to systematically reseed before each random generation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="168" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1a4d1772d545328cb40453b54ff60fd93b" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ctr_drbg_context::private_entropy_len</definition>
+        <argsstring></argsstring>
+        <name>private_entropy_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The amount of entropy grabbed on each seed or reseed operation, in bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="172" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1af057e9b6db84afb7eeb668755abc0306" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_context::private_reseed_interval</definition>
+        <argsstring></argsstring>
+        <name>private_reseed_interval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The reseed interval. This is the maximum number of requests that can be made between reseedings. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="174" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1ab751543e1b7bfb20f8c2d4803bfc0543" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__aes__context" kindref="compound">mbedtls_aes_context</ref></type>
+        <definition>mbedtls_aes_context mbedtls_ctr_drbg_context::private_aes_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_aes_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The AES context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="178" column="25" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1aef42c7181f1d31333d2beaa664949d84" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_ctr_drbg_context::private_f_entropy) (void *, unsigned char *, size_t)</definition>
+        <argsstring>)(void *, unsigned char *, size_t)</argsstring>
+        <name>private_f_entropy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The entropy callback function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="183" column="5" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1a4683d502e2d7e65e98bc8744a227c559" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_ctr_drbg_context::private_p_entropy</definition>
+        <argsstring></argsstring>
+        <name>private_p_entropy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The context for the entropy function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="186" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ctr__drbg__context_1aefeb088a626eb251df977f10e369749b" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>mbedtls_threading_mutex_t mbedtls_ctr_drbg_context::private_mutex</definition>
+        <argsstring></argsstring>
+        <name>private_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="196" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The CTR_DRBG context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_aes_context</label>
+        <link refid="structmbedtls__aes__context"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_ctr_drbg_context</label>
+        <link refid="structmbedtls__ctr__drbg__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_mutex</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_aes_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_threading_mutex_t</label>
+        <link refid="structmbedtls__threading__mutex__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="156" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="156" bodyend="198"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ctr__drbg__context_1ab751543e1b7bfb20f8c2d4803bfc0543" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_aes_ctx</name></member>
+      <member refid="structmbedtls__ctr__drbg__context_1a91d1a66cb945f02a0954f2dabc6ff70d" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_counter</name></member>
+      <member refid="structmbedtls__ctr__drbg__context_1a4d1772d545328cb40453b54ff60fd93b" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_entropy_len</name></member>
+      <member refid="structmbedtls__ctr__drbg__context_1aef42c7181f1d31333d2beaa664949d84" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_f_entropy</name></member>
+      <member refid="structmbedtls__ctr__drbg__context_1aefeb088a626eb251df977f10e369749b" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_mutex</name></member>
+      <member refid="structmbedtls__ctr__drbg__context_1a4683d502e2d7e65e98bc8744a227c559" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_p_entropy</name></member>
+      <member refid="structmbedtls__ctr__drbg__context_1ace77964358c9106606ab6e3fba12a430" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_prediction_resistance</name></member>
+      <member refid="structmbedtls__ctr__drbg__context_1ad56c948cea65fda4ae58a92ed7a57f9e" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_reseed_counter</name></member>
+      <member refid="structmbedtls__ctr__drbg__context_1af057e9b6db84afb7eeb668755abc0306" prot="public" virt="non-virtual"><scope>mbedtls_ctr_drbg_context</scope><name>private_reseed_interval</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

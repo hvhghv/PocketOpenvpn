@@ -1,0 +1,467 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="error_8h" kind="file" language="C++">
+    <compoundname>error.h</compoundname>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes local="no">stddef.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="18">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="1">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="19">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>limits.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="3">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="5">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="8">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="6">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="error_8h_1af2303b58595515b2325a60244593eee1" prot="public" static="no">
+        <name>MBEDTLS_ERR_ERROR_GENERIC_ERROR</name>
+        <initializer>-0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error code layout.</para>
+<para>Currently we try to keep all error codes within the negative space of 16 bits signed integers to support all platforms (-0x0001 - -0x7FFF). In addition we&apos;d like to give two layers of information on the error if possible.</para>
+<para>For that purpose the error codes are segmented in the following manner:</para>
+<para>16 bit error code bit-segmentation</para>
+<para>1 bit - Unused (sign bit) 3 bits - High level module ID 5 bits - Module-dependent error code 7 bits - Low level module errors</para>
+<para>For historical reasons, low-level error codes are divided in even and odd, even codes were assigned first, and -1 is reserved for other errors.</para>
+<para>Low-level module errors (0x0002-0x007E, 0x0001-0x007F)</para>
+<para>Module Nr Codes assigned ERROR 2 0x006E 0x0001 MPI 7 0x0002-0x0010 GCM 3 0x0012-0x0016 0x0013-0x0013 THREADING 3 0x001A-0x001E AES 5 0x0020-0x0022 0x0021-0x0025 CAMELLIA 3 0x0024-0x0026 0x0027-0x0027 BASE64 2 0x002A-0x002C OID 1 0x002E-0x002E 0x000B-0x000B PADLOCK 1 0x0030-0x0030 DES 2 0x0032-0x0032 0x0033-0x0033 CTR_DBRG 4 0x0034-0x003A ENTROPY 3 0x003C-0x0040 0x003D-0x003F NET 13 0x0042-0x0052 0x0043-0x0049 ARIA 4 0x0058-0x005E ASN1 7 0x0060-0x006C CMAC 1 0x007A-0x007A PBKDF2 1 0x007C-0x007C HMAC_DRBG 4 0x0003-0x0009 CCM 3 0x000D-0x0011 MD5 1 0x002F-0x002F RIPEMD160 1 0x0031-0x0031 SHA1 1 0x0035-0x0035 0x0073-0x0073 SHA256 1 0x0037-0x0037 0x0074-0x0074 SHA512 1 0x0039-0x0039 0x0075-0x0075 SHA-3 1 0x0076-0x0076 CHACHA20 3 0x0051-0x0055 POLY1305 3 0x0057-0x005B CHACHAPOLY 2 0x0054-0x0056 PLATFORM 2 0x0070-0x0072 LMS 5 0x0011-0x0019</para>
+<para>High-level module nr (3 bits - 0x0...-0x7...) Name ID Nr of Errors PEM 1 9 PKCS#12 1 4 (Started from top) X509 2 20 PKCS5 2 4 (Started from top) DHM 3 11 PK 3 15 (Started from top) RSA 4 11 ECP 4 10 (Started from top) MD 5 5 HKDF 5 1 (Started from top) PKCS7 5 12 (Started from 0x5300) SSL 5 2 (Started from 0x5F00) CIPHER 6 8 (Started from 0x6080) SSL 6 22 (Started from top, plus 0x6000) SSL 7 20 (Started from 0x7000, gaps at 0x7380, 0x7900-0x7980, 0x7A80-0x7E80)</para>
+<para>Module dependent error code (5 bits 0x.00.-0x.F8.) Generic error </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="98" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="error_8h_1a86d8d60cc3b30fc750e70bf2aa263867" prot="public" static="no">
+        <name>MBEDTLS_ERR_ERROR_CORRUPTION_DETECTED</name>
+        <initializer>-0x006E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a bug in the library </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="100" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="error_8h_1afdd852a8f513757d930113fb67ec0ea1" prot="public" static="no">
+        <name>MBEDTLS_ERR_PLATFORM_HW_ACCEL_FAILED</name>
+        <initializer>-0x0070</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hardware accelerator failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="103" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="error_8h_1a211074d4c5489c669078f1888ffee823" prot="public" static="no">
+        <name>MBEDTLS_ERR_PLATFORM_FEATURE_UNSUPPORTED</name>
+        <initializer>-0x0072</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The requested feature is not supported by the platform </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="105" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="error_8h_1a5ad7875fa94715d9385236becd9a4fcc" prot="public" static="no">
+        <name>MBEDTLS_ERROR_ADD</name>
+        <param><defname>high</defname></param>
+        <param><defname>low</defname></param>
+        <initializer><ref refid="error_8h_1a62398284a25120377ff0604fe1b7214a" kindref="member">mbedtls_error_add</ref>(high, low, __FILE__, __LINE__)</initializer>
+        <briefdescription>
+<para>Combines a high-level and low-level error code together. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   Wrapper macro for mbedtls_error_add(). See that function for
+   more details.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="113" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="error_8h_1a25a1a6969f894f3454a0be5094e41ef2" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* mbedtls_test_hook_error_add) (int, int, const char *, int)</definition>
+        <argsstring>)(int, int, const char *, int)</argsstring>
+        <name>mbedtls_test_hook_error_add</name>
+        <briefdescription>
+<para>Testing hook called before adding/combining two error codes together. Only used when invasive testing is enabled via MBEDTLS_TEST_HOOKS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="121" column="8" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" declline="121" declcolumn="8"/>
+        <referencedby refid="error_8h_1a62398284a25120377ff0604fe1b7214a" compoundref="error_8h" startline="142" endline="154">mbedtls_error_add</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="error_8h_1a62398284a25120377ff0604fe1b7214a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mbedtls_error_add</definition>
+        <argsstring>(int high, int low, const char *file, int line)</argsstring>
+        <name>mbedtls_error_add</name>
+        <param>
+          <type>int</type>
+          <declname>high</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>Combines a high-level and low-level error code together. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>   This function can be called directly however it is usually
+   called via the #MBEDTLS_ERROR_ADD macro.
+
+   While a value of zero is not a negative error code, it is still an
+   error code (that denotes success) and can be combined with both a
+   negative error code or another value of zero.
+</verbatim></para>
+<para><simplesect kind="note"><para>When invasive testing is enabled via <ref refid="mbedtls__config_8h_1a17fd090aed0539bb286eaf949d4714ac" kindref="member">MBEDTLS_TEST_HOOKS</ref>, also try to call <ref refid="error_8h_1a25a1a6969f894f3454a0be5094e41ef2" kindref="member">mbedtls_test_hook_error_add</ref>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>high-level error code. See <ref refid="error_8h" kindref="compound">error.h</ref> for more details. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>low</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>low-level error code. See <ref refid="error_8h" kindref="compound">error.h</ref> for more details. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file where this error code addition occurred. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line where this error code addition occurred. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="142" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" bodystart="142" bodyend="154"/>
+        <references refid="error_8h_1a25a1a6969f894f3454a0be5094e41ef2">mbedtls_test_hook_error_add</references>
+      </memberdef>
+      <memberdef kind="function" id="error_8h_1a8c41c149b77a4807115b19c2af858558" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_strerror</definition>
+        <argsstring>(int errnum, char *buffer, size_t buflen)</argsstring>
+        <name>mbedtls_strerror</name>
+        <param>
+          <type>int</type>
+          <declname>errnum</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+<para>Translate an Mbed TLS error code into a string representation. The result is truncated if necessary and always includes a terminating null byte. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errnum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to place representation in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="165" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" declline="165" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="error_8h_1adf68c32093cc42ad32ca849e8efc4f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* mbedtls_high_level_strerr</definition>
+        <argsstring>(int error_code)</argsstring>
+        <name>mbedtls_high_level_strerr</name>
+        <param>
+          <type>int</type>
+          <declname>error_code</declname>
+        </param>
+        <briefdescription>
+<para>Translate the high-level part of an Mbed TLS error code into a string representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns a const pointer to an un-modifiable string. The caller must not try to modify the string. It is intended to be used mostly for logging purposes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error_code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error code</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string representation of the error code, or <computeroutput>NULL</computeroutput> if the error code is unknown. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="180" column="12" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" declline="180" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="error_8h_1aca47fc21482d3c802442934f42dba491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* mbedtls_low_level_strerr</definition>
+        <argsstring>(int error_code)</argsstring>
+        <name>mbedtls_low_level_strerr</name>
+        <param>
+          <type>int</type>
+          <declname>error_code</declname>
+        </param>
+        <briefdescription>
+<para>Translate the low-level part of an Mbed TLS error code into a string representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns a const pointer to an un-modifiable string. The caller must not try to modify the string. It is intended to be used mostly for logging purposes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error_code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error code</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string representation of the error code, or <computeroutput>NULL</computeroutput> if the error code is unknown. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" line="195" column="12" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h" declline="195" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Error to string translation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ERROR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ERROR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="error_8h_1af2303b58595515b2325a60244593eee1" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ERROR_GENERIC_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="error_8h_1a86d8d60cc3b30fc750e70bf2aa263867" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ERROR_CORRUPTION_DETECTED<sp/>-0x006E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="error_8h_1afdd852a8f513757d930113fb67ec0ea1" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PLATFORM_HW_ACCEL_FAILED<sp/><sp/><sp/><sp/><sp/>-0x0070</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="error_8h_1a211074d4c5489c669078f1888ffee823" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PLATFORM_FEATURE_UNSUPPORTED<sp/>-0x0072</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="error_8h_1a5ad7875fa94715d9385236becd9a4fcc" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERROR_ADD(high,<sp/>low)<sp/>\</highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>mbedtls_error_add(high,<sp/>low,<sp/>__FILE__,<sp/>__LINE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_TEST_HOOKS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="error_8h_1a25a1a6969f894f3454a0be5094e41ef2" kindref="member">mbedtls_test_hook_error_add</ref>)(int,<sp/>int,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>int);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="error_8h_1a62398284a25120377ff0604fe1b7214a" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="error_8h_1a62398284a25120377ff0604fe1b7214a" kindref="member">mbedtls_error_add</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>high,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>low,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_TEST_HOOKS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="error_8h_1a25a1a6969f894f3454a0be5094e41ef2" kindref="member">mbedtls_test_hook_error_add</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*mbedtls_test_hook_error_add)(high,<sp/>low,<sp/>file,<sp/>line);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>file;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>line;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>high<sp/>+<sp/>low;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="error_8h_1a8c41c149b77a4807115b19c2af858558" kindref="member">mbedtls_strerror</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errnum,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="error_8h_1adf68c32093cc42ad32ca849e8efc4f1e" kindref="member">mbedtls_high_level_strerr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error_code);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="error_8h_1aca47fc21482d3c802442934f42dba491" kindref="member">mbedtls_low_level_strerr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error_code);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>error.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/error.h"/>
+  </compounddef>
+</doxygen>

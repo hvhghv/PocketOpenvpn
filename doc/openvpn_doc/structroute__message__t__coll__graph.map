@@ -1,0 +1,6 @@
+<map id="route_message_t" name="route_message_t">
+<area shape="rect" id="node1" title=" " alt="" coords="116,109,239,136"/>
+<area shape="rect" id="node2" href="$unioninet__address__t.html" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node3" href="$structinterface__t.html" title=" " alt="" coords="136,5,219,32"/>
+<area shape="rect" id="node4" href="$structmessage__header__t.html" title=" " alt="" coords="243,5,375,32"/>
+</map>

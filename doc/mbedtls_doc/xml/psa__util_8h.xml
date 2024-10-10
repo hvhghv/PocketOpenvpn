@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="psa__util_8h" kind="file" language="C++">
+    <compoundname>psa_util.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="ctr__drbg_8h" local="yes">mbedtls/ctr_drbg.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="30">
+        <label>stdlib.h</label>
+      </node>
+      <node id="29">
+        <label>mbedtls/threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="24">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>mbedtls/aes.h</label>
+        <link refid="aes_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>entropy.h</label>
+        <link refid="entropy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="31">
+        <label>pthread.h</label>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>mbedtls/ctr_drbg.h</label>
+        <link refid="ctr__drbg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="1">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="25">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="28">
+        <label>md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="26">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="psa__util_8h_1a52a3283a6e785a50a6a88b0e6749e01c" prot="public" static="no">
+        <name>MBEDTLS_PSA_RANDOM_STATE</name>
+        <initializer><ref refid="psa__util_8h_1a73731d1f2ad0e62a91d4e56164acc913" kindref="member">mbedtls_psa_random_state</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" line="99" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="psa__util_8h_1a944c0e7be86065ffefa4fb073f25b43e" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int mbedtls_f_rng_t(void *p_rng, unsigned char *output, size_t output_size)</definition>
+        <argsstring>(void *p_rng, unsigned char *output, size_t output_size)</argsstring>
+        <name>mbedtls_f_rng_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" line="31" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="psa__util_8h_1a323e28e5d44bc768676cce679866b782" prot="public" static="no">
+        <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref></type>
+        <definition>typedef mbedtls_ctr_drbg_context mbedtls_psa_drbg_context_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_psa_drbg_context_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" line="90" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="psa__util_8h_1a529c4591e69f9771e2a4e6d3b1629dff" prot="public" static="yes" mutable="no">
+        <type><ref refid="psa__util_8h_1a944c0e7be86065ffefa4fb073f25b43e" kindref="member">mbedtls_f_rng_t</ref> *const</type>
+        <definition>mbedtls_f_rng_t* const mbedtls_psa_get_random</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_psa_get_random</name>
+        <initializer>= <ref refid="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" kindref="member">mbedtls_ctr_drbg_random</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" line="91" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="psa__util_8h_1a73731d1f2ad0e62a91d4e56164acc913" prot="public" static="no" mutable="no">
+        <type><ref refid="psa__util_8h_1a323e28e5d44bc768676cce679866b782" kindref="member">mbedtls_psa_drbg_context_t</ref> *const</type>
+        <definition>mbedtls_psa_drbg_context_t* const mbedtls_psa_random_state</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_psa_random_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" line="97" column="41" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h" declline="97" declcolumn="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility functions for the use of the PSA Crypto library. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_PSA_UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Expose<sp/>whatever<sp/>RNG<sp/>the<sp/>PSA<sp/>subsystem<sp/>uses<sp/>to<sp/>applications<sp/>using<sp/>the</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>mbedtls_xxx<sp/>API.<sp/>The<sp/>declarations<sp/>and<sp/>definitions<sp/>here<sp/>need<sp/>to<sp/>be</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>consistent<sp/>with<sp/>the<sp/>implementation<sp/>in<sp/>library/psa_crypto_random_impl.h.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>See<sp/>that<sp/>file<sp/>for<sp/>implementation<sp/>documentation.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>type<sp/>of<sp/>a<sp/>`f_rng`<sp/>random<sp/>generator<sp/>function<sp/>that<sp/>many<sp/>library<sp/>functions</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>take.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>This<sp/>type<sp/>name<sp/>is<sp/>not<sp/>part<sp/>of<sp/>the<sp/>Mbed<sp/>TLS<sp/>stable<sp/>API.<sp/>It<sp/>may<sp/>be<sp/>renamed</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>or<sp/>moved<sp/>without<sp/>warning.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="psa__util_8h_1a944c0e7be86065ffefa4fb073f25b43e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="psa__util_8h_1a944c0e7be86065ffefa4fb073f25b43e" kindref="member">mbedtls_f_rng_t</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_size);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="psa__util_8h_1a529c4591e69f9771e2a4e6d3b1629dff" kindref="member">mbedtls_psa_get_random</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_size);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_RANDOM_STATE<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>!defined(MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CTR_DRBG_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ctr__drbg_8h" kindref="compound">mbedtls/ctr_drbg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="psa__util_8h_1a323e28e5d44bc768676cce679866b782" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/><ref refid="psa__util_8h_1a323e28e5d44bc768676cce679866b782" kindref="member">mbedtls_psa_drbg_context_t</ref>;</highlight></codeline>
+<codeline lineno="91" refid="psa__util_8h_1a529c4591e69f9771e2a4e6d3b1629dff" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="psa__util_8h_1a944c0e7be86065ffefa4fb073f25b43e" kindref="member">mbedtls_f_rng_t</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="psa__util_8h_1a529c4591e69f9771e2a4e6d3b1629dff" kindref="member">mbedtls_psa_get_random</ref><sp/>=<sp/><ref refid="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" kindref="member">mbedtls_ctr_drbg_random</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_HMAC_DRBG_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hmac__drbg_8h" kindref="compound">mbedtls/hmac_drbg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__hmac__drbg__context" kindref="compound">mbedtls_hmac_drbg_context</ref><sp/><ref refid="psa__util_8h_1a323e28e5d44bc768676cce679866b782" kindref="member">mbedtls_psa_drbg_context_t</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="psa__util_8h_1a944c0e7be86065ffefa4fb073f25b43e" kindref="member">mbedtls_f_rng_t</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="psa__util_8h_1a529c4591e69f9771e2a4e6d3b1629dff" kindref="member">mbedtls_psa_get_random</ref><sp/>=<sp/><ref refid="hmac__drbg_8h_1aa66cb34019161010448c7e915a972ee6" kindref="member">mbedtls_hmac_drbg_random</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_psa_drbg_context_t</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="psa__util_8h_1a73731d1f2ad0e62a91d4e56164acc913" kindref="member">mbedtls_psa_random_state</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="psa__util_8h_1a52a3283a6e785a50a6a88b0e6749e01c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_RANDOM_STATE<sp/>mbedtls_psa_random_state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!defined(MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_CRYPTO_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_UTIL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/psa_util.h"/>
+  </compounddef>
+</doxygen>

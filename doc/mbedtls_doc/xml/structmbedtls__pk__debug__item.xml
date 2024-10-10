@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__pk__debug__item" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_pk_debug_item</compoundname>
+    <includes refid="pk_8h" local="no">pk.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__pk__debug__item_1abbc62b0243f5a95ef00a31c628e9ba9b" prot="public" static="no" mutable="no">
+        <type><ref refid="pk_8h_1a959c5419b3dd34df5420ee83bbc54002" kindref="member">mbedtls_pk_debug_type</ref></type>
+        <definition>mbedtls_pk_debug_type mbedtls_pk_debug_item::private_type</definition>
+        <argsstring></argsstring>
+        <name>private_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" line="205" column="27" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pk__debug__item_1a61526629e6a8d8cf3022cbb807fbdf81" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* mbedtls_pk_debug_item::private_name</definition>
+        <argsstring></argsstring>
+        <name>private_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" line="206" column="16" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pk__debug__item_1ac98796c5070310dc875303a8b18cf88a" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_pk_debug_item::private_value</definition>
+        <argsstring></argsstring>
+        <name>private_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" line="207" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Item to send to the debug module. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" line="204" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pk.h" bodystart="204" bodyend="208"/>
+    <listofallmembers>
+      <member refid="structmbedtls__pk__debug__item_1a61526629e6a8d8cf3022cbb807fbdf81" prot="public" virt="non-virtual"><scope>mbedtls_pk_debug_item</scope><name>private_name</name></member>
+      <member refid="structmbedtls__pk__debug__item_1abbc62b0243f5a95ef00a31c628e9ba9b" prot="public" virt="non-virtual"><scope>mbedtls_pk_debug_item</scope><name>private_type</name></member>
+      <member refid="structmbedtls__pk__debug__item_1ac98796c5070310dc875303a8b18cf88a" prot="public" virt="non-virtual"><scope>mbedtls_pk_debug_item</scope><name>private_value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

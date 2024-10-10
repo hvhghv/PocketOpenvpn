@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__lmots__parameters__t" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_lmots_parameters_t</compoundname>
+    <includes refid="lms_8h" local="no">lms.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__lmots__parameters__t_1acb07f9fdc53838f6b08b603d217b50ea" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_lmots_parameters_t::private_I_key_identifier[(16u)]</definition>
+        <argsstring>[(16u)]</argsstring>
+        <name>private_I_key_identifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The key identifier. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/lms.h" line="94" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/lms.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__lmots__parameters__t_1adaf583f6fde1b34464c70cd731b45a4d" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_lmots_parameters_t::private_q_leaf_identifier[(4u)]</definition>
+        <argsstring>[(4u)]</argsstring>
+        <name>private_q_leaf_identifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Which leaf of the LMS key this is. 0 if the key is not part of an LMS key. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/lms.h" line="96" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/lms.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__lmots__parameters__t_1a01c5dbecc9b57764303fcc959d69e773" prot="public" static="no" mutable="no">
+        <type><ref refid="lms_8h_1a45cdaf82c1d105b436e624d7bf2a6671" kindref="member">mbedtls_lmots_algorithm_type_t</ref></type>
+        <definition>mbedtls_lmots_algorithm_type_t mbedtls_lmots_parameters_t::private_type</definition>
+        <argsstring></argsstring>
+        <name>private_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LM-OTS key type identifier as per IANA. Only SHA256_N32_W8 is currently supported. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/lms.h" line="99" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/lms.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>LMOTS parameters structure.</para>
+<para>This contains the metadata associated with an LMOTS key, detailing the algorithm type, the key ID, and the leaf identifier should be key be part of a LMS key. </para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/lms.h" line="93" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/lms.h" bodystart="93" bodyend="102"/>
+    <listofallmembers>
+      <member refid="structmbedtls__lmots__parameters__t_1acb07f9fdc53838f6b08b603d217b50ea" prot="public" virt="non-virtual"><scope>mbedtls_lmots_parameters_t</scope><name>private_I_key_identifier</name></member>
+      <member refid="structmbedtls__lmots__parameters__t_1adaf583f6fde1b34464c70cd731b45a4d" prot="public" virt="non-virtual"><scope>mbedtls_lmots_parameters_t</scope><name>private_q_leaf_identifier</name></member>
+      <member refid="structmbedtls__lmots__parameters__t_1a01c5dbecc9b57764303fcc959d69e773" prot="public" virt="non-virtual"><scope>mbedtls_lmots_parameters_t</scope><name>private_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

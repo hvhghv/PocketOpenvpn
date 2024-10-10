@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__chachapoly__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_chachapoly_context</compoundname>
+    <includes refid="chachapoly_8h" local="no">chachapoly.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__chachapoly__context_1a8d864314f02cab13131c3ae1078953eb" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__chacha20__context" kindref="compound">mbedtls_chacha20_context</ref></type>
+        <definition>mbedtls_chacha20_context mbedtls_chachapoly_context::private_chacha20_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_chacha20_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The ChaCha20 context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" line="49" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__chachapoly__context_1a41414cfd029628eb47c2d352270cb0ec" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__poly1305__context" kindref="compound">mbedtls_poly1305_context</ref></type>
+        <definition>mbedtls_poly1305_context mbedtls_chachapoly_context::private_poly1305_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_poly1305_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Poly1305 context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" line="50" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__chachapoly__context_1ae805c18c6ce1e8e301c180979a5c904a" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_chachapoly_context::private_aad_len</definition>
+        <argsstring></argsstring>
+        <name>private_aad_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length (bytes) of the Additional Authenticated Data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" line="51" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__chachapoly__context_1a7815b03de1cd3ad07ec0f571945d5840" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_chachapoly_context::private_ciphertext_len</definition>
+        <argsstring></argsstring>
+        <name>private_ciphertext_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length (bytes) of the ciphertext. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" line="52" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__chachapoly__context_1aab7f2d9dc064b9d31e67154520997e2f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_chachapoly_context::private_state</definition>
+        <argsstring></argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current state of the context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" line="53" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__chachapoly__context_1a42c2d4ab35a97a983b18c055c0617f33" prot="public" static="no" mutable="no">
+        <type><ref refid="chachapoly_8h_1aed9737497f9096f67edc8eab036fb341" kindref="member">mbedtls_chachapoly_mode_t</ref></type>
+        <definition>mbedtls_chachapoly_mode_t mbedtls_chachapoly_context::private_mode</definition>
+        <argsstring></argsstring>
+        <name>private_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cipher mode (encrypt or decrypt). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" line="54" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_chacha20_context</label>
+        <link refid="structmbedtls__chacha20__context"/>
+      </node>
+      <node id="2">
+        <label>mbedtls_poly1305_context</label>
+        <link refid="structmbedtls__poly1305__context"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_chachapoly_context</label>
+        <link refid="structmbedtls__chachapoly__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_poly1305_ctx</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_chacha20_ctx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" line="48" column="41" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/chachapoly.h" bodystart="48" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structmbedtls__chachapoly__context_1ae805c18c6ce1e8e301c180979a5c904a" prot="public" virt="non-virtual"><scope>mbedtls_chachapoly_context</scope><name>private_aad_len</name></member>
+      <member refid="structmbedtls__chachapoly__context_1a8d864314f02cab13131c3ae1078953eb" prot="public" virt="non-virtual"><scope>mbedtls_chachapoly_context</scope><name>private_chacha20_ctx</name></member>
+      <member refid="structmbedtls__chachapoly__context_1a7815b03de1cd3ad07ec0f571945d5840" prot="public" virt="non-virtual"><scope>mbedtls_chachapoly_context</scope><name>private_ciphertext_len</name></member>
+      <member refid="structmbedtls__chachapoly__context_1a42c2d4ab35a97a983b18c055c0617f33" prot="public" virt="non-virtual"><scope>mbedtls_chachapoly_context</scope><name>private_mode</name></member>
+      <member refid="structmbedtls__chachapoly__context_1a41414cfd029628eb47c2d352270cb0ec" prot="public" virt="non-virtual"><scope>mbedtls_chachapoly_context</scope><name>private_poly1305_ctx</name></member>
+      <member refid="structmbedtls__chachapoly__context_1aab7f2d9dc064b9d31e67154520997e2f" prot="public" virt="non-virtual"><scope>mbedtls_chachapoly_context</scope><name>private_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

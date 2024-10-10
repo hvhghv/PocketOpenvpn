@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__cipher__context__t" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_cipher_context_t</compoundname>
+    <includes refid="cipher_8h" local="no">cipher.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1a6bafa7c136e16ea3d260ae88980631e0" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structmbedtls__cipher__info__t" kindref="compound">mbedtls_cipher_info_t</ref> *</type>
+        <definition>const mbedtls_cipher_info_t* mbedtls_cipher_context_t::private_cipher_info</definition>
+        <argsstring></argsstring>
+        <name>private_cipher_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Information about the associated cipher. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="318" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1acd66328d6efe4dd755f4365182183ce3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_cipher_context_t::private_key_bitlen</definition>
+        <argsstring></argsstring>
+        <name>private_key_bitlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Key length to use. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="321" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1a4bb8e7536714de01e3359687df60db35" prot="public" static="no" mutable="no">
+        <type><ref refid="cipher_8h_1aaa5f820a58011f938ba3389555ba5b3f" kindref="member">mbedtls_operation_t</ref></type>
+        <definition>mbedtls_operation_t mbedtls_cipher_context_t::private_operation</definition>
+        <argsstring></argsstring>
+        <name>private_operation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operation that the key of the context has been initialized for. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="326" column="25" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1a1b5398a44201bc4e66308e8527525ffa" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* mbedtls_cipher_context_t::private_add_padding) (unsigned char *output, size_t olen, size_t data_len)</definition>
+        <argsstring>)(unsigned char *output, size_t olen, size_t data_len)</argsstring>
+        <name>private_add_padding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Padding functions to use, if relevant for the specific cipher mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="332" column="5" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1a6da6db9dc797ef5739c916d8ffc13937" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_cipher_context_t::private_get_padding) (unsigned char *input, size_t ilen, size_t *data_len)</definition>
+        <argsstring>)(unsigned char *input, size_t ilen, size_t *data_len)</argsstring>
+        <name>private_get_padding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="333" column="5" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1a3ae6c6e48c40205cab65927725e16139" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_cipher_context_t::private_unprocessed_data[MBEDTLS_MAX_BLOCK_LENGTH]</definition>
+        <argsstring>[MBEDTLS_MAX_BLOCK_LENGTH]</argsstring>
+        <name>private_unprocessed_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Buffer for input that has not been processed yet. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="337" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1a61763361492bca3e6e2fb11251dd8147" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_cipher_context_t::private_unprocessed_len</definition>
+        <argsstring></argsstring>
+        <name>private_unprocessed_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of Bytes that have not been processed yet. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="340" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1a3abb0edc5952c8d39b4b18d785c0af75" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_cipher_context_t::private_iv[MBEDTLS_MAX_IV_LENGTH]</definition>
+        <argsstring>[MBEDTLS_MAX_IV_LENGTH]</argsstring>
+        <name>private_iv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current IV or NONCE_COUNTER for CTR-mode, data unit (or sector) number for XTS-mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="344" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1ad1152a5dfc634df6b9f11a90a09c87f5" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_cipher_context_t::private_iv_size</definition>
+        <argsstring></argsstring>
+        <name>private_iv_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IV size in Bytes, for ciphers with variable-length IVs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="347" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1a81815c800239bfeb342455ca593eb02a" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_cipher_context_t::private_cipher_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_cipher_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cipher-specific context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="350" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1ac552a86563524ab2e6c1b1c368bd98de" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__cmac__context__t" kindref="compound">mbedtls_cmac_context_t</ref> *</type>
+        <definition>mbedtls_cmac_context_t* mbedtls_cipher_context_t::private_cmac_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_cmac_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CMAC-specific context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="354" column="28" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cipher__context__t_1aea096089c4e4e71e620fce6179265486" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_cipher_context_t::private_psa_enabled</definition>
+        <argsstring></argsstring>
+        <name>private_psa_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether the cipher operations should be performed by Mbed TLS&apos; own crypto library or an external implementation of the PSA Crypto API. This is unset if the cipher context was established through <ref refid="cipher_8h_1a009056b59d69abba5843ce78cd9aae1c" kindref="member">mbedtls_cipher_setup()</ref>, and set if it was established through <ref refid="cipher_8h_1a867d5eb112b7cc2f7692ecacaf58f30c" kindref="member">mbedtls_cipher_setup_psa()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="365" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Generic cipher context. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" line="316" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cipher.h" bodystart="316" bodyend="368"/>
+    <listofallmembers>
+      <member refid="structmbedtls__cipher__context__t_1a1b5398a44201bc4e66308e8527525ffa" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_add_padding</name></member>
+      <member refid="structmbedtls__cipher__context__t_1a81815c800239bfeb342455ca593eb02a" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_cipher_ctx</name></member>
+      <member refid="structmbedtls__cipher__context__t_1a6bafa7c136e16ea3d260ae88980631e0" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_cipher_info</name></member>
+      <member refid="structmbedtls__cipher__context__t_1ac552a86563524ab2e6c1b1c368bd98de" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_cmac_ctx</name></member>
+      <member refid="structmbedtls__cipher__context__t_1a6da6db9dc797ef5739c916d8ffc13937" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_get_padding</name></member>
+      <member refid="structmbedtls__cipher__context__t_1a3abb0edc5952c8d39b4b18d785c0af75" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_iv</name></member>
+      <member refid="structmbedtls__cipher__context__t_1ad1152a5dfc634df6b9f11a90a09c87f5" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_iv_size</name></member>
+      <member refid="structmbedtls__cipher__context__t_1acd66328d6efe4dd755f4365182183ce3" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_key_bitlen</name></member>
+      <member refid="structmbedtls__cipher__context__t_1a4bb8e7536714de01e3359687df60db35" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_operation</name></member>
+      <member refid="structmbedtls__cipher__context__t_1aea096089c4e4e71e620fce6179265486" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_psa_enabled</name></member>
+      <member refid="structmbedtls__cipher__context__t_1a3ae6c6e48c40205cab65927725e16139" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_unprocessed_data</name></member>
+      <member refid="structmbedtls__cipher__context__t_1a61763361492bca3e6e2fb11251dd8147" prot="public" virt="non-virtual"><scope>mbedtls_cipher_context_t</scope><name>private_unprocessed_len</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ecp__group" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ecp_group</compoundname>
+    <includes refid="ecp_8h" local="no">ecp.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a3e572cd2e40e1c23fc9a7a6aef7122d6" prot="public" static="no" mutable="no">
+        <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+        <definition>mbedtls_ecp_group_id mbedtls_ecp_group::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An internal group identifier. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="233" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1ae049e9c949bf5d30e71b4b31819f6007" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecp_group::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The prime modulus of the base field. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="234" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1af6ab87eb277c78f786ca58ed3fd78825" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecp_group::A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For Short Weierstrass: <computeroutput>A</computeroutput> in the equation. Note that <computeroutput>A</computeroutput> is not set to the authentic value in some cases. Refer to detailed description of <ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> if using domain parameters in the structure. For Montgomery curves: <computeroutput>(A + 2) / 4</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="235" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="235" bodyend="-1"/>
+        <referencedby refid="ecp_8h_1afe02d9e7640018bce1bf70a8e5928e8f" compoundref="ecp_8h" startline="1021" endline="1024">mbedtls_ecp_group_a_is_minus_3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1ab54c9e6b1807d5c10db76f7ebedd55f4" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecp_group::B</definition>
+        <argsstring></argsstring>
+        <name>B</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For Short Weierstrass: <computeroutput>B</computeroutput> in the equation. For Montgomery curves: unused. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="240" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a7e0aca0789ca8f5c38d3a0c98b2f9809" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref></type>
+        <definition>mbedtls_ecp_point mbedtls_ecp_group::G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The generator of the subgroup used. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="242" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a7104724a939b7eef2ae3627db410e1e8" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></type>
+        <definition>mbedtls_mpi mbedtls_ecp_group::N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The order of <computeroutput>G</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="243" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a039ad9e51dc52e46a422e74051b2b837" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ecp_group::pbits</definition>
+        <argsstring></argsstring>
+        <name>pbits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of bits in <computeroutput>P</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="244" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1aee5ef1a30d9a5e34810c7a9a7120a10b" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ecp_group::nbits</definition>
+        <argsstring></argsstring>
+        <name>nbits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For Short Weierstrass: The number of bits in <computeroutput>P</computeroutput>. For Montgomery curves: the number of bits in the private keys. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="245" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a636430ac22decc2c2c6d66a158dcd63e" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_ecp_group::private_h</definition>
+        <argsstring></argsstring>
+        <name>private_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="250" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a50f06946fa5ba962041d2f91334f8a36" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_ecp_group::private_modp) (mbedtls_mpi *)</definition>
+        <argsstring>)(mbedtls_mpi *)</argsstring>
+        <name>private_modp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function for fast pseudo-reduction mod <computeroutput>P</computeroutput> (see above). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="251" column="5" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a8ae36958f53b75b69cd2f926750c2cfb" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_ecp_group::private_t_pre) (mbedtls_ecp_point *, void *)</definition>
+        <argsstring>)(mbedtls_ecp_point *, void *)</argsstring>
+        <name>private_t_pre</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unused. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="253" column="5" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a40acc844c68655ff4247535c21e061aa" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_ecp_group::private_t_post) (mbedtls_ecp_point *, void *)</definition>
+        <argsstring>)(mbedtls_ecp_point *, void *)</argsstring>
+        <name>private_t_post</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unused. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="254" column="5" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1a4b258ea8a28b79a8cc5ed136038c0b41" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_ecp_group::private_t_data</definition>
+        <argsstring></argsstring>
+        <name>private_t_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unused. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="255" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1aee9bca7c36cfaf5bacf8530f359df8fb" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref> *</type>
+        <definition>mbedtls_ecp_point* mbedtls_ecp_group::private_T</definition>
+        <argsstring></argsstring>
+        <name>private_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pre-computed points for ecp_mul_comb(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="256" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__group_1ad4e6e5a100ef1ab995e23f7bbdd1f937" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ecp_group::private_T_size</definition>
+        <argsstring></argsstring>
+        <name>private_T_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of dynamic allocated pre-computed points. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="257" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The ECP group structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>We consider two types of curve equations: <itemizedlist>
+<listitem>
+<para>Short Weierstrass: <computeroutput>y^2 = x^3 + A x + B mod P</computeroutput> (SEC1 + RFC-4492) </para>
+</listitem>
+<listitem>
+<para>Montgomery: <computeroutput>y^2 = x^3 + A x^2 + x mod P</computeroutput> (Curve25519, Curve448)</para>
+</listitem>
+</itemizedlist>
+In both cases, the generator (<computeroutput>G</computeroutput>) for a prime-order subgroup is fixed.</para>
+<para>For Short Weierstrass, this subgroup is the whole curve, and its cardinality is denoted by <computeroutput>N</computeroutput>. Our code requires that <computeroutput>N</computeroutput> is an odd prime as <ref refid="ecp_8h_1a4d005045c302e100c78bdc587e8f0e6a" kindref="member">mbedtls_ecp_mul()</ref> requires an odd number, and <ref refid="ecdsa_8h_1af10f6fda2169862871d0ac07555c8641" kindref="member">mbedtls_ecdsa_sign()</ref> requires that it is prime for blinding purposes.</para>
+<para>The default implementation only initializes <computeroutput>A</computeroutput> without setting it to the authentic value for curves with <computeroutput>A = -3</computeroutput>(SECP256R1, etc), in which case you need to load <computeroutput>A</computeroutput> by yourself when using domain parameters directly, for example: <programlisting><codeline><highlight class="normal">mbedtls_mpi_init(&amp;A);</highlight></codeline>
+<codeline><highlight class="normal">mbedtls_ecp_group_init(&amp;grp);</highlight></codeline>
+<codeline><highlight class="normal">CHECK_RETURN(mbedtls_ecp_group_load(&amp;grp,<sp/>grp_id));</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(mbedtls_ecp_group_a_is_minus_3(&amp;grp))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CHECK_RETURN(mbedtls_mpi_sub_int(&amp;A,<sp/>&amp;grp.P,<sp/>3));</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CHECK_RETURN(mbedtls_mpi_copy(&amp;A,<sp/>&amp;grp.A));</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">do_something_with_a(&amp;A);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">cleanup:</highlight></codeline>
+<codeline><highlight class="normal">mbedtls_mpi_free(&amp;A);</highlight></codeline>
+<codeline><highlight class="normal">mbedtls_ecp_group_free(&amp;grp);</highlight></codeline>
+</programlisting></para>
+<para>For Montgomery curves, we do not store <computeroutput>A</computeroutput>, but <computeroutput>(A + 2) / 4</computeroutput>, which is the quantity used in the formulas. Additionally, <computeroutput>nbits</computeroutput> is not the size of <computeroutput>N</computeroutput> but the required size for private keys.</para>
+<para>If <computeroutput>modp</computeroutput> is NULL, reduction modulo <computeroutput>P</computeroutput> is done using a generic algorithm. Otherwise, <computeroutput>modp</computeroutput> must point to a function that takes an <computeroutput><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref></computeroutput> in the range of <computeroutput>0..2^(2*pbits)-1</computeroutput>, and transforms it in-place to an integer which is congruent mod <computeroutput>P</computeroutput> to the given MPI, and is close enough to <computeroutput>pbits</computeroutput> in size, so that it may be efficiently brought in the 0..P-1 range by a few additions or subtractions. Therefore, it is only an approximative modular reduction. It must return 0 on success and non-zero on failure.</para>
+<para><simplesect kind="note"><para>Alternative implementations of the ECP module must obey the following constraints.<itemizedlist>
+<listitem><para>Group IDs must be distinct: if two group structures have the same ID, then they must be identical.</para>
+</listitem><listitem><para>The fields <computeroutput>id</computeroutput>, <computeroutput>P</computeroutput>, <computeroutput>A</computeroutput>, <computeroutput>B</computeroutput>, <computeroutput>G</computeroutput>, <computeroutput>N</computeroutput>, <computeroutput>pbits</computeroutput> and <computeroutput>nbits</computeroutput> must have the same type and semantics as in the built-in implementation. They must be available for reading, but direct modification of these fields does not need to be supported. They do not need to be at the same offset in the structure. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>mbedtls_ecp_point</label>
+        <link refid="structmbedtls__ecp__point"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_X</edgelabel>
+          <edgelabel>private_Y</edgelabel>
+          <edgelabel>private_Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_ecp_group</label>
+        <link refid="structmbedtls__ecp__group"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>G</edgelabel>
+          <edgelabel>private_T</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>N</edgelabel>
+          <edgelabel>P</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="232" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="232" bodyend="258"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ecp__group_1af6ab87eb277c78f786ca58ed3fd78825" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>A</name></member>
+      <member refid="structmbedtls__ecp__group_1ab54c9e6b1807d5c10db76f7ebedd55f4" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>B</name></member>
+      <member refid="structmbedtls__ecp__group_1a7e0aca0789ca8f5c38d3a0c98b2f9809" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>G</name></member>
+      <member refid="structmbedtls__ecp__group_1a3e572cd2e40e1c23fc9a7a6aef7122d6" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>id</name></member>
+      <member refid="structmbedtls__ecp__group_1a7104724a939b7eef2ae3627db410e1e8" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>N</name></member>
+      <member refid="structmbedtls__ecp__group_1aee5ef1a30d9a5e34810c7a9a7120a10b" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>nbits</name></member>
+      <member refid="structmbedtls__ecp__group_1ae049e9c949bf5d30e71b4b31819f6007" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>P</name></member>
+      <member refid="structmbedtls__ecp__group_1a039ad9e51dc52e46a422e74051b2b837" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>pbits</name></member>
+      <member refid="structmbedtls__ecp__group_1a636430ac22decc2c2c6d66a158dcd63e" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>private_h</name></member>
+      <member refid="structmbedtls__ecp__group_1a50f06946fa5ba962041d2f91334f8a36" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>private_modp</name></member>
+      <member refid="structmbedtls__ecp__group_1aee9bca7c36cfaf5bacf8530f359df8fb" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>private_T</name></member>
+      <member refid="structmbedtls__ecp__group_1a4b258ea8a28b79a8cc5ed136038c0b41" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>private_t_data</name></member>
+      <member refid="structmbedtls__ecp__group_1a40acc844c68655ff4247535c21e061aa" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>private_t_post</name></member>
+      <member refid="structmbedtls__ecp__group_1a8ae36958f53b75b69cd2f926750c2cfb" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>private_t_pre</name></member>
+      <member refid="structmbedtls__ecp__group_1ad4e6e5a100ef1ab995e23f7bbdd1f937" prot="public" virt="non-virtual"><scope>mbedtls_ecp_group</scope><name>private_T_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

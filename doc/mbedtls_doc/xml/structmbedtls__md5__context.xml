@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__md5__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_md5_context</compoundname>
+    <includes refid="md5_8h" local="no">md5.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__md5__context_1a0eaefed14e94c736d1db416ca3b6299f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_md5_context::private_total[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>private_total</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of bytes processed <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="40" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__md5__context_1a4311a8e58e6990de7db3345c4e796fee" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_md5_context::private_state[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>intermediate digest state <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="41" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__md5__context_1ab318c7b41572b6af4b6e1f30294a374e" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_md5_context::private_buffer[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>private_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>data block being processed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="42" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MD5 context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>MD5 is considered a weak message digest and its use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" line="39" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md5.h" bodystart="39" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structmbedtls__md5__context_1ab318c7b41572b6af4b6e1f30294a374e" prot="public" virt="non-virtual"><scope>mbedtls_md5_context</scope><name>private_buffer</name></member>
+      <member refid="structmbedtls__md5__context_1a4311a8e58e6990de7db3345c4e796fee" prot="public" virt="non-virtual"><scope>mbedtls_md5_context</scope><name>private_state</name></member>
+      <member refid="structmbedtls__md5__context_1a0eaefed14e94c736d1db416ca3b6299f" prot="public" virt="non-virtual"><scope>mbedtls_md5_context</scope><name>private_total</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

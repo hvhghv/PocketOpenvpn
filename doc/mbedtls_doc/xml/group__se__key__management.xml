@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__se__key__management" kind="group">
+    <compoundname>se_key_management</compoundname>
+    <title>Secure Element Key Management</title>
+    <innerclass refid="structpsa__drv__se__key__management__t" prot="public">psa_drv_se_key_management_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__se__key__management_1ga984d5535962320e0c4692bb4ede486ef" prot="public" static="no" strong="no">
+        <type></type>
+        <name>psa_key_creation_method_t</name>
+        <enumvalue id="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efa9d61c409158f958b864b759662adbbed" prot="public">
+          <name>PSA_KEY_CREATION_IMPORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>During <ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efab197db75a74e331a570562ba3b3e04a9" prot="public">
+          <name>PSA_KEY_CREATION_GENERATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>During <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efaae615ce8bde386039d1ee1b348f6552c" prot="public">
+          <name>PSA_KEY_CREATION_DERIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>During <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efa61d76b2af65ab3fb904b5eedd8f46363" prot="public">
+          <name>PSA_KEY_CREATION_COPY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>During <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efabcea58ac75861648df36ae58a8562257" prot="public">
+          <name>PSA_KEY_CREATION_REGISTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>A key is being registered with <ref refid="group__attributes_1gae380c2fab913be2ec2a34a4153b471a2" kindref="member">mbedtls_psa_register_se_key()</ref>.</para>
+<para>The core only passes this value to psa_drv_se_key_management_t::p_validate_slot_number, not to psa_drv_se_key_management_t::p_allocate. The call to <computeroutput>p_validate_slot_number</computeroutput> is not followed by any other call to the driver: the key is considered successfully registered if the call to <computeroutput>p_validate_slot_number</computeroutput> succeeds, or if <computeroutput>p_validate_slot_number</computeroutput> is null.</para>
+<para>With this creation method, the driver must return <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref> if the given attributes are compatible with the existing key in the slot, and <ref refid="group__error_1ga18646babb2ae6cbde02ea3828bbd9141" kindref="member">PSA_ERROR_DOES_NOT_EXIST</ref> if the driver can determine that there is no key with the specified slot number.</para>
+<para>This is an Mbed TLS extension. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An enumeration indicating how a key is created. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="806" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="806" bodyend="832"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__se__key__management_1gaab9a5d39285c68ac29264017e0119d98" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_allocate_key_t) (psa_drv_se_context_t *drv_context, void *persistent_data, const psa_key_attributes_t *attributes, psa_key_creation_method_t method, psa_key_slot_number_t *key_slot)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, void *persistent_data, const psa_key_attributes_t *attributes, psa_key_creation_method_t method, psa_key_slot_number_t *key_slot)</argsstring>
+        <name>psa_drv_se_allocate_key_t</name>
+        <briefdescription>
+<para>A function that allocates a slot for a key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To create a key in a specific slot in a secure element, the core first calls this function to determine a valid slot number, then calls a function to create the key material in that slot. In nominal conditions (that is, if no error occurs), the effect of a call to a key creation function in the PSA Cryptography API with a lifetime that places the key in a secure element is the following:<orderedlist>
+<listitem><para>The core calls psa_drv_se_key_management_t::p_allocate (or in some implementations psa_drv_se_key_management_t::p_validate_slot_number). The driver selects (or validates) a suitable slot number given the key attributes and the state of the secure element.</para>
+</listitem><listitem><para>The core calls a key creation function in the driver.</para>
+</listitem></orderedlist>
+</para>
+<para>The key creation functions in the PSA Cryptography API are:<itemizedlist>
+<listitem><para><ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref>, which causes a call to <computeroutput>p_allocate</computeroutput> with <computeroutput>method</computeroutput> = <ref refid="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efa9d61c409158f958b864b759662adbbed" kindref="member">PSA_KEY_CREATION_IMPORT</ref> then a call to psa_drv_se_key_management_t::p_import.</para>
+</listitem><listitem><para><ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref>, which causes a call to <computeroutput>p_allocate</computeroutput> with <computeroutput>method</computeroutput> = <ref refid="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efab197db75a74e331a570562ba3b3e04a9" kindref="member">PSA_KEY_CREATION_GENERATE</ref> then a call to psa_drv_se_key_management_t::p_import.</para>
+</listitem><listitem><para><ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref>, which causes a call to <computeroutput>p_allocate</computeroutput> with <computeroutput>method</computeroutput> = <ref refid="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efaae615ce8bde386039d1ee1b348f6552c" kindref="member">PSA_KEY_CREATION_DERIVE</ref> then a call to psa_drv_se_key_derivation_t::p_derive.</para>
+</listitem><listitem><para><ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref>, which causes a call to <computeroutput>p_allocate</computeroutput> with <computeroutput>method</computeroutput> = <ref refid="group__se__key__management_1gga984d5535962320e0c4692bb4ede486efa61d76b2af65ab3fb904b5eedd8f46363" kindref="member">PSA_KEY_CREATION_COPY</ref> then a call to psa_drv_se_key_management_t::p_export.</para>
+</listitem></itemizedlist>
+</para>
+<para>In case of errors, other behaviors are possible.<itemizedlist>
+<listitem><para>If the PSA Cryptography subsystem dies after the first step, for example because the device has lost power abruptly, the second step may never happen, or may happen after a reset and re-initialization. Alternatively, after a reset and re-initialization, the core may call psa_drv_se_key_management_t::p_destroy on the slot number that was allocated (or validated) instead of calling a key creation function.</para>
+</listitem><listitem><para>If an error occurs, the core may call psa_drv_se_key_management_t::p_destroy on the slot number that was allocated (or validated) instead of calling a key creation function.</para>
+</listitem></itemizedlist>
+</para>
+<para>Errors and system resets also have an impact on the driver&apos;s persistent data. If a reset happens before the overall key creation process is completed (before or after the second step above), it is unspecified whether the persistent data after the reset is identical to what it was before or after the call to <computeroutput>p_allocate</computeroutput> (or <computeroutput>p_validate_slot_number</computeroutput>).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">persistent_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the persistent data that allows writing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attributes of the key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The way in which the key is being created. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slot where the key will be stored. This must be a valid slot for a key of the chosen type. It must be unoccupied.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. The core will record <computeroutput>*key_slot</computeroutput> as the key slot where the key is stored and will update the persistent data in storage. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga897a45eb206a6f6b7be7ffbe36f0d766" kindref="member">PSA_ERROR_INSUFFICIENT_STORAGE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="898" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="898" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__key__management_1ga26c4b96c6d68dbd74b0512475d29f934" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_validate_slot_number_t) (psa_drv_se_context_t *drv_context, void *persistent_data, const psa_key_attributes_t *attributes, psa_key_creation_method_t method, psa_key_slot_number_t key_slot)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, void *persistent_data, const psa_key_attributes_t *attributes, psa_key_creation_method_t method, psa_key_slot_number_t key_slot)</argsstring>
+        <name>psa_drv_se_validate_slot_number_t</name>
+        <briefdescription>
+<para>A function that determines whether a slot number is valid for a key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To create a key in a specific slot in a secure element, the core first calls this function to validate the choice of slot number, then calls a function to create the key material in that slot. See the documentation of <ref refid="group__se__key__management_1gaab9a5d39285c68ac29264017e0119d98" kindref="member">psa_drv_se_allocate_key_t</ref> for more details.</para>
+<para>As of the PSA Cryptography API specification version 1.0, there is no way for applications to trigger a call to this function. However some implementations offer the capability to create or declare a key in a specific slot via implementation-specific means, generally for the sake of initial device provisioning or onboarding. Such a mechanism may be added to a future version of the PSA Cryptography API specification.</para>
+<para>This function may update the driver&apos;s persistent data through <computeroutput>persistent_data</computeroutput>. The core will save the updated persistent data at the end of the key creation process. See the description of <ref refid="group__se__key__management_1gaab9a5d39285c68ac29264017e0119d98" kindref="member">psa_drv_se_allocate_key_t</ref> for more information.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">persistent_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the persistent data that allows writing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attributes of the key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The way in which the key is being created. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slot where the key is to be stored.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The given slot number is valid for a key with the given attributes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The given slot number is not valid for a key with the given attributes. This includes the case where the slot number is not valid at all. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gaf2b34cc87edc72f3ba90071a08210d20" kindref="member">PSA_ERROR_ALREADY_EXISTS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>There is already a key with the specified slot number. Drivers may choose to return this error from the key creation function instead. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="944" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="944" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__key__management_1ga9e04e71aff4837259e54598708edcf7d" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_import_key_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, const psa_key_attributes_t *attributes, const uint8_t *data, size_t data_length, size_t *bits)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, const psa_key_attributes_t *attributes, const uint8_t *data, size_t data_length, size_t *bits)</argsstring>
+        <name>psa_drv_se_import_key_t</name>
+        <briefdescription>
+<para>A function that imports a key into a secure element in binary format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function can support any output from <ref refid="group__import__export_1ga668e35be8d2852ad3feeef74ac6f75bf" kindref="member">psa_export_key()</ref>. Refer to the documentation of <ref refid="group__import__export_1ga668e35be8d2852ad3feeef74ac6f75bf" kindref="member">psa_export_key()</ref> for the format for each key type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slot where the key will be stored. This must be a valid slot for a key of the chosen type. It must be unoccupied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attributes, including the lifetime, the key type and the usage policy. Drivers should not access the key size stored in the attributes: it may not match the data passed in <computeroutput>data</computeroutput>. Drivers can call <ref refid="group__attributes_1ga9ea8eae1b81e480cc56dec858859aff9" kindref="member">psa_get_key_lifetime()</ref>, <ref refid="group__attributes_1gae4fb812af4f57aa1ad85e335a865b918" kindref="member">psa_get_key_type()</ref>, <ref refid="group__attributes_1gaa1af20f142ca722222c6d98678a0c448" kindref="member">psa_get_key_usage_flags()</ref> and <ref refid="group__attributes_1gac255da850a00bbed925390044f016b34" kindref="member">psa_get_key_algorithm()</ref> to access this information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the key data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>data</computeroutput> buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the key size in bits. The driver must determine this value after parsing the key according to the key type. This value is not used if the function fails.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="980" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="980" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__key__management_1gaaf8c22c4a5b87035fcb594858d68e1ba" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_destroy_key_t) (psa_drv_se_context_t *drv_context, void *persistent_data, psa_key_slot_number_t key_slot)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, void *persistent_data, psa_key_slot_number_t key_slot)</argsstring>
+        <name>psa_drv_se_destroy_key_t</name>
+        <briefdescription>
+<para>A function that destroys a secure element key and restore the slot to its default state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function destroys the content of the key from a secure element. Implementations shall make a best effort to ensure that any previous content of the slot is unrecoverable.</para>
+<para>This function returns the specified slot to its default state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">persistent_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the persistent data that allows writing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key slot to erase.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slot&apos;s content, if any, has been erased. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1006" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1006" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__key__management_1ga6c51abdf1eb2165b800f1de017ed42fb" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_export_key_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key, uint8_t *p_data, size_t data_size, size_t *p_data_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key, uint8_t *p_data, size_t data_size, size_t *p_data_length)</argsstring>
+        <name>psa_drv_se_export_key_t</name>
+        <briefdescription>
+<para>A function that exports a secure element key in binary format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The output of this function can be passed to <ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref> to create an equivalent object.</para>
+<para>If a key is created with <computeroutput><ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref></computeroutput> and then exported with this function, it is not guaranteed that the resulting data is identical: the implementation may choose a different representation of the same key if the format permits it.</para>
+<para>This function should generate output in the same format that <computeroutput><ref refid="group__import__export_1ga668e35be8d2852ad3feeef74ac6f75bf" kindref="member">psa_export_key()</ref></computeroutput> does. Refer to the documentation of <computeroutput><ref refid="group__import__export_1ga668e35be8d2852ad3feeef74ac6f75bf" kindref="member">psa_export_key()</ref></computeroutput> for the format for each key type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slot whose content is to be exported. This must be an occupied key slot. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the key data is to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_data</computeroutput> buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the key data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga18646babb2ae6cbde02ea3828bbd9141" kindref="member">PSA_ERROR_DOES_NOT_EXIST</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1042" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1042" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__key__management_1ga62df4bbc6b63ab5ef8183012b12a6cf8" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_generate_key_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, const psa_key_attributes_t *attributes, uint8_t *pubkey, size_t pubkey_size, size_t *pubkey_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, const psa_key_attributes_t *attributes, uint8_t *pubkey, size_t pubkey_size, size_t *pubkey_length)</argsstring>
+        <name>psa_drv_se_generate_key_t</name>
+        <briefdescription>
+<para>A function that generates a symmetric or asymmetric key on a secure element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the key type <computeroutput>type</computeroutput> recorded in <computeroutput>attributes</computeroutput> is asymmetric (<ref refid="group__crypto__types_1gab138ae2ebf2905dfbaf4154db2620939" kindref="member">PSA_KEY_TYPE_IS_ASYMMETRIC</ref>(<computeroutput>type</computeroutput>) = 1), the driver may export the public key at the time of generation, in the format documented for <ref refid="group__import__export_1gaf22ae73312217aaede2ea02cdebb6062" kindref="member">psa_export_public_key()</ref> by writing it to the <computeroutput>pubkey</computeroutput> buffer. This is optional, intended for secure elements that output the public key at generation time and that cannot export the public key later. Drivers that do not need this feature should leave <computeroutput>*pubkey_length</computeroutput> set to 0 and should implement the psa_drv_key_management_t::p_export_public function. Some implementations do not support this feature, in which case <computeroutput>pubkey</computeroutput> is <computeroutput>NULL</computeroutput> and <computeroutput>pubkey_size</computeroutput> is 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slot where the key will be stored. This must be a valid slot for a key of the chosen type. It must be unoccupied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attributes, including the lifetime, the key type and size, and the usage policy. Drivers can call <ref refid="group__attributes_1ga9ea8eae1b81e480cc56dec858859aff9" kindref="member">psa_get_key_lifetime()</ref>, <ref refid="group__attributes_1gae4fb812af4f57aa1ad85e335a865b918" kindref="member">psa_get_key_type()</ref>, <ref refid="group__attributes_1ga5bee85c2164ad3d4c0d42501241eeb06" kindref="member">psa_get_key_bits()</ref>, <ref refid="group__attributes_1gaa1af20f142ca722222c6d98678a0c448" kindref="member">psa_get_key_usage_flags()</ref> and <ref refid="group__attributes_1gac255da850a00bbed925390044f016b34" kindref="member">psa_get_key_algorithm()</ref> to access this information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pubkey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer where the driver can write the public key, when generating an asymmetric key pair. This is <computeroutput>NULL</computeroutput> when generating a symmetric key or if the core does not support exporting the public key at generation time. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pubkey_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>pubkey</computeroutput> buffer in bytes. This is 0 when generating a symmetric key or if the core does not support exporting the public key at generation time. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pubkey_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, this is always 0. On success, the number of bytes written to <computeroutput>pubkey</computeroutput>. If this is 0 or unchanged on return, the core will not read the <computeroutput>pubkey</computeroutput> buffer, and will instead call the driver&apos;s psa_drv_key_management_t::p_export_public function to export the public key when needed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="1094" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="1094" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Currently, key management is limited to importing keys in the clear, destroying keys, and exporting keys in the clear. Whether a key may be exported is determined by the key policies in place on the key slot. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

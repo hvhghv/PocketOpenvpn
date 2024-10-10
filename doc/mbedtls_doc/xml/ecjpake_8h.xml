@@ -1,0 +1,1240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ecjpake_8h" kind="file" language="C++">
+    <compoundname>ecjpake.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="ecp_8h" local="yes">mbedtls/ecp.h</includes>
+    <includes refid="md_8h" local="yes">mbedtls/md.h</includes>
+    <includedby refid="crypto__builtin__composites_8h" local="yes">crypto_builtin_composites.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/ecp.h</label>
+        <link refid="ecp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="26">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="21">
+        <label>mbedtls/bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="1">
+        <label>ecjpake.h</label>
+        <link refid="ecjpake_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="27">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="24">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="23">
+        <label>stdio.h</label>
+      </node>
+      <node id="28">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="18">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="12">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="5">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="4">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="6">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="19">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="10">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="1">
+        <label>ecjpake.h</label>
+        <link refid="ecjpake_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__ecjpake__context" prot="public">mbedtls_ecjpake_context</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mbedtls_ecjpake_role</name>
+        <enumvalue id="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fa965b21512e945d609eecf10c59f5df94" prot="public">
+          <name>MBEDTLS_ECJPAKE_CLIENT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Client <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fae43795d8e4d6eb2484d706620cdc582f" prot="public">
+          <name>MBEDTLS_ECJPAKE_SERVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Server <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fa624ad8262b33fec3903de54c89066036" prot="public">
+          <name>MBEDTLS_ECJPAKE_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Undefined <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Roles in the EC J-PAKE exchange </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="42" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" bodystart="42" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ecjpake_8h_1a6b473ff1f80354fe4b76f8c1b7a0e321" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref></type>
+        <definition>typedef struct mbedtls_ecjpake_context mbedtls_ecjpake_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ecjpake_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EC J-PAKE context structure.</para>
+<para>J-PAKE is a symmetric protocol, except for the identifiers used in Zero-Knowledge Proofs, and the serialization of the second message (KeyExchange) as defined by the Thread spec.</para>
+<para>In order to benefit from this symmetry, we choose a different naming convention from the Thread v1.0 spec. Correspondence is indicated in the description as a pair C: client name, S: server name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="76" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ecjpake_8h_1a8183ac817fb64ecf6d2bff0d0b8225ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecjpake_init</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx)</argsstring>
+        <name>mbedtls_ecjpake_init</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize an ECJPAKE context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="88" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="88" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1a58ba29c4014a666fa8875898d2e9d156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_setup</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx, mbedtls_ecjpake_role role, mbedtls_md_type_t hash, mbedtls_ecp_group_id curve, const unsigned char *secret, size_t len)</argsstring>
+        <name>mbedtls_ecjpake_setup</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3f" kindref="member">mbedtls_ecjpake_role</ref></type>
+          <declname>role</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+          <declname>curve</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>secret</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Set up an ECJPAKE context for use. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Currently the only values for hash/curve allowed by the standard are <ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a7634aa1a264b0e1a5ec65f4ed77468f8" kindref="member">MBEDTLS_MD_SHA256</ref>/<ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2daf73bbf7b29d26a0bc77dcff47cd6b276" kindref="member">MBEDTLS_ECP_DP_SECP256R1</ref>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to set up. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The role of the caller. This must be either <ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fa965b21512e945d609eecf10c59f5df94" kindref="member">MBEDTLS_ECJPAKE_CLIENT</ref> or <ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fae43795d8e4d6eb2484d706620cdc582f" kindref="member">MBEDTLS_ECJPAKE_SERVER</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the hash function to use, for example <ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a7634aa1a264b0e1a5ec65f4ed77468f8" kindref="member">MBEDTLS_MD_SHA256</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>curve</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier of the elliptic curve to use, for example <ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2daf73bbf7b29d26a0bc77dcff47cd6b276" kindref="member">MBEDTLS_ECP_DP_SECP256R1</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secret</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pre-shared secret (passphrase). This must be a readable not empty buffer of length <computeroutput>len</computeroutput> Bytes. It need only be valid for the duration of this call. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the pre-shared secret <computeroutput>secret</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="111" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="111" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1a42fd99a703a7d3d40bbf29e3f1c8b20b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_set_point_format</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx, int point_format)</argsstring>
+        <name>mbedtls_ecjpake_set_point_format</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>point_format</declname>
+        </param>
+        <briefdescription>
+<para>Set the point format for future reads and writes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to configure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>point_format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point format to use: <ref refid="ecp_8h_1a076e0db0a53f09d424b8650390632bb3" kindref="member">MBEDTLS_ECP_PF_UNCOMPRESSED</ref> (default) or <ref refid="ecp_8h_1a300814dc5a3ef878a5fb34cc2f185e7a" kindref="member">MBEDTLS_ECP_PF_COMPRESSED</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1abcd6ff5c88f83a731383d344b56131f3" kindref="member">MBEDTLS_ERR_ECP_BAD_INPUT_DATA</ref> if <computeroutput>point_format</computeroutput> is invalid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="130" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="130" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1ae2fea3d7011f93328d588c9a2e8e1443" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_check</definition>
+        <argsstring>(const mbedtls_ecjpake_context *ctx)</argsstring>
+        <name>mbedtls_ecjpake_check</name>
+        <param>
+          <type>const <ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Check if an ECJPAKE context is ready for use. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to check. This must be initialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if the context is ready for use. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1abcd6ff5c88f83a731383d344b56131f3" kindref="member">MBEDTLS_ERR_ECP_BAD_INPUT_DATA</ref> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="142" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="142" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1a284b3e0e437d0f360f10c4039d1ffc57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_write_round_one</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx, unsigned char *buf, size_t len, size_t *olen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecjpake_write_round_one</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>Generate and write the first round message (TLS: contents of the Client/ServerHello extension, excluding extension type and length bytes). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to use. This must be initialized and set up. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write the contents to. This must be a writable buffer of length <computeroutput>len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the total number of Bytes written to <computeroutput>buf</computeroutput>. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG parameter to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t use a context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="163" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="163" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1af6d2da7aef8edb18aead91fe74f43dbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_read_round_one</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx, const unsigned char *buf, size_t len)</argsstring>
+        <name>mbedtls_ecjpake_read_round_one</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Read and process the first round message (TLS: contents of the Client/ServerHello extension, excluding extension type and length bytes). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to use. This must be initialized and set up. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the first round message. This must be a readable buffer of length <computeroutput>len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length in Bytes of <computeroutput>buf</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="182" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="182" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1a84967d4406d8a46b97adfa60b3cd751c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_write_round_two</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx, unsigned char *buf, size_t len, size_t *olen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecjpake_write_round_two</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>Generate and write the second round message (TLS: contents of the Client/ServerKeyExchange). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to use. This must be initialized, set up, and already have performed round one. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write the round two contents to. This must be a writable buffer of length <computeroutput>len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the total number of Bytes written to <computeroutput>buf</computeroutput>. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG parameter to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t use a context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="204" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="204" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1a139d891face474638d8664b5823fdacf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_read_round_two</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx, const unsigned char *buf, size_t len)</argsstring>
+        <name>mbedtls_ecjpake_read_round_two</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Read and process the second round message (TLS: contents of the Client/ServerKeyExchange). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to use. This must be initialized and set up and already have performed round one. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the second round message. This must be a readable buffer of length <computeroutput>len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length in Bytes of <computeroutput>buf</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="222" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="222" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1a9b20729f22dbcd91ae6f42489c5cd11b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_derive_secret</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx, unsigned char *buf, size_t len, size_t *olen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecjpake_derive_secret</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>Derive the shared secret (TLS: Pre-Master Secret). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to use. This must be initialized, set up and have performed both round one and two. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write the derived secret to. This must be a writable buffer of length <computeroutput>len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the total number of Bytes written to <computeroutput>buf</computeroutput>. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG parameter to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t use a context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="244" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="244" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1a6d5bf6d3948c65d46d612b13d76a8962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_write_shared_key</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx, unsigned char *buf, size_t len, size_t *olen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecjpake_write_shared_key</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>Write the shared key material to be passed to a Key Derivation Function as described in RFC8236. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to use. This must be initialized, set up and have performed both round one and two. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write the derived secret to. This must be a writable buffer of length <computeroutput>len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the total number of bytes written to <computeroutput>buf</computeroutput>. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG parameter to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t use a context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="267" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="267" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1af962a58646228b3a80a4c27ac344d3cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecjpake_free</definition>
+        <argsstring>(mbedtls_ecjpake_context *ctx)</argsstring>
+        <name>mbedtls_ecjpake_free</name>
+        <param>
+          <type><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This clears an ECJPAKE context and frees any embedded data structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECJPAKE context to free. This may be <computeroutput>NULL</computeroutput>, in which case this function does nothing. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized ECJPAKE context. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="280" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="280" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ecjpake_8h_1aac147a4eaa68fda6bf38a064398c6135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecjpake_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_ecjpake_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if successful, or 1 if a test failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" line="289" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h" declline="289" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Elliptic curve J-PAKE. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ECJPAKE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ECJPAKE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>J-PAKE<sp/>is<sp/>a<sp/>password-authenticated<sp/>key<sp/>exchange<sp/>that<sp/>allows<sp/>deriving<sp/>a</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>strong<sp/>shared<sp/>secret<sp/>from<sp/>a<sp/>(potentially<sp/>low<sp/>entropy)<sp/>pre-shared</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>passphrase,<sp/>with<sp/>forward<sp/>secrecy<sp/>and<sp/>mutual<sp/>authentication.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>https://en.wikipedia.org/wiki/Password_Authenticated_Key_Exchange_by_Juggling</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>implements<sp/>the<sp/>Elliptic<sp/>Curve<sp/>variant<sp/>of<sp/>J-PAKE,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>as<sp/>defined<sp/>in<sp/>Chapter<sp/>7.4<sp/>of<sp/>the<sp/>Thread<sp/>v1.0<sp/>Specification,</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>available<sp/>to<sp/>members<sp/>of<sp/>the<sp/>Thread<sp/>Group<sp/>http://threadgroup.org/</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>As<sp/>the<sp/>J-PAKE<sp/>algorithm<sp/>is<sp/>inherently<sp/>symmetric,<sp/>so<sp/>is<sp/>our<sp/>API.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>Each<sp/>party<sp/>needs<sp/>to<sp/>send<sp/>its<sp/>first<sp/>round<sp/>message,<sp/>in<sp/>any<sp/>order,<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>other<sp/>party,<sp/>then<sp/>each<sp/>sends<sp/>its<sp/>second<sp/>round<sp/>message,<sp/>in<sp/>any<sp/>order.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>The<sp/>payloads<sp/>are<sp/>serialized<sp/>in<sp/>a<sp/>way<sp/>suitable<sp/>for<sp/>use<sp/>in<sp/>TLS,<sp/>but<sp/>could</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>also<sp/>be<sp/>use<sp/>outside<sp/>TLS.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ecp_8h" kindref="compound">mbedtls/ecp.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="md_8h" kindref="compound">mbedtls/md.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3f" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="43" refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fa965b21512e945d609eecf10c59f5df94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fa965b21512e945d609eecf10c59f5df94" kindref="member">MBEDTLS_ECJPAKE_CLIENT</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fae43795d8e4d6eb2484d706620cdc582f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fae43795d8e4d6eb2484d706620cdc582f" kindref="member">MBEDTLS_ECJPAKE_SERVER</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fa624ad8262b33fec3903de54c89066036" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3fa624ad8262b33fec3903de54c89066036" kindref="member">MBEDTLS_ECJPAKE_NONE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3f" kindref="member">mbedtls_ecjpake_role</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_ECJPAKE_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structmbedtls__ecjpake__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="structmbedtls__ecjpake__context_1a22de126d3f89c1e6abf707ec5abf6951" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(md_type);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="structmbedtls__ecjpake__context_1aa0752ec0beb84456e54b9a4ef329cfe1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(grp);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="structmbedtls__ecjpake__context_1a43d8af130fcf9e08a97bef80fbaf34a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3f" kindref="member">mbedtls_ecjpake_role</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(role);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="structmbedtls__ecjpake__context_1a80d119c51424d364732367e60f131780" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(point_format);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="structmbedtls__ecjpake__context_1ab35414702bdd462d10884886a77eb6f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Xm1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="structmbedtls__ecjpake__context_1a013ae9173578120e00f65356befcfbf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Xm2);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="structmbedtls__ecjpake__context_1af352468fc6ca0bbd5bfb91b9eefbf92d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Xp1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structmbedtls__ecjpake__context_1ac40b3e5d86585f5fffb155e521ddfeac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Xp2);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structmbedtls__ecjpake__context_1a961c3477fcbe4c427847a9cd6f4d20f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(Xp);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="structmbedtls__ecjpake__context_1aecf210457d5049b10fbe7988babb5c48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(xm1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="structmbedtls__ecjpake__context_1aedd190abc8a88d6061baee5d035a9a3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(xm2);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="structmbedtls__ecjpake__context_1a2ed880a2ade7c8d2f72a8497129af12b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(s);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/><ref refid="ecjpake_8h_1a6b473ff1f80354fe4b76f8c1b7a0e321" kindref="member">mbedtls_ecjpake_context</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECJPAKE_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ecjpake_alt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECJPAKE_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1a8183ac817fb64ecf6d2bff0d0b8225ca" kindref="member">mbedtls_ecjpake_init</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1a58ba29c4014a666fa8875898d2e9d156" kindref="member">mbedtls_ecjpake_setup</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ecjpake_8h_1a3f1fa77b9cda6a2540b9bd6b84fb9f3f" kindref="member">mbedtls_ecjpake_role</ref><sp/>role,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>hash,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref><sp/>curve,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*secret,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1a42fd99a703a7d3d40bbf29e3f1c8b20b" kindref="member">mbedtls_ecjpake_set_point_format</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>point_format);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1ae2fea3d7011f93328d588c9a2e8e1443" kindref="member">mbedtls_ecjpake_check</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1a284b3e0e437d0f360f10c4039d1ffc57" kindref="member">mbedtls_ecjpake_write_round_one</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1af6d2da7aef8edb18aead91fe74f43dbb" kindref="member">mbedtls_ecjpake_read_round_one</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1a84967d4406d8a46b97adfa60b3cd751c" kindref="member">mbedtls_ecjpake_write_round_two</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1a139d891face474638d8664b5823fdacf" kindref="member">mbedtls_ecjpake_read_round_two</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1a9b20729f22dbcd91ae6f42489c5cd11b" kindref="member">mbedtls_ecjpake_derive_secret</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1a6d5bf6d3948c65d46d612b13d76a8962" kindref="member">mbedtls_ecjpake_write_shared_key</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1af962a58646228b3a80a4c27ac344d3cb" kindref="member">mbedtls_ecjpake_free</ref>(<ref refid="structmbedtls__ecjpake__context" kindref="compound">mbedtls_ecjpake_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecjpake_8h_1aac147a4eaa68fda6bf38a064398c6135" kindref="member">mbedtls_ecjpake_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ecjpake.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecjpake.h"/>
+  </compounddef>
+</doxygen>

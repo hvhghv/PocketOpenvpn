@@ -1,0 +1,4 @@
+<map id="tun_register_rings" name="tun_register_rings">
+<area shape="rect" id="node1" title="Struct for ring buffers registration See https://github.com/WireGuard/wintun#registering&#45;rings." alt="" coords="5,95,131,121"/>
+<area shape="rect" id="node2" href="$structtun__ring.html" title="Wintun ring buffer See https://github.com/WireGuard/wintun#ring&#45;layout." alt="" coords="34,5,102,32"/>
+</map>

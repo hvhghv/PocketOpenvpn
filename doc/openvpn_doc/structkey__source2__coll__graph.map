@@ -1,0 +1,4 @@
+<map id="key_source2" name="key_source2">
+<area shape="rect" id="node1" title="Container for both halves of random material to be used in key method 2 data channel key generation." alt="" coords="5,109,101,136"/>
+<area shape="rect" id="node2" href="$structkey__source.html" title="Container for one half of random material to be used in key method 2 data channel key generation." alt="" coords="9,5,98,32"/>
+</map>

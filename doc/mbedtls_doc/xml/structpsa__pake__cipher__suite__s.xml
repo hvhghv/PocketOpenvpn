@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__pake__cipher__suite__s" kind="struct" language="C++" prot="public">
+    <compoundname>psa_pake_cipher_suite_s</compoundname>
+    <includes refid="crypto__extra_8h" local="no">crypto_extra.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1a5a4fcadbf2ef270a16c01649abaffca4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t psa_pake_cipher_suite_s::algorithm</definition>
+        <argsstring></argsstring>
+        <name>algorithm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1896" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1896" bodyend="-1"/>
+        <referencedby refid="group__pake_1gaf20c5d67933a6a7e8ef4c517bc80a885" compoundref="crypto__extra_8h" startline="1903" endline="1907">psa_pake_cs_get_algorithm</referencedby>
+        <referencedby refid="group__pake_1gaa819f7df77522699674de962b268ed7e" compoundref="crypto__extra_8h" startline="1909" endline="1918">psa_pake_cs_set_algorithm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1ad071789455678b0d082935db9c8de7be" prot="public" static="no" mutable="no">
+        <type><ref refid="group__pake_1gad8b29b6efa90ad2887d7b1252d23e5bc" kindref="member">psa_pake_primitive_type_t</ref></type>
+        <definition>psa_pake_primitive_type_t psa_pake_cipher_suite_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1897" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1897" bodyend="-1"/>
+        <referencedby refid="group__pake_1ga092067cc7dc9af367706c032480ebdf0" compoundref="crypto__extra_8h" startline="1920" endline="1925">psa_pake_cs_get_primitive</referencedby>
+        <referencedby refid="group__pake_1ga65563e28c31b26f96f70eddd1252f3d1" compoundref="crypto__extra_8h" startline="1927" endline="1934">psa_pake_cs_set_primitive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1af0ca6a6ae95ae81d9971d0c607658ebc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__pake_1gae20cc74390755f28b6f2b893a936d893" kindref="member">psa_pake_family_t</ref></type>
+        <definition>psa_pake_family_t psa_pake_cipher_suite_s::family</definition>
+        <argsstring></argsstring>
+        <name>family</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1898" column="23" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1898" bodyend="-1"/>
+        <referencedby refid="group__pake_1gab1c9d9857644ee44a515b384b9c728db" compoundref="crypto__extra_8h" startline="1936" endline="1940">psa_pake_cs_get_family</referencedby>
+        <referencedby refid="group__pake_1ga092067cc7dc9af367706c032480ebdf0" compoundref="crypto__extra_8h" startline="1920" endline="1925">psa_pake_cs_get_primitive</referencedby>
+        <referencedby refid="group__pake_1ga65563e28c31b26f96f70eddd1252f3d1" compoundref="crypto__extra_8h" startline="1927" endline="1934">psa_pake_cs_set_primitive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1af6cafb513de0427e69487d71e1ed7c84" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t psa_pake_cipher_suite_s::bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1899" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1899" bodyend="-1"/>
+        <referencedby refid="group__pake_1ga048be6e239ccd25a3080863053e68576" compoundref="crypto__extra_8h" startline="1942" endline="1946">psa_pake_cs_get_bits</referencedby>
+        <referencedby refid="group__pake_1ga092067cc7dc9af367706c032480ebdf0" compoundref="crypto__extra_8h" startline="1920" endline="1925">psa_pake_cs_get_primitive</referencedby>
+        <referencedby refid="group__pake_1ga65563e28c31b26f96f70eddd1252f3d1" compoundref="crypto__extra_8h" startline="1927" endline="1934">psa_pake_cs_set_primitive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1a09850e6d0d25739778d349556920d2f4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t psa_pake_cipher_suite_s::hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1900" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1900" bodyend="-1"/>
+        <referencedby refid="group__pake_1gaffd027d591290428050be2e98da2c8ad" compoundref="crypto__extra_8h" startline="1948" endline="1952">psa_pake_cs_get_hash</referencedby>
+        <referencedby refid="group__pake_1ga453c3b937a771b927be21d9107fffcdc" compoundref="crypto__extra_8h" startline="1954" endline="1962">psa_pake_cs_set_hash</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1895" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1895" bodyend="1901"/>
+    <listofallmembers>
+      <member refid="structpsa__pake__cipher__suite__s_1a5a4fcadbf2ef270a16c01649abaffca4" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>algorithm</name></member>
+      <member refid="structpsa__pake__cipher__suite__s_1af6cafb513de0427e69487d71e1ed7c84" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>bits</name></member>
+      <member refid="structpsa__pake__cipher__suite__s_1af0ca6a6ae95ae81d9971d0c607658ebc" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>family</name></member>
+      <member refid="structpsa__pake__cipher__suite__s_1a09850e6d0d25739778d349556920d2f4" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>hash</name></member>
+      <member refid="structpsa__pake__cipher__suite__s_1ad071789455678b0d082935db9c8de7be" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

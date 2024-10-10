@@ -1,0 +1,2125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ecdsa_8h" kind="file" language="C++">
+    <compoundname>ecdsa.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="ecp_8h" local="yes">mbedtls/ecp.h</includes>
+    <includes refid="md_8h" local="yes">mbedtls/md.h</includes>
+    <includedby refid="pk_8h" local="yes">pk.h</includedby>
+    <includedby refid="crypto__builtin__composites_8h" local="yes">crypto_builtin_composites.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/ecp.h</label>
+        <link refid="ecp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="26">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="21">
+        <label>mbedtls/bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ecdsa.h</label>
+        <link refid="ecdsa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="27">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="24">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="23">
+        <label>stdio.h</label>
+      </node>
+      <node id="28">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="14">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="19">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="10">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="18">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="1">
+        <label>ecdsa.h</label>
+        <link refid="ecdsa_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="15">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="6">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="17">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__ecdsa__restart__ctx" prot="public">mbedtls_ecdsa_restart_ctx</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ecdsa_8h_1a82c3ea5eb3ac8d6be563d42c16e717bf" prot="public" static="no">
+        <name>MBEDTLS_ECDSA_MAX_SIG_LEN</name>
+        <param><defname>bits</defname></param>
+        <initializer>    (/*T,L of SEQUENCE*/ ((bits) &gt;= 61 * 8 ? 3 : 2) +              \
+     /*T,L of r,s*/ 2 * (((bits) &gt;= 127 * 8 ? 3 : 2) +     \
+                         /*V of r,s*/ ((bits) + 8) / 8))</initializer>
+        <briefdescription>
+<para>Maximum ECDSA signature size for a given curve bit size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Curve size in bits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Maximum signature size in bytes</para>
+</simplesect>
+<simplesect kind="note"><para>This macro returns a compile-time constant if its argument is one. It may evaluate its argument multiple times. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="44" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ecdsa_8h_1aeb07d11aef4d847c5cc5cfba49547136" prot="public" static="no">
+        <name>MBEDTLS_ECDSA_MAX_LEN</name>
+        <initializer><ref refid="ecdsa_8h_1a82c3ea5eb3ac8d6be563d42c16e717bf" kindref="member">MBEDTLS_ECDSA_MAX_SIG_LEN</ref>(<ref refid="ecp_8h_1a98099ce7241e89e42ba34b79e770a0ab" kindref="member">MBEDTLS_ECP_MAX_BITS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximal size of an ECDSA signature in Bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="50" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" prot="public" static="no">
+        <type><ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecp_keypair</ref></type>
+        <definition>typedef mbedtls_ecp_keypair mbedtls_ecdsa_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ecdsa_context</name>
+        <briefdescription>
+<para>The ECDSA context structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Performing multiple operations concurrently on the same ECDSA context is not supported; objects of this type should not be shared between multiple threads.</para>
+</simplesect>
+<simplesect kind="note"><para>pk_wrap module assumes that &quot;ecdsa_context&quot; is identical to &quot;ecp_keypair&quot; (see for example structure &quot;mbedtls_eckey_info&quot; where ECDSA sign/verify functions are used also for EC key) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="68" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ecdsa_8h_1a1006f398e5c20959ac86e29cd08d6134" prot="public" static="no">
+        <type>struct mbedtls_ecdsa_restart_ver</type>
+        <definition>typedef struct mbedtls_ecdsa_restart_ver mbedtls_ecdsa_restart_ver_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ecdsa_restart_ver_ctx</name>
+        <briefdescription>
+<para>Internal restart context for ecdsa_verify() </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Opaque struct, defined in ecdsa.c </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="68" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ecdsa_8h_1a6c799dac3615dba6358c921e660c939d" prot="public" static="no">
+        <type>struct mbedtls_ecdsa_restart_sig</type>
+        <definition>typedef struct mbedtls_ecdsa_restart_sig mbedtls_ecdsa_restart_sig_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ecdsa_restart_sig_ctx</name>
+        <briefdescription>
+<para>Internal restart context for ecdsa_sign() </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Opaque struct, defined in ecdsa.c </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="68" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ecdsa_8h_1a511b635e2c836b1eb57e769bc3ec1f29" prot="public" static="no">
+        <type>struct mbedtls_ecdsa_restart_det</type>
+        <definition>typedef struct mbedtls_ecdsa_restart_det mbedtls_ecdsa_restart_det_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ecdsa_restart_det_ctx</name>
+        <briefdescription>
+<para>Internal restart context for ecdsa_sign_det() </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Opaque struct, defined in ecdsa.c </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="68" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ecdsa_8h_1ab994434cd9bdfdef8353571c8a6fcbc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_can_do</definition>
+        <argsstring>(mbedtls_ecp_group_id gid)</argsstring>
+        <name>mbedtls_ecdsa_can_do</name>
+        <param>
+          <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+          <declname>gid</declname>
+        </param>
+        <briefdescription>
+<para>This function checks whether a given group can be used for ECDSA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECP group ID to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> if the group can be used, <computeroutput>0</computeroutput> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="123" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="123" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1af10f6fda2169862871d0ac07555c8641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_sign</definition>
+        <argsstring>(mbedtls_ecp_group *grp, mbedtls_mpi *r, mbedtls_mpi *s, const mbedtls_mpi *d, const unsigned char *buf, size_t blen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecdsa_sign</name>
+        <param>
+          <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> *</type>
+          <declname>grp</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>This function computes the ECDSA signature of a previously-hashed message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The deterministic version implemented in <ref refid="ecdsa_8h_1a266f8460644743ae4b7c76f45b5455f9" kindref="member">mbedtls_ecdsa_sign_det_ext()</ref> is usually preferred.</para>
+</simplesect>
+<simplesect kind="note"><para>If the bitlength of the message hash is larger than the bitlength of the group order, then the hash is truncated as defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>, section 4.1.3, step 5.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context for the elliptic curve to use. This must be initialized and have group parameters set, for example through <ref refid="ecp_8h_1a64439a12deff8bd1ef92eeab7ebbcf93" kindref="member">mbedtls_ecp_group_load()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MPI context in which to store the first part the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MPI context in which to store the second part the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The private signing key. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content to be signed. This is usually the hash of the original data to be signed. This must be a readable buffer of length <computeroutput>blen</computeroutput> Bytes. It may be <computeroutput>NULL</computeroutput> if <computeroutput>blen</computeroutput> is zero. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t need a context parameter.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> or <computeroutput>MBEDTLS_MPI_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="161" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="161" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a266f8460644743ae4b7c76f45b5455f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_sign_det_ext</definition>
+        <argsstring>(mbedtls_ecp_group *grp, mbedtls_mpi *r, mbedtls_mpi *s, const mbedtls_mpi *d, const unsigned char *buf, size_t blen, mbedtls_md_type_t md_alg, int(*f_rng_blind)(void *, unsigned char *, size_t), void *p_rng_blind)</argsstring>
+        <name>mbedtls_ecdsa_sign_det_ext</name>
+        <param>
+          <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> *</type>
+          <declname>grp</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng_blind</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng_blind</declname>
+        </param>
+        <briefdescription>
+<para>This function computes the ECDSA signature of a previously-hashed message, deterministic version. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For more information, see <emphasis>RFC-6979: Deterministic Usage of the Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)</emphasis>.</para>
+<para><simplesect kind="note"><para>If the bitlength of the message hash is larger than the bitlength of the group order, then the hash is truncated as defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>, section 4.1.3, step 5.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context for the elliptic curve to use. This must be initialized and have group parameters set, for example through <ref refid="ecp_8h_1a64439a12deff8bd1ef92eeab7ebbcf93" kindref="member">mbedtls_ecp_group_load()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MPI context in which to store the first part the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MPI context in which to store the second part the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The private signing key. This must be initialized and setup, for example through <ref refid="ecp_8h_1a9d6eb960e62748d3ac0d8d4576c1f037" kindref="member">mbedtls_ecp_gen_privkey()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed content to be signed. This must be a readable buffer of length <computeroutput>blen</computeroutput> Bytes. It may be <computeroutput>NULL</computeroutput> if <computeroutput>blen</computeroutput> is zero. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash algorithm used to hash the original data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng_blind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function used for blinding. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng_blind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng_blind</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng_blind</computeroutput> doesn&apos;t need a context parameter.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> or <computeroutput>MBEDTLS_MPI_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="206" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="206" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1af1b78c0ca7aabb653e5f275e7789cfcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_sign_restartable</definition>
+        <argsstring>(mbedtls_ecp_group *grp, mbedtls_mpi *r, mbedtls_mpi *s, const mbedtls_mpi *d, const unsigned char *buf, size_t blen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng, int(*f_rng_blind)(void *, unsigned char *, size_t), void *p_rng_blind, mbedtls_ecdsa_restart_ctx *rs_ctx)</argsstring>
+        <name>mbedtls_ecdsa_sign_restartable</name>
+        <param>
+          <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> *</type>
+          <declname>grp</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng_blind</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng_blind</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref> *</type>
+          <declname>rs_ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function computes the ECDSA signature of a previously-hashed message, in a restartable way. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The deterministic version implemented in <ref refid="ecdsa_8h_1a5126e18f8a551c9118ff5cd729111ec3" kindref="member">mbedtls_ecdsa_sign_det_restartable()</ref> is usually preferred.</para>
+</simplesect>
+<simplesect kind="note"><para>This function is like <computeroutput><ref refid="ecdsa_8h_1af10f6fda2169862871d0ac07555c8641" kindref="member">mbedtls_ecdsa_sign()</ref></computeroutput> but it can return early and restart according to the limit set with <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput> to reduce blocking.</para>
+</simplesect>
+<simplesect kind="note"><para>If the bitlength of the message hash is larger than the bitlength of the group order, then the hash is truncated as defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>, section 4.1.3, step 5.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context for the elliptic curve to use. This must be initialized and have group parameters set, for example through <ref refid="ecp_8h_1a64439a12deff8bd1ef92eeab7ebbcf93" kindref="member">mbedtls_ecp_group_load()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MPI context in which to store the first part the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MPI context in which to store the second part the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The private signing key. This must be initialized and setup, for example through <ref refid="ecp_8h_1a9d6eb960e62748d3ac0d8d4576c1f037" kindref="member">mbedtls_ecp_gen_privkey()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed content to be signed. This must be a readable buffer of length <computeroutput>blen</computeroutput> Bytes. It may be <computeroutput>NULL</computeroutput> if <computeroutput>blen</computeroutput> is zero. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t need a context parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng_blind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function used for blinding. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng_blind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t need a context parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rs_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The restart context to use. This may be <computeroutput>NULL</computeroutput> to disable restarting. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized restart context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a6d549348fe93c843c19bfcd102b6e94f" kindref="member">MBEDTLS_ERR_ECP_IN_PROGRESS</ref> if maximum number of operations was reached: see <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput>, <computeroutput>MBEDTLS_ERR_MPI_XXX</computeroutput> or <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="269" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="269" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a5126e18f8a551c9118ff5cd729111ec3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_sign_det_restartable</definition>
+        <argsstring>(mbedtls_ecp_group *grp, mbedtls_mpi *r, mbedtls_mpi *s, const mbedtls_mpi *d, const unsigned char *buf, size_t blen, mbedtls_md_type_t md_alg, int(*f_rng_blind)(void *, unsigned char *, size_t), void *p_rng_blind, mbedtls_ecdsa_restart_ctx *rs_ctx)</argsstring>
+        <name>mbedtls_ecdsa_sign_det_restartable</name>
+        <param>
+          <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> *</type>
+          <declname>grp</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng_blind</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng_blind</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref> *</type>
+          <declname>rs_ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function computes the ECDSA signature of a previously-hashed message, in a restartable way. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is like <computeroutput><ref refid="ecdsa_8h_1a266f8460644743ae4b7c76f45b5455f9" kindref="member">mbedtls_ecdsa_sign_det_ext()</ref></computeroutput> but it can return early and restart according to the limit set with <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput> to reduce blocking.</para>
+</simplesect>
+<simplesect kind="note"><para>If the bitlength of the message hash is larger than the bitlength of the group order, then the hash is truncated as defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>, section 4.1.3, step 5.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context for the elliptic curve to use. This must be initialized and have group parameters set, for example through <ref refid="ecp_8h_1a64439a12deff8bd1ef92eeab7ebbcf93" kindref="member">mbedtls_ecp_group_load()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MPI context in which to store the first part the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MPI context in which to store the second part the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The private signing key. This must be initialized and setup, for example through <ref refid="ecp_8h_1a9d6eb960e62748d3ac0d8d4576c1f037" kindref="member">mbedtls_ecp_gen_privkey()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed content to be signed. This must be a readable buffer of length <computeroutput>blen</computeroutput> Bytes. It may be <computeroutput>NULL</computeroutput> if <computeroutput>blen</computeroutput> is zero. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash algorithm used to hash the original data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng_blind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function used for blinding. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng_blind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng_blind</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng_blind</computeroutput> doesn&apos;t need a context parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rs_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The restart context to use. This may be <computeroutput>NULL</computeroutput> to disable restarting. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized restart context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a6d549348fe93c843c19bfcd102b6e94f" kindref="member">MBEDTLS_ERR_ECP_IN_PROGRESS</ref> if maximum number of operations was reached: see <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput>, <computeroutput>MBEDTLS_ERR_MPI_XXX</computeroutput> or <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="332" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="332" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a2292032f359fda59a7fd14911cc56f38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_verify</definition>
+        <argsstring>(mbedtls_ecp_group *grp, const unsigned char *buf, size_t blen, const mbedtls_ecp_point *Q, const mbedtls_mpi *r, const mbedtls_mpi *s)</argsstring>
+        <name>mbedtls_ecdsa_verify</name>
+        <param>
+          <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> *</type>
+          <declname>grp</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref> *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>This function verifies the ECDSA signature of a previously-hashed message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If the bitlength of the message hash is larger than the bitlength of the group order, then the hash is truncated as defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>, section 4.1.4, step 3.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECP group to use. This must be initialized and have group parameters set, for example through <ref refid="ecp_8h_1a64439a12deff8bd1ef92eeab7ebbcf93" kindref="member">mbedtls_ecp_group_load()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed content that was signed. This must be a readable buffer of length <computeroutput>blen</computeroutput> Bytes. It may be <computeroutput>NULL</computeroutput> if <computeroutput>blen</computeroutput> is zero. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The public key to use for verification. This must be initialized and setup. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first integer of the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second integer of the signature. This must be initialized.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> or <computeroutput>MBEDTLS_MPI_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="373" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="373" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a6d4384c2808f26d6b1dfcc9de80629ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_verify_restartable</definition>
+        <argsstring>(mbedtls_ecp_group *grp, const unsigned char *buf, size_t blen, const mbedtls_ecp_point *Q, const mbedtls_mpi *r, const mbedtls_mpi *s, mbedtls_ecdsa_restart_ctx *rs_ctx)</argsstring>
+        <name>mbedtls_ecdsa_verify_restartable</name>
+        <param>
+          <type><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref> *</type>
+          <declname>grp</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>blen</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref> *</type>
+          <declname>Q</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref> *</type>
+          <declname>rs_ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function verifies the ECDSA signature of a previously-hashed message, in a restartable manner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If the bitlength of the message hash is larger than the bitlength of the group order, then the hash is truncated as defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>, section 4.1.4, step 3.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECP group to use. This must be initialized and have group parameters set, for example through <ref refid="ecp_8h_1a64439a12deff8bd1ef92eeab7ebbcf93" kindref="member">mbedtls_ecp_group_load()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hashed content that was signed. This must be a readable buffer of length <computeroutput>blen</computeroutput> Bytes. It may be <computeroutput>NULL</computeroutput> if <computeroutput>blen</computeroutput> is zero. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>buf</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The public key to use for verification. This must be initialized and setup. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first integer of the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second integer of the signature. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rs_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The restart context to use. This may be <computeroutput>NULL</computeroutput> to disable restarting. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized restart context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a6d549348fe93c843c19bfcd102b6e94f" kindref="member">MBEDTLS_ERR_ECP_IN_PROGRESS</ref> if maximum number of operations was reached: see <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> or <computeroutput>MBEDTLS_MPI_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="414" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="414" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1ac65a326d796babe1605b4d53a634ec08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_write_signature</definition>
+        <argsstring>(mbedtls_ecdsa_context *ctx, mbedtls_md_type_t md_alg, const unsigned char *hash, size_t hlen, unsigned char *sig, size_t sig_size, size_t *slen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecdsa_write_signature</name>
+        <param>
+          <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hlen</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sig_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>slen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>This function computes the ECDSA signature and writes it to a buffer, serialized as defined in <emphasis>RFC-4492: Elliptic Curve Cryptography (ECC) Cipher Suites for Transport Layer Security (TLS)</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>It is not thread-safe to use the same context in multiple threads.</para>
+</simplesect>
+<simplesect kind="note"><para>The deterministic version is used if <ref refid="mbedtls__config_8h_1adba50fdb786e1708b3360bd04bb77bd1" kindref="member">MBEDTLS_ECDSA_DETERMINISTIC</ref> is defined. For more information, see <emphasis>RFC-6979: Deterministic Usage of the Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)</emphasis>.</para>
+</simplesect>
+<simplesect kind="note"><para>If the bitlength of the message hash is larger than the bitlength of the group order, then the hash is truncated as defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>, section 4.1.3, step 5.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDSA context to use. This must be initialized and have a group and private key bound to it, for example via <ref refid="ecdsa_8h_1ab909bd06650e761e9fd176a86bd1ce17" kindref="member">mbedtls_ecdsa_genkey()</ref> or <ref refid="ecdsa_8h_1a6de8efd872cfe1bc2ee93b4a5584226c" kindref="member">mbedtls_ecdsa_from_keypair()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message digest that was used to hash the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message hash to be signed. This must be a readable buffer of length <computeroutput>hlen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the hash <computeroutput>hash</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to which to write the signature. This must be a writable buffer of length at least twice as large as the size of the curve used, plus 9. For example, 73 Bytes if a 256-bit curve is used. A buffer length of <ref refid="ecdsa_8h_1aeb07d11aef4d847c5cc5cfba49547136" kindref="member">MBEDTLS_ECDSA_MAX_LEN</ref> is always safe. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>sig</computeroutput> buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the actual length of the signature written. Must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function. This must not be <computeroutput>NULL</computeroutput> if <ref refid="mbedtls__config_8h_1adba50fdb786e1708b3360bd04bb77bd1" kindref="member">MBEDTLS_ECDSA_DETERMINISTIC</ref> is unset. Otherwise, it is used only for blinding and may be set to <computeroutput>NULL</computeroutput>, but doing so is DEPRECATED. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> is <computeroutput>NULL</computeroutput> or doesn&apos;t use a context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput>, <computeroutput>MBEDTLS_ERR_MPI_XXX</computeroutput> or <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="472" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="472" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a7a1465230462ccd846a1b3e448ba3f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_write_signature_restartable</definition>
+        <argsstring>(mbedtls_ecdsa_context *ctx, mbedtls_md_type_t md_alg, const unsigned char *hash, size_t hlen, unsigned char *sig, size_t sig_size, size_t *slen, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng, mbedtls_ecdsa_restart_ctx *rs_ctx)</argsstring>
+        <name>mbedtls_ecdsa_write_signature_restartable</name>
+        <param>
+          <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hlen</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sig_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>slen</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref> *</type>
+          <declname>rs_ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function computes the ECDSA signature and writes it to a buffer, in a restartable way. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="ecdsa_8h_1ac65a326d796babe1605b4d53a634ec08" kindref="member">mbedtls_ecdsa_write_signature()</ref></computeroutput> </para>
+</simplesect>
+<simplesect kind="note"><para>This function is like <computeroutput><ref refid="ecdsa_8h_1ac65a326d796babe1605b4d53a634ec08" kindref="member">mbedtls_ecdsa_write_signature()</ref></computeroutput> but it can return early and restart according to the limit set with <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput> to reduce blocking.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDSA context to use. This must be initialized and have a group and private key bound to it, for example via <ref refid="ecdsa_8h_1ab909bd06650e761e9fd176a86bd1ce17" kindref="member">mbedtls_ecdsa_genkey()</ref> or <ref refid="ecdsa_8h_1a6de8efd872cfe1bc2ee93b4a5584226c" kindref="member">mbedtls_ecdsa_from_keypair()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message digest that was used to hash the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message hash to be signed. This must be a readable buffer of length <computeroutput>hlen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the hash <computeroutput>hash</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to which to write the signature. This must be a writable buffer of length at least twice as large as the size of the curve used, plus 9. For example, 73 Bytes if a 256-bit curve is used. A buffer length of <ref refid="ecdsa_8h_1aeb07d11aef4d847c5cc5cfba49547136" kindref="member">MBEDTLS_ECDSA_MAX_LEN</ref> is always safe. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>sig</computeroutput> buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the actual length of the signature written. Must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function. This must not be <computeroutput>NULL</computeroutput> if <ref refid="mbedtls__config_8h_1adba50fdb786e1708b3360bd04bb77bd1" kindref="member">MBEDTLS_ECDSA_DETERMINISTIC</ref> is unset. Otherwise, it is unused and may be set to <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> is <computeroutput>NULL</computeroutput> or doesn&apos;t use a context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rs_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The restart context to use. This may be <computeroutput>NULL</computeroutput> to disable restarting. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized restart context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a6d549348fe93c843c19bfcd102b6e94f" kindref="member">MBEDTLS_ERR_ECP_IN_PROGRESS</ref> if maximum number of operations was reached: see <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput>, <computeroutput>MBEDTLS_ERR_MPI_XXX</computeroutput> or <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="519" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="519" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a8085ade3e127118aa615f65cb1d393d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_read_signature</definition>
+        <argsstring>(mbedtls_ecdsa_context *ctx, const unsigned char *hash, size_t hlen, const unsigned char *sig, size_t slen)</argsstring>
+        <name>mbedtls_ecdsa_read_signature</name>
+        <param>
+          <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>slen</declname>
+        </param>
+        <briefdescription>
+<para>This function reads and verifies an ECDSA signature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If the bitlength of the message hash is larger than the bitlength of the group order, then the hash is truncated as defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>, section 4.1.4, step 3.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDSA context to use. This must be initialized and have a group and public key bound to it. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message hash that was signed. This must be a readable buffer of length <computeroutput>hlen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the hash <computeroutput>hash</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The signature to read and verify. This must be a readable buffer of length <computeroutput>slen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of <computeroutput>sig</computeroutput> in Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1abcd6ff5c88f83a731383d344b56131f3" kindref="member">MBEDTLS_ERR_ECP_BAD_INPUT_DATA</ref> if signature is invalid. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a49d1dece5c167d28f22702cfc11b9aa1" kindref="member">MBEDTLS_ERR_ECP_SIG_LEN_MISMATCH</ref> if there is a valid signature in <computeroutput>sig</computeroutput>, but its length is less than <computeroutput>siglen</computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> or <computeroutput>MBEDTLS_ERR_MPI_XXX</computeroutput> error code on failure for any other reason. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="554" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="554" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a7736c52c95d1f2e8ac31d35faa2cd937" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_read_signature_restartable</definition>
+        <argsstring>(mbedtls_ecdsa_context *ctx, const unsigned char *hash, size_t hlen, const unsigned char *sig, size_t slen, mbedtls_ecdsa_restart_ctx *rs_ctx)</argsstring>
+        <name>mbedtls_ecdsa_read_signature_restartable</name>
+        <param>
+          <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>slen</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref> *</type>
+          <declname>rs_ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function reads and verifies an ECDSA signature, in a restartable way. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="ecdsa_8h_1a8085ade3e127118aa615f65cb1d393d5" kindref="member">mbedtls_ecdsa_read_signature()</ref></computeroutput> </para>
+</simplesect>
+<simplesect kind="note"><para>This function is like <computeroutput><ref refid="ecdsa_8h_1a8085ade3e127118aa615f65cb1d393d5" kindref="member">mbedtls_ecdsa_read_signature()</ref></computeroutput> but it can return early and restart according to the limit set with <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput> to reduce blocking.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDSA context to use. This must be initialized and have a group and public key bound to it. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message hash that was signed. This must be a readable buffer of length <computeroutput>hlen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the hash <computeroutput>hash</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The signature to read and verify. This must be a readable buffer of length <computeroutput>slen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of <computeroutput>sig</computeroutput> in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rs_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The restart context to use. This may be <computeroutput>NULL</computeroutput> to disable restarting. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized restart context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1abcd6ff5c88f83a731383d344b56131f3" kindref="member">MBEDTLS_ERR_ECP_BAD_INPUT_DATA</ref> if signature is invalid. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a49d1dece5c167d28f22702cfc11b9aa1" kindref="member">MBEDTLS_ERR_ECP_SIG_LEN_MISMATCH</ref> if there is a valid signature in <computeroutput>sig</computeroutput>, but its length is less than <computeroutput>siglen</computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ecp_8h_1a6d549348fe93c843c19bfcd102b6e94f" kindref="member">MBEDTLS_ERR_ECP_IN_PROGRESS</ref> if maximum number of operations was reached: see <computeroutput><ref refid="ecp_8h_1a4116275f34714de2218e8969611b6f42" kindref="member">mbedtls_ecp_set_max_ops()</ref></computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>Another <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> or <computeroutput>MBEDTLS_ERR_MPI_XXX</computeroutput> error code on failure for any other reason. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="589" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="589" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1ab909bd06650e761e9fd176a86bd1ce17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_genkey</definition>
+        <argsstring>(mbedtls_ecdsa_context *ctx, mbedtls_ecp_group_id gid, int(*f_rng)(void *, unsigned char *, size_t), void *p_rng)</argsstring>
+        <name>mbedtls_ecdsa_genkey</name>
+        <param>
+          <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref></type>
+          <declname>gid</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_rng</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <briefdescription>
+<para>This function generates an ECDSA keypair on the given curve. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDSA context to store the keypair in. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The elliptic curve to use. One of the various <computeroutput>MBEDTLS_ECP_DP_XXX</computeroutput> macros depending on configuration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG function to use. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The RNG context to be passed to <computeroutput>f_rng</computeroutput>. This may be <computeroutput>NULL</computeroutput> if <computeroutput>f_rng</computeroutput> doesn&apos;t need a context argument.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="610" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="610" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a6de8efd872cfe1bc2ee93b4a5584226c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_from_keypair</definition>
+        <argsstring>(mbedtls_ecdsa_context *ctx, const mbedtls_ecp_keypair *key)</argsstring>
+        <name>mbedtls_ecdsa_from_keypair</name>
+        <param>
+          <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecp_keypair</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>This function sets up an ECDSA context from an EC key pair. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="ecp_8h" kindref="compound">ecp.h</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDSA context to setup. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The EC key to use. This must be initialized and hold a private-public key pair or a public key. In the former case, the ECDSA context may be used for signature creation and verification after this call. In the latter case, it may be used for signature verification.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>An <computeroutput>MBEDTLS_ERR_ECP_XXX</computeroutput> code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="628" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="628" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1aca644ee02921388fdc42eb06377f4b62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecdsa_init</definition>
+        <argsstring>(mbedtls_ecdsa_context *ctx)</argsstring>
+        <name>mbedtls_ecdsa_init</name>
+        <param>
+          <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes an ECDSA context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDSA context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="637" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="637" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a28dd93cb376a51cce39f062858c1c186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecdsa_free</definition>
+        <argsstring>(mbedtls_ecdsa_context *ctx)</argsstring>
+        <name>mbedtls_ecdsa_free</name>
+        <param>
+          <type><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function frees an ECDSA context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ECDSA context to free. This may be <computeroutput>NULL</computeroutput>, in which case this function does nothing. If it is not <computeroutput>NULL</computeroutput>, it must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="646" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="646" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1ace6bb6852ab06b01619c720ea77657a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecdsa_restart_init</definition>
+        <argsstring>(mbedtls_ecdsa_restart_ctx *ctx)</argsstring>
+        <name>mbedtls_ecdsa_restart_init</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a restart context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The restart context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="655" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="655" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ecdsa_8h_1a16ff8eff5d08d872bca4d3c490699778" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ecdsa_restart_free</definition>
+        <argsstring>(mbedtls_ecdsa_restart_ctx *ctx)</argsstring>
+        <name>mbedtls_ecdsa_restart_free</name>
+        <param>
+          <type><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Free the components of a restart context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The restart context to free. This may be <computeroutput>NULL</computeroutput>, in which case this function does nothing. If it is not <computeroutput>NULL</computeroutput>, it must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="664" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" declline="664" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains ECDSA definitions and functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The Elliptic Curve Digital Signature Algorithm (ECDSA) is defined in <emphasis>Standards for Efficient Cryptography Group (SECG): SEC1 Elliptic Curve Cryptography</emphasis>. The use of ECDSA for TLS is defined in <emphasis>RFC-4492: Elliptic Curve Cryptography (ECC) Cipher Suites for Transport Layer Security (TLS)</emphasis>. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ECDSA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ECDSA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ecp_8h" kindref="compound">mbedtls/ecp.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="md_8h" kindref="compound">mbedtls/md.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>Ecdsa-Sig-Value<sp/>::=<sp/>SEQUENCE<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/><sp/><sp/><sp/><sp/><sp/><sp/>INTEGER,</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/><sp/><sp/><sp/><sp/><sp/><sp/>INTEGER</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>For<sp/>each<sp/>of<sp/>r<sp/>and<sp/>s,<sp/>the<sp/>value<sp/>(V)<sp/>may<sp/>include<sp/>an<sp/>extra<sp/>initial<sp/>&quot;0&quot;<sp/>bit.</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="ecdsa_8h_1a82c3ea5eb3ac8d6be563d42c16e717bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ECDSA_MAX_SIG_LEN(bits)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(</highlight><highlight class="comment">/*T,L<sp/>of<sp/>SEQUENCE*/</highlight><highlight class="preprocessor"><sp/>((bits)<sp/>&gt;=<sp/>61<sp/>*<sp/>8<sp/>?<sp/>3<sp/>:<sp/>2)<sp/>+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*T,L<sp/>of<sp/>r,s*/</highlight><highlight class="preprocessor"><sp/>2<sp/>*<sp/>(((bits)<sp/>&gt;=<sp/>127<sp/>*<sp/>8<sp/>?<sp/>3<sp/>:<sp/>2)<sp/>+<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*V<sp/>of<sp/>r,s*/</highlight><highlight class="preprocessor"><sp/>((bits)<sp/>+<sp/>8)<sp/>/<sp/>8))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="ecdsa_8h_1aeb07d11aef4d847c5cc5cfba49547136" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ECDSA_MAX_LEN<sp/><sp/>MBEDTLS_ECDSA_MAX_SIG_LEN(MBEDTLS_ECP_MAX_BITS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecp_keypair</ref><sp/><ref refid="ecdsa_8h_1a86ad4c743272c83310c20585ec7a182f" kindref="member">mbedtls_ecdsa_context</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="ecdsa_8h_1a1006f398e5c20959ac86e29cd08d6134" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">mbedtls_ecdsa_restart_ver<sp/><ref refid="ecdsa_8h_1a1006f398e5c20959ac86e29cd08d6134" kindref="member">mbedtls_ecdsa_restart_ver_ctx</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="ecdsa_8h_1a6c799dac3615dba6358c921e660c939d" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">mbedtls_ecdsa_restart_sig<sp/><ref refid="ecdsa_8h_1a6c799dac3615dba6358c921e660c939d" kindref="member">mbedtls_ecdsa_restart_sig_ctx</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDSA_DETERMINISTIC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="ecdsa_8h_1a511b635e2c836b1eb57e769bc3ec1f29" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">mbedtls_ecdsa_restart_det<sp/><ref refid="ecdsa_8h_1a511b635e2c836b1eb57e769bc3ec1f29" kindref="member">mbedtls_ecdsa_restart_det_ctx</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structmbedtls__ecdsa__restart__ctx" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99" refid="structmbedtls__ecdsa__restart__ctx_1a1c1033dd007c6e296690ca3f14c023b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__restart__ctx" kindref="compound">mbedtls_ecp_restart_ctx</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(ecp);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="structmbedtls__ecdsa__restart__ctx_1ac0501210b8faa2d92da0eccdc9cb532e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecdsa_8h_1a1006f398e5c20959ac86e29cd08d6134" kindref="member">mbedtls_ecdsa_restart_ver_ctx</ref><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(ver);<sp/></highlight></codeline>
+<codeline lineno="102" refid="structmbedtls__ecdsa__restart__ctx_1af3fc25288485a1e92c7b0dad16c4bf65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecdsa_8h_1a6c799dac3615dba6358c921e660c939d" kindref="member">mbedtls_ecdsa_restart_sig_ctx</ref><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(sig);<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDSA_DETERMINISTIC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="structmbedtls__ecdsa__restart__ctx_1ae555c1951560a1d62cbca89c39245e3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ecdsa_8h_1a511b635e2c836b1eb57e769bc3ec1f29" kindref="member">mbedtls_ecdsa_restart_det_ctx</ref><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(det);<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}<sp/><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Now<sp/>we<sp/>can<sp/>declare<sp/>functions<sp/>that<sp/>take<sp/>a<sp/>pointer<sp/>to<sp/>that<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1ab994434cd9bdfdef8353571c8a6fcbc1" kindref="member">mbedtls_ecdsa_can_do</ref>(<ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref><sp/>gid);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1af10f6fda2169862871d0ac07555c8641" kindref="member">mbedtls_ecdsa_sign</ref>(<ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/>*grp,<sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*r,<sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*s,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDSA_DETERMINISTIC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a266f8460644743ae4b7c76f45b5455f9" kindref="member">mbedtls_ecdsa_sign_det_ext</ref>(<ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/>*grp,<sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*r,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*d,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng_blind)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng_blind);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECDSA_DETERMINISTIC<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_ECDSA_SIGN_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1af1b78c0ca7aabb653e5f275e7789cfcc" kindref="member">mbedtls_ecdsa_sign_restartable</ref>(</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/>*grp,</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*r,<sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*s,</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*d,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng_blind)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng_blind,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref><sp/>*rs_ctx);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_ECDSA_SIGN_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDSA_DETERMINISTIC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a5126e18f8a551c9118ff5cd729111ec3" kindref="member">mbedtls_ecdsa_sign_det_restartable</ref>(</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/>*grp,</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*r,<sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*s,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng_blind)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng_blind,</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref><sp/>*rs_ctx);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECDSA_DETERMINISTIC<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a2292032f359fda59a7fd14911cc56f38" kindref="member">mbedtls_ecdsa_verify</ref>(<ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/>*grp,</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/>*Q,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*r,</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_ECDSA_VERIFY_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a6d4384c2808f26d6b1dfcc9de80629ea" kindref="member">mbedtls_ecdsa_verify_restartable</ref>(<ref refid="structmbedtls__ecp__group" kindref="compound">mbedtls_ecp_group</ref><sp/>*grp,</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>blen,</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ecp__point" kindref="compound">mbedtls_ecp_point</ref><sp/>*Q,</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*r,</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref><sp/>*s,</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref><sp/>*rs_ctx);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_ECDSA_VERIFY_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1ac65a326d796babe1605b4d53a634ec08" kindref="member">mbedtls_ecdsa_write_signature</ref>(<ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecdsa_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hlen,</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sig_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*slen,</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a7a1465230462ccd846a1b3e448ba3f05" kindref="member">mbedtls_ecdsa_write_signature_restartable</ref>(<ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecdsa_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hlen,</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sig_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*slen,</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref><sp/>*rs_ctx);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight></codeline>
+<codeline lineno="554"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a8085ade3e127118aa615f65cb1d393d5" kindref="member">mbedtls_ecdsa_read_signature</ref>(<ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecdsa_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hlen,</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>slen);</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"></highlight></codeline>
+<codeline lineno="589"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a7736c52c95d1f2e8ac31d35faa2cd937" kindref="member">mbedtls_ecdsa_read_signature_restartable</ref>(<ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecdsa_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hlen,</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>slen,</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref><sp/>*rs_ctx);</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1ab909bd06650e761e9fd176a86bd1ce17" kindref="member">mbedtls_ecdsa_genkey</ref>(<ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecdsa_context</ref><sp/>*ctx,<sp/><ref refid="ecp_8h_1af79e530ea8f8416480f805baa20b1a2d" kindref="member">mbedtls_ecp_group_id</ref><sp/>gid,</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_rng)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng);</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="628"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a6de8efd872cfe1bc2ee93b4a5584226c" kindref="member">mbedtls_ecdsa_from_keypair</ref>(<ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecdsa_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecp_keypair</ref><sp/>*key);</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1aca644ee02921388fdc42eb06377f4b62" kindref="member">mbedtls_ecdsa_init</ref>(<ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecdsa_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"></highlight></codeline>
+<codeline lineno="646"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a28dd93cb376a51cce39f062858c1c186" kindref="member">mbedtls_ecdsa_free</ref>(<ref refid="structmbedtls__ecp__keypair" kindref="compound">mbedtls_ecdsa_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"></highlight></codeline>
+<codeline lineno="648"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="649"><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1ace6bb6852ab06b01619c720ea77657a3" kindref="member">mbedtls_ecdsa_restart_init</ref>(<ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="656"><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ecdsa_8h_1a16ff8eff5d08d872bca4d3c490699778" kindref="member">mbedtls_ecdsa_restart_free</ref>(<ref refid="structmbedtls__ecdsa__restart__ctx" kindref="compound">mbedtls_ecdsa_restart_ctx</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="668"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="670"><highlight class="normal"></highlight></codeline>
+<codeline lineno="671"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ecdsa.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h"/>
+  </compounddef>
+</doxygen>

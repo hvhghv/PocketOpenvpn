@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__drv__se__asymmetric__t" kind="struct" language="C++" prot="public">
+    <compoundname>psa_drv_se_asymmetric_t</compoundname>
+    <includes refid="crypto__se__driver_8h" local="no">crypto_se_driver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__drv__se__asymmetric__t_1a32eda772d9a7ba0f47e9672e70625812" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__asymmetric_1gaac5182bca42737841785662743594515" kindref="member">psa_drv_se_asymmetric_sign_t</ref></type>
+        <definition>psa_drv_se_asymmetric_sign_t psa_drv_se_asymmetric_t::private_p_sign</definition>
+        <argsstring></argsstring>
+        <name>private_p_sign</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs an asymmetric sign operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="673" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__asymmetric__t_1aae8d5b389df3f9455fa42eb29d0105fc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__asymmetric_1gabb372536a004009294591eaf6cc4d186" kindref="member">psa_drv_se_asymmetric_verify_t</ref></type>
+        <definition>psa_drv_se_asymmetric_verify_t psa_drv_se_asymmetric_t::private_p_verify</definition>
+        <argsstring></argsstring>
+        <name>private_p_verify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs an asymmetric verify operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="675" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__asymmetric__t_1a4136fbf90073f9eb73b633b1ab2a511e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__asymmetric_1ga8544105c218640adfc4f983da4b34478" kindref="member">psa_drv_se_asymmetric_encrypt_t</ref></type>
+        <definition>psa_drv_se_asymmetric_encrypt_t psa_drv_se_asymmetric_t::private_p_encrypt</definition>
+        <argsstring></argsstring>
+        <name>private_p_encrypt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs an asymmetric encrypt operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="677" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="677" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__asymmetric__t_1a5a458389f3f6e57665bc7dfad9d30d3d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__asymmetric_1ga3472b9f36ffd9eb303100d5ec3eacda0" kindref="member">psa_drv_se_asymmetric_decrypt_t</ref></type>
+        <definition>psa_drv_se_asymmetric_decrypt_t psa_drv_se_asymmetric_t::private_p_decrypt</definition>
+        <argsstring></argsstring>
+        <name>private_p_decrypt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs an asymmetric decrypt operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="679" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A struct containing all of the function pointers needed to implement asymmetric cryptographic operations using secure elements. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>PSA Crypto API implementations should populate instances of the table as appropriate upon startup or at build time.</para>
+<para>If one of the functions is not implemented, it should be set to NULL. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>psa_drv_se_context_t</label>
+        <link refid="structpsa__drv__se__context__t"/>
+      </node>
+      <node id="1">
+        <label>psa_drv_se_asymmetric_t</label>
+        <link refid="structpsa__drv__se__asymmetric__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_p_encrypt</edgelabel>
+          <edgelabel>private_p_decrypt</edgelabel>
+          <edgelabel>private_p_sign</edgelabel>
+          <edgelabel>private_p_verify</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="671" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="671" bodyend="680"/>
+    <listofallmembers>
+      <member refid="structpsa__drv__se__asymmetric__t_1a5a458389f3f6e57665bc7dfad9d30d3d" prot="public" virt="non-virtual"><scope>psa_drv_se_asymmetric_t</scope><name>private_p_decrypt</name></member>
+      <member refid="structpsa__drv__se__asymmetric__t_1a4136fbf90073f9eb73b633b1ab2a511e" prot="public" virt="non-virtual"><scope>psa_drv_se_asymmetric_t</scope><name>private_p_encrypt</name></member>
+      <member refid="structpsa__drv__se__asymmetric__t_1a32eda772d9a7ba0f47e9672e70625812" prot="public" virt="non-virtual"><scope>psa_drv_se_asymmetric_t</scope><name>private_p_sign</name></member>
+      <member refid="structpsa__drv__se__asymmetric__t_1aae8d5b389df3f9455fa42eb29d0105fc" prot="public" virt="non-virtual"><scope>psa_drv_se_asymmetric_t</scope><name>private_p_verify</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

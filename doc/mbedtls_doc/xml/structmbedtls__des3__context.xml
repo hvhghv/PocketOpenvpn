@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__des3__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_des3_context</compoundname>
+    <includes refid="des_8h" local="no">des.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__des3__context_1a28f12389c42ce1aa67aeeec43ecd0b67" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_des3_context::private_sk[96]</definition>
+        <argsstring>[96]</argsstring>
+        <name>private_sk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3DES subkeys <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="61" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Triple-DES context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="60" column="35" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" bodystart="60" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structmbedtls__des3__context_1a28f12389c42ce1aa67aeeec43ecd0b67" prot="public" virt="non-virtual"><scope>mbedtls_des3_context</scope><name>private_sk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

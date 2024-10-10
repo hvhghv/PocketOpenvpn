@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__se__aead" kind="group">
+    <compoundname>se_aead</compoundname>
+    <title>Secure Element Authenticated Encryption with Additional Data</title>
+    <innerclass refid="structpsa__drv__se__aead__t" prot="public">psa_drv_se_aead_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__se__aead_1ga0acef6488a7dddbc707467907dec1842" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_aead_encrypt_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t algorithm, const uint8_t *p_nonce, size_t nonce_length, const uint8_t *p_additional_data, size_t additional_data_length, const uint8_t *p_plaintext, size_t plaintext_length, uint8_t *p_ciphertext, size_t ciphertext_size, size_t *p_ciphertext_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t algorithm, const uint8_t *p_nonce, size_t nonce_length, const uint8_t *p_additional_data, size_t additional_data_length, const uint8_t *p_plaintext, size_t plaintext_length, uint8_t *p_ciphertext, size_t ciphertext_size, size_t *p_ciphertext_length)</argsstring>
+        <name>psa_drv_se_aead_encrypt_t</name>
+        <briefdescription>
+<para>A function that performs a secure element authenticated encryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slot containing the key to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">algorithm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AEAD algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1ga1d44829d60065eaa4ac9a703e7d6abc8" kindref="member">PSA_ALG_IS_AEAD</ref>(<computeroutput>alg</computeroutput>) is true) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_nonce</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nonce or IV to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nonce_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_nonce</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_additional_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional data that will be authenticated but not encrypted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">additional_data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>p_additional_data</computeroutput> in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data that will be authenticated and encrypted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">plaintext_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>p_plaintext</computeroutput> in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer for the authenticated and encrypted data. The additional data is not part of this output. For algorithms where the encrypted data and the authentication tag are defined as separate outputs, the authentication tag is appended to the encrypted data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ciphertext_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_ciphertext</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_ciphertext_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the size of the output in the <computeroutput>p_ciphertext</computeroutput> buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="724" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="724" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__aead_1gab517338cb0541c9e36fbcea713622104" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_aead_decrypt_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t algorithm, const uint8_t *p_nonce, size_t nonce_length, const uint8_t *p_additional_data, size_t additional_data_length, const uint8_t *p_ciphertext, size_t ciphertext_length, uint8_t *p_plaintext, size_t plaintext_size, size_t *p_plaintext_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t algorithm, const uint8_t *p_nonce, size_t nonce_length, const uint8_t *p_additional_data, size_t additional_data_length, const uint8_t *p_ciphertext, size_t ciphertext_length, uint8_t *p_plaintext, size_t plaintext_size, size_t *p_plaintext_length)</argsstring>
+        <name>psa_drv_se_aead_decrypt_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function that performs a secure element authenticated decryption operation</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Slot containing the key to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">algorithm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AEAD algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1ga1d44829d60065eaa4ac9a703e7d6abc8" kindref="member">PSA_ALG_IS_AEAD</ref>(<computeroutput>alg</computeroutput>) is true) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_nonce</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nonce or IV to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nonce_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_nonce</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_additional_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional data that has been authenticated but not encrypted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">additional_data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>p_additional_data</computeroutput> in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data that has been authenticated and encrypted. For algorithms where the encrypted data and the authentication tag are defined as separate inputs, the buffer must contain the encrypted data followed by the authentication tag. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ciphertext_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>p_ciphertext</computeroutput> in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer for the decrypted data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">plaintext_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_plaintext</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_plaintext_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the size of the output in the <computeroutput>p_plaintext</computeroutput> buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="766" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="766" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Authenticated Encryption with Additional Data (AEAD) operations with secure elements must be done in one function call. While this creates a burden for implementers as there must be sufficient space in memory for the entire message, it prevents decrypted data from being made available before the authentication operation is complete and the data is known to be authentic. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

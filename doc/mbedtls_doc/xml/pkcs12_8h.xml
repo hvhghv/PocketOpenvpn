@@ -1,0 +1,824 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="pkcs12_8h" kind="file" language="C++">
+    <compoundname>pkcs12.h</compoundname>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="md_8h" local="yes">mbedtls/md.h</includes>
+    <includes refid="cipher_8h" local="yes">mbedtls/cipher.h</includes>
+    <includes refid="asn1_8h" local="yes">mbedtls/asn1.h</includes>
+    <includes local="no">stddef.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="18">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="23">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="28">
+        <label>mbedtls/bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>limits.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="3">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="5">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="20">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="26">
+        <label>mbedtls/cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="6">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="27">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>stdio.h</label>
+      </node>
+      <node id="1">
+        <label>pkcs12.h</label>
+        <link refid="pkcs12_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pkcs12_8h_1ac856f81d3cbc3baeaa848b33d991209b" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS12_BAD_INPUT_DATA</name>
+        <initializer>-0x1F80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bad input parameters to function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="22" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs12_8h_1ae887e38a4caab392fc5086bcceed7af9" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS12_FEATURE_UNAVAILABLE</name>
+        <initializer>-0x1F00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Feature not available, e.g. unsupported encryption scheme. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="24" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs12_8h_1a92e9101410d452e508c88a7231e23996" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS12_PBE_INVALID_FORMAT</name>
+        <initializer>-0x1E80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PBE ASN.1 data not as expected. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="26" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs12_8h_1ab3313f9e7321d23b3af93e97a544ffdb" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS12_PASSWORD_MISMATCH</name>
+        <initializer>-0x1E00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given private key password does not allow for correct decryption. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="28" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs12_8h_1ad9b0f41c74cd6a8e072c84b5d310b331" prot="public" static="no">
+        <name>MBEDTLS_PKCS12_DERIVE_KEY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>encryption/decryption key </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="30" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs12_8h_1ad8ac9a220c8d237a9a5bc972daed1c13" prot="public" static="no">
+        <name>MBEDTLS_PKCS12_DERIVE_IV</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initialization vector <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="31" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs12_8h_1a91d3d19fb1a5cd18648f363eff8617ec" prot="public" static="no">
+        <name>MBEDTLS_PKCS12_DERIVE_MAC_KEY</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>integrity / MAC key <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="32" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs12_8h_1a41364d57177059b3ffb3167139e741b4" prot="public" static="no">
+        <name>MBEDTLS_PKCS12_PBE_DECRYPT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="34" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs12_8h_1ae833899c432600a15030b761d1e34d44" prot="public" static="no">
+        <name>MBEDTLS_PKCS12_PBE_ENCRYPT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="35" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pkcs12_8h_1a860c32e28331903d3e822293aec8e3f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int <ref refid="platform__util_8h_1aa9f53b232ef244efb301233d111930dc" kindref="member">MBEDTLS_DEPRECATED</ref></type>
+        <definition>int MBEDTLS_DEPRECATED mbedtls_pkcs12_pbe</definition>
+        <argsstring>(mbedtls_asn1_buf *pbe_params, int mode, mbedtls_cipher_type_t cipher_type, mbedtls_md_type_t md_type, const unsigned char *pwd, size_t pwdlen, const unsigned char *data, size_t len, unsigned char *output)</argsstring>
+        <name>mbedtls_pkcs12_pbe</name>
+        <param>
+          <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *</type>
+          <declname>pbe_params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="cipher_8h_1a00c5885f1ea7279c5a7d8e12e596569d" kindref="member">mbedtls_cipher_type_t</ref></type>
+          <declname>cipher_type</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_type</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>pwd</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pwdlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>PKCS12 Password Based function (encryption / decryption) for cipher-based and mbedtls_md-based PBE&apos;s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>When encrypting, <ref refid="mbedtls__config_8h_1a0f53acf64658fe68c1e532a9434c31f0" kindref="member">MBEDTLS_CIPHER_PADDING_PKCS7</ref> must be enabled at compile time.</para>
+</simplesect>
+<xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated and will be removed in a future version of the library. Please use <ref refid="pkcs12_8h_1adf510355b5435be62494364754ca85ed" kindref="member">mbedtls_pkcs12_pbe_ext()</ref> instead.</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="warning"><para>When decrypting:<itemizedlist>
+<listitem><para>if <ref refid="mbedtls__config_8h_1a0f53acf64658fe68c1e532a9434c31f0" kindref="member">MBEDTLS_CIPHER_PADDING_PKCS7</ref> is enabled at compile time, this function validates the CBC padding and returns <ref refid="pkcs12_8h_1ab3313f9e7321d23b3af93e97a544ffdb" kindref="member">MBEDTLS_ERR_PKCS12_PASSWORD_MISMATCH</ref> if the padding is invalid. Note that this can help active adversaries attempting to brute-forcing the password. Note also that there is no guarantee that an invalid password will be detected (the chances of a valid padding with a random password are about 1/255).</para>
+</listitem><listitem><para>if <ref refid="mbedtls__config_8h_1a0f53acf64658fe68c1e532a9434c31f0" kindref="member">MBEDTLS_CIPHER_PADDING_PKCS7</ref> is disabled at compile time, this function does not validate the CBC padding.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pbe_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an ASN1 buffer containing the pkcs-12 PbeParams structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>either <ref refid="pkcs12_8h_1ae833899c432600a15030b761d1e34d44" kindref="member">MBEDTLS_PKCS12_PBE_ENCRYPT</ref> or <ref refid="pkcs12_8h_1a41364d57177059b3ffb3167139e741b4" kindref="member">MBEDTLS_PKCS12_PBE_DECRYPT</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cipher_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the cipher used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the mbedtls_md used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Latin1-encoded password used. This may only be <computeroutput>NULL</computeroutput> when <computeroutput>pwdlen</computeroutput> is 0. No null terminator should be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwdlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the password (may be 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer. On success, it contains the encrypted or decrypted data, possibly followed by the CBC padding. On failure, the content is indeterminate. For decryption, there must be enough room for <computeroutput>len</computeroutput> bytes. For encryption, there must be enough room for <computeroutput>len</computeroutput> + 1 bytes, rounded up to the block size of the block cipher identified by <computeroutput>pbe_params</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a MBEDTLS_ERR_XXX code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="89" column="24" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" declline="89" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="pkcs12_8h_1adf510355b5435be62494364754ca85ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pkcs12_pbe_ext</definition>
+        <argsstring>(mbedtls_asn1_buf *pbe_params, int mode, mbedtls_cipher_type_t cipher_type, mbedtls_md_type_t md_type, const unsigned char *pwd, size_t pwdlen, const unsigned char *data, size_t len, unsigned char *output, size_t output_size, size_t *output_len)</argsstring>
+        <name>mbedtls_pkcs12_pbe_ext</name>
+        <param>
+          <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *</type>
+          <declname>pbe_params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="cipher_8h_1a00c5885f1ea7279c5a7d8e12e596569d" kindref="member">mbedtls_cipher_type_t</ref></type>
+          <declname>cipher_type</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_type</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>pwd</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pwdlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_len</declname>
+        </param>
+        <briefdescription>
+<para>PKCS12 Password Based function (encryption / decryption) for cipher-based and mbedtls_md-based PBE&apos;s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>When decrypting:<itemizedlist>
+<listitem><para>This function validates the CBC padding and returns <ref refid="pkcs12_8h_1ab3313f9e7321d23b3af93e97a544ffdb" kindref="member">MBEDTLS_ERR_PKCS12_PASSWORD_MISMATCH</ref> if the padding is invalid. Note that this can help active adversaries attempting to brute-forcing the password. Note also that there is no guarantee that an invalid password will be detected (the chances of a valid padding with a random password are about 1/255).</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pbe_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an ASN1 buffer containing the pkcs-12 PbeParams structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>either <ref refid="pkcs12_8h_1ae833899c432600a15030b761d1e34d44" kindref="member">MBEDTLS_PKCS12_PBE_ENCRYPT</ref> or <ref refid="pkcs12_8h_1a41364d57177059b3ffb3167139e741b4" kindref="member">MBEDTLS_PKCS12_PBE_DECRYPT</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cipher_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the cipher used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the mbedtls_md used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Latin1-encoded password used. This may only be <computeroutput>NULL</computeroutput> when <computeroutput>pwdlen</computeroutput> is 0. No null terminator should be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwdlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the password (may be 0) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the input data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data length </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer. On success, it contains the encrypted or decrypted data, possibly followed by the CBC padding. On failure, the content is indeterminate. For decryption, there must be enough room for <computeroutput>len</computeroutput> bytes. For encryption, there must be enough room for <computeroutput>len</computeroutput> + 1 bytes, rounded up to the block size of the block cipher identified by <computeroutput>pbe_params</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of output buffer. This must be big enough to accommodate for output plus padding data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, length of actual data written to the output buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a MBEDTLS_ERR_XXX code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="139" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" declline="139" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="pkcs12_8h_1a5e58a53e1f2194583f1e48fc2ffef627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pkcs12_derivation</definition>
+        <argsstring>(unsigned char *data, size_t datalen, const unsigned char *pwd, size_t pwdlen, const unsigned char *salt, size_t saltlen, mbedtls_md_type_t mbedtls_md, int id, int iterations)</argsstring>
+        <name>mbedtls_pkcs12_derivation</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>datalen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>pwd</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pwdlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>salt</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>saltlen</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>mbedtls_md</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations</declname>
+        </param>
+        <briefdescription>
+<para>The PKCS#12 derivation function uses a password and a salt to produce pseudo-random bits for a particular &quot;purpose&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Depending on the given id, this function can produce an encryption/decryption key, an initialization vector or an integrity key.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to store the derived data in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>datalen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of buffer to fill </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The password to use. For compliance with PKCS#12 §B.1, this should be a BMPString, i.e. a Unicode string where each character is encoded as 2 bytes in big-endian order, with no byte order mark and with a null terminator (i.e. the last two bytes should be 0x00 0x00). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwdlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the password (may be 0). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt buffer to use. This may only be <computeroutput>NULL</computeroutput> when <computeroutput>saltlen</computeroutput> is 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>saltlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the salt (may be zero) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mbedtls_md</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mbedtls_md type to use during the derivation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id that describes the purpose (can be <ref refid="pkcs12_8h_1ad9b0f41c74cd6a8e072c84b5d310b331" kindref="member">MBEDTLS_PKCS12_DERIVE_KEY</ref>, <ref refid="pkcs12_8h_1ad8ac9a220c8d237a9a5bc972daed1c13" kindref="member">MBEDTLS_PKCS12_DERIVE_IV</ref> or <ref refid="pkcs12_8h_1a91d3d19fb1a5cd18648f363eff8617ec" kindref="member">MBEDTLS_PKCS12_DERIVE_MAC_KEY</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of iterations</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a MD, BIGNUM type error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" line="177" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h" declline="177" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PKCS#12 Personal Information Exchange Syntax. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_PKCS12_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS12_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="md_8h" kindref="compound">mbedtls/md.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cipher_8h" kindref="compound">mbedtls/cipher.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asn1_8h" kindref="compound">mbedtls/asn1.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="pkcs12_8h_1ac856f81d3cbc3baeaa848b33d991209b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS12_BAD_INPUT_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1F80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="pkcs12_8h_1ae887e38a4caab392fc5086bcceed7af9" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS12_FEATURE_UNAVAILABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1F00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="pkcs12_8h_1a92e9101410d452e508c88a7231e23996" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS12_PBE_INVALID_FORMAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1E80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="pkcs12_8h_1ab3313f9e7321d23b3af93e97a544ffdb" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS12_PASSWORD_MISMATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1E00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="pkcs12_8h_1ad9b0f41c74cd6a8e072c84b5d310b331" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS12_DERIVE_KEY<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="pkcs12_8h_1ad8ac9a220c8d237a9a5bc972daed1c13" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS12_DERIVE_IV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="pkcs12_8h_1a91d3d19fb1a5cd18648f363eff8617ec" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS12_DERIVE_MAC_KEY<sp/><sp/><sp/>3<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="pkcs12_8h_1a41364d57177059b3ffb3167139e741b4" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS12_PBE_DECRYPT<sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="pkcs12_8h_1ae833899c432600a15030b761d1e34d44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS12_PBE_ENCRYPT<sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ASN1_PARSE_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_DEPRECATED_REMOVED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform__util_8h_1aa9f53b232ef244efb301233d111930dc" kindref="member">MBEDTLS_DEPRECATED</ref><sp/><ref refid="pkcs12_8h_1a860c32e28331903d3e822293aec8e3f7" kindref="member">mbedtls_pkcs12_pbe</ref>(<ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/>*pbe_params,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cipher_8h_1a00c5885f1ea7279c5a7d8e12e596569d" kindref="member">mbedtls_cipher_type_t</ref><sp/>cipher_type,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_type,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pwd,<sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pwdlen,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_DEPRECATED_REMOVED<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_PADDING_PKCS7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkcs12_8h_1adf510355b5435be62494364754ca85ed" kindref="member">mbedtls_pkcs12_pbe_ext</ref>(<ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/>*pbe_params,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cipher_8h_1a00c5885f1ea7279c5a7d8e12e596569d" kindref="member">mbedtls_cipher_type_t</ref><sp/>cipher_type,<sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_type,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pwd,<sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pwdlen,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_size,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*output_len);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_PADDING_PKCS7<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ASN1_PARSE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkcs12_8h_1a5e58a53e1f2194583f1e48fc2ffef627" kindref="member">mbedtls_pkcs12_derivation</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>datalen,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pwd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pwdlen,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*salt,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>saltlen,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/><ref refid="md_8h_1a36c5d8bda1905e0434708f0ef5912dda" kindref="member">mbedtls_md</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iterations);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>pkcs12.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/pkcs12.h"/>
+  </compounddef>
+</doxygen>

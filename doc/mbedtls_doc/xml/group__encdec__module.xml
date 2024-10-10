@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__encdec__module" kind="group">
+    <compoundname>encdec_module</compoundname>
+    <title>Encryption/decryption module</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Encryption/decryption module provides encryption/decryption functions. One can differentiate between symmetric and asymmetric algorithms; the symmetric ones are mostly used for message confidentiality and the asymmetric ones for key exchange and message integrity. Some symmetric algorithms provide different block cipher modes, mainly Electronic Code Book (ECB) which is used for short (64-bit) messages and Cipher Block Chaining (CBC) which provides the structure needed for longer messages. In addition the Cipher Feedback Mode (CFB-128) stream cipher mode, Counter mode (CTR) and Galois Counter Mode (GCM) are implemented for specific algorithms.</para>
+<para>All symmetric encryption algorithms are accessible via the generic cipher layer (see <computeroutput><ref refid="cipher_8h_1a009056b59d69abba5843ce78cd9aae1c" kindref="member">mbedtls_cipher_setup()</ref></computeroutput>).</para>
+<para>The asymmetric encryption algorithms are accessible via the generic public key layer (see <computeroutput><ref refid="pk_8h_1a999d1160bb30c03d0c4382c3a9b0aa89" kindref="member">mbedtls_pk_init()</ref></computeroutput>).</para>
+<para>The following algorithms are provided:<itemizedlist>
+<listitem><para>Symmetric:<itemizedlist>
+<listitem><para>AES (see <computeroutput><ref refid="aes_8h_1a0e59fdda18a145e702984268b9ab291a" kindref="member">mbedtls_aes_crypt_ecb()</ref></computeroutput>, <computeroutput><ref refid="aes_8h_1a321834eafbf0dacb36dac343bfd6b35d" kindref="member">mbedtls_aes_crypt_cbc()</ref></computeroutput>, <computeroutput><ref refid="aes_8h_1a944946adabbc344f2c6cf6e6f51a21e3" kindref="member">mbedtls_aes_crypt_cfb128()</ref></computeroutput> and <computeroutput><ref refid="aes_8h_1a375c98cba4c5806d3a39c7d1e1e226da" kindref="member">mbedtls_aes_crypt_ctr()</ref></computeroutput>).</para>
+</listitem><listitem><para>Camellia (see <computeroutput><ref refid="camellia_8h_1a4399c4d56cd27ffb610abeb70d51f8f7" kindref="member">mbedtls_camellia_crypt_ecb()</ref></computeroutput>, <computeroutput><ref refid="camellia_8h_1a6121d988f0fa571adbb3eea80560c545" kindref="member">mbedtls_camellia_crypt_cbc()</ref></computeroutput>, <computeroutput><ref refid="camellia_8h_1afffb8f6eeac954fbdddb3c99ad0f87c6" kindref="member">mbedtls_camellia_crypt_cfb128()</ref></computeroutput> and <computeroutput><ref refid="camellia_8h_1ae90ed9ce4edf59d5219c64a0d2b3d23d" kindref="member">mbedtls_camellia_crypt_ctr()</ref></computeroutput>).</para>
+</listitem><listitem><para>DES/3DES (see <computeroutput><ref refid="des_8h_1aa713501cc3e30c39a763b4568698f5c1" kindref="member">mbedtls_des_crypt_ecb()</ref></computeroutput>, <computeroutput><ref refid="des_8h_1a95353a2f0d2e8d1377f43f71ca12a231" kindref="member">mbedtls_des_crypt_cbc()</ref></computeroutput>, <computeroutput><ref refid="des_8h_1a933b8f629cc201e06f5e89396d065204" kindref="member">mbedtls_des3_crypt_ecb()</ref></computeroutput> and <computeroutput><ref refid="des_8h_1a4f5bb9106306e11c906abfa46fc51b94" kindref="member">mbedtls_des3_crypt_cbc()</ref></computeroutput>).</para>
+</listitem><listitem><para>GCM (AES-GCM and CAMELLIA-GCM) (see <computeroutput><ref refid="gcm_8h_1ac3f60a663c6b01ef6d977ac06aac57df" kindref="member">mbedtls_gcm_init()</ref></computeroutput>)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Asymmetric:<itemizedlist>
+<listitem><para>Diffie-Hellman-Merkle (see <computeroutput><ref refid="dhm_8h_1a1fe799e776fd0f27eb4080248e547f3d" kindref="member">mbedtls_dhm_read_public()</ref></computeroutput>, <computeroutput><ref refid="dhm_8h_1af49bee438130355e24540f7565e7465f" kindref="member">mbedtls_dhm_make_public()</ref></computeroutput> and <computeroutput><ref refid="dhm_8h_1ac3985de01420d018ed91daec9e7d7969" kindref="member">mbedtls_dhm_calc_secret()</ref></computeroutput>).</para>
+</listitem><listitem><para>RSA (see <computeroutput><ref refid="rsa_8h_1a9db0f76aff9a6ce179b6fbe329bf5569" kindref="member">mbedtls_rsa_public()</ref></computeroutput> and <computeroutput><ref refid="rsa_8h_1a3e016741ddaa354916ade4d48e9a0965" kindref="member">mbedtls_rsa_private()</ref></computeroutput>).</para>
+</listitem><listitem><para>Elliptic Curves over GF(p) (see <computeroutput><ref refid="ecp_8h_1ae069f80bc2f9cf2215c34430a9ccd924" kindref="member">mbedtls_ecp_point_init()</ref></computeroutput>).</para>
+</listitem><listitem><para>Elliptic Curve Digital Signature Algorithm (ECDSA) (see <computeroutput><ref refid="ecdsa_8h_1aca644ee02921388fdc42eb06377f4b62" kindref="member">mbedtls_ecdsa_init()</ref></computeroutput>).</para>
+</listitem><listitem><para>Elliptic Curve Diffie Hellman (ECDH) (see <computeroutput><ref refid="ecdh_8h_1a97e787a12f7aae180ab9828303199dca" kindref="member">mbedtls_ecdh_init()</ref></computeroutput>).</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>This module provides encryption/decryption which can be used to provide secrecy.</para>
+<para>It also provides asymmetric key functions which can be used for confidentiality, integrity, authentication and non-repudiation. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

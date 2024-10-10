@@ -1,0 +1,31 @@
+<map id="src/openvpn/shaper.c" name="src/openvpn/shaper.c">
+<area shape="rect" id="node1" title=" " alt="" coords="1174,5,1321,32"/>
+<area shape="rect" id="node2" href="$syshead_8h.html" title=" " alt="" coords="579,80,662,107"/>
+<area shape="rect" id="node14" href="$shaper_8h.html" title=" " alt="" coords="1211,80,1283,107"/>
+<area shape="rect" id="node29" href="$memdbg_8h.html" title=" " alt="" coords="1307,80,1390,107"/>
+<area shape="rect" id="node3" href="$compat_8h.html" title=" " alt="" coords="635,155,711,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="841,528,915,555"/>
+<area shape="rect" id="node5" title=" " alt="" coords="787,155,871,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="895,155,983,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1008,155,1087,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,155,92,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="117,155,199,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="223,155,301,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="325,155,399,181"/>
+<area shape="rect" id="node12" title=" " alt="" coords="423,155,501,181"/>
+<area shape="rect" id="node13" title=" " alt="" coords="525,155,610,181"/>
+<area shape="rect" id="node15" href="$openvpn_2basic_8h.html" title=" " alt="" coords="1573,528,1637,555"/>
+<area shape="rect" id="node16" href="$integer_8h.html" title=" " alt="" coords="1162,304,1234,331"/>
+<area shape="rect" id="node17" href="$openvpn_2error_8h.html" title=" " alt="" coords="1169,453,1227,480"/>
+<area shape="rect" id="node21" href="$misc_8h.html" title=" " alt="" coords="1477,155,1538,181"/>
+<area shape="rect" id="node27" href="$interval_8h.html" title=" " alt="" coords="1249,155,1323,181"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1260,528,1323,555"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1067,528,1137,555"/>
+<area shape="rect" id="node20" href="$errlevel_8h.html" title=" " alt="" coords="1161,528,1235,555"/>
+<area shape="rect" id="node22" href="$argv_8h.html" title=" " alt="" coords="1517,304,1575,331"/>
+<area shape="rect" id="node23" href="$buffer_8h.html" title=" " alt="" coords="1513,379,1579,405"/>
+<area shape="rect" id="node24" href="$common_8h.html" title=" " alt="" coords="1309,304,1391,331"/>
+<area shape="rect" id="node25" href="$env__set_8h.html" title=" " alt="" coords="1429,229,1508,256"/>
+<area shape="rect" id="node26" href="$platform_8h.html" title=" " alt="" coords="1701,304,1781,331"/>
+<area shape="rect" id="node28" href="$otime_8h.html" title=" " alt="" coords="1276,229,1341,256"/>
+</map>

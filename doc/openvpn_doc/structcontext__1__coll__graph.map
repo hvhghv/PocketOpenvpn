@@ -1,0 +1,46 @@
+<map id="context_1" name="context_1">
+<area shape="rect" id="node1" title="Level 1 context containing state that persists across SIGUSR1 restarts." alt="" coords="1173,997,1252,1024"/>
+<area shape="rect" id="node2" href="$structroute__ipv6__list.html" title=" " alt="" coords="836,372,943,399"/>
+<area shape="rect" id="node3" href="$structgc__arena.html" title="Garbage collection arena used to keep track of dynamically allocated memory." alt="" coords="530,273,605,300"/>
+<area shape="rect" id="node36" href="$structroute__list.html" title=" " alt="" coords="852,155,927,181"/>
+<area shape="rect" id="node4" href="$structgc__entry__special.html" title="Garbage collection entry for a specially allocated structure that needs a custom free function to be ..." alt="" coords="195,333,315,360"/>
+<area shape="rect" id="node5" href="$structgc__entry.html" title="Garbage collection entry for one dynamically allocated block of memory." alt="" coords="219,244,291,271"/>
+<area shape="rect" id="node6" href="$structroute__ipv6.html" title=" " alt="" coords="526,432,609,459"/>
+<area shape="rect" id="node7" href="$structroute__ipv6__gateway__info.html" title=" " alt="" coords="484,343,651,369"/>
+<area shape="rect" id="node8" href="$structroute__ipv6__gateway__address.html" title=" " alt="" coords="185,385,324,426"/>
+<area shape="rect" id="node9" href="$structtuntap.html" title=" " alt="" coords="860,927,919,953"/>
+<area shape="rect" id="node10" href="$structtuntap__options.html" title=" " alt="" coords="514,927,621,953"/>
+<area shape="rect" id="node11" href="$structoverlapped__io.html" title=" " alt="" coords="516,876,619,903"/>
+<area shape="rect" id="node12" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="227,764,282,791"/>
+<area shape="rect" id="node16" href="$structstatus__output.html" title=" " alt="" coords="517,483,618,509"/>
+<area shape="rect" id="node27" href="$structkey__schedule.html" title=" " alt="" coords="838,679,941,705"/>
+<area shape="rect" id="node13" href="$structtun__ring.html" title="Wintun ring buffer See https://github.com/WireGuard/wintun#ring&#45;layout." alt="" coords="533,825,601,852"/>
+<area shape="rect" id="node14" href="$structrw__handle.html" title=" " alt="" coords="527,977,608,1004"/>
+<area shape="rect" id="node15" href="$structifconfig__pool__persist.html" title=" " alt="" coords="819,451,960,477"/>
+<area shape="rect" id="node17" href="$structevent__timeout.html" title=" " alt="" coords="203,451,307,477"/>
+<area shape="rect" id="node18" href="$structvirtual__output.html" title=" " alt="" coords="205,501,305,528"/>
+<area shape="rect" id="node19" href="$structhttp__proxy__info.html" title=" " alt="" coords="834,997,945,1024"/>
+<area shape="rect" id="node20" href="$structhttp__proxy__options.html" title=" " alt="" coords="501,1028,633,1055"/>
+<area shape="rect" id="node21" href="$structhttp__custom__header.html" title=" " alt="" coords="185,1028,325,1055"/>
+<area shape="rect" id="node22" href="$structuser__pass.html" title=" " alt="" coords="526,1093,609,1120"/>
+<area shape="rect" id="node23" href="$structname__value__list.html" title=" " alt="" coords="197,1093,313,1120"/>
+<area shape="rect" id="node24" href="$structname__value.html" title=" " alt="" coords="5,1093,97,1120"/>
+<area shape="rect" id="node25" href="$structpacket__id__persist.html" title=" " alt="" coords="827,1111,951,1137"/>
+<area shape="rect" id="node26" href="$structcached__dns__entry.html" title=" " alt="" coords="825,1200,953,1227"/>
+<area shape="rect" id="node28" href="$structkey__ctx.html" title="Container for one set of cipher and/or HMAC contexts." alt="" coords="221,680,289,707"/>
+<area shape="rect" id="node29" href="$structkey__ctx__bi.html" title="Container for two sets of OpenSSL cipher and/or HMAC contexts for both sending and receiving directio..." alt="" coords="525,635,610,661"/>
+<area shape="rect" id="node30" href="$structtls__root__ctx.html" title="Structure that wraps the TLS context." alt="" coords="522,584,613,611"/>
+<area shape="rect" id="node31" href="$structexternal__context.html" title="Context used by external_pkcs1_sign()" alt="" coords="195,552,314,579"/>
+<area shape="rect" id="node32" href="$structkey__type.html" title=" " alt="" coords="530,533,605,560"/>
+<area shape="rect" id="node33" href="$structlink__socket__addr.html" title=" " alt="" coords="829,1251,949,1277"/>
+<area shape="rect" id="node34" href="$structlink__socket__actual.html" title=" " alt="" coords="502,1251,633,1277"/>
+<area shape="rect" id="node35" href="$structopenvpn__sockaddr.html" title=" " alt="" coords="189,1251,320,1277"/>
+<area shape="rect" id="node37" href="$structroute__special__addr.html" title=" " alt="" coords="502,9,633,36"/>
+<area shape="rect" id="node38" href="$structroute__bypass.html" title=" " alt="" coords="205,5,305,32"/>
+<area shape="rect" id="node39" href="$structroute__gateway__info.html" title=" " alt="" coords="500,65,635,92"/>
+<area shape="rect" id="node40" href="$structroute__gateway__address.html" title=" " alt="" coords="175,65,335,92"/>
+<area shape="rect" id="node41" href="$structroute__ipv4.html" title=" " alt="" coords="526,155,609,181"/>
+<area shape="rect" id="node42" href="$structroute__option.html" title=" " alt="" coords="208,155,301,181"/>
+<area shape="rect" id="node43" href="$structsha256__digest.html" title="Wrapper struct to pass around SHA256 digests." alt="" coords="836,1301,943,1328"/>
+<area shape="rect" id="node44" href="$structsocks__proxy__info.html" title=" " alt="" coords="827,1352,951,1379"/>
+</map>

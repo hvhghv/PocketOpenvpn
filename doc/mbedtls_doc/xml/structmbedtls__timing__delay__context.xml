@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__timing__delay__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_timing_delay_context</compoundname>
+    <includes refid="timing_8h" local="no">timing.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__timing__delay__context_1a73a1d5df860a9ac7c567ae50dbe1584a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmbedtls__timing__hr__time" kindref="compound">mbedtls_timing_hr_time</ref></type>
+        <definition>struct mbedtls_timing_hr_time mbedtls_timing_delay_context::private_timer</definition>
+        <argsstring></argsstring>
+        <name>private_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" line="30" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__timing__delay__context_1a54fecdc2368ecbde34913de9ed502600" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_timing_delay_context::private_int_ms</definition>
+        <argsstring></argsstring>
+        <name>private_int_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" line="38" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__timing__delay__context_1a6b24be71d665da5d08f16d0d94d824bf" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_timing_delay_context::private_fin_ms</definition>
+        <argsstring></argsstring>
+        <name>private_fin_ms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" line="39" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Context for mbedtls_timing_set/get_delay() </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>mbedtls_timing_delay_context</label>
+        <link refid="structmbedtls__timing__delay__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_timer</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_timing_hr_time</label>
+        <link refid="structmbedtls__timing__hr__time"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" line="36" column="43" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/timing.h" bodystart="36" bodyend="40"/>
+    <listofallmembers>
+      <member refid="structmbedtls__timing__delay__context_1a6b24be71d665da5d08f16d0d94d824bf" prot="public" virt="non-virtual"><scope>mbedtls_timing_delay_context</scope><name>private_fin_ms</name></member>
+      <member refid="structmbedtls__timing__delay__context_1a54fecdc2368ecbde34913de9ed502600" prot="public" virt="non-virtual"><scope>mbedtls_timing_delay_context</scope><name>private_int_ms</name></member>
+      <member refid="structmbedtls__timing__delay__context_1a73a1d5df860a9ac7c567ae50dbe1584a" prot="public" virt="non-virtual"><scope>mbedtls_timing_delay_context</scope><name>private_timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

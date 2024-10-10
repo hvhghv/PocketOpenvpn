@@ -1,0 +1,925 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="camellia_8h" kind="file" language="C++">
+    <compoundname>camellia.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes refid="platform__util_8h" local="yes">mbedtls/platform_util.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="21">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="23">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="1">
+        <label>camellia.h</label>
+        <link refid="camellia_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="24">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__camellia__context" prot="public">mbedtls_camellia_context</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="camellia_8h_1a0bbefeaf56ae351979742a83fb64b763" prot="public" static="no">
+        <name>MBEDTLS_CAMELLIA_ENCRYPT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="21" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="camellia_8h_1a2106b6b6200c7aa82502edd5d72e973f" prot="public" static="no">
+        <name>MBEDTLS_CAMELLIA_DECRYPT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="22" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="camellia_8h_1a4a02962d2d8bc36587b9af0df216c119" prot="public" static="no">
+        <name>MBEDTLS_ERR_CAMELLIA_BAD_INPUT_DATA</name>
+        <initializer>-0x0024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bad input data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="25" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="camellia_8h_1a66cfdf3e866ec31afd789eedbd6a6883" prot="public" static="no">
+        <name>MBEDTLS_ERR_CAMELLIA_INVALID_INPUT_LENGTH</name>
+        <initializer>-0x0026</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invalid data input length. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="28" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="camellia_8h_1a720a822b19a01e31038d58d34c2fd270" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref></type>
+        <definition>typedef struct mbedtls_camellia_context mbedtls_camellia_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_camellia_context</name>
+        <briefdescription>
+<para>CAMELLIA context structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="45" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="camellia_8h_1a690881134930d8c0f9590c6ac1c0af95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_camellia_init</definition>
+        <argsstring>(mbedtls_camellia_context *ctx)</argsstring>
+        <name>mbedtls_camellia_init</name>
+        <param>
+          <type><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a CAMELLIA context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAMELLIA context to be initialized. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="57" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="57" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camellia_8h_1aba5133cc77aeaa8e033caec90c2558eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_camellia_free</definition>
+        <argsstring>(mbedtls_camellia_context *ctx)</argsstring>
+        <name>mbedtls_camellia_free</name>
+        <param>
+          <type><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Clear a CAMELLIA context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAMELLIA context to be cleared. This may be <computeroutput>NULL</computeroutput>, in which case this function returns immediately. If it is not <computeroutput>NULL</computeroutput>, it must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="66" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="66" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="camellia_8h_1a206655fc2e6cd1a511766d96a0e0f1cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_camellia_setkey_enc</definition>
+        <argsstring>(mbedtls_camellia_context *ctx, const unsigned char *key, unsigned int keybits)</argsstring>
+        <name>mbedtls_camellia_setkey_enc</name>
+        <param>
+          <type><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>keybits</declname>
+        </param>
+        <briefdescription>
+<para>Perform a CAMELLIA key schedule operation for encryption. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAMELLIA context to use. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encryption key to use. This must be a readable buffer of size <computeroutput>keybits</computeroutput> Bits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keybits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>key</computeroutput> in Bits. This must be either <computeroutput>128</computeroutput>, <computeroutput>192</computeroutput> or <computeroutput>256</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="80" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="80" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="camellia_8h_1a4feb62fea75a091ea9af734a8a83f9fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_camellia_setkey_dec</definition>
+        <argsstring>(mbedtls_camellia_context *ctx, const unsigned char *key, unsigned int keybits)</argsstring>
+        <name>mbedtls_camellia_setkey_dec</name>
+        <param>
+          <type><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>keybits</declname>
+        </param>
+        <briefdescription>
+<para>Perform a CAMELLIA key schedule operation for decryption. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAMELLIA context to use. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decryption key. This must be a readable buffer of size <computeroutput>keybits</computeroutput> Bits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keybits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>key</computeroutput> in Bits. This must be either <computeroutput>128</computeroutput>, <computeroutput>192</computeroutput> or <computeroutput>256</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="96" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="96" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="camellia_8h_1a4399c4d56cd27ffb610abeb70d51f8f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_camellia_crypt_ecb</definition>
+        <argsstring>(mbedtls_camellia_context *ctx, int mode, const unsigned char input[16], unsigned char output[16])</argsstring>
+        <name>mbedtls_camellia_crypt_ecb</name>
+        <param>
+          <type><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>input</declname>
+          <array>[16]</array>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>output</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>Perform a CAMELLIA-ECB block encryption/decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAMELLIA context to use. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode of operation. This must be either <ref refid="camellia_8h_1a0bbefeaf56ae351979742a83fb64b763" kindref="member">MBEDTLS_CAMELLIA_ENCRYPT</ref> or <ref refid="camellia_8h_1a2106b6b6200c7aa82502edd5d72e973f" kindref="member">MBEDTLS_CAMELLIA_DECRYPT</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input block. This must be a readable buffer of size <computeroutput>16</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output block. This must be a writable buffer of size <computeroutput>16</computeroutput> Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="115" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="115" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="camellia_8h_1a6121d988f0fa571adbb3eea80560c545" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_camellia_crypt_cbc</definition>
+        <argsstring>(mbedtls_camellia_context *ctx, int mode, size_t length, unsigned char iv[16], const unsigned char *input, unsigned char *output)</argsstring>
+        <name>mbedtls_camellia_crypt_cbc</name>
+        <param>
+          <type><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>iv</declname>
+          <array>[16]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Perform a CAMELLIA-CBC buffer encryption/decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Upon exit, the content of the IV is updated so that you can call the function same function again on the following block(s) of data and get the same result as if it was encrypted in one call. This allows a &quot;streaming&quot; usage. If on the other hand you need to retain the contents of the IV, you should either save it manually or use the cipher module instead.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAMELLIA context to use. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode of operation. This must be either <ref refid="camellia_8h_1a0bbefeaf56ae351979742a83fb64b763" kindref="member">MBEDTLS_CAMELLIA_ENCRYPT</ref> or <ref refid="camellia_8h_1a2106b6b6200c7aa82502edd5d72e973f" kindref="member">MBEDTLS_CAMELLIA_DECRYPT</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length in Bytes of the input data <computeroutput>input</computeroutput>. This must be a multiple of <computeroutput>16</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization vector. This must be a read/write buffer of length <computeroutput>16</computeroutput> Bytes. It is updated to allow streaming use as explained above. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. This must point to a readable buffer of length <computeroutput>length</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. This must point to a writable buffer of length <computeroutput>length</computeroutput> Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="149" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="149" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="camellia_8h_1afffb8f6eeac954fbdddb3c99ad0f87c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_camellia_crypt_cfb128</definition>
+        <argsstring>(mbedtls_camellia_context *ctx, int mode, size_t length, size_t *iv_off, unsigned char iv[16], const unsigned char *input, unsigned char *output)</argsstring>
+        <name>mbedtls_camellia_crypt_cfb128</name>
+        <param>
+          <type><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>iv_off</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>iv</declname>
+          <array>[16]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Perform a CAMELLIA-CFB128 buffer encryption/decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Due to the nature of CFB mode, you should use the same key for both encryption and decryption. In particular, calls to this function should be preceded by a key-schedule via <ref refid="camellia_8h_1a206655fc2e6cd1a511766d96a0e0f1cd" kindref="member">mbedtls_camellia_setkey_enc()</ref> regardless of whether <computeroutput>mode</computeroutput> is <ref refid="camellia_8h_1a0bbefeaf56ae351979742a83fb64b763" kindref="member">MBEDTLS_CAMELLIA_ENCRYPT</ref> or <ref refid="camellia_8h_1a2106b6b6200c7aa82502edd5d72e973f" kindref="member">MBEDTLS_CAMELLIA_DECRYPT</ref>.</para>
+</simplesect>
+<simplesect kind="note"><para>Upon exit, the content of the IV is updated so that you can call the function same function again on the following block(s) of data and get the same result as if it was encrypted in one call. This allows a &quot;streaming&quot; usage. If on the other hand you need to retain the contents of the IV, you should either save it manually or use the cipher module instead.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAMELLIA context to use. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode of operation. This must be either <ref refid="camellia_8h_1a0bbefeaf56ae351979742a83fb64b763" kindref="member">MBEDTLS_CAMELLIA_ENCRYPT</ref> or <ref refid="camellia_8h_1a2106b6b6200c7aa82502edd5d72e973f" kindref="member">MBEDTLS_CAMELLIA_DECRYPT</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data <computeroutput>input</computeroutput>. Any value is allowed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_off</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current offset in the IV. This must be smaller than <computeroutput>16</computeroutput> Bytes. It is updated after this call to allow the aforementioned streaming usage. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization vector. This must be a read/write buffer of length <computeroutput>16</computeroutput> Bytes. It is updated after this call to allow the aforementioned streaming usage. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. This must be a readable buffer of size <computeroutput>length</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to hold the output data. This must be a writable buffer of length <computeroutput>length</computeroutput> Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="195" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="195" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="camellia_8h_1ae90ed9ce4edf59d5219c64a0d2b3d23d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_camellia_crypt_ctr</definition>
+        <argsstring>(mbedtls_camellia_context *ctx, size_t length, size_t *nc_off, unsigned char nonce_counter[16], unsigned char stream_block[16], const unsigned char *input, unsigned char *output)</argsstring>
+        <name>mbedtls_camellia_crypt_ctr</name>
+        <param>
+          <type><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>nc_off</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>nonce_counter</declname>
+          <array>[16]</array>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>stream_block</declname>
+          <array>[16]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Perform a CAMELLIA-CTR buffer encryption/decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>*note Due to the nature of CTR mode, you should use the same key for both encryption and decryption. In particular, calls to this function should be preceded by a key-schedule via <ref refid="camellia_8h_1a206655fc2e6cd1a511766d96a0e0f1cd" kindref="member">mbedtls_camellia_setkey_enc()</ref> regardless of whether the mode is <ref refid="camellia_8h_1a0bbefeaf56ae351979742a83fb64b763" kindref="member">MBEDTLS_CAMELLIA_ENCRYPT</ref> or <ref refid="camellia_8h_1a2106b6b6200c7aa82502edd5d72e973f" kindref="member">MBEDTLS_CAMELLIA_DECRYPT</ref>.</para>
+<para><simplesect kind="warning"><para>You must never reuse a nonce value with the same key. Doing so would void the encryption for the two messages encrypted with the same nonce and key.</para>
+</simplesect>
+There are two common strategies for managing nonces with CTR:</para>
+<para><orderedlist>
+<listitem><para>You can handle everything as a single message processed over successive calls to this function. In that case, you want to set <computeroutput>nonce_counter</computeroutput> and <computeroutput>nc_off</computeroutput> to 0 for the first call, and then preserve the values of <computeroutput>nonce_counter</computeroutput>, <computeroutput>nc_off</computeroutput> and <computeroutput>stream_block</computeroutput> across calls to this function as they will be updated by this function.</para>
+</listitem></orderedlist>
+</para>
+<para>With this strategy, you must not encrypt more than 2**128 blocks of data with the same key.</para>
+<para><orderedlist>
+<listitem><para>You can encrypt separate messages by dividing the <computeroutput>nonce_counter</computeroutput> buffer in two areas: the first one used for a per-message nonce, handled by yourself, and the second one updated by this function internally.</para>
+</listitem></orderedlist>
+</para>
+<para>For example, you might reserve the first <computeroutput>12</computeroutput> Bytes for the per-message nonce, and the last <computeroutput>4</computeroutput> Bytes for internal use. In that case, before calling this function on a new message you need to set the first <computeroutput>12</computeroutput> Bytes of <computeroutput>nonce_counter</computeroutput> to your chosen nonce value, the last four to <computeroutput>0</computeroutput>, and <computeroutput>nc_off</computeroutput> to <computeroutput>0</computeroutput> (which will cause <computeroutput>stream_block</computeroutput> to be ignored). That way, you can encrypt at most <computeroutput>2**96</computeroutput> messages of up to <computeroutput>2**32</computeroutput> blocks each with the same key.</para>
+<para>The per-message nonce (or information sufficient to reconstruct it) needs to be communicated with the ciphertext and must be unique. The recommended way to ensure uniqueness is to use a message counter. An alternative is to generate random nonces, but this limits the number of messages that can be securely encrypted: for example, with 96-bit random nonces, you should not encrypt more than 2**32 messages with the same key.</para>
+<para>Note that for both strategies, sizes are measured in blocks and that a CAMELLIA block is <computeroutput>16</computeroutput> Bytes.</para>
+<para><simplesect kind="warning"><para>Upon return, <computeroutput>stream_block</computeroutput> contains sensitive data. Its content must not be written to insecure storage and should be securely discarded as soon as it&apos;s no longer needed.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CAMELLIA context to use. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data <computeroutput>input</computeroutput> in Bytes. Any value is allowed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nc_off</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset in the current <computeroutput>stream_block</computeroutput> (for resuming within current cipher stream). The offset pointer to should be <computeroutput>0</computeroutput> at the start of a stream. It is updated at the end of this call. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nonce_counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 128-bit nonce and counter. This must be a read/write buffer of length <computeroutput>16</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stream_block</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The saved stream-block for resuming. This must be a read/write buffer of length <computeroutput>16</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input data stream. This must be a readable buffer of size <computeroutput>length</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output data stream. This must be a writable buffer of size <computeroutput>length</computeroutput> Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="279" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="279" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="camellia_8h_1a138e7a2aaf404d9f55dbc809b99c415e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_camellia_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_camellia_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if successful, or 1 if the test failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="295" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" declline="295" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Camellia block cipher. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_CAMELLIA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CAMELLIA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__util_8h" kindref="compound">mbedtls/platform_util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="camellia_8h_1a0bbefeaf56ae351979742a83fb64b763" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CAMELLIA_ENCRYPT<sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="camellia_8h_1a2106b6b6200c7aa82502edd5d72e973f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CAMELLIA_DECRYPT<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="camellia_8h_1a4a02962d2d8bc36587b9af0df216c119" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_CAMELLIA_BAD_INPUT_DATA<sp/>-0x0024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="camellia_8h_1a66cfdf3e866ec31afd789eedbd6a6883" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_CAMELLIA_INVALID_INPUT_LENGTH<sp/>-0x0026</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CAMELLIA_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Regular<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structmbedtls__camellia__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="42" refid="structmbedtls__camellia__context_1aa50543c38c96b9d9052f78581c4118d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(nr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="structmbedtls__camellia__context_1a4b3e1167e453777f06d81766f8679d18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(rk)[68];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="camellia_8h_1a720a822b19a01e31038d58d34c2fd270" kindref="member">mbedtls_camellia_context</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CAMELLIA_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;camellia_alt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CAMELLIA_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1a690881134930d8c0f9590c6ac1c0af95" kindref="member">mbedtls_camellia_init</ref>(<ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1aba5133cc77aeaa8e033caec90c2558eb" kindref="member">mbedtls_camellia_free</ref>(<ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1a206655fc2e6cd1a511766d96a0e0f1cd" kindref="member">mbedtls_camellia_setkey_enc</ref>(<ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keybits);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1a4feb62fea75a091ea9af734a8a83f9fc" kindref="member">mbedtls_camellia_setkey_dec</ref>(<ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keybits);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1a4399c4d56cd27ffb610abeb70d51f8f7" kindref="member">mbedtls_camellia_crypt_ecb</ref>(<ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>input[16],</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>output[16]);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_MODE_CBC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1a6121d988f0fa571adbb3eea80560c545" kindref="member">mbedtls_camellia_crypt_cbc</ref>(<ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>iv[16],</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_MODE_CBC<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_MODE_CFB)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1afffb8f6eeac954fbdddb3c99ad0f87c6" kindref="member">mbedtls_camellia_crypt_cfb128</ref>(<ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*iv_off,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>iv[16],</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_MODE_CFB<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_MODE_CTR)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1ae90ed9ce4edf59d5219c64a0d2b3d23d" kindref="member">mbedtls_camellia_crypt_ctr</ref>(<ref refid="structmbedtls__camellia__context" kindref="compound">mbedtls_camellia_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*nc_off,</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>nonce_counter[16],</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>stream_block[16],</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_MODE_CTR<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camellia_8h_1a138e7a2aaf404d9f55dbc809b99c415e" kindref="member">mbedtls_camellia_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>camellia.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h"/>
+  </compounddef>
+</doxygen>

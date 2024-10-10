@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__entropy__source__state" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_entropy_source_state</compoundname>
+    <includes refid="entropy_8h" local="no">entropy.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__entropy__source__state_1a95556035881e3594ef4947ecc998cc55" prot="public" static="no" mutable="no">
+        <type><ref refid="entropy_8h_1a2168f0720e2e869e440fd7fa35c941bd" kindref="member">mbedtls_entropy_f_source_ptr</ref></type>
+        <definition>mbedtls_entropy_f_source_ptr mbedtls_entropy_source_state::private_f_source</definition>
+        <argsstring></argsstring>
+        <name>private_f_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The entropy source callback </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="94" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__source__state_1ac34a996c317720838992b80402845ea2" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_entropy_source_state::private_p_source</definition>
+        <argsstring></argsstring>
+        <name>private_p_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The callback data pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="95" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__source__state_1a6b2e300542523ab7a9176f2be615be67" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_entropy_source_state::private_size</definition>
+        <argsstring></argsstring>
+        <name>private_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Amount received in bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="96" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__source__state_1a00f26579c77b462147b6b9e6fb83e5d7" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_entropy_source_state::private_threshold</definition>
+        <argsstring></argsstring>
+        <name>private_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum bytes required before release </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="97" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__entropy__source__state_1a4efcdffb7224e8e17df6dfa264f020dd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_entropy_source_state::private_strong</definition>
+        <argsstring></argsstring>
+        <name>private_strong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is the source strong? </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="98" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Entropy source state. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" line="93" column="43" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/entropy.h" bodystart="93" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structmbedtls__entropy__source__state_1a95556035881e3594ef4947ecc998cc55" prot="public" virt="non-virtual"><scope>mbedtls_entropy_source_state</scope><name>private_f_source</name></member>
+      <member refid="structmbedtls__entropy__source__state_1ac34a996c317720838992b80402845ea2" prot="public" virt="non-virtual"><scope>mbedtls_entropy_source_state</scope><name>private_p_source</name></member>
+      <member refid="structmbedtls__entropy__source__state_1a6b2e300542523ab7a9176f2be615be67" prot="public" virt="non-virtual"><scope>mbedtls_entropy_source_state</scope><name>private_size</name></member>
+      <member refid="structmbedtls__entropy__source__state_1a4efcdffb7224e8e17df6dfa264f020dd" prot="public" virt="non-virtual"><scope>mbedtls_entropy_source_state</scope><name>private_strong</name></member>
+      <member refid="structmbedtls__entropy__source__state_1a00f26579c77b462147b6b9e6fb83e5d7" prot="public" virt="non-virtual"><scope>mbedtls_entropy_source_state</scope><name>private_threshold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__se__asymmetric" kind="group">
+    <compoundname>se_asymmetric</compoundname>
+    <title>Secure Element Asymmetric Cryptography</title>
+    <innerclass refid="structpsa__drv__se__asymmetric__t" prot="public">psa_drv_se_asymmetric_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__se__asymmetric_1gaac5182bca42737841785662743594515" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_asymmetric_sign_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_hash, size_t hash_length, uint8_t *p_signature, size_t signature_size, size_t *p_signature_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_hash, size_t hash_length, uint8_t *p_signature, size_t signature_size, size_t *p_signature_length)</argsstring>
+        <name>psa_drv_se_asymmetric_sign_t</name>
+        <briefdescription>
+<para>A function that signs a hash or short message with a private key in a secure element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key slot of an asymmetric key pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A signature algorithm that is compatible with the type of <computeroutput>key</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash to sign </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_hash</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the signature is to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">signature_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_signature</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_signature_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the returned signature value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="547" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="547" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__asymmetric_1gabb372536a004009294591eaf6cc4d186" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_asymmetric_verify_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_hash, size_t hash_length, const uint8_t *p_signature, size_t signature_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_hash, size_t hash_length, const uint8_t *p_signature, size_t signature_length)</argsstring>
+        <name>psa_drv_se_asymmetric_verify_t</name>
+        <briefdescription>
+<para>A function that verifies the signature a hash or short message using an asymmetric public key in a secure element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key slot of a public key or an asymmetric key pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A signature algorithm that is compatible with the type of <computeroutput>key</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash whose signature is to be verified </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_hash</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the signature to verify </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">signature_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_signature</computeroutput> buffer in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The signature is valid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="573" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__asymmetric_1ga8544105c218640adfc4f983da4b34478" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_asymmetric_encrypt_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_input, size_t input_length, const uint8_t *p_salt, size_t salt_length, uint8_t *p_output, size_t output_size, size_t *p_output_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_input, size_t input_length, const uint8_t *p_salt, size_t salt_length, uint8_t *p_output, size_t output_size, size_t *p_output_length)</argsstring>
+        <name>psa_drv_se_asymmetric_encrypt_t</name>
+        <briefdescription>
+<para>A function that encrypts a short message with an asymmetric public key in a secure element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key slot of a public key or an asymmetric key pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An asymmetric encryption algorithm that is compatible with the type of <computeroutput>key</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to encrypt </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_input</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A salt or label, if supported by the encryption algorithm If the algorithm does not support a salt, pass <computeroutput>NULL</computeroutput>. If the algorithm supports an optional salt and you do not want to pass a salt, pass <computeroutput>NULL</computeroutput>. For <ref refid="group__crypto__types_1ga4c540d3abe43fb9abcb94f2bc51acef9" kindref="member">PSA_ALG_RSA_PKCS1V15_CRYPT</ref>, no salt is supported. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">salt_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_salt</computeroutput> buffer in bytes If <computeroutput>p_salt</computeroutput> is <computeroutput>NULL</computeroutput>, pass 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the encrypted message is to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_output</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the returned output</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="611" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="611" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__asymmetric_1ga3472b9f36ffd9eb303100d5ec3eacda0" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_asymmetric_decrypt_t) (psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_input, size_t input_length, const uint8_t *p_salt, size_t salt_length, uint8_t *p_output, size_t output_size, size_t *p_output_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_input, size_t input_length, const uint8_t *p_salt, size_t salt_length, uint8_t *p_output, size_t output_size, size_t *p_output_length)</argsstring>
+        <name>psa_drv_se_asymmetric_decrypt_t</name>
+        <briefdescription>
+<para>A function that decrypts a short message with an asymmetric private key in a secure element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key slot of an asymmetric key pair </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An asymmetric encryption algorithm that is compatible with the type of <computeroutput>key</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to decrypt </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_input</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A salt or label, if supported by the encryption algorithm If the algorithm does not support a salt, pass <computeroutput>NULL</computeroutput>. If the algorithm supports an optional salt and you do not want to pass a salt, pass <computeroutput>NULL</computeroutput>. For <ref refid="group__crypto__types_1ga4c540d3abe43fb9abcb94f2bc51acef9" kindref="member">PSA_ALG_RSA_PKCS1V15_CRYPT</ref>, no salt is supported. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">salt_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_salt</computeroutput> buffer in bytes If <computeroutput>p_salt</computeroutput> is <computeroutput>NULL</computeroutput>, pass 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the decrypted message is to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>p_output</computeroutput> buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the returned output</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="651" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="651" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Since the amount of data that can (or should) be encrypted or signed using asymmetric keys is limited by the key size, asymmetric key operations using keys in a secure element must be done in single function calls. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

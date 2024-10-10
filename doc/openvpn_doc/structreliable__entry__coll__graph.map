@@ -1,0 +1,4 @@
+<map id="reliable_entry" name="reliable_entry">
+<area shape="rect" id="node1" title="The structure in which the reliability layer stores a single incoming or outgoing packet." alt="" coords="5,95,104,121"/>
+<area shape="rect" id="node2" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="27,5,82,32"/>
+</map>

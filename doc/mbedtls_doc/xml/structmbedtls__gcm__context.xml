@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__gcm__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_gcm_context</compoundname>
+    <includes refid="gcm_8h" local="no">gcm.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1adfe1df37d393995c329f70f3b05d9ab0" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref></type>
+        <definition>mbedtls_cipher_context_t mbedtls_gcm_context::private_cipher_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_cipher_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The cipher context used. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="49" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1a538bd185698087a6f4e0e3a6c017dc47" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_gcm_context::private_HL[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_HL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Precalculated HTable low. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="50" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1abe3c33b68881c50888f7b2456424112e" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_gcm_context::private_HH[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_HH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Precalculated HTable high. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="51" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1ab10964547d71bf76ebdfe2b09499d52c" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_gcm_context::private_len</definition>
+        <argsstring></argsstring>
+        <name>private_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The total length of the encrypted data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="52" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1a8f76f817d9b2ab8192632ecfd6e5d854" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_gcm_context::private_add_len</definition>
+        <argsstring></argsstring>
+        <name>private_add_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The total length of the additional data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="53" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1af07f470c812b49c658fceb16287aa644" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_gcm_context::private_base_ectr[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_base_ectr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The first ECTR for tag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="54" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1a957ab32a52737e2348b9383b75ade501" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_gcm_context::private_y[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Y working value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="55" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1ab6a9d32abfed19517f7e78d9d572855e" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_gcm_context::private_buf[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>private_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The buf working value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="56" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__gcm__context_1a03eefb46796507b723cfcdedd3a583e9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_gcm_context::private_mode</definition>
+        <argsstring></argsstring>
+        <name>private_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The operation to perform: <ref refid="gcm_8h_1a023326dceb6d25c6d0c8a383f8748e86" kindref="member">MBEDTLS_GCM_ENCRYPT</ref> or <ref refid="gcm_8h_1a792b42066d6fac0a85d547f5c9c5636a" kindref="member">MBEDTLS_GCM_DECRYPT</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="57" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The GCM context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="1">
+        <label>mbedtls_gcm_context</label>
+        <link refid="structmbedtls__gcm__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_cipher_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" line="48" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/gcm.h" bodystart="48" bodyend="60"/>
+    <listofallmembers>
+      <member refid="structmbedtls__gcm__context_1a8f76f817d9b2ab8192632ecfd6e5d854" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_add_len</name></member>
+      <member refid="structmbedtls__gcm__context_1af07f470c812b49c658fceb16287aa644" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_base_ectr</name></member>
+      <member refid="structmbedtls__gcm__context_1ab6a9d32abfed19517f7e78d9d572855e" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_buf</name></member>
+      <member refid="structmbedtls__gcm__context_1adfe1df37d393995c329f70f3b05d9ab0" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_cipher_ctx</name></member>
+      <member refid="structmbedtls__gcm__context_1abe3c33b68881c50888f7b2456424112e" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_HH</name></member>
+      <member refid="structmbedtls__gcm__context_1a538bd185698087a6f4e0e3a6c017dc47" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_HL</name></member>
+      <member refid="structmbedtls__gcm__context_1ab10964547d71bf76ebdfe2b09499d52c" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_len</name></member>
+      <member refid="structmbedtls__gcm__context_1a03eefb46796507b723cfcdedd3a583e9" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_mode</name></member>
+      <member refid="structmbedtls__gcm__context_1a957ab32a52737e2348b9383b75ade501" prot="public" virt="non-virtual"><scope>mbedtls_gcm_context</scope><name>private_y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

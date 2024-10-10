@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__crypto__driver__pake__inputs__s" kind="struct" language="C++" prot="public">
+    <compoundname>psa_crypto_driver_pake_inputs_s</compoundname>
+    <includes refid="crypto__extra_8h" local="no">crypto_extra.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1ae5e803385377017bbfca7358bf8a4dff" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* psa_crypto_driver_pake_inputs_s::private_password</definition>
+        <argsstring></argsstring>
+        <name>private_password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1965" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1965" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1ac8f57d94288ac9c6439871d65c19a676" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_crypto_driver_pake_inputs_s::private_password_len</definition>
+        <argsstring></argsstring>
+        <name>private_password_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1966" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1966" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a6af967cc0117dbb94945ab5da2edc0f3" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* psa_crypto_driver_pake_inputs_s::private_user</definition>
+        <argsstring></argsstring>
+        <name>private_user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1967" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1967" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a815d8cdb6eaebf9cee49a00ccb8d26fc" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_crypto_driver_pake_inputs_s::private_user_len</definition>
+        <argsstring></argsstring>
+        <name>private_user_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1968" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1968" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1ac9bb1bd6eea28bd9380a65fe00a0b51d" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* psa_crypto_driver_pake_inputs_s::private_peer</definition>
+        <argsstring></argsstring>
+        <name>private_peer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1969" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1969" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a7e27e6112392120663a6b52f86626935" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_crypto_driver_pake_inputs_s::private_peer_len</definition>
+        <argsstring></argsstring>
+        <name>private_peer_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1970" column="12" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1970" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a5d5229023862b3c5dafcd8f131b852dc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref></type>
+        <definition>psa_key_attributes_t psa_crypto_driver_pake_inputs_s::private_attributes</definition>
+        <argsstring></argsstring>
+        <name>private_attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1971" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1971" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1aad3684f886840efe20a996f942b1989d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref></type>
+        <definition>psa_pake_cipher_suite_t psa_crypto_driver_pake_inputs_s::private_cipher_suite</definition>
+        <argsstring></argsstring>
+        <name>private_cipher_suite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1972" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1972" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>psa_crypto_driver_pake_inputs_s</label>
+        <link refid="structpsa__crypto__driver__pake__inputs__s"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_cipher_suite</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>private_attributes</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa_key_policy_s</label>
+        <link refid="structpsa__key__policy__s"/>
+      </node>
+      <node id="2">
+        <label>psa_pake_cipher_suite_s</label>
+        <link refid="structpsa__pake__cipher__suite__s"/>
+      </node>
+      <node id="3">
+        <label>psa_key_attributes_s</label>
+        <link refid="structpsa__key__attributes__s"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_core</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>psa_core_key_attributes_t</label>
+        <link refid="structpsa__core__key__attributes__t"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_policy</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1964" column="38" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1964" bodyend="1973"/>
+    <listofallmembers>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a5d5229023862b3c5dafcd8f131b852dc" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_attributes</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1aad3684f886840efe20a996f942b1989d" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_cipher_suite</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1ae5e803385377017bbfca7358bf8a4dff" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_password</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1ac8f57d94288ac9c6439871d65c19a676" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_password_len</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1ac9bb1bd6eea28bd9380a65fe00a0b51d" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_peer</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a7e27e6112392120663a6b52f86626935" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_peer_len</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a6af967cc0117dbb94945ab5da2edc0f3" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_user</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a815d8cdb6eaebf9cee49a00ccb8d26fc" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_user_len</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

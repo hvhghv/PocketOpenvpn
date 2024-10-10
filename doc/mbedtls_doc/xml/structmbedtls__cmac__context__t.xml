@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__cmac__context__t" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_cmac_context_t</compoundname>
+    <includes refid="cmac_8h" local="no">cmac.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__cmac__context__t_1ac5f0d21bab6e64bef34f628604ec46b2" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_cmac_context_t::private_state[MBEDTLS_CMAC_MAX_BLOCK_SIZE]</definition>
+        <argsstring>[MBEDTLS_CMAC_MAX_BLOCK_SIZE]</argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The internal state of the CMAC algorithm. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="61" column="25" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cmac__context__t_1a5150dc7bcaf93719a110b8257e6243de" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_cmac_context_t::private_unprocessed_block[MBEDTLS_CMAC_MAX_BLOCK_SIZE]</definition>
+        <argsstring>[MBEDTLS_CMAC_MAX_BLOCK_SIZE]</argsstring>
+        <name>private_unprocessed_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unprocessed data - either data that was not block aligned and is still pending processing, or the final block. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="65" column="25" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__cmac__context__t_1af1dd5cff9ce92a313dfd3fb5bd85411c" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_cmac_context_t::private_unprocessed_len</definition>
+        <argsstring></argsstring>
+        <name>private_unprocessed_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length of data pending processing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="68" column="25" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The CMAC context structure. </para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" line="59" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/cmac.h" bodystart="59" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structmbedtls__cmac__context__t_1ac5f0d21bab6e64bef34f628604ec46b2" prot="public" virt="non-virtual"><scope>mbedtls_cmac_context_t</scope><name>private_state</name></member>
+      <member refid="structmbedtls__cmac__context__t_1a5150dc7bcaf93719a110b8257e6243de" prot="public" virt="non-virtual"><scope>mbedtls_cmac_context_t</scope><name>private_unprocessed_block</name></member>
+      <member refid="structmbedtls__cmac__context__t_1af1dd5cff9ce92a313dfd3fb5bd85411c" prot="public" virt="non-virtual"><scope>mbedtls_cmac_context_t</scope><name>private_unprocessed_len</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

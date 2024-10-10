@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__threading__mutex__t" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_threading_mutex_t</compoundname>
+    <includes refid="threading_8h" local="no">threading.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__threading__mutex__t_1a8d7f88a1c24d4500634a519408c63725" prot="public" static="no" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t mbedtls_threading_mutex_t::private_mutex</definition>
+        <argsstring></argsstring>
+        <name>private_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/threading.h" line="30" column="21" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/threading.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__threading__mutex__t_1a65bc4d6f4c5f6ef95c26215b4fb9b5a9" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char mbedtls_threading_mutex_t::private_is_valid</definition>
+        <argsstring></argsstring>
+        <name>private_is_valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/threading.h" line="34" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/threading.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/threading.h" line="29" column="40" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/threading.h" bodystart="29" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structmbedtls__threading__mutex__t_1a65bc4d6f4c5f6ef95c26215b4fb9b5a9" prot="public" virt="non-virtual"><scope>mbedtls_threading_mutex_t</scope><name>private_is_valid</name></member>
+      <member refid="structmbedtls__threading__mutex__t_1a8d7f88a1c24d4500634a519408c63725" prot="public" virt="non-virtual"><scope>mbedtls_threading_mutex_t</scope><name>private_mutex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

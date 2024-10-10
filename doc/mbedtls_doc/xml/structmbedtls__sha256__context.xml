@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__sha256__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_sha256_context</compoundname>
+    <includes refid="sha256_8h" local="no">sha256.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__sha256__context_1a00c72209d72e92ac7cdb2bcfc324d0ec" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_sha256_context::private_buffer[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>private_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The data block being processed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" line="41" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__sha256__context_1a1fcfc3da0b87f644aa352bacba4dfc6e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_sha256_context::private_total[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>private_total</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of Bytes processed. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" line="42" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__sha256__context_1a1dacdc4692eade477de0e2d27cf05784" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_sha256_context::private_state[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The intermediate digest state. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" line="43" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__sha256__context_1a6fef70379a88df2cfbfaa80e8037ec44" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_sha256_context::private_is224</definition>
+        <argsstring></argsstring>
+        <name>private_is224</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines which function to use: 0: Use SHA-256, or 1: Use SHA-224. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" line="44" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The SHA-256 context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>            The structure is used both for SHA-256 and for SHA-224
+            checksum calculations. The choice between these two is
+            made in the call to mbedtls_sha256_starts().
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" line="40" column="37" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha256.h" bodystart="40" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structmbedtls__sha256__context_1a00c72209d72e92ac7cdb2bcfc324d0ec" prot="public" virt="non-virtual"><scope>mbedtls_sha256_context</scope><name>private_buffer</name></member>
+      <member refid="structmbedtls__sha256__context_1a6fef70379a88df2cfbfaa80e8037ec44" prot="public" virt="non-virtual"><scope>mbedtls_sha256_context</scope><name>private_is224</name></member>
+      <member refid="structmbedtls__sha256__context_1a1dacdc4692eade477de0e2d27cf05784" prot="public" virt="non-virtual"><scope>mbedtls_sha256_context</scope><name>private_state</name></member>
+      <member refid="structmbedtls__sha256__context_1a1fcfc3da0b87f644aa352bacba4dfc6e" prot="public" virt="non-virtual"><scope>mbedtls_sha256_context</scope><name>private_total</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

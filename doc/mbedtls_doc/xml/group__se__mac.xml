@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__se__mac" kind="group">
+    <compoundname>se_mac</compoundname>
+    <title>Secure Element Message Authentication Codes</title>
+    <innerclass refid="structpsa__drv__se__mac__t" prot="public">psa_drv_se_mac_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__se__mac_1ga1d7dacfb4ede205538c5713b11e10326" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_mac_setup_t) (psa_drv_se_context_t *drv_context, void *op_context, psa_key_slot_number_t key_slot, psa_algorithm_t algorithm)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, void *op_context, psa_key_slot_number_t key_slot, psa_algorithm_t algorithm)</argsstring>
+        <name>psa_drv_se_mac_setup_t</name>
+        <briefdescription>
+<para>A function that starts a secure element MAC operation for a PSA Crypto Driver implementation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">op_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A structure that will contain the hardware-specific MAC context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slot of the key to be used for the operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">algorithm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The algorithm to be used to underly the MAC operation</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="173" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__mac_1ga5066f0423519b1a403019f16cad004f6" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_mac_update_t) (void *op_context, const uint8_t *p_input, size_t input_length)</definition>
+        <argsstring>)(void *op_context, const uint8_t *p_input, size_t input_length)</argsstring>
+        <name>psa_drv_se_mac_update_t</name>
+        <briefdescription>
+<para>A function that continues a previously started secure element MAC operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">op_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A hardware-specific structure for the previously-established MAC operation to be updated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer containing the message to be appended to the MAC operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the input message buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="188" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__mac_1ga8d2c6b8639790e00a755774270c9a36a" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_mac_finish_t) (void *op_context, uint8_t *p_mac, size_t mac_size, size_t *p_mac_length)</definition>
+        <argsstring>)(void *op_context, uint8_t *p_mac, size_t mac_size, size_t *p_mac_length)</argsstring>
+        <name>psa_drv_se_mac_finish_t</name>
+        <briefdescription>
+<para>a function that completes a previously started secure element MAC operation by returning the resulting MAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">op_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A hardware-specific structure for the previously started MAC operation to be finished </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_mac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer where the generated MAC will be placed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mac_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the buffer that has been allocated for the <computeroutput>output</computeroutput> buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_mac_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>After completion, will contain the number of bytes placed in the <computeroutput>p_mac</computeroutput> buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="208" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__mac_1ga57c46b9072760a2f3f501dc8278bf963" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_mac_finish_verify_t) (void *op_context, const uint8_t *p_mac, size_t mac_length)</definition>
+        <argsstring>)(void *op_context, const uint8_t *p_mac, size_t mac_length)</argsstring>
+        <name>psa_drv_se_mac_finish_verify_t</name>
+        <briefdescription>
+<para>A function that completes a previously started secure element MAC operation by comparing the resulting MAC against a provided value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">op_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A hardware-specific structure for the previously started MAC operation to be finished </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_mac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MAC value against which the resulting MAC will be compared against </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mac_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the value stored in <computeroutput>p_mac</computeroutput></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation completed successfully and the MACs matched each other </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation completed successfully, but the calculated MAC did not match the provided MAC </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="229" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__mac_1ga5ffdfc1d70ef3b4da100e9e46a08e511" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_mac_abort_t) (void *op_context)</definition>
+        <argsstring>)(void *op_context)</argsstring>
+        <name>psa_drv_se_mac_abort_t</name>
+        <briefdescription>
+<para>A function that aborts a previous started secure element MAC operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">op_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A hardware-specific structure for the previously started MAC operation to be aborted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="239" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__mac_1gac8b2bbcfeb4a8f4409a4777051f55666" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_mac_generate_t) (psa_drv_se_context_t *drv_context, const uint8_t *p_input, size_t input_length, psa_key_slot_number_t key_slot, psa_algorithm_t alg, uint8_t *p_mac, size_t mac_size, size_t *p_mac_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, const uint8_t *p_input, size_t input_length, psa_key_slot_number_t key_slot, psa_algorithm_t alg, uint8_t *p_mac, size_t mac_size, size_t *p_mac_length)</argsstring>
+        <name>psa_drv_se_mac_generate_t</name>
+        <briefdescription>
+<para>A function that performs a secure element MAC operation in one command and returns the calculated MAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer containing the message to be MACed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of <computeroutput>p_input</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slot of the key to be used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The algorithm to be used to underlie the MAC operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_mac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer where the generated MAC will be placed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mac_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the <computeroutput>p_mac</computeroutput> buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">p_mac_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>After completion, will contain the number of bytes placed in the <computeroutput>output</computeroutput> buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="259" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__se__mac_1ga6e7e9a020f0061492ba383aa404f1c09" prot="public" static="no">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>(*</type>
+        <definition>typedef psa_status_t(* psa_drv_se_mac_verify_t) (psa_drv_se_context_t *drv_context, const uint8_t *p_input, size_t input_length, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_mac, size_t mac_length)</definition>
+        <argsstring>)(psa_drv_se_context_t *drv_context, const uint8_t *p_input, size_t input_length, psa_key_slot_number_t key_slot, psa_algorithm_t alg, const uint8_t *p_mac, size_t mac_length)</argsstring>
+        <name>psa_drv_se_mac_verify_t</name>
+        <briefdescription>
+<para>A function that performs a secure element MAC operation in one command and compares the resulting MAC against a provided value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">drv_context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The driver context structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer containing the message to be MACed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of <computeroutput>input</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key_slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slot of the key to be used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The algorithm to be used to underlie the MAC operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p_mac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MAC value against which the resulting MAC will be compared against </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mac_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of <computeroutput>mac</computeroutput></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation completed successfully and the MACs matched each other </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation completed successfully, but the calculated MAC did not match the provided MAC </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="288" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generation and authentication of Message Authentication Codes (MACs) using a secure element can be done either as a single function call (via the <computeroutput>psa_drv_se_mac_generate_t</computeroutput> or <computeroutput>psa_drv_se_mac_verify_t</computeroutput> functions), or in parts using the following sequence: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para><computeroutput>psa_drv_se_mac_setup_t</computeroutput></para>
+</listitem><listitem><para><computeroutput>psa_drv_se_mac_update_t</computeroutput></para>
+</listitem><listitem><para><computeroutput>psa_drv_se_mac_update_t</computeroutput></para>
+</listitem><listitem><para>...</para>
+</listitem><listitem><para><computeroutput>psa_drv_se_mac_finish_t</computeroutput> or <computeroutput>psa_drv_se_mac_finish_verify_t</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para>If a previously started secure element MAC operation needs to be terminated, it should be done so by the <computeroutput>psa_drv_se_mac_abort_t</computeroutput>. Failure to do so may result in allocated resources not being freed or in other undefined behavior. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

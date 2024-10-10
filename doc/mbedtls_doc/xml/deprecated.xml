@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="deprecated" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>Deprecated List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>File <ref refid="compat-2_8x_8h" kindref="compound">compat-2.x.h</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000004"/>Use the new names directly instead  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="group__asn1__module_1ga02469d5d4e32e50f9e18781320c70093" kindref="member">mbedtls_asn1_free_named_data</ref>  (<ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> *entry)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000001"/>This function is deprecated and will be removed in a future version of the library. Please use <ref refid="group__asn1__module_1gafd1a084a9285cebcd289bf6df0e6c021" kindref="member">mbedtls_asn1_free_named_data_list()</ref> or <ref refid="group__asn1__module_1ga6a42d8e2aaee5fdfb4466d5862dd83cf" kindref="member">mbedtls_asn1_free_named_data_list_shallow()</ref>. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="cmac_8h_1accb84fb7db8f619f0fdf8ef1ee7552af" kindref="member">MBEDTLS_CIPHER_BLKSIZE_MAX</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000003"/> For the maximum block size of a cipher supported by the CMAC module, use <ref refid="cmac_8h_1ab6328898ae160ace67b3a2444856485e" kindref="member">MBEDTLS_CMAC_MAX_BLOCK_SIZE</ref>. For the maximum block size of a cipher supported by the cipher module, use <ref refid="cipher_8h_1ab8f30dc90403204515f868c3b6196ffd" kindref="member">MBEDTLS_MAX_BLOCK_LENGTH</ref>.  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="cipher_8h_1a867d5eb112b7cc2f7692ecacaf58f30c" kindref="member">mbedtls_cipher_setup_psa</ref>  (<ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref> *ctx, const <ref refid="structmbedtls__cipher__info__t" kindref="compound">mbedtls_cipher_info_t</ref> *cipher_info, size_t taglen)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000002"/>This function is deprecated and will be removed in a future version of the library. Please use psa_aead_xxx() / psa_cipher_xxx() directly instead. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="pkcs12_8h_1a860c32e28331903d3e822293aec8e3f7" kindref="member">mbedtls_pkcs12_pbe</ref>  (<ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *pbe_params, int mode, mbedtls_cipher_type_t cipher_type, mbedtls_md_type_t md_type, const unsigned char *pwd, size_t pwdlen, const unsigned char *data, size_t len, unsigned char *output)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000007"/>This function is deprecated and will be removed in a future version of the library. Please use <ref refid="pkcs12_8h_1adf510355b5435be62494364754ca85ed" kindref="member">mbedtls_pkcs12_pbe_ext()</ref> instead. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="pkcs5_8h_1abe0531935e2cc309cab05ce03793d573" kindref="member">mbedtls_pkcs5_pbes2</ref>  (const <ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *pbe_params, int mode, const unsigned char *pwd, size_t pwdlen, const unsigned char *data, size_t datalen, unsigned char *output)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000008"/>This function is deprecated and will be removed in a future version of the library. Please use <ref refid="pkcs5_8h_1a71e857594f116a51cf91826357679f43" kindref="member">mbedtls_pkcs5_pbes2_ext()</ref> instead. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="pkcs5_8h_1ae7488f4347f84b79e37613e873b5e57a" kindref="member">mbedtls_pkcs5_pbkdf2_hmac</ref>  (<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *ctx, const unsigned char *password, size_t plen, const unsigned char *salt, size_t slen, unsigned int iteration_count, uint32_t key_length, unsigned char *output)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000009"/>Superseded by <ref refid="pkcs5_8h_1a0f539cfc1618288b71ffaa52ba7d43a7" kindref="member">mbedtls_pkcs5_pbkdf2_hmac_ext()</ref>. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="mbedtls__config_8h_1a7d31bdc8946b87038702628ba1f60e8c" kindref="member">MBEDTLS_PSA_CRYPTO_SE_C</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000006"/>This feature is deprecated. Please switch to the PSA driver interface. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="ssl_8h_1aa5f57bc7af0a5584764ef083be319c7e" kindref="member">mbedtls_ssl_conf_curves</ref>  (<ref refid="structmbedtls__ssl__config" kindref="compound">mbedtls_ssl_config</ref> *conf, const mbedtls_ecp_group_id *curves)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000010"/>Superseded by <ref refid="ssl_8h_1aa9101dc3ad40fc232ac5de4f163b15ab" kindref="member">mbedtls_ssl_conf_groups()</ref>. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="mbedtls__config_8h_1af5421935540ecb6481a392528e20e9a4" kindref="member">MBEDTLS_SSL_DTLS_CONNECTION_ID_COMPAT</ref>  </term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000005"/>Support for the legacy version of the DTLS Connection ID feature is deprecated. Please switch to the standardized version defined in RFC 9146 enabled by utilizing MBEDTLS_SSL_DTLS_CONNECTION_ID without use of MBEDTLS_SSL_DTLS_CONNECTION_ID_COMPAT. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="group__x509__module_1ga9dba4f3f2580b4dbe6050fc3e7058cb9" kindref="member">mbedtls_x509write_crt_set_serial</ref>  (<ref refid="structmbedtls__x509write__cert" kindref="compound">mbedtls_x509write_cert</ref> *ctx, const <ref refid="structmbedtls__mpi" kindref="compound">mbedtls_mpi</ref> *serial)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000011"/>This function is deprecated and will be removed in a future version of the library. Please use <ref refid="group__x509__module_1ga55628800b330788803784b97c54ea37c" kindref="member">mbedtls_x509write_crt_set_serial_raw()</ref> instead.</para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

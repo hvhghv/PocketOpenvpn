@@ -1,0 +1,4 @@
+<map id="openvpn_plugin_args_open_in" name="openvpn_plugin_args_open_in">
+<area shape="rect" id="node1" title="Arguments used to transport variables to the plug&#45;in." alt="" coords="21,95,165,136"/>
+<area shape="rect" id="node2" href="$structopenvpn__plugin__callbacks.html" title="Used by the openvpn_plugin_open_v3() function to pass callback function pointers to the plug&#45;in." alt="" coords="5,5,180,32"/>
+</map>

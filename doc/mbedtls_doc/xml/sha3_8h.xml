@@ -1,0 +1,761 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sha3_8h" kind="file" language="C++">
+    <compoundname>sha3.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="crypto__builtin__primitives_8h" local="yes">crypto_builtin_primitives.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="20">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sha3.h</label>
+        <link refid="sha3_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="18">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="12">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="5">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sha3.h</label>
+        <link refid="sha3_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="4">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2">
+        <label>crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="19">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="10">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="3">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__sha3__context" prot="public">mbedtls_sha3_context</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sha3_8h_1a807b4f9acc59116cc993134a8d6c739d" prot="public" static="no">
+        <name>MBEDTLS_ERR_SHA3_BAD_INPUT_DATA</name>
+        <initializer>-0x0076</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SHA-3 input data was malformed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="29" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sha3_8h_1aa0cd9a30649255fc92f6efc998848373" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mbedtls_sha3_id</name>
+        <enumvalue id="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a583ccca97f11ac79fb939ea93fbb961f" prot="public">
+          <name>MBEDTLS_SHA3_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Operation not defined. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a89082cd0063021f3d47a26fabe0f8345" prot="public">
+          <name>MBEDTLS_SHA3_224</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SHA3-224 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sha3_8h_1aa0cd9a30649255fc92f6efc998848373aa461e983c4628d33b586f21d88c5b496" prot="public">
+          <name>MBEDTLS_SHA3_256</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SHA3-256 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sha3_8h_1aa0cd9a30649255fc92f6efc998848373aed24a77f37fc2092a01af66465a3f59f" prot="public">
+          <name>MBEDTLS_SHA3_384</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SHA3-384 </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a1e0fe352e6262004731aa62d755f96b3" prot="public">
+          <name>MBEDTLS_SHA3_512</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SHA3-512 </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SHA-3 family id.</para>
+<para>It identifies the family (SHA3-256, SHA3-512, etc.) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="37" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" bodystart="37" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sha3_8h_1acd9716465088fdae0f09a8c3335195a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_sha3_init</definition>
+        <argsstring>(mbedtls_sha3_context *ctx)</argsstring>
+        <name>mbedtls_sha3_init</name>
+        <param>
+          <type><ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes a SHA-3 context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SHA-3 context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="63" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" declline="63" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sha3_8h_1a59a5a94e5e9d5590898b667044709768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_sha3_free</definition>
+        <argsstring>(mbedtls_sha3_context *ctx)</argsstring>
+        <name>mbedtls_sha3_free</name>
+        <param>
+          <type><ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function clears a SHA-3 context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SHA-3 context to clear. This may be <computeroutput>NULL</computeroutput>, in which case this function returns immediately. If it is not <computeroutput>NULL</computeroutput>, it must point to an initialized SHA-3 context. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="72" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sha3_8h_1a6eb754baf4d1ae0ecd50029ed0f96136" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_sha3_clone</definition>
+        <argsstring>(mbedtls_sha3_context *dst, const mbedtls_sha3_context *src)</argsstring>
+        <name>mbedtls_sha3_clone</name>
+        <param>
+          <type><ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref> *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>This function clones the state of a SHA-3 context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination context. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to clone. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="80" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" declline="80" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sha3_8h_1addbbc22d9f51994f04066016aab8db03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_sha3_starts</definition>
+        <argsstring>(mbedtls_sha3_context *ctx, mbedtls_sha3_id id)</argsstring>
+        <name>mbedtls_sha3_starts</name>
+        <param>
+          <type><ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373" kindref="member">mbedtls_sha3_id</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>This function starts a SHA-3 checksum calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to use. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the SHA-3 family.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="93" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" declline="93" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sha3_8h_1af1d3a02c602bd2257e73e3fa613dd7da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_sha3_update</definition>
+        <argsstring>(mbedtls_sha3_context *ctx, const uint8_t *input, size_t ilen)</argsstring>
+        <name>mbedtls_sha3_update</name>
+        <param>
+          <type><ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <briefdescription>
+<para>This function feeds an input buffer into an ongoing SHA-3 checksum calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SHA-3 context. This must be initialized and have a hash operation started. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the data. This must be a readable buffer of length <computeroutput>ilen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="108" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" declline="108" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sha3_8h_1ab7c956b1d9b2d587495bd925f1435c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_sha3_finish</definition>
+        <argsstring>(mbedtls_sha3_context *ctx, uint8_t *output, size_t olen)</argsstring>
+        <name>mbedtls_sha3_finish</name>
+        <param>
+          <type><ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+<para>This function finishes the SHA-3 operation, and writes the result to the output buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SHA-3 context. This must be initialized and have a hash operation started. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SHA-3 checksum result. This must be a writable buffer of length <computeroutput>olen</computeroutput> bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines the length of output buffer (in bytes). For SHA-3 224, SHA-3 256, SHA-3 384 and SHA-3 512 <computeroutput>olen</computeroutput> must equal to 28, 32, 48 and 64, respectively.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="127" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" declline="127" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sha3_8h_1abe152687641398f99ad410adf7a45c43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_sha3</definition>
+        <argsstring>(mbedtls_sha3_id id, const uint8_t *input, size_t ilen, uint8_t *output, size_t olen)</argsstring>
+        <name>mbedtls_sha3</name>
+        <param>
+          <type><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373" kindref="member">mbedtls_sha3_id</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+<para>This function calculates the SHA-3 checksum of a buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function allocates the context, performs the calculation, and frees the context.</para>
+<para>The SHA-3 result is calculated as output = SHA-3(id, input buffer, d).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the SHA-3 family. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the data. This must be a readable buffer of length <computeroutput>ilen</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SHA-3 checksum result. This must be a writable buffer of length <computeroutput>olen</computeroutput> bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines the length of output buffer (in bytes). For SHA-3 224, SHA-3 256, SHA-3 384 and SHA-3 512 <computeroutput>olen</computeroutput> must equal to 28, 32, 48 and 64, respectively.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A negative error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="153" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" declline="153" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sha3_8h_1acfec6b9adb0505a930fed4d755bca586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_sha3_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_sha3_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine for the algorithms implemented by this module: SHA3-224, SHA3-256, SHA3-384, SHA3-512. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if successful, or 1 if the test failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" line="165" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h" declline="165" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains SHA-3 definitions and functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The Secure Hash Algorithms cryptographic hash functions are defined in <emphasis>FIPS 202: SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions </emphasis>. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_SHA3_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SHA3_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="sha3_8h_1a807b4f9acc59116cc993134a8d6c739d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_SHA3_BAD_INPUT_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0076</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a583ccca97f11ac79fb939ea93fbb961f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a583ccca97f11ac79fb939ea93fbb961f" kindref="member">MBEDTLS_SHA3_NONE</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="39" refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a89082cd0063021f3d47a26fabe0f8345" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a89082cd0063021f3d47a26fabe0f8345" kindref="member">MBEDTLS_SHA3_224</ref>,<sp/></highlight></codeline>
+<codeline lineno="40" refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373aa461e983c4628d33b586f21d88c5b496" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373aa461e983c4628d33b586f21d88c5b496" kindref="member">MBEDTLS_SHA3_256</ref>,<sp/></highlight></codeline>
+<codeline lineno="41" refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373aed24a77f37fc2092a01af66465a3f59f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373aed24a77f37fc2092a01af66465a3f59f" kindref="member">MBEDTLS_SHA3_384</ref>,<sp/></highlight></codeline>
+<codeline lineno="42" refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a1e0fe352e6262004731aa62d755f96b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373a1e0fe352e6262004731aa62d755f96b3" kindref="member">MBEDTLS_SHA3_512</ref>,<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373" kindref="member">mbedtls_sha3_id</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structmbedtls__sha3__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51" refid="structmbedtls__sha3__context_1ab2703d7cdff91aba07173e47ac496725" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(state[25]);</highlight></codeline>
+<codeline lineno="52" refid="structmbedtls__sha3__context_1a0eda65014c86b4396cde5d118c896f8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(index);</highlight></codeline>
+<codeline lineno="53" refid="structmbedtls__sha3__context_1a250ab9c401c9d203a61cc4c865490121" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(olen);</highlight></codeline>
+<codeline lineno="54" refid="structmbedtls__sha3__context_1aa8b1d1c578a6f4cd3b844d53a7ce9061" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(max_block_size);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sha3_8h_1acd9716465088fdae0f09a8c3335195a1" kindref="member">mbedtls_sha3_init</ref>(<ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sha3_8h_1a59a5a94e5e9d5590898b667044709768" kindref="member">mbedtls_sha3_free</ref>(<ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sha3_8h_1a6eb754baf4d1ae0ecd50029ed0f96136" kindref="member">mbedtls_sha3_clone</ref>(<ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref><sp/>*dst,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref><sp/>*src);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sha3_8h_1addbbc22d9f51994f04066016aab8db03" kindref="member">mbedtls_sha3_starts</ref>(<ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref><sp/>*ctx,<sp/><ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373" kindref="member">mbedtls_sha3_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sha3_8h_1af1d3a02c602bd2257e73e3fa613dd7da" kindref="member">mbedtls_sha3_update</ref>(<ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*input,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sha3_8h_1ab7c956b1d9b2d587495bd925f1435c3e" kindref="member">mbedtls_sha3_finish</ref>(<ref refid="structmbedtls__sha3__context" kindref="compound">mbedtls_sha3_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>olen);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sha3_8h_1abe152687641398f99ad410adf7a45c43" kindref="member">mbedtls_sha3</ref>(<ref refid="sha3_8h_1aa0cd9a30649255fc92f6efc998848373" kindref="member">mbedtls_sha3_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*input,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*output,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>olen);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sha3_8h_1acfec6b9adb0505a930fed4d755bca586" kindref="member">mbedtls_sha3_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>mbedtls_sha3.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/sha3.h"/>
+  </compounddef>
+</doxygen>

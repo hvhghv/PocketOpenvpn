@@ -1,0 +1,1252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="des_8h" kind="file" language="C++">
+    <compoundname>des.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="platform__util_8h" local="yes">mbedtls/platform_util.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="23">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>des.h</label>
+        <link refid="des_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="24">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__des__context" prot="public">mbedtls_des_context</innerclass>
+    <innerclass refid="structmbedtls__des3__context" prot="public">mbedtls_des3_context</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="des_8h_1a2baa8eadc1de93b98c54a459c7817ecd" prot="public" static="no">
+        <name>MBEDTLS_DES_ENCRYPT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="25" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="des_8h_1ae6b569e85f0f2b43420a179a992a1160" prot="public" static="no">
+        <name>MBEDTLS_DES_DECRYPT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="26" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="des_8h_1a2804ced2d0ca1eea5988cce20789d534" prot="public" static="no">
+        <name>MBEDTLS_ERR_DES_INVALID_INPUT_LENGTH</name>
+        <initializer>-0x0032</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The data input has an invalid length. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="29" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="des_8h_1ada76e71315efeead481c398b615b8bdc" prot="public" static="no">
+        <name>MBEDTLS_DES_KEY_SIZE</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="31" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="des_8h_1aae4f10beaf40dd640bf30b34cf1afec5" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref></type>
+        <definition>typedef struct mbedtls_des_context mbedtls_des_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_des_context</name>
+        <briefdescription>
+<para>DES context structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="51" column="20"/>
+      </memberdef>
+      <memberdef kind="typedef" id="des_8h_1a2bcb425827d5544396b08ad3152d7194" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref></type>
+        <definition>typedef struct mbedtls_des3_context mbedtls_des3_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_des3_context</name>
+        <briefdescription>
+<para>Triple-DES context structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="63" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="des_8h_1a0db47d1acf616d86fa382025e87ca9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_des_init</definition>
+        <argsstring>(mbedtls_des_context *ctx)</argsstring>
+        <name>mbedtls_des_init</name>
+        <param>
+          <type><ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize DES context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DES context to be initialized</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="78" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="78" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1af167e6e2204a49c2e4edb93370a3dab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_des_free</definition>
+        <argsstring>(mbedtls_des_context *ctx)</argsstring>
+        <name>mbedtls_des_free</name>
+        <param>
+          <type><ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Clear DES context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DES context to be cleared</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="89" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="89" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1abf86c340783d109ea29748dd5714126f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_des3_init</definition>
+        <argsstring>(mbedtls_des3_context *ctx)</argsstring>
+        <name>mbedtls_des3_init</name>
+        <param>
+          <type><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize Triple-DES context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DES3 context to be initialized</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="100" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="100" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a2e837fe8386148143d98ca9e16d64632" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_des3_free</definition>
+        <argsstring>(mbedtls_des3_context *ctx)</argsstring>
+        <name>mbedtls_des3_free</name>
+        <param>
+          <type><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Clear Triple-DES context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DES3 context to be cleared</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="111" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="111" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a6bd13ab5e6cd7b31bce1d6e17b6740b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_des_key_set_parity</definition>
+        <argsstring>(unsigned char key[MBEDTLS_DES_KEY_SIZE])</argsstring>
+        <name>mbedtls_des_key_set_parity</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE]</array>
+        </param>
+        <briefdescription>
+<para>Set key parity on the given key to odd. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>            DES keys are 56 bits long, but each byte is padded with
+            a parity bit to allow verification.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="125" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="125" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1aa268f8fd445c90b18add317e9a17a046" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des_key_check_key_parity</definition>
+        <argsstring>(const unsigned char key[MBEDTLS_DES_KEY_SIZE])</argsstring>
+        <name>mbedtls_des_key_check_key_parity</name>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE]</array>
+        </param>
+        <briefdescription>
+<para>Check that key parity on the given key is odd. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>            DES keys are 56 bits long, but each byte is padded with
+            a parity bit to allow verification.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 is parity was ok, 1 if parity was not correct.</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="142" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="142" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1aae065a353f2461bbe7150e4827d2d025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des_key_check_weak</definition>
+        <argsstring>(const unsigned char key[MBEDTLS_DES_KEY_SIZE])</argsstring>
+        <name>mbedtls_des_key_check_weak</name>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE]</array>
+        </param>
+        <briefdescription>
+<para>Check that key is not a weak or semi-weak DES key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if no weak key was found, 1 if a weak key was identified.</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="156" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="156" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a69e09a8459bfffdc473dec3be141d5bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des_setkey_enc</definition>
+        <argsstring>(mbedtls_des_context *ctx, const unsigned char key[MBEDTLS_DES_KEY_SIZE])</argsstring>
+        <name>mbedtls_des_setkey_enc</name>
+        <param>
+          <type><ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE]</array>
+        </param>
+        <briefdescription>
+<para>DES key schedule (56-bit, encryption) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DES context to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="171" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="171" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a2c7c908813ed41109e5f7f598cc0c9c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des_setkey_dec</definition>
+        <argsstring>(mbedtls_des_context *ctx, const unsigned char key[MBEDTLS_DES_KEY_SIZE])</argsstring>
+        <name>mbedtls_des_setkey_dec</name>
+        <param>
+          <type><ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE]</array>
+        </param>
+        <briefdescription>
+<para>DES key schedule (56-bit, decryption) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DES context to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="186" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="186" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a99a16d6e93153c83298110aa96fc55b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des3_set2key_enc</definition>
+        <argsstring>(mbedtls_des3_context *ctx, const unsigned char key[MBEDTLS_DES_KEY_SIZE *2])</argsstring>
+        <name>mbedtls_des3_set2key_enc</name>
+        <param>
+          <type><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE *2]</array>
+        </param>
+        <briefdescription>
+<para>Triple-DES key schedule (112-bit, encryption) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3DES context to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="201" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="201" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a3f1b58a886f8b26a183c5f786670a54a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des3_set2key_dec</definition>
+        <argsstring>(mbedtls_des3_context *ctx, const unsigned char key[MBEDTLS_DES_KEY_SIZE *2])</argsstring>
+        <name>mbedtls_des3_set2key_dec</name>
+        <param>
+          <type><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE *2]</array>
+        </param>
+        <briefdescription>
+<para>Triple-DES key schedule (112-bit, decryption) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3DES context to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="217" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="217" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a6fd7043d3f134c16c5dbe8c442e55f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des3_set3key_enc</definition>
+        <argsstring>(mbedtls_des3_context *ctx, const unsigned char key[MBEDTLS_DES_KEY_SIZE *3])</argsstring>
+        <name>mbedtls_des3_set3key_enc</name>
+        <param>
+          <type><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE *3]</array>
+        </param>
+        <briefdescription>
+<para>Triple-DES key schedule (168-bit, encryption) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3DES context to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>24-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="233" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="233" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1aec78c60a3fa75abd7255d120747fde52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des3_set3key_dec</definition>
+        <argsstring>(mbedtls_des3_context *ctx, const unsigned char key[MBEDTLS_DES_KEY_SIZE *3])</argsstring>
+        <name>mbedtls_des3_set3key_dec</name>
+        <param>
+          <type><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE *3]</array>
+        </param>
+        <briefdescription>
+<para>Triple-DES key schedule (168-bit, decryption) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3DES context to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>24-byte secret key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="249" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="249" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1aa713501cc3e30c39a763b4568698f5c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des_crypt_ecb</definition>
+        <argsstring>(mbedtls_des_context *ctx, const unsigned char input[8], unsigned char output[8])</argsstring>
+        <name>mbedtls_des_crypt_ecb</name>
+        <param>
+          <type><ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>input</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>output</declname>
+          <array>[8]</array>
+        </param>
+        <briefdescription>
+<para>DES-ECB block encryption/decryption. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DES context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64-bit input block </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64-bit output block</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="266" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="266" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a95353a2f0d2e8d1377f43f71ca12a231" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des_crypt_cbc</definition>
+        <argsstring>(mbedtls_des_context *ctx, int mode, size_t length, unsigned char iv[8], const unsigned char *input, unsigned char *output)</argsstring>
+        <name>mbedtls_des_crypt_cbc</name>
+        <param>
+          <type><ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>iv</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>DES-CBC buffer encryption/decryption. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Upon exit, the content of the IV is updated so that you can call the function same function again on the following block(s) of data and get the same result as if it was encrypted in one call. This allows a &quot;streaming&quot; usage. If on the other hand you need to retain the contents of the IV, you should either save it manually or use the cipher module instead.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DES context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBEDTLS_DES_ENCRYPT or MBEDTLS_DES_DECRYPT </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the input data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initialization vector (updated after use) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the input data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the output data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="294" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="294" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a933b8f629cc201e06f5e89396d065204" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des3_crypt_ecb</definition>
+        <argsstring>(mbedtls_des3_context *ctx, const unsigned char input[8], unsigned char output[8])</argsstring>
+        <name>mbedtls_des3_crypt_ecb</name>
+        <param>
+          <type><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>input</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>output</declname>
+          <array>[8]</array>
+        </param>
+        <briefdescription>
+<para>3DES-ECB block encryption/decryption </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3DES context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64-bit input block </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64-bit output block</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="316" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="316" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a4f5bb9106306e11c906abfa46fc51b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des3_crypt_cbc</definition>
+        <argsstring>(mbedtls_des3_context *ctx, int mode, size_t length, unsigned char iv[8], const unsigned char *input, unsigned char *output)</argsstring>
+        <name>mbedtls_des3_crypt_cbc</name>
+        <param>
+          <type><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>iv</declname>
+          <array>[8]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>3DES-CBC buffer encryption/decryption </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Upon exit, the content of the IV is updated so that you can call the function same function again on the following block(s) of data and get the same result as if it was encrypted in one call. This allows a &quot;streaming&quot; usage. If on the other hand you need to retain the contents of the IV, you should either save it manually or use the cipher module instead.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3DES context </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MBEDTLS_DES_ENCRYPT or MBEDTLS_DES_DECRYPT </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the input data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initialization vector (updated after use) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the input data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the output data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or MBEDTLS_ERR_DES_INVALID_INPUT_LENGTH</para>
+</simplesect>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="346" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="346" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a9ee690737bded4f7f6e12da86110a8e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_des_setkey</definition>
+        <argsstring>(uint32_t SK[32], const unsigned char key[MBEDTLS_DES_KEY_SIZE])</argsstring>
+        <name>mbedtls_des_setkey</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>SK</declname>
+          <array>[32]</array>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[MBEDTLS_DES_KEY_SIZE]</array>
+        </param>
+        <briefdescription>
+<para>Internal function for key expansion. (Only exposed to allow overriding it, see MBEDTLS_DES_SETKEY_ALT) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>SK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Round keys </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="366" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="366" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="des_8h_1a05ea48cba38269e488ac4d4e54dacc11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_des_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_des_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if successful, or 1 if the test failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="377" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" declline="377" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>DES block cipher. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_DES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__util_8h" kindref="compound">mbedtls/platform_util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="des_8h_1a2baa8eadc1de93b98c54a459c7817ecd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DES_ENCRYPT<sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="des_8h_1ae6b569e85f0f2b43420a179a992a1160" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DES_DECRYPT<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="des_8h_1a2804ced2d0ca1eea5988cce20789d534" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_DES_INVALID_INPUT_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0032</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="des_8h_1ada76e71315efeead481c398b615b8bdc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DES_KEY_SIZE<sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_DES_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Regular<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structmbedtls__des__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="49" refid="structmbedtls__des__context_1af8155b180dc8748674ad9e587daf1532" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(sk)[32];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="des_8h_1aae4f10beaf40dd640bf30b34cf1afec5" kindref="member">mbedtls_des_context</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structmbedtls__des3__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="structmbedtls__des3__context_1a28f12389c42ce1aa67aeeec43ecd0b67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(sk)[96];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="des_8h_1a2bcb425827d5544396b08ad3152d7194" kindref="member">mbedtls_des3_context</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_DES_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;des_alt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_DES_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a0db47d1acf616d86fa382025e87ca9b8" kindref="member">mbedtls_des_init</ref>(<ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="des_8h_1af167e6e2204a49c2e4edb93370a3dab8" kindref="member">mbedtls_des_free</ref>(<ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="des_8h_1abf86c340783d109ea29748dd5714126f" kindref="member">mbedtls_des3_init</ref>(<ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a2e837fe8386148143d98ca9e16d64632" kindref="member">mbedtls_des3_free</ref>(<ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a6bd13ab5e6cd7b31bce1d6e17b6740b5" kindref="member">mbedtls_des_key_set_parity</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref>]);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1aa268f8fd445c90b18add317e9a17a046" kindref="member">mbedtls_des_key_check_key_parity</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref>]);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1aae065a353f2461bbe7150e4827d2d025" kindref="member">mbedtls_des_key_check_weak</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref>]);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a69e09a8459bfffdc473dec3be141d5bb" kindref="member">mbedtls_des_setkey_enc</ref>(<ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref>]);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a2c7c908813ed41109e5f7f598cc0c9c4" kindref="member">mbedtls_des_setkey_dec</ref>(<ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref>]);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a99a16d6e93153c83298110aa96fc55b9" kindref="member">mbedtls_des3_set2key_enc</ref>(<ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref><sp/>*<sp/>2]);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a3f1b58a886f8b26a183c5f786670a54a" kindref="member">mbedtls_des3_set2key_dec</ref>(<ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref><sp/>*<sp/>2]);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a6fd7043d3f134c16c5dbe8c442e55f2c" kindref="member">mbedtls_des3_set3key_enc</ref>(<ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref><sp/>*<sp/>3]);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1aec78c60a3fa75abd7255d120747fde52" kindref="member">mbedtls_des3_set3key_dec</ref>(<ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref><sp/>*<sp/>3]);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1aa713501cc3e30c39a763b4568698f5c1" kindref="member">mbedtls_des_crypt_ecb</ref>(<ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>input[8],</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>output[8]);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_MODE_CBC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a95353a2f0d2e8d1377f43f71ca12a231" kindref="member">mbedtls_des_crypt_cbc</ref>(<ref refid="structmbedtls__des__context" kindref="compound">mbedtls_des_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>iv[8],</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_MODE_CBC<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a933b8f629cc201e06f5e89396d065204" kindref="member">mbedtls_des3_crypt_ecb</ref>(<ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>input[8],</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>output[8]);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CIPHER_MODE_CBC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a4f5bb9106306e11c906abfa46fc51b94" kindref="member">mbedtls_des3_crypt_cbc</ref>(<ref refid="structmbedtls__des3__context" kindref="compound">mbedtls_des3_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>iv[8],</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CIPHER_MODE_CBC<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a9ee690737bded4f7f6e12da86110a8e5" kindref="member">mbedtls_des_setkey</ref>(uint32_t<sp/>SK[32],</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key[<ref refid="des_8h_1ada76e71315efeead481c398b615b8bdc" kindref="member">MBEDTLS_DES_KEY_SIZE</ref>]);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><ref refid="platform__util_8h_1adc48af1b5ae70c17794e6fea504c9292" kindref="member">MBEDTLS_CHECK_RETURN_CRITICAL</ref></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="des_8h_1a05ea48cba38269e488ac4d4e54dacc11" kindref="member">mbedtls_des_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>des.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h"/>
+  </compounddef>
+</doxygen>

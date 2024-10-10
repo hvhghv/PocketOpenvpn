@@ -1,0 +1,9 @@
+<map id="crypto_options" name="crypto_options">
+<area shape="rect" id="node1" title="Security parameter state for processing data channel packets." alt="" coords="249,199,355,225"/>
+<area shape="rect" id="node2" href="$structpacket__id.html" title=" " alt="" coords="155,109,233,136"/>
+<area shape="rect" id="node3" href="$structpacket__id__send.html" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node4" href="$structpacket__id__rec.html" title=" " alt="" coords="143,5,245,32"/>
+<area shape="rect" id="node5" href="$structkey__ctx__bi.html" title="Container for two sets of OpenSSL cipher and/or HMAC contexts for both sending and receiving directio..." alt="" coords="259,109,345,136"/>
+<area shape="rect" id="node6" href="$structkey__ctx.html" title="Container for one set of cipher and/or HMAC contexts." alt="" coords="269,5,337,32"/>
+<area shape="rect" id="node7" href="$structpacket__id__persist.html" title=" " alt="" coords="369,109,493,136"/>
+</map>

@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__drv__se__cipher__t" kind="struct" language="C++" prot="public">
+    <compoundname>psa_drv_se_cipher_t</compoundname>
+    <includes refid="crypto__se__driver_8h" local="no">crypto_se_driver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__drv__se__cipher__t_1affb02befeff9d54d7e99542601f6ba1a" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_drv_se_cipher_t::private_context_size</definition>
+        <argsstring></argsstring>
+        <name>private_context_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The size in bytes of the hardware-specific secure element cipher context structure </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="502" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__cipher__t_1a3b82a3288d815290ca35669eba7eb45a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__cipher_1ga7d31744990222cf99a02bcd905996a3a" kindref="member">psa_drv_se_cipher_setup_t</ref></type>
+        <definition>psa_drv_se_cipher_setup_t psa_drv_se_cipher_t::private_p_setup</definition>
+        <argsstring></argsstring>
+        <name>private_p_setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a cipher setup operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="504" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__cipher__t_1aca20219b5832b42d6662a0f5b98372c4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__cipher_1ga4c603c3ee2f0f98a09d9df1e9a0c86bf" kindref="member">psa_drv_se_cipher_set_iv_t</ref></type>
+        <definition>psa_drv_se_cipher_set_iv_t psa_drv_se_cipher_t::private_p_set_iv</definition>
+        <argsstring></argsstring>
+        <name>private_p_set_iv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that sets a cipher IV (if necessary) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="506" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__cipher__t_1a7f45ef113692a806e8dc1fe2f226e650" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__cipher_1gaeca34a7a7afd10ba9c79f3eaaf20d96b" kindref="member">psa_drv_se_cipher_update_t</ref></type>
+        <definition>psa_drv_se_cipher_update_t psa_drv_se_cipher_t::private_p_update</definition>
+        <argsstring></argsstring>
+        <name>private_p_update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs a cipher update operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="508" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="508" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__cipher__t_1a7c0214546e4e3f3d63b064e63e3516ca" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__cipher_1ga06bf0bfbf55291d0bf5a411175a0350b" kindref="member">psa_drv_se_cipher_finish_t</ref></type>
+        <definition>psa_drv_se_cipher_finish_t psa_drv_se_cipher_t::private_p_finish</definition>
+        <argsstring></argsstring>
+        <name>private_p_finish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that completes a cipher operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="510" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="510" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__cipher__t_1a18fa04905608d4484813f81441ab99f5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__cipher_1ga1cb204afa81012e4c561e0731792cae9" kindref="member">psa_drv_se_cipher_abort_t</ref></type>
+        <definition>psa_drv_se_cipher_abort_t psa_drv_se_cipher_t::private_p_abort</definition>
+        <argsstring></argsstring>
+        <name>private_p_abort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that aborts a cipher operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="512" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__drv__se__cipher__t_1a3a264edc55b96bb8ba585d6f9abfdf55" prot="public" static="no" mutable="no">
+        <type><ref refid="group__se__cipher_1gaec35ce527439186d9f7e283e24c63a75" kindref="member">psa_drv_se_cipher_ecb_t</ref></type>
+        <definition>psa_drv_se_cipher_ecb_t psa_drv_se_cipher_t::private_p_ecb</definition>
+        <argsstring></argsstring>
+        <name>private_p_ecb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that performs ECB mode for a cipher operation (Danger: ECB mode should not be used directly by clients of the PSA Crypto Client API) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="517" column="32" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A struct containing all of the function pointers needed to implement cipher operations using secure elements. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>PSA Crypto API implementations should populate instances of the table as appropriate upon startup or at build time.</para>
+<para>If one of the functions is not implemented (such as <computeroutput>psa_drv_se_cipher_ecb_t</computeroutput>), it should be set to NULL. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>psa_drv_se_context_t</label>
+        <link refid="structpsa__drv__se__context__t"/>
+      </node>
+      <node id="1">
+        <label>psa_drv_se_cipher_t</label>
+        <link refid="structpsa__drv__se__cipher__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_p_ecb</edgelabel>
+          <edgelabel>private_p_setup</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" line="498" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_se_driver.h" bodystart="498" bodyend="518"/>
+    <listofallmembers>
+      <member refid="structpsa__drv__se__cipher__t_1affb02befeff9d54d7e99542601f6ba1a" prot="public" virt="non-virtual"><scope>psa_drv_se_cipher_t</scope><name>private_context_size</name></member>
+      <member refid="structpsa__drv__se__cipher__t_1a18fa04905608d4484813f81441ab99f5" prot="public" virt="non-virtual"><scope>psa_drv_se_cipher_t</scope><name>private_p_abort</name></member>
+      <member refid="structpsa__drv__se__cipher__t_1a3a264edc55b96bb8ba585d6f9abfdf55" prot="public" virt="non-virtual"><scope>psa_drv_se_cipher_t</scope><name>private_p_ecb</name></member>
+      <member refid="structpsa__drv__se__cipher__t_1a7c0214546e4e3f3d63b064e63e3516ca" prot="public" virt="non-virtual"><scope>psa_drv_se_cipher_t</scope><name>private_p_finish</name></member>
+      <member refid="structpsa__drv__se__cipher__t_1aca20219b5832b42d6662a0f5b98372c4" prot="public" virt="non-virtual"><scope>psa_drv_se_cipher_t</scope><name>private_p_set_iv</name></member>
+      <member refid="structpsa__drv__se__cipher__t_1a3b82a3288d815290ca35669eba7eb45a" prot="public" virt="non-virtual"><scope>psa_drv_se_cipher_t</scope><name>private_p_setup</name></member>
+      <member refid="structpsa__drv__se__cipher__t_1a7f45ef113692a806e8dc1fe2f226e650" prot="public" virt="non-virtual"><scope>psa_drv_se_cipher_t</scope><name>private_p_update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

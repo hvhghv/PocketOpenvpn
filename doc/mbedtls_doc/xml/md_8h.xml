@@ -1,0 +1,2071 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_8h" kind="file" language="C++">
+    <compoundname>md.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="platform__util_8h" local="yes">mbedtls/platform_util.h</includes>
+    <includedby refid="entropy_8h" local="yes">entropy.h</includedby>
+    <includedby refid="pk_8h" local="yes">pk.h</includedby>
+    <includedby refid="rsa_8h" local="yes">rsa.h</includedby>
+    <includedby refid="ecdsa_8h" local="yes">ecdsa.h</includedby>
+    <includedby refid="ecjpake_8h" local="yes">ecjpake.h</includedby>
+    <includedby refid="ssl__ciphersuites_8h" local="yes">ssl_ciphersuites.h</includedby>
+    <includedby refid="ssl_8h" local="yes">ssl.h</includedby>
+    <includedby refid="hkdf_8h" local="yes">hkdf.h</includedby>
+    <includedby refid="hmac__drbg_8h" local="yes">hmac_drbg.h</includedby>
+    <includedby refid="oid_8h" local="yes">oid.h</includedby>
+    <includedby refid="pkcs12_8h" local="yes">pkcs12.h</includedby>
+    <includedby refid="pkcs5_8h" local="yes">pkcs5.h</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="20">
+        <label>stdint.h</label>
+      </node>
+      <node id="11">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="21">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="19">
+        <label>limits.h</label>
+      </node>
+      <node id="4">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="18">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="5">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="7">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="23">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="1">
+        <label>md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="8">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="24">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="29">
+        <label>pkcs5.h</label>
+        <link refid="pkcs5_8h"/>
+      </node>
+      <node id="21">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="26">
+        <label>hkdf.h</label>
+        <link refid="hkdf_8h"/>
+      </node>
+      <node id="17">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2">
+        <label>entropy.h</label>
+        <link refid="entropy_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="13">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>hmac_drbg.h</label>
+        <link refid="hmac__drbg_8h"/>
+      </node>
+      <node id="7">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="23">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ecdsa.h</label>
+        <link refid="ecdsa_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="5">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ctr_drbg.h</label>
+        <link refid="ctr__drbg_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="18">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="9">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="25">
+        <label>ecjpake.h</label>
+        <link refid="ecjpake_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+      <node id="22">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>rsa.h</label>
+        <link refid="rsa_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>pkcs12.h</label>
+        <link refid="pkcs12_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__md__context__t" prot="public">mbedtls_md_context_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="md_8h_1ac397cbbada6de12abec1325987668d07" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_MD5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="100" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a768249aa42c9fdd38189366525522755" prot="public" static="no">
+        <name>MBEDTLS_MD_SOME_LEGACY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="101" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a74b4290de491e6f208cb8ef5b8471451" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="104" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a768249aa42c9fdd38189366525522755" prot="public" static="no">
+        <name>MBEDTLS_MD_SOME_LEGACY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="105" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1aea4b50e97156fb95f758ccc6d2750741" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA224</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="108" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a768249aa42c9fdd38189366525522755" prot="public" static="no">
+        <name>MBEDTLS_MD_SOME_LEGACY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="109" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1ae7752340ae02bd7f4d97c16602a06894" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA256</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="112" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a768249aa42c9fdd38189366525522755" prot="public" static="no">
+        <name>MBEDTLS_MD_SOME_LEGACY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="113" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1ac89fedf29964ed85018ed1d5279b3381" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA384</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="116" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a768249aa42c9fdd38189366525522755" prot="public" static="no">
+        <name>MBEDTLS_MD_SOME_LEGACY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="117" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a0d381b8a9b7451474de21958a3ce1744" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA512</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="120" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a768249aa42c9fdd38189366525522755" prot="public" static="no">
+        <name>MBEDTLS_MD_SOME_LEGACY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="121" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a4f7bff046703551d0054aabaa46305ff" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA3_224</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="124" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1ab4bb59339ca4098b7a4caed088067e61" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA3_256</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="125" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a56181a6e89612bac84ad387d9a7542dd" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA3_384</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="126" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a9a2cd5f493fb2151f9b44715fa1d6483" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_SHA3_512</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="127" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a768249aa42c9fdd38189366525522755" prot="public" static="no">
+        <name>MBEDTLS_MD_SOME_LEGACY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="128" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1ac3d5cd177eea9ebeb6a6761a5521c598" prot="public" static="no">
+        <name>MBEDTLS_MD_CAN_RIPEMD160</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="131" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a768249aa42c9fdd38189366525522755" prot="public" static="no">
+        <name>MBEDTLS_MD_SOME_LEGACY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="132" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a121b228f0512def159e3bd4ced07633b" prot="public" static="no">
+        <name>MBEDTLS_ERR_MD_FEATURE_UNAVAILABLE</name>
+        <initializer>-0x5080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The selected feature is not available. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="138" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" prot="public" static="no">
+        <name>MBEDTLS_ERR_MD_BAD_INPUT_DATA</name>
+        <initializer>-0x5100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bad input parameters to function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="140" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a7e7a4f1a618afbb412ef82ca2e572140" prot="public" static="no">
+        <name>MBEDTLS_ERR_MD_ALLOC_FAILED</name>
+        <initializer>-0x5180</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Failed to allocate memory. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="142" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1aab0a160e4b0efdd4cc8cbe12b4813047" prot="public" static="no">
+        <name>MBEDTLS_ERR_MD_FILE_IO_ERROR</name>
+        <initializer>-0x5200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opening or reading of file failed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="144" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1ad3e0e65cb5b289a358b83b5af1fdd41b" prot="public" static="no">
+        <name>MBEDTLS_MD_MAX_SIZE</name>
+        <initializer>64  /* longest known is SHA512 */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="185" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="md_8h_1a915480a4b00e3206920bbaea530fc199" prot="public" static="no">
+        <name>MBEDTLS_MD_MAX_BLOCK_SIZE</name>
+        <initializer>144 /* the longest known is SHA3-224 */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="198" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="md_8h_1a219313cb40503ec3e34a857ab98b2296" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mbedtls_md_type_t</name>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a564288006d735f75738021342ca5f9d1" prot="public">
+          <name>MBEDTLS_MD_NONE</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>None. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a14fbb8d456ae15f082c2360200cd50bf" prot="public">
+          <name>MBEDTLS_MD_MD5</name>
+          <initializer>=0x03</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The MD5 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a1c358adae154d70c5eb131efcb5d4caf" prot="public">
+          <name>MBEDTLS_MD_RIPEMD160</name>
+          <initializer>=0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The RIPEMD-160 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a800a5ff57003d84ac73f1aadeaaf00fe" prot="public">
+          <name>MBEDTLS_MD_SHA1</name>
+          <initializer>=0x05</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA-1 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a77e7fbd0fa5e31e7e1c9295928568f74" prot="public">
+          <name>MBEDTLS_MD_SHA224</name>
+          <initializer>=0x08</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA-224 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a7634aa1a264b0e1a5ec65f4ed77468f8" prot="public">
+          <name>MBEDTLS_MD_SHA256</name>
+          <initializer>=0x09</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA-256 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a39dd5c95e28fac45c3f18e55b11329cb" prot="public">
+          <name>MBEDTLS_MD_SHA384</name>
+          <initializer>=0x0a</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA-384 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a0cdbe8272ceee7d63b2bfadd5ed05c26" prot="public">
+          <name>MBEDTLS_MD_SHA512</name>
+          <initializer>=0x0b</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA-512 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296abcd75dbff14542581ccd69206b08511f" prot="public">
+          <name>MBEDTLS_MD_SHA3_224</name>
+          <initializer>=0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA3-224 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296ac4c685829127cdb54c680dc35c0ead4b" prot="public">
+          <name>MBEDTLS_MD_SHA3_256</name>
+          <initializer>=0x11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA3-256 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a46ece73f1afb7c036166ed1ead32cc50" prot="public">
+          <name>MBEDTLS_MD_SHA3_384</name>
+          <initializer>=0x12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA3-384 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1a219313cb40503ec3e34a857ab98b2296a6e0d86dadad77757501c6884f0d4f64e" prot="public">
+          <name>MBEDTLS_MD_SHA3_512</name>
+          <initializer>=0x13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The SHA3-512 message digest. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Supported message digests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>MD5 and SHA-1 are considered weak message digests and their use constitutes a security risk. We recommend considering stronger message digests instead. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="161" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="161" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="enum" id="md_8h_1ac4204ba0546c75b052d34031e19f7f54" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mbedtls_md_engine_t</name>
+        <enumvalue id="md_8h_1ac4204ba0546c75b052d34031e19f7f54a02b17b134ea0cb61ec2f0504618af1ef" prot="public">
+          <name>MBEDTLS_MD_ENGINE_LEGACY</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="md_8h_1ac4204ba0546c75b052d34031e19f7f54ae769cdb604f53d74de817d7105b60966" prot="public">
+          <name>MBEDTLS_MD_ENGINE_PSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used internally to indicate whether a context uses legacy or PSA.</para>
+<para>Internal use only. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="228" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="228" bodyend="231"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="md_8h_1a496e73a6f229eba89b4abd9955822adb" prot="public" static="no">
+        <type>struct <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref></type>
+        <definition>typedef struct mbedtls_md_info_t mbedtls_md_info_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_md_info_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opaque struct.</para>
+<para>Constructed using either <ref refid="md_8h_1ac4619cce171e558d059baae35da50a2a" kindref="member">mbedtls_md_info_from_string</ref> or <ref refid="md_8h_1aca53b51e0c8eb0e07c7eb4a3e6acfa0d" kindref="member">mbedtls_md_info_from_type</ref>.</para>
+<para>Fields can be accessed with <ref refid="md_8h_1ae20f4ddcf2bbf2e59cafc6fab8c993d6" kindref="member">mbedtls_md_get_size</ref>, <ref refid="md_8h_1a7a084e1b71c78daa7071691f60de5131" kindref="member">mbedtls_md_get_type</ref> and <ref refid="md_8h_1a3ceb9e6b3d4b21612ef5d7532872c6bc" kindref="member">mbedtls_md_get_name</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="1" column="0" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="md_8h_1a7504b007117b75c246840603ec86929c" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref></type>
+        <definition>typedef struct mbedtls_md_context_t mbedtls_md_context_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_md_context_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The generic message-digest context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="252" column="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="md_8h_1aca53b51e0c8eb0e07c7eb4a3e6acfa0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+        <definition>const mbedtls_md_info_t* mbedtls_md_info_from_type</definition>
+        <argsstring>(mbedtls_md_type_t md_type)</argsstring>
+        <name>mbedtls_md_info_from_type</name>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_type</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the message-digest information associated with the given digest type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of digest to search for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The message-digest information associated with <computeroutput>md_type</computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>NULL if the associated message-digest information is not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="263" column="25" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="263" declcolumn="25"/>
+        <referencedby refid="md_8h_1ab7d7f42a611a24191e4f9d906abf3e70" compoundref="md_8h" startline="360" endline="363">mbedtls_md_get_size_from_type</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1ad8b02927ca10552e3cbf293fa8c10e24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_md_init</definition>
+        <argsstring>(mbedtls_md_context_t *ctx)</argsstring>
+        <name>mbedtls_md_init</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes a message-digest context without binding it to a particular message-digest algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function should always be called first. It prepares the context for <ref refid="md_8h_1a1b858111212997b90bd7d2c71010a7ec" kindref="member">mbedtls_md_setup()</ref> for binding it to a message-digest algorithm. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="273" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="273" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1af3248ddb6ad05035292fa92ac4af2587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_md_free</definition>
+        <argsstring>(mbedtls_md_context_t *ctx)</argsstring>
+        <name>mbedtls_md_free</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function clears the internal structure of <computeroutput>ctx</computeroutput> and frees any embedded internal structure, but does not free <computeroutput>ctx</computeroutput> itself. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If you have called <ref refid="md_8h_1a1b858111212997b90bd7d2c71010a7ec" kindref="member">mbedtls_md_setup()</ref> on <computeroutput>ctx</computeroutput>, you must call <ref refid="md_8h_1af3248ddb6ad05035292fa92ac4af2587" kindref="member">mbedtls_md_free()</ref> when you are no longer using the context. Calling this function if you have previously called <ref refid="md_8h_1ad8b02927ca10552e3cbf293fa8c10e24" kindref="member">mbedtls_md_init()</ref> and nothing else is optional. You must not call this function if you have not called <ref refid="md_8h_1ad8b02927ca10552e3cbf293fa8c10e24" kindref="member">mbedtls_md_init()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="288" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="288" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a1b858111212997b90bd7d2c71010a7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_setup</definition>
+        <argsstring>(mbedtls_md_context_t *ctx, const mbedtls_md_info_t *md_info, int hmac)</argsstring>
+        <name>mbedtls_md_setup</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hmac</declname>
+        </param>
+        <briefdescription>
+<para>This function selects the message digest algorithm to use, and allocates internal structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It should be called after <ref refid="md_8h_1ad8b02927ca10552e3cbf293fa8c10e24" kindref="member">mbedtls_md_init()</ref> or <ref refid="md_8h_1af3248ddb6ad05035292fa92ac4af2587" kindref="member">mbedtls_md_free()</ref>. Makes it necessary to call <ref refid="md_8h_1af3248ddb6ad05035292fa92ac4af2587" kindref="member">mbedtls_md_free()</ref> later.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to set up. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The information structure of the message-digest algorithm to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hmac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines if HMAC is used. 0: HMAC is not used (saves some memory), or non-zero: HMAC is used with this context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1a7e7a4f1a618afbb412ef82ca2e572140" kindref="member">MBEDTLS_ERR_MD_ALLOC_FAILED</ref> on memory-allocation failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="311" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="311" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a5140622773fa71bbe87ca521e57ff8c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_clone</definition>
+        <argsstring>(mbedtls_md_context_t *dst, const mbedtls_md_context_t *src)</argsstring>
+        <name>mbedtls_md_clone</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>This function clones the state of a message-digest context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>You must call <ref refid="md_8h_1a1b858111212997b90bd7d2c71010a7ec" kindref="member">mbedtls_md_setup()</ref> on <computeroutput>dst</computeroutput> before calling this function.</para>
+</simplesect>
+<simplesect kind="note"><para>The two contexts must have the same type, for example, both are SHA-256.</para>
+</simplesect>
+<simplesect kind="warning"><para>This function clones the message-digest state, not the HMAC state.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to be cloned.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1a121b228f0512def159e3bd4ced07633b" kindref="member">MBEDTLS_ERR_MD_FEATURE_UNAVAILABLE</ref> if both contexts are not using the same engine. This can be avoided by moving the call to <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before the first call to <ref refid="md_8h_1a1b858111212997b90bd7d2c71010a7ec" kindref="member">mbedtls_md_setup()</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="337" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="337" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1ae20f4ddcf2bbf2e59cafc6fab8c993d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_md_get_size</definition>
+        <argsstring>(const mbedtls_md_info_t *md_info)</argsstring>
+        <name>mbedtls_md_get_size</name>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <briefdescription>
+<para>This function extracts the message-digest size from the message-digest information structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The information structure of the message-digest algorithm to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The size of the message-digest output in Bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="349" column="15" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="349" declcolumn="15"/>
+        <referencedby refid="md_8h_1ab7d7f42a611a24191e4f9d906abf3e70" compoundref="md_8h" startline="360" endline="363">mbedtls_md_get_size_from_type</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1ab7d7f42a611a24191e4f9d906abf3e70" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char mbedtls_md_get_size_from_type</definition>
+        <argsstring>(mbedtls_md_type_t md_type)</argsstring>
+        <name>mbedtls_md_get_size_from_type</name>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_type</declname>
+        </param>
+        <briefdescription>
+<para>This function gives the message-digest size associated to message-digest type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message-digest type.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The size of the message-digest output in Bytes, or 0 if the message-digest type is not known. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="360" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" bodystart="360" bodyend="363"/>
+        <references refid="md_8h_1ae20f4ddcf2bbf2e59cafc6fab8c993d6">mbedtls_md_get_size</references>
+        <references refid="md_8h_1aca53b51e0c8eb0e07c7eb4a3e6acfa0d">mbedtls_md_info_from_type</references>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a7a084e1b71c78daa7071691f60de5131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+        <definition>mbedtls_md_type_t mbedtls_md_get_type</definition>
+        <argsstring>(const mbedtls_md_info_t *md_info)</argsstring>
+        <name>mbedtls_md_get_type</name>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <briefdescription>
+<para>This function extracts the message-digest type from the message-digest information structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The information structure of the message-digest algorithm to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The type of the message digest. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="374" column="19" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="374" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a24483eff556810e3489ac6abefa328e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_starts</definition>
+        <argsstring>(mbedtls_md_context_t *ctx)</argsstring>
+        <name>mbedtls_md_starts</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function starts a message-digest computation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>             You must call this function after setting up the context
+             with mbedtls_md_setup(), and before passing data with
+             mbedtls_md_update().
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generic message-digest context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="390" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="390" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a7e50ce3a8c75b5221d07be657b93ca94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_update</definition>
+        <argsstring>(mbedtls_md_context_t *ctx, const unsigned char *input, size_t ilen)</argsstring>
+        <name>mbedtls_md_update</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <briefdescription>
+<para>This function feeds an input buffer into an ongoing message-digest computation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>You must call <ref refid="md_8h_1a24483eff556810e3489ac6abefa328e6" kindref="member">mbedtls_md_starts()</ref> before calling this function. You may call this function multiple times. Afterwards, call <ref refid="md_8h_1adf77ab9b0f117367883988ee5f0af1f4" kindref="member">mbedtls_md_finish()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generic message-digest context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="409" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="409" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1adf77ab9b0f117367883988ee5f0af1f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_finish</definition>
+        <argsstring>(mbedtls_md_context_t *ctx, unsigned char *output)</argsstring>
+        <name>mbedtls_md_finish</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function finishes the digest operation, and writes the result to the output buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this function after a call to <ref refid="md_8h_1a24483eff556810e3489ac6abefa328e6" kindref="member">mbedtls_md_starts()</ref>, followed by any number of calls to <ref refid="md_8h_1a7e50ce3a8c75b5221d07be657b93ca94" kindref="member">mbedtls_md_update()</ref>. Afterwards, you may either clear the context with <ref refid="md_8h_1af3248ddb6ad05035292fa92ac4af2587" kindref="member">mbedtls_md_free()</ref>, or call <ref refid="md_8h_1a24483eff556810e3489ac6abefa328e6" kindref="member">mbedtls_md_starts()</ref> to reuse the context for another digest operation with the same algorithm.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generic message-digest context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer for the generic message-digest checksum result.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="430" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="430" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a36c5d8bda1905e0434708f0ef5912dda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md</definition>
+        <argsstring>(const mbedtls_md_info_t *md_info, const unsigned char *input, size_t ilen, unsigned char *output)</argsstring>
+        <name>mbedtls_md</name>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function calculates the message-digest of a buffer, with respect to a configurable message-digest algorithm in a single call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The result is calculated as Output = message_digest(input buffer).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The information structure of the message-digest algorithm to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generic message-digest checksum result.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="451" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="451" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a51dc7cc39a5bf5b894cc1616bf798c06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const int *</type>
+        <definition>const int* mbedtls_md_list</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_md_list</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function returns the list of digests supported by the generic digest module. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The list starts with the strongest available hashes.</para>
+</simplesect>
+<simplesect kind="return"><para>A statically allocated array of digests. Each element in the returned list is an integer belonging to the message-digest enumeration <ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref>. The last entry is 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="465" column="11" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="465" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1ac4619cce171e558d059baae35da50a2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+        <definition>const mbedtls_md_info_t* mbedtls_md_info_from_string</definition>
+        <argsstring>(const char *md_name)</argsstring>
+        <name>mbedtls_md_info_from_string</name>
+        <param>
+          <type>const char *</type>
+          <declname>md_name</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the message-digest information associated with the given digest name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the digest to search for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The message-digest information associated with <computeroutput>md_name</computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para>NULL if the associated message-digest information is not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="476" column="25" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="476" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a3ceb9e6b3d4b21612ef5d7532872c6bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* mbedtls_md_get_name</definition>
+        <argsstring>(const mbedtls_md_info_t *md_info)</argsstring>
+        <name>mbedtls_md_get_name</name>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the name of the message digest for the message-digest information structure given. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The information structure of the message-digest algorithm to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The name of the message digest. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="487" column="12" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="487" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a449a53603ec0e129b42992f702e0603a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+        <definition>const mbedtls_md_info_t* mbedtls_md_info_from_ctx</definition>
+        <argsstring>(const mbedtls_md_context_t *ctx)</argsstring>
+        <name>mbedtls_md_info_from_ctx</name>
+        <param>
+          <type>const <ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the message-digest information from the given context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context from which to extract the information. This must be initialized (or <computeroutput>NULL</computeroutput>).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The message-digest information associated with <computeroutput>ctx</computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>NULL</computeroutput> if <computeroutput>ctx</computeroutput> is <computeroutput>NULL</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="499" column="25" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="499" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1acab221f8ac78e15ac1dd2eda4f1b2c30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_file</definition>
+        <argsstring>(const mbedtls_md_info_t *md_info, const char *path, unsigned char *output)</argsstring>
+        <name>mbedtls_md_file</name>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function calculates the message-digest checksum result of the contents of the provided file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The result is calculated as Output = message_digest(file contents).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The information structure of the message-digest algorithm to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input file name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generic message-digest checksum result.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aab0a160e4b0efdd4cc8cbe12b4813047" kindref="member">MBEDTLS_ERR_MD_FILE_IO_ERROR</ref> on an I/O error accessing the file pointed by <computeroutput>path</computeroutput>. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> if <computeroutput>md_info</computeroutput> was NULL. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="521" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="521" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a8968f8659fc277f013374c1bac8d4d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_hmac_starts</definition>
+        <argsstring>(mbedtls_md_context_t *ctx, const unsigned char *key, size_t keylen)</argsstring>
+        <name>mbedtls_md_hmac_starts</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keylen</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the HMAC key and prepares to authenticate a new message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this function after <ref refid="md_8h_1a1b858111212997b90bd7d2c71010a7ec" kindref="member">mbedtls_md_setup()</ref>, to use the MD context for an HMAC calculation, then call <ref refid="md_8h_1a86cbea1c3bcd558a7e185ff8200a29a6" kindref="member">mbedtls_md_hmac_update()</ref> to provide the input data, and <ref refid="md_8h_1a7aeafef80c89e47ee3033035a6a75a27" kindref="member">mbedtls_md_hmac_finish()</ref> to get the HMAC value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message digest context containing an embedded HMAC context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC secret key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keylen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the HMAC key in Bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="544" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="544" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a86cbea1c3bcd558a7e185ff8200a29a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_hmac_update</definition>
+        <argsstring>(mbedtls_md_context_t *ctx, const unsigned char *input, size_t ilen)</argsstring>
+        <name>mbedtls_md_hmac_update</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <briefdescription>
+<para>This function feeds an input buffer into an ongoing HMAC computation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call <ref refid="md_8h_1a8968f8659fc277f013374c1bac8d4d1a" kindref="member">mbedtls_md_hmac_starts()</ref> or <ref refid="md_8h_1a3a5c64b5bda0f294e917ccd5a8ca234e" kindref="member">mbedtls_md_hmac_reset()</ref> before calling this function. You may call this function multiple times to pass the input piecewise. Afterwards, call <ref refid="md_8h_1a7aeafef80c89e47ee3033035a6a75a27" kindref="member">mbedtls_md_hmac_finish()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message digest context containing an embedded HMAC context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="567" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="567" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a7aeafef80c89e47ee3033035a6a75a27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_hmac_finish</definition>
+        <argsstring>(mbedtls_md_context_t *ctx, unsigned char *output)</argsstring>
+        <name>mbedtls_md_hmac_finish</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function finishes the HMAC operation, and writes the result to the output buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this function after <ref refid="md_8h_1a8968f8659fc277f013374c1bac8d4d1a" kindref="member">mbedtls_md_hmac_starts()</ref> and <ref refid="md_8h_1a86cbea1c3bcd558a7e185ff8200a29a6" kindref="member">mbedtls_md_hmac_update()</ref> to get the HMAC value. Afterwards you may either call <ref refid="md_8h_1af3248ddb6ad05035292fa92ac4af2587" kindref="member">mbedtls_md_free()</ref> to clear the context, or call <ref refid="md_8h_1a3a5c64b5bda0f294e917ccd5a8ca234e" kindref="member">mbedtls_md_hmac_reset()</ref> to reuse the context with the same HMAC key.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message digest context containing an embedded HMAC context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generic HMAC checksum result.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="589" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="589" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a3a5c64b5bda0f294e917ccd5a8ca234e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_hmac_reset</definition>
+        <argsstring>(mbedtls_md_context_t *ctx)</argsstring>
+        <name>mbedtls_md_hmac_reset</name>
+        <param>
+          <type><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function prepares to authenticate a new message with the same key as the previous HMAC operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>You may call this function after <ref refid="md_8h_1a7aeafef80c89e47ee3033035a6a75a27" kindref="member">mbedtls_md_hmac_finish()</ref>. Afterwards call <ref refid="md_8h_1a86cbea1c3bcd558a7e185ff8200a29a6" kindref="member">mbedtls_md_hmac_update()</ref> to pass the new input.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message digest context containing an embedded HMAC context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="607" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="607" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="md_8h_1a2eefd37cdf52a1fcc04f8545fe890d10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_md_hmac</definition>
+        <argsstring>(const mbedtls_md_info_t *md_info, const unsigned char *key, size_t keylen, const unsigned char *input, size_t ilen, unsigned char *output)</argsstring>
+        <name>mbedtls_md_hmac</name>
+        <param>
+          <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+          <declname>md_info</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keylen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ilen</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>This function calculates the full generic HMAC on the input buffer with the provided key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function allocates the context, performs the calculation, and frees the context.</para>
+<para>The HMAC result is calculated as output = generic HMAC(hmac key, input buffer).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The information structure of the message-digest algorithm to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HMAC secret key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keylen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the HMAC secret key in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ilen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generic HMAC result.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" kindref="member">MBEDTLS_ERR_MD_BAD_INPUT_DATA</ref> on parameter-verification failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" line="632" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h" declline="632" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains the generic functions for message-digest (hashing) and HMAC. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Adriaan de Jong <ulink url="mailto:dejong@fox-it.com">dejong@fox-it.com</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_MD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__util_8h" kindref="compound">mbedtls/platform_util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MD_LIGHT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>-<sp/>MBEDTLS_MD_CAN_xxx<sp/>is<sp/>defined<sp/>if<sp/>the<sp/>md<sp/>module<sp/>can<sp/>perform<sp/>xxx.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>-<sp/>MBEDTLS_MD_xxx_VIA_PSA<sp/>is<sp/>defined<sp/>if<sp/>the<sp/>md<sp/>module<sp/>may<sp/>perform<sp/>xxx<sp/>via<sp/>PSA</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(see<sp/>below).</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>-<sp/>MBEDTLS_MD_SOME_PSA<sp/>is<sp/>defined<sp/>if<sp/>at<sp/>least<sp/>one<sp/>algorithm<sp/>may<sp/>be<sp/>performed</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/><sp/>via<sp/>PSA<sp/>(see<sp/>below).</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>-<sp/>MBEDTLS_MD_SOME_LEGACY<sp/>is<sp/>defined<sp/>if<sp/>at<sp/>least<sp/>one<sp/>algorithm<sp/>may<sp/>be<sp/>performed</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/><sp/>via<sp/>a<sp/>direct<sp/>legacy<sp/>call<sp/>(see<sp/>below).</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>The<sp/>md<sp/>module<sp/>performs<sp/>an<sp/>algorithm<sp/>via<sp/>PSA<sp/>if<sp/>there<sp/>is<sp/>a<sp/>PSA<sp/>hash</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>accelerator<sp/>and<sp/>the<sp/>PSA<sp/>driver<sp/>subsytem<sp/>is<sp/>initialized<sp/>at<sp/>the<sp/>time<sp/>the</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>operation<sp/>is<sp/>started,<sp/>and<sp/>makes<sp/>a<sp/>direct<sp/>legacy<sp/>call<sp/>otherwise.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PSA<sp/>accelerated<sp/>implementations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_MD5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_MD5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MD5_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA1_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA_224)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA224</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA224_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA_256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA256_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA_384)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA384_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA_512)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA512_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_RIPEMD160)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_RIPEMD160</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_RIPEMD160_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA3_224)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA3_224</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA3_224_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA3_256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA3_256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA3_256_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA3_384)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA3_384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA3_384_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_ACCEL_ALG_SHA3_512)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA3_512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SHA3_512_VIA_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_PSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_CRYPTO_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Built-in<sp/>implementations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MD5_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="md_8h_1ac397cbbada6de12abec1325987668d07" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_MD5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_LEGACY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SHA1_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="md_8h_1a74b4290de491e6f208cb8ef5b8471451" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_LEGACY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SHA224_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="md_8h_1aea4b50e97156fb95f758ccc6d2750741" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA224</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_LEGACY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SHA256_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="md_8h_1ae7752340ae02bd7f4d97c16602a06894" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_LEGACY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SHA384_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="md_8h_1ac89fedf29964ed85018ed1d5279b3381" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_LEGACY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SHA512_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="md_8h_1a0d381b8a9b7451474de21958a3ce1744" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_LEGACY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SHA3_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="md_8h_1a4f7bff046703551d0054aabaa46305ff" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA3_224</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="md_8h_1ab4bb59339ca4098b7a4caed088067e61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA3_256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="md_8h_1a56181a6e89612bac84ad387d9a7542dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA3_384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="md_8h_1a9a2cd5f493fb2151f9b44715fa1d6483" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_SHA3_512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_LEGACY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_RIPEMD160_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="md_8h_1ac3d5cd177eea9ebeb6a6761a5521c598" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_CAN_RIPEMD160</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="md_8h_1a768249aa42c9fdd38189366525522755" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_SOME_LEGACY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_MD_LIGHT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="md_8h_1a121b228f0512def159e3bd4ced07633b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_MD_FEATURE_UNAVAILABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5080</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="md_8h_1aeeb355bf3d3d39a2a6ba50544139b9a7" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_MD_BAD_INPUT_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="md_8h_1a7e7a4f1a618afbb412ef82ca2e572140" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_MD_ALLOC_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5180</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="md_8h_1aab0a160e4b0efdd4cc8cbe12b4813047" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_MD_FILE_IO_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="comment">/*<sp/>Note:<sp/>these<sp/>are<sp/>aligned<sp/>with<sp/>the<sp/>definitions<sp/>of<sp/>PSA_ALG_<sp/>macros<sp/>for<sp/>hashes,</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/>*<sp/>in<sp/>order<sp/>to<sp/>enable<sp/>an<sp/>efficient<sp/>implementation<sp/>of<sp/>conversion<sp/>functions.</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>tested<sp/>by<sp/>md_to_from_psa()<sp/>in<sp/>test_suite_md.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="162" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a564288006d735f75738021342ca5f9d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a564288006d735f75738021342ca5f9d1" kindref="member">MBEDTLS_MD_NONE</ref>=0,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a14fbb8d456ae15f082c2360200cd50bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a14fbb8d456ae15f082c2360200cd50bf" kindref="member">MBEDTLS_MD_MD5</ref>=0x03,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a1c358adae154d70c5eb131efcb5d4caf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a1c358adae154d70c5eb131efcb5d4caf" kindref="member">MBEDTLS_MD_RIPEMD160</ref>=0x04,<sp/></highlight></codeline>
+<codeline lineno="165" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a800a5ff57003d84ac73f1aadeaaf00fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a800a5ff57003d84ac73f1aadeaaf00fe" kindref="member">MBEDTLS_MD_SHA1</ref>=0x05,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a77e7fbd0fa5e31e7e1c9295928568f74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a77e7fbd0fa5e31e7e1c9295928568f74" kindref="member">MBEDTLS_MD_SHA224</ref>=0x08,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="167" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a7634aa1a264b0e1a5ec65f4ed77468f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a7634aa1a264b0e1a5ec65f4ed77468f8" kindref="member">MBEDTLS_MD_SHA256</ref>=0x09,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a39dd5c95e28fac45c3f18e55b11329cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a39dd5c95e28fac45c3f18e55b11329cb" kindref="member">MBEDTLS_MD_SHA384</ref>=0x0a,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a0cdbe8272ceee7d63b2bfadd5ed05c26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a0cdbe8272ceee7d63b2bfadd5ed05c26" kindref="member">MBEDTLS_MD_SHA512</ref>=0x0b,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296abcd75dbff14542581ccd69206b08511f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296abcd75dbff14542581ccd69206b08511f" kindref="member">MBEDTLS_MD_SHA3_224</ref>=0x10,<sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296ac4c685829127cdb54c680dc35c0ead4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296ac4c685829127cdb54c680dc35c0ead4b" kindref="member">MBEDTLS_MD_SHA3_256</ref>=0x11,<sp/><sp/></highlight></codeline>
+<codeline lineno="172" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a46ece73f1afb7c036166ed1ead32cc50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a46ece73f1afb7c036166ed1ead32cc50" kindref="member">MBEDTLS_MD_SHA3_384</ref>=0x12,<sp/><sp/></highlight></codeline>
+<codeline lineno="173" refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a6e0d86dadad77757501c6884f0d4f64e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296a6e0d86dadad77757501c6884f0d4f64e" kindref="member">MBEDTLS_MD_SHA3_512</ref>=0x13,<sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}<sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Note:<sp/>this<sp/>should<sp/>always<sp/>be<sp/>&gt;=<sp/>PSA_HASH_MAX_SIZE</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/>*<sp/>in<sp/>all<sp/>builds<sp/>with<sp/>both<sp/>CRYPTO_C<sp/>and<sp/>MD_LIGHT.</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>to<sp/>make<sp/>things<sp/>easier<sp/>for<sp/>modules<sp/>such<sp/>as<sp/>TLS<sp/>that<sp/>may<sp/>define<sp/>a</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/>*<sp/>buffer<sp/>size<sp/>using<sp/>MD_MAX_SIZE<sp/>in<sp/>a<sp/>part<sp/>of<sp/>the<sp/>code<sp/>that&apos;s<sp/>common<sp/>to<sp/>PSA</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/>*<sp/>and<sp/>legacy,<sp/>then<sp/>assume<sp/>the<sp/>buffer&apos;s<sp/>size<sp/>is<sp/>PSA_HASH_MAX_SIZE<sp/>in<sp/>another</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/>*<sp/>part<sp/>of<sp/>the<sp/>code<sp/>based<sp/>on<sp/>PSA.</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MD_CAN_SHA512)<sp/>||<sp/>defined(MBEDTLS_MD_CAN_SHA3_512)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="md_8h_1ad3e0e65cb5b289a358b83b5af1fdd41b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64<sp/><sp/></highlight><highlight class="comment">/*<sp/>longest<sp/>known<sp/>is<sp/>SHA512<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_MD_CAN_SHA384)<sp/>||<sp/>defined(MBEDTLS_MD_CAN_SHA3_384)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>48<sp/><sp/></highlight><highlight class="comment">/*<sp/>longest<sp/>known<sp/>is<sp/>SHA384<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_MD_CAN_SHA256)<sp/>||<sp/>defined(MBEDTLS_MD_CAN_SHA3_256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32<sp/><sp/></highlight><highlight class="comment">/*<sp/>longest<sp/>known<sp/>is<sp/>SHA256<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_MD_CAN_SHA224)<sp/>||<sp/>defined(MBEDTLS_MD_CAN_SHA3_224)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>28<sp/><sp/></highlight><highlight class="comment">/*<sp/>longest<sp/>known<sp/>is<sp/>SHA224<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20<sp/><sp/></highlight><highlight class="comment">/*<sp/>longest<sp/>known<sp/>is<sp/>SHA1<sp/>or<sp/>RIPE<sp/>MD-160</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>or<sp/>smaller<sp/>(MD5<sp/>and<sp/>earlier)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MD_CAN_SHA3_224)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="md_8h_1a915480a4b00e3206920bbaea530fc199" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>144<sp/></highlight><highlight class="comment">/*<sp/>the<sp/>longest<sp/>known<sp/>is<sp/>SHA3-224<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_MD_CAN_SHA3_256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>136</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_MD_CAN_SHA512)<sp/>||<sp/>defined(MBEDTLS_MD_CAN_SHA384)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_MD_CAN_SHA3_384)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>104</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(MBEDTLS_MD_CAN_SHA3_512)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>72</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MD_MAX_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="comment">/*<sp/>Defined<sp/>internally<sp/>in<sp/>library/md_wrap.h.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="md_8h_1ac4204ba0546c75b052d34031e19f7f54" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="229" refid="md_8h_1ac4204ba0546c75b052d34031e19f7f54a02b17b134ea0cb61ec2f0504618af1ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1ac4204ba0546c75b052d34031e19f7f54a02b17b134ea0cb61ec2f0504618af1ef" kindref="member">MBEDTLS_MD_ENGINE_LEGACY</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="230" refid="md_8h_1ac4204ba0546c75b052d34031e19f7f54ae769cdb604f53d74de817d7105b60966" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1ac4204ba0546c75b052d34031e19f7f54ae769cdb604f53d74de817d7105b60966" kindref="member">MBEDTLS_MD_ENGINE_PSA</ref>,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}<sp/><ref refid="md_8h_1ac4204ba0546c75b052d34031e19f7f54" kindref="member">mbedtls_md_engine_t</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="structmbedtls__md__context__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="238" refid="structmbedtls__md__context__t_1a46c323f4395d345b4c918e3b6990f1ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(md_info);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MD_SOME_PSA)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1ac4204ba0546c75b052d34031e19f7f54" kindref="member">mbedtls_md_engine_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(engine);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="structmbedtls__md__context__t_1a73d4cfb51391c0329c1bd7d191f740cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(md_ctx);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MD_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="structmbedtls__md__context__t_1a894eb0d7b347fa91fdd3808c9003c50e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(hmac_ctx);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}<sp/><ref refid="md_8h_1a7504b007117b75c246840603ec86929c" kindref="member">mbedtls_md_context_t</ref>;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*<ref refid="md_8h_1aca53b51e0c8eb0e07c7eb4a3e6acfa0d" kindref="member">mbedtls_md_info_from_type</ref>(<ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_type);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="md_8h_1ad8b02927ca10552e3cbf293fa8c10e24" kindref="member">mbedtls_md_init</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="md_8h_1af3248ddb6ad05035292fa92ac4af2587" kindref="member">mbedtls_md_free</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a1b858111212997b90bd7d2c71010a7ec" kindref="member">mbedtls_md_setup</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hmac);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a5140622773fa71bbe87ca521e57ff8c2" kindref="member">mbedtls_md_clone</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*dst,</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*src);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="md_8h_1ae20f4ddcf2bbf2e59cafc6fab8c993d6" kindref="member">mbedtls_md_get_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360" refid="md_8h_1ab7d7f42a611a24191e4f9d906abf3e70" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="md_8h_1ab7d7f42a611a24191e4f9d906abf3e70" kindref="member">mbedtls_md_get_size_from_type</ref>(<ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_type)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="md_8h_1ae20f4ddcf2bbf2e59cafc6fab8c993d6" kindref="member">mbedtls_md_get_size</ref>(<ref refid="md_8h_1aca53b51e0c8eb0e07c7eb4a3e6acfa0d" kindref="member">mbedtls_md_info_from_type</ref>(md_type));</highlight></codeline>
+<codeline lineno="363"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/><ref refid="md_8h_1a7a084e1b71c78daa7071691f60de5131" kindref="member">mbedtls_md_get_type</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a24483eff556810e3489ac6abefa328e6" kindref="member">mbedtls_md_starts</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a7e50ce3a8c75b5221d07be657b93ca94" kindref="member">mbedtls_md_update</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen);</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1adf77ab9b0f117367883988ee5f0af1f4" kindref="member">mbedtls_md_finish</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a36c5d8bda1905e0434708f0ef5912dda" kindref="member">mbedtls_md</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen,</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="md_8h_1a51dc7cc39a5bf5b894cc1616bf798c06" kindref="member">mbedtls_md_list</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*<ref refid="md_8h_1ac4619cce171e558d059baae35da50a2a" kindref="member">mbedtls_md_info_from_string</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*md_name);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="md_8h_1a3ceb9e6b3d4b21612ef5d7532872c6bc" kindref="member">mbedtls_md_get_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info);</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*<ref refid="md_8h_1a449a53603ec0e129b42992f702e0603a" kindref="member">mbedtls_md_info_from_ctx</ref>(</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1acab221f8ac78e15ac1dd2eda4f1b2c30" kindref="member">mbedtls_md_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path,</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_FS_IO<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a8968f8659fc277f013374c1bac8d4d1a" kindref="member">mbedtls_md_hmac_starts</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keylen);</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a86cbea1c3bcd558a7e185ff8200a29a6" kindref="member">mbedtls_md_hmac_update</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen);</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a7aeafef80c89e47ee3033035a6a75a27" kindref="member">mbedtls_md_hmac_finish</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"></highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a3a5c64b5bda0f294e917ccd5a8ca234e" kindref="member">mbedtls_md_hmac_reset</ref>(<ref refid="structmbedtls__md__context__t" kindref="compound">mbedtls_md_context_t</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><ref refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" kindref="member">MBEDTLS_CHECK_RETURN_TYPICAL</ref></highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a2eefd37cdf52a1fcc04f8545fe890d10" kindref="member">mbedtls_md_hmac</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref><sp/>*md_info,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keylen,</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ilen,</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="635"><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="639"><highlight class="normal"></highlight></codeline>
+<codeline lineno="640"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_MD_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/md.h"/>
+  </compounddef>
+</doxygen>

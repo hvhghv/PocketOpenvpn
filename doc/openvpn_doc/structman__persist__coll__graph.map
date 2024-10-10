@@ -1,0 +1,9 @@
+<map id="man_persist" name="man_persist">
+<area shape="rect" id="node1" title=" " alt="" coords="126,317,219,344"/>
+<area shape="rect" id="node2" href="$structvirtual__output.html" title=" " alt="" coords="5,199,105,225"/>
+<area shape="rect" id="node3" href="$structlog__history.html" title=" " alt="" coords="130,199,215,225"/>
+<area shape="rect" id="node4" href="$structlog__entry.html" title=" " alt="" coords="135,109,210,136"/>
+<area shape="rect" id="node5" href="$structopenvpn__sockaddr.html" title=" " alt="" coords="34,5,165,32"/>
+<area shape="rect" id="node6" href="$unionlog__entry__union.html" title=" " alt="" coords="189,5,303,32"/>
+<area shape="rect" id="node7" href="$structmanagement__callback.html" title=" " alt="" coords="239,199,391,225"/>
+</map>

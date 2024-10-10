@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__mac__operation__s" kind="struct" language="C++" prot="public">
+    <compoundname>psa_mac_operation_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__mac__operation__s_1a4a62a90a9064bf16663c8fcaa8134bcf" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_mac_operation_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_driver_wrappers.h ID value zero means the context is not valid or not assigned to any driver (i.e. none of the driver contexts are active). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="118" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__mac__operation__s_1ae89babec2d2750b819de7784d22dd8d5" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_mac_operation_s::private_mac_size</definition>
+        <argsstring></argsstring>
+        <name>private_mac_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="119" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__mac__operation__s_1a6274a0a32a1bc6db9c4ca5978e48dfae" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_mac_operation_s::private_is_sign</definition>
+        <argsstring></argsstring>
+        <name>private_is_sign</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="120" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__mac__operation__s_1a1c2a236099f8578ddd1df3f875e32739" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__mac__context__t" kindref="compound">psa_driver_mac_context_t</ref></type>
+        <definition>psa_driver_mac_context_t psa_mac_operation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="121" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>mbedtls_sha256_context</label>
+        <link refid="structmbedtls__sha256__context"/>
+      </node>
+      <node id="15">
+        <label>mbedtls_sha512_context</label>
+        <link refid="structmbedtls__sha512__context"/>
+      </node>
+      <node id="2">
+        <label>psa_driver_mac_context_t</label>
+        <link refid="unionpsa__driver__mac__context__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>mbedtls_psa_hash_operation_t</label>
+        <link refid="structmbedtls__psa__hash__operation__t"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>ripemd160</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>md5</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>sha1</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>sha3</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>sha512</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>sha256</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls_ripemd160_context</label>
+        <link refid="structmbedtls__ripemd160__context"/>
+      </node>
+      <node id="1">
+        <label>psa_mac_operation_s</label>
+        <link refid="structpsa__mac__operation__s"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mbedtls_cmac_context_t</label>
+        <link refid="structmbedtls__cmac__context__t"/>
+      </node>
+      <node id="9">
+        <label>psa_driver_hash_context_t</label>
+        <link refid="unionpsa__driver__hash__context__t"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mbedtls_psa_hmac_operation_t</label>
+        <link refid="structmbedtls__psa__hmac__operation__t"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>hash_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls_sha1_context</label>
+        <link refid="structmbedtls__sha1__context"/>
+      </node>
+      <node id="12">
+        <label>mbedtls_md5_context</label>
+        <link refid="structmbedtls__md5__context"/>
+      </node>
+      <node id="8">
+        <label>psa_hash_operation_s</label>
+        <link refid="structpsa__hash__operation__s"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_psa_mac_operation_t</label>
+        <link refid="structmbedtls__psa__mac__operation__t"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_cmac</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_hmac</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_cipher_context_t</label>
+        <link refid="structmbedtls__cipher__context__t"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_cmac_ctx</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>private_cipher_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>mbedtls_sha3_context</label>
+        <link refid="structmbedtls__sha3__context"/>
+      </node>
+      <node id="6">
+        <label>mbedtls_cipher_info_t</label>
+        <link refid="structmbedtls__cipher__info__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="111" column="26" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="111" bodyend="122"/>
+    <listofallmembers>
+      <member refid="structpsa__mac__operation__s_1a1c2a236099f8578ddd1df3f875e32739" prot="public" virt="non-virtual"><scope>psa_mac_operation_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__mac__operation__s_1a4a62a90a9064bf16663c8fcaa8134bcf" prot="public" virt="non-virtual"><scope>psa_mac_operation_s</scope><name>private_id</name></member>
+      <member refid="structpsa__mac__operation__s_1a6274a0a32a1bc6db9c4ca5978e48dfae" prot="public" virt="non-virtual"><scope>psa_mac_operation_s</scope><name>private_is_sign</name></member>
+      <member refid="structpsa__mac__operation__s_1ae89babec2d2750b819de7784d22dd8d5" prot="public" virt="non-virtual"><scope>psa_mac_operation_s</scope><name>private_mac_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<map id="mbedtls_psa_aead_operation_t" name="mbedtls_psa_aead_operation_t">
+<area shape="rect" id="node1" title=" " alt="" coords="168,288,371,315"/>
+<area shape="rect" id="node2" href="$structmbedtls__gcm__context.html" title="The GCM context structure." alt="" coords="19,191,170,218"/>
+<area shape="rect" id="node3" href="$structmbedtls__cipher__context__t.html" title=" " alt="" coords="95,95,265,121"/>
+<area shape="rect" id="node6" href="$structmbedtls__ccm__context.html" title="The CCM context&#45;type definition. The CCM context is passed to the APIs called." alt="" coords="194,191,345,218"/>
+<area shape="rect" id="node4" href="$structmbedtls__cmac__context__t.html" title=" " alt="" coords="5,5,173,32"/>
+<area shape="rect" id="node5" href="$structmbedtls__cipher__info__t.html" title=" " alt="" coords="197,5,347,32"/>
+<area shape="rect" id="node7" href="$structmbedtls__chachapoly__context.html" title=" " alt="" coords="369,184,511,225"/>
+<area shape="rect" id="node8" href="$structmbedtls__poly1305__context.html" title=" " alt="" coords="331,95,509,121"/>
+<area shape="rect" id="node9" href="$structmbedtls__chacha20__context.html" title=" " alt="" coords="533,95,715,121"/>
+</map>

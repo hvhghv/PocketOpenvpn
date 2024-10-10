@@ -1,0 +1,10 @@
+<map id="psa_driver_sign_hash_interruptible_context_t" name="psa_driver_sign_hash_interruptible_context_t">
+<area shape="rect" id="node1" title=" " alt="" coords="109,543,267,584"/>
+<area shape="rect" id="node2" href="$structmbedtls__psa__sign__hash__interruptible__operation__t.html" title=" " alt="" coords="105,439,271,480"/>
+<area shape="rect" id="node3" href="$structmbedtls__ecdsa__restart__ctx.html" title="General context for resuming ECDSA operations." alt="" coords="5,349,184,376"/>
+<area shape="rect" id="node4" href="$structmbedtls__ecp__restart__ctx.html" title="General context for resuming ECC operations." alt="" coords="7,260,172,287"/>
+<area shape="rect" id="node5" href="$structmbedtls__ecp__keypair.html" title="The ECP key&#45;pair structure." alt="" coords="218,349,363,376"/>
+<area shape="rect" id="node6" href="$structmbedtls__ecp__group.html" title="The ECP group structure." alt="" coords="247,260,382,287"/>
+<area shape="rect" id="node7" href="$structmbedtls__ecp__point.html" title="The ECP point structure, in Jacobian coordinates." alt="" coords="337,140,468,167"/>
+<area shape="rect" id="node8" href="$structmbedtls__mpi.html" title="MPI structure." alt="" coords="251,5,347,32"/>
+</map>

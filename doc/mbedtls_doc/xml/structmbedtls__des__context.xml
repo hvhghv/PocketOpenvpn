@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__des__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_des_context</compoundname>
+    <includes refid="des_8h" local="no">des.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__des__context_1af8155b180dc8748674ad9e587daf1532" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_des_context::private_sk[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>private_sk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DES subkeys <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="49" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>DES context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>DES/3DES are considered weak ciphers and their use constitutes a security risk. We recommend considering stronger ciphers instead. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" line="48" column="34" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/des.h" bodystart="48" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structmbedtls__des__context_1af8155b180dc8748674ad9e587daf1532" prot="public" virt="non-virtual"><scope>mbedtls_des_context</scope><name>private_sk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1610 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ccm_8h" kind="file" language="C++">
+    <compoundname>ccm.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="cipher_8h" local="yes">mbedtls/cipher.h</includes>
+    <includedby refid="crypto__builtin__composites_8h" local="yes">crypto_builtin_composites.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="23">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ccm.h</label>
+        <link refid="ccm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="25">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="18">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="12">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="5">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="4">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="1">
+        <label>ccm.h</label>
+        <link refid="ccm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="19">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="10">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="3">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__ccm__context" prot="public">mbedtls_ccm_context</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ccm_8h_1af12c33defd89f603953cbc9d7392d496" prot="public" static="no">
+        <name>MBEDTLS_CCM_DECRYPT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="43" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ccm_8h_1ab1e91a3e69f8edb1a5b4391f0326bd5a" prot="public" static="no">
+        <name>MBEDTLS_CCM_ENCRYPT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="44" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ccm_8h_1a2c3a27cec755df392281189e8cf81315" prot="public" static="no">
+        <name>MBEDTLS_CCM_STAR_DECRYPT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="45" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ccm_8h_1a37ae523793fa41562b2e4d742d8c802b" prot="public" static="no">
+        <name>MBEDTLS_CCM_STAR_ENCRYPT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="46" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ccm_8h_1a6ad00876b856ad8ac9f366fa7e1cf463" prot="public" static="no">
+        <name>MBEDTLS_ERR_CCM_BAD_INPUT</name>
+        <initializer>-0x000D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bad input parameters to the function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="49" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ccm_8h_1ae7fda1fbbd14f096374da7ccd54f9d3e" prot="public" static="no">
+        <name>MBEDTLS_ERR_CCM_AUTH_FAILED</name>
+        <initializer>-0x000F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Authenticated decryption failed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="51" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ccm_8h_1a8e197f8c00f8fa89400fdf72c905be8b" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref></type>
+        <definition>typedef struct mbedtls_ccm_context mbedtls_ccm_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ccm_context</name>
+        <briefdescription>
+<para>The CCM context-type definition. The CCM context is passed to the APIs called. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="87" column="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ccm_8h_1abaeb0629dfac72016fda58a4f7870040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ccm_init</definition>
+        <argsstring>(mbedtls_ccm_context *ctx)</argsstring>
+        <name>mbedtls_ccm_init</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the specified CCM context, to make references valid, and prepare the context for <ref refid="ccm_8h_1a464d8e724738b4bbd5b415ca0580f1b1" kindref="member">mbedtls_ccm_setkey()</ref> or <ref refid="ccm_8h_1a2bd8130a83c6633a4dfd61b181cdabac" kindref="member">mbedtls_ccm_free()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="100" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="100" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a464d8e724738b4bbd5b415ca0580f1b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_setkey</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, mbedtls_cipher_id_t cipher, const unsigned char *key, unsigned int keybits)</argsstring>
+        <name>mbedtls_ccm_setkey</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="cipher_8h_1af5b069ffd0b2ad31225e42ee4ee29b1b" kindref="member">mbedtls_cipher_id_t</ref></type>
+          <declname>cipher</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>keybits</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the CCM context set in the <computeroutput>ctx</computeroutput> parameter and sets the encryption key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context to initialize. This must be an initialized context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cipher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 128-bit block cipher to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encryption key. This must not be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keybits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key size in bits. This must be acceptable by the cipher.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A CCM or cipher-specific error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="115" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="115" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a2bd8130a83c6633a4dfd61b181cdabac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ccm_free</definition>
+        <argsstring>(mbedtls_ccm_context *ctx)</argsstring>
+        <name>mbedtls_ccm_free</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function releases and clears the specified CCM context and underlying cipher sub-context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context to clear. If this is <computeroutput>NULL</computeroutput>, the function has no effect. Otherwise, this must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="127" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="127" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a0daa3a633f53e38434f207b733f8a021" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_encrypt_and_tag</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, size_t length, const unsigned char *iv, size_t iv_len, const unsigned char *ad, size_t ad_len, const unsigned char *input, unsigned char *output, unsigned char *tag, size_t tag_len)</argsstring>
+        <name>mbedtls_ccm_encrypt_and_tag</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>iv_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>ad</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ad_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tag_len</declname>
+        </param>
+        <briefdescription>
+<para>This function encrypts a buffer using CCM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The tag is written to a separate buffer. To concatenate the <computeroutput>tag</computeroutput> with the <computeroutput>output</computeroutput>, as done in <emphasis>RFC-3610: Counter with CBC-MAC (CCM)</emphasis>, use <computeroutput>tag</computeroutput> = <computeroutput>output</computeroutput> + <computeroutput>length</computeroutput>, and make sure that the output buffer is at least <computeroutput>length</computeroutput> + <computeroutput>tag_len</computeroutput> wide.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context to use for encryption. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization vector (nonce). This must be a readable buffer of at least <computeroutput>iv_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the nonce in Bytes: 7, 8, 9, 10, 11, 12, or 13. The length L of the message length field is 15 - <computeroutput>iv_len</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The additional data field. If <computeroutput>ad_len</computeroutput> is greater than zero, <computeroutput>ad</computeroutput> must be a readable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of additional data in Bytes. This must be less than <computeroutput>2^16 - 2^8</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. If <computeroutput>length</computeroutput> is greater than zero, <computeroutput>input</computeroutput> must be a readable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. If <computeroutput>length</computeroutput> is greater than zero, <computeroutput>output</computeroutput> must be a writable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the authentication field. This must be a writable buffer of at least <computeroutput>tag_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the authentication field to generate in Bytes: 4, 6, 8, 10, 12, 14 or 16.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A CCM or cipher-specific error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="165" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="165" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a4def3eeb61067456d8bf985b3ac74423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_star_encrypt_and_tag</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, size_t length, const unsigned char *iv, size_t iv_len, const unsigned char *ad, size_t ad_len, const unsigned char *input, unsigned char *output, unsigned char *tag, size_t tag_len)</argsstring>
+        <name>mbedtls_ccm_star_encrypt_and_tag</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>iv_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>ad</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ad_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tag_len</declname>
+        </param>
+        <briefdescription>
+<para>This function encrypts a buffer using CCM*. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The tag is written to a separate buffer. To concatenate the <computeroutput>tag</computeroutput> with the <computeroutput>output</computeroutput>, as done in <emphasis>RFC-3610: Counter with CBC-MAC (CCM)</emphasis>, use <computeroutput>tag</computeroutput> = <computeroutput>output</computeroutput> + <computeroutput>length</computeroutput>, and make sure that the output buffer is at least <computeroutput>length</computeroutput> + <computeroutput>tag_len</computeroutput> wide.</para>
+</simplesect>
+<simplesect kind="note"><para>When using this function in a variable tag length context, the tag length has to be encoded into the <computeroutput>iv</computeroutput> passed to this function.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context to use for encryption. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. For tag length = 0, input length is ignored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization vector (nonce). This must be a readable buffer of at least <computeroutput>iv_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the nonce in Bytes: 7, 8, 9, 10, 11, 12, or 13. The length L of the message length field is 15 - <computeroutput>iv_len</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The additional data field. This must be a readable buffer of at least <computeroutput>ad_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of additional data in Bytes. This must be less than 2^16 - 2^8. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. If <computeroutput>length</computeroutput> is greater than zero, <computeroutput>input</computeroutput> must be a readable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. If <computeroutput>length</computeroutput> is greater than zero, <computeroutput>output</computeroutput> must be a writable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the authentication field. This must be a writable buffer of at least <computeroutput>tag_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the authentication field to generate in Bytes: 0, 4, 6, 8, 10, 12, 14 or 16.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>Passing <computeroutput>0</computeroutput> as <computeroutput>tag_len</computeroutput> means that the message is no longer authenticated.</para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para>A CCM or cipher-specific error code on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="214" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="214" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1ad0ff3d905bed22ced98cb36768f8a61c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_auth_decrypt</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, size_t length, const unsigned char *iv, size_t iv_len, const unsigned char *ad, size_t ad_len, const unsigned char *input, unsigned char *output, const unsigned char *tag, size_t tag_len)</argsstring>
+        <name>mbedtls_ccm_auth_decrypt</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>iv_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>ad</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ad_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tag_len</declname>
+        </param>
+        <briefdescription>
+<para>This function performs a CCM authenticated decryption of a buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context to use for decryption. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization vector (nonce). This must be a readable buffer of at least <computeroutput>iv_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the nonce in Bytes: 7, 8, 9, 10, 11, 12, or 13. The length L of the message length field is 15 - <computeroutput>iv_len</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The additional data field. This must be a readable buffer of at least that <computeroutput>ad_len</computeroutput> Bytes.. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of additional data in Bytes. This must be less than 2^16 - 2^8. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. If <computeroutput>length</computeroutput> is greater than zero, <computeroutput>input</computeroutput> must be a readable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. If <computeroutput>length</computeroutput> is greater than zero, <computeroutput>output</computeroutput> must be a writable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the authentication field. This must be a readable buffer of at least <computeroutput>tag_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the authentication field to generate in Bytes: 4, 6, 8, 10, 12, 14 or 16.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. This indicates that the message is authentic. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ccm_8h_1ae7fda1fbbd14f096374da7ccd54f9d3e" kindref="member">MBEDTLS_ERR_CCM_AUTH_FAILED</ref> if the tag does not match. </para>
+</simplesect>
+<simplesect kind="return"><para>A cipher-specific error code on calculation failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="251" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="251" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a3c61f2a2da93df527a41088f122dc770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_star_auth_decrypt</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, size_t length, const unsigned char *iv, size_t iv_len, const unsigned char *ad, size_t ad_len, const unsigned char *input, unsigned char *output, const unsigned char *tag, size_t tag_len)</argsstring>
+        <name>mbedtls_ccm_star_auth_decrypt</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>iv_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>ad</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ad_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tag_len</declname>
+        </param>
+        <briefdescription>
+<para>This function performs a CCM* authenticated decryption of a buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>When using this function in a variable tag length context, the tag length has to be decoded from <computeroutput>iv</computeroutput> and passed to this function as <computeroutput>tag_len</computeroutput>. (<computeroutput>tag</computeroutput> needs to be adjusted accordingly.)</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context to use for decryption. This must be initialized and bound to a key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. For tag length = 0, input length is ignored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization vector (nonce). This must be a readable buffer of at least <computeroutput>iv_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the nonce in Bytes: 7, 8, 9, 10, 11, 12, or 13. The length L of the message length field is 15 - <computeroutput>iv_len</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The additional data field. This must be a readable buffer of at least that <computeroutput>ad_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of additional data in Bytes. This must be less than 2^16 - 2^8. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. If <computeroutput>length</computeroutput> is greater than zero, <computeroutput>input</computeroutput> must be a readable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. If <computeroutput>length</computeroutput> is greater than zero, <computeroutput>output</computeroutput> must be a writable buffer of at least that length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the authentication field. This must be a readable buffer of at least <computeroutput>tag_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the authentication field in Bytes. 0, 4, 6, 8, 10, 12, 14 or 16.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>Passing <computeroutput>0</computeroutput> as <computeroutput>tag_len</computeroutput> means that the message is nos longer authenticated.</para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ccm_8h_1ae7fda1fbbd14f096374da7ccd54f9d3e" kindref="member">MBEDTLS_ERR_CCM_AUTH_FAILED</ref> if the tag does not match. </para>
+</simplesect>
+<simplesect kind="return"><para>A cipher-specific error code on calculation failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="297" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="297" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a3a08a32baa1b039e829ba94fc656949a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_starts</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, int mode, const unsigned char *iv, size_t iv_len)</argsstring>
+        <name>mbedtls_ccm_starts</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>iv_len</declname>
+        </param>
+        <briefdescription>
+<para>This function starts a CCM encryption or decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function and <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref> must be called before calling <ref refid="ccm_8h_1ae7ccc303a05497aef322ce167965ddde" kindref="member">mbedtls_ccm_update_ad()</ref> or <ref refid="ccm_8h_1a726f83848c9706c9732524c450983e22" kindref="member">mbedtls_ccm_update()</ref>. This function can be called before or after <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref>.</para>
+<para><simplesect kind="note"><para>This function is not implemented in Mbed TLS yet.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation to perform: <ref refid="ccm_8h_1ab1e91a3e69f8edb1a5b4391f0326bd5a" kindref="member">MBEDTLS_CCM_ENCRYPT</ref> or <ref refid="ccm_8h_1af12c33defd89f603953cbc9d7392d496" kindref="member">MBEDTLS_CCM_DECRYPT</ref> or <ref refid="ccm_8h_1a37ae523793fa41562b2e4d742d8c802b" kindref="member">MBEDTLS_CCM_STAR_ENCRYPT</ref> or <ref refid="ccm_8h_1a2c3a27cec755df392281189e8cf81315" kindref="member">MBEDTLS_CCM_STAR_DECRYPT</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initialization vector. This must be a readable buffer of at least <computeroutput>iv_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the nonce in Bytes: 7, 8, 9, 10, 11, 12, or 13. The length L of the message length field is 15 - <computeroutput>iv_len</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ccm_8h_1a6ad00876b856ad8ac9f366fa7e1cf463" kindref="member">MBEDTLS_ERR_CCM_BAD_INPUT</ref> on failure: <computeroutput>ctx</computeroutput> is in an invalid state, <computeroutput>mode</computeroutput> is invalid, <computeroutput>iv_len</computeroutput> is invalid (lower than <computeroutput>7</computeroutput> or greater than <computeroutput>13</computeroutput>). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="331" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="331" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_set_lengths</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, size_t total_ad_len, size_t plaintext_len, size_t tag_len)</argsstring>
+        <name>mbedtls_ccm_set_lengths</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>total_ad_len</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>plaintext_len</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tag_len</declname>
+        </param>
+        <briefdescription>
+<para>This function declares the lengths of the message and additional data for a CCM encryption or decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function and <ref refid="ccm_8h_1a3a08a32baa1b039e829ba94fc656949a" kindref="member">mbedtls_ccm_starts()</ref> must be called before calling <ref refid="ccm_8h_1ae7ccc303a05497aef322ce167965ddde" kindref="member">mbedtls_ccm_update_ad()</ref> or <ref refid="ccm_8h_1a726f83848c9706c9732524c450983e22" kindref="member">mbedtls_ccm_update()</ref>. This function can be called before or after <ref refid="ccm_8h_1a3a08a32baa1b039e829ba94fc656949a" kindref="member">mbedtls_ccm_starts()</ref>.</para>
+<para><simplesect kind="note"><para>This function is not implemented in Mbed TLS yet.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context. This must be initialized. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>total_ad_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total length of additional data in bytes. This must be less than <computeroutput>2^16 - 2^8</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length in bytes of the plaintext to encrypt or result of the decryption (thus not encompassing the additional data that are not encrypted). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the tag to generate in Bytes: 4, 6, 8, 10, 12, 14 or 16. For CCM*, zero is also valid.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ccm_8h_1a6ad00876b856ad8ac9f366fa7e1cf463" kindref="member">MBEDTLS_ERR_CCM_BAD_INPUT</ref> on failure: <computeroutput>ctx</computeroutput> is in an invalid state, <computeroutput>total_ad_len</computeroutput> is greater than <computeroutput>0xFF00</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="363" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="363" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1ae7ccc303a05497aef322ce167965ddde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_update_ad</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, const unsigned char *ad, size_t ad_len)</argsstring>
+        <name>mbedtls_ccm_update_ad</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>ad</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ad_len</declname>
+        </param>
+        <briefdescription>
+<para>This function feeds an input buffer as associated data (authenticated but not encrypted data) in a CCM encryption or decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>You may call this function zero, one or more times to pass successive parts of the additional data. The lengths <computeroutput>ad_len</computeroutput> of the data parts should eventually add up exactly to the total length of additional data <computeroutput>total_ad_len</computeroutput> passed to <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref>. You may not call this function after calling <ref refid="ccm_8h_1a726f83848c9706c9732524c450983e22" kindref="member">mbedtls_ccm_update()</ref>.</para>
+<para><simplesect kind="note"><para>This function is not implemented in Mbed TLS yet.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context. This must have been started with <ref refid="ccm_8h_1a3a08a32baa1b039e829ba94fc656949a" kindref="member">mbedtls_ccm_starts()</ref>, the lengths of the message and additional data must have been declared with <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref> and this must not have yet received any input with <ref refid="ccm_8h_1a726f83848c9706c9732524c450983e22" kindref="member">mbedtls_ccm_update()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the additional data, or <computeroutput>NULL</computeroutput> if <computeroutput>ad_len</computeroutput> is <computeroutput>0</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ad_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the additional data. If <computeroutput>0</computeroutput>, <computeroutput>ad</computeroutput> may be <computeroutput>NULL</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ccm_8h_1a6ad00876b856ad8ac9f366fa7e1cf463" kindref="member">MBEDTLS_ERR_CCM_BAD_INPUT</ref> on failure: <computeroutput>ctx</computeroutput> is in an invalid state, total input length too long. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="398" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="398" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a726f83848c9706c9732524c450983e22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_update</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, const unsigned char *input, size_t input_len, unsigned char *output, size_t output_size, size_t *output_len)</argsstring>
+        <name>mbedtls_ccm_update</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_len</declname>
+        </param>
+        <briefdescription>
+<para>This function feeds an input buffer into an ongoing CCM encryption or decryption operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>You may call this function zero, one or more times to pass successive parts of the input: the plaintext to encrypt, or the ciphertext (not including the tag) to decrypt. After the last part of the input, call <ref refid="ccm_8h_1a6c34e5498b66a8e11f3b3e8e0501ed50" kindref="member">mbedtls_ccm_finish()</ref>. The lengths <computeroutput>input_len</computeroutput> of the data parts should eventually add up exactly to the plaintext length <computeroutput>plaintext_len</computeroutput> passed to <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref>.</para>
+<para>This function may produce output in one of the following ways:<itemizedlist>
+<listitem><para>Immediate output: the output length is always equal to the input length.</para>
+</listitem><listitem><para>Buffered output: except for the last part of input data, the output consists of a whole number of 16-byte blocks. If the total input length so far (not including associated data) is 16 * <emphasis>B</emphasis> + <emphasis>A</emphasis> with <emphasis>A</emphasis> &lt; 16 then the total output length is 16 * <emphasis>B</emphasis>. For the last part of input data, the output length is equal to the input length plus the number of bytes (<emphasis>A</emphasis>) buffered in the previous call to the function (if any). The function uses the plaintext length <computeroutput>plaintext_len</computeroutput> passed to <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref> to detect the last part of input data.</para>
+</listitem></itemizedlist>
+</para>
+<para>In particular:<itemizedlist>
+<listitem><para>It is always correct to call this function with <computeroutput>output_size</computeroutput> &gt;= <computeroutput>input_len</computeroutput> + 15.</para>
+</listitem><listitem><para>If <computeroutput>input_len</computeroutput> is a multiple of 16 for all the calls to this function during an operation (not necessary for the last one) then it is correct to use <computeroutput>output_size</computeroutput> =<computeroutput>input_len</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="note"><para>This function is not implemented in Mbed TLS yet.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context. This must have been started with <ref refid="ccm_8h_1a3a08a32baa1b039e829ba94fc656949a" kindref="member">mbedtls_ccm_starts()</ref> and the lengths of the message and additional data must have been declared with <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. If <computeroutput>input_len</computeroutput> is greater than zero, this must be a readable buffer of at least <computeroutput>input_len</computeroutput> bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer for the output data. If <computeroutput>output_size</computeroutput> is greater than zero, this must be a writable buffer of at least <computeroutput>output_size</computeroutput> bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the output buffer in bytes. See the function description regarding the output size. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, <computeroutput>*output_len</computeroutput> contains the actual length of the output written in <computeroutput>output</computeroutput>. On failure, the content of <computeroutput>*output_len</computeroutput> is unspecified.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ccm_8h_1a6ad00876b856ad8ac9f366fa7e1cf463" kindref="member">MBEDTLS_ERR_CCM_BAD_INPUT</ref> on failure: <computeroutput>ctx</computeroutput> is in an invalid state, total input length too long, or <computeroutput>output_size</computeroutput> too small. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="465" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="465" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a6c34e5498b66a8e11f3b3e8e0501ed50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_finish</definition>
+        <argsstring>(mbedtls_ccm_context *ctx, unsigned char *tag, size_t tag_len)</argsstring>
+        <name>mbedtls_ccm_finish</name>
+        <param>
+          <type><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tag_len</declname>
+        </param>
+        <briefdescription>
+<para>This function finishes the CCM operation and generates the authentication tag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It wraps up the CCM stream, and generates the tag. The tag can have a maximum length of 16 Bytes.</para>
+<para><simplesect kind="note"><para>This function is not implemented in Mbed TLS yet.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CCM context. This must have been started with <ref refid="ccm_8h_1a3a08a32baa1b039e829ba94fc656949a" kindref="member">mbedtls_ccm_starts()</ref> and the lengths of the message and additional data must have been declared with <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer for holding the tag. If <computeroutput>tag_len</computeroutput> is greater than zero, this must be a writable buffer of at least <computeroutput>tag_len</computeroutput> Bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the tag. Must match the tag length passed to <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref> function.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ccm_8h_1a6ad00876b856ad8ac9f366fa7e1cf463" kindref="member">MBEDTLS_ERR_CCM_BAD_INPUT</ref> on failure: <computeroutput>ctx</computeroutput> is in an invalid state, invalid value of <computeroutput>tag_len</computeroutput>, the total amount of additional data passed to <ref refid="ccm_8h_1ae7ccc303a05497aef322ce167965ddde" kindref="member">mbedtls_ccm_update_ad()</ref> was lower than the total length of additional data <computeroutput>total_ad_len</computeroutput> passed to <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref>, the total amount of input data passed to <ref refid="ccm_8h_1a726f83848c9706c9732524c450983e22" kindref="member">mbedtls_ccm_update()</ref> was lower than the plaintext length <computeroutput>plaintext_len</computeroutput> passed to <ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths()</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="501" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="501" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ccm_8h_1a14e016798db6cee11977bbdf5e7e0ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ccm_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_ccm_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>The CCM checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" line="511" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h" declline="511" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file provides an API for the CCM authenticated encryption mode for block ciphers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>CCM combines Counter mode encryption with CBC-MAC authentication for 128-bit block ciphers.</para>
+<para>Input to CCM includes the following elements: <itemizedlist>
+<listitem>
+<para>Payload - data that is both authenticated and encrypted. </para>
+</listitem>
+<listitem>
+<para>Associated data (Adata) - data that is authenticated but not encrypted, For example, a header. </para>
+</listitem>
+<listitem>
+<para>Nonce - A unique value that is assigned to the payload and the associated data.</para>
+</listitem>
+</itemizedlist>
+</para>
+<para>Definition of CCM: <ulink url="http://csrc.nist.gov/publications/nistpubs/800-38C/SP800-38C_updated-July20_2007.pdf">http://csrc.nist.gov/publications/nistpubs/800-38C/SP800-38C_updated-July20_2007.pdf</ulink> RFC 3610 &quot;Counter with CBC-MAC (CCM)&quot;</para>
+<para>Related: RFC 5116 &quot;An Interface and Algorithms for Authenticated Encryption&quot;</para>
+<para>Definition of CCM*: IEEE 802.15.4 - IEEE Standard for Local and metropolitan area networks Integer representation is fixed most-significant-octet-first order and the representation of octets is most-significant-bit-first order. This is consistent with RFC 3610. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="30"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_CCM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CCM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cipher_8h" kindref="compound">mbedtls/cipher.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="ccm_8h_1af12c33defd89f603953cbc9d7392d496" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CCM_DECRYPT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="ccm_8h_1ab1e91a3e69f8edb1a5b4391f0326bd5a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CCM_ENCRYPT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="ccm_8h_1a2c3a27cec755df392281189e8cf81315" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CCM_STAR_DECRYPT<sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="ccm_8h_1a37ae523793fa41562b2e4d742d8c802b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CCM_STAR_ENCRYPT<sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="ccm_8h_1a6ad00876b856ad8ac9f366fa7e1cf463" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_CCM_BAD_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x000D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="ccm_8h_1ae7fda1fbbd14f096374da7ccd54f9d3e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_CCM_AUTH_FAILED<sp/><sp/><sp/><sp/><sp/>-0x000F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CCM_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Regular<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structmbedtls__ccm__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="66" refid="structmbedtls__ccm__context_1a97da95e3662269fd4315abe85cb7998c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(y)[16];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="structmbedtls__ccm__context_1a49d818d236d5131edd5954bb30ac4d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(ctr)[16];<sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="structmbedtls__ccm__context_1adbb9ebfcd48aafffddc082c7038f1207" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(plaintext_len);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structmbedtls__ccm__context_1af542652eaa159344e0a1c805835fff7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(add_len);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structmbedtls__ccm__context_1ac83e905fe40a11b1dc7dabd6b644fddc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(tag_len);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="structmbedtls__ccm__context_1ad46e264cfffec402cc6cfee1dbe0fee3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(processed);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="structmbedtls__ccm__context_1a3337d3f6f49978b0ece69127977a2d31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(q);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="structmbedtls__ccm__context_1a94136aa4919b7071a9d3922af15a2000" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(mode);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="structmbedtls__ccm__context_1ad317bd25be8c87a626a07f82abd2fdd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(cipher_ctx);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="structmbedtls__ccm__context_1acc618c8a3809cb2f3a00d768bd597357" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="ccm_8h_1a8e197f8c00f8fa89400fdf72c905be8b" kindref="member">mbedtls_ccm_context</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CCM_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ccm_alt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CCM_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1abaeb0629dfac72016fda58a4f7870040" kindref="member">mbedtls_ccm_init</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a464d8e724738b4bbd5b415ca0580f1b1" kindref="member">mbedtls_ccm_setkey</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cipher_8h_1af5b069ffd0b2ad31225e42ee4ee29b1b" kindref="member">mbedtls_cipher_id_t</ref><sp/>cipher,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keybits);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a2bd8130a83c6633a4dfd61b181cdabac" kindref="member">mbedtls_ccm_free</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a0daa3a633f53e38434f207b733f8a021" kindref="member">mbedtls_ccm_encrypt_and_tag</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iv,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>iv_len,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ad,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ad_len,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tag,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tag_len);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a4def3eeb61067456d8bf985b3ac74423" kindref="member">mbedtls_ccm_star_encrypt_and_tag</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iv,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>iv_len,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ad,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ad_len,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tag,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tag_len);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1ad0ff3d905bed22ced98cb36768f8a61c" kindref="member">mbedtls_ccm_auth_decrypt</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iv,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>iv_len,</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ad,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ad_len,</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tag,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tag_len);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a3c61f2a2da93df527a41088f122dc770" kindref="member">mbedtls_ccm_star_auth_decrypt</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iv,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>iv_len,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ad,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ad_len,</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tag,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tag_len);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a3a08a32baa1b039e829ba94fc656949a" kindref="member">mbedtls_ccm_starts</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mode,</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iv,</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>iv_len);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a6f62d7bbb85c87fa36e0e05146011a24" kindref="member">mbedtls_ccm_set_lengths</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>total_ad_len,</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>plaintext_len,</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tag_len);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1ae7ccc303a05497aef322ce167965ddde" kindref="member">mbedtls_ccm_update_ad</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ad,</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ad_len);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a726f83848c9706c9732524c450983e22" kindref="member">mbedtls_ccm_update</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>input_len,</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_size,</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*output_len);</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a6c34e5498b66a8e11f3b3e8e0501ed50" kindref="member">mbedtls_ccm_finish</ref>(<ref refid="structmbedtls__ccm__context" kindref="compound">mbedtls_ccm_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tag,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>tag_len);</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)<sp/>&amp;&amp;<sp/>defined(MBEDTLS_AES_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ccm_8h_1a14e016798db6cee11977bbdf5e7e0ab8" kindref="member">mbedtls_ccm_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>&amp;&amp;<sp/>MBEDTLS_AES_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CCM_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ccm.h"/>
+  </compounddef>
+</doxygen>

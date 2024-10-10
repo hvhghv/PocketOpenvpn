@@ -1,0 +1,9 @@
+<map id="mbedtls_psa_verify_hash_interruptible_operation_t" name="mbedtls_psa_verify_hash_interruptible_operation_t">
+<area shape="rect" id="node1" title=" " alt="" coords="161,441,295,497"/>
+<area shape="rect" id="node2" href="$structmbedtls__ecdsa__restart__ctx.html" title="General context for resuming ECDSA operations." alt="" coords="5,352,184,379"/>
+<area shape="rect" id="node3" href="$structmbedtls__ecp__restart__ctx.html" title="General context for resuming ECC operations." alt="" coords="12,261,177,288"/>
+<area shape="rect" id="node4" href="$structmbedtls__ecp__keypair.html" title="The ECP key&#45;pair structure." alt="" coords="294,352,439,379"/>
+<area shape="rect" id="node5" href="$structmbedtls__ecp__group.html" title="The ECP group structure." alt="" coords="358,261,493,288"/>
+<area shape="rect" id="node6" href="$structmbedtls__ecp__point.html" title="The ECP point structure, in Jacobian coordinates." alt="" coords="436,140,567,167"/>
+<area shape="rect" id="node7" href="$structmbedtls__mpi.html" title="MPI structure." alt="" coords="311,5,407,32"/>
+</map>

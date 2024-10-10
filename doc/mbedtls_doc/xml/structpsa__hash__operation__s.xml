@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__hash__operation__s" kind="struct" language="C++" prot="public">
+    <compoundname>psa_hash_operation_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__hash__operation__s_1a11be52db82590102fe798bdb71374abe" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_hash_operation_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_driver_wrappers.h. ID value zero means the context is not valid or not assigned to any driver (i.e. the driver context is not active, in use). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="72" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__hash__operation__s_1a0e3da9e698709296cefa5068537cc1d5" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__hash__context__t" kindref="compound">psa_driver_hash_context_t</ref></type>
+        <definition>psa_driver_hash_context_t psa_hash_operation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="73" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="9">
+        <label>mbedtls_sha256_context</label>
+        <link refid="structmbedtls__sha256__context"/>
+      </node>
+      <node id="8">
+        <label>mbedtls_sha512_context</label>
+        <link refid="structmbedtls__sha512__context"/>
+      </node>
+      <node id="3">
+        <label>mbedtls_psa_hash_operation_t</label>
+        <link refid="structmbedtls__psa__hash__operation__t"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ripemd160</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>md5</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>sha1</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>sha3</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>sha512</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>sha256</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_ripemd160_context</label>
+        <link refid="structmbedtls__ripemd160__context"/>
+      </node>
+      <node id="2">
+        <label>psa_driver_hash_context_t</label>
+        <link refid="unionpsa__driver__hash__context__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mbedtls_sha1_context</label>
+        <link refid="structmbedtls__sha1__context"/>
+      </node>
+      <node id="5">
+        <label>mbedtls_md5_context</label>
+        <link refid="structmbedtls__md5__context"/>
+      </node>
+      <node id="1">
+        <label>psa_hash_operation_s</label>
+        <link refid="structpsa__hash__operation__s"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mbedtls_sha3_context</label>
+        <link refid="structmbedtls__sha3__context"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="65" column="27" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="65" bodyend="74"/>
+    <listofallmembers>
+      <member refid="structpsa__hash__operation__s_1a0e3da9e698709296cefa5068537cc1d5" prot="public" virt="non-virtual"><scope>psa_hash_operation_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__hash__operation__s_1a11be52db82590102fe798bdb71374abe" prot="public" virt="non-virtual"><scope>psa_hash_operation_s</scope><name>private_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

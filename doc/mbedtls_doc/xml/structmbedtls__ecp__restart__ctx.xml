@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ecp__restart__ctx" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ecp_restart_ctx</compoundname>
+    <includes refid="ecp_8h" local="no">ecp.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ecp__restart__ctx_1a566140adab178897eeeb3af74394fcb9" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned mbedtls_ecp_restart_ctx::private_ops_done</definition>
+        <argsstring></argsstring>
+        <name>private_ops_done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current ops count <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="376" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__restart__ctx_1a562fc42fc943e349bf9f21c6bdf391e7" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned mbedtls_ecp_restart_ctx::private_depth</definition>
+        <argsstring></argsstring>
+        <name>private_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>call depth (0 = top-level) <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="377" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__restart__ctx_1a90f2223b26d96da60b7ae867b93c6f74" prot="public" static="no" mutable="no">
+        <type><ref refid="ecp_8h_1a6c48a6ff767949b5a0125c0abd4b835b" kindref="member">mbedtls_ecp_restart_mul_ctx</ref> *</type>
+        <definition>mbedtls_ecp_restart_mul_ctx* mbedtls_ecp_restart_ctx::private_rsm</definition>
+        <argsstring></argsstring>
+        <name>private_rsm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ecp_mul_comb() sub-context <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="378" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecp__restart__ctx_1aeda449fcbcd4b20e4f3b1d6622549333" prot="public" static="no" mutable="no">
+        <type><ref refid="ecp_8h_1ac85016006fafa6fcb131678705e91596" kindref="member">mbedtls_ecp_restart_muladd_ctx</ref> *</type>
+        <definition>mbedtls_ecp_restart_muladd_ctx* mbedtls_ecp_restart_ctx::private_ma</definition>
+        <argsstring></argsstring>
+        <name>private_ma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ecp_muladd() sub-context <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="379" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>General context for resuming ECC operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" line="375" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecp.h" bodystart="375" bodyend="380"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ecp__restart__ctx_1a562fc42fc943e349bf9f21c6bdf391e7" prot="public" virt="non-virtual"><scope>mbedtls_ecp_restart_ctx</scope><name>private_depth</name></member>
+      <member refid="structmbedtls__ecp__restart__ctx_1aeda449fcbcd4b20e4f3b1d6622549333" prot="public" virt="non-virtual"><scope>mbedtls_ecp_restart_ctx</scope><name>private_ma</name></member>
+      <member refid="structmbedtls__ecp__restart__ctx_1a566140adab178897eeeb3af74394fcb9" prot="public" virt="non-virtual"><scope>mbedtls_ecp_restart_ctx</scope><name>private_ops_done</name></member>
+      <member refid="structmbedtls__ecp__restart__ctx_1a90f2223b26d96da60b7ae867b93c6f74" prot="public" virt="non-virtual"><scope>mbedtls_ecp_restart_ctx</scope><name>private_rsm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

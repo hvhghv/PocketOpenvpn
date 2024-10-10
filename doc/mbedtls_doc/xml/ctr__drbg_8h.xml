@@ -1,0 +1,1371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ctr__drbg_8h" kind="file" language="C++">
+    <compoundname>ctr_drbg.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="aes_8h" local="yes">mbedtls/aes.h</includes>
+    <includes refid="entropy_8h" local="yes">entropy.h</includes>
+    <includes refid="threading_8h" local="yes">mbedtls/threading.h</includes>
+    <includedby refid="psa__util_8h" local="yes">psa_util.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="29">
+        <label>stdlib.h</label>
+      </node>
+      <node id="28">
+        <label>mbedtls/threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="23">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>mbedtls/aes.h</label>
+        <link refid="aes_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>entropy.h</label>
+        <link refid="entropy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="21">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="30">
+        <label>pthread.h</label>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ctr_drbg.h</label>
+        <link refid="ctr__drbg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="27">
+        <label>md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="25">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>ctr_drbg.h</label>
+        <link refid="ctr__drbg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__ctr__drbg__context" prot="public">mbedtls_ctr_drbg_context</innerclass>
+      <sectiondef kind="user-defined">
+      <header>SECTION: Module settings</header>
+      <description><para>The configuration options you can set for this module are in this section. Either change them in <ref refid="mbedtls__config_8h" kindref="compound">mbedtls_config.h</ref> or define them using the compiler command line. </para>
+</description>
+      <memberdef kind="define" id="ctr__drbg_8h_1ac71c76b50eb79055e11f86d0d796b979" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_ENTROPY_LEN</name>
+        <initializer>48</initializer>
+        <briefdescription>
+<para>The amount of entropy used per seed by default, in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is 48 bytes because the entropy module uses SHA-512. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="89" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1af48f34760ba188dfc8e851c66e891c19" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_RESEED_INTERVAL</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The interval before reseed is performed by default. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="105" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a9eeb62804173b22977cca5a7565bbe78" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_MAX_INPUT</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum number of additional input Bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="110" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a5b787e6157d91055d7c07d40f519cf52" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_MAX_REQUEST</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum number of requested Bytes per call. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="115" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</name>
+        <initializer>384</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum size of seed or reseed buffer in bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="120" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" prot="public" static="no">
+        <name>MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED</name>
+        <initializer>-0x0034</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The entropy source failed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="43" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1aea1a5c82ce0f69dfdda2d3131bd1b5e1" prot="public" static="no">
+        <name>MBEDTLS_ERR_CTR_DRBG_REQUEST_TOO_BIG</name>
+        <initializer>-0x0036</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The requested random buffer length is too big. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="45" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a7367c2feaa7ee9f4f182ff1cb03a864e" prot="public" static="no">
+        <name>MBEDTLS_ERR_CTR_DRBG_INPUT_TOO_BIG</name>
+        <initializer>-0x0038</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The input (entropy + additional data) is too large. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="47" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1ab5f1b73efeca5de8e75c273d47b8274e" prot="public" static="no">
+        <name>MBEDTLS_ERR_CTR_DRBG_FILE_IO_ERROR</name>
+        <initializer>-0x003A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read or write error in file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="49" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a73f77e540752ebec67e2477f776ed8a9" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_BLOCKSIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The block size used by the cipher. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="51" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1af81b83e7d7d9709f0b61c6ee34ee848e" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_KEYSIZE</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The key size in bytes used by the cipher.</para>
+<para>Compile-time choice: 32 bytes (256 bits) because <computeroutput>MBEDTLS_CTR_DRBG_USE_128_BIT_KEY</computeroutput> is disabled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="61" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a7f8b48d6ce94003298bbbae9fb514e8a" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_KEYBITS</name>
+        <initializer>(<ref refid="ctr__drbg_8h_1af81b83e7d7d9709f0b61c6ee34ee848e" kindref="member">MBEDTLS_CTR_DRBG_KEYSIZE</ref> * 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The key size for the DRBG operation, in bits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="69" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a8e6ac8e75c3becda32d9bc7b8ac2c23a" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_SEEDLEN</name>
+        <initializer>(<ref refid="ctr__drbg_8h_1af81b83e7d7d9709f0b61c6ee34ee848e" kindref="member">MBEDTLS_CTR_DRBG_KEYSIZE</ref> + <ref refid="ctr__drbg_8h_1a73f77e540752ebec67e2477f776ed8a9" kindref="member">MBEDTLS_CTR_DRBG_BLOCKSIZE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The seed length, calculated as (counter + AES key). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="70" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a9651ed4c66749bb7f232b93681593834" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_PR_OFF</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prediction resistance is disabled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="126" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1ae534608231e768e8cf4010e1aa74dba8" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_PR_ON</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prediction resistance is enabled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="128" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctr__drbg_8h_1a2eff98a04c90d33f059690edda888fec" prot="public" static="no">
+        <name>MBEDTLS_CTR_DRBG_ENTROPY_NONCE_LEN</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The default length of the nonce read from the entropy source.</para>
+<para>This is <computeroutput>0</computeroutput> because a single read from the entropy source is sufficient to include a nonce. See the documentation of <ref refid="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" kindref="member">mbedtls_ctr_drbg_seed()</ref> for more information. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="142" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ctr__drbg_8h_1a606037b48f298e4fa31fa57aa14ce3d9" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref></type>
+        <definition>typedef struct mbedtls_ctr_drbg_context mbedtls_ctr_drbg_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ctr_drbg_context</name>
+        <briefdescription>
+<para>The CTR_DRBG context structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="199" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ctr__drbg_8h_1a70dbec5e03601bf437ec488f2645743b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ctr_drbg_init</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx)</argsstring>
+        <name>mbedtls_ctr_drbg_init</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the CTR_DRBG context, and prepares it for <ref refid="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" kindref="member">mbedtls_ctr_drbg_seed()</ref> or <ref refid="ctr__drbg_8h_1a1ea42b9eb6f6b33c82359f4c0a57ca43" kindref="member">mbedtls_ctr_drbg_free()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The reseed interval is <ref refid="ctr__drbg_8h_1af48f34760ba188dfc8e851c66e891c19" kindref="member">MBEDTLS_CTR_DRBG_RESEED_INTERVAL</ref> by default. You can override it by calling <ref refid="ctr__drbg_8h_1aefd5f442f96682f0cef0152866e4e46e" kindref="member">mbedtls_ctr_drbg_set_reseed_interval()</ref>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context to initialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="213" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="213" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_seed</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, int(*f_entropy)(void *, unsigned char *, size_t), void *p_entropy, const unsigned char *custom, size_t len)</argsstring>
+        <name>mbedtls_ctr_drbg_seed</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, unsigned char *, size_t)</type>
+          <declname>f_entropy</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_entropy</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>custom</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>This function seeds and sets up the CTR_DRBG entropy source for future reseeds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A typical choice for the <computeroutput>f_entropy</computeroutput> and <computeroutput>p_entropy</computeroutput> parameters is to use the entropy module:<itemizedlist>
+<listitem><para><computeroutput>f_entropy</computeroutput> is <ref refid="entropy_8h_1a81765f6cdf4e5111bcb9f4324f3234cb" kindref="member">mbedtls_entropy_func()</ref>;</para>
+</listitem><listitem><para><computeroutput>p_entropy</computeroutput> is an instance of <ref refid="structmbedtls__entropy__context" kindref="compound">mbedtls_entropy_context</ref> initialized with <ref refid="entropy_8h_1aa901e027093c6fe65dee5760db78aced" kindref="member">mbedtls_entropy_init()</ref> (which registers the platform&apos;s default entropy sources).</para>
+</listitem></itemizedlist>
+</para>
+<para>The entropy length is <ref refid="ctr__drbg_8h_1ac71c76b50eb79055e11f86d0d796b979" kindref="member">MBEDTLS_CTR_DRBG_ENTROPY_LEN</ref> by default. You can override it by calling <ref refid="ctr__drbg_8h_1af33ced4a1fc79c6abbc1cb2b17f14549" kindref="member">mbedtls_ctr_drbg_set_entropy_len()</ref>.</para>
+<para>The entropy nonce length is:<itemizedlist>
+<listitem><para><computeroutput>0</computeroutput> if the entropy length is at least 3/2 times the entropy length, which guarantees that the security strength is the maximum permitted by the key size and entropy length according to NIST SP 800-90A §10.2.1;</para>
+</listitem><listitem><para>Half the entropy length otherwise. You can override it by calling <ref refid="ctr__drbg_8h_1a132667adb6ff7e8044e731283d67d1c0" kindref="member">mbedtls_ctr_drbg_set_nonce_len()</ref>. With the default entropy length, the entropy nonce length is <ref refid="ctr__drbg_8h_1a2eff98a04c90d33f059690edda888fec" kindref="member">MBEDTLS_CTR_DRBG_ENTROPY_NONCE_LEN</ref>.</para>
+</listitem></itemizedlist>
+</para>
+<para>You can provide a nonce and personalization string in addition to the entropy source, to make this instantiation as unique as possible. See SP 800-90A §8.6.7 for more details about nonces.</para>
+<para>The <emphasis>seed_material</emphasis> value passed to the derivation function in the CTR_DRBG Instantiate Process described in NIST SP 800-90A §10.2.1.3.2 is the concatenation of the following strings:<itemizedlist>
+<listitem><para>A string obtained by calling <computeroutput>f_entropy</computeroutput> function for the entropy length.</para>
+</listitem><listitem><para>If <ref refid="ctr__drbg_8h_1a132667adb6ff7e8044e731283d67d1c0" kindref="member">mbedtls_ctr_drbg_set_nonce_len()</ref> has been called, a string obtained by calling <computeroutput>f_entropy</computeroutput> function for the specified length. <simplesect kind="note"><para>When Mbed TLS is built with threading support, after this function returns successfully, it is safe to call <ref refid="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" kindref="member">mbedtls_ctr_drbg_random()</ref> from multiple threads. Other operations, including reseeding, are not thread-safe.</para>
+</simplesect>
+</para>
+</listitem><listitem><para>The <computeroutput>custom</computeroutput> string.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="note"><para>To achieve the nominal security strength permitted by CTR_DRBG, the entropy length must be:<itemizedlist>
+<listitem><para>at least 16 bytes for a 128-bit strength (maximum achievable strength when using AES-128);</para>
+</listitem><listitem><para>at least 32 bytes for a 256-bit strength (maximum achievable strength when using AES-256).</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+In addition, if you do not pass a nonce in <computeroutput>custom</computeroutput>, the sum of the entropy length and the entropy nonce length must be:<itemizedlist>
+<listitem><para>at least 24 bytes for a 128-bit strength (maximum achievable strength when using AES-128);</para>
+</listitem><listitem><para>at least 48 bytes for a 256-bit strength (maximum achievable strength when using AES-256).</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context to seed. It must have been initialized with <ref refid="ctr__drbg_8h_1a70dbec5e03601bf437ec488f2645743b" kindref="member">mbedtls_ctr_drbg_init()</ref>. After a successful call to <ref refid="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" kindref="member">mbedtls_ctr_drbg_seed()</ref>, you may not call <ref refid="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" kindref="member">mbedtls_ctr_drbg_seed()</ref> again on the same context unless you call <ref refid="ctr__drbg_8h_1a1ea42b9eb6f6b33c82359f4c0a57ca43" kindref="member">mbedtls_ctr_drbg_free()</ref> and <ref refid="ctr__drbg_8h_1a70dbec5e03601bf437ec488f2645743b" kindref="member">mbedtls_ctr_drbg_init()</ref> again first. After a failed call to <ref refid="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" kindref="member">mbedtls_ctr_drbg_seed()</ref>, you must call <ref refid="ctr__drbg_8h_1a1ea42b9eb6f6b33c82359f4c0a57ca43" kindref="member">mbedtls_ctr_drbg_free()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_entropy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entropy callback, taking as arguments the <computeroutput>p_entropy</computeroutput> context, the buffer to fill, and the length of the buffer. <computeroutput>f_entropy</computeroutput> is always called with a buffer size less than or equal to the entropy length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_entropy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entropy context to pass to <computeroutput>f_entropy</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>custom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The personalization string. This can be <computeroutput>NULL</computeroutput>, in which case the personalization string is empty regardless of the value of <computeroutput>len</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the personalization string. This must be at most <ref refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" kindref="member">MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</ref><itemizedlist>
+<listitem><para><ref refid="ctr__drbg_8h_1ac71c76b50eb79055e11f86d0d796b979" kindref="member">MBEDTLS_CTR_DRBG_ENTROPY_LEN</ref>.</para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" kindref="member">MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED</ref> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="314" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="314" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1a1ea42b9eb6f6b33c82359f4c0a57ca43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ctr_drbg_free</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx)</argsstring>
+        <name>mbedtls_ctr_drbg_free</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function resets CTR_DRBG context to the state immediately after initial call of <ref refid="ctr__drbg_8h_1a70dbec5e03601bf437ec488f2645743b" kindref="member">mbedtls_ctr_drbg_init()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context to clear. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="326" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="326" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1ae9871c5ba6b2fa5189423ef7cbe2078b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ctr_drbg_set_prediction_resistance</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, int resistance)</argsstring>
+        <name>mbedtls_ctr_drbg_set_prediction_resistance</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resistance</declname>
+        </param>
+        <briefdescription>
+<para>This function turns prediction resistance on or off. The default value is off. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If enabled, entropy is gathered at the beginning of every call to <ref refid="ctr__drbg_8h_1a18161010cbcf33f6930fa8fdc035e74d" kindref="member">mbedtls_ctr_drbg_random_with_add()</ref> or <ref refid="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" kindref="member">mbedtls_ctr_drbg_random()</ref>. Only use this if your entropy source has sufficient throughput.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="ctr__drbg_8h_1ae534608231e768e8cf4010e1aa74dba8" kindref="member">MBEDTLS_CTR_DRBG_PR_ON</ref> or <ref refid="ctr__drbg_8h_1a9651ed4c66749bb7f232b93681593834" kindref="member">MBEDTLS_CTR_DRBG_PR_OFF</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="341" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="341" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1af33ced4a1fc79c6abbc1cb2b17f14549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ctr_drbg_set_entropy_len</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, size_t len)</argsstring>
+        <name>mbedtls_ctr_drbg_set_entropy_len</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the amount of entropy grabbed on each seed or reseed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The default value is <ref refid="ctr__drbg_8h_1ac71c76b50eb79055e11f86d0d796b979" kindref="member">MBEDTLS_CTR_DRBG_ENTROPY_LEN</ref>.</para>
+<para><simplesect kind="note"><para>The security strength of CTR_DRBG is bounded by the entropy length. Thus:<itemizedlist>
+<listitem><para>When using AES-256 (<computeroutput>MBEDTLS_CTR_DRBG_USE_128_BIT_KEY</computeroutput> is disabled, which is the default), <computeroutput>len</computeroutput> must be at least 32 (in bytes) to achieve a 256-bit strength.</para>
+</listitem><listitem><para>When using AES-128 (<computeroutput>MBEDTLS_CTR_DRBG_USE_128_BIT_KEY</computeroutput> is enabled) <computeroutput>len</computeroutput> must be at least 16 (in bytes) to achieve a 128-bit strength.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of entropy to grab, in bytes. This must be at most <ref refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" kindref="member">MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</ref> and at most the maximum length accepted by the entropy function that is set in the context. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="368" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="368" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1a132667adb6ff7e8044e731283d67d1c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_set_nonce_len</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, size_t len)</argsstring>
+        <name>mbedtls_ctr_drbg_set_nonce_len</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the amount of entropy grabbed as a nonce for the initial seeding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this function before calling <ref refid="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" kindref="member">mbedtls_ctr_drbg_seed()</ref> to read a nonce from the entropy source during the initial seeding.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of entropy to grab for the nonce, in bytes. This must be at most <ref refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" kindref="member">MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</ref> and at most the maximum length accepted by the entropy function that is set in the context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a7367c2feaa7ee9f4f182ff1cb03a864e" kindref="member">MBEDTLS_ERR_CTR_DRBG_INPUT_TOO_BIG</ref> if <computeroutput>len</computeroutput> is more than <ref refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" kindref="member">MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</ref>. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" kindref="member">MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED</ref> if the initial seeding has already taken place. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="390" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="390" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1aefd5f442f96682f0cef0152866e4e46e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ctr_drbg_set_reseed_interval</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, int interval)</argsstring>
+        <name>mbedtls_ctr_drbg_set_reseed_interval</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+<para>This function sets the reseed interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The reseed interval is the number of calls to <ref refid="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" kindref="member">mbedtls_ctr_drbg_random()</ref> or <ref refid="ctr__drbg_8h_1a18161010cbcf33f6930fa8fdc035e74d" kindref="member">mbedtls_ctr_drbg_random_with_add()</ref> after which the entropy function is called again.</para>
+<para>The default value is <ref refid="ctr__drbg_8h_1af48f34760ba188dfc8e851c66e891c19" kindref="member">MBEDTLS_CTR_DRBG_RESEED_INTERVAL</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reseed interval. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="405" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="405" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1a495e3c86df7fc166454d0e85262e40a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_reseed</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, const unsigned char *additional, size_t len)</argsstring>
+        <name>mbedtls_ctr_drbg_reseed</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>additional</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>This function reseeds the CTR_DRBG context, that is extracts data from the entropy source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is not thread-safe. It is not safe to call this function if another thread might be concurrently obtaining random numbers from the same context or updating or reseeding the same context.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional data to add to the state. Can be <computeroutput>NULL</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the additional data. This must be less than <ref refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" kindref="member">MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</ref> - <computeroutput>entropy_len</computeroutput> where <computeroutput>entropy_len</computeroutput> is the entropy length configured for the context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" kindref="member">MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED</ref> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="428" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="428" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1a9c356646a4a6833d31ae21440c6441da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_update</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, const unsigned char *additional, size_t add_len)</argsstring>
+        <name>mbedtls_ctr_drbg_update</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>additional</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>add_len</declname>
+        </param>
+        <briefdescription>
+<para>This function updates the state of the CTR_DRBG context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is not thread-safe. It is not safe to call this function if another thread might be concurrently obtaining random numbers from the same context or updating or reseeding the same context.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to update the state with. This must not be <computeroutput>NULL</computeroutput> unless <computeroutput>add_len</computeroutput> is <computeroutput>0</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>additional</computeroutput> in bytes. This must be at most <ref refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" kindref="member">MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a7367c2feaa7ee9f4f182ff1cb03a864e" kindref="member">MBEDTLS_ERR_CTR_DRBG_INPUT_TOO_BIG</ref> if <computeroutput>add_len</computeroutput> is more than <ref refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" kindref="member">MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</ref>. </para>
+</simplesect>
+<simplesect kind="return"><para>An error from the underlying AES cipher on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="451" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="451" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1a18161010cbcf33f6930fa8fdc035e74d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_random_with_add</definition>
+        <argsstring>(void *p_rng, unsigned char *output, size_t output_len, const unsigned char *additional, size_t add_len)</argsstring>
+        <name>mbedtls_ctr_drbg_random_with_add</name>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>additional</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>add_len</declname>
+        </param>
+        <briefdescription>
+<para>This function updates a CTR_DRBG instance with additional data and uses it to generate random data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function automatically reseeds if the reseed counter is exceeded or prediction resistance is enabled.</para>
+<para><simplesect kind="note"><para>This function is not thread-safe. It is not safe to call this function if another thread might be concurrently obtaining random numbers from the same context or updating or reseeding the same context.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. This must be a pointer to a <ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to fill. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional data to update. Can be <computeroutput>NULL</computeroutput>, in which case the additional data is empty regardless of the value of <computeroutput>add_len</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the additional data if <computeroutput>additional</computeroutput> is not <computeroutput>NULL</computeroutput>. This must be less than <ref refid="ctr__drbg_8h_1a9eeb62804173b22977cca5a7565bbe78" kindref="member">MBEDTLS_CTR_DRBG_MAX_INPUT</ref> and less than <ref refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" kindref="member">MBEDTLS_CTR_DRBG_MAX_SEED_INPUT</ref> - <computeroutput>entropy_len</computeroutput> where <computeroutput>entropy_len</computeroutput> is the entropy length configured for the context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" kindref="member">MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED</ref> or <ref refid="ctr__drbg_8h_1aea1a5c82ce0f69dfdda2d3131bd1b5e1" kindref="member">MBEDTLS_ERR_CTR_DRBG_REQUEST_TOO_BIG</ref> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="486" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="486" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_random</definition>
+        <argsstring>(void *p_rng, unsigned char *output, size_t output_len)</argsstring>
+        <name>mbedtls_ctr_drbg_random</name>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_len</declname>
+        </param>
+        <briefdescription>
+<para>This function uses CTR_DRBG to generate random data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function automatically reseeds if the reseed counter is exceeded or prediction resistance is enabled. <simplesect kind="note"><para>When Mbed TLS is built with threading support, it is safe to call <ref refid="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" kindref="member">mbedtls_ctr_drbg_random()</ref> from multiple threads. Other operations, including reseeding, are not thread-safe. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. This must be a pointer to a <ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to fill. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" kindref="member">MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED</ref> or <ref refid="ctr__drbg_8h_1aea1a5c82ce0f69dfdda2d3131bd1b5e1" kindref="member">MBEDTLS_ERR_CTR_DRBG_REQUEST_TOO_BIG</ref> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="514" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="514" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1af8411dc8a4d9b2a7a5b4adf2ff3d9586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_write_seed_file</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, const char *path)</argsstring>
+        <name>mbedtls_ctr_drbg_write_seed_file</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>This function writes a seed file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1ab5f1b73efeca5de8e75c273d47b8274e" kindref="member">MBEDTLS_ERR_CTR_DRBG_FILE_IO_ERROR</ref> on file error. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" kindref="member">MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED</ref> on reseed failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="529" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="529" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1a2dd8fb85c308475ca743aa634d4b0b96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_update_seed_file</definition>
+        <argsstring>(mbedtls_ctr_drbg_context *ctx, const char *path)</argsstring>
+        <name>mbedtls_ctr_drbg_update_seed_file</name>
+        <param>
+          <type><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>This function reads and updates a seed file. The seed is added to this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTR_DRBG context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1ab5f1b73efeca5de8e75c273d47b8274e" kindref="member">MBEDTLS_ERR_CTR_DRBG_FILE_IO_ERROR</ref> on file error. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" kindref="member">MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED</ref> on reseed failure. </para>
+</simplesect>
+<simplesect kind="return"><para><ref refid="ctr__drbg_8h_1a7367c2feaa7ee9f4f182ff1cb03a864e" kindref="member">MBEDTLS_ERR_CTR_DRBG_INPUT_TOO_BIG</ref> if the existing seed file is too large. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="545" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="545" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ctr__drbg_8h_1a6f4c2d5ae50d4f122a6a1468480a9c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ctr_drbg_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_ctr_drbg_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>The CTR_DRBG checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" line="556" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h" declline="556" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains definitions and functions for the CTR_DRBG pseudorandom generator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>CTR_DRBG is a standardized way of building a PRNG from a block-cipher in counter mode operation, as defined in <emphasis>NIST SP 800-90A: Recommendation for Random Number Generation Using Deterministic Random Bit Generators</emphasis>.</para>
+<para>The Mbed TLS implementation of CTR_DRBG uses AES-256 (default) or AES-128 (if <computeroutput>MBEDTLS_CTR_DRBG_USE_128_BIT_KEY</computeroutput> is enabled at compile time) as the underlying block cipher, with a derivation function.</para>
+<para>The security strength as defined in NIST SP 800-90A is 128 bits when AES-128 is used (<computeroutput>MBEDTLS_CTR_DRBG_USE_128_BIT_KEY</computeroutput> enabled) and 256 bits otherwise, provided that <ref refid="ctr__drbg_8h_1ac71c76b50eb79055e11f86d0d796b979" kindref="member">MBEDTLS_CTR_DRBG_ENTROPY_LEN</ref> is kept at its default value (and not overridden in <ref refid="mbedtls__config_8h" kindref="compound">mbedtls_config.h</ref>) and that the DRBG instance is set up with default parameters. See the documentation of <ref refid="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" kindref="member">mbedtls_ctr_drbg_seed()</ref> for more information. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="24"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_CTR_DRBG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="aes_8h" kindref="compound">mbedtls/aes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="entropy_8h" kindref="compound">entropy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threading_8h" kindref="compound">mbedtls/threading.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="ctr__drbg_8h_1a15d1931ea5d133062cd93a3374a5bcf0" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_CTR_DRBG_ENTROPY_SOURCE_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0034</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="ctr__drbg_8h_1aea1a5c82ce0f69dfdda2d3131bd1b5e1" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_CTR_DRBG_REQUEST_TOO_BIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0036</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="ctr__drbg_8h_1a7367c2feaa7ee9f4f182ff1cb03a864e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_CTR_DRBG_INPUT_TOO_BIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0038</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="ctr__drbg_8h_1ab5f1b73efeca5de8e75c273d47b8274e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_CTR_DRBG_FILE_IO_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x003A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="ctr__drbg_8h_1a73f77e540752ebec67e2477f776ed8a9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_BLOCKSIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CTR_DRBG_USE_128_BIT_KEY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_KEYSIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="ctr__drbg_8h_1af81b83e7d7d9709f0b61c6ee34ee848e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_KEYSIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="ctr__drbg_8h_1a7f8b48d6ce94003298bbbae9fb514e8a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_KEYBITS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MBEDTLS_CTR_DRBG_KEYSIZE<sp/>*<sp/>8)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="ctr__drbg_8h_1a8e6ac8e75c3becda32d9bc7b8ac2c23a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_SEEDLEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MBEDTLS_CTR_DRBG_KEYSIZE<sp/>+<sp/>MBEDTLS_CTR_DRBG_BLOCKSIZE)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CTR_DRBG_ENTROPY_LEN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ENTROPY_SHA512_ACCUMULATOR)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="ctr__drbg_8h_1ac71c76b50eb79055e11f86d0d796b979" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_ENTROPY_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ENTROPY_SHA512_ACCUMULATOR<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CTR_DRBG_USE_128_BIT_KEY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!defined(MBEDTLS_CTR_DRBG_USE_128_BIT_KEY)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_ENTROPY_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ENTROPY_SHA512_ACCUMULATOR<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!defined(MBEDTLS_CTR_DRBG_ENTROPY_LEN)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CTR_DRBG_RESEED_INTERVAL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="ctr__drbg_8h_1af48f34760ba188dfc8e851c66e891c19" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_RESEED_INTERVAL<sp/><sp/><sp/><sp/>10000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CTR_DRBG_MAX_INPUT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="ctr__drbg_8h_1a9eeb62804173b22977cca5a7565bbe78" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_MAX_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CTR_DRBG_MAX_REQUEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="ctr__drbg_8h_1a5b787e6157d91055d7c07d40f519cf52" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_MAX_REQUEST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CTR_DRBG_MAX_SEED_INPUT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="ctr__drbg_8h_1a1b944a1ceb01e5749008fbf27a6706e4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_MAX_SEED_INPUT<sp/><sp/><sp/><sp/><sp/>384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="ctr__drbg_8h_1a9651ed4c66749bb7f232b93681593834" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_PR_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="ctr__drbg_8h_1ae534608231e768e8cf4010e1aa74dba8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_PR_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>MBEDTLS_CTR_DRBG_ENTROPY_LEN<sp/>&gt;=<sp/>MBEDTLS_CTR_DRBG_KEYSIZE<sp/>*<sp/>3<sp/>/<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="ctr__drbg_8h_1a2eff98a04c90d33f059690edda888fec" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_ENTROPY_NONCE_LEN<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor">#define<sp/>MBEDTLS_CTR_DRBG_ENTROPY_NONCE_LEN<sp/>(MBEDTLS_CTR_DRBG_ENTROPY_LEN<sp/>+<sp/>1)<sp/>/<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="structmbedtls__ctr__drbg__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="157" refid="structmbedtls__ctr__drbg__context_1a91d1a66cb945f02a0954f2dabc6ff70d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(counter)[16];<sp/><sp/></highlight></codeline>
+<codeline lineno="158" refid="structmbedtls__ctr__drbg__context_1ad56c948cea65fda4ae58a92ed7a57f9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(reseed_counter);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="structmbedtls__ctr__drbg__context_1ace77964358c9106606ab6e3fba12a430" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(prediction_resistance);<sp/><sp/></highlight></codeline>
+<codeline lineno="172" refid="structmbedtls__ctr__drbg__context_1a4d1772d545328cb40453b54ff60fd93b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(entropy_len);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="structmbedtls__ctr__drbg__context_1af057e9b6db84afb7eeb668755abc0306" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(reseed_interval);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="structmbedtls__ctr__drbg__context_1ab751543e1b7bfb20f8c2d4803bfc0543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__aes__context" kindref="compound">mbedtls_aes_context</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(aes_ctx);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Callbacks<sp/>(Entropy)</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="structmbedtls__ctr__drbg__context_1aef42c7181f1d31333d2beaa664949d84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int(*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(f_entropy))(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t);</highlight></codeline>
+<codeline lineno="186" refid="structmbedtls__ctr__drbg__context_1a4683d502e2d7e65e98bc8744a227c559" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(p_entropy);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Invariant:<sp/>the<sp/>mutex<sp/>is<sp/>initialized<sp/>if<sp/>and<sp/>only<sp/>if<sp/>f_entropy<sp/>!=<sp/>NULL.</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>means<sp/>that<sp/>the<sp/>mutex<sp/>is<sp/>initialized<sp/>during<sp/>the<sp/>initial<sp/>seeding</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>in<sp/>mbedtls_ctr_drbg_seed()<sp/>and<sp/>freed<sp/>in<sp/>mbedtls_ctr_drbg_free().</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Note<sp/>that<sp/>this<sp/>invariant<sp/>may<sp/>change<sp/>without<sp/>notice.<sp/>Do<sp/>not<sp/>rely<sp/>on<sp/>it</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>do<sp/>not<sp/>access<sp/>the<sp/>mutex<sp/>directly<sp/>in<sp/>application<sp/>code.</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="structmbedtls__ctr__drbg__context_1aefeb088a626eb251df977f10e369749b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(mutex);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><ref refid="ctr__drbg_8h_1a606037b48f298e4fa31fa57aa14ce3d9" kindref="member">mbedtls_ctr_drbg_context</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1a70dbec5e03601bf437ec488f2645743b" kindref="member">mbedtls_ctr_drbg_init</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="preprocessor">#if<sp/>MBEDTLS_CTR_DRBG_ENTROPY_NONCE_LEN<sp/>==<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_THREADING_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1ad93d675f998550b4478c1fe6f4f34ebc" kindref="member">mbedtls_ctr_drbg_seed</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*f_entropy)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_entropy,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*custom,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1a1ea42b9eb6f6b33c82359f4c0a57ca43" kindref="member">mbedtls_ctr_drbg_free</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1ae9871c5ba6b2fa5189423ef7cbe2078b" kindref="member">mbedtls_ctr_drbg_set_prediction_resistance</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>resistance);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1af33ced4a1fc79c6abbc1cb2b17f14549" kindref="member">mbedtls_ctr_drbg_set_entropy_len</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1a132667adb6ff7e8044e731283d67d1c0" kindref="member">mbedtls_ctr_drbg_set_nonce_len</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1aefd5f442f96682f0cef0152866e4e46e" kindref="member">mbedtls_ctr_drbg_set_reseed_interval</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interval);</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1a495e3c86df7fc166454d0e85262e40a6" kindref="member">mbedtls_ctr_drbg_reseed</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*additional,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1a9c356646a4a6833d31ae21440c6441da" kindref="member">mbedtls_ctr_drbg_update</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*additional,</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>add_len);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1a18161010cbcf33f6930fa8fdc035e74d" kindref="member">mbedtls_ctr_drbg_random_with_add</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_len,</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*additional,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>add_len);</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_THREADING_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1af6e4dd295ae790a33128562dd01c79ab" kindref="member">mbedtls_ctr_drbg_random</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_len);</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1af8411dc8a4d9b2a7a5b4adf2ff3d9586" kindref="member">mbedtls_ctr_drbg_write_seed_file</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1a2dd8fb85c308475ca743aa634d4b0b96" kindref="member">mbedtls_ctr_drbg_update_seed_file</ref>(<ref refid="structmbedtls__ctr__drbg__context" kindref="compound">mbedtls_ctr_drbg_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_FS_IO<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="556"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ctr__drbg_8h_1a6f4c2d5ae50d4f122a6a1468480a9c3e" kindref="member">mbedtls_ctr_drbg_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="560"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="561"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"></highlight></codeline>
+<codeline lineno="564"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ctr_drbg.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ctr_drbg.h"/>
+  </compounddef>
+</doxygen>

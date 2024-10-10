@@ -1,0 +1,2255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__pake" kind="group">
+    <compoundname>pake</compoundname>
+    <title>Password-authenticated key exchange (PAKE)</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__pake_1gab1769b1b1a85111973e8d0c9cced95de" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t psa_pake_role_t</definition>
+        <argsstring></argsstring>
+        <name>psa_pake_role_t</name>
+        <briefdescription>
+<para>Encoding of the application role of PAKE. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Encodes the application&apos;s role in the algorithm is being executed. For more information see the documentation of individual <computeroutput>PSA_PAKE_ROLE_XXX</computeroutput> constants. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="912" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="912" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pake_1gac16be59e5b1acb89c26709eed001ef35" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t psa_pake_step_t</definition>
+        <argsstring></argsstring>
+        <name>psa_pake_step_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of input and output indicators for PAKE.</para>
+<para>Some PAKE algorithms need to exchange more data than just a single key share. This type is for encoding additional input and output data for such algorithms. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="920" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="920" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pake_1gad8b29b6efa90ad2887d7b1252d23e5bc" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t psa_pake_primitive_type_t</definition>
+        <argsstring></argsstring>
+        <name>psa_pake_primitive_type_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of the type of the PAKE&apos;s primitive.</para>
+<para>Values defined by this standard will never be in the range 0x80-0xff. Vendors who define additional types must use an encoding in this range.</para>
+<para>For more information see the documentation of individual <computeroutput>PSA_PAKE_PRIMITIVE_TYPE_XXX</computeroutput> constants. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="930" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="930" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pake_1gae20cc74390755f28b6f2b893a936d893" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t psa_pake_family_t</definition>
+        <argsstring></argsstring>
+        <name>psa_pake_family_t</name>
+        <briefdescription>
+<para>Encoding of the family of the primitive associated with the PAKE. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For more information see the documentation of individual <computeroutput>PSA_PAKE_PRIMITIVE_TYPE_XXX</computeroutput> constants. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="937" column="17" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="937" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_pake_primitive_t</definition>
+        <argsstring></argsstring>
+        <name>psa_pake_primitive_t</name>
+        <briefdescription>
+<para>Encoding of the primitive associated with the PAKE. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For more information see the documentation of the <ref refid="group__pake_1gaf49527ceec65d3927f4ef2a589bade04" kindref="member">PSA_PAKE_PRIMITIVE</ref> macro. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="943" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="943" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pake_1ga11606af917145770bbdb0ae16adf7704" prot="public" static="no">
+        <type>struct <ref refid="structpsa__pake__cipher__suite__s" kindref="compound">psa_pake_cipher_suite_s</ref></type>
+        <definition>typedef struct psa_pake_cipher_suite_s psa_pake_cipher_suite_t</definition>
+        <argsstring></argsstring>
+        <name>psa_pake_cipher_suite_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the data structure for PAKE cipher suites.</para>
+<para>This is an implementation-defined <computeroutput>struct</computeroutput>. Applications should not make any assumptions about the content of this structure. Implementation details can change in future versions without notice. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="943" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" prot="public" static="no">
+        <type>struct <ref refid="structpsa__pake__operation__s" kindref="compound">psa_pake_operation_s</ref></type>
+        <definition>typedef struct psa_pake_operation_s psa_pake_operation_t</definition>
+        <argsstring></argsstring>
+        <name>psa_pake_operation_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the state data structure for PAKE operations.</para>
+<para>Before calling any function on a PAKE operation object, the application must initialize it by any of the following means:<itemizedlist>
+<listitem><para>Set the structure to all-bits-zero, for example: <programlisting><codeline><highlight class="normal">psa_pake_operation_t<sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">memset(&amp;operation,<sp/>0,<sp/>sizeof(operation));</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Initialize the structure to logical zero values, for example: <programlisting><codeline><highlight class="normal">psa_pake_operation_t<sp/>operation<sp/>=<sp/>{0};</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Initialize the structure to the initializer <ref refid="crypto__extra_8h_1a0ce235183de6d1a0744b00ced5be7c74" kindref="member">PSA_PAKE_OPERATION_INIT</ref>, for example: <programlisting><codeline><highlight class="normal">psa_pake_operation_t<sp/>operation<sp/>=<sp/>PSA_PAKE_OPERATION_INIT;</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Assign the result of the function <ref refid="group__pake_1gac099f40e8741def37b72603d1f3f7f65" kindref="member">psa_pake_operation_init()</ref> to the structure, for example: <programlisting><codeline><highlight class="normal">psa_pake_operation_t<sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">operation<sp/>=<sp/>psa_pake_operation_init();</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<para>This is an implementation-defined <computeroutput>struct</computeroutput>. Applications should not make any assumptions about the content of this structure. Implementation details can change in future versions without notice. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1199" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pake_1ga9d068eac66ccd7bca819fc27d078ea90" prot="public" static="no">
+        <type>struct <ref refid="structpsa__crypto__driver__pake__inputs__s" kindref="compound">psa_crypto_driver_pake_inputs_s</ref></type>
+        <definition>typedef struct psa_crypto_driver_pake_inputs_s psa_crypto_driver_pake_inputs_t</definition>
+        <argsstring></argsstring>
+        <name>psa_crypto_driver_pake_inputs_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of input values for PAKE operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1199" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__pake_1gadc25d4b129165e849dfc95dc8b5e3085" prot="public" static="no">
+        <type>struct <ref refid="structpsa__jpake__computation__stage__s" kindref="compound">psa_jpake_computation_stage_s</ref></type>
+        <definition>typedef struct psa_jpake_computation_stage_s psa_jpake_computation_stage_t</definition>
+        <argsstring></argsstring>
+        <name>psa_jpake_computation_stage_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of computation stage for J-PAKE operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1199" column="13" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1236" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__pake_1ga843d5c82d72614f4706f77e5e3210328" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref></type>
+        <definition>static struct psa_pake_cipher_suite_s psa_pake_cipher_suite_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_pake_cipher_suite_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return an initial value for a PAKE cipher suite object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1954" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="2048" bodyend="2052" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1107" declcolumn="32"/>
+        <references refid="crypto__extra_8h_1a78e33eb5906aa452ca64159191c2d975" compoundref="crypto__extra_8h" startline="1887">PSA_PAKE_CIPHER_SUITE_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gaf20c5d67933a6a7e8ef4c517bc80a885" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>static psa_algorithm_t psa_pake_cs_get_algorithm</definition>
+        <argsstring>(const psa_pake_cipher_suite_t *cipher_suite)</argsstring>
+        <name>psa_pake_cs_get_algorithm</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the PAKE algorithm from a PAKE cipher suite.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite structure to query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The PAKE algorithm stored in the cipher suite structure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1903" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1903" bodyend="1907" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1115" declcolumn="24"/>
+        <references refid="structpsa__pake__cipher__suite__s_1a5a4fcadbf2ef270a16c01649abaffca4" compoundref="crypto__extra_8h" startline="1896">psa_pake_cipher_suite_s::algorithm</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gaa819f7df77522699674de962b268ed7e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_pake_cs_set_algorithm</definition>
+        <argsstring>(psa_pake_cipher_suite_t *cipher_suite, psa_algorithm_t algorithm)</argsstring>
+        <name>psa_pake_cs_set_algorithm</name>
+        <param>
+          <type><ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>algorithm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare the PAKE algorithm for the cipher suite.</para>
+<para>This function overwrites any PAKE algorithm previously set in <computeroutput>cipher_suite</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite structure to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>algorithm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PAKE algorithm to write. (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true.) If this is 0, the PAKE algorithm in <computeroutput>cipher_suite</computeroutput> becomes unspecified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1909" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1909" bodyend="1918" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1130" declcolumn="13"/>
+        <references refid="structpsa__pake__cipher__suite__s_1a5a4fcadbf2ef270a16c01649abaffca4" compoundref="crypto__extra_8h" startline="1896">psa_pake_cipher_suite_s::algorithm</references>
+        <references refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" compoundref="crypto__extra_8h" startline="772">PSA_ALG_IS_PAKE</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga092067cc7dc9af367706c032480ebdf0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" kindref="member">psa_pake_primitive_t</ref></type>
+        <definition>static psa_pake_primitive_t psa_pake_cs_get_primitive</definition>
+        <argsstring>(const psa_pake_cipher_suite_t *cipher_suite)</argsstring>
+        <name>psa_pake_cs_get_primitive</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the primitive from a PAKE cipher suite.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite structure to query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The primitive stored in the cipher suite structure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1920" column="36" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1920" bodyend="1925" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1139" declcolumn="29"/>
+        <references refid="structpsa__pake__cipher__suite__s_1af6cafb513de0427e69487d71e1ed7c84" compoundref="crypto__extra_8h" startline="1899">psa_pake_cipher_suite_s::bits</references>
+        <references refid="structpsa__pake__cipher__suite__s_1af0ca6a6ae95ae81d9971d0c607658ebc" compoundref="crypto__extra_8h" startline="1898">psa_pake_cipher_suite_s::family</references>
+        <references refid="group__pake_1gaf49527ceec65d3927f4ef2a589bade04" compoundref="crypto__extra_8h" startline="1040">PSA_PAKE_PRIMITIVE</references>
+        <references refid="structpsa__pake__cipher__suite__s_1ad071789455678b0d082935db9c8de7be" compoundref="crypto__extra_8h" startline="1897">psa_pake_cipher_suite_s::type</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga65563e28c31b26f96f70eddd1252f3d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_pake_cs_set_primitive</definition>
+        <argsstring>(psa_pake_cipher_suite_t *cipher_suite, psa_pake_primitive_t primitive)</argsstring>
+        <name>psa_pake_cs_set_primitive</name>
+        <param>
+          <type><ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" kindref="member">psa_pake_primitive_t</ref></type>
+          <declname>primitive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare the primitive for a PAKE cipher suite.</para>
+<para>This function overwrites any primitive previously set in <computeroutput>cipher_suite</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite structure to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>primitive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The primitive to write. If this is 0, the primitive type in <computeroutput>cipher_suite</computeroutput> becomes unspecified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1927" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1927" bodyend="1934" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1151" declcolumn="13"/>
+        <references refid="structpsa__pake__cipher__suite__s_1af6cafb513de0427e69487d71e1ed7c84" compoundref="crypto__extra_8h" startline="1899">psa_pake_cipher_suite_s::bits</references>
+        <references refid="structpsa__pake__cipher__suite__s_1af0ca6a6ae95ae81d9971d0c607658ebc" compoundref="crypto__extra_8h" startline="1898">psa_pake_cipher_suite_s::family</references>
+        <references refid="structpsa__pake__cipher__suite__s_1ad071789455678b0d082935db9c8de7be" compoundref="crypto__extra_8h" startline="1897">psa_pake_cipher_suite_s::type</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gab1c9d9857644ee44a515b384b9c728db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__pake_1gae20cc74390755f28b6f2b893a936d893" kindref="member">psa_pake_family_t</ref></type>
+        <definition>static psa_pake_family_t psa_pake_cs_get_family</definition>
+        <argsstring>(const psa_pake_cipher_suite_t *cipher_suite)</argsstring>
+        <name>psa_pake_cs_get_family</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the PAKE family from a PAKE cipher suite.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite structure to query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The PAKE family stored in the cipher suite structure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1936" column="33" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1936" bodyend="1940" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1160" declcolumn="26"/>
+        <references refid="structpsa__pake__cipher__suite__s_1af0ca6a6ae95ae81d9971d0c607658ebc" compoundref="crypto__extra_8h" startline="1898">psa_pake_cipher_suite_s::family</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga048be6e239ccd25a3080863053e68576" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>static uint16_t psa_pake_cs_get_bits</definition>
+        <argsstring>(const psa_pake_cipher_suite_t *cipher_suite)</argsstring>
+        <name>psa_pake_cs_get_bits</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the PAKE primitive bit-size from a PAKE cipher suite.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite structure to query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The PAKE primitive bit-size stored in the cipher suite structure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1942" column="24" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1942" bodyend="1946" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1169" declcolumn="17"/>
+        <references refid="structpsa__pake__cipher__suite__s_1af6cafb513de0427e69487d71e1ed7c84" compoundref="crypto__extra_8h" startline="1899">psa_pake_cipher_suite_s::bits</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gaffd027d591290428050be2e98da2c8ad" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>static psa_algorithm_t psa_pake_cs_get_hash</definition>
+        <argsstring>(const psa_pake_cipher_suite_t *cipher_suite)</argsstring>
+        <name>psa_pake_cs_get_hash</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the hash algorithm from a PAKE cipher suite.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite structure to query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The hash algorithm stored in the cipher suite structure. The return value is 0 if the PAKE is not parametrised by a hash algorithm or if the hash algorithm is not set. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1948" column="31" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1948" bodyend="1952" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1180" declcolumn="24"/>
+        <references refid="structpsa__pake__cipher__suite__s_1a09850e6d0d25739778d349556920d2f4" compoundref="crypto__extra_8h" startline="1900">psa_pake_cipher_suite_s::hash</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga453c3b937a771b927be21d9107fffcdc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_pake_cs_set_hash</definition>
+        <argsstring>(psa_pake_cipher_suite_t *cipher_suite, psa_algorithm_t hash)</argsstring>
+        <name>psa_pake_cs_set_hash</name>
+        <param>
+          <type><ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare the hash algorithm for a PAKE cipher suite.</para>
+<para>This function overwrites any hash algorithm previously set in <computeroutput>cipher_suite</computeroutput>.</para>
+<para>Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite structure to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash involved in the cipher suite. (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1gac9280662bb482590b4b33d1dcd32930f" kindref="member">PSA_ALG_IS_HASH</ref>(<computeroutput>alg</computeroutput>) is true.) If this is 0, the hash algorithm in <computeroutput>cipher_suite</computeroutput> becomes unspecified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1954" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1954" bodyend="1962" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1199" declcolumn="13"/>
+        <references refid="structpsa__pake__cipher__suite__s_1a09850e6d0d25739778d349556920d2f4" compoundref="crypto__extra_8h" startline="1900">psa_pake_cipher_suite_s::hash</references>
+        <references refid="group__crypto__types_1gac9280662bb482590b4b33d1dcd32930f" compoundref="crypto__values_8h" startline="788">PSA_ALG_IS_HASH</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gac099f40e8741def37b72603d1f3f7f65" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref></type>
+        <definition>static struct psa_pake_operation_s psa_pake_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_pake_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return an initial value for a PAKE operation object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1954" column="20" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="2054" bodyend="2058" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1240" declcolumn="29"/>
+        <references refid="crypto__extra_8h_1a0ce235183de6d1a0744b00ced5be7c74" compoundref="crypto__extra_8h" startline="1892">PSA_PAKE_OPERATION_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga8fe36328c35f9f8b399492d369ab5d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_crypto_driver_pake_get_password_len</definition>
+        <argsstring>(const psa_crypto_driver_pake_inputs_t *inputs, size_t *password_len)</argsstring>
+        <name>psa_crypto_driver_pake_get_password_len</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga9d068eac66ccd7bca819fc27d078ea90" kindref="member">psa_crypto_driver_pake_inputs_t</ref> *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>password_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the length of the password in bytes from given inputs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">inputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation inputs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">password_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Password length.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Password hasn&apos;t been set yet. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1252" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1252" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga2476026b61583d8e9321256e5bfe5392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_crypto_driver_pake_get_password</definition>
+        <argsstring>(const psa_crypto_driver_pake_inputs_t *inputs, uint8_t *buffer, size_t buffer_size, size_t *buffer_length)</argsstring>
+        <name>psa_crypto_driver_pake_get_password</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga9d068eac66ccd7bca819fc27d078ea90" kindref="member">psa_crypto_driver_pake_inputs_t</ref> *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buffer_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>buffer_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the password from given inputs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">inputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation inputs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Return buffer for password. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the return buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actual size of the password in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Password hasn&apos;t been set yet. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1268" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1268" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gae0a816b989d5ee3a6b3fe8ceac544875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_crypto_driver_pake_get_user_len</definition>
+        <argsstring>(const psa_crypto_driver_pake_inputs_t *inputs, size_t *user_len)</argsstring>
+        <name>psa_crypto_driver_pake_get_user_len</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga9d068eac66ccd7bca819fc27d078ea90" kindref="member">psa_crypto_driver_pake_inputs_t</ref> *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>user_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the length of the user id in bytes from given inputs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">inputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation inputs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">user_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User id length.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User id hasn&apos;t been set yet. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1282" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1282" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gadcf0335780b48a4851780807e115b20e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_crypto_driver_pake_get_peer_len</definition>
+        <argsstring>(const psa_crypto_driver_pake_inputs_t *inputs, size_t *peer_len)</argsstring>
+        <name>psa_crypto_driver_pake_get_peer_len</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga9d068eac66ccd7bca819fc27d078ea90" kindref="member">psa_crypto_driver_pake_inputs_t</ref> *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>peer_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the length of the peer id in bytes from given inputs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">inputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation inputs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">peer_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Peer id length.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Peer id hasn&apos;t been set yet. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1296" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1296" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gaeeeb55c935dc95819bae1378de462593" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_crypto_driver_pake_get_user</definition>
+        <argsstring>(const psa_crypto_driver_pake_inputs_t *inputs, uint8_t *user_id, size_t user_id_size, size_t *user_id_len)</argsstring>
+        <name>psa_crypto_driver_pake_get_user</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga9d068eac66ccd7bca819fc27d078ea90" kindref="member">psa_crypto_driver_pake_inputs_t</ref> *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>user_id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>user_id_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>user_id_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the user id from given inputs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">inputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation inputs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">user_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User id. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_id_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>user_id</computeroutput> in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">user_id_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the user id in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User id hasn&apos;t been set yet. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>user_id</computeroutput> is too small. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1314" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1314" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gac21aace2d63ba9766e8266e3bd782d12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_crypto_driver_pake_get_peer</definition>
+        <argsstring>(const psa_crypto_driver_pake_inputs_t *inputs, uint8_t *peer_id, size_t peer_id_size, size_t *peer_id_length)</argsstring>
+        <name>psa_crypto_driver_pake_get_peer</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga9d068eac66ccd7bca819fc27d078ea90" kindref="member">psa_crypto_driver_pake_inputs_t</ref> *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>peer_id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>peer_id_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>peer_id_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the peer id from given inputs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">inputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation inputs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">peer_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Peer id. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>peer_id_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>peer_id</computeroutput> in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">peer_id_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the peer id in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Peer id hasn&apos;t been set yet. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>peer_id</computeroutput> is too small. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1332" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1332" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gafb67c744b4ef6615dce729b6c88b9638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_crypto_driver_pake_get_cipher_suite</definition>
+        <argsstring>(const psa_crypto_driver_pake_inputs_t *inputs, psa_pake_cipher_suite_t *cipher_suite)</argsstring>
+        <name>psa_crypto_driver_pake_get_cipher_suite</name>
+        <param>
+          <type>const <ref refid="group__pake_1ga9d068eac66ccd7bca819fc27d078ea90" kindref="member">psa_crypto_driver_pake_inputs_t</ref> *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the cipher suite from given inputs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">inputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation inputs. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Return buffer for role.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cipher_suite hasn&apos;t been set yet. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1346" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1346" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga45e914c064160f4fe1d511f9d0506400" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_setup</definition>
+        <argsstring>(psa_pake_operation_t *operation, const psa_pake_cipher_suite_t *cipher_suite)</argsstring>
+        <name>psa_pake_setup</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__pake_1ga11606af917145770bbdb0ae16adf7704" kindref="member">psa_pake_cipher_suite_t</ref> *</type>
+          <declname>cipher_suite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the session information for a password-authenticated key exchange.</para>
+<para>The sequence of operations to set up a password-authenticated key exchange is as follows:<orderedlist>
+<listitem><para>Allocate an operation object which will be passed to all the functions listed here.</para>
+</listitem><listitem><para>Initialize the operation object with one of the methods described in the documentation for <ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref>, e.g. <ref refid="crypto__extra_8h_1a0ce235183de6d1a0744b00ced5be7c74" kindref="member">PSA_PAKE_OPERATION_INIT</ref>.</para>
+</listitem><listitem><para>Call <ref refid="group__pake_1ga45e914c064160f4fe1d511f9d0506400" kindref="member">psa_pake_setup()</ref> to specify the cipher suite.</para>
+</listitem><listitem><para>Call <computeroutput>psa_pake_set_xxx()</computeroutput> functions on the operation to complete the setup. The exact sequence of <computeroutput>psa_pake_set_xxx()</computeroutput> functions that needs to be called depends on the algorithm in use.</para>
+</listitem></orderedlist>
+</para>
+<para>Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para>A typical sequence of calls to perform a password-authenticated key exchange:<orderedlist>
+<listitem><para>Call psa_pake_output(operation, <ref refid="group__pake_1ga043357cc339a34134089e9c8be93bfdb" kindref="member">PSA_PAKE_STEP_KEY_SHARE</ref>, ...) to get the key share that needs to be sent to the peer.</para>
+</listitem><listitem><para>Call psa_pake_input(operation, <ref refid="group__pake_1ga043357cc339a34134089e9c8be93bfdb" kindref="member">PSA_PAKE_STEP_KEY_SHARE</ref>, ...) to provide the key share that was received from the peer.</para>
+</listitem><listitem><para>Depending on the algorithm additional calls to <ref refid="group__pake_1ga592e6102db23692862d800f569a8f1fe" kindref="member">psa_pake_output()</ref> and <ref refid="group__pake_1ga35af752a83762fe23daa47e3ddef3a68" kindref="member">psa_pake_input()</ref> might be necessary.</para>
+</listitem><listitem><para>Call <ref refid="group__pake_1gae1e7c28c10bf767f4b6927f820740103" kindref="member">psa_pake_get_implicit_key()</ref> for accessing the shared secret.</para>
+</listitem></orderedlist>
+</para>
+<para>Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para>If an error occurs at any step after a call to <ref refid="group__pake_1ga45e914c064160f4fe1d511f9d0506400" kindref="member">psa_pake_setup()</ref>, the operation will need to be reset by a call to <ref refid="group__pake_1ga20bed96cc254d2e1829d666edc74376a" kindref="member">psa_pake_abort()</ref>. The application may call <ref refid="group__pake_1ga20bed96cc254d2e1829d666edc74376a" kindref="member">psa_pake_abort()</ref> at any time after the operation has been initialized.</para>
+<para>After a successful call to <ref refid="group__pake_1ga45e914c064160f4fe1d511f9d0506400" kindref="member">psa_pake_setup()</ref>, the application must eventually terminate the operation. The following events terminate an operation:<itemizedlist>
+<listitem><para>A call to <ref refid="group__pake_1ga20bed96cc254d2e1829d666edc74376a" kindref="member">psa_pake_abort()</ref>.</para>
+</listitem><listitem><para>A successful call to <ref refid="group__pake_1gae1e7c28c10bf767f4b6927f820740103" kindref="member">psa_pake_get_implicit_key()</ref>.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to set up. It must have been initialized but not set up yet. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cipher_suite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher suite to use. (A cipher suite fully characterizes a PAKE algorithm and determines the algorithm as well.)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The algorithm in <computeroutput>cipher_suite</computeroutput> is not a PAKE algorithm, or the PAKE primitive in <computeroutput>cipher_suite</computeroutput> is not compatible with the PAKE algorithm, or the hash algorithm in <computeroutput>cipher_suite</computeroutput> is invalid or not compatible with the PAKE algorithm and primitive. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The algorithm in <computeroutput>cipher_suite</computeroutput> is not a supported PAKE algorithm, or the PAKE primitive in <computeroutput>cipher_suite</computeroutput> is not supported or not compatible with the PAKE algorithm, or the hash algorithm in <computeroutput>cipher_suite</computeroutput> is not supported or not compatible with the PAKE algorithm and primitive. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid, or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1420" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1420" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga070417b83e6d602e9a6cc6748a14ea91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_set_password_key</definition>
+        <argsstring>(psa_pake_operation_t *operation, mbedtls_svc_key_id_t password)</argsstring>
+        <name>psa_pake_set_password_key</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__key__lifetimes_1ga9a5375bd0cb9694f3a2694adc0a6ae13" kindref="member">mbedtls_svc_key_id_t</ref></type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the password for a password-authenticated key exchange from key ID.</para>
+<para>Call this function when the password, or a value derived from the password, is already present in the key store.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to set the password for. It must have been set up by <ref refid="group__pake_1ga45e914c064160f4fe1d511f9d0506400" kindref="member">psa_pake_setup()</ref> and not yet in use (neither <ref refid="group__pake_1ga592e6102db23692862d800f569a8f1fe" kindref="member">psa_pake_output()</ref> nor <ref refid="group__pake_1ga35af752a83762fe23daa47e3ddef3a68" kindref="member">psa_pake_input()</ref> has been called yet). It must be on operation for which the password hasn&apos;t been set yet (<ref refid="group__pake_1ga070417b83e6d602e9a6cc6748a14ea91" kindref="member">psa_pake_set_password_key()</ref> hasn&apos;t been called yet). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key holding the password or a value derived from the password (eg. by a memory-hard function). It must remain valid until the operation terminates. It must be of type <ref refid="group__crypto__types_1gaad682c8fe975aee537af922f9503d510" kindref="member">PSA_KEY_TYPE_PASSWORD</ref> or <ref refid="group__crypto__types_1gac41a0d5fdafc1c19ae73313613142723" kindref="member">PSA_KEY_TYPE_PASSWORD_HASH</ref>. It has to allow the usage <ref refid="group__policy_1gaf19022acc5ef23cf12477f632b48a0b2" kindref="member">PSA_KEY_USAGE_DERIVE</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>password</computeroutput> is not a valid key identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key does not have the <ref refid="group__policy_1gaf19022acc5ef23cf12477f632b48a0b2" kindref="member">PSA_KEY_USAGE_DERIVE</ref> flag, or it does not permit the <computeroutput>operation&apos;s</computeroutput> algorithm. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key type for <computeroutput>password</computeroutput> is not <ref refid="group__crypto__types_1gaad682c8fe975aee537af922f9503d510" kindref="member">PSA_KEY_TYPE_PASSWORD</ref> or <ref refid="group__crypto__types_1gac41a0d5fdafc1c19ae73313613142723" kindref="member">PSA_KEY_TYPE_PASSWORD_HASH</ref>, or <computeroutput>password</computeroutput> is not compatible with the <computeroutput>operation&apos;s</computeroutput> cipher suite. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key type or key size of <computeroutput>password</computeroutput> is not supported with the <computeroutput>operation&apos;s</computeroutput> cipher suite. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must have been set up.), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1468" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1468" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga64fe9f62b09d39056e169325a9d33aac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_set_user</definition>
+        <argsstring>(psa_pake_operation_t *operation, const uint8_t *user_id, size_t user_id_len)</argsstring>
+        <name>psa_pake_set_user</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>user_id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>user_id_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the user ID for a password-authenticated key exchange.</para>
+<para>Call this function to set the user ID. For PAKE algorithms that associate a user identifier with each side of the session you need to call <ref refid="group__pake_1gabae9a3e54d1c895032a4ee543b494958" kindref="member">psa_pake_set_peer()</ref> as well. For PAKE algorithms that associate a single user identifier with the session, call <ref refid="group__pake_1ga64fe9f62b09d39056e169325a9d33aac" kindref="member">psa_pake_set_user()</ref> only.</para>
+<para>Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to set the user ID for. It must have been set up by <ref refid="group__pake_1ga45e914c064160f4fe1d511f9d0506400" kindref="member">psa_pake_setup()</ref> and not yet in use (neither <ref refid="group__pake_1ga592e6102db23692862d800f569a8f1fe" kindref="member">psa_pake_output()</ref> nor <ref refid="group__pake_1ga35af752a83762fe23daa47e3ddef3a68" kindref="member">psa_pake_input()</ref> has been called yet). It must be on operation for which the user ID hasn&apos;t been set (<ref refid="group__pake_1ga64fe9f62b09d39056e169325a9d33aac" kindref="member">psa_pake_set_user()</ref> hasn&apos;t been called yet). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">user_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user ID to authenticate with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_id_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>user_id</computeroutput> buffer in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>user_id</computeroutput> is not valid for the <computeroutput>operation&apos;s</computeroutput> algorithm and cipher suite. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of <computeroutput>user_id</computeroutput> is not supported by the implementation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid, or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1508" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1508" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gabae9a3e54d1c895032a4ee543b494958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_set_peer</definition>
+        <argsstring>(psa_pake_operation_t *operation, const uint8_t *peer_id, size_t peer_id_len)</argsstring>
+        <name>psa_pake_set_peer</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>peer_id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>peer_id_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the peer ID for a password-authenticated key exchange.</para>
+<para>Call this function in addition to <ref refid="group__pake_1ga64fe9f62b09d39056e169325a9d33aac" kindref="member">psa_pake_set_user()</ref> for PAKE algorithms that associate a user identifier with each side of the session. For PAKE algorithms that associate a single user identifier with the session, call <ref refid="group__pake_1ga64fe9f62b09d39056e169325a9d33aac" kindref="member">psa_pake_set_user()</ref> only.</para>
+<para>Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to set the peer ID for. It must have been set up by <ref refid="group__pake_1ga45e914c064160f4fe1d511f9d0506400" kindref="member">psa_pake_setup()</ref> and not yet in use (neither <ref refid="group__pake_1ga592e6102db23692862d800f569a8f1fe" kindref="member">psa_pake_output()</ref> nor <ref refid="group__pake_1ga35af752a83762fe23daa47e3ddef3a68" kindref="member">psa_pake_input()</ref> has been called yet). It must be on operation for which the peer ID hasn&apos;t been set (<ref refid="group__pake_1gabae9a3e54d1c895032a4ee543b494958" kindref="member">psa_pake_set_peer()</ref> hasn&apos;t been called yet). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">peer_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The peer&apos;s ID to authenticate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>peer_id_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>peer_id</computeroutput> buffer in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>peer_id</computeroutput> is not valid for the <computeroutput>operation&apos;s</computeroutput> algorithm and cipher suite. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The algorithm doesn&apos;t associate a second identity with the session. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Calling <ref refid="group__pake_1gabae9a3e54d1c895032a4ee543b494958" kindref="member">psa_pake_set_peer()</ref> is invalid with the <computeroutput>operation&apos;s</computeroutput> algorithm, the operation state is not valid, or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1550" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1550" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gaf61d9d1549d4f3eeaf891dd73354db66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_set_role</definition>
+        <argsstring>(psa_pake_operation_t *operation, psa_pake_role_t role)</argsstring>
+        <name>psa_pake_set_role</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pake_1gab1769b1b1a85111973e8d0c9cced95de" kindref="member">psa_pake_role_t</ref></type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the application role for a password-authenticated key exchange.</para>
+<para>Not all PAKE algorithms need to differentiate the communicating entities. It is optional to call this function for PAKEs that don&apos;t require a role to be specified. For such PAKEs the application role parameter is ignored, or <ref refid="group__pake_1ga7cd915c229c3d4aad5bd3bf7b8ad847b" kindref="member">PSA_PAKE_ROLE_NONE</ref> can be passed as <computeroutput>role</computeroutput>.</para>
+<para>Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to specify the application&apos;s role for. It must have been set up by <ref refid="group__pake_1ga45e914c064160f4fe1d511f9d0506400" kindref="member">psa_pake_setup()</ref> and not yet in use (neither <ref refid="group__pake_1ga592e6102db23692862d800f569a8f1fe" kindref="member">psa_pake_output()</ref> nor <ref refid="group__pake_1ga35af752a83762fe23daa47e3ddef3a68" kindref="member">psa_pake_input()</ref> has been called yet). It must be on operation for which the application&apos;s role hasn&apos;t been specified (<ref refid="group__pake_1gaf61d9d1549d4f3eeaf891dd73354db66" kindref="member">psa_pake_set_role()</ref> hasn&apos;t been called yet). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value of type <ref refid="group__pake_1gab1769b1b1a85111973e8d0c9cced95de" kindref="member">psa_pake_role_t</ref> indicating the application&apos;s role in the PAKE the algorithm that is being set up. For more information see the documentation of <computeroutput>PSA_PAKE_ROLE_XXX</computeroutput> constants.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>role</computeroutput> is not a valid PAKE role in the <computeroutput>operation’s</computeroutput> algorithm. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>role</computeroutput> for this algorithm is not supported or is not valid. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid, or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1592" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1592" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga592e6102db23692862d800f569a8f1fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_output</definition>
+        <argsstring>(psa_pake_operation_t *operation, psa_pake_step_t step, uint8_t *output, size_t output_size, size_t *output_length)</argsstring>
+        <name>psa_pake_output</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pake_1gac16be59e5b1acb89c26709eed001ef35" kindref="member">psa_pake_step_t</ref></type>
+          <declname>step</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get output for a step of a password-authenticated key exchange.</para>
+<para>Depending on the algorithm being executed, you might need to call this function several times or you might not need to call this at all.</para>
+<para>The exact sequence of calls to perform a password-authenticated key exchange depends on the algorithm in use. Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para>If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__pake_1ga20bed96cc254d2e1829d666edc74376a" kindref="member">psa_pake_abort()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active PAKE operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The step of the algorithm for which the output is requested. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the output is to be written in the format appropriate for this <computeroutput>step</computeroutput>. Refer to the documentation of the individual <computeroutput>PSA_PAKE_STEP_XXX</computeroutput> constants for more information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>output</computeroutput> buffer in bytes. This must be at least <ref refid="crypto__extra_8h_1a50919659323674b8d803621d8eb51268" kindref="member">PSA_PAKE_OUTPUT_SIZE</ref>(<computeroutput>alg</computeroutput>, <computeroutput>primitive</computeroutput>, <computeroutput>output_step</computeroutput>) where <computeroutput>alg</computeroutput> and <computeroutput>primitive</computeroutput> are the PAKE algorithm and primitive in the operation&apos;s cipher suite, and <computeroutput>step</computeroutput> is the output step.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes of the returned output.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>output</computeroutput> buffer is too small. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>step</computeroutput> is not compatible with the operation&apos;s algorithm. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>step</computeroutput> is not supported with the operation&apos;s algorithm. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be active, and fully set up, and this call must conform to the algorithm&apos;s requirements for ordering of input and output steps), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1650" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1650" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga35af752a83762fe23daa47e3ddef3a68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_input</definition>
+        <argsstring>(psa_pake_operation_t *operation, psa_pake_step_t step, const uint8_t *input, size_t input_length)</argsstring>
+        <name>psa_pake_input</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__pake_1gac16be59e5b1acb89c26709eed001ef35" kindref="member">psa_pake_step_t</ref></type>
+          <declname>step</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide input for a step of a password-authenticated key exchange.</para>
+<para>Depending on the algorithm being executed, you might need to call this function several times or you might not need to call this at all.</para>
+<para>The exact sequence of calls to perform a password-authenticated key exchange depends on the algorithm in use. Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para>If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__pake_1ga20bed96cc254d2e1829d666edc74376a" kindref="member">psa_pake_abort()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active PAKE operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The step for which the input is provided. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the input in the format appropriate for this <computeroutput>step</computeroutput>. Refer to the documentation of the individual <computeroutput>PSA_PAKE_STEP_XXX</computeroutput> constants for more information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>input</computeroutput> buffer in bytes.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The verification fails for a <ref refid="group__pake_1ga8b483c7638f927f1c858cfcfe32569f9" kindref="member">PSA_PAKE_STEP_ZK_PROOF</ref> input step. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>input_length</computeroutput> is not compatible with the <computeroutput>operation’s</computeroutput> algorithm, or the <computeroutput>input</computeroutput> is not valid for the <computeroutput>operation&apos;s</computeroutput> algorithm, cipher suite or <computeroutput>step</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>step</computeroutput> p is not supported with the <computeroutput>operation&apos;s</computeroutput> algorithm, or the <computeroutput>input</computeroutput> is not supported for the <computeroutput>operation&apos;s</computeroutput> algorithm, cipher suite or <computeroutput>step</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be active, and fully set up, and this call must conform to the algorithm&apos;s requirements for ordering of input and output steps), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1705" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1705" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1gae1e7c28c10bf767f4b6927f820740103" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_get_implicit_key</definition>
+        <argsstring>(psa_pake_operation_t *operation, psa_key_derivation_operation_t *output)</argsstring>
+        <name>psa_pake_get_implicit_key</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__key__derivation_1ga5f099b63799a0959c3d46718c86c2609" kindref="member">psa_key_derivation_operation_t</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get implicitly confirmed shared secret from a PAKE.</para>
+<para>At this point there is a cryptographic guarantee that only the authenticated party who used the same password is able to compute the key. But there is no guarantee that the peer is the party it claims to be and was able to do so.</para>
+<para>That is, the authentication is only implicit. Since the peer is not authenticated yet, no action should be taken yet that assumes that the peer is who it claims to be. For example, do not access restricted files on the peer&apos;s behalf until an explicit authentication has succeeded.</para>
+<para>This function can be called after the key exchange phase of the operation has completed. It imports the shared secret output of the PAKE into the provided derivation operation. The input step <ref refid="group__derivation_1ga0ddfbe764baba995c402b1b0ef59392e" kindref="member">PSA_KEY_DERIVATION_INPUT_SECRET</ref> is used when placing the shared key material in the key derivation operation.</para>
+<para>The exact sequence of calls to perform a password-authenticated key exchange depends on the algorithm in use. Refer to the documentation of individual PAKE algorithm types (<computeroutput>PSA_ALG_XXX</computeroutput> values of type <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> such that <ref refid="group__crypto__types_1ga947bd13805e0243541e586b7b7d803ae" kindref="member">PSA_ALG_IS_PAKE</ref>(<computeroutput>alg</computeroutput>) is true) for more information.</para>
+<para>When this function returns successfully, <computeroutput>operation</computeroutput> becomes inactive. If this function returns an error status, both <computeroutput>operation</computeroutput> and <computeroutput>key_derivation</computeroutput> operations enter an error state and must be aborted by calling <ref refid="group__pake_1ga20bed96cc254d2e1829d666edc74376a" kindref="member">psa_pake_abort()</ref> and <ref refid="group__key__derivation_1ga90fdd2716124d0bd258826184824675f" kindref="member">psa_key_derivation_abort()</ref> respectively.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active PAKE operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A key derivation operation that is ready for an input step of type <ref refid="group__derivation_1ga0ddfbe764baba995c402b1b0ef59392e" kindref="member">PSA_KEY_DERIVATION_INPUT_SECRET</ref>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__derivation_1ga0ddfbe764baba995c402b1b0ef59392e" kindref="member">PSA_KEY_DERIVATION_INPUT_SECRET</ref> is not compatible with the algorithm in the <computeroutput>output</computeroutput> key derivation operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input from a PAKE is not supported by the algorithm in the <computeroutput>output</computeroutput> key derivation operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PAKE operation state is not valid (it must be active, but beyond that validity is specific to the algorithm), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>, or the state of <computeroutput>output</computeroutput> is not valid for the <ref refid="group__derivation_1ga0ddfbe764baba995c402b1b0ef59392e" kindref="member">PSA_KEY_DERIVATION_INPUT_SECRET</ref> step. This can happen if the step is out of order or the application has done this step already and it may not be repeated. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1768" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1768" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__pake_1ga20bed96cc254d2e1829d666edc74376a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_pake_abort</definition>
+        <argsstring>(psa_pake_operation_t *operation)</argsstring>
+        <name>psa_pake_abort</name>
+        <param>
+          <type><ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Abort a PAKE operation.</para>
+<para>Aborting an operation frees all associated resources except for the <computeroutput>operation</computeroutput> structure itself. Once aborted, the operation object can be reused for another operation by calling <ref refid="group__pake_1ga45e914c064160f4fe1d511f9d0506400" kindref="member">psa_pake_setup()</ref> again.</para>
+<para>This function may be called at any time after the operation object has been initialized as described in <ref refid="group__pake_1ga2b408ef3a7b22400e4590a2c98a503df" kindref="member">psa_pake_operation_t</ref>.</para>
+<para>In particular, calling <ref refid="group__pake_1ga20bed96cc254d2e1829d666edc74376a" kindref="member">psa_pake_abort()</ref> after the operation has been terminated by a call to <ref refid="group__pake_1ga20bed96cc254d2e1829d666edc74376a" kindref="member">psa_pake_abort()</ref> or <ref refid="group__pake_1gae1e7c28c10bf767f4b6927f820740103" kindref="member">psa_pake_get_implicit_key()</ref> is safe and has no effect.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation to abort.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1795" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" declline="1795" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__pake_1ga7cd915c229c3d4aad5bd3bf7b8ad847b" prot="public" static="no">
+        <name>PSA_PAKE_ROLE_NONE</name>
+        <initializer>((<ref refid="group__pake_1gab1769b1b1a85111973e8d0c9cced95de" kindref="member">psa_pake_role_t</ref>) 0x00)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A value to indicate no role in a PAKE algorithm. This value can be used in a call to <ref refid="group__pake_1gaf61d9d1549d4f3eeaf891dd73354db66" kindref="member">psa_pake_set_role()</ref> for symmetric PAKE algorithms which do not assign roles. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="949" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="949" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1ga7698f576ae0a65a4066902c53cd4e0be" prot="public" static="no">
+        <name>PSA_PAKE_ROLE_FIRST</name>
+        <initializer>((<ref refid="group__pake_1gab1769b1b1a85111973e8d0c9cced95de" kindref="member">psa_pake_role_t</ref>) 0x01)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The first peer in a balanced PAKE.</para>
+<para>Although balanced PAKE algorithms are symmetric, some of them needs an ordering of peers for the transcript calculations. If the algorithm does not need this, both <ref refid="group__pake_1ga7698f576ae0a65a4066902c53cd4e0be" kindref="member">PSA_PAKE_ROLE_FIRST</ref> and <ref refid="group__pake_1ga3584fa3033dbdb6ca7c0c6fe67da7307" kindref="member">PSA_PAKE_ROLE_SECOND</ref> are accepted. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="958" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="958" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1ga3584fa3033dbdb6ca7c0c6fe67da7307" prot="public" static="no">
+        <name>PSA_PAKE_ROLE_SECOND</name>
+        <initializer>((<ref refid="group__pake_1gab1769b1b1a85111973e8d0c9cced95de" kindref="member">psa_pake_role_t</ref>) 0x02)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The second peer in a balanced PAKE.</para>
+<para>Although balanced PAKE algorithms are symmetric, some of them needs an ordering of peers for the transcript calculations. If the algorithm does not need this, either <ref refid="group__pake_1ga7698f576ae0a65a4066902c53cd4e0be" kindref="member">PSA_PAKE_ROLE_FIRST</ref> or <ref refid="group__pake_1ga3584fa3033dbdb6ca7c0c6fe67da7307" kindref="member">PSA_PAKE_ROLE_SECOND</ref> are accepted. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="967" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="967" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1gaa7b37df16153c98153a4b2bd9686b40e" prot="public" static="no">
+        <name>PSA_PAKE_ROLE_CLIENT</name>
+        <initializer>((<ref refid="group__pake_1gab1769b1b1a85111973e8d0c9cced95de" kindref="member">psa_pake_role_t</ref>) 0x11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The client in an augmented PAKE.</para>
+<para>Augmented PAKE algorithms need to differentiate between client and server. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="973" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="973" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1ga9daddaf54cafd4513431cfd5e0148aff" prot="public" static="no">
+        <name>PSA_PAKE_ROLE_SERVER</name>
+        <initializer>((<ref refid="group__pake_1gab1769b1b1a85111973e8d0c9cced95de" kindref="member">psa_pake_role_t</ref>) 0x12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The server in an augmented PAKE.</para>
+<para>Augmented PAKE algorithms need to differentiate between client and server. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="979" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="979" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1ga6da014bd15742c5463bf32c7759788d0" prot="public" static="no">
+        <name>PSA_PAKE_PRIMITIVE_TYPE_ECC</name>
+        <initializer>((<ref refid="group__pake_1gad8b29b6efa90ad2887d7b1252d23e5bc" kindref="member">psa_pake_primitive_type_t</ref>) 0x01)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The PAKE primitive type indicating the use of elliptic curves.</para>
+<para>The values of the <computeroutput>family</computeroutput> and <computeroutput>bits</computeroutput> fields of the cipher suite identify a specific elliptic curve, using the same mapping that is used for ECC (<ref refid="group__crypto__types_1gae7ad3569cb9c91b1ebe59a056edb2fc6" kindref="member">psa_ecc_family_t</ref>) keys.</para>
+<para>(Here <computeroutput>family</computeroutput> means the value returned by <ref refid="group__pake_1gab1c9d9857644ee44a515b384b9c728db" kindref="member">psa_pake_cs_get_family()</ref> and <computeroutput>bits</computeroutput> means the value returned by <ref refid="group__pake_1ga048be6e239ccd25a3080863053e68576" kindref="member">psa_pake_cs_get_bits()</ref>.)</para>
+<para>Input and output during the operation can involve group elements and scalar values:<orderedlist>
+<listitem><para>The format for group elements is the same as for public keys on the specific curve would be. For more information, consult the documentation of <ref refid="group__import__export_1gaf22ae73312217aaede2ea02cdebb6062" kindref="member">psa_export_public_key()</ref>.</para>
+</listitem><listitem><para>The format for scalars is the same as for private keys on the specific curve would be. For more information, consult the documentation of <ref refid="group__import__export_1ga668e35be8d2852ad3feeef74ac6f75bf" kindref="member">psa_export_key()</ref>. </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="999" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="999" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1ga96803ecc85799a0d070861b9f86d579f" prot="public" static="no">
+        <name>PSA_PAKE_PRIMITIVE_TYPE_DH</name>
+        <initializer>((<ref refid="group__pake_1gad8b29b6efa90ad2887d7b1252d23e5bc" kindref="member">psa_pake_primitive_type_t</ref>) 0x02)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The PAKE primitive type indicating the use of Diffie-Hellman groups.</para>
+<para>The values of the <computeroutput>family</computeroutput> and <computeroutput>bits</computeroutput> fields of the cipher suite identify a specific Diffie-Hellman group, using the same mapping that is used for Diffie-Hellman (<ref refid="group__crypto__types_1gaf632c5b13aa19c98f8591d4beda8dd1a" kindref="member">psa_dh_family_t</ref>) keys.</para>
+<para>(Here <computeroutput>family</computeroutput> means the value returned by <ref refid="group__pake_1gab1c9d9857644ee44a515b384b9c728db" kindref="member">psa_pake_cs_get_family()</ref> and <computeroutput>bits</computeroutput> means the value returned by <ref refid="group__pake_1ga048be6e239ccd25a3080863053e68576" kindref="member">psa_pake_cs_get_bits()</ref>.)</para>
+<para>Input and output during the operation can involve group elements and scalar values:<orderedlist>
+<listitem><para>The format for group elements is the same as for public keys on the specific group would be. For more information, consult the documentation of <ref refid="group__import__export_1gaf22ae73312217aaede2ea02cdebb6062" kindref="member">psa_export_public_key()</ref>.</para>
+</listitem><listitem><para>The format for scalars is the same as for private keys on the specific group would be. For more information, consult the documentation of <ref refid="group__import__export_1ga668e35be8d2852ad3feeef74ac6f75bf" kindref="member">psa_export_key()</ref>. </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1019" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1019" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1gaf49527ceec65d3927f4ef2a589bade04" prot="public" static="no">
+        <name>PSA_PAKE_PRIMITIVE</name>
+        <param><defname>pake_type</defname></param>
+        <param><defname>pake_family</defname></param>
+        <param><defname>pake_bits</defname></param>
+        <initializer>    ((pake_bits &amp; 0xFFFF) != pake_bits) ? 0 :                 \
+    ((<ref refid="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" kindref="member">psa_pake_primitive_t</ref>) (((pake_type) &lt;&lt; 24 |             \
+                              (pake_family) &lt;&lt; 16) | (pake_bits)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a PAKE primitive from type, family and bit-size.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pake_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the primitive (value of type <ref refid="group__pake_1gad8b29b6efa90ad2887d7b1252d23e5bc" kindref="member">psa_pake_primitive_type_t</ref>). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pake_family</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The family of the primitive (the type and interpretation of this parameter depends on <computeroutput>pake_type</computeroutput>, for more information consult the documentation of individual <ref refid="group__pake_1gad8b29b6efa90ad2887d7b1252d23e5bc" kindref="member">psa_pake_primitive_type_t</ref> constants). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pake_bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bit-size of the primitive (Value of type <computeroutput>size_t</computeroutput>. The interpretation of this parameter depends on <computeroutput>pake_family</computeroutput>, for more information consult the documentation of individual <ref refid="group__pake_1gad8b29b6efa90ad2887d7b1252d23e5bc" kindref="member">psa_pake_primitive_type_t</ref> constants).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The constructed primitive value of type <ref refid="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" kindref="member">psa_pake_primitive_t</ref>. Return 0 if the requested primitive can&apos;t be encoded as <ref refid="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" kindref="member">psa_pake_primitive_t</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1040" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1040" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1ga043357cc339a34134089e9c8be93bfdb" prot="public" static="no">
+        <name>PSA_PAKE_STEP_KEY_SHARE</name>
+        <initializer>((<ref refid="group__pake_1gac16be59e5b1acb89c26709eed001ef35" kindref="member">psa_pake_step_t</ref>) 0x01)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The key share being sent to or received from the peer.</para>
+<para>The format for both input and output at this step is the same as for public keys on the group determined by the primitive (<ref refid="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" kindref="member">psa_pake_primitive_t</ref>) would be.</para>
+<para>For more information on the format, consult the documentation of <ref refid="group__import__export_1gaf22ae73312217aaede2ea02cdebb6062" kindref="member">psa_export_public_key()</ref>.</para>
+<para>For information regarding how the group is determined, consult the documentation <ref refid="group__pake_1gaf49527ceec65d3927f4ef2a589bade04" kindref="member">PSA_PAKE_PRIMITIVE</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1057" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1057" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1gaeb14d80e6d8a0716ed04d42dcc94af82" prot="public" static="no">
+        <name>PSA_PAKE_STEP_ZK_PUBLIC</name>
+        <initializer>((<ref refid="group__pake_1gac16be59e5b1acb89c26709eed001ef35" kindref="member">psa_pake_step_t</ref>) 0x02)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A Schnorr NIZKP public key.</para>
+<para>This is the ephemeral public key in the Schnorr Non-Interactive Zero-Knowledge Proof (the value denoted by the letter &apos;V&apos; in RFC 8235).</para>
+<para>The format for both input and output at this step is the same as for public keys on the group determined by the primitive (<ref refid="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" kindref="member">psa_pake_primitive_t</ref>) would be.</para>
+<para>For more information on the format, consult the documentation of <ref refid="group__import__export_1gaf22ae73312217aaede2ea02cdebb6062" kindref="member">psa_export_public_key()</ref>.</para>
+<para>For information regarding how the group is determined, consult the documentation <ref refid="group__pake_1gaf49527ceec65d3927f4ef2a589bade04" kindref="member">PSA_PAKE_PRIMITIVE</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1074" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1074" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__pake_1ga8b483c7638f927f1c858cfcfe32569f9" prot="public" static="no">
+        <name>PSA_PAKE_STEP_ZK_PROOF</name>
+        <initializer>((<ref refid="group__pake_1gac16be59e5b1acb89c26709eed001ef35" kindref="member">psa_pake_step_t</ref>) 0x03)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A Schnorr NIZKP proof.</para>
+<para>This is the proof in the Schnorr Non-Interactive Zero-Knowledge Proof (the value denoted by the letter &apos;r&apos; in RFC 8235).</para>
+<para>Both for input and output, the value at this step is an integer less than the order of the group selected in the cipher suite. The format depends on the group as well:</para>
+<para><itemizedlist>
+<listitem><para>For Montgomery curves, the encoding is little endian.</para>
+</listitem><listitem><para>For everything else the encoding is big endian (see Section 2.3.8 of <emphasis>SEC 1: Elliptic Curve Cryptography</emphasis> at <ulink url="https://www.secg.org/sec1-v2.pdf">https://www.secg.org/sec1-v2.pdf</ulink>).</para>
+</listitem></itemizedlist>
+</para>
+<para>In both cases leading zeroes are allowed as long as the length in bytes does not exceed the byte length of the group order.</para>
+<para>For information regarding how the group is determined, consult the documentation <ref refid="group__pake_1gaf49527ceec65d3927f4ef2a589bade04" kindref="member">PSA_PAKE_PRIMITIVE</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" line="1095" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_extra.h" bodystart="1095" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a proposed PAKE interface for the PSA Crypto API. It is not part of the official PSA Crypto API yet. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>The content of this section is not part of the stable API and ABI of Mbed TLS and may change arbitrarily from version to version. Same holds for the corresponding macros <ref refid="group__crypto__types_1ga6c1067b4f615bcc29e46155b8982dba5" kindref="member">PSA_ALG_CATEGORY_PAKE</ref> and <ref refid="group__crypto__types_1gaa2ae65388d11e23b3676570337a69926" kindref="member">PSA_ALG_JPAKE</ref>. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

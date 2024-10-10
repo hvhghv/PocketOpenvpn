@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpsa__verify__hash__interruptible__operation__s" kind="struct" language="C++" prot="public">
+    <compoundname>psa_verify_hash_interruptible_operation_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__verify__hash__interruptible__operation__s_1aeb4849c82c72b385761c7849c3fa0228" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_verify_hash_interruptible_operation_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_crypto_driver_wrappers.h ID value zero means the context is not valid or not assigned to any driver (i.e. none of the driver contexts are active). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="436" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__verify__hash__interruptible__operation__s_1a6dc34cd9e1ba2e01d899f29c4ca288fb" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__verify__hash__interruptible__context__t" kindref="compound">psa_driver_verify_hash_interruptible_context_t</ref></type>
+        <definition>psa_driver_verify_hash_interruptible_context_t psa_verify_hash_interruptible_operation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="438" column="52" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__verify__hash__interruptible__operation__s_1a1d3720f4b36df06edf67103341d5a6b9" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_verify_hash_interruptible_operation_s::private_error_occurred</definition>
+        <argsstring></argsstring>
+        <name>private_error_occurred</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="440" column="18" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__verify__hash__interruptible__operation__s_1a05ab9c279f6c3f3cba77c777fb4d3933" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_verify_hash_interruptible_operation_s::private_num_ops</definition>
+        <argsstring></argsstring>
+        <name>private_num_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="442" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The context for PSA interruptible hash verification. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>mbedtls_ecp_point</label>
+        <link refid="structmbedtls__ecp__point"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>private_X</edgelabel>
+          <edgelabel>private_Y</edgelabel>
+          <edgelabel>private_Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mbedtls_psa_verify_hash_interruptible_operation_t</label>
+        <link refid="structmbedtls__psa__verify__hash__interruptible__operation__t"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>private_restart_ctx</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>private_r</edgelabel>
+          <edgelabel>private_s</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls_mpi</label>
+        <link refid="structmbedtls__mpi"/>
+      </node>
+      <node id="2">
+        <label>psa_driver_verify_hash_interruptible_context_t</label>
+        <link refid="unionpsa__driver__verify__hash__interruptible__context__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mbedtls_ecp_keypair</label>
+        <link refid="structmbedtls__ecp__keypair"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>private_grp</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>private_Q</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>private_d</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>psa_verify_hash_interruptible_operation_s</label>
+        <link refid="structpsa__verify__hash__interruptible__operation__s"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mbedtls_ecp_group</label>
+        <link refid="structmbedtls__ecp__group"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>G</edgelabel>
+          <edgelabel>private_T</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>N</edgelabel>
+          <edgelabel>P</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbedtls_ecdsa_restart_ctx</label>
+        <link refid="structmbedtls__ecdsa__restart__ctx"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>private_ecp</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mbedtls_ecp_restart_ctx</label>
+        <link refid="structmbedtls__ecp__restart__ctx"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" line="429" column="48" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_struct.h" bodystart="429" bodyend="443"/>
+    <listofallmembers>
+      <member refid="structpsa__verify__hash__interruptible__operation__s_1a6dc34cd9e1ba2e01d899f29c4ca288fb" prot="public" virt="non-virtual"><scope>psa_verify_hash_interruptible_operation_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__verify__hash__interruptible__operation__s_1a1d3720f4b36df06edf67103341d5a6b9" prot="public" virt="non-virtual"><scope>psa_verify_hash_interruptible_operation_s</scope><name>private_error_occurred</name></member>
+      <member refid="structpsa__verify__hash__interruptible__operation__s_1aeb4849c82c72b385761c7849c3fa0228" prot="public" virt="non-virtual"><scope>psa_verify_hash_interruptible_operation_s</scope><name>private_id</name></member>
+      <member refid="structpsa__verify__hash__interruptible__operation__s_1a05ab9c279f6c3f3cba77c777fb4d3933" prot="public" virt="non-virtual"><scope>psa_verify_hash_interruptible_operation_s</scope><name>private_num_ops</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

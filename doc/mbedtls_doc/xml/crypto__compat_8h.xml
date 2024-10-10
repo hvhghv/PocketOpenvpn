@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="crypto__compat_8h" kind="file" language="C++">
+    <compoundname>crypto_compat.h</compoundname>
+    <includedby refid="crypto__extra_8h" local="yes">crypto_extra.h</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="16">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="3">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="9">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="4">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="17">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="8">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="1">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="crypto__compat_8h_1a95017cf75d44a5ce463d585740a9bcf6" prot="public" static="no">
+        <name>PSA_KEY_HANDLE_INIT</name>
+        <initializer><ref refid="group__key__lifetimes_1ga838f2dc64e670aa69fc4c0b82932f021" kindref="member">MBEDTLS_SVC_KEY_ID_INIT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" line="33" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" prot="public" static="no">
+        <type><ref refid="group__key__lifetimes_1ga9a5375bd0cb9694f3a2694adc0a6ae13" kindref="member">mbedtls_svc_key_id_t</ref></type>
+        <definition>typedef mbedtls_svc_key_id_t psa_key_handle_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_handle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" line="31" column="30" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crypto__compat_8h_1ab0a62e4db36560fc64e6a684abe1ef49" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int psa_key_handle_is_null</definition>
+        <argsstring>(psa_key_handle_t handle)</argsstring>
+        <name>psa_key_handle_is_null</name>
+        <param>
+          <type><ref refid="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" kindref="member">psa_key_handle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check whether a handle is null.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero if the handle is null, zero otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" line="41" column="19" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" bodystart="41" bodyend="44"/>
+        <references refid="group__key__lifetimes_1ga131f49c7d8f4cae1c40a018b956dbe78" compoundref="crypto__values_8h" startline="2447" endline="2450">mbedtls_svc_key_id_is_null</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__compat_8h_1a950f0f358a0a012b043d02e55faed7c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_open_key</definition>
+        <argsstring>(mbedtls_svc_key_id_t key, psa_key_handle_t *handle)</argsstring>
+        <name>psa_open_key</name>
+        <param>
+          <type><ref refid="group__key__lifetimes_1ga9a5375bd0cb9694f3a2694adc0a6ae13" kindref="member">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" kindref="member">psa_key_handle_t</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open a handle to an existing persistent key.</para>
+<para>Open a handle to a persistent key. A key is persistent if it was created with a lifetime other than <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref>. A persistent key always has a nonzero key identifier, set with <ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref> when creating the key. Implementations may provide additional pre-provisioned keys that can be opened with <ref refid="crypto__compat_8h_1a950f0f358a0a012b043d02e55faed7c0" kindref="member">psa_open_key()</ref>. Such keys have an application key identifier in the vendor range, as documented in the description of <ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>.</para>
+<para>The application must eventually close the handle with <ref refid="crypto__compat_8h_1aa09b720d299dfe6b9f41c36e448078eb" kindref="member">psa_close_key()</ref> or <ref refid="group__key__management_1ga5f52644312291335682fbc0292c43cd2" kindref="member">psa_destroy_key()</ref> to release associated resources. If the application dies without calling one of these functions, the implementation should perform the equivalent of a call to <ref refid="crypto__compat_8h_1aa09b720d299dfe6b9f41c36e448078eb" kindref="member">psa_close_key()</ref>.</para>
+<para>Some implementations permit an application to open the same key multiple times. If this is successful, each call to <ref refid="crypto__compat_8h_1a950f0f358a0a012b043d02e55faed7c0" kindref="member">psa_open_key()</ref> will return a different key handle.</para>
+<para><simplesect kind="note"><para>This API is not part of the PSA Cryptography API Release 1.0.0 specification. It was defined in the 1.0 Beta 3 version of the specification but was removed in the 1.0.0 released version. This API is kept for the time being to not break applications relying on it. It is not deprecated yet but will be in the near future.</para>
+</simplesect>
+<simplesect kind="note"><para>Applications that rely on opening a key multiple times will not be portable to implementations that only permit a single key handle to be opened. See also :ref:`key-handles`.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The persistent identifier of the key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, a handle to the key.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. The application can now use the value of <computeroutput>*handle</computeroutput> to access the key. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The implementation does not have sufficient resources to open the key. This can be due to reaching an implementation limit on the number of open keys, the number of open key handles, or available memory. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga18646babb2ae6cbde02ea3828bbd9141" kindref="member">PSA_ERROR_DOES_NOT_EXIST</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>There is no persistent key with key identifier <computeroutput>key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>key</computeroutput> is not a valid persistent key identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specified key exists, but the application does not have the permission to access it. Note that this specification does not define any way to create such a key, but it may be possible through implementation-specific means. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" line="106" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" declline="106" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__compat_8h_1aa09b720d299dfe6b9f41c36e448078eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_close_key</definition>
+        <argsstring>(psa_key_handle_t handle)</argsstring>
+        <name>psa_close_key</name>
+        <param>
+          <type><ref refid="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" kindref="member">psa_key_handle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Close a key handle.</para>
+<para>If the handle designates a volatile key, this will destroy the key material and free all associated resources, just like <ref refid="group__key__management_1ga5f52644312291335682fbc0292c43cd2" kindref="member">psa_destroy_key()</ref>.</para>
+<para>If this is the last open handle to a persistent key, then closing the handle will free all resources associated with the key in volatile memory. The key data in persistent storage is not affected and can be opened again later with a call to <ref refid="crypto__compat_8h_1a950f0f358a0a012b043d02e55faed7c0" kindref="member">psa_open_key()</ref>.</para>
+<para>Closing the key handle makes the handle invalid, and the key handle must not be used again by the application.</para>
+<para><simplesect kind="note"><para>This API is not part of the PSA Cryptography API Release 1.0.0 specification. It was defined in the 1.0 Beta 3 version of the specification but was removed in the 1.0.0 released version. This API is kept for the time being to not break applications relying on it. It is not deprecated yet but will be in the near future.</para>
+</simplesect>
+<simplesect kind="note"><para>If the key handle was used to set up an active :ref:`multipart operation &lt;multipart-operations&gt;`, then closing the key handle can cause the multipart operation to fail. Applications should maintain the key handle until after the multipart operation has finished.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key handle to close. If this is <computeroutput>0</computeroutput>, do nothing and return <computeroutput>PSA_SUCCESS</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>handle</computeroutput> was a valid handle or <computeroutput>0</computeroutput>. It is now closed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>handle</computeroutput> is not a valid handle nor <computeroutput>0</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" line="147" column="14" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h" declline="147" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PSA cryptography module: Backward compatibility aliases. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This header declares alternative names for macro and functions. New application code should not use these names. These names may be removed in a future version of Mbed TLS.</para>
+<para><simplesect kind="note"><para>This file may not be included directly. Applications must include <ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_COMPAT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_COMPAT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>To<sp/>support<sp/>both<sp/>openless<sp/>APIs<sp/>and<sp/>psa_open_key()<sp/>temporarily,<sp/>define</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>psa_key_handle_t<sp/>to<sp/>be<sp/>equal<sp/>to<sp/>mbedtls_svc_key_id_t.<sp/>Do<sp/>not<sp/>mark<sp/>the</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>type<sp/>and<sp/>its<sp/>utility<sp/>macros<sp/>and<sp/>functions<sp/>deprecated<sp/>yet.<sp/>This<sp/>will<sp/>be<sp/>done</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>in<sp/>a<sp/>subsequent<sp/>phase.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group__key__lifetimes_1ga9a5375bd0cb9694f3a2694adc0a6ae13" kindref="member">mbedtls_svc_key_id_t</ref><sp/><ref refid="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" kindref="member">psa_key_handle_t</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="crypto__compat_8h_1a95017cf75d44a5ce463d585740a9bcf6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_HANDLE_INIT<sp/>MBEDTLS_SVC_KEY_ID_INIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="crypto__compat_8h_1ab0a62e4db36560fc64e6a684abe1ef49" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="crypto__compat_8h_1ab0a62e4db36560fc64e6a684abe1ef49" kindref="member">psa_key_handle_is_null</ref>(<ref refid="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" kindref="member">psa_key_handle_t</ref><sp/>handle)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__key__lifetimes_1ga131f49c7d8f4cae1c40a018b956dbe78" kindref="member">mbedtls_svc_key_id_is_null</ref>(handle);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref><sp/><ref refid="crypto__compat_8h_1a950f0f358a0a012b043d02e55faed7c0" kindref="member">psa_open_key</ref>(<ref refid="group__key__lifetimes_1ga9a5375bd0cb9694f3a2694adc0a6ae13" kindref="member">mbedtls_svc_key_id_t</ref><sp/>key,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" kindref="member">psa_key_handle_t</ref><sp/>*handle);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref><sp/><ref refid="crypto__compat_8h_1aa09b720d299dfe6b9f41c36e448078eb" kindref="member">psa_close_key</ref>(<ref refid="crypto__compat_8h_1a0a6f2a05474d7789332f228946840504" kindref="member">psa_key_handle_t</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_COMPAT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/psa/crypto_compat.h"/>
+  </compounddef>
+</doxygen>

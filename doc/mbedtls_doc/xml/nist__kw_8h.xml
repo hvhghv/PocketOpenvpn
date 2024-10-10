@@ -1,0 +1,675 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="nist__kw_8h" kind="file" language="C++">
+    <compoundname>nist_kw.h</compoundname>
+    <includes refid="private__access_8h" local="yes">mbedtls/private_access.h</includes>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="cipher_8h" local="yes">mbedtls/cipher.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="23">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="1">
+        <label>nist_kw.h</label>
+        <link refid="nist__kw_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="17">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="4">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="6">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/private_access.h</label>
+        <link refid="private__access_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="25">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__nist__kw__context" prot="public">mbedtls_nist_kw_context</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mbedtls_nist_kw_mode_t</name>
+        <enumvalue id="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a38a95849df9d69ff61f79a41acce0448" prot="public">
+          <name>MBEDTLS_KW_MODE_KW</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a9c6773529a16ea7f99a3ab98cee0918c" prot="public">
+          <name>MBEDTLS_KW_MODE_KWP</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="35" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="nist__kw_8h_1acee2ab8cf388eb50bbde831c4a0f4679" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_nist_kw_init</definition>
+        <argsstring>(mbedtls_nist_kw_context *ctx)</argsstring>
+        <name>mbedtls_nist_kw_init</name>
+        <param>
+          <type><ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the specified key wrapping context to make references valid and prepare the context for <ref refid="nist__kw_8h_1a04b9bb48ebe89342177461d2b0374ef8" kindref="member">mbedtls_nist_kw_setkey()</ref> or <ref refid="nist__kw_8h_1ab938fd8572b507788ebb61bc5f829f81" kindref="member">mbedtls_nist_kw_free()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping context to initialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="67" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="nist__kw_8h_1a04b9bb48ebe89342177461d2b0374ef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_nist_kw_setkey</definition>
+        <argsstring>(mbedtls_nist_kw_context *ctx, mbedtls_cipher_id_t cipher, const unsigned char *key, unsigned int keybits, const int is_wrap)</argsstring>
+        <name>mbedtls_nist_kw_setkey</name>
+        <param>
+          <type><ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="cipher_8h_1af5b069ffd0b2ad31225e42ee4ee29b1b" kindref="member">mbedtls_cipher_id_t</ref></type>
+          <declname>cipher</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>keybits</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>is_wrap</declname>
+        </param>
+        <briefdescription>
+<para>This function initializes the key wrapping context set in the <computeroutput>ctx</computeroutput> parameter and sets the encryption key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cipher</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 128-bit block cipher to use. Only AES is supported. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Key Encryption Key (KEK). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keybits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The KEK size in bits. This must be acceptable by the cipher. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>is_wrap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specify whether the operation within the context is wrapping or unwrapping</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>MBEDTLS_ERR_CIPHER_BAD_INPUT_DATA</computeroutput> for any invalid input. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>MBEDTLS_ERR_CIPHER_FEATURE_UNAVAILABLE</computeroutput> for 128-bit block ciphers which are not supported. </para>
+</simplesect>
+<simplesect kind="return"><para>cipher-specific error code on failure of the underlying cipher. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="85" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" declline="85" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="nist__kw_8h_1ab938fd8572b507788ebb61bc5f829f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_nist_kw_free</definition>
+        <argsstring>(mbedtls_nist_kw_context *ctx)</argsstring>
+        <name>mbedtls_nist_kw_free</name>
+        <param>
+          <type><ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function releases and clears the specified key wrapping context and underlying cipher sub-context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping context to clear. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="97" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" declline="97" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="nist__kw_8h_1a15fcca8f10af1a87f0dc8e6b21592d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_nist_kw_wrap</definition>
+        <argsstring>(mbedtls_nist_kw_context *ctx, mbedtls_nist_kw_mode_t mode, const unsigned char *input, size_t in_len, unsigned char *output, size_t *out_len, size_t out_size)</argsstring>
+        <name>mbedtls_nist_kw_wrap</name>
+        <param>
+          <type><ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>in_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>out_len</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>out_size</declname>
+        </param>
+        <briefdescription>
+<para>This function encrypts a buffer using key wrapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping context to use for encryption. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping mode to use (MBEDTLS_KW_MODE_KW or MBEDTLS_KW_MODE_KWP) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. The input uses units of 8 Bytes called semiblocks. <itemizedlist>
+<listitem>
+<para>For KW mode: a multiple of 8 bytes between 16 and 2^57-8 inclusive.  </para>
+</listitem>
+<listitem>
+<para>For KWP mode: any length between 1 and 2^32-1 inclusive.</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. <itemizedlist>
+<listitem>
+<para>For KW mode: Must be at least 8 bytes larger than <computeroutput>in_len</computeroutput>. </para>
+</listitem>
+<listitem>
+<para>For KWP mode: Must be at least 8 bytes larger rounded up to a multiple of 8 bytes for KWP (15 bytes at most).</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes written to the output buffer. <computeroutput>0</computeroutput> on failure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The capacity of the output buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>MBEDTLS_ERR_CIPHER_BAD_INPUT_DATA</computeroutput> for invalid input length. </para>
+</simplesect>
+<simplesect kind="return"><para>cipher-specific error code on failure of the underlying cipher. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="120" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" declline="120" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="nist__kw_8h_1a743a79699ef04c54f019a02470973567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_nist_kw_unwrap</definition>
+        <argsstring>(mbedtls_nist_kw_context *ctx, mbedtls_nist_kw_mode_t mode, const unsigned char *input, size_t in_len, unsigned char *output, size_t *out_len, size_t out_size)</argsstring>
+        <name>mbedtls_nist_kw_unwrap</name>
+        <param>
+          <type><ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>in_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>out_len</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>out_size</declname>
+        </param>
+        <briefdescription>
+<para>This function decrypts a buffer using key wrapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping context to use for decryption. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping mode to use (MBEDTLS_KW_MODE_KW or MBEDTLS_KW_MODE_KWP) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. The input uses units of 8 Bytes called semiblocks. The input must be a multiple of semiblocks. <itemizedlist>
+<listitem>
+<para>For KW mode: a multiple of 8 bytes between 24 and 2^57 inclusive.  </para>
+</listitem>
+<listitem>
+<para>For KWP mode: a multiple of 8 bytes between 16 and 2^32 inclusive.</para>
+</listitem>
+</itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. The output buffer&apos;s minimal length is 8 bytes shorter than <computeroutput>in_len</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes written to the output buffer. <computeroutput>0</computeroutput> on failure. For KWP mode, the length could be up to 15 bytes shorter than <computeroutput>in_len</computeroutput>, depending on how much padding was added to the data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">out_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The capacity of the output buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>MBEDTLS_ERR_CIPHER_BAD_INPUT_DATA</computeroutput> for invalid input length. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>MBEDTLS_ERR_CIPHER_AUTH_FAILED</computeroutput> for verification failure of the ciphertext. </para>
+</simplesect>
+<simplesect kind="return"><para>cipher-specific error code on failure of the underlying cipher. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="147" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" declline="147" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="nist__kw_8h_1ac79ef3a5b3b9d3bb0aefb7cb1364a53c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_nist_kw_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_nist_kw_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>The key wrapping checkup routine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" line="159" column="5" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h" declline="159" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file provides an API for key wrapping (KW) and key wrapping with padding (KWP) as defined in NIST SP 800-38F. <ulink url="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-38F.pdf">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-38F.pdf</ulink>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Key wrapping specifies a deterministic authenticated-encryption mode of operation, according to <emphasis>NIST SP 800-38F: Recommendation for Block Cipher Modes of Operation: Methods for Key Wrapping</emphasis>. Its purpose is to protect cryptographic keys.</para>
+<para>Its equivalent is RFC 3394 for KW, and RFC 5649 for KWP. <ulink url="https://tools.ietf.org/html/rfc3394">https://tools.ietf.org/html/rfc3394</ulink> <ulink url="https://tools.ietf.org/html/rfc5649">https://tools.ietf.org/html/rfc5649</ulink> </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_NIST_KW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_NIST_KW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private__access_8h" kindref="compound">mbedtls/private_access.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cipher_8h" kindref="compound">mbedtls/cipher.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a38a95849df9d69ff61f79a41acce0448" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a38a95849df9d69ff61f79a41acce0448" kindref="member">MBEDTLS_KW_MODE_KW</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="37" refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a9c6773529a16ea7f99a3ab98cee0918c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a9c6773529a16ea7f99a3ab98cee0918c" kindref="member">MBEDTLS_KW_MODE_KWP</ref><sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}<sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_NIST_KW_ALT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Regular<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structmbedtls__nist__kw__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52" refid="structmbedtls__nist__kw__context_1aa020016d3d65014ab6baa0d8c8e9c1f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__cipher__context__t" kindref="compound">mbedtls_cipher_context_t</ref><sp/><ref refid="private__access_8h_1a86c7c64c999531bacf3c31619ff9de8d" kindref="member">MBEDTLS_PRIVATE</ref>(cipher_ctx);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<sp/><ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_NIST_key<sp/>wrapping_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;nist_kw_alt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_NIST_KW_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="nist__kw_8h_1acee2ab8cf388eb50bbde831c4a0f4679" kindref="member">mbedtls_nist_kw_init</ref>(<ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="nist__kw_8h_1a04b9bb48ebe89342177461d2b0374ef8" kindref="member">mbedtls_nist_kw_setkey</ref>(<ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cipher_8h_1af5b069ffd0b2ad31225e42ee4ee29b1b" kindref="member">mbedtls_cipher_id_t</ref><sp/>cipher,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keybits,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_wrap);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="nist__kw_8h_1ab938fd8572b507788ebb61bc5f829f81" kindref="member">mbedtls_nist_kw_free</ref>(<ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="nist__kw_8h_1a15fcca8f10af1a87f0dc8e6b21592d6d" kindref="member">mbedtls_nist_kw_wrap</ref>(<ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref><sp/>*ctx,<sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref><sp/>mode,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>in_len,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*out_len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>out_size);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="nist__kw_8h_1a743a79699ef04c54f019a02470973567" kindref="member">mbedtls_nist_kw_unwrap</ref>(<ref refid="structmbedtls__nist__kw__context" kindref="compound">mbedtls_nist_kw_context</ref><sp/>*ctx,<sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref><sp/>mode,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>in_len,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*out_len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>out_size);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)<sp/>&amp;&amp;<sp/>defined(MBEDTLS_AES_C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="nist__kw_8h_1ac79ef3a5b3b9d3bb0aefb7cb1364a53c" kindref="member">mbedtls_nist_kw_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>&amp;&amp;<sp/>MBEDTLS_AES_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_NIST_KW_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/nist_kw.h"/>
+  </compounddef>
+</doxygen>

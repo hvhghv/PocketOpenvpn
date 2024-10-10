@@ -1,0 +1,5 @@
+<map id="reliable" name="reliable">
+<area shape="rect" id="node1" title="The reliability layer storage structure for one VPN tunnel&#39;s control channel in one direction." alt="" coords="23,184,86,211"/>
+<area shape="rect" id="node2" href="$structreliable__entry.html" title="The structure in which the reliability layer stores a single incoming or outgoing packet." alt="" coords="5,95,104,121"/>
+<area shape="rect" id="node3" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="27,5,82,32"/>
+</map>

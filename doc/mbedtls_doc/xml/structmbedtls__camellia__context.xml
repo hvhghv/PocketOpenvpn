@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__camellia__context" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_camellia_context</compoundname>
+    <includes refid="camellia_8h" local="no">camellia.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__camellia__context_1aa50543c38c96b9d9052f78581c4118d8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_camellia_context::private_nr</definition>
+        <argsstring></argsstring>
+        <name>private_nr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of rounds <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="42" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__camellia__context_1a4b3e1167e453777f06d81766f8679d18" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_camellia_context::private_rk[68]</definition>
+        <argsstring>[68]</argsstring>
+        <name>private_rk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CAMELLIA round keys <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="43" column="14" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>CAMELLIA context structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" line="41" column="39" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/camellia.h" bodystart="41" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structmbedtls__camellia__context_1aa50543c38c96b9d9052f78581c4118d8" prot="public" virt="non-virtual"><scope>mbedtls_camellia_context</scope><name>private_nr</name></member>
+      <member refid="structmbedtls__camellia__context_1a4b3e1167e453777f06d81766f8679d18" prot="public" virt="non-virtual"><scope>mbedtls_camellia_context</scope><name>private_rk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

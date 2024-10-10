@@ -1,0 +1,8 @@
+<map id="tuntap" name="tuntap">
+<area shape="rect" id="node1" title=" " alt="" coords="212,213,271,240"/>
+<area shape="rect" id="node2" href="$structtuntap__options.html" title=" " alt="" coords="5,109,112,136"/>
+<area shape="rect" id="node3" href="$structoverlapped__io.html" title=" " alt="" coords="137,109,239,136"/>
+<area shape="rect" id="node4" href="$structbuffer.html" title="Wrapper structure for dynamically allocated memory." alt="" coords="161,5,215,32"/>
+<area shape="rect" id="node5" href="$structtun__ring.html" title="Wintun ring buffer See https://github.com/WireGuard/wintun#ring&#45;layout." alt="" coords="263,109,331,136"/>
+<area shape="rect" id="node6" href="$structrw__handle.html" title=" " alt="" coords="397,109,478,136"/>
+</map>

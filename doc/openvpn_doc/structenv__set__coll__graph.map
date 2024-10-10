@@ -1,0 +1,7 @@
+<map id="env_set" name="env_set">
+<area shape="rect" id="node1" title=" " alt="" coords="85,184,153,211"/>
+<area shape="rect" id="node2" href="$structenv__item.html" title=" " alt="" coords="5,95,80,121"/>
+<area shape="rect" id="node3" href="$structgc__arena.html" title="Garbage collection arena used to keep track of dynamically allocated memory." alt="" coords="157,95,232,121"/>
+<area shape="rect" id="node4" href="$structgc__entry__special.html" title="Garbage collection entry for a specially allocated structure that needs a custom free function to be ..." alt="" coords="48,5,168,32"/>
+<area shape="rect" id="node5" href="$structgc__entry.html" title="Garbage collection entry for one dynamically allocated block of memory." alt="" coords="245,5,317,32"/>
+</map>

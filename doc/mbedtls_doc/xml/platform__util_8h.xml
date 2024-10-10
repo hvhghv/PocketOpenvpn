@@ -1,0 +1,834 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="platform__util_8h" kind="file" language="C++">
+    <compoundname>platform_util.h</compoundname>
+    <includes refid="mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes refid="platform__time_8h" local="yes">mbedtls/platform_time.h</includes>
+    <includes local="no">time.h</includes>
+    <includedby refid="aes_8h" local="yes">aes.h</includedby>
+    <includedby refid="aria_8h" local="yes">aria.h</includedby>
+    <includedby refid="asn1_8h" local="yes">asn1.h</includedby>
+    <includedby refid="camellia_8h" local="yes">camellia.h</includedby>
+    <includedby refid="cipher_8h" local="yes">cipher.h</includedby>
+    <includedby refid="md_8h" local="yes">md.h</includedby>
+    <includedby refid="ssl_8h" local="yes">ssl.h</includedby>
+    <includedby refid="des_8h" local="yes">des.h</includedby>
+    <includedby refid="pkcs5_8h" local="yes">pkcs5.h</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>psa/crypto_adjust_auto_enabled.h</label>
+        <link refid="crypto__adjust__auto__enabled_8h"/>
+      </node>
+      <node id="14">
+        <label>mbedtls/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="15">
+        <label>mbedtls/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="18">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>psa/crypto_adjust_config_key_pair_types.h</label>
+        <link refid="crypto__adjust__config__key__pair__types_8h"/>
+      </node>
+      <node id="20">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>mbedtls/config_adjust_psa_from_legacy.h</label>
+        <link refid="config__adjust__psa__from__legacy_8h"/>
+      </node>
+      <node id="1">
+        <label>platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>limits.h</label>
+      </node>
+      <node id="2">
+        <label>mbedtls/build_info.h</label>
+        <link refid="mbedtls_2build__info_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="13">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+        <link refid="config__adjust__legacy__crypto_8h"/>
+      </node>
+      <node id="16">
+        <label>mbedtls/check_config.h</label>
+        <link refid="check__config_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>mbedtls/config_adjust_legacy_from_psa.h</label>
+        <link refid="config__adjust__legacy__from__psa_8h"/>
+      </node>
+      <node id="3">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="5">
+        <label>mbedtls/config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>psa/crypto_adjust_config_synonyms.h</label>
+        <link refid="crypto__adjust__config__synonyms_8h"/>
+      </node>
+      <node id="21">
+        <label>time.h</label>
+      </node>
+      <node id="8">
+        <label>mbedtls/config_adjust_psa_superset_legacy.h</label>
+        <link refid="config__adjust__psa__superset__legacy_8h"/>
+      </node>
+      <node id="6">
+        <label>psa/crypto_legacy.h</label>
+        <link refid="crypto__legacy_8h"/>
+      </node>
+      <node id="22">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>aria.h</label>
+        <link refid="aria_8h"/>
+      </node>
+      <node id="21">
+        <label>pkcs5.h</label>
+        <link refid="pkcs5_8h"/>
+      </node>
+      <node id="25">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="41">
+        <label>hkdf.h</label>
+        <link refid="hkdf_8h"/>
+      </node>
+      <node id="18">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2">
+        <label>aes.h</label>
+        <link refid="aes_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>entropy.h</label>
+        <link refid="entropy_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="35">
+        <label>nist_kw.h</label>
+        <link refid="nist__kw_8h"/>
+      </node>
+      <node id="8">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>gcm.h</label>
+        <link refid="gcm_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>hmac_drbg.h</label>
+        <link refid="hmac__drbg_8h"/>
+      </node>
+      <node id="10">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="27">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>ecdsa.h</label>
+        <link refid="ecdsa_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="24">
+        <label>ccm.h</label>
+        <link refid="ccm_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ctr_drbg.h</label>
+        <link refid="ctr__drbg_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="19">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="12">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="33">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>ecjpake.h</label>
+        <link refid="ecjpake_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+      <node id="26">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>des.h</label>
+        <link refid="des_8h"/>
+      </node>
+      <node id="22">
+        <label>camellia.h</label>
+        <link refid="camellia_8h"/>
+      </node>
+      <node id="31">
+        <label>cmac.h</label>
+        <link refid="cmac_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>rsa.h</label>
+        <link refid="rsa_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>asn1write.h</label>
+        <link refid="asn1write_8h"/>
+      </node>
+      <node id="20">
+        <label>pkcs12.h</label>
+        <link refid="pkcs12_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>SECTION: Module configuration options</header>
+      <description><para>This section allows for the setting of module specific sizes and configuration options. The default values are already present in the relevant header files and should suffice for the regular use cases.</para>
+<para>Our advice is to enable options and change their values here only if you have a good reason and know the consequences. </para>
+</description>
+      <memberdef kind="define" id="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" prot="public" static="no">
+        <name>MBEDTLS_CHECK_RETURN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro is used at the beginning of the declaration of a function to indicate that its return value should be checked. It should instruct the compiler to emit a warning or an error if the function is called without checking its return value.</para>
+<para>There is a default implementation for popular compilers in <ref refid="platform__util_8h" kindref="compound">platform_util.h</ref>. You can override the default implementation by defining your own here.</para>
+<para>If the implementation here is empty, this will effectively disable the checking of functions&apos; return values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="61" column="10" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__util_8h_1abbab327132940fcecd763847b1d5e4b1" prot="public" static="no">
+        <name>MBEDTLS_IGNORE_RETURN</name>
+        <param><defname>result</defname></param>
+        <initializer>((void) !(result))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro requires one argument, which should be a C function call. If that function call would cause a <ref refid="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" kindref="member">MBEDTLS_CHECK_RETURN</ref> warning, this warning is suppressed.</para>
+<para>Call this macro with one argument, a function call, to suppress a warning from <ref refid="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" kindref="member">MBEDTLS_CHECK_RETURN</ref> due to that function call. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="133" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="platform__util_8h_1a66dcaea7470b3b6685814e04b58d704c" prot="public" static="no">
+        <name>MBEDTLS_INTERNAL_VALIDATE_RET</name>
+        <param><defname>cond</defname></param>
+        <param><defname>ret</defname></param>
+        <initializer>do { } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="27" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__util_8h_1ae954d3988728e0d77282f7df23b8b281" prot="public" static="no">
+        <name>MBEDTLS_INTERNAL_VALIDATE</name>
+        <param><defname>cond</defname></param>
+        <initializer>do { } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="28" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__util_8h_1aa9f53b232ef244efb301233d111930dc" prot="public" static="no">
+        <name>MBEDTLS_DEPRECATED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="41" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__util_8h_1afc7f99f3c236d4cdf1db8d4c797f27e4" prot="public" static="no">
+        <name>MBEDTLS_DEPRECATED_STRING_CONSTANT</name>
+        <param><defname>VAL</defname></param>
+        <initializer>VAL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="42" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__util_8h_1afe6f6ae929559f9e88f5e09e6def823b" prot="public" static="no">
+        <name>MBEDTLS_DEPRECATED_NUMERIC_CONSTANT</name>
+        <param><defname>VAL</defname></param>
+        <initializer>VAL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="43" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__util_8h_1adc48af1b5ae70c17794e6fea504c9292" prot="public" static="no">
+        <name>MBEDTLS_CHECK_RETURN_CRITICAL</name>
+        <initializer><ref refid="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" kindref="member">MBEDTLS_CHECK_RETURN</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Critical-failure function</para>
+<para>This macro appearing at the beginning of the declaration of a function indicates that its return value should be checked in all applications. Omitting the check is very likely to indicate a bug in the application and will result in a compile-time warning if <ref refid="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" kindref="member">MBEDTLS_CHECK_RETURN</ref> is implemented for the compiler in use.</para>
+<para><simplesect kind="note"><para>The use of this macro is a work in progress. This macro may be added to more functions in the future. Such an extension is not considered an API break, provided that there are near-unavoidable circumstances under which the function can fail. For example, signature/MAC/AEAD verification functions, and functions that require a random generator, are considered return-check-critical. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="81" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" prot="public" static="no">
+        <name>MBEDTLS_CHECK_RETURN_TYPICAL</name>
+        <initializer><ref refid="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" kindref="member">MBEDTLS_CHECK_RETURN</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ordinary-failure function</para>
+<para>This macro appearing at the beginning of the declaration of a function indicates that its return value should be generally be checked in portable applications. Omitting the check will result in a compile-time warning if <ref refid="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" kindref="member">MBEDTLS_CHECK_RETURN</ref> is implemented for the compiler in use and <ref refid="mbedtls__config_8h_1a9b119eb50a9fca70aef16b75792c9fd1" kindref="member">MBEDTLS_CHECK_RETURN_WARNING</ref> is enabled in the compile-time configuration.</para>
+<para>You can use <ref refid="platform__util_8h_1abbab327132940fcecd763847b1d5e4b1" kindref="member">MBEDTLS_IGNORE_RETURN</ref> to explicitly ignore the return value of a function that is annotated with <ref refid="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" kindref="member">MBEDTLS_CHECK_RETURN</ref>.</para>
+<para><simplesect kind="note"><para>The use of this macro is a work in progress. This macro will be added to more functions in the future. Eventually this should appear before most functions returning an error code (as <computeroutput>int</computeroutput> in the <computeroutput>mbedtls_xxx</computeroutput> API or as <ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref> in the <computeroutput>psa_xxx</computeroutput> API). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="101" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform__util_8h_1a609f03472046fae1be0e9eccbea35dbb" prot="public" static="no">
+        <name>MBEDTLS_CHECK_RETURN_OPTIONAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Benign-failure function</para>
+<para>This macro appearing at the beginning of the declaration of a function indicates that it is rarely useful to check its return value.</para>
+<para>This macro has an empty expansion. It exists for documentation purposes: a <ref refid="platform__util_8h_1a609f03472046fae1be0e9eccbea35dbb" kindref="member">MBEDTLS_CHECK_RETURN_OPTIONAL</ref> annotation indicates that the function has been analyzed for return-check usefulness, whereas the lack of an annotation indicates that the function has not been analyzed and its return-check usefulness is unknown. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="117" column="9" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="platform__util_8h_1aa4e36b2c1c58d8ad89e1e11b6ebea2d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_platform_zeroize</definition>
+        <argsstring>(void *buf, size_t len)</argsstring>
+        <name>mbedtls_platform_zeroize</name>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Securely zeroize a buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>         The function is meant to wipe the data contained in a buffer so
+         that it can no longer be recovered even if the program memory
+         is later compromised. Call this function on sensitive data
+         stored on the stack before returning from a function, and on
+         sensitive data stored on the heap before freeing the heap
+         object.
+
+         It is extremely difficult to guarantee that calls to
+         mbedtls_platform_zeroize() are not removed by aggressive
+         compiler optimizations in a portable way. For this reason, Mbed
+         TLS provides the configuration option
+         MBEDTLS_PLATFORM_ZEROIZE_ALT, which allows users to configure
+         mbedtls_platform_zeroize() to use a suitable implementation for
+         their platform and needs
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to be zeroized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the buffer in bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="163" column="6" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" declline="163" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="platform__util_8h_1a70cb8d98764bd7ccd8821dec9b44ad60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct tm *</type>
+        <definition>struct tm* mbedtls_platform_gmtime_r</definition>
+        <argsstring>(const mbedtls_time_t *tt, struct tm *tm_buf)</argsstring>
+        <name>mbedtls_platform_gmtime_r</name>
+        <param>
+          <type>const <ref refid="platform__time_8h_1a867121bdcdb8233c28c1cca32cf0839f" kindref="member">mbedtls_time_t</ref> *</type>
+          <declname>tt</declname>
+        </param>
+        <param>
+          <type>struct tm *</type>
+          <declname>tm_buf</declname>
+        </param>
+        <briefdescription>
+<para>Platform-specific implementation of gmtime_r() </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>        The function is a thread-safe abstraction that behaves
+        similarly to the gmtime_r() function from Unix/POSIX.
+
+        Mbed TLS will try to identify the underlying platform and
+        make use of an appropriate underlying implementation (e.g.
+        gmtime_r() for POSIX and gmtime_s() for Windows). If this is
+        not possible, then gmtime() will be used. In this case, calls
+        from the library to gmtime() will be guarded by the mutex
+        mbedtls_threading_gmtime_mutex if MBEDTLS_THREADING_C is
+        enabled. It is recommended that calls from outside the library
+        are also guarded by this mutex.
+
+        If MBEDTLS_PLATFORM_GMTIME_R_ALT is defined, then Mbed TLS will
+        unconditionally use the alternative implementation for
+        mbedtls_platform_gmtime_r() supplied by the user at compile time.
+</verbatim></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an object containing time (in seconds) since the epoch to be converted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tm_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an object where the results will be stored</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to an object of type struct tm on success, otherwise NULL </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" line="193" column="9" declfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h" declline="193" declcolumn="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Common and shared functions used by multiple modules in the Mbed TLS library. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_PLATFORM_UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME_DATE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__time_8h" kindref="compound">mbedtls/platform_time.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_HAVE_TIME_DATE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Internal<sp/>macros<sp/>meant<sp/>to<sp/>be<sp/>called<sp/>only<sp/>from<sp/>within<sp/>the<sp/>library.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="platform__util_8h_1a66dcaea7470b3b6685814e04b58d704c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_INTERNAL_VALIDATE_RET(cond,<sp/>ret)<sp/><sp/>do<sp/>{<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="platform__util_8h_1ae954d3988728e0d77282f7df23b8b281" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_INTERNAL_VALIDATE(cond)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Internal<sp/>helper<sp/>macros<sp/>for<sp/>deprecating<sp/>API<sp/>constants.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_DEPRECATED_REMOVED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_DEPRECATED_WARNING)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DEPRECATED<sp/>__attribute__((deprecated))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="platform__util_8h_1aa9f53b232ef244efb301233d111930dc" kindref="member">MBEDTLS_DEPRECATED</ref><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*mbedtls_deprecated_string_constant_t;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DEPRECATED_STRING_CONSTANT(VAL)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((mbedtls_deprecated_string_constant_t)<sp/>(VAL))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="platform__util_8h_1aa9f53b232ef244efb301233d111930dc" kindref="member">MBEDTLS_DEPRECATED</ref><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_deprecated_numeric_constant_t;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DEPRECATED_NUMERIC_CONSTANT(VAL)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((mbedtls_deprecated_numeric_constant_t)<sp/>(VAL))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_DEPRECATED_WARNING<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="platform__util_8h_1aa9f53b232ef244efb301233d111930dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DEPRECATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="platform__util_8h_1afc7f99f3c236d4cdf1db8d4c797f27e4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DEPRECATED_STRING_CONSTANT(VAL)<sp/>VAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="platform__util_8h_1afe6f6ae929559f9e88f5e09e6def823b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_DEPRECATED_NUMERIC_CONSTANT(VAL)<sp/>VAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_DEPRECATED_WARNING<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_DEPRECATED_REMOVED<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Implementation<sp/>of<sp/>the<sp/>check-return<sp/>facility.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>user<sp/>documentation<sp/>in<sp/>mbedtls_config.h.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>macro<sp/>directly<sp/>to<sp/>annotate<sp/>function:<sp/>instead,</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>use<sp/>one<sp/>of<sp/>MBEDTLS_CHECK_RETURN_CRITICAL<sp/>or<sp/>MBEDTLS_CHECK_RETURN_TYPICAL</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>depending<sp/>on<sp/>how<sp/>important<sp/>it<sp/>is<sp/>to<sp/>check<sp/>the<sp/>return<sp/>value.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CHECK_RETURN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CHECK_RETURN<sp/>__attribute__((__warn_unused_result__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_MSC_VER)<sp/>&amp;&amp;<sp/>_MSC_VER<sp/>&gt;=<sp/>1700</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CHECK_RETURN<sp/>_Check_return_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="platform__util_8h_1a2d0f01774eec8835fa77c4354ece05d8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CHECK_RETURN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="platform__util_8h_1adc48af1b5ae70c17794e6fea504c9292" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CHECK_RETURN_CRITICAL<sp/>MBEDTLS_CHECK_RETURN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_CHECK_RETURN_WARNING)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="platform__util_8h_1aae1ed92e13d4d4ef6a92b2d8a34b274b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CHECK_RETURN_TYPICAL<sp/>MBEDTLS_CHECK_RETURN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CHECK_RETURN_TYPICAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="platform__util_8h_1a609f03472046fae1be0e9eccbea35dbb" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CHECK_RETURN_OPTIONAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_IGNORE_RETURN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC<sp/>doesn&apos;t<sp/>silence<sp/>the<sp/>warning<sp/>with<sp/>just<sp/>(void)(result).</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/>(void)!(result)<sp/>is<sp/>known<sp/>to<sp/>work<sp/>up<sp/>at<sp/>least<sp/>up<sp/>to<sp/>GCC<sp/>10,<sp/>as<sp/>well</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*<sp/>as<sp/>with<sp/>Clang<sp/>and<sp/>MSVC.</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>*<sp/>https://gcc.gnu.org/onlinedocs/gcc-3.4.6/gcc/Non_002dbugs.html</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/>*<sp/>https://stackoverflow.com/questions/40576003/ignoring-warning-wunused-result</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/>*<sp/>https://gcc.gnu.org/bugzilla/show_bug.cgi?id=66425#c34</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="platform__util_8h_1abbab327132940fcecd763847b1d5e4b1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_IGNORE_RETURN(result)<sp/>((void)<sp/>!(result))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>If<sp/>the<sp/>following<sp/>macro<sp/>is<sp/>defined,<sp/>the<sp/>library<sp/>is<sp/>being<sp/>built<sp/>by<sp/>the<sp/>test</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/>*<sp/>framework,<sp/>and<sp/>the<sp/>framework<sp/>is<sp/>going<sp/>to<sp/>provide<sp/>a<sp/>replacement</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/>*<sp/>mbedtls_platform_zeroize()<sp/>using<sp/>a<sp/>preprocessor<sp/>macro,<sp/>so<sp/>the<sp/>function</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/>*<sp/>declaration<sp/>should<sp/>be<sp/>omitted.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_TEST_DEFINES_ZEROIZE)<sp/>//no-check-names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="platform__util_8h_1aa4e36b2c1c58d8ad89e1e11b6ebea2d9" kindref="member">mbedtls_platform_zeroize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME_DATE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>*<ref refid="platform__util_8h_1a70cb8d98764bd7ccd8821dec9b44ad60" kindref="member">mbedtls_platform_gmtime_r</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="platform__time_8h_1a867121bdcdb8233c28c1cca32cf0839f" kindref="member">mbedtls_time_t</ref><sp/>*tt,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*tm_buf);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_HAVE_TIME_DATE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_UTIL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/platform_util.h"/>
+  </compounddef>
+</doxygen>

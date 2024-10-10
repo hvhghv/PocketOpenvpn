@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmbedtls__ecdsa__restart__ctx" kind="struct" language="C++" prot="public">
+    <compoundname>mbedtls_ecdsa_restart_ctx</compoundname>
+    <includes refid="ecdsa_8h" local="no">ecdsa.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ecdsa__restart__ctx_1a1c1033dd007c6e296690ca3f14c023b2" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ecp__restart__ctx" kindref="compound">mbedtls_ecp_restart_ctx</ref></type>
+        <definition>mbedtls_ecp_restart_ctx mbedtls_ecdsa_restart_ctx::private_ecp</definition>
+        <argsstring></argsstring>
+        <name>private_ecp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>base context for ECP restart and shared administrative info <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="99" column="29" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdsa__restart__ctx_1ac0501210b8faa2d92da0eccdc9cb532e" prot="public" static="no" mutable="no">
+        <type><ref refid="ecdsa_8h_1a1006f398e5c20959ac86e29cd08d6134" kindref="member">mbedtls_ecdsa_restart_ver_ctx</ref> *</type>
+        <definition>mbedtls_ecdsa_restart_ver_ctx* mbedtls_ecdsa_restart_ctx::private_ver</definition>
+        <argsstring></argsstring>
+        <name>private_ver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ecdsa_verify() sub-context <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="101" column="35" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdsa__restart__ctx_1af3fc25288485a1e92c7b0dad16c4bf65" prot="public" static="no" mutable="no">
+        <type><ref refid="ecdsa_8h_1a6c799dac3615dba6358c921e660c939d" kindref="member">mbedtls_ecdsa_restart_sig_ctx</ref> *</type>
+        <definition>mbedtls_ecdsa_restart_sig_ctx* mbedtls_ecdsa_restart_ctx::private_sig</definition>
+        <argsstring></argsstring>
+        <name>private_sig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ecdsa_sign() sub-context <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="102" column="35" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ecdsa__restart__ctx_1ae555c1951560a1d62cbca89c39245e3a" prot="public" static="no" mutable="no">
+        <type><ref refid="ecdsa_8h_1a511b635e2c836b1eb57e769bc3ec1f29" kindref="member">mbedtls_ecdsa_restart_det_ctx</ref> *</type>
+        <definition>mbedtls_ecdsa_restart_det_ctx* mbedtls_ecdsa_restart_ctx::private_det</definition>
+        <argsstring></argsstring>
+        <name>private_det</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ecdsa_sign_det() sub-context <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="104" column="35" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>General context for resuming ECDSA operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>mbedtls_ecdsa_restart_ctx</label>
+        <link refid="structmbedtls__ecdsa__restart__ctx"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>private_ecp</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls_ecp_restart_ctx</label>
+        <link refid="structmbedtls__ecp__restart__ctx"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" line="98" column="15" bodyfile="/mnt/e/document/demo/v2/pocketvpn/mbedtls/include/mbedtls/ecdsa.h" bodystart="98" bodyend="106"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ecdsa__restart__ctx_1ae555c1951560a1d62cbca89c39245e3a" prot="public" virt="non-virtual"><scope>mbedtls_ecdsa_restart_ctx</scope><name>private_det</name></member>
+      <member refid="structmbedtls__ecdsa__restart__ctx_1a1c1033dd007c6e296690ca3f14c023b2" prot="public" virt="non-virtual"><scope>mbedtls_ecdsa_restart_ctx</scope><name>private_ecp</name></member>
+      <member refid="structmbedtls__ecdsa__restart__ctx_1af3fc25288485a1e92c7b0dad16c4bf65" prot="public" virt="non-virtual"><scope>mbedtls_ecdsa_restart_ctx</scope><name>private_sig</name></member>
+      <member refid="structmbedtls__ecdsa__restart__ctx_1ac0501210b8faa2d92da0eccdc9cb532e" prot="public" virt="non-virtual"><scope>mbedtls_ecdsa_restart_ctx</scope><name>private_ver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
